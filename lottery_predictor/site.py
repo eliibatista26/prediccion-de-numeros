@@ -328,6 +328,13 @@ def _render_html(predictions: dict[str, object]) -> str:
     helpModal.addEventListener('click', (event) => {{
       if (event.target === helpModal) helpModal.close();
     }});
+    function normalizeFilterValue(value) {{
+      return String(value || '')
+        .normalize('NFD')
+        .replace(/[\\u0300-\\u036f]/g, '')
+        .trim()
+        .toLowerCase();
+    }}
     document.querySelectorAll('[data-filter]').forEach((button) => {{
       button.addEventListener('click', () => {{
         const selected = button.dataset.filter;
@@ -337,18 +344,8 @@ def _render_html(predictions: dict[str, object]) -> str:
         document.querySelectorAll('[data-lottery]').forEach((section) => {{
           section.hidden = selected !== 'all' && normalizeFilterValue(section.dataset.lottery) !== selectedKey;
         }});
-        document.querySelectorAll('[data-draw-lottery]').forEach((card) => {{
-          card.hidden = selected !== 'all' && normalizeFilterValue(card.dataset.drawLottery) !== selectedKey;
-        }});
       }});
     }});
-    function normalizeFilterValue(value) {{
-      return String(value || '')
-        .normalize('NFD')
-        .replace(/[\\u0300-\\u036f]/g, '')
-        .trim()
-        .toLowerCase();
-    }}
     const compareData = JSON.parse(document.getElementById('compare-data').textContent);
     const firstSelect = document.querySelector('[data-compare-first]');
     const secondSelect = document.querySelector('[data-compare-second]');
@@ -356,11 +353,28 @@ def _render_html(predictions: dict[str, object]) -> str:
     function renderCompare() {{
       const first = compareData[firstSelect.value] || [];
       const second = compareData[secondSelect.value] || [];
-      const secondNumbers = new Set(second.map((item) => item.number));
-      const shared = first.filter((item) => secondNumbers.has(item.number)).slice(0, 10);
-      compareOutput.innerHTML = shared.length
-        ? shared.map((item) => `<span>${{item.number}}</span>`).join('')
-        : '<em>No hay coincidencias entre las sugerencias principales.</em>';
+      const secondSet = new Set(second.map((item) => item.number));
+      const firstSet = new Set(first.map((item) => item.number));
+      const sharedCount = [...firstSet].filter((n) => secondSet.has(n)).length;
+      const renderCol = (items, otherSet, title) => `
+        <div class="cmp-col">
+          <p class="cmp-col-title">${{title}}</p>
+          ${{items.map((item) => `
+            <div class="cmp-row${{otherSet.has(item.number) ? ' is-shared' : ''}}">
+              <span class="cmp-num">${{item.number}}</span>
+              <span class="cmp-score">${{item.score}} pts</span>
+              ${{otherSet.has(item.number) ? '<span class="cmp-badge">coincide</span>' : ''}}
+            </div>
+          `).join('')}}
+        </div>`;
+      compareOutput.innerHTML = `
+        <div class="cmp-cols">
+          ${{renderCol(first, secondSet, firstSelect.options[firstSelect.selectedIndex].text)}}
+          ${{renderCol(second, firstSet, secondSelect.options[secondSelect.selectedIndex].text)}}
+        </div>
+        <p class="cmp-summary">${{sharedCount > 0
+          ? `<strong>${{sharedCount}}</strong> número${{sharedCount !== 1 ? 's' : ''}} coinciden en ambas loterías`
+          : 'Ningún número coincide en el top 10 de ambas loterías'}}</p>`;
     }}
     firstSelect.addEventListener('change', renderCompare);
     secondSelect.addEventListener('change', renderCompare);
@@ -488,7 +502,7 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
     )
     compare_data = {
         name: [
-            {"number": str(item.get("number")), "score": item.get("score")}
+            {"number": str(item.get("number")), "score": item.get("score"), "frequency": item.get("frequency")}
             for item in data.get("suggestions", [])[:10]
             if isinstance(item, dict)
         ]
@@ -497,7 +511,7 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
     }
     json_data = json.dumps(compare_data, ensure_ascii=False).replace("</", "<\\/")
     return f"""<section class="compare-panel">
-  <div>
+  <div class="compare-head">
     <p class="eyebrow">Comparar</p>
     <h2>Dos loterías al mismo tiempo</h2>
   </div>
@@ -505,15 +519,30 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
     <select data-compare-first>{options}</select>
     <select data-compare-second>{second_options}</select>
   </div>
-  <div class="compare-result" data-compare-output></div>
+  <div class="compare-body" data-compare-output></div>
   <script type="application/json" id="compare-data">{json_data}</script>
 </section>"""
 
 
 def _render_draws_panel(lottery_items: dict[str, object]) -> str:
     items = _draw_items(lottery_items)
-    cards = "\n".join(_render_draw_card(item, index) for index, item in enumerate(items))
     json_data = json.dumps({str(index): item for index, item in enumerate(items)}, ensure_ascii=False).replace("</", "<\\/")
+
+    by_lottery: dict[str, list[tuple[int, dict[str, object]]]] = {}
+    for index, item in enumerate(items):
+        name = str(item.get("lottery", ""))
+        by_lottery.setdefault(name, []).append((index, item))
+
+    sections = ""
+    for lottery_name, lottery_cards in by_lottery.items():
+        color = BRAND_COLORS.get(lottery_name, "#9a3412")
+        cards = "\n".join(_render_draw_card(item, index) for index, item in lottery_cards)
+        sections += f"""<section class="lottery-draw-group" data-lottery="{escape(lottery_name)}" style="--brand: {color}">
+  <h3 class="lottery-group-title">{escape(lottery_name)}</h3>
+  <div class="draw-card-list">{cards}</div>
+</section>
+"""
+
     return f"""<section class="draws-panel">
   <div class="draws-head">
     <div>
@@ -522,9 +551,7 @@ def _render_draws_panel(lottery_items: dict[str, object]) -> str:
     </div>
     <span>{len(items)} sorteos visibles</span>
   </div>
-  <div class="draw-card-list">
-    {cards}
-  </div>
+  {sections}
   <script type="application/json" id="draw-data">{json_data}</script>
 </section>"""
 
@@ -941,20 +968,15 @@ h1 {
   box-shadow: 0 12px 26px rgba(26, 35, 65, 0.06);
 }
 
-.base-head,
-.compare-panel {
+.base-head {
   display: flex;
   align-items: start;
   justify-content: space-between;
   gap: 18px;
-}
-
-.base-head {
   margin-bottom: 16px;
 }
 
-.base-head h2,
-.compare-panel h2 {
+.base-head h2 {
   font-size: 27px;
 }
 
@@ -1045,28 +1067,117 @@ h1 {
   color: #f97316;
 }
 
-.compare-panel {
-  align-items: center;
+.compare-head {
+  margin-bottom: 16px;
+}
+
+.compare-head h2 {
+  font-size: 27px;
 }
 
 .compare-controls {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 18px;
 }
 
-.compare-result {
+.compare-body {
+  margin-top: 4px;
+}
+
+.cmp-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.cmp-col {
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cmp-col-title {
+  margin: 0;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e5e8ef;
+  color: #17202a;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cmp-row {
   display: flex;
-  min-width: 220px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 8px;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  border-bottom: 1px solid #f0f2f7;
+  transition: background 0.15s;
 }
 
-.compare-result em {
-  color: #697087;
-  font-style: normal;
+.cmp-row:last-child {
+  border-bottom: 0;
+}
+
+.cmp-row.is-shared {
+  background: #fff7ed;
+}
+
+.cmp-num {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #f97316;
+  font-weight: 950;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.cmp-row.is-shared .cmp-num {
+  background: #ea580c;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.25);
+}
+
+.cmp-score {
+  color: #6b7280;
+  font-size: 13px;
   font-weight: 700;
+  flex: 1;
+}
+
+.cmp-badge {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #f97316;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.cmp-summary {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  background: #fff7ed;
+  color: #9a3412;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cmp-summary strong {
+  font-size: 18px;
+  font-weight: 950;
 }
 
 .draws-panel {
@@ -1092,6 +1203,28 @@ h1 {
 .draws-head > span {
   color: #5f6680;
   font-weight: 900;
+}
+
+.lottery-draw-group {
+  margin-bottom: 24px;
+}
+
+.lottery-draw-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.lottery-group-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--brand, #f97316);
+  color: var(--brand, #f97316);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .draw-card-list {
@@ -1900,6 +2033,10 @@ h1 {
     display: grid;
   }
 
+  .cmp-cols {
+    grid-template-columns: 1fr;
+  }
+
   .draw-card {
     grid-template-columns: 1fr;
   }
@@ -2215,8 +2352,36 @@ h1 {
     color: #6b7280;
   }
 
-  .compare-result em {
+  .cmp-col {
+    border-color: #1e2130;
+  }
+
+  .cmp-col-title {
+    background: #1a1d27;
+    color: #9ba3b8;
+    border-bottom-color: #1e2130;
+  }
+
+  .cmp-row {
+    border-bottom-color: #1e2130;
+  }
+
+  .cmp-row.is-shared {
+    background: #1a1108;
+  }
+
+  .cmp-score {
     color: #6b7280;
+  }
+
+  .cmp-summary {
+    border-color: #3d2208;
+    background: #1a1108;
+    color: #fb923c;
+  }
+
+  .lottery-group-title {
+    border-bottom-color: color-mix(in srgb, var(--brand) 60%, #1e2130);
   }
 }
 """
