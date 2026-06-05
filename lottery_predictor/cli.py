@@ -4,6 +4,7 @@ import argparse
 from pathlib import Path
 
 from .analysis import build_predictions
+from . import db
 from .scraper import scrape_all_sources
 from .site import build_site
 from .storage import load_results, merge_results, save_results
@@ -20,14 +21,31 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=DOCS_PATH)
     args = parser.parse_args()
 
-    existing = load_results(args.data)
+    using_db = db.is_available()
+
+    if using_db:
+        print("Modo: base de datos PostgreSQL (Neon)")
+        db.setup()
+        existing = db.load_results()
+    else:
+        print("Modo: archivo JSON local")
+        existing = load_results(args.data)
+
     new_results = [] if args.skip_scrape else scrape_all_sources()
-    merged = merge_results(existing, new_results)
-    save_results(args.data, merged)
-    build_site(build_predictions(merged), args.output)
+
+    if using_db:
+        if new_results:
+            inserted = db.save_results(new_results)
+            print(f"Resultados nuevos insertados en DB: {inserted}")
+        all_results = db.load_results()
+    else:
+        all_results = merge_results(existing, new_results)
+        save_results(args.data, all_results)
+
+    build_site(build_predictions(all_results), args.output)
     print(f"Resultados existentes: {len(existing)}")
-    print(f"Resultados nuevos: {len(new_results)}")
-    print(f"Resultados totales: {len(merged)}")
+    print(f"Resultados nuevos del scraper: {len(new_results)}")
+    print(f"Resultados totales: {len(all_results)}")
     print(f"Página generada en: {args.output}")
 
 
