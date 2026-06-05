@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-05T18:44:24-04:00",
-  "generated_at_display": "05/06/2026 18:44",
+  "generated_at": "2026-06-05T18:48:10-04:00",
+  "generated_at_display": "05/06/2026 18:48",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "2010-08-01",
@@ -10,48 +10,48 @@
     "window": {
       "from": "2010-08-01",
       "to": "2026-06-05",
-      "results": 46804
+      "results": 45094
     },
     "top_10_repeated": [
       {
         "number": "08",
-        "count": 1872
+        "count": 1808
       },
       {
         "number": "25",
-        "count": 1840
+        "count": 1794
       },
       {
         "number": "14",
-        "count": 1754
+        "count": 1702
       },
       {
         "number": "21",
-        "count": 1729
-      },
-      {
-        "number": "03",
-        "count": 1720
+        "count": 1668
       },
       {
         "number": "26",
-        "count": 1709
+        "count": 1663
+      },
+      {
+        "number": "03",
+        "count": 1663
       },
       {
         "number": "22",
-        "count": 1706
+        "count": 1642
       },
       {
         "number": "34",
-        "count": 1688
+        "count": 1637
       },
       {
         "number": "15",
-        "count": 1685
+        "count": 1634
       },
       {
         "number": "29",
-        "count": 1676
+        "count": 1626
       }
     ],
     "delayed_by_position": {
@@ -60,61 +60,61 @@
           "number": "83",
           "delay_days": 45,
           "last_seen": "2026-04-21",
-          "frequency": 372
+          "frequency": 351
         },
         {
           "number": "25",
           "delay_days": 43,
           "last_seen": "2026-04-23",
-          "frequency": 529
+          "frequency": 518
         },
         {
           "number": "03",
           "delay_days": 42,
           "last_seen": "2026-04-24",
-          "frequency": 572
+          "frequency": 550
         },
         {
           "number": "00",
           "delay_days": 35,
           "last_seen": "2026-05-01",
-          "frequency": 506
+          "frequency": 493
         },
         {
           "number": "82",
           "delay_days": 33,
           "last_seen": "2026-05-03",
-          "frequency": 399
+          "frequency": 380
         },
         {
           "number": "46",
           "delay_days": 32,
           "last_seen": "2026-05-04",
-          "frequency": 430
+          "frequency": 417
         },
         {
           "number": "96",
           "delay_days": 31,
           "last_seen": "2026-05-05",
-          "frequency": 404
+          "frequency": 381
         },
         {
           "number": "24",
           "delay_days": 28,
           "last_seen": "2026-05-08",
-          "frequency": 549
+          "frequency": 535
         },
         {
           "number": "63",
           "delay_days": 27,
           "last_seen": "2026-05-09",
-          "frequency": 409
+          "frequency": 385
         },
         {
           "number": "54",
           "delay_days": 27,
           "last_seen": "2026-05-09",
-          "frequency": 392
+          "frequency": 375
         }
       ],
       "2": [
@@ -122,61 +122,61 @@
           "number": "90",
           "delay_days": 69,
           "last_seen": "2026-03-28",
-          "frequency": 373
+          "frequency": 361
         },
         {
           "number": "60",
-          "delay_days": 47,
-          "last_seen": "2026-04-19",
-          "frequency": 395
+          "delay_days": 48,
+          "last_seen": "2026-04-18",
+          "frequency": 381
         },
         {
           "number": "97",
           "delay_days": 33,
           "last_seen": "2026-05-03",
-          "frequency": 388
+          "frequency": 366
         },
         {
           "number": "09",
           "delay_days": 30,
           "last_seen": "2026-05-06",
-          "frequency": 546
+          "frequency": 526
         },
         {
           "number": "12",
           "delay_days": 28,
           "last_seen": "2026-05-08",
-          "frequency": 532
+          "frequency": 510
+        },
+        {
+          "number": "55",
+          "delay_days": 28,
+          "last_seen": "2026-05-08",
+          "frequency": 363
         },
         {
           "number": "63",
           "delay_days": 27,
           "last_seen": "2026-05-09",
-          "frequency": 434
-        },
-        {
-          "number": "55",
-          "delay_days": 27,
-          "last_seen": "2026-05-09",
-          "frequency": 384
+          "frequency": 414
         },
         {
           "number": "05",
           "delay_days": 26,
           "last_seen": "2026-05-10",
-          "frequency": 560
+          "frequency": 549
         },
         {
           "number": "43",
           "delay_days": 26,
           "last_seen": "2026-05-10",
-          "frequency": 483
+          "frequency": 465
         },
         {
           "number": "16",
           "delay_days": 25,
           "last_seen": "2026-05-11",
-          "frequency": 523
+          "frequency": 513
         }
       ],
       "3": [
@@ -184,80 +184,76 @@
           "number": "39",
           "delay_days": 41,
           "last_seen": "2026-04-25",
-          "frequency": 471
+          "frequency": 452
         },
         {
           "number": "57",
           "delay_days": 41,
           "last_seen": "2026-04-25",
-          "frequency": 380
+          "frequency": 365
+        },
+        {
+          "number": "74",
+          "delay_days": 29,
+          "last_seen": "2026-05-07",
+          "frequency": 451
         },
         {
           "number": "84",
           "delay_days": 29,
           "last_seen": "2026-05-07",
-          "frequency": 398
-        },
-        {
-          "number": "74",
-          "delay_days": 28,
-          "last_seen": "2026-05-08",
-          "frequency": 482
+          "frequency": 381
         },
         {
           "number": "50",
           "delay_days": 24,
           "last_seen": "2026-05-12",
-          "frequency": 473
+          "frequency": 462
         },
         {
           "number": "96",
           "delay_days": 21,
           "last_seen": "2026-05-15",
-          "frequency": 389
-        },
-        {
-          "number": "75",
-          "delay_days": 21,
-          "last_seen": "2026-05-15",
-          "frequency": 366
+          "frequency": 369
         },
         {
           "number": "85",
           "delay_days": 21,
           "last_seen": "2026-05-15",
-          "frequency": 362
+          "frequency": 347
+        },
+        {
+          "number": "75",
+          "delay_days": 21,
+          "last_seen": "2026-05-15",
+          "frequency": 344
         },
         {
           "number": "37",
           "delay_days": 19,
           "last_seen": "2026-05-17",
-          "frequency": 506
+          "frequency": 490
         },
         {
           "number": "92",
           "delay_days": 19,
           "last_seen": "2026-05-17",
-          "frequency": 362
+          "frequency": 349
         }
       ]
     },
     "coincidences": [
       {
         "number": "19",
-        "count": 254
-      },
-      {
-        "number": "14",
-        "count": 252
+        "count": 247
       },
       {
         "number": "03",
-        "count": 248
+        "count": 243
       },
       {
-        "number": "26",
-        "count": 238
+        "number": "14",
+        "count": 239
       },
       {
         "number": "21",
@@ -265,117 +261,121 @@
       },
       {
         "number": "17",
-        "count": 235
+        "count": 233
       },
       {
-        "number": "12",
-        "count": 232
-      },
-      {
-        "number": "22",
-        "count": 232
+        "number": "26",
+        "count": 229
       },
       {
         "number": "07",
-        "count": 231
+        "count": 226
+      },
+      {
+        "number": "02",
+        "count": 224
       },
       {
         "number": "27",
-        "count": 228
+        "count": 224
+      },
+      {
+        "number": "22",
+        "count": 224
       }
     ],
     "drags": [
       {
         "number": "14",
-        "count": 363
+        "count": 327
       },
       {
         "number": "42",
-        "count": 363
+        "count": 309
       },
       {
         "number": "22",
-        "count": 356
-      },
-      {
-        "number": "21",
-        "count": 355
-      },
-      {
-        "number": "08",
-        "count": 355
-      },
-      {
-        "number": "37",
-        "count": 347
+        "count": 305
       },
       {
         "number": "41",
-        "count": 344
+        "count": 305
       },
       {
-        "number": "09",
-        "count": 337
+        "number": "37",
+        "count": 303
+      },
+      {
+        "number": "08",
+        "count": 303
+      },
+      {
+        "number": "21",
+        "count": 302
       },
       {
         "number": "11",
-        "count": 334
+        "count": 297
       },
       {
-        "number": "07",
-        "count": 334
+        "number": "26",
+        "count": 297
+      },
+      {
+        "number": "09",
+        "count": 292
       }
     ],
     "active_mirrors": [
       {
         "number": "12",
         "mirror": "21",
-        "count": 3388
+        "count": 3262
       },
       {
         "number": "21",
         "mirror": "12",
-        "count": 3388
+        "count": 3262
       },
       {
         "number": "30",
         "mirror": "03",
-        "count": 3336
+        "count": 3222
       },
       {
         "number": "03",
         "mirror": "30",
-        "count": 3336
+        "count": 3222
       },
       {
         "number": "13",
         "mirror": "31",
-        "count": 3298
+        "count": 3198
       },
       {
         "number": "31",
         "mirror": "13",
-        "count": 3298
+        "count": 3198
       },
       {
         "number": "41",
         "mirror": "14",
-        "count": 3277
+        "count": 3174
       },
       {
         "number": "14",
         "mirror": "41",
-        "count": 3277
+        "count": 3174
       },
       {
-        "number": "10",
-        "mirror": "01",
-        "count": 3240
+        "number": "50",
+        "mirror": "05",
+        "count": 3127
       },
       {
-        "number": "01",
-        "mirror": "10",
-        "count": 3240
+        "number": "05",
+        "mirror": "50",
+        "count": 3127
       }
     ],
     "moving_numbers": [
@@ -433,19 +433,12 @@
           "08",
           "35"
         ],
-        "count": 272
+        "count": 270
       },
       {
         "pair": [
           "88",
           "99"
-        ],
-        "count": 263
-      },
-      {
-        "pair": [
-          "34",
-          "88"
         ],
         "count": 262
       },
@@ -465,6 +458,13 @@
       },
       {
         "pair": [
+          "34",
+          "88"
+        ],
+        "count": 260
+      },
+      {
+        "pair": [
           "50",
           "89"
         ],
@@ -472,187 +472,187 @@
       },
       {
         "pair": [
-          "75",
-          "89"
+          "34",
+          "99"
         ],
-        "count": 258
+        "count": 257
       },
       {
         "pair": [
           "62",
           "70"
         ],
-        "count": 258
+        "count": 257
       },
       {
         "pair": [
-          "70",
-          "90"
+          "75",
+          "89"
         ],
-        "count": 257
+        "count": 256
       }
     ],
     "strength_ranking": [
       {
         "number": "08",
-        "score": 3330.4,
-        "frequency": 1872,
+        "score": 3176.5,
+        "frequency": 1808,
         "recent": 3,
-        "coincidences": 223,
-        "drags": 355,
+        "coincidences": 220,
+        "drags": 303,
         "mirror": "80",
         "moves": 7
       },
       {
         "number": "14",
-        "score": 3311.7,
-        "frequency": 1754,
-        "recent": 6,
-        "coincidences": 252,
-        "drags": 363,
+        "score": 3175.6,
+        "frequency": 1702,
+        "recent": 5,
+        "coincidences": 239,
+        "drags": 327,
         "mirror": "41",
         "moves": 7
       },
       {
         "number": "21",
-        "score": 3278.1,
-        "frequency": 1729,
+        "score": 3124.65,
+        "frequency": 1668,
         "recent": 1,
         "coincidences": 235,
-        "drags": 355,
+        "drags": 302,
         "mirror": "12",
         "moves": 7
       },
       {
-        "number": "03",
-        "score": 3247.75,
-        "frequency": 1720,
-        "recent": 2,
-        "coincidences": 248,
-        "drags": 333,
-        "mirror": "30",
-        "moves": 7
-      },
-      {
         "number": "25",
-        "score": 3241.45,
-        "frequency": 1840,
+        "score": 3120.25,
+        "frequency": 1794,
         "recent": 1,
-        "coincidences": 213,
-        "drags": 320,
+        "coincidences": 206,
+        "drags": 283,
         "mirror": "52",
         "moves": 7
       },
       {
+        "number": "03",
+        "score": 3102.2,
+        "frequency": 1663,
+        "recent": 2,
+        "coincidences": 243,
+        "drags": 286,
+        "mirror": "30",
+        "moves": 7
+      },
+      {
         "number": "26",
-        "score": 3174.85,
-        "frequency": 1709,
+        "score": 3052.8,
+        "frequency": 1663,
         "recent": 12,
-        "coincidences": 238,
-        "drags": 332,
+        "coincidences": 229,
+        "drags": 297,
         "mirror": "62",
         "moves": 7
       },
       {
         "number": "12",
-        "score": 3174.65,
-        "frequency": 1659,
+        "score": 3012.0,
+        "frequency": 1594,
         "recent": 7,
-        "coincidences": 232,
-        "drags": 322,
+        "coincidences": 220,
+        "drags": 277,
         "mirror": "21",
         "moves": 7
       },
       {
         "number": "31",
-        "score": 3127.7,
-        "frequency": 1658,
+        "score": 2998.85,
+        "frequency": 1606,
         "recent": 4,
-        "coincidences": 212,
-        "drags": 326,
+        "coincidences": 210,
+        "drags": 283,
         "mirror": "13",
         "moves": 7
       },
       {
-        "number": "10",
-        "score": 3117.4,
-        "frequency": 1662,
-        "recent": 4,
-        "coincidences": 216,
-        "drags": 322,
-        "mirror": "01",
+        "number": "13",
+        "score": 2987.2,
+        "frequency": 1592,
+        "recent": 6,
+        "coincidences": 203,
+        "drags": 290,
+        "mirror": "31",
         "moves": 7
       },
       {
-        "number": "13",
-        "score": 3106.4,
-        "frequency": 1640,
+        "number": "10",
+        "score": 2965.7,
+        "frequency": 1600,
         "recent": 6,
-        "coincidences": 207,
-        "drags": 326,
-        "mirror": "31",
+        "coincidences": 210,
+        "drags": 274,
+        "mirror": "01",
         "moves": 7
       }
     ],
     "elite_group": [
       {
         "number": "08",
-        "score": 3330.4,
-        "frequency": 1872,
+        "score": 3176.5,
+        "frequency": 1808,
         "recent": 3,
-        "coincidences": 223,
-        "drags": 355,
+        "coincidences": 220,
+        "drags": 303,
         "mirror": "80",
         "moves": 7
       },
       {
         "number": "14",
-        "score": 3311.7,
-        "frequency": 1754,
-        "recent": 6,
-        "coincidences": 252,
-        "drags": 363,
+        "score": 3175.6,
+        "frequency": 1702,
+        "recent": 5,
+        "coincidences": 239,
+        "drags": 327,
         "mirror": "41",
         "moves": 7
       },
       {
         "number": "21",
-        "score": 3278.1,
-        "frequency": 1729,
+        "score": 3124.65,
+        "frequency": 1668,
         "recent": 1,
         "coincidences": 235,
-        "drags": 355,
+        "drags": 302,
         "mirror": "12",
         "moves": 7
       },
       {
-        "number": "03",
-        "score": 3247.75,
-        "frequency": 1720,
-        "recent": 2,
-        "coincidences": 248,
-        "drags": 333,
-        "mirror": "30",
+        "number": "25",
+        "score": 3120.25,
+        "frequency": 1794,
+        "recent": 1,
+        "coincidences": 206,
+        "drags": 283,
+        "mirror": "52",
         "moves": 7
       },
       {
-        "number": "25",
-        "score": 3241.45,
-        "frequency": 1840,
-        "recent": 1,
-        "coincidences": 213,
-        "drags": 320,
-        "mirror": "52",
+        "number": "03",
+        "score": 3102.2,
+        "frequency": 1663,
+        "recent": 2,
+        "coincidences": 243,
+        "drags": 286,
+        "mirror": "30",
         "moves": 7
       }
     ],
     "leader": {
       "number": "08",
-      "score": 3330.4,
-      "frequency": 1872,
+      "score": 3176.5,
+      "frequency": 1808,
       "recent": 3,
-      "coincidences": 223,
-      "drags": 355,
+      "coincidences": 220,
+      "drags": 303,
       "mirror": "80",
       "moves": 7
     },
@@ -2142,17 +2142,6 @@
       "last_results": [
         {
           "lottery": "Leidsa",
-          "draw": "Quiniela PalÃ©",
-          "draw_date": "2026-06-05",
-          "numbers": [
-            14,
-            41,
-            59
-          ],
-          "source": "https://www.yelu.do/leidsa/results/history"
-        },
-        {
-          "lottery": "Leidsa",
           "draw": "Quiniela Leidsa",
           "draw_date": "2026-06-05",
           "numbers": [
@@ -2968,357 +2957,6 @@
                 "hits": []
               }
             ]
-          }
-        },
-        "Quiniela PalÃ©": {
-          "suggestions": [
-            {
-              "number": "74",
-              "score": 72.04,
-              "frequency": 70,
-              "delay_days": 29,
-              "recent_frequency": 1
-            },
-            {
-              "number": "23",
-              "score": 68.74,
-              "frequency": 65,
-              "delay_days": 17,
-              "recent_frequency": 2
-            },
-            {
-              "number": "91",
-              "score": 67.99,
-              "frequency": 66,
-              "delay_days": 23,
-              "recent_frequency": 1
-            },
-            {
-              "number": "59",
-              "score": 67.21,
-              "frequency": 60,
-              "delay_days": 1,
-              "recent_frequency": 4
-            },
-            {
-              "number": "42",
-              "score": 66.75,
-              "frequency": 63,
-              "delay_days": 18,
-              "recent_frequency": 2
-            },
-            {
-              "number": "10",
-              "score": 65.68,
-              "frequency": 62,
-              "delay_days": 10,
-              "recent_frequency": 2
-            },
-            {
-              "number": "12",
-              "score": 65.39,
-              "frequency": 65,
-              "delay_days": 47,
-              "recent_frequency": 0
-            },
-            {
-              "number": "08",
-              "score": 64.62,
-              "frequency": 64,
-              "delay_days": 75,
-              "recent_frequency": 0
-            },
-            {
-              "number": "22",
-              "score": 64.28,
-              "frequency": 64,
-              "delay_days": 34,
-              "recent_frequency": 0
-            },
-            {
-              "number": "51",
-              "score": 63.9,
-              "frequency": 62,
-              "delay_days": 12,
-              "recent_frequency": 1
-            }
-          ],
-          "last_results": [
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela PalÃ©",
-              "draw_date": "2026-06-05",
-              "numbers": [
-                14,
-                41,
-                59
-              ],
-              "source": "https://www.yelu.do/leidsa/results/history"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela PalÃ©",
-              "draw_date": "2026-06-04",
-              "numbers": [
-                93,
-                57,
-                32
-              ],
-              "source": "https://www.yelu.do/leidsa/results/history"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela PalÃ©",
-              "draw_date": "2026-06-03",
-              "numbers": [
-                62,
-                44,
-                83
-              ],
-              "source": "https://www.yelu.do/leidsa/results/history"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela PalÃ©",
-              "draw_date": "2026-06-02",
-              "numbers": [
-                97,
-                85,
-                65
-              ],
-              "source": "https://www.yelu.do/leidsa/results/history"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela PalÃ©",
-              "draw_date": "2026-06-01",
-              "numbers": [
-                60,
-                67,
-                16
-              ],
-              "source": "https://www.yelu.do/leidsa/results/history"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela PalÃ©",
-              "draw_date": "2026-05-31",
-              "numbers": [
-                29,
-                85,
-                81
-              ],
-              "source": "https://www.yelu.do/leidsa/results/history"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela PalÃ©",
-              "draw_date": "2026-05-30",
-              "numbers": [
-                77,
-                32,
-                35
-              ],
-              "source": "https://www.yelu.do/leidsa/results/history"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela PalÃ©",
-              "draw_date": "2026-05-29",
-              "numbers": [
-                75,
-                65,
-                16
-              ],
-              "source": "https://www.yelu.do/leidsa/results/history"
-            }
-          ],
-          "total_results": 1709,
-          "backtest": {
-            "status": "ok",
-            "window_days": 60,
-            "tested_draws": 61,
-            "top3_any_hit_rate": 0.082,
-            "top5_any_hit_rate": 0.115,
-            "first_position_hit_rate": 0.033,
-            "average_hits_top5": 0.11,
-            "confidence_label": "Baja",
-            "recent_evaluations": [
-              {
-                "date": "2026-06-01",
-                "actual": [
-                  "60",
-                  "67",
-                  "16"
-                ],
-                "predicted": [
-                  "74",
-                  "23",
-                  "91",
-                  "42",
-                  "59"
-                ],
-                "hits": []
-              },
-              {
-                "date": "2026-06-02",
-                "actual": [
-                  "97",
-                  "85",
-                  "65"
-                ],
-                "predicted": [
-                  "74",
-                  "23",
-                  "91",
-                  "42",
-                  "59"
-                ],
-                "hits": []
-              },
-              {
-                "date": "2026-06-03",
-                "actual": [
-                  "62",
-                  "44",
-                  "83"
-                ],
-                "predicted": [
-                  "74",
-                  "23",
-                  "91",
-                  "42",
-                  "59"
-                ],
-                "hits": []
-              },
-              {
-                "date": "2026-06-04",
-                "actual": [
-                  "93",
-                  "57",
-                  "32"
-                ],
-                "predicted": [
-                  "74",
-                  "23",
-                  "91",
-                  "42",
-                  "59"
-                ],
-                "hits": []
-              },
-              {
-                "date": "2026-06-05",
-                "actual": [
-                  "14",
-                  "41",
-                  "59"
-                ],
-                "predicted": [
-                  "74",
-                  "23",
-                  "91",
-                  "42",
-                  "10"
-                ],
-                "hits": []
-              }
-            ]
-          }
-        },
-        "Quiniela Palé": {
-          "suggestions": [
-            {
-              "number": "16",
-              "score": 2.82,
-              "frequency": 1,
-              "delay_days": 2,
-              "recent_frequency": 1
-            },
-            {
-              "number": "34",
-              "score": 2.82,
-              "frequency": 1,
-              "delay_days": 2,
-              "recent_frequency": 1
-            },
-            {
-              "number": "40",
-              "score": 2.82,
-              "frequency": 1,
-              "delay_days": 2,
-              "recent_frequency": 1
-            },
-            {
-              "number": "00",
-              "score": 0.75,
-              "frequency": 0,
-              "delay_days": null,
-              "recent_frequency": 0
-            },
-            {
-              "number": "01",
-              "score": 0.75,
-              "frequency": 0,
-              "delay_days": null,
-              "recent_frequency": 0
-            },
-            {
-              "number": "02",
-              "score": 0.75,
-              "frequency": 0,
-              "delay_days": null,
-              "recent_frequency": 0
-            },
-            {
-              "number": "03",
-              "score": 0.75,
-              "frequency": 0,
-              "delay_days": null,
-              "recent_frequency": 0
-            },
-            {
-              "number": "04",
-              "score": 0.75,
-              "frequency": 0,
-              "delay_days": null,
-              "recent_frequency": 0
-            },
-            {
-              "number": "05",
-              "score": 0.75,
-              "frequency": 0,
-              "delay_days": null,
-              "recent_frequency": 0
-            },
-            {
-              "number": "06",
-              "score": 0.75,
-              "frequency": 0,
-              "delay_days": null,
-              "recent_frequency": 0
-            }
-          ],
-          "last_results": [
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela Palé",
-              "draw_date": "2026-06-04",
-              "numbers": [
-                16,
-                40,
-                34
-              ],
-              "source": "https://loterias.do/"
-            }
-          ],
-          "total_results": 1,
-          "backtest": {
-            "status": "insufficient",
-            "window_days": 60,
-            "tested_draws": 0,
-            "message": "Necesita al menos 31 resultados para validar."
           }
         }
       }
