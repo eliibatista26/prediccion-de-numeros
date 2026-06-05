@@ -1,0 +1,2 @@
+"""Static lottery prediction generator."""
+
