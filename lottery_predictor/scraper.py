@@ -474,9 +474,30 @@ def _guess_draw(text: str) -> str:
     return "General"
 
 
+_SOURCE_PRIORITY: dict[str, int] = {
+    CONNECTATE_LOTERIAS_URL: 0,       # más confiable
+    LOTERIAS_RD_URL: 1,
+    LOTERIAS_DO_URL: 2,
+    RESULTS_DO_URL: 3,
+    RESULTS_DO_SUPABASE_URL: 3,
+}
+
+
+def _source_rank(source: str) -> int:
+    for prefix, rank in _SOURCE_PRIORITY.items():
+        if source.startswith(prefix):
+            return rank
+    return 99
+
+
 def _dedupe(results: list[LotteryResult]) -> list[LotteryResult]:
-    unique = {result.key: result for result in results}
-    return list(unique.values())
+    # Un solo resultado por (lotería, sorteo, fecha): gana la fuente de mayor prioridad.
+    best: dict[str, LotteryResult] = {}
+    for result in results:
+        group = f"{result.draw_date.isoformat()}|{result.lottery}|{result.draw}"
+        if group not in best or _source_rank(result.source) < _source_rank(best[group].source):
+            best[group] = result
+    return list(best.values())
 
 
 def _clean_text(text: str) -> str:

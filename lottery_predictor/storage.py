@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from .models import LotteryResult
+from .scraper import _source_rank
 
 
 def load_results(path: Path) -> list[LotteryResult]:
@@ -21,8 +22,14 @@ def save_results(path: Path, results: list[LotteryResult]) -> None:
 
 
 def merge_results(existing: list[LotteryResult], new_results: list[LotteryResult]) -> list[LotteryResult]:
-    merged = {result.key: result for result in existing}
+    best: dict[str, LotteryResult] = {}
+    for result in existing:
+        group = f"{result.draw_date.isoformat()}|{result.lottery}|{result.draw}"
+        if group not in best or _source_rank(result.source) < _source_rank(best[group].source):
+            best[group] = result
     for result in new_results:
-        merged[result.key] = result
-    return list(merged.values())
+        group = f"{result.draw_date.isoformat()}|{result.lottery}|{result.draw}"
+        if group not in best or _source_rank(result.source) < _source_rank(best[group].source):
+            best[group] = result
+    return list(best.values())
 
