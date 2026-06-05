@@ -217,19 +217,13 @@ def scrape_loterias_rd() -> list[LotteryResult]:
 
 
 def scrape_all_sources() -> list[LotteryResult]:
-    scrapers = (
-        scrape_results_do,
-        scrape_loterias_do,
-        scrape_loterias_rd,
-        lambda: scrape_conectate_date(date.today()),
-    )
-    results: list[LotteryResult] = []
-    for scraper in scrapers:
-        try:
-            results.extend(scraper())
-        except requests.RequestException as exc:
-            print(f"No se pudo actualizar {scraper.__name__}: {exc}")
-    return _dedupe(results)
+    try:
+        results = scrape_conectate_date(date.today())
+        print(f"Conectate: {len(results)} resultados")
+        return results
+    except requests.RequestException as exc:
+        print(f"No se pudo actualizar Conectate: {exc}")
+        return []
 
 
 def scrape_yelu_history(start_year: int = 2010) -> list[LotteryResult]:
@@ -501,7 +495,13 @@ def _dedupe(results: list[LotteryResult]) -> list[LotteryResult]:
 
 
 def _clean_text(text: str) -> str:
-    return " ".join(_strip_tags(text).split())
+    stripped = " ".join(_strip_tags(text).split())
+    if "Ã" not in stripped and "Â" not in stripped:
+        return stripped
+    try:
+        return stripped.encode("latin1").decode("utf-8")
+    except UnicodeError:
+        return stripped
 
 
 def _strip_tags(text: str) -> str:
