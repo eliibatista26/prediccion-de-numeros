@@ -3,9 +3,74 @@ from __future__ import annotations
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import date, datetime
+from itertools import combinations
 from zoneinfo import ZoneInfo
 
 from .models import LotteryResult
+from .utils import clean_text, normalize_text
+
+BASE_LOTTERIES = {
+    "La Primera",
+    "La Suerte Dominicana",
+    "Leidsa",
+    "Lotedom",
+    "Loteka",
+    "Lotería Nacional",
+    "Lotería Real",
+}
+
+BASE_VISIBLE_DRAWS = {
+    "Lotería Nacional": {
+        "Gana Más",
+        "Lotería Gana Más",
+        "Lotería Nacional",
+        "Nacional Noche",
+        "Quiniela Nacional",
+    },
+    "Leidsa": {
+        "Pega 3 Más",
+        "Quiniela Leidsa",
+        "Quiniela Palé",
+    },
+    "Lotería Real": {
+        "Quiniela Real",
+    },
+    "Loteka": {
+        "Quiniela Loteka",
+    },
+    "La Primera": {
+        "La Primera Día",
+        "La Primera Noche",
+        "Lotería La Primera 12PM",
+        "Lotería La Primera Noche 8PM",
+        "Primera Noche",
+    },
+    "La Suerte Dominicana": {
+        "La Suerte 12:30",
+        "La Suerte 18:00",
+        "La Suerte 6PM",
+        "La Suerte MD",
+    },
+    "Lotedom": {
+        "LoteDom",
+        "Quiniela LoteDom",
+        "Quiniela Lotedom",
+    },
+}
+
+BASE_DRAW_ALIASES = {
+    "la suerte 12:30": "La Suerte MD",
+    "la suerte 18:00": "La Suerte 6PM",
+    "loteria gana mas": "Gana Más",
+    "loteria la primera 12pm": "La Primera Día",
+    "loteria la primera noche 8pm": "La Primera Noche",
+    "nacional noche": "Lotería Nacional",
+    "primera noche": "La Primera Noche",
+    "quiniela lotedom": "LoteDom",
+}
+
+BASE_ANALYSIS_FROM = date(2010, 8, 1)
+MIRRORS = {number: int(f"{number:02d}"[::-1]) for number in range(100)}
 
 
 @dataclass(frozen=True)
@@ -22,7 +87,7 @@ def build_predictions(
     limit: int = 10,
     requested_from_date: str = "2010-08-01",
 ) -> dict[str, object]:
-    generated_at = datetime.now(ZoneInfo("Europe/Madrid"))
+    generated_at = datetime.now(ZoneInfo("America/Santo_Domingo"))
     grouped: dict[str, list[LotteryResult]] = defaultdict(list)
     for result in results:
         grouped[result.lottery].append(result)
@@ -30,34 +95,55 @@ def build_predictions(
     lotteries = {}
     for lottery, lottery_results in sorted(grouped.items()):
         suggestions = suggest_numbers(lottery_results, limit=limit)
+        draw_groups: dict[str, list[LotteryResult]] = defaultdict(list)
+        for result in lottery_results:
+            draw_groups[result.draw].append(result)
         lotteries[lottery] = {
-            "suggestions": [
-                {
-                    "number": f"{item.number:02d}",
-                    "score": round(item.score, 2),
-                    "frequency": item.frequency,
-                    "delay_days": item.delay_days,
-                    "recent_frequency": item.recent_frequency,
-                }
-                for item in suggestions
-            ],
+            "suggestions": _serialize_suggestions(suggestions),
             "last_results": [result.to_dict() for result in sorted(lottery_results, key=lambda item: item.draw_date, reverse=True)[:8]],
             "total_results": len(lottery_results),
+            "draws": {
+                draw: {
+                    "suggestions": _serialize_suggestions(suggest_numbers(draw_results, limit=limit)),
+                    "last_results": [result.to_dict() for result in sorted(draw_results, key=lambda item: item.draw_date, reverse=True)[:8]],
+                    "total_results": len(draw_results),
+                    "backtest": backtest_draw(draw_results, limit=limit),
+                }
+                for draw, draw_results in sorted(draw_groups.items())
+            },
         }
 
     return {
         "generated_at": generated_at.isoformat(timespec="seconds"),
         "generated_at_display": generated_at.strftime("%d/%m/%Y %H:%M"),
-        "generated_timezone": "Europe/Madrid",
+        "generated_timezone": "America/Santo_Domingo",
         "requested_from_date": requested_from_date,
         "actual_from_date": min((result.draw_date for result in results), default=None).isoformat() if results else None,
         "actual_to_date": max((result.draw_date for result in results), default=None).isoformat() if results else None,
         "disclaimer": "Estas sugerencias son estadísticas y no garantizan resultados.",
+        "base_10": analyze_base_10(results),
         "lotteries": lotteries,
     }
 
 
-def suggest_numbers(results: list[LotteryResult], limit: int = 10) -> list[NumberSuggestion]:
+def _serialize_suggestions(suggestions: list[NumberSuggestion]) -> list[dict[str, object]]:
+    return [
+        {
+            "number": f"{item.number:02d}",
+            "score": round(item.score, 2),
+            "frequency": item.frequency,
+            "delay_days": item.delay_days,
+            "recent_frequency": item.recent_frequency,
+        }
+        for item in suggestions
+    ]
+
+
+def suggest_numbers(
+    results: list[LotteryResult],
+    limit: int = 10,
+    reference_date: date | None = None,
+) -> list[NumberSuggestion]:
     if not results:
         return []
 
@@ -73,7 +159,7 @@ def suggest_numbers(results: list[LotteryResult], limit: int = 10) -> list[Numbe
                 recent_counts[number] += 1
             last_seen.setdefault(number, result.draw_date)
 
-    today = date.today()
+    today = reference_date or date.today()
     suggestions: list[NumberSuggestion] = []
     for number in range(100):
         frequency = all_counts[number]
@@ -94,3 +180,235 @@ def suggest_numbers(results: list[LotteryResult], limit: int = 10) -> list[Numbe
         )
 
     return sorted(suggestions, key=lambda item: (item.score, item.frequency, item.recent_frequency), reverse=True)[:limit]
+
+
+def backtest_draw(
+    results: list[LotteryResult],
+    limit: int = 10,
+    window_days: int = 60,
+    min_history: int = 30,
+) -> dict[str, object]:
+    ordered = sorted(results, key=lambda item: item.draw_date)
+    if len(ordered) <= min_history:
+        return {
+            "status": "insufficient",
+            "window_days": window_days,
+            "tested_draws": 0,
+            "message": f"Necesita al menos {min_history + 1} resultados para validar.",
+        }
+
+    max_date = ordered[-1].draw_date
+    cutoff = date.fromordinal(max_date.toordinal() - window_days)
+    targets = [result for result in ordered if result.draw_date >= cutoff]
+
+    tested = 0
+    top3_any_hits = 0
+    top5_any_hits = 0
+    first_position_hits = 0
+    total_hits_top5 = 0
+    evaluated_rows: list[dict[str, object]] = []
+
+    for target in targets:
+        prior = [result for result in ordered if result.draw_date < target.draw_date]
+        if len(prior) < min_history:
+            continue
+        predictions = suggest_numbers(prior, limit=limit, reference_date=target.draw_date)
+        predicted_top3 = {item.number for item in predictions[:3]}
+        predicted_top5 = {item.number for item in predictions[:5]}
+        actual_numbers = set(target.numbers[:3])
+        hits_top5 = sorted(actual_numbers & predicted_top5)
+        tested += 1
+        top3_any_hits += int(bool(actual_numbers & predicted_top3))
+        top5_any_hits += int(bool(hits_top5))
+        first_position_hits += int(bool(target.numbers and target.numbers[0] in predicted_top5))
+        total_hits_top5 += len(hits_top5)
+        evaluated_rows.append(
+            {
+                "date": target.draw_date.isoformat(),
+                "actual": [f"{number:02d}" for number in target.numbers[:3]],
+                "predicted": [f"{item.number:02d}" for item in predictions[:5]],
+                "hits": [f"{number:02d}" for number in hits_top5],
+            }
+        )
+
+    if tested == 0:
+        return {
+            "status": "insufficient",
+            "window_days": window_days,
+            "tested_draws": 0,
+            "message": "No hay suficientes resultados recientes con histórico previo.",
+        }
+
+    top5_rate = top5_any_hits / tested
+    if tested < 20:
+        label = "Muestra baja"
+    elif top5_rate >= 0.35:
+        label = "Alta"
+    elif top5_rate >= 0.18:
+        label = "Media"
+    else:
+        label = "Baja"
+
+    return {
+        "status": "ok",
+        "window_days": window_days,
+        "tested_draws": tested,
+        "top3_any_hit_rate": round(top3_any_hits / tested, 3),
+        "top5_any_hit_rate": round(top5_rate, 3),
+        "first_position_hit_rate": round(first_position_hits / tested, 3),
+        "average_hits_top5": round(total_hits_top5 / tested, 2),
+        "confidence_label": label,
+        "recent_evaluations": evaluated_rows[-5:],
+    }
+
+
+def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
+    base_results = [
+        result
+        for result in results
+        if result.lottery in BASE_LOTTERIES
+        and is_base_visible_draw(result.lottery, result.draw)
+        and result.draw_date >= BASE_ANALYSIS_FROM
+        and len(result.numbers) >= 3
+    ]
+    analysis_to = max((result.draw_date for result in base_results), default=BASE_ANALYSIS_FROM)
+    ordered = sorted(base_results, key=lambda item: (item.draw_date, item.lottery, item.draw))
+    latest_first = list(reversed(ordered))
+    total_counts: Counter[int] = Counter()
+    position_counts = [Counter(), Counter(), Counter()]
+    last_seen_position: list[dict[int, date]] = [dict(), dict(), dict()]
+    by_day: dict[date, list[LotteryResult]] = defaultdict(list)
+    by_lottery: dict[str, list[LotteryResult]] = defaultdict(list)
+    pair_counts: Counter[tuple[int, int]] = Counter()
+
+    for result in ordered:
+        by_day[result.draw_date].append(result)
+        by_lottery[result.lottery].append(result)
+        for number in result.numbers[:3]:
+            total_counts[number] += 1
+        for index, number in enumerate(result.numbers[:3]):
+            position_counts[index][number] += 1
+            last_seen_position[index][number] = result.draw_date
+        for pair in combinations(sorted(set(result.numbers[:3])), 2):
+            pair_counts[pair] += 1
+
+    recent_counts: Counter[int] = Counter()
+    for result in latest_first[:80]:
+        recent_counts.update(result.numbers[:3])
+
+    coincidences: Counter[int] = Counter()
+    for day_results in by_day.values():
+        day_map: dict[int, set[str]] = defaultdict(set)
+        for result in day_results:
+            for number in result.numbers[:3]:
+                day_map[number].add(result.lottery)
+        for number, lotteries in day_map.items():
+            if len(lotteries) > 1:
+                coincidences[number] += len(lotteries)
+
+    drags: Counter[int] = Counter()
+    previous_numbers: set[int] = set()
+    previous_date: date | None = None
+    for result in ordered:
+        current_numbers = set(result.numbers[:3])
+        if previous_date is not None and (result.draw_date - previous_date).days <= 1:
+            for number in current_numbers & previous_numbers:
+                drags[number] += 1
+        previous_numbers = current_numbers
+        previous_date = result.draw_date
+
+    moves: Counter[int] = Counter()
+    for number in range(100):
+        lotteries_with_number = {
+            result.lottery
+            for result in base_results
+            if number in result.numbers[:3]
+        }
+        if len(lotteries_with_number) > 1:
+            moves[number] = len(lotteries_with_number)
+
+    mirror_counts: Counter[int] = Counter()
+    for number, count in total_counts.items():
+        mirror = MIRRORS[number]
+        if mirror != number and total_counts[mirror] > 0:
+            mirror_counts[number] = count + total_counts[mirror]
+
+    strength_rows = []
+    for number in range(100):
+        frequency = total_counts[number]
+        if frequency == 0:
+            continue
+        score = (
+            frequency * 1.0
+            + recent_counts[number] * 1.35
+            + coincidences[number] * 1.2
+            + drags[number] * 1.15
+            + mirror_counts[number] * 0.25
+            + moves[number] * 1.5
+        )
+        strength_rows.append(
+            {
+                "number": f"{number:02d}",
+                "score": round(score, 2),
+                "frequency": frequency,
+                "recent": recent_counts[number],
+                "coincidences": coincidences[number],
+                "drags": drags[number],
+                "mirror": f"{MIRRORS[number]:02d}",
+                "moves": moves[number],
+            }
+        )
+    strength_rows.sort(key=lambda item: (item["score"], item["frequency"]), reverse=True)
+
+    top_10 = [{"number": f"{number:02d}", "count": count} for number, count in total_counts.most_common(10)]
+    delayed_by_position = {
+        str(index + 1): _delayed_rows(last_seen_position[index], analysis_to, position_counts[index])
+        for index in range(3)
+    }
+    elite = strength_rows[:5]
+    leader = strength_rows[0] if strength_rows else None
+    bullet_pair = pair_counts.most_common(1)
+
+    return {
+        "window": {
+            "from": BASE_ANALYSIS_FROM.isoformat(),
+            "to": analysis_to.isoformat(),
+            "results": len(base_results),
+        },
+        "top_10_repeated": top_10,
+        "delayed_by_position": delayed_by_position,
+        "coincidences": [{"number": f"{number:02d}", "count": count} for number, count in coincidences.most_common(10)],
+        "drags": [{"number": f"{number:02d}", "count": count} for number, count in drags.most_common(10)],
+        "active_mirrors": [{"number": f"{number:02d}", "mirror": f"{MIRRORS[number]:02d}", "count": count} for number, count in mirror_counts.most_common(10)],
+        "moving_numbers": [{"number": f"{number:02d}", "lotteries": count} for number, count in moves.most_common(10)],
+        "frequent_pairs": [{"pair": [f"{a:02d}", f"{b:02d}"], "count": count} for (a, b), count in pair_counts.most_common(10)],
+        "strength_ranking": strength_rows[:10],
+        "elite_group": elite,
+        "leader": leader,
+        "bullet_pair": {"pair": [f"{bullet_pair[0][0][0]:02d}", f"{bullet_pair[0][0][1]:02d}"], "count": bullet_pair[0][1]} if bullet_pair else None,
+    }
+
+
+def _delayed_rows(last_seen: dict[int, date], reference_date: date, counts: Counter[int]) -> list[dict[str, object]]:
+    rows = []
+    for number, seen in last_seen.items():
+        delay = (reference_date - seen).days
+        rows.append(
+            {
+                "number": f"{number:02d}",
+                "delay_days": delay,
+                "last_seen": seen.isoformat(),
+                "frequency": counts[number],
+            }
+        )
+    return sorted(rows, key=lambda item: (item["delay_days"], item["frequency"]), reverse=True)[:10]
+
+
+def is_base_visible_draw(lottery_name: str, draw: str) -> bool:
+    visible = BASE_VISIBLE_DRAWS.get(lottery_name, set())
+    if not visible:
+        return False
+    draw_key = normalize_text(draw)
+    visible_keys = {normalize_text(item) for item in visible}
+    alias = BASE_DRAW_ALIASES.get(draw_key)
+    return draw_key in visible_keys or bool(alias and normalize_text(alias) in visible_keys)

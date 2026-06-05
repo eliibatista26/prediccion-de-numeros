@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Predicción de números</title>
+  <title>Predicción de números · Loterías dominicanas</title>
+  <meta name="description" content="Predicción estadística de números para Leidsa, Lotería Nacional, Loteka, Lotería Real, La Primera, La Suerte y Lotedom. Actualización automática con datos reales.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Predicción de números · Loterías dominicanas">
+  <meta property="og:description" content="Análisis estadístico de Leidsa, Nacional, Loteka, Real, La Primera y más. Datos reales desde 2010, actualización automática.">
+  <meta property="og:locale" content="es_DO">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Predicción de números · Loterías dominicanas">
+  <meta name="twitter:description" content="Estadísticas y sugerencias para loterías dominicanas. Actualización automática.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="app-header">
-    <div class="brand">
-      <strong>Predicción<span>.RD</span></strong>
-      <p>Última actualización: 05/06/2026 22:15 · Europe/Madrid</p>
-    </div>
+    <p class="update-line">Última actualización: 05/06/2026 17:30 · America/Santo_Domingo</p>
     <div class="header-actions">
-      <button type="button" data-open-help>Guía rápida</button>
-      <button type="button" onclick="window.location.reload()">Actualizar vista</button>
+      <button type="button" data-open-help>Cómo usar la predicción</button>
     </div>
   </header>
 
@@ -25,7 +31,7 @@
         <h1>Números sugeridos por lotería</h1>
       </div>
       <div class="meta">
-        <span>111,711 resultados</span>
+        <span>83,633 resultados</span>
         <span>Cobertura real: 2010-08-01 a 2026-06-05</span>
       </div>
     </section>
@@ -34,23 +40,17 @@
       <p>Filtrar por operador</p>
       <div class="chips">
         <button class="chip active" type="button" data-filter="all">Todas</button>
-        <button class="chip" type="button" data-filter="Anguila" style="--brand: #263b8f"><i></i>Anguila</button>
-<button class="chip" type="button" data-filter="Florida" style="--brand: #168a76"><i></i>Florida</button>
-<button class="chip" type="button" data-filter="King Lottery" style="--brand: #d99a00"><i></i>King Lottery</button>
-<button class="chip" type="button" data-filter="La Primera" style="--brand: #ef233c"><i></i>La Primera</button>
-<button class="chip" type="button" data-filter="La Suerte Dominicana" style="--brand: #e83e75"><i></i>La Suerte Dominicana</button>
-<button class="chip" type="button" data-filter="Leidsa" style="--brand: #ec1f2e"><i></i>Leidsa</button>
-<button class="chip" type="button" data-filter="Lotedom" style="--brand: #2026d2"><i></i>Lotedom</button>
-<button class="chip" type="button" data-filter="Loteka" style="--brand: #15a8d8"><i></i>Loteka</button>
-<button class="chip" type="button" data-filter="Lotería Nacional" style="--brand: #159653"><i></i>Lotería Nacional</button>
-<button class="chip" type="button" data-filter="Lotería Real" style="--brand: #3158b7"><i></i>Lotería Real</button>
-<button class="chip" type="button" data-filter="Mega Millions" style="--brand: #24559e"><i></i>Mega Millions</button>
-<button class="chip" type="button" data-filter="New York" style="--brand: #1372b8"><i></i>New York</button>
-<button class="chip" type="button" data-filter="Powerball" style="--brand: #df202d"><i></i>Powerball</button>
+        <button class="chip" type="button" data-filter="Lotería Nacional" style="--brand: #f97316"><i></i>Lotería Nacional</button>
+<button class="chip" type="button" data-filter="Leidsa" style="--brand: #ea580c"><i></i>Leidsa</button>
+<button class="chip" type="button" data-filter="Lotería Real" style="--brand: #d97706"><i></i>Lotería Real</button>
+<button class="chip" type="button" data-filter="Loteka" style="--brand: #f59e0b"><i></i>Loteka</button>
+<button class="chip" type="button" data-filter="La Primera" style="--brand: #f97316"><i></i>La Primera</button>
+<button class="chip" type="button" data-filter="La Suerte Dominicana" style="--brand: #fb923c"><i></i>La Suerte Dominicana</button>
+<button class="chip" type="button" data-filter="Lotedom" style="--brand: #c2410c"><i></i>Lotedom</button>
       </div>
       <div class="schedule">
         <strong>Actualización</strong>
-        <span>Última generación: 05/06/2026 22:15 (Europe/Madrid). Automática por GitHub Actions.</span>
+        <span>Última generación: 05/06/2026 17:30 (America/Santo_Domingo). Automática por GitHub Actions.</span>
       </div>
       <div class="coverage-note">
         <strong>Cobertura verificada</strong>
@@ -59,1002 +59,382 @@
     </section>
 
     <section class="explain">
-      <div>
-        <h2>Cómo se calcula la puntuación</h2>
-        <p>Estas sugerencias son estadísticas y no garantizan resultados.</p>
-      </div>
       <div class="score-grid">
-        <div><b>Frecuencia</b><span>Cuántas veces salió desde 2010-08-01.</span></div>
-        <div><b>Tendencia</b><span>Más peso a los sorteos recientes.</span></div>
+        <div><b>Frecuencia</b><span>Datos válidos desde 2010-08-01.</span></div>
+        <div><b>Tendencia</b><span>Más próximo a los sorteos recientes.</span></div>
         <div><b>Atraso</b><span>Extra si lleva días sin aparecer.</span></div>
       </div>
     </section>
 
-    <section class="lottery-list" id="detalle">
-      <section class="lottery-section" data-lottery="Anguila" style="--brand: #263b8f">
-  <div class="section-head">
+    <section class="base-panel">
+  <div class="base-head">
     <div>
-      <h2>Anguila</h2>
-      <span>7841 resultados históricos</span>
+      <p class="eyebrow">LAS 10 BASE</p>
+      <h2>Análisis completo</h2>
     </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #263b8f">
-  <div class="featured-head">
-    <div>
-      <h2>Anguila</h2>
-      <p>Predicción recomendada · Hoy</p>
+    <div class="meta">
+      <span>47061 resultados</span>
+      <span>2010-08-01 a 2026-06-05</span>
     </div>
-    <span>Alta probabilidad</span>
   </div>
-  <div class="featured-balls">
-    <span class="hero-ball">20</span><span class="hero-ball">72</span><span class="hero-ball">02</span>
-    <div class="mini-balls"><span class="mini-ball">25</span><span class="mini-ball">12</span></div>
+  <div class="base-grid">
+    <article>
+      <h3>Top 10 repetidos</h3>
+      <ol><li><span>08</span><b>1879</b></li>
+<li><span>25</span><b>1849</b></li>
+<li><span>14</span><b>1761</b></li>
+<li><span>21</span><b>1738</b></li>
+<li><span>03</span><b>1724</b></li>
+<li><span>26</span><b>1716</b></li>
+<li><span>22</span><b>1716</b></li>
+<li><span>34</span><b>1696</b></li>
+<li><span>15</span><b>1690</b></li>
+<li><span>29</span><b>1682</b></li></ol>
+    </article>
+    <article>
+      <h3>Ranking de fuerza</h3>
+      <ol><li><span>08</span><b>3346.95 pts</b></li>
+<li><span>14</span><b>3321.35 pts</b></li>
+<li><span>21</span><b>3297.65 pts</b></li>
+<li><span>25</span><b>3263.45 pts</b></li>
+<li><span>03</span><b>3261.55 pts</b></li>
+<li><span>26</span><b>3194.35 pts</b></li>
+<li><span>12</span><b>3185.55 pts</b></li>
+<li><span>31</span><b>3146.0 pts</b></li>
+<li><span>10</span><b>3144.35 pts</b></li>
+<li><span>13</span><b>3131.25 pts</b></li></ol>
+    </article>
+    <article class="elite-box">
+      <h3>Grupo Élite</h3>
+      <div><span>08</span> <span>14</span> <span>21</span> <span>25</span> <span>03</span></div>
+      <p>Líder: <strong>08</strong> · Palé bala: <strong>08-25</strong></p>
+    </article>
   </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>360</b><strong>↑ 360.06</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>314</b><strong>↑ 319.41</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>312</b><strong>↑ 318.6</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>Anguila Tarde</h3>
-    <p>2026-06-05 · Anguila</p>
-    <div><span>66</span><span>55</span><span>84</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Anguila Noche</h3>
-    <p>2026-06-05 · Anguila</p>
-    <div><span>86</span><span>34</span><span>06</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Anguila Medio Día</h3>
-    <p>2026-06-05 · Anguila</p>
-    <div><span>04</span><span>09</span><span>98</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Anguila Mañana</h3>
-    <p>2026-06-05 · Anguila</p>
-    <div><span>36</span><span>43</span><span>65</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
+  <div class="delay-grid">
+    <article><h3>Atrasados 1ra posición</h3><ol><li><span>83</span><b>44 días</b></li>
+<li><span>25</span><b>43 días</b></li>
+<li><span>03</span><b>42 días</b></li></ol></article>
+    <article><h3>Atrasados 2da posición</h3><ol><li><span>90</span><b>69 días</b></li>
+<li><span>60</span><b>47 días</b></li>
+<li><span>97</span><b>33 días</b></li></ol></article>
+    <article><h3>Atrasados 3ra posición</h3><ol><li><span>57</span><b>41 días</b></li>
+<li><span>84</span><b>29 días</b></li>
+<li><span>74</span><b>28 días</b></li></ol></article>
   </div>
 </section>
-<section class="lottery-section" data-lottery="Florida" style="--brand: #168a76">
-  <div class="section-head">
-    <div>
-      <h2>Florida</h2>
-      <span>4330 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #168a76">
-  <div class="featured-head">
-    <div>
-      <h2>Florida</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">75</span><span class="hero-ball">20</span><span class="hero-ball">10</span>
-    <div class="mini-balls"><span class="mini-ball">55</span><span class="mini-ball">95</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>150</b><strong>↑ 162.0</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>156</b><strong>↑ 159.63</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>153</b><strong>↑ 156.62</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
+    <section class="compare-panel">
   <div>
-    <h3>Florida Noche</h3>
-    <p>2026-06-05 · Florida</p>
-    <div><span>75</span><span>98</span></div>
+    <p class="eyebrow">Comparar</p>
+    <h2>Dos loterías al mismo tiempo</h2>
   </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Florida Noche</h3>
-    <p>2026-06-05 · Florida</p>
-    <div><span>75</span><span>98</span><span>65</span></div>
+  <div class="compare-controls">
+    <select data-compare-first><option value="Lotería Nacional">Lotería Nacional</option>
+<option value="Leidsa">Leidsa</option>
+<option value="Lotería Real">Lotería Real</option>
+<option value="Loteka">Loteka</option>
+<option value="La Primera">La Primera</option>
+<option value="La Suerte Dominicana">La Suerte Dominicana</option>
+<option value="Lotedom">Lotedom</option></select>
+    <select data-compare-second><option value="Lotería Nacional">Lotería Nacional</option>
+<option value="Leidsa" selected>Leidsa</option>
+<option value="Lotería Real">Lotería Real</option>
+<option value="Loteka">Loteka</option>
+<option value="La Primera">La Primera</option>
+<option value="La Suerte Dominicana">La Suerte Dominicana</option>
+<option value="Lotedom">Lotedom</option></select>
   </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Florida Día</h3>
-    <p>2026-06-05 · Florida</p>
-    <div><span>14</span><span>81</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Florida Día</h3>
-    <p>2026-06-05 · Florida</p>
-    <div><span>14</span><span>81</span><span>41</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
+  <div class="compare-result" data-compare-output></div>
+  <script type="application/json" id="compare-data">{"Lotería Nacional": [{"number": "21", "score": 1484.02}, {"number": "12", "score": 1467.05}, {"number": "25", "score": 1466.0}, {"number": "01", "score": 1432.6}, {"number": "23", "score": 1429.06}, {"number": "15", "score": 1271.02}, {"number": "14", "score": 1157.6}, {"number": "24", "score": 1150.03}, {"number": "22", "score": 1136.4}, {"number": "11", "score": 1126.6}], "Leidsa": [{"number": "03", "score": 5685.61}, {"number": "04", "score": 5594.4}, {"number": "08", "score": 5586.02}, {"number": "01", "score": 5475.81}, {"number": "05", "score": 5449.0}, {"number": "07", "score": 5431.0}, {"number": "02", "score": 5384.6}, {"number": "06", "score": 5351.4}, {"number": "10", "score": 5219.2}, {"number": "15", "score": 5033.02}], "Lotería Real": [{"number": "18", "score": 1495.0}, {"number": "34", "score": 1488.4}, {"number": "26", "score": 1411.82}, {"number": "33", "score": 1387.6}, {"number": "08", "score": 1354.6}, {"number": "03", "score": 1331.8}, {"number": "04", "score": 1315.6}, {"number": "37", "score": 1290.2}, {"number": "20", "score": 1288.03}, {"number": "19", "score": 1286.03}], "Loteka": [{"number": "50", "score": 560.43}, {"number": "75", "score": 481.07}, {"number": "89", "score": 451.05}, {"number": "70", "score": 331.13}, {"number": "71", "score": 327.21}, {"number": "74", "score": 326.17}, {"number": "69", "score": 321.08}, {"number": "99", "score": 320.23}, {"number": "48", "score": 312.08}, {"number": "51", "score": 305.11}], "La Primera": [{"number": "10", "score": 470.82}, {"number": "03", "score": 449.82}, {"number": "02", "score": 442.05}, {"number": "09", "score": 439.03}, {"number": "06", "score": 435.41}, {"number": "08", "score": 435.2}, {"number": "05", "score": 431.61}, {"number": "07", "score": 416.2}, {"number": "04", "score": 405.6}, {"number": "01", "score": 401.09}], "La Suerte Dominicana": [{"number": "18", "score": 178.03}, {"number": "73", "score": 178.02}, {"number": "71", "score": 177.07}, {"number": "07", "score": 174.21}, {"number": "35", "score": 173.09}, {"number": "60", "score": 171.8}, {"number": "91", "score": 167.6}, {"number": "42", "score": 166.21}, {"number": "23", "score": 166.07}, {"number": "99", "score": 164.07}], "Lotedom": [{"number": "12", "score": 103.01}, {"number": "49", "score": 93.6}, {"number": "28", "score": 92.15}, {"number": "48", "score": 92.1}, {"number": "59", "score": 91.61}, {"number": "27", "score": 91.6}, {"number": "21", "score": 89.1}, {"number": "73", "score": 87.6}, {"number": "08", "score": 87.27}, {"number": "80", "score": 85.02}]}</script>
 </section>
-<section class="lottery-section" data-lottery="King Lottery" style="--brand: #d99a00">
-  <div class="section-head">
+    <section class="draws-panel">
+  <div class="draws-head">
     <div>
-      <h2>King Lottery</h2>
-      <span>3896 resultados históricos</span>
+      <p class="eyebrow">Sorteos recientes</p>
+      <h2>Resultados con historial y predicción</h2>
     </div>
-    <span class="section-count">10 sugeridos</span>
+    <span>12 sorteos visibles</span>
   </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #d99a00">
-  <div class="featured-head">
+  <div class="draw-card-list">
+    <article class="draw-card" data-draw-lottery="Lotería Nacional" style="--brand: #f97316">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/loteria-nacional.svg" alt="Lotería Nacional" loading="lazy"></div>
     <div>
-      <h2>King Lottery</h2>
-      <p>Predicción recomendada · Hoy</p>
+      <h3>Quiniela Nacional</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Media · 20%</span>
     </div>
-    <span>Alta probabilidad</span>
   </div>
-  <div class="featured-balls">
-    <span class="hero-ball">56</span><span class="hero-ball">55</span><span class="hero-ball">29</span>
-    <div class="mini-balls"><span class="mini-ball">90</span><span class="mini-ball">14</span></div>
+  <div class="draw-numbers">
+    <span class="first">74<small>1RO</small></span>
+    <span>26<small>2DO</small></span>
+    <span>22<small>3RO</small></span>
   </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>161</b><strong>↑ 171.82</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>144</b><strong>↑ 161.4</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>146</b><strong>↑ 151.43</strong></div>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="0">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="0">Predicciones</button>
   </div>
 </article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
+<article class="draw-card" data-draw-lottery="Lotería Nacional" style="--brand: #f97316">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/loteria-nacional.svg" alt="Lotería Nacional" loading="lazy"></div>
+    <div>
+      <h3>Lotería Nacional</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Baja · 12%</span>
+    </div>
   </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>King Lottery 7:30</h3>
-    <p>2026-06-05 · King Lottery</p>
-    <div><span>55</span><span>14</span><span>76</span></div>
+  <div class="draw-numbers">
+    <span class="first">74<small>1RO</small></span>
+    <span>26<small>2DO</small></span>
+    <span>22<small>3RO</small></span>
   </div>
-  <b>›</b>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="1">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="1">Predicciones</button>
+  </div>
 </article>
-<article class="latest-card">
-  <div>
-    <h3>King Lottery 12:30</h3>
-    <p>2026-06-05 · King Lottery</p>
-    <div><span>57</span><span>87</span><span>55</span></div>
+<article class="draw-card" data-draw-lottery="Leidsa" style="--brand: #ea580c">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/leidsa.svg" alt="Leidsa" loading="lazy"></div>
+    <div>
+      <h3>Quiniela Palé</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Baja · 12%</span>
+    </div>
   </div>
-  <b>›</b>
+  <div class="draw-numbers">
+    <span class="first">14<small>1RO</small></span>
+    <span>41<small>2DO</small></span>
+    <span>59<small>3RO</small></span>
+  </div>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="2">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="2">Predicciones</button>
+  </div>
 </article>
-<article class="latest-card">
-  <div>
-    <h3>King Lottery 12:30</h3>
-    <p>2026-06-05 · King Lottery</p>
-    <div><span>26</span><span>36</span><span>71</span></div>
+<article class="draw-card" data-draw-lottery="Leidsa" style="--brand: #ea580c">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/leidsa.svg" alt="Leidsa" loading="lazy"></div>
+    <div>
+      <h3>Quiniela Leidsa</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Media · 20%</span>
+    </div>
   </div>
-  <b>›</b>
+  <div class="draw-numbers">
+    <span class="first">16<small>1RO</small></span>
+    <span>40<small>2DO</small></span>
+    <span>34<small>3RO</small></span>
+  </div>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="3">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="3">Predicciones</button>
+  </div>
 </article>
-<article class="latest-card">
-  <div>
-    <h3>Pale King Lottery 3</h3>
-    <p>2026-06-04 · King Lottery</p>
-    <div><span>55</span><span>76</span></div>
+<article class="draw-card" data-draw-lottery="Leidsa" style="--brand: #ea580c">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/leidsa.svg" alt="Leidsa" loading="lazy"></div>
+    <div>
+      <h3>Pega 3 Más</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Media · 33%</span>
+    </div>
   </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
+  <div class="draw-numbers">
+    <span class="first">29<small>1RO</small></span>
+    <span>49<small>2DO</small></span>
+    <span>29<small>3RO</small></span>
   </div>
-</aside>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="4">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="4">Predicciones</button>
   </div>
+</article>
+<article class="draw-card" data-draw-lottery="Lotería Real" style="--brand: #d97706">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/loteria-real.svg" alt="Lotería Real" loading="lazy"></div>
+    <div>
+      <h3>Quiniela Real</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Media · 21%</span>
+    </div>
+  </div>
+  <div class="draw-numbers">
+    <span class="first">77<small>1RO</small></span>
+    <span>34<small>2DO</small></span>
+    <span>88<small>3RO</small></span>
+  </div>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="5">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="5">Predicciones</button>
+  </div>
+</article>
+<article class="draw-card" data-draw-lottery="Loteka" style="--brand: #f59e0b">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/loteka.svg" alt="Loteka" loading="lazy"></div>
+    <div>
+      <h3>Quiniela Loteka</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Media · 20%</span>
+    </div>
+  </div>
+  <div class="draw-numbers">
+    <span class="first">14<small>1RO</small></span>
+    <span>41<small>2DO</small></span>
+    <span>59<small>3RO</small></span>
+  </div>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="6">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="6">Predicciones</button>
+  </div>
+</article>
+<article class="draw-card" data-draw-lottery="La Primera" style="--brand: #f97316">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/la-primera.svg" alt="La Primera" loading="lazy"></div>
+    <div>
+      <h3>La Primera Noche</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Baja · 13%</span>
+    </div>
+  </div>
+  <div class="draw-numbers">
+    <span class="first">12<small>1RO</small></span>
+    <span>13<small>2DO</small></span>
+    <span>60<small>3RO</small></span>
+  </div>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="7">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="7">Predicciones</button>
+  </div>
+</article>
+<article class="draw-card" data-draw-lottery="La Primera" style="--brand: #f97316">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/la-primera.svg" alt="La Primera" loading="lazy"></div>
+    <div>
+      <h3>La Primera Día</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Baja · 13%</span>
+    </div>
+  </div>
+  <div class="draw-numbers">
+    <span class="first">88<small>1RO</small></span>
+    <span>89<small>2DO</small></span>
+    <span>08<small>3RO</small></span>
+  </div>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="8">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="8">Predicciones</button>
+  </div>
+</article>
+<article class="draw-card" data-draw-lottery="La Suerte Dominicana" style="--brand: #fb923c">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/la-suerte-dominicana.svg" alt="La Suerte Dominicana" loading="lazy"></div>
+    <div>
+      <h3>La Suerte MD</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Baja · 13%</span>
+    </div>
+  </div>
+  <div class="draw-numbers">
+    <span class="first">60<small>1RO</small></span>
+    <span>91<small>2DO</small></span>
+    <span>46<small>3RO</small></span>
+  </div>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="9">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="9">Predicciones</button>
+  </div>
+</article>
+<article class="draw-card" data-draw-lottery="La Suerte Dominicana" style="--brand: #fb923c">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/la-suerte-dominicana.svg" alt="La Suerte Dominicana" loading="lazy"></div>
+    <div>
+      <h3>La Suerte 6PM</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Baja · 15%</span>
+    </div>
+  </div>
+  <div class="draw-numbers">
+    <span class="first">26<small>1RO</small></span>
+    <span>95<small>2DO</small></span>
+    <span>04<small>3RO</small></span>
+  </div>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="10">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="10">Predicciones</button>
+  </div>
+</article>
+<article class="draw-card" data-draw-lottery="Lotedom" style="--brand: #c2410c">
+  <div class="draw-identity">
+    <div class="draw-logo"><img class="draw-logo-img" src="assets/logos/lotedom.svg" alt="Lotedom" loading="lazy"></div>
+    <div>
+      <h3>LoteDom</h3>
+      <p>05 Jun</p>
+      <span class="confidence-badge">Backtest Media · 21%</span>
+    </div>
+  </div>
+  <div class="draw-numbers">
+    <span class="first">73<small>1RO</small></span>
+    <span>83<small>2DO</small></span>
+    <span>27<small>3RO</small></span>
+  </div>
+  <div class="draw-actions">
+    <button type="button" data-open-draw="history" data-draw-id="11">Historial</button>
+    <button type="button" data-open-draw="prediction" data-draw-id="11">Predicciones</button>
+  </div>
+</article>
+  </div>
+  <script type="application/json" id="draw-data">{"0": {"lottery": "Lotería Nacional", "draw": "Quiniela Nacional", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["74", "26", "22"], "predictions": [{"number": "30", "score": 19.36, "frequency": 12, "delay_days": 20}, {"number": "40", "score": 13.36, "frequency": 6, "delay_days": 20}, {"number": "51", "score": 12.29, "frequency": 5, "delay_days": 11}, {"number": "22", "score": 11.6, "frequency": 5, "delay_days": 0}, {"number": "12", "score": 11.49, "frequency": 6, "delay_days": 11}, {"number": "74", "score": 10.6, "frequency": 4, "delay_days": 0}, {"number": "88", "score": 10.55, "frequency": 5, "delay_days": 18}, {"number": "41", "score": 9.82, "frequency": 6, "delay_days": 27}, {"number": "33", "score": 9.75, "frequency": 6, "delay_days": 18}, {"number": "21", "score": 9.48, "frequency": 4, "delay_days": 10}], "prediction_scope": "Sorteo específico", "total_results": 91, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 59, "top3_any_hit_rate": 0.153, "top5_any_hit_rate": 0.203, "first_position_hit_rate": 0.136, "average_hits_top5": 0.2, "confidence_label": "Media", "recent_evaluations": [{"date": "2026-05-30", "actual": ["49", "37", "87"], "predicted": ["30", "51", "40", "88", "33"], "hits": []}, {"date": "2026-06-01", "actual": ["69", "68", "54"], "predicted": ["30", "51", "40", "88", "33"], "hits": []}, {"date": "2026-06-03", "actual": ["05", "64", "66"], "predicted": ["30", "51", "40", "33", "12"], "hits": []}, {"date": "2026-06-04", "actual": ["74", "26", "22"], "predicted": ["30", "40", "51", "12", "88"], "hits": []}, {"date": "2026-06-05", "actual": ["74", "26", "22"], "predicted": ["30", "40", "51", "12", "88"], "hits": []}]}, "history": [{"draw": "Quiniela Nacional", "date": "2026-06-05", "numbers": ["74", "26", "22"]}, {"draw": "Quiniela Nacional", "date": "2026-06-04", "numbers": ["74", "26", "22"]}, {"draw": "Quiniela Nacional", "date": "2026-06-03", "numbers": ["05", "64", "66"]}, {"draw": "Quiniela Nacional", "date": "2026-06-01", "numbers": ["69", "68", "54"]}, {"draw": "Quiniela Nacional", "date": "2026-05-30", "numbers": ["49", "37", "87"]}]}, "1": {"lottery": "Lotería Nacional", "draw": "Lotería Nacional", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["74", "26", "22"], "predictions": [{"number": "90", "score": 405.48, "frequency": 405, "delay_days": 58}, {"number": "62", "score": 403.72, "frequency": 402, "delay_days": 209}, {"number": "70", "score": 398.67, "frequency": 395, "delay_days": 9}, {"number": "94", "score": 230.29, "frequency": 230, "delay_days": 35}, {"number": "55", "score": 228.03, "frequency": 226, "delay_days": 28}, {"number": "40", "score": 223.77, "frequency": 220, "delay_days": 21}, {"number": "14", "score": 222.43, "frequency": 222, "delay_days": 52}, {"number": "61", "score": 190.42, "frequency": 190, "delay_days": 51}, {"number": "80", "score": 188.95, "frequency": 187, "delay_days": 18}, {"number": "26", "score": 182.4, "frequency": 174, "delay_days": 0}], "prediction_scope": "Sorteo específico", "total_results": 5640, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 61, "top3_any_hit_rate": 0.049, "top5_any_hit_rate": 0.115, "first_position_hit_rate": 0.049, "average_hits_top5": 0.11, "confidence_label": "Baja", "recent_evaluations": [{"date": "2026-06-01", "actual": ["16", "77", "72"], "predicted": ["90", "62", "70", "94", "55"], "hits": []}, {"date": "2026-06-02", "actual": ["05", "64", "66"], "predicted": ["90", "62", "70", "94", "55"], "hits": []}, {"date": "2026-06-03", "actual": ["28", "31", "05"], "predicted": ["90", "62", "70", "94", "55"], "hits": []}, {"date": "2026-06-04", "actual": ["74", "26", "22"], "predicted": ["90", "62", "70", "94", "55"], "hits": []}, {"date": "2026-06-05", "actual": ["74", "26", "22"], "predicted": ["90", "62", "70", "94", "55"], "hits": []}]}, "history": [{"draw": "Lotería Nacional", "date": "2026-06-05", "numbers": ["74", "26", "22"]}, {"draw": "Lotería Nacional", "date": "2026-06-04", "numbers": ["74", "26", "22"]}, {"draw": "Lotería Nacional", "date": "2026-06-03", "numbers": ["28", "31", "05"]}, {"draw": "Lotería Nacional", "date": "2026-06-02", "numbers": ["05", "64", "66"]}, {"draw": "Lotería Nacional", "date": "2026-06-01", "numbers": ["16", "77", "72"]}]}, "2": {"lottery": "Leidsa", "draw": "Quiniela Palé", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["14", "41", "59"], "predictions": [{"number": "74", "score": 72.03, "frequency": 70, "delay_days": 28}, {"number": "59", "score": 70.2, "frequency": 60, "delay_days": 0}, {"number": "23", "score": 68.73, "frequency": 65, "delay_days": 16}, {"number": "91", "score": 67.98, "frequency": 66, "delay_days": 22}, {"number": "42", "score": 66.74, "frequency": 63, "delay_days": 17}, {"number": "10", "score": 65.67, "frequency": 62, "delay_days": 9}, {"number": "12", "score": 65.38, "frequency": 65, "delay_days": 46}, {"number": "08", "score": 64.61, "frequency": 64, "delay_days": 74}, {"number": "22", "score": 64.27, "frequency": 64, "delay_days": 33}, {"number": "51", "score": 63.89, "frequency": 62, "delay_days": 11}], "prediction_scope": "Sorteo específico", "total_results": 1709, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 61, "top3_any_hit_rate": 0.082, "top5_any_hit_rate": 0.115, "first_position_hit_rate": 0.033, "average_hits_top5": 0.11, "confidence_label": "Baja", "recent_evaluations": [{"date": "2026-06-01", "actual": ["60", "67", "16"], "predicted": ["74", "23", "91", "42", "59"], "hits": []}, {"date": "2026-06-02", "actual": ["97", "85", "65"], "predicted": ["74", "23", "91", "42", "59"], "hits": []}, {"date": "2026-06-03", "actual": ["62", "44", "83"], "predicted": ["74", "23", "91", "42", "59"], "hits": []}, {"date": "2026-06-04", "actual": ["93", "57", "32"], "predicted": ["74", "23", "91", "42", "59"], "hits": []}, {"date": "2026-06-05", "actual": ["14", "41", "59"], "predicted": ["74", "23", "91", "42", "10"], "hits": []}]}, "history": [{"draw": "Quiniela Palé", "date": "2026-06-05", "numbers": ["14", "41", "59"]}, {"draw": "Quiniela Palé", "date": "2026-06-04", "numbers": ["93", "57", "32"]}, {"draw": "Quiniela Palé", "date": "2026-06-03", "numbers": ["62", "44", "83"]}, {"draw": "Quiniela Palé", "date": "2026-06-02", "numbers": ["97", "85", "65"]}, {"draw": "Quiniela Palé", "date": "2026-06-01", "numbers": ["60", "67", "16"]}]}, "3": {"lottery": "Leidsa", "draw": "Quiniela Leidsa", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["16", "40", "34"], "predictions": [{"number": "35", "score": 404.69, "frequency": 401, "delay_days": 11}, {"number": "25", "score": 400.65, "frequency": 397, "delay_days": 6}, {"number": "08", "score": 388.67, "frequency": 385, "delay_days": 9}, {"number": "63", "score": 259.21, "frequency": 259, "delay_days": 26}, {"number": "73", "score": 234.94, "frequency": 233, "delay_days": 17}, {"number": "29", "score": 227.85, "frequency": 226, "delay_days": 6}, {"number": "21", "score": 200.36, "frequency": 200, "delay_days": 44}, {"number": "57", "score": 192.63, "frequency": 189, "delay_days": 4}, {"number": "88", "score": 188.87, "frequency": 178, "delay_days": 9}, {"number": "81", "score": 186.71, "frequency": 183, "delay_days": 13}], "prediction_scope": "Sorteo específico", "total_results": 5674, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 87, "top3_any_hit_rate": 0.149, "top5_any_hit_rate": 0.195, "first_position_hit_rate": 0.08, "average_hits_top5": 0.22, "confidence_label": "Media", "recent_evaluations": [{"date": "2026-06-03", "actual": ["11", "75", "77"], "predicted": ["35", "25", "08", "63", "73"], "hits": []}, {"date": "2026-06-03", "actual": ["20", "49", "82"], "predicted": ["35", "25", "08", "63", "73"], "hits": []}, {"date": "2026-06-04", "actual": ["20", "49", "82"], "predicted": ["35", "25", "08", "63", "73"], "hits": []}, {"date": "2026-06-04", "actual": ["16", "40", "34"], "predicted": ["35", "25", "08", "63", "73"], "hits": []}, {"date": "2026-06-05", "actual": ["16", "40", "34"], "predicted": ["35", "25", "08", "63", "73"], "hits": []}]}, "history": [{"draw": "Quiniela Leidsa", "date": "2026-06-05", "numbers": ["16", "40", "34"]}, {"draw": "Quiniela Leidsa", "date": "2026-06-04", "numbers": ["20", "49", "82"]}, {"draw": "Quiniela Leidsa", "date": "2026-06-04", "numbers": ["16", "40", "34"]}, {"draw": "Quiniela Leidsa", "date": "2026-06-03", "numbers": ["11", "75", "77"]}, {"draw": "Quiniela Leidsa", "date": "2026-06-03", "numbers": ["20", "49", "82"]}]}, "4": {"lottery": "Leidsa", "draw": "Pega 3 Más", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["29", "49", "29"], "predictions": [{"number": "03", "score": 444.41, "frequency": 439, "delay_days": 1}, {"number": "29", "score": 399.6, "frequency": 384, "delay_days": 0}, {"number": "22", "score": 393.62, "frequency": 381, "delay_days": 2}, {"number": "15", "score": 391.27, "frequency": 384, "delay_days": 9}, {"number": "10", "score": 383.41, "frequency": 378, "delay_days": 1}, {"number": "01", "score": 380.22, "frequency": 380, "delay_days": 27}, {"number": "13", "score": 379.63, "frequency": 376, "delay_days": 4}, {"number": "04", "score": 379.43, "frequency": 374, "delay_days": 4}, {"number": "19", "score": 378.94, "frequency": 377, "delay_days": 17}, {"number": "28", "score": 378.27, "frequency": 378, "delay_days": 33}], "prediction_scope": "Sorteo específico", "total_results": 4938, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 87, "top3_any_hit_rate": 0.172, "top5_any_hit_rate": 0.333, "first_position_hit_rate": 0.092, "average_hits_top5": 0.34, "confidence_label": "Media", "recent_evaluations": [{"date": "2026-06-03", "actual": ["49", "22", "31"], "predicted": ["03", "15", "22", "29", "19"], "hits": ["22"]}, {"date": "2026-06-03", "actual": ["30", "10", "03"], "predicted": ["03", "15", "22", "29", "19"], "hits": ["03"]}, {"date": "2026-06-04", "actual": ["30", "10", "03"], "predicted": ["03", "22", "15", "29", "19"], "hits": ["03"]}, {"date": "2026-06-04", "actual": ["29", "49", "29"], "predicted": ["03", "22", "15", "29", "19"], "hits": ["29"]}, {"date": "2026-06-05", "actual": ["29", "49", "29"], "predicted": ["03", "22", "15", "29", "10"], "hits": ["29"]}]}, "history": [{"draw": "Pega 3 Más", "date": "2026-06-05", "numbers": ["29", "49", "29"]}, {"draw": "Pega 3 Más", "date": "2026-06-04", "numbers": ["30", "10", "03"]}, {"draw": "Pega 3 Más", "date": "2026-06-04", "numbers": ["29", "49", "29"]}, {"draw": "Pega 3 Más", "date": "2026-06-03", "numbers": ["49", "22", "31"]}, {"draw": "Pega 3 Más", "date": "2026-06-03", "numbers": ["30", "10", "03"]}]}, "5": {"lottery": "Lotería Real", "draw": "Quiniela Real", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["77", "34", "88"], "predictions": [{"number": "34", "score": 360.0, "frequency": 348, "delay_days": 0}, {"number": "88", "score": 349.6, "frequency": 343, "delay_days": 0}, {"number": "99", "score": 327.8, "frequency": 323, "delay_days": 0}, {"number": "26", "score": 139.62, "frequency": 136, "delay_days": 2}, {"number": "65", "score": 131.29, "frequency": 124, "delay_days": 11}, {"number": "43", "score": 130.35, "frequency": 130, "delay_days": 42}, {"number": "17", "score": 123.87, "frequency": 122, "delay_days": 8}, {"number": "89", "score": 123.83, "frequency": 122, "delay_days": 4}, {"number": "55", "score": 123.67, "frequency": 120, "delay_days": 9}, {"number": "56", "score": 123.25, "frequency": 123, "delay_days": 30}], "prediction_scope": "Sorteo específico", "total_results": 3699, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 80, "top3_any_hit_rate": 0.163, "top5_any_hit_rate": 0.212, "first_position_hit_rate": 0.087, "average_hits_top5": 0.24, "confidence_label": "Media", "recent_evaluations": [{"date": "2026-06-04", "actual": ["15", "83"], "predicted": ["34", "88", "99", "26", "65"], "hits": []}, {"date": "2026-06-04", "actual": ["77", "34", "88"], "predicted": ["34", "88", "99", "26", "65"], "hits": ["34", "88"]}, {"date": "2026-06-05", "actual": ["77", "34", "88"], "predicted": ["34", "88", "99", "26", "65"], "hits": ["34", "88"]}, {"date": "2026-06-05", "actual": ["99", "77", "52"], "predicted": ["34", "88", "99", "26", "65"], "hits": ["99"]}, {"date": "2026-06-05", "actual": ["95", "03"], "predicted": ["34", "88", "99", "26", "65"], "hits": []}]}, "history": [{"draw": "Quiniela Real", "date": "2026-06-05", "numbers": ["77", "34", "88"]}, {"draw": "Quiniela Real", "date": "2026-06-05", "numbers": ["99", "77", "52"]}, {"draw": "Quiniela Real", "date": "2026-06-05", "numbers": ["95", "03"]}, {"draw": "Quiniela Real", "date": "2026-06-04", "numbers": ["23", "68", "71"]}, {"draw": "Quiniela Real", "date": "2026-06-04", "numbers": ["15", "83"]}]}, "6": {"lottery": "Loteka", "draw": "Quiniela Loteka", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["14", "41", "59"], "predictions": [{"number": "75", "score": 328.87, "frequency": 327, "delay_days": 8}, {"number": "50", "score": 313.63, "frequency": 310, "delay_days": 4}, {"number": "89", "score": 309.16, "frequency": 309, "delay_days": 19}, {"number": "74", "score": 176.23, "frequency": 176, "delay_days": 28}, {"number": "48", "score": 159.68, "frequency": 156, "delay_days": 10}, {"number": "51", "score": 153.21, "frequency": 153, "delay_days": 26}, {"number": "28", "score": 109.67, "frequency": 106, "delay_days": 8}, {"number": "98", "score": 102.71, "frequency": 99, "delay_days": 13}, {"number": "32", "score": 100.21, "frequency": 93, "delay_days": 1}, {"number": "10", "score": 99.27, "frequency": 92, "delay_days": 9}], "prediction_scope": "Sorteo específico", "total_results": 3032, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 133, "top3_any_hit_rate": 0.105, "top5_any_hit_rate": 0.195, "first_position_hit_rate": 0.09, "average_hits_top5": 0.21, "confidence_label": "Media", "recent_evaluations": [{"date": "2026-06-03", "actual": ["62", "44", "83"], "predicted": ["75", "50", "89", "74", "48"], "hits": []}, {"date": "2026-06-03", "actual": ["93", "57", "32"], "predicted": ["75", "50", "89", "74", "48"], "hits": []}, {"date": "2026-06-04", "actual": ["93", "57", "32"], "predicted": ["75", "50", "89", "74", "48"], "hits": []}, {"date": "2026-06-04", "actual": ["14", "41", "59"], "predicted": ["75", "50", "89", "74", "48"], "hits": []}, {"date": "2026-06-05", "actual": ["14", "41", "59"], "predicted": ["75", "50", "89", "74", "48"], "hits": []}]}, "history": [{"draw": "Quiniela Loteka", "date": "2026-06-05", "numbers": ["14", "41", "59"]}, {"draw": "Quiniela Loteka", "date": "2026-06-04", "numbers": ["93", "57", "32"]}, {"draw": "Quiniela Loteka", "date": "2026-06-04", "numbers": ["14", "41", "59"]}, {"draw": "Quiniela Loteka", "date": "2026-06-03", "numbers": ["62", "44", "83"]}, {"draw": "Quiniela Loteka", "date": "2026-06-03", "numbers": ["93", "57", "32"]}]}, "7": {"lottery": "La Primera", "draw": "La Primera Noche", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["12", "13", "60"], "predictions": [{"number": "18", "score": 58.69, "frequency": 55, "delay_days": 11}, {"number": "79", "score": 57.82, "frequency": 54, "delay_days": 27}, {"number": "13", "score": 57.6, "frequency": 51, "delay_days": 0}, {"number": "41", "score": 57.22, "frequency": 50, "delay_days": 2}, {"number": "68", "score": 56.74, "frequency": 53, "delay_days": 17}, {"number": "42", "score": 55.47, "frequency": 50, "delay_days": 8}, {"number": "99", "score": 53.69, "frequency": 50, "delay_days": 11}, {"number": "95", "score": 53.63, "frequency": 50, "delay_days": 4}, {"number": "31", "score": 51.96, "frequency": 50, "delay_days": 20}, {"number": "73", "score": 51.9, "frequency": 50, "delay_days": 12}], "prediction_scope": "Sorteo específico", "total_results": 1382, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 61, "top3_any_hit_rate": 0.049, "top5_any_hit_rate": 0.131, "first_position_hit_rate": 0.016, "average_hits_top5": 0.13, "confidence_label": "Baja", "recent_evaluations": [{"date": "2026-06-01", "actual": ["87", "33", "95"], "predicted": ["18", "79", "68", "42", "41"], "hits": []}, {"date": "2026-06-02", "actual": ["76", "64", "19"], "predicted": ["18", "79", "68", "42", "41"], "hits": []}, {"date": "2026-06-03", "actual": ["41", "32", "64"], "predicted": ["18", "79", "68", "42", "41"], "hits": ["41"]}, {"date": "2026-06-04", "actual": ["12", "13", "60"], "predicted": ["18", "79", "41", "68", "42"], "hits": []}, {"date": "2026-06-05", "actual": ["12", "13", "60"], "predicted": ["18", "79", "41", "68", "42"], "hits": []}]}, "history": [{"draw": "Primera Noche", "date": "2026-06-05", "numbers": ["12", "13", "60"]}, {"draw": "Primera Noche", "date": "2026-06-04", "numbers": ["12", "13", "60"]}, {"draw": "Primera Noche", "date": "2026-06-03", "numbers": ["41", "32", "64"]}, {"draw": "Primera Noche", "date": "2026-06-02", "numbers": ["76", "64", "19"]}, {"draw": "Primera Noche", "date": "2026-06-01", "numbers": ["87", "33", "95"]}]}, "8": {"lottery": "La Primera", "draw": "La Primera Día", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["88", "89", "08"], "predictions": [{"number": "19", "score": 39.6, "frequency": 33, "delay_days": 0}, {"number": "90", "score": 38.69, "frequency": 35, "delay_days": 11}, {"number": "56", "score": 38.43, "frequency": 33, "delay_days": 4}, {"number": "89", "score": 38.4, "frequency": 30, "delay_days": 0}, {"number": "42", "score": 37.27, "frequency": 30, "delay_days": 8}, {"number": "52", "score": 36.62, "frequency": 33, "delay_days": 2}, {"number": "64", "score": 35.96, "frequency": 34, "delay_days": 19}, {"number": "17", "score": 35.8, "frequency": 31, "delay_days": 0}, {"number": "51", "score": 35.72, "frequency": 32, "delay_days": 15}, {"number": "85", "score": 35.65, "frequency": 32, "delay_days": 6}], "prediction_scope": "Sorteo específico", "total_results": 881, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 70, "top3_any_hit_rate": 0.1, "top5_any_hit_rate": 0.129, "first_position_hit_rate": 0.071, "average_hits_top5": 0.13, "confidence_label": "Baja", "recent_evaluations": [{"date": "2026-06-04", "actual": ["93", "88", "89"], "predicted": ["90", "56", "51", "42", "52"], "hits": []}, {"date": "2026-06-04", "actual": ["88", "89", "08"], "predicted": ["90", "56", "51", "42", "52"], "hits": []}, {"date": "2026-06-05", "actual": ["88", "89", "08"], "predicted": ["90", "56", "42", "52", "14"], "hits": []}, {"date": "2026-06-05", "actual": ["29", "48", "17"], "predicted": ["90", "56", "42", "52", "14"], "hits": []}, {"date": "2026-06-05", "actual": ["19", "29", "48"], "predicted": ["90", "56", "42", "52", "14"], "hits": []}]}, "history": [{"draw": "La Primera Día", "date": "2026-06-05", "numbers": ["88", "89", "08"]}, {"draw": "La Primera Día", "date": "2026-06-05", "numbers": ["29", "48", "17"]}, {"draw": "La Primera Día", "date": "2026-06-05", "numbers": ["19", "29", "48"]}, {"draw": "La Primera Día", "date": "2026-06-04", "numbers": ["19", "72", "24"]}, {"draw": "La Primera Día", "date": "2026-06-04", "numbers": ["93", "88", "89"]}]}, "9": {"lottery": "La Suerte Dominicana", "draw": "La Suerte MD", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["60", "91", "46"], "predictions": [{"number": "18", "score": 89.66, "frequency": 86, "delay_days": 7}, {"number": "71", "score": 80.47, "frequency": 75, "delay_days": 9}, {"number": "60", "score": 79.4, "frequency": 71, "delay_days": 0}, {"number": "42", "score": 78.71, "frequency": 78, "delay_days": 86}, {"number": "07", "score": 78.01, "frequency": 76, "delay_days": 26}, {"number": "50", "score": 77.03, "frequency": 75, "delay_days": 28}, {"number": "61", "score": 76.95, "frequency": 75, "delay_days": 18}, {"number": "91", "score": 76.4, "frequency": 68, "delay_days": 0}, {"number": "97", "score": 73.68, "frequency": 70, "delay_days": 10}, {"number": "80", "score": 72.77, "frequency": 69, "delay_days": 21}], "prediction_scope": "Sorteo específico", "total_results": 2038, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 53, "top3_any_hit_rate": 0.057, "top5_any_hit_rate": 0.132, "first_position_hit_rate": 0.057, "average_hits_top5": 0.15, "confidence_label": "Baja", "recent_evaluations": [{"date": "2026-06-02", "actual": ["29", "92", "14"], "predicted": ["18", "71", "42", "07", "50"], "hits": []}, {"date": "2026-06-03", "actual": ["93", "25", "21"], "predicted": ["18", "71", "42", "07", "50"], "hits": []}, {"date": "2026-06-04", "actual": ["60", "91", "46"], "predicted": ["18", "71", "42", "07", "50"], "hits": []}, {"date": "2026-06-05", "actual": ["60", "91", "46"], "predicted": ["18", "71", "42", "07", "50"], "hits": []}, {"date": "2026-06-05", "actual": ["32", "47", "70"], "predicted": ["18", "71", "42", "07", "50"], "hits": []}]}, "history": [{"draw": "La Suerte MD", "date": "2026-06-05", "numbers": ["60", "91", "46"]}, {"draw": "La Suerte MD", "date": "2026-06-05", "numbers": ["32", "47", "70"]}, {"draw": "La Suerte MD", "date": "2026-06-04", "numbers": ["60", "91", "46"]}, {"draw": "La Suerte MD", "date": "2026-06-03", "numbers": ["93", "25", "21"]}, {"draw": "La Suerte MD", "date": "2026-06-02", "numbers": ["29", "92", "14"]}]}, "10": {"lottery": "La Suerte Dominicana", "draw": "La Suerte 6PM", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["26", "95", "04"], "predictions": [{"number": "73", "score": 61.82, "frequency": 51, "delay_days": 3}, {"number": "53", "score": 57.93, "frequency": 56, "delay_days": 16}, {"number": "66", "score": 57.04, "frequency": 55, "delay_days": 29}, {"number": "25", "score": 53.7, "frequency": 50, "delay_days": 12}, {"number": "35", "score": 52.69, "frequency": 49, "delay_days": 11}, {"number": "92", "score": 52.44, "frequency": 52, "delay_days": 53}, {"number": "79", "score": 51.73, "frequency": 48, "delay_days": 16}, {"number": "30", "score": 50.92, "frequency": 49, "delay_days": 15}, {"number": "51", "score": 50.63, "frequency": 47, "delay_days": 4}, {"number": "68", "score": 50.45, "frequency": 45, "delay_days": 6}], "prediction_scope": "Sorteo específico", "total_results": 1286, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 61, "top3_any_hit_rate": 0.131, "top5_any_hit_rate": 0.148, "first_position_hit_rate": 0.033, "average_hits_top5": 0.15, "confidence_label": "Baja", "recent_evaluations": [{"date": "2026-06-01", "actual": ["51", "72", "72"], "predicted": ["73", "53", "66", "25", "35"], "hits": []}, {"date": "2026-06-02", "actual": ["73", "29", "38"], "predicted": ["73", "53", "66", "25", "35"], "hits": ["73"]}, {"date": "2026-06-03", "actual": ["13", "72", "91"], "predicted": ["73", "53", "66", "25", "35"], "hits": []}, {"date": "2026-06-04", "actual": ["26", "95", "04"], "predicted": ["73", "53", "66", "25", "35"], "hits": []}, {"date": "2026-06-05", "actual": ["26", "95", "04"], "predicted": ["73", "53", "66", "25", "35"], "hits": []}]}, "history": [{"draw": "La Suerte 6PM", "date": "2026-06-05", "numbers": ["26", "95", "04"]}, {"draw": "La Suerte 6PM", "date": "2026-06-04", "numbers": ["26", "95", "04"]}, {"draw": "La Suerte 6PM", "date": "2026-06-03", "numbers": ["13", "72", "91"]}, {"draw": "La Suerte 6PM", "date": "2026-06-02", "numbers": ["73", "29", "38"]}, {"draw": "La Suerte 6PM", "date": "2026-06-01", "numbers": ["51", "72", "72"]}]}, "11": {"lottery": "Lotedom", "draw": "LoteDom", "date": "05 Jun", "raw_date": "2026-06-05", "numbers": ["73", "83", "27"], "predictions": [{"number": "59", "score": 14.21, "frequency": 7, "delay_days": 1}, {"number": "48", "score": 11.5, "frequency": 6, "delay_days": 12}, {"number": "83", "score": 11.4, "frequency": 3, "delay_days": 0}, {"number": "42", "score": 11.23, "frequency": 4, "delay_days": 4}, {"number": "68", "score": 11.22, "frequency": 4, "delay_days": 2}, {"number": "12", "score": 10.41, "frequency": 5, "delay_days": 1}, {"number": "28", "score": 9.75, "frequency": 6, "delay_days": 18}, {"number": "95", "score": 9.65, "frequency": 6, "delay_days": 6}, {"number": "31", "score": 8.65, "frequency": 5, "delay_days": 6}, {"number": "27", "score": 8.6, "frequency": 2, "delay_days": 0}], "prediction_scope": "Sorteo específico", "total_results": 59, "backtest": {"status": "ok", "window_days": 60, "tested_draws": 29, "top3_any_hit_rate": 0.103, "top5_any_hit_rate": 0.207, "first_position_hit_rate": 0.103, "average_hits_top5": 0.21, "confidence_label": "Media", "recent_evaluations": [{"date": "2026-06-03", "actual": ["58", "68", "80"], "predicted": ["28", "31", "48", "42", "95"], "hits": []}, {"date": "2026-06-03", "actual": ["12", "59", "24"], "predicted": ["28", "31", "48", "42", "95"], "hits": []}, {"date": "2026-06-04", "actual": ["12", "59", "24"], "predicted": ["28", "48", "59", "42", "68"], "hits": ["59"]}, {"date": "2026-06-04", "actual": ["73", "83", "27"], "predicted": ["28", "48", "59", "42", "68"], "hits": []}, {"date": "2026-06-05", "actual": ["73", "83", "27"], "predicted": ["59", "48", "42", "68", "12"], "hits": []}]}, "history": [{"draw": "Quiniela Lotedom", "date": "2026-06-05", "numbers": ["73", "83", "27"]}, {"draw": "Quiniela Lotedom", "date": "2026-06-04", "numbers": ["12", "59", "24"]}, {"draw": "Quiniela Lotedom", "date": "2026-06-04", "numbers": ["73", "83", "27"]}, {"draw": "Quiniela Lotedom", "date": "2026-06-03", "numbers": ["58", "68", "80"]}, {"draw": "Quiniela Lotedom", "date": "2026-06-03", "numbers": ["12", "59", "24"]}]}}</script>
 </section>
-<section class="lottery-section" data-lottery="La Primera" style="--brand: #ef233c">
-  <div class="section-head">
-    <div>
-      <h2>La Primera</h2>
-      <span>6551 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #ef233c">
-  <div class="featured-head">
-    <div>
-      <h2>La Primera</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">10</span><span class="hero-ball">03</span><span class="hero-ball">02</span>
-    <div class="mini-balls"><span class="mini-ball">09</span><span class="mini-ball">06</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>469</b><strong>↑ 470.82</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>448</b><strong>↑ 449.82</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>442</b><strong>↑ 442.05</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>Primera Noche</h3>
-    <p>2026-06-05 · La Primera</p>
-    <div><span>12</span><span>13</span><span>60</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Loto 5</h3>
-    <p>2026-06-05 · La Primera</p>
-    <div><span>34</span><span>14</span><span>07</span><span>37</span><span>27</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Loto 5</h3>
-    <p>2026-06-05 · La Primera</p>
-    <div><span>34</span><span>14</span><span>07</span><span>37</span><span>27</span><span>04</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>La Primera Día</h3>
-    <p>2026-06-05 · La Primera</p>
-    <div><span>88</span><span>89</span><span>08</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
-</section>
-<section class="lottery-section" data-lottery="La Suerte Dominicana" style="--brand: #e83e75">
-  <div class="section-head">
-    <div>
-      <h2>La Suerte Dominicana</h2>
-      <span>4741 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #e83e75">
-  <div class="featured-head">
-    <div>
-      <h2>La Suerte Dominicana</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">18</span><span class="hero-ball">73</span><span class="hero-ball">71</span>
-    <div class="mini-balls"><span class="mini-ball">07</span><span class="mini-ball">35</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>178</b><strong>↑ 178.03</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>169</b><strong>↑ 178.02</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>177</b><strong>↑ 177.07</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>La Suerte MD</h3>
-    <p>2026-06-05 · La Suerte Dominicana</p>
-    <div><span>60</span><span>91</span><span>46</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>La Suerte 6PM</h3>
-    <p>2026-06-05 · La Suerte Dominicana</p>
-    <div><span>26</span><span>95</span><span>04</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>La Suerte 18:00</h3>
-    <p>2026-06-05 · La Suerte Dominicana</p>
-    <div><span>26</span><span>95</span><span>04</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>La Suerte 12:30</h3>
-    <p>2026-06-05 · La Suerte Dominicana</p>
-    <div><span>60</span><span>91</span><span>46</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
-</section>
-<section class="lottery-section" data-lottery="Leidsa" style="--brand: #ec1f2e">
-  <div class="section-head">
-    <div>
-      <h2>Leidsa</h2>
-      <span>33512 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #ec1f2e">
-  <div class="featured-head">
-    <div>
-      <h2>Leidsa</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">03</span><span class="hero-ball">04</span><span class="hero-ball">08</span>
-    <div class="mini-balls"><span class="mini-ball">01</span><span class="mini-ball">05</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>5682</b><strong>↑ 5685.61</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>5586</b><strong>↑ 5594.4</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>5586</b><strong>↑ 5586.02</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>Super Kino TV</h3>
-    <p>2026-06-05 · Leidsa</p>
-    <div><span>02</span><span>05</span><span>07</span><span>12</span><span>16</span><span>27</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Quiniela PalÃ©</h3>
-    <p>2026-06-05 · Leidsa</p>
-    <div><span>14</span><span>41</span><span>59</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Quiniela Leidsa</h3>
-    <p>2026-06-05 · Leidsa</p>
-    <div><span>16</span><span>40</span><span>34</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Pega 3 Más</h3>
-    <p>2026-06-05 · Leidsa</p>
-    <div><span>29</span><span>49</span><span>29</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
-</section>
-<section class="lottery-section" data-lottery="Lotedom" style="--brand: #2026d2">
-  <div class="section-head">
-    <div>
-      <h2>Lotedom</h2>
-      <span>2239 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #2026d2">
-  <div class="featured-head">
-    <div>
-      <h2>Lotedom</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">12</span><span class="hero-ball">49</span><span class="hero-ball">28</span>
-    <div class="mini-balls"><span class="mini-ball">48</span><span class="mini-ball">59</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>94</b><strong>↑ 103.01</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>87</b><strong>↑ 93.6</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>92</b><strong>↑ 92.15</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>Quiniela Lotedom</h3>
-    <p>2026-06-05 · Lotedom</p>
-    <div><span>73</span><span>83</span><span>27</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>LoteDom</h3>
-    <p>2026-06-05 · Lotedom</p>
-    <div><span>73</span><span>83</span><span>27</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Quiniela LoteDom</h3>
-    <p>2026-06-05 · Lotedom</p>
-    <div><span>49</span><span>78</span><span>82</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>LoteDom</h3>
-    <p>2026-06-05 · Lotedom</p>
-    <div><span>49</span><span>78</span><span>82</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
-</section>
-<section class="lottery-section" data-lottery="Loteka" style="--brand: #15a8d8">
-  <div class="section-head">
-    <div>
-      <h2>Loteka</h2>
-      <span>6284 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #15a8d8">
-  <div class="featured-head">
-    <div>
-      <h2>Loteka</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">50</span><span class="hero-ball">75</span><span class="hero-ball">89</span>
-    <div class="mini-balls"><span class="mini-ball">70</span><span class="mini-ball">71</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>555</b><strong>↑ 560.43</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>481</b><strong>↑ 481.07</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>451</b><strong>↑ 451.05</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>Quiniela Loteka</h3>
-    <p>2026-06-05 · Loteka</p>
-    <div><span>14</span><span>41</span><span>59</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>MegaLotto</h3>
-    <p>2026-06-05 · Loteka</p>
-    <div><span>10</span><span>13</span><span>14</span><span>17</span><span>25</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Mega Chances</h3>
-    <p>2026-06-05 · Loteka</p>
-    <div><span>65</span><span>43</span><span>30</span><span>83</span><span>06</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Toca 3</h3>
-    <p>2026-06-04 · Loteka</p>
-    <div><span>09</span><span>04</span><span>08</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
-</section>
-<section class="lottery-section" data-lottery="Lotería Nacional" style="--brand: #159653">
-  <div class="section-head">
-    <div>
-      <h2>Lotería Nacional</h2>
-      <span>18491 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #159653">
-  <div class="featured-head">
-    <div>
-      <h2>Lotería Nacional</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">21</span><span class="hero-ball">12</span><span class="hero-ball">25</span>
-    <div class="mini-balls"><span class="mini-ball">01</span><span class="mini-ball">23</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>1484</b><strong>↑ 1484.02</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>1467</b><strong>↑ 1467.05</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>1454</b><strong>↑ 1466.0</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>Quiniela Nacional</h3>
-    <p>2026-06-05 · Lotería Nacional</p>
-    <div><span>74</span><span>26</span><span>22</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Lotería Nacional</h3>
-    <p>2026-06-05 · Lotería Nacional</p>
-    <div><span>74</span><span>26</span><span>22</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Juega + Pega +</h3>
-    <p>2026-06-05 · Lotería Nacional</p>
-    <div><span>25</span><span>19</span><span>20</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Juega + Pega +</h3>
-    <p>2026-06-05 · Lotería Nacional</p>
-    <div><span>25</span><span>19</span><span>20</span><span>19</span><span>06</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
-</section>
-<section class="lottery-section" data-lottery="Lotería Real" style="--brand: #3158b7">
-  <div class="section-head">
-    <div>
-      <h2>Lotería Real</h2>
-      <span>11815 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #3158b7">
-  <div class="featured-head">
-    <div>
-      <h2>Lotería Real</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">18</span><span class="hero-ball">34</span><span class="hero-ball">26</span>
-    <div class="mini-balls"><span class="mini-ball">33</span><span class="mini-ball">08</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>1483</b><strong>↑ 1495.0</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>1480</b><strong>↑ 1488.4</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>1410</b><strong>↑ 1411.82</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>Quiniela Real</h3>
-    <p>2026-06-05 · Lotería Real</p>
-    <div><span>77</span><span>34</span><span>88</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Loto Real</h3>
-    <p>2026-06-05 · Lotería Real</p>
-    <div><span>04</span><span>08</span><span>11</span><span>13</span><span>18</span><span>37</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Loto Pool Noche</h3>
-    <p>2026-06-05 · Lotería Real</p>
-    <div><span>75</span><span>63</span><span>38</span><span>41</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Loto Pool Día</h3>
-    <p>2026-06-05 · Lotería Real</p>
-    <div><span>10</span><span>11</span><span>12</span><span>16</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
-</section>
-<section class="lottery-section" data-lottery="Mega Millions" style="--brand: #24559e">
-  <div class="section-head">
-    <div>
-      <h2>Mega Millions</h2>
-      <span>3574 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #24559e">
-  <div class="featured-head">
-    <div>
-      <h2>Mega Millions</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">02</span><span class="hero-ball">03</span><span class="hero-ball">04</span>
-    <div class="mini-balls"><span class="mini-ball">14</span><span class="mini-ball">10</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>2492</b><strong>↑ 2504.74</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>2156</b><strong>↑ 2183.09</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>1243</b><strong>↑ 1246.74</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>Mega Millions</h3>
-    <p>2026-06-05 · Mega Millions</p>
-    <div><span>15</span><span>26</span><span>43</span><span>48</span><span>60</span><span>12</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Mega Millions</h3>
-    <p>2026-06-04 · Mega Millions</p>
-    <div><span>15</span><span>26</span><span>43</span><span>48</span><span>60</span><span>12</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Mega Millions</h3>
-    <p>2026-06-04 · Mega Millions</p>
-    <div><span>15</span><span>26</span><span>43</span><span>48</span><span>60</span><span>12</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Mega Millions</h3>
-    <p>2026-06-03 · Mega Millions</p>
-    <div><span>15</span><span>26</span><span>43</span><span>48</span><span>60</span><span>12</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
-</section>
-<section class="lottery-section" data-lottery="New York" style="--brand: #1372b8">
-  <div class="section-head">
-    <div>
-      <h2>New York</h2>
-      <span>6852 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #1372b8">
-  <div class="featured-head">
-    <div>
-      <h2>New York</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">88</span><span class="hero-ball">71</span><span class="hero-ball">40</span>
-    <div class="mini-balls"><span class="mini-ball">92</span><span class="mini-ball">91</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>236</b><strong>↑ 237.87</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>235</b><strong>↑ 235.13</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>223</b><strong>↑ 235.0</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>New York 3:30</h3>
-    <p>2026-06-05 · New York</p>
-    <div><span>81</span><span>25</span><span>60</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>New York 11:30</h3>
-    <p>2026-06-05 · New York</p>
-    <div><span>04</span><span>81</span><span>87</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>New York Tarde</h3>
-    <p>2026-06-05 · New York</p>
-    <div><span>97</span><span>25</span><span>47</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>New York Noche</h3>
-    <p>2026-06-05 · New York</p>
-    <div><span>19</span><span>40</span><span>28</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
-</section>
-<section class="lottery-section" data-lottery="Powerball" style="--brand: #df202d">
-  <div class="section-head">
-    <div>
-      <h2>Powerball</h2>
-      <span>1585 resultados históricos</span>
-    </div>
-    <span class="section-count">10 sugeridos</span>
-  </div>
-  <div class="dashboard-grid">
-    <article class="featured-panel" style="--brand: #df202d">
-  <div class="featured-head">
-    <div>
-      <h2>Powerball</h2>
-      <p>Predicción recomendada · Hoy</p>
-    </div>
-    <span>Alta probabilidad</span>
-  </div>
-  <div class="featured-balls">
-    <span class="hero-ball">02</span><span class="hero-ball">03</span><span class="hero-ball">04</span>
-    <div class="mini-balls"><span class="mini-ball">05</span><span class="mini-ball">23</span></div>
-  </div>
-  <div class="metric-table">
-    <div class="metric-header"><span>Parámetro</span><span>Frecuencia</span><span>Score</span></div>
-    <div class="metric-row"><span>Tendencia histórica</span><b>710</b><strong>↑ 738.82</strong></div>
-<div class="metric-row"><span>Ciclo de aparición</span><b>537</b><strong>↑ 574.2</strong></div>
-<div class="metric-row"><span>Convergencia algorítmica</span><b>252</b><strong>↑ 264.66</strong></div>
-  </div>
-</article>
-    <aside class="latest-panel">
-  <div class="latest-head">
-    <h2>Últimos resultados</h2>
-    <span>8 visibles</span>
-  </div>
-  <div class="latest-list"><article class="latest-card">
-  <div>
-    <h3>PowerBall</h3>
-    <p>2026-06-05 · Powerball</p>
-    <div><span>14</span><span>16</span><span>38</span><span>55</span><span>64</span><span>12</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>PowerBall</h3>
-    <p>2026-06-05 · Powerball</p>
-    <div><span>14</span><span>16</span><span>38</span><span>55</span><span>64</span><span>12</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>Powerball</h3>
-    <p>2026-06-04 · Powerball</p>
-    <div><span>16</span><span>38</span><span>55</span><span>64</span><span>12</span><span>03</span></div>
-  </div>
-  <b>›</b>
-</article>
-<article class="latest-card">
-  <div>
-    <h3>PowerBall</h3>
-    <p>2026-06-04 · Powerball</p>
-    <div><span>14</span><span>16</span><span>38</span><span>55</span><span>64</span><span>12</span></div>
-  </div>
-  <b>›</b>
-</article></div>
-  <div class="weekly-box">
-    <span>Resumen histórico</span>
-    <strong>8</strong>
-    <p>resultados recientes mostrados</p>
-  </div>
-</aside>
-  </div>
-</section>
-    </section>
   </main>
   <dialog class="help-modal" aria-labelledby="help-title">
     <div class="modal-head">
       <div>
-        <p class="eyebrow">Guía rápida</p>
-        <h2 id="help-title">Cómo leer esta predicción</h2>
+        <p class="eyebrow">Explicación</p>
+        <h2 id="help-title">Cómo usar esta pantalla</h2>
       </div>
       <button type="button" data-close-help aria-label="Cerrar">Cerrar</button>
     </div>
     <div class="modal-body">
       <section>
-        <h3>1. Mira el bloque principal</h3>
-        <p>La tarjeta grande de cada lotería muestra los números sugeridos para jugar. El primer círculo es el número con mayor puntuación dentro de esa lotería.</p>
+        <h3>1. Elige una lotería</h3>
+        <p>Usa los filtros de arriba para ver solo Leidsa, Nacional, Loteka, Real u otra. El botón “Todas” vuelve a mostrar todos los operadores.</p>
       </section>
       <section>
-        <h3>2. Usa la puntuación como prioridad</h3>
-        <p>Más puntos no significa garantía. Significa que el número combina mejor frecuencia histórica, tendencia reciente y atraso.</p>
+        <h3>2. Lee primero los círculos grandes</h3>
+        <p>Los primeros tres números son la recomendación principal. Los círculos pequeños son alternativas cercanas que también tienen buena puntuación.</p>
       </section>
       <section>
-        <h3>3. Compara con los últimos resultados</h3>
-        <p>La columna derecha enseña sorteos recientes para que puedas ver si un número sugerido acaba de salir o lleva tiempo sin aparecer.</p>
+        <h3>3. Revisa los parámetros</h3>
+        <p>Frecuencia indica cuántas veces apareció. Tendencia reciente favorece datos cercanos. Atraso suma cuando un número lleva tiempo sin salir.</p>
       </section>
       <section>
-        <h3>4. Actualización automática</h3>
-        <p>Última actualización: 05/06/2026 22:15 (Europe/Madrid). GitHub Actions recalcula la página según el horario configurado. El botón “Actualizar vista” solo recarga lo último publicado.</p>
+        <h3>4. Compara con resultados recientes</h3>
+        <p>La columna de la derecha muestra los últimos sorteos guardados. Sirve para evitar jugar a ciegas y ver si un número sugerido acaba de aparecer.</p>
       </section>
       <section>
         <h3>5. Cobertura desde 2010</h3>
-        <p>Sí estamos usando histórico de 2010, pero desde 2010-08-01. No hay datos anteriores guardados porque la primera fecha confirmada por Conectate es 2010-08-01.</p>
+        <p>Estamos usando histórico real desde 2010-08-01 hasta 2026-06-05. No es el año 2010 completo; empieza en la primera fecha confirmada por Conectate.</p>
+      </section>
+      <section>
+        <h3>6. Actualización automática</h3>
+        <p>Última actualización: 05/06/2026 17:30 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
       </section>
     </div>
     <div class="modal-note">
       <strong>Importante:</strong> esto es análisis estadístico, no una promesa de resultado.
     </div>
+  </dialog>
+  <dialog class="draw-modal" aria-labelledby="draw-modal-title">
+    <div class="draw-modal-head">
+      <div>
+        <p class="eyebrow" data-draw-modal-kicker>Sorteo</p>
+        <h2 id="draw-modal-title"></h2>
+        <span data-draw-modal-meta></span>
+      </div>
+      <button type="button" data-close-draw aria-label="Cerrar">Cerrar</button>
+    </div>
+    <div class="draw-modal-body" data-draw-modal-body></div>
   </dialog>
   <script>
     const helpModal = document.querySelector('.help-modal');
@@ -1066,12 +446,87 @@
     document.querySelectorAll('[data-filter]').forEach((button) => {
       button.addEventListener('click', () => {
         const selected = button.dataset.filter;
+        const selectedKey = normalizeFilterValue(selected);
         document.querySelectorAll('[data-filter]').forEach((item) => item.classList.remove('active'));
         button.classList.add('active');
         document.querySelectorAll('[data-lottery]').forEach((section) => {
-          section.hidden = selected !== 'all' && section.dataset.lottery !== selected;
+          section.hidden = selected !== 'all' && normalizeFilterValue(section.dataset.lottery) !== selectedKey;
+        });
+        document.querySelectorAll('[data-draw-lottery]').forEach((card) => {
+          card.hidden = selected !== 'all' && normalizeFilterValue(card.dataset.drawLottery) !== selectedKey;
         });
       });
+    });
+    function normalizeFilterValue(value) {
+      return String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .trim()
+        .toLowerCase();
+    }
+    const compareData = JSON.parse(document.getElementById('compare-data').textContent);
+    const firstSelect = document.querySelector('[data-compare-first]');
+    const secondSelect = document.querySelector('[data-compare-second]');
+    const compareOutput = document.querySelector('[data-compare-output]');
+    function renderCompare() {
+      const first = compareData[firstSelect.value] || [];
+      const second = compareData[secondSelect.value] || [];
+      const secondNumbers = new Set(second.map((item) => item.number));
+      const shared = first.filter((item) => secondNumbers.has(item.number)).slice(0, 10);
+      compareOutput.innerHTML = shared.length
+        ? shared.map((item) => `<span>${item.number}</span>`).join('')
+        : '<em>No hay coincidencias entre las sugerencias principales.</em>';
+    }
+    firstSelect.addEventListener('change', renderCompare);
+    secondSelect.addEventListener('change', renderCompare);
+    renderCompare();
+    const drawData = JSON.parse(document.getElementById('draw-data').textContent);
+    const drawModal = document.querySelector('.draw-modal');
+    const drawTitle = document.querySelector('[data-draw-modal-title], #draw-modal-title');
+    const drawKicker = document.querySelector('[data-draw-modal-kicker]');
+    const drawMeta = document.querySelector('[data-draw-modal-meta]');
+    const drawBody = document.querySelector('[data-draw-modal-body]');
+    function ballList(numbers) {
+      return `<div class="modal-balls">${numbers.map((number) => `<span>${number}</span>`).join('')}</div>`;
+    }
+    function renderDrawModal(id, mode) {
+      const item = drawData[id];
+      if (!item) return;
+      drawTitle.textContent = item.draw;
+      drawKicker.textContent = mode === 'history' ? 'Historial' : 'Predicciones';
+      drawMeta.textContent = `${item.date} · ${item.lottery}`;
+      if (mode === 'history') {
+        drawBody.innerHTML = item.history.map((entry) => `
+          <article class="modal-result-row">
+            <div><strong>${entry.draw}</strong><span>${entry.date}</span></div>
+            ${ballList(entry.numbers)}
+          </article>
+        `).join('');
+      } else {
+        const backtest = item.backtest || {};
+        const rate = typeof backtest.top5_any_hit_rate === 'number'
+          ? `${Math.round(backtest.top5_any_hit_rate * 100)}%`
+          : 'N/D';
+        drawBody.innerHTML = `
+          <article class="modal-prediction">
+            <p>Predicción calculada solo con el historial de este sorteo. Base: ${item.total_results} resultados.</p>
+            <div class="backtest-box">
+              <strong>Validación histórica: ${backtest.confidence_label || 'Sin validar'}</strong>
+              <span>Acierto top 5: ${rate} · Pruebas: ${backtest.tested_draws || 0}</span>
+            </div>
+            ${item.predictions.length ? ballList(item.predictions.slice(0, 5).map((entry) => entry.number)) : '<em>No hay histórico suficiente para este sorteo.</em>'}
+            <ol>${item.predictions.slice(0, 5).map((entry) => `<li><span>${entry.number}</span><b>${entry.score} pts</b></li>`).join('')}</ol>
+          </article>
+        `;
+      }
+      drawModal.showModal();
+    }
+    document.querySelectorAll('[data-open-draw]').forEach((button) => {
+      button.addEventListener('click', () => renderDrawModal(button.dataset.drawId, button.dataset.openDraw));
+    });
+    document.querySelector('[data-close-draw]').addEventListener('click', () => drawModal.close());
+    drawModal.addEventListener('click', (event) => {
+      if (event.target === drawModal) drawModal.close();
     });
   </script>
 </body>
