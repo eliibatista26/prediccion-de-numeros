@@ -65,6 +65,7 @@ BASE_DRAW_ALIASES = {
     "loteria la primera 12pm": "La Primera Día",
     "loteria la primera noche 8pm": "La Primera Noche",
     "nacional noche": "Lotería Nacional",
+    "quiniela nacional": "Lotería Nacional",
     "primera noche": "La Primera Noche",
     "quiniela lotedom": "LoteDom",
 }

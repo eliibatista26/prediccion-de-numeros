@@ -87,6 +87,7 @@ DRAW_ALIASES = {
     "loteria la primera 12pm": "La Primera Día",
     "loteria la primera noche 8pm": "La Primera Noche",
     "nacional noche": "Lotería Nacional",
+    "quiniela nacional": "Lotería Nacional",
     "primera noche": "La Primera Noche",
     "quiniela lotedom": "LoteDom",
     "la suerte 12:30": "La Suerte MD",
@@ -578,6 +579,7 @@ def _draw_items(lottery_items: dict[str, object]) -> list[dict[str, object]]:
         draw_payloads = data.get("draws", {}) if isinstance(data.get("draws"), dict) else {}
         results = [item for item in data.get("last_results", []) if isinstance(item, dict)]
         seen_draws: set[str] = set()
+        seen_numbers: set[str] = set()
         selected_results = []
         for result in results:
             raw_draw = str(result.get("draw", ""))
@@ -586,7 +588,11 @@ def _draw_items(lottery_items: dict[str, object]) -> list[dict[str, object]]:
             draw_key = _canonical_draw_label(lottery_name, raw_draw).strip().lower()
             if draw_key in seen_draws:
                 continue
+            numbers_key = f"{result.get('draw_date')}|{'-'.join(str(n) for n in result.get('numbers', [])[:3])}"
+            if numbers_key in seen_numbers:
+                continue
             seen_draws.add(draw_key)
+            seen_numbers.add(numbers_key)
             selected_results.append(result)
             if len(selected_results) == 3:
                 break
