@@ -14,6 +14,17 @@ DATA_PATH = Path("data/results.json")
 DOCS_PATH = Path("docs")
 
 
+def _migrate_json_to_db(json_path: Path) -> None:
+    if not json_path.exists():
+        return
+    historical = load_results(json_path)
+    if not historical:
+        return
+    print(f"Primera ejecución con DB: migrando {len(historical)} resultados del JSON histórico...")
+    inserted = db.save_results(historical)
+    print(f"Migración completada: {inserted} filas insertadas en Neon.")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Actualiza resultados y genera la página estática.")
     parser.add_argument("--skip-scrape", action="store_true", help="Solo genera la página con los datos existentes.")
@@ -27,6 +38,9 @@ def main() -> None:
         print("Modo: base de datos PostgreSQL (Neon)")
         db.setup()
         existing = db.load_results()
+        if not existing:
+            _migrate_json_to_db(args.data)
+            existing = db.load_results()
     else:
         print("Modo: archivo JSON local")
         existing = load_results(args.data)
