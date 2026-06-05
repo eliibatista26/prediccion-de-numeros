@@ -268,9 +268,9 @@ def _render_html(predictions: dict[str, object]) -> str:
       </div>
     </section>
 
+    {draws_panel}
     {base_10_panel}
     {compare_panel}
-    {draws_panel}
   </main>
   <dialog class="help-modal" aria-labelledby="help-title">
     <div class="modal-head">
@@ -345,6 +345,15 @@ def _render_html(predictions: dict[str, object]) -> str:
           section.hidden = selected !== 'all' && normalizeFilterValue(section.dataset.lottery) !== selectedKey;
         }});
       }});
+    }});
+    const compareToggle = document.querySelector('[data-compare-toggle]');
+    const compareWrap = document.querySelector('[data-compare-wrap]');
+    compareToggle.addEventListener('click', () => {{
+      const open = !compareWrap.hidden;
+      compareWrap.hidden = open;
+      compareToggle.setAttribute('aria-expanded', String(!open));
+      compareToggle.querySelector('.compare-toggle-arrow').textContent = open ? '▼' : '▲';
+      if (!open) renderCompare();
     }});
     const compareData = JSON.parse(document.getElementById('compare-data').textContent);
     const firstSelect = document.querySelector('[data-compare-first]');
@@ -511,15 +520,20 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
     }
     json_data = json.dumps(compare_data, ensure_ascii=False).replace("</", "<\\/")
     return f"""<section class="compare-panel">
-  <div class="compare-head">
-    <p class="eyebrow">Comparar</p>
-    <h2>Dos loterías al mismo tiempo</h2>
+  <button class="compare-toggle" type="button" data-compare-toggle aria-expanded="false">
+    <span class="compare-toggle-label">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+      Comparar dos loterías
+    </span>
+    <span class="compare-toggle-arrow" aria-hidden="true">▼</span>
+  </button>
+  <div class="compare-body-wrap" data-compare-wrap hidden>
+    <div class="compare-controls">
+      <select data-compare-first>{options}</select>
+      <select data-compare-second>{second_options}</select>
+    </div>
+    <div class="compare-body" data-compare-output></div>
   </div>
-  <div class="compare-controls">
-    <select data-compare-first>{options}</select>
-    <select data-compare-second>{second_options}</select>
-  </div>
-  <div class="compare-body" data-compare-output></div>
   <script type="application/json" id="compare-data">{json_data}</script>
 </section>"""
 
@@ -1067,12 +1081,45 @@ h1 {
   color: #f97316;
 }
 
-.compare-head {
-  margin-bottom: 16px;
+.compare-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 52px;
+  padding: 0 6px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #17202a;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
 }
 
-.compare-head h2 {
-  font-size: 27px;
+.compare-toggle:hover {
+  color: #f97316;
+}
+
+.compare-toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.compare-toggle-arrow {
+  color: #9ba3b8;
+  font-size: 13px;
+  transition: color 0.15s;
+}
+
+.compare-toggle:hover .compare-toggle-arrow {
+  color: #f97316;
+}
+
+.compare-body-wrap {
+  padding-top: 16px;
+  border-top: 1px solid #e5e8ef;
 }
 
 .compare-controls {
@@ -2350,6 +2397,14 @@ h1 {
     border-color: #1e2130;
     background: #14161f;
     color: #6b7280;
+  }
+
+  .compare-toggle {
+    color: #e2e4ed;
+  }
+
+  .compare-body-wrap {
+    border-top-color: #1e2130;
   }
 
   .cmp-col {

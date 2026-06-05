@@ -347,12 +347,45 @@ h1 {
   color: #f97316;
 }
 
-.compare-head {
-  margin-bottom: 16px;
+.compare-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 52px;
+  padding: 0 6px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #17202a;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
 }
 
-.compare-head h2 {
-  font-size: 27px;
+.compare-toggle:hover {
+  color: #f97316;
+}
+
+.compare-toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.compare-toggle-arrow {
+  color: #9ba3b8;
+  font-size: 13px;
+  transition: color 0.15s;
+}
+
+.compare-toggle:hover .compare-toggle-arrow {
+  color: #f97316;
+}
+
+.compare-body-wrap {
+  padding-top: 16px;
+  border-top: 1px solid #e5e8ef;
 }
 
 .compare-controls {
@@ -1630,6 +1663,14 @@ h1 {
     border-color: #1e2130;
     background: #14161f;
     color: #6b7280;
+  }
+
+  .compare-toggle {
+    color: #e2e4ed;
+  }
+
+  .compare-body-wrap {
+    border-top-color: #1e2130;
   }
 
   .cmp-col {
