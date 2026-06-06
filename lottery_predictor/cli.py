@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 from pathlib import Path
 
 from .analysis import build_predictions
@@ -16,9 +17,11 @@ DOCS_PATH = Path("docs")
 
 def _migrate_json_to_db(json_path: Path) -> None:
     if not json_path.exists():
+        print("No se encontró data/results.json para migrar.")
         return
     historical = load_results(json_path)
     if not historical:
+        print("El JSON está vacío, nada que migrar.")
         return
     print(f"Primera ejecución con DB: migrando {len(historical)} resultados del JSON histórico...")
     inserted = db.save_results(historical)
@@ -32,15 +35,27 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=DOCS_PATH)
     args = parser.parse_args()
 
+    # Diagnóstico del entorno
+    raw_url = os.environ.get("DATABASE_URL", "")
+    print(f"DATABASE_URL presente en entorno: {'SÍ' if raw_url else 'NO'} (longitud: {len(raw_url)})")
+
     using_db = db.is_available()
 
     if using_db:
         print("Modo: base de datos PostgreSQL (Neon)")
-        db.setup()
-        existing = db.load_results()
-        if not existing:
-            _migrate_json_to_db(args.data)
+        try:
+            db.setup()
             existing = db.load_results()
+            print(f"Registros en DB: {len(existing)}")
+            if not existing:
+                _migrate_json_to_db(args.data)
+                existing = db.load_results()
+                print(f"Registros en DB tras migración: {len(existing)}")
+        except Exception as exc:
+            print(f"ERROR conectando a Neon: {exc}")
+            print("Cayendo a modo JSON local como respaldo...")
+            using_db = False
+            existing = load_results(args.data)
     else:
         print("Modo: archivo JSON local")
         existing = load_results(args.data)

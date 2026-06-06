@@ -7,7 +7,7 @@ import psycopg2.extras
 
 from .models import LotteryResult
 
-DATABASE_URL = os.environ.get("DATABASE_URL", "")
+DATABASE_URL = os.environ.get("DATABASE_URL", "").strip()
 
 _CREATE_TABLE = """
 CREATE TABLE IF NOT EXISTS lottery_results (
@@ -31,14 +31,16 @@ def is_available() -> bool:
 
 
 def _connect():
-    return psycopg2.connect(DATABASE_URL)
+    return psycopg2.connect(DATABASE_URL, connect_timeout=30)
 
 
 def setup() -> None:
+    print(f"Conectando a Neon... (URL: {'SET' if DATABASE_URL else 'NOT SET'}, longitud: {len(DATABASE_URL)})")
     with _connect() as conn:
         with conn.cursor() as cur:
             cur.execute(_CREATE_TABLE)
         conn.commit()
+    print("Tabla lottery_results lista.")
 
 
 def load_results() -> list[LotteryResult]:
@@ -68,17 +70,23 @@ def save_results(results: list[LotteryResult]) -> int:
         (r.key, r.lottery, r.draw, r.draw_date, list(r.numbers), r.source)
         for r in results
     ]
+    BATCH = 500
+    total_inserted = 0
     with _connect() as conn:
-        with conn.cursor() as cur:
-            psycopg2.extras.execute_values(
-                cur,
-                """
-                INSERT INTO lottery_results (result_key, lottery, draw, draw_date, numbers, source)
-                VALUES %s
-                ON CONFLICT (result_key) DO NOTHING
-                """,
-                rows,
-            )
-            inserted = cur.rowcount
-        conn.commit()
-    return inserted
+        for i in range(0, len(rows), BATCH):
+            batch = rows[i : i + BATCH]
+            with conn.cursor() as cur:
+                psycopg2.extras.execute_values(
+                    cur,
+                    """
+                    INSERT INTO lottery_results (result_key, lottery, draw, draw_date, numbers, source)
+                    VALUES %s
+                    ON CONFLICT (result_key) DO NOTHING
+                    """,
+                    batch,
+                )
+                total_inserted += cur.rowcount
+            conn.commit()
+            if (i // BATCH) % 10 == 0:
+                print(f"  Insertados {i + len(batch)}/{len(rows)} registros...")
+    return total_inserted
