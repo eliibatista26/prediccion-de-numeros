@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-06T17:57:05-04:00",
-  "generated_at_display": "06/06/2026 17:57",
+  "generated_at": "2026-06-06T19:14:44-04:00",
+  "generated_at_display": "06/06/2026 19:14",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "2010-08-01",
@@ -2291,9 +2291,9 @@
           "draw": "Quiniela Real",
           "draw_date": "2026-06-06",
           "numbers": [
-            99,
-            77,
-            52
+            11,
+            71,
+            4
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -2302,9 +2302,9 @@
           "draw": "Quiniela Real",
           "draw_date": "2026-06-06",
           "numbers": [
-            11,
-            71,
-            4
+            99,
+            77,
+            52
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -2390,9 +2390,9 @@
               "draw": "Quiniela Real",
               "draw_date": "2026-06-06",
               "numbers": [
-                99,
-                77,
-                52
+                11,
+                71,
+                4
               ],
               "source": "https://www.conectate.com.do/loterias/"
             },
@@ -2401,9 +2401,9 @@
               "draw": "Quiniela Real",
               "draw_date": "2026-06-06",
               "numbers": [
-                11,
-                71,
-                4
+                99,
+                77,
+                52
               ],
               "source": "https://www.conectate.com.do/loterias/"
             },
@@ -2543,6 +2543,22 @@
               {
                 "date": "2026-06-06",
                 "actual": [
+                  "11",
+                  "71",
+                  "04"
+                ],
+                "predicted": [
+                  "34",
+                  "88",
+                  "99",
+                  "26",
+                  "43"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-06",
+                "actual": [
                   "99",
                   "77",
                   "52"
@@ -2557,22 +2573,6 @@
                 "hits": [
                   "99"
                 ]
-              },
-              {
-                "date": "2026-06-06",
-                "actual": [
-                  "11",
-                  "71",
-                  "04"
-                ],
-                "predicted": [
-                  "34",
-                  "88",
-                  "99",
-                  "26",
-                  "43"
-                ],
-                "hits": []
               }
             ]
           }
@@ -2954,10 +2954,10 @@
       "suggestions": [
         {
           "number": "10",
-          "score": 459.63,
-          "frequency": 456,
-          "delay_days": 4,
-          "recent_frequency": 2
+          "score": 465.4,
+          "frequency": 457,
+          "delay_days": 0,
+          "recent_frequency": 3
         },
         {
           "number": "03",
@@ -2968,62 +2968,84 @@
         },
         {
           "number": "02",
-          "score": 442.41,
-          "frequency": 437,
-          "delay_days": 1,
-          "recent_frequency": 3
-        },
-        {
-          "number": "09",
-          "score": 429.61,
-          "frequency": 426,
-          "delay_days": 1,
+          "score": 444.6,
+          "frequency": 438,
+          "delay_days": 0,
           "recent_frequency": 2
         },
         {
-          "number": "06",
-          "score": 427.22,
-          "frequency": 420,
-          "delay_days": 3,
-          "recent_frequency": 4
-        },
-        {
-          "number": "05",
-          "score": 421.42,
-          "frequency": 416,
-          "delay_days": 3,
+          "number": "09",
+          "score": 435.4,
+          "frequency": 427,
+          "delay_days": 0,
           "recent_frequency": 3
         },
         {
           "number": "08",
-          "score": 420.42,
-          "frequency": 415,
-          "delay_days": 2,
+          "score": 426.2,
+          "frequency": 416,
+          "delay_days": 0,
+          "recent_frequency": 4
+        },
+        {
+          "number": "06",
+          "score": 425.42,
+          "frequency": 420,
+          "delay_days": 3,
           "recent_frequency": 3
         },
         {
           "number": "07",
-          "score": 409.21,
-          "frequency": 402,
-          "delay_days": 1,
-          "recent_frequency": 4
+          "score": 420.6,
+          "frequency": 405,
+          "delay_days": 0,
+          "recent_frequency": 7
+        },
+        {
+          "number": "05",
+          "score": 419.62,
+          "frequency": 416,
+          "delay_days": 3,
+          "recent_frequency": 2
         },
         {
           "number": "04",
-          "score": 402.41,
-          "frequency": 397,
-          "delay_days": 1,
-          "recent_frequency": 3
+          "score": 408.2,
+          "frequency": 398,
+          "delay_days": 0,
+          "recent_frequency": 4
         },
         {
           "number": "01",
-          "score": 392.81,
-          "frequency": 391,
-          "delay_days": 1,
-          "recent_frequency": 1
+          "score": 398.6,
+          "frequency": 392,
+          "delay_days": 0,
+          "recent_frequency": 2
         }
       ],
       "last_results": [
+        {
+          "lottery": "La Primera",
+          "draw": "Primera Noche",
+          "draw_date": "2026-06-06",
+          "numbers": [
+            95,
+            90,
+            83
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "Primera Noche",
+          "draw_date": "2026-06-06",
+          "numbers": [
+            7,
+            2,
+            90
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
         {
           "lottery": "La Primera",
           "draw": "La Primera Día",
@@ -3045,53 +3067,9 @@
             90
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "Primera Noche",
-          "draw_date": "2026-06-05",
-          "numbers": [
-            12,
-            13,
-            60
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "La Primera Día",
-          "draw_date": "2026-06-04",
-          "numbers": [
-            88,
-            89,
-            8
-          ],
-          "source": "https://www.loteriasrd.com.do/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "Lotería La Primera 12PM",
-          "draw_date": "2026-06-04",
-          "numbers": [
-            88,
-            89,
-            8
-          ],
-          "source": "https://www.yelu.do/leidsa/results/history"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "Lotería La Primera Noche 8PM",
-          "draw_date": "2026-06-04",
-          "numbers": [
-            12,
-            13,
-            60
-          ],
-          "source": "https://www.yelu.do/leidsa/results/history"
         }
       ],
-      "total_results": 6250,
+      "total_results": 6254,
       "draws": {
         "La Primera Día": {
           "suggestions": [
@@ -3874,10 +3852,10 @@
               "recent_frequency": 2
             },
             {
-              "number": "79",
-              "score": 57.83,
-              "frequency": 54,
-              "delay_days": 28,
+              "number": "95",
+              "score": 57.6,
+              "frequency": 51,
+              "delay_days": 0,
               "recent_frequency": 2
             },
             {
@@ -3902,6 +3880,13 @@
               "recent_frequency": 3
             },
             {
+              "number": "02",
+              "score": 55.0,
+              "frequency": 43,
+              "delay_days": 0,
+              "recent_frequency": 5
+            },
+            {
               "number": "13",
               "score": 54.61,
               "frequency": 51,
@@ -3909,10 +3894,17 @@
               "recent_frequency": 2
             },
             {
-              "number": "99",
-              "score": 53.7,
-              "frequency": 50,
-              "delay_days": 12,
+              "number": "79",
+              "score": 54.23,
+              "frequency": 54,
+              "delay_days": 28,
+              "recent_frequency": 0
+            },
+            {
+              "number": "83",
+              "score": 52.6,
+              "frequency": 46,
+              "delay_days": 0,
               "recent_frequency": 2
             },
             {
@@ -3921,23 +3913,31 @@
               "frequency": 50,
               "delay_days": 21,
               "recent_frequency": 1
-            },
-            {
-              "number": "73",
-              "score": 51.91,
-              "frequency": 50,
-              "delay_days": 13,
-              "recent_frequency": 1
-            },
-            {
-              "number": "95",
-              "score": 51.84,
-              "frequency": 50,
-              "delay_days": 5,
-              "recent_frequency": 1
             }
           ],
           "last_results": [
+            {
+              "lottery": "La Primera",
+              "draw": "Primera Noche",
+              "draw_date": "2026-06-06",
+              "numbers": [
+                95,
+                90,
+                83
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Primera",
+              "draw": "Primera Noche",
+              "draw_date": "2026-06-06",
+              "numbers": [
+                7,
+                2,
+                90
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
             {
               "lottery": "La Primera",
               "draw": "Primera Noche",
@@ -4003,75 +4003,19 @@
                 95
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Primera",
-              "draw": "Primera Noche",
-              "draw_date": "2026-05-31",
-              "numbers": [
-                33,
-                45,
-                64
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Primera",
-              "draw": "Primera Noche",
-              "draw_date": "2026-05-30",
-              "numbers": [
-                81,
-                2,
-                90
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 1383,
+          "total_results": 1385,
           "backtest": {
             "status": "ok",
             "window_days": 60,
-            "tested_draws": 62,
+            "tested_draws": 63,
             "top3_any_hit_rate": 0.048,
-            "top5_any_hit_rate": 0.129,
+            "top5_any_hit_rate": 0.127,
             "first_position_hit_rate": 0.016,
             "average_hits_top5": 0.13,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-02",
-                "actual": [
-                  "76",
-                  "64",
-                  "19"
-                ],
-                "predicted": [
-                  "18",
-                  "79",
-                  "68",
-                  "42",
-                  "41"
-                ],
-                "hits": []
-              },
-              {
-                "date": "2026-06-03",
-                "actual": [
-                  "41",
-                  "32",
-                  "64"
-                ],
-                "predicted": [
-                  "18",
-                  "79",
-                  "68",
-                  "42",
-                  "41"
-                ],
-                "hits": [
-                  "41"
-                ]
-              },
               {
                 "date": "2026-06-04",
                 "actual": [
@@ -4119,6 +4063,38 @@
                   "42"
                 ],
                 "hits": []
+              },
+              {
+                "date": "2026-06-06",
+                "actual": [
+                  "95",
+                  "90",
+                  "83"
+                ],
+                "predicted": [
+                  "18",
+                  "79",
+                  "41",
+                  "68",
+                  "42"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-06",
+                "actual": [
+                  "07",
+                  "02",
+                  "90"
+                ],
+                "predicted": [
+                  "18",
+                  "79",
+                  "41",
+                  "68",
+                  "42"
+                ],
+                "hits": []
               }
             ]
           }
@@ -4142,11 +4118,18 @@
           "recent_frequency": 2
         },
         {
+          "number": "35",
+          "score": 160.8,
+          "frequency": 156,
+          "delay_days": 0,
+          "recent_frequency": 1
+        },
+        {
           "number": "71",
-          "score": 160.68,
+          "score": 158.88,
           "frequency": 157,
           "delay_days": 10,
-          "recent_frequency": 2
+          "recent_frequency": 1
         },
         {
           "number": "60",
@@ -4163,20 +4146,6 @@
           "recent_frequency": 0
         },
         {
-          "number": "73",
-          "score": 157.03,
-          "frequency": 148,
-          "delay_days": 4,
-          "recent_frequency": 5
-        },
-        {
-          "number": "35",
-          "score": 156.9,
-          "frequency": 155,
-          "delay_days": 12,
-          "recent_frequency": 1
-        },
-        {
           "number": "99",
           "score": 156.88,
           "frequency": 155,
@@ -4184,21 +4153,50 @@
           "recent_frequency": 1
         },
         {
+          "number": "73",
+          "score": 155.23,
+          "frequency": 148,
+          "delay_days": 4,
+          "recent_frequency": 4
+        },
+        {
+          "number": "51",
+          "score": 153.2,
+          "frequency": 143,
+          "delay_days": 0,
+          "recent_frequency": 4
+        },
+        {
           "number": "31",
           "score": 152.69,
           "frequency": 149,
           "delay_days": 11,
           "recent_frequency": 2
-        },
-        {
-          "number": "81",
-          "score": 151.88,
-          "frequency": 150,
-          "delay_days": 10,
-          "recent_frequency": 1
         }
       ],
       "last_results": [
+        {
+          "lottery": "La Suerte Dominicana",
+          "draw": "La Suerte 6PM",
+          "draw_date": "2026-06-06",
+          "numbers": [
+            32,
+            55,
+            35
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Suerte Dominicana",
+          "draw": "La Suerte 6PM",
+          "draw_date": "2026-06-06",
+          "numbers": [
+            20,
+            51,
+            0
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
         {
           "lottery": "La Suerte Dominicana",
           "draw": "La Suerte MD",
@@ -4264,31 +4262,9 @@
             46
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Suerte Dominicana",
-          "draw": "La Suerte MD",
-          "draw_date": "2026-06-05",
-          "numbers": [
-            32,
-            47,
-            70
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Suerte Dominicana",
-          "draw": "La Suerte 18:00",
-          "draw_date": "2026-06-04",
-          "numbers": [
-            26,
-            95,
-            4
-          ],
-          "source": "https://www.loteriasrd.com.do/"
         }
       ],
-      "total_results": 4417,
+      "total_results": 4419,
       "draws": {
         "La Suerte 12:30": {
           "suggestions": [
@@ -4653,11 +4629,25 @@
               "recent_frequency": 6
             },
             {
+              "number": "51",
+              "score": 59.2,
+              "frequency": 49,
+              "delay_days": 0,
+              "recent_frequency": 4
+            },
+            {
               "number": "53",
               "score": 57.94,
               "frequency": 56,
               "delay_days": 17,
               "recent_frequency": 1
+            },
+            {
+              "number": "35",
+              "score": 56.6,
+              "frequency": 50,
+              "delay_days": 0,
+              "recent_frequency": 2
             },
             {
               "number": "66",
@@ -4667,18 +4657,18 @@
               "recent_frequency": 0
             },
             {
-              "number": "51",
-              "score": 53.41,
-              "frequency": 48,
-              "delay_days": 1,
-              "recent_frequency": 3
-            },
-            {
               "number": "92",
               "score": 52.44,
               "frequency": 52,
               "delay_days": 54,
               "recent_frequency": 0
+            },
+            {
+              "number": "00",
+              "score": 52.4,
+              "frequency": 44,
+              "delay_days": 0,
+              "recent_frequency": 3
             },
             {
               "number": "25",
@@ -4688,24 +4678,10 @@
               "recent_frequency": 1
             },
             {
-              "number": "79",
-              "score": 51.74,
-              "frequency": 48,
-              "delay_days": 17,
-              "recent_frequency": 2
-            },
-            {
               "number": "30",
               "score": 50.93,
               "frequency": 49,
               "delay_days": 16,
-              "recent_frequency": 1
-            },
-            {
-              "number": "35",
-              "score": 50.9,
-              "frequency": 49,
-              "delay_days": 12,
               "recent_frequency": 1
             },
             {
@@ -4717,6 +4693,28 @@
             }
           ],
           "last_results": [
+            {
+              "lottery": "La Suerte Dominicana",
+              "draw": "La Suerte 6PM",
+              "draw_date": "2026-06-06",
+              "numbers": [
+                32,
+                55,
+                35
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Suerte Dominicana",
+              "draw": "La Suerte 6PM",
+              "draw_date": "2026-06-06",
+              "numbers": [
+                20,
+                51,
+                0
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
             {
               "lottery": "La Suerte Dominicana",
               "draw": "La Suerte 6PM",
@@ -4782,75 +4780,19 @@
                 72
               ],
               "source": "https://www.yelu.do/leidsa/results/history"
-            },
-            {
-              "lottery": "La Suerte Dominicana",
-              "draw": "La Suerte 6PM",
-              "draw_date": "2026-05-31",
-              "numbers": [
-                97,
-                89,
-                12
-              ],
-              "source": "https://www.yelu.do/leidsa/results/history"
-            },
-            {
-              "lottery": "La Suerte Dominicana",
-              "draw": "La Suerte 6PM",
-              "draw_date": "2026-05-30",
-              "numbers": [
-                68,
-                82,
-                86
-              ],
-              "source": "https://www.yelu.do/leidsa/results/history"
             }
           ],
-          "total_results": 1285,
+          "total_results": 1287,
           "backtest": {
             "status": "ok",
             "window_days": 60,
-            "tested_draws": 62,
-            "top3_any_hit_rate": 0.129,
-            "top5_any_hit_rate": 0.145,
-            "first_position_hit_rate": 0.032,
-            "average_hits_top5": 0.15,
+            "tested_draws": 63,
+            "top3_any_hit_rate": 0.111,
+            "top5_any_hit_rate": 0.143,
+            "first_position_hit_rate": 0.016,
+            "average_hits_top5": 0.14,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-02",
-                "actual": [
-                  "73",
-                  "29",
-                  "38"
-                ],
-                "predicted": [
-                  "73",
-                  "53",
-                  "66",
-                  "25",
-                  "35"
-                ],
-                "hits": [
-                  "73"
-                ]
-              },
-              {
-                "date": "2026-06-03",
-                "actual": [
-                  "13",
-                  "72",
-                  "91"
-                ],
-                "predicted": [
-                  "73",
-                  "53",
-                  "66",
-                  "25",
-                  "35"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-04",
                 "actual": [
@@ -4898,6 +4840,40 @@
                   "35"
                 ],
                 "hits": []
+              },
+              {
+                "date": "2026-06-06",
+                "actual": [
+                  "32",
+                  "55",
+                  "35"
+                ],
+                "predicted": [
+                  "73",
+                  "53",
+                  "66",
+                  "51",
+                  "92"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-06",
+                "actual": [
+                  "20",
+                  "51",
+                  "00"
+                ],
+                "predicted": [
+                  "73",
+                  "53",
+                  "66",
+                  "51",
+                  "92"
+                ],
+                "hits": [
+                  "51"
+                ]
               }
             ]
           }
