@@ -72,3 +72,28 @@ def test_parse_conectate_results_extracts_main_page_blocks():
     assert results[0].lottery == "Lotería Nacional"
     assert results[0].draw_date == date(2010, 8, 1)
     assert results[0].numbers == (26, 20, 4)
+
+
+def test_parse_conectate_results_uses_block_date_when_present():
+    html = """
+    <div class="game-block company-block-15 past">
+      <div class="game-info">
+        <div class="game-details">
+          <span class="session-date">05-06</span>
+          <a class="game-title" href="/loterias/nacional/quiniela">
+            <span>Lotería Nacional</span>
+          </a>
+        </div>
+        <div class="game-scores ball-mode">
+          <span class="score ">97</span>
+          <span class="score ">57</span>
+          <span class="score ">53</span>
+        </div>
+      </div>
+    </div>
+    """
+
+    results = _parse_conectate_results(html, draw_date=date(2026, 6, 6))
+
+    assert len(results) == 1
+    assert results[0].draw_date == date(2026, 6, 5)

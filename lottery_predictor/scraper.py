@@ -425,16 +425,30 @@ def _parse_conectate_results(html: str, draw_date: date) -> list[LotteryResult]:
         if len(numbers) < 2:
             continue
         title = _clean_text(title_match.group("title"))
+        actual_draw_date = _parse_conectate_block_date(block, fallback_year=draw_date.year) or draw_date
         results.append(
             LotteryResult(
                 lottery=_lottery_from_path_or_draw(title_match.group("href"), title),
                 draw=title,
-                draw_date=draw_date,
+                draw_date=actual_draw_date,
                 numbers=numbers,
                 source=CONNECTATE_LOTERIAS_URL,
             )
         )
     return _dedupe(results)
+
+
+def _parse_conectate_block_date(block: str, fallback_year: int) -> date | None:
+    text = _clean_text(block)
+    match = re.search(r"(?<!\d)(\d{1,2})-(\d{1,2})(?![-\d])", text)
+    if not match:
+        return _parse_date(text)
+    day = int(match.group(1))
+    month = int(match.group(2))
+    try:
+        return date(fallback_year, month, day)
+    except ValueError:
+        return None
 
 
 def _normalize_yelu_lottery(default_lottery: str, draw: str) -> str:
