@@ -52,7 +52,6 @@ VISIBLE_DRAWS = {
         "Quiniela Nacional",
     },
     "Leidsa": {
-        "Pega 3 Más",
         "Quiniela Leidsa",
     },
     "Lotería Real": {

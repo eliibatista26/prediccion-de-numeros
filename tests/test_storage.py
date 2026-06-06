@@ -48,7 +48,7 @@ def test_merge_results_removes_future_copy_when_source_reports_older_date():
 def test_remove_future_republished_results_keeps_unrelated_future_results():
     existing = [
         LotteryResult("Leidsa", "Quiniela Leidsa", date(2026, 6, 6), (5, 74, 93), "old"),
-        LotteryResult("Leidsa", "Pega 3 Más", date(2026, 6, 6), (22, 37, 40), "old"),
+        LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 6), (22, 37, 40), "old"),
     ]
     scraped = [
         LotteryResult("Leidsa", "Quiniela Leidsa", date(2026, 6, 5), (5, 74, 93), "new"),
@@ -57,4 +57,4 @@ def test_remove_future_republished_results_keeps_unrelated_future_results():
     cleaned = remove_future_republished_results(existing, scraped)
 
     assert len(cleaned) == 1
-    assert cleaned[0].draw == "Pega 3 Más"
+    assert cleaned[0].draw == "Quiniela Loteka"
