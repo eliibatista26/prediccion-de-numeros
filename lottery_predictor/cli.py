@@ -9,7 +9,7 @@ from .analysis import build_predictions
 from . import db
 from .scraper import scrape_all_sources
 from .site import build_site
-from .storage import load_results, merge_results, save_results
+from .storage import load_results, merge_results, remove_future_republished_results, save_results
 
 
 DATA_PATH = Path("data/results.json")
@@ -87,7 +87,7 @@ def main() -> None:
         if new_results:
             inserted = db.save_results(new_results)
             print(f"Resultados nuevos insertados en DB: {inserted}")
-        all_results = db.load_results()
+        all_results = remove_future_republished_results(db.load_results(), new_results)
     else:
         all_results = merge_results(existing, new_results)
         save_results(args.data, all_results)
