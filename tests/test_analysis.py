@@ -59,3 +59,22 @@ def test_analyze_base_10_uses_only_visible_base_draws():
     assert report["window"]["to"] == "2026-05-02"
     assert "88" in top_numbers
     assert "01" not in top_numbers
+
+
+def test_analyze_base_10_prefers_recent_momentum_over_historical_frequency():
+    results = [
+        LotteryResult("Leidsa", "Quiniela Leidsa", date(2026, 1, day), (25, day % 100, 1), "test")
+        for day in range(1, 25)
+    ]
+    results.extend(
+        [
+            LotteryResult("Leidsa", "Quiniela Leidsa", date(2026, 6, 1), (41, 64, 31), "test"),
+            LotteryResult("Lotería Nacional", "Lotería Nacional", date(2026, 6, 2), (41, 49, 16), "test"),
+            LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 3), (41, 38, 70), "test"),
+        ]
+    )
+
+    report = analyze_base_10(results)
+
+    assert report["elite_group"][0]["number"] == "41"
+    assert report["top_10_repeated"][0]["number"] == "41"

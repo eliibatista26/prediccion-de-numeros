@@ -8,7 +8,7 @@ from .analysis import build_predictions
 from . import db
 from .scraper import scrape_all_sources
 from .site import build_site
-from .storage import load_results, merge_results, save_results
+from .storage import discard_republished_results, load_results, merge_results, save_results
 
 
 DATA_PATH = Path("data/results.json")
@@ -60,7 +60,8 @@ def main() -> None:
         print("Modo: archivo JSON local")
         existing = load_results(args.data)
 
-    new_results = [] if args.skip_scrape else scrape_all_sources()
+    scraped_results = [] if args.skip_scrape else scrape_all_sources()
+    new_results = discard_republished_results(existing, scraped_results)
 
     if using_db:
         if new_results:
@@ -73,7 +74,8 @@ def main() -> None:
 
     build_site(build_predictions(all_results), args.output)
     print(f"Resultados existentes: {len(existing)}")
-    print(f"Resultados nuevos del scraper: {len(new_results)}")
+    print(f"Resultados nuevos del scraper: {len(scraped_results)}")
+    print(f"Resultados nuevos válidos: {len(new_results)}")
     print(f"Resultados totales: {len(all_results)}")
     print(f"Página generada en: {args.output}")
 

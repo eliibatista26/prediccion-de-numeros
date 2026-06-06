@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from dataclasses import dataclass
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from itertools import combinations
 from zoneinfo import ZoneInfo
 
@@ -272,31 +272,44 @@ def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
         and len(result.numbers) >= 3
     ]
     analysis_to = max((result.draw_date for result in base_results), default=BASE_ANALYSIS_FROM)
+    recent_7_from = analysis_to - timedelta(days=6)
+    recent_30_from = analysis_to - timedelta(days=29)
     ordered = sorted(base_results, key=lambda item: (item.draw_date, item.lottery, item.draw))
     latest_first = list(reversed(ordered))
     total_counts: Counter[int] = Counter()
+    recent_7_counts: Counter[int] = Counter()
+    recent_30_counts: Counter[int] = Counter()
     position_counts = [Counter(), Counter(), Counter()]
     last_seen_position: list[dict[int, date]] = [dict(), dict(), dict()]
     by_day: dict[date, list[LotteryResult]] = defaultdict(list)
     by_lottery: dict[str, list[LotteryResult]] = defaultdict(list)
     pair_counts: Counter[tuple[int, int]] = Counter()
+    recent_pair_counts: Counter[tuple[int, int]] = Counter()
 
     for result in ordered:
         by_day[result.draw_date].append(result)
         by_lottery[result.lottery].append(result)
         for number in result.numbers[:3]:
             total_counts[number] += 1
+            if result.draw_date >= recent_30_from:
+                recent_30_counts[number] += 1
+            if result.draw_date >= recent_7_from:
+                recent_7_counts[number] += 1
         for index, number in enumerate(result.numbers[:3]):
             position_counts[index][number] += 1
             last_seen_position[index][number] = result.draw_date
         for pair in combinations(sorted(set(result.numbers[:3])), 2):
             pair_counts[pair] += 1
+            if result.draw_date >= recent_30_from:
+                recent_pair_counts[pair] += 1
 
     recent_counts: Counter[int] = Counter()
     for result in latest_first[:80]:
-        recent_counts.update(result.numbers[:3])
+        if result.draw_date >= recent_30_from:
+            recent_counts.update(result.numbers[:3])
 
     coincidences: Counter[int] = Counter()
+    recent_coincidences: Counter[int] = Counter()
     for day_results in by_day.values():
         day_map: dict[int, set[str]] = defaultdict(set)
         for result in day_results:
@@ -305,8 +318,11 @@ def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
         for number, lotteries in day_map.items():
             if len(lotteries) > 1:
                 coincidences[number] += len(lotteries)
+                if day_results[0].draw_date >= recent_30_from:
+                    recent_coincidences[number] += len(lotteries)
 
     drags: Counter[int] = Counter()
+    recent_drags: Counter[int] = Counter()
     previous_numbers: set[int] = set()
     previous_date: date | None = None
     for result in ordered:
@@ -314,10 +330,13 @@ def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
         if previous_date is not None and (result.draw_date - previous_date).days <= 1:
             for number in current_numbers & previous_numbers:
                 drags[number] += 1
+                if result.draw_date >= recent_30_from:
+                    recent_drags[number] += 1
         previous_numbers = current_numbers
         previous_date = result.draw_date
 
     moves: Counter[int] = Counter()
+    recent_moves: Counter[int] = Counter()
     for number in range(100):
         lotteries_with_number = {
             result.lottery
@@ -326,12 +345,22 @@ def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
         }
         if len(lotteries_with_number) > 1:
             moves[number] = len(lotteries_with_number)
+        recent_lotteries_with_number = {
+            result.lottery
+            for result in base_results
+            if result.draw_date >= recent_30_from and number in result.numbers[:3]
+        }
+        if len(recent_lotteries_with_number) > 1:
+            recent_moves[number] = len(recent_lotteries_with_number)
 
     mirror_counts: Counter[int] = Counter()
+    recent_mirror_counts: Counter[int] = Counter()
     for number, count in total_counts.items():
         mirror = MIRRORS[number]
         if mirror != number and total_counts[mirror] > 0:
             mirror_counts[number] = count + total_counts[mirror]
+        if mirror != number and recent_30_counts[mirror] > 0:
+            recent_mirror_counts[number] = recent_30_counts[number] + recent_30_counts[mirror]
 
     strength_rows = []
     for number in range(100):
@@ -339,12 +368,18 @@ def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
         if frequency == 0:
             continue
         score = (
-            frequency * 1.0
-            + recent_counts[number] * 1.35
-            + coincidences[number] * 1.2
-            + drags[number] * 1.15
-            + mirror_counts[number] * 0.25
-            + moves[number] * 1.5
+            frequency * 0.08
+            + recent_counts[number] * 3.0
+            + recent_30_counts[number] * 7.0
+            + recent_7_counts[number] * 10.0
+            + recent_coincidences[number] * 4.0
+            + recent_drags[number] * 3.5
+            + recent_mirror_counts[number] * 1.0
+            + recent_moves[number] * 4.0
+            + coincidences[number] * 0.15
+            + drags[number] * 0.15
+            + mirror_counts[number] * 0.03
+            + moves[number] * 0.5
         )
         strength_rows.append(
             {
@@ -352,22 +387,25 @@ def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
                 "score": round(score, 2),
                 "frequency": frequency,
                 "recent": recent_counts[number],
+                "recent_7": recent_7_counts[number],
+                "recent_30": recent_30_counts[number],
                 "coincidences": coincidences[number],
                 "drags": drags[number],
                 "mirror": f"{MIRRORS[number]:02d}",
                 "moves": moves[number],
             }
         )
-    strength_rows.sort(key=lambda item: (item["score"], item["frequency"]), reverse=True)
+    strength_rows.sort(key=lambda item: (item["score"], item["recent_7"], item["recent_30"], item["frequency"]), reverse=True)
 
-    top_10 = [{"number": f"{number:02d}", "count": count} for number, count in total_counts.most_common(10)]
+    top_counter = recent_30_counts if recent_30_counts else total_counts
+    top_10 = [{"number": f"{number:02d}", "count": count} for number, count in top_counter.most_common(10)]
     delayed_by_position = {
         str(index + 1): _delayed_rows(last_seen_position[index], analysis_to, position_counts[index])
         for index in range(3)
     }
     elite = strength_rows[:5]
     leader = strength_rows[0] if strength_rows else None
-    bullet_pair = pair_counts.most_common(1)
+    bullet_pair = (recent_pair_counts or pair_counts).most_common(1)
 
     return {
         "window": {
