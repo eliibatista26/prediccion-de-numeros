@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "7,22,37,52 * * * *"
+    - cron: "20 12,18,22 * * *"
 
 permissions:
   contents: write
@@ -32,7 +33,12 @@ jobs:
       - name: Update results and static site
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: python -m lottery_predictor.cli
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ github.event.schedule }}" = "20 12,18,22 * * *" ]; then
+            python -m lottery_predictor.cli
+          else
+            python -m lottery_predictor.cli --preserve-base-10
+          fi
 
       - name: Commit generated files
         uses: stefanzweifel/git-auto-commit-action@v5
