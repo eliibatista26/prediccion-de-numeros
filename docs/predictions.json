@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-06T19:14:44-04:00",
-  "generated_at_display": "06/06/2026 19:14",
+  "generated_at": "2026-06-06T19:17:06-04:00",
+  "generated_at_display": "06/06/2026 19:17",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "2010-08-01",
@@ -10,7 +10,7 @@
     "window": {
       "from": "2010-08-01",
       "to": "2026-06-06",
-      "results": 38193
+      "results": 38197
     },
     "top_10_repeated": [
       {
@@ -22,15 +22,19 @@
         "count": 20
       },
       {
+        "number": "51",
+        "count": 20
+      },
+      {
         "number": "70",
         "count": 20
       },
       {
-        "number": "51",
-        "count": 19
+        "number": "26",
+        "count": 18
       },
       {
-        "number": "26",
+        "number": "83",
         "count": 18
       },
       {
@@ -43,10 +47,6 @@
       },
       {
         "number": "73",
-        "count": 17
-      },
-      {
-        "number": "83",
         "count": 17
       },
       {
@@ -119,12 +119,6 @@
       ],
       "2": [
         {
-          "number": "90",
-          "delay_days": 70,
-          "last_seen": "2026-03-28",
-          "frequency": 361
-        },
-        {
           "number": "44",
           "delay_days": 49,
           "last_seen": "2026-04-18",
@@ -177,6 +171,12 @@
           "delay_days": 29,
           "last_seen": "2026-05-08",
           "frequency": 605
+        },
+        {
+          "number": "12",
+          "delay_days": 29,
+          "last_seen": "2026-05-08",
+          "frequency": 360
         }
       ],
       "3": [
@@ -353,19 +353,19 @@
         "count": 2492
       },
       {
+        "number": "09",
+        "mirror": "90",
+        "count": 2492
+      },
+      {
         "number": "98",
         "mirror": "89",
         "count": 2492
       },
       {
-        "number": "09",
-        "mirror": "90",
-        "count": 2490
-      },
-      {
         "number": "90",
         "mirror": "09",
-        "count": 2490
+        "count": 2492
       },
       {
         "number": "26",
@@ -519,7 +519,7 @@
       },
       {
         "number": "70",
-        "score": 539.56,
+        "score": 540.59,
         "frequency": 1320,
         "recent": 5,
         "recent_7": 8,
@@ -527,6 +527,18 @@
         "coincidences": 118,
         "drags": 159,
         "mirror": "07",
+        "moves": 7
+      },
+      {
+        "number": "51",
+        "score": 523.7,
+        "frequency": 1212,
+        "recent": 6,
+        "recent_7": 6,
+        "recent_30": 20,
+        "coincidences": 117,
+        "drags": 186,
+        "mirror": "15",
         "moves": 7
       },
       {
@@ -542,15 +554,15 @@
         "moves": 7
       },
       {
-        "number": "51",
-        "score": 502.59,
-        "frequency": 1211,
-        "recent": 5,
-        "recent_7": 5,
-        "recent_30": 19,
-        "coincidences": 117,
-        "drags": 186,
-        "mirror": "15",
+        "number": "32",
+        "score": 493.18,
+        "frequency": 1185,
+        "recent": 7,
+        "recent_7": 7,
+        "recent_30": 16,
+        "coincidences": 116,
+        "drags": 197,
+        "mirror": "23",
         "moves": 7
       },
       {
@@ -575,18 +587,6 @@
         "coincidences": 113,
         "drags": 182,
         "mirror": "28",
-        "moves": 7
-      },
-      {
-        "number": "32",
-        "score": 472.07,
-        "frequency": 1184,
-        "recent": 6,
-        "recent_7": 6,
-        "recent_30": 15,
-        "coincidences": 116,
-        "drags": 197,
-        "mirror": "23",
         "moves": 7
       },
       {
@@ -641,7 +641,7 @@
       },
       {
         "number": "70",
-        "score": 539.56,
+        "score": 540.59,
         "frequency": 1320,
         "recent": 5,
         "recent_7": 8,
@@ -649,6 +649,18 @@
         "coincidences": 118,
         "drags": 159,
         "mirror": "07",
+        "moves": 7
+      },
+      {
+        "number": "51",
+        "score": 523.7,
+        "frequency": 1212,
+        "recent": 6,
+        "recent_7": 6,
+        "recent_30": 20,
+        "coincidences": 117,
+        "drags": 186,
+        "mirror": "15",
         "moves": 7
       },
       {
@@ -661,18 +673,6 @@
         "coincidences": 122,
         "drags": 189,
         "mirror": "62",
-        "moves": 7
-      },
-      {
-        "number": "51",
-        "score": 502.59,
-        "frequency": 1211,
-        "recent": 5,
-        "recent_7": 5,
-        "recent_30": 19,
-        "coincidences": 117,
-        "drags": 186,
-        "mirror": "15",
         "moves": 7
       }
     ],
