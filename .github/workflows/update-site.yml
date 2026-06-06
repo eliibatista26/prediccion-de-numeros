@@ -3,10 +3,14 @@ name: Update lottery predictions
 on:
   workflow_dispatch:
   schedule:
-    - cron: "20 12,18,22 * * *"
+    - cron: "7,22,37,52 * * * *"
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-lottery-predictions
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -34,4 +38,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update lottery predictions"
-          file_pattern: "docs/index.html docs/styles.css docs/predictions.json"
+          file_pattern: "data/results.json docs/index.html docs/styles.css docs/predictions.json"
