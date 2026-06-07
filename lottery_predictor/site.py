@@ -204,7 +204,7 @@ def _render_html(predictions: dict[str, object]) -> str:
     chips = "\n".join(_render_chip(name) for name in lottery_items)
     base_10 = predictions.get("base_10", {})
     base_10_panel = _render_base_10_panel(base_10 if isinstance(base_10, dict) else {})
-    compare_panel = _render_compare_panel(lottery_items)
+    compare_panel = _render_compare_panel(lottery_items, actual_to_date)
     draws_panel = _render_draws_panel(lottery_items)
 
     return f"""<!doctype html>
@@ -348,6 +348,7 @@ def _render_html(predictions: dict[str, object]) -> str:
       }});
     }});
     const compareToggle = document.querySelector('[data-compare-toggle]');
+    const comparePanel = document.querySelector('[data-compare-month]');
     const compareWrap = document.querySelector('[data-compare-wrap]');
     compareToggle.addEventListener('click', () => {{
       const open = !compareWrap.hidden;
@@ -360,20 +361,8 @@ def _render_html(predictions: dict[str, object]) -> str:
     const firstSelect = document.querySelector('[data-compare-first]');
     const secondSelect = document.querySelector('[data-compare-second]');
     const compareDay = document.querySelector('[data-compare-day]');
-    const compareFrom = document.querySelector('[data-compare-from]');
-    const compareTo = document.querySelector('[data-compare-to]');
     const compareOutput = document.querySelector('[data-compare-output]');
-    const allCompareDates = Object.values(compareData)
-      .flatMap((payload) => (payload.history || []).map((item) => item.date))
-      .filter(Boolean)
-      .sort();
-    if (allCompareDates.length) {{
-      compareFrom.min = allCompareDates[0];
-      compareFrom.max = allCompareDates[allCompareDates.length - 1];
-      compareTo.min = allCompareDates[0];
-      compareTo.max = allCompareDates[allCompareDates.length - 1];
-    }}
-    const currentCompareMonth = allCompareDates.length ? allCompareDates[allCompareDates.length - 1].slice(5, 7) : '';
+    const currentCompareMonth = comparePanel ? comparePanel.dataset.compareMonth : '';
     function compareItems(name) {{
       const payload = compareData[name] || {{}};
       const dayMonth = compareDay.value && currentCompareMonth ? `${{currentCompareMonth}}-${{compareDay.value}}` : '';
@@ -382,19 +371,7 @@ def _render_html(predictions: dict[str, object]) -> str:
           .map((item) => ({{ number: item.number, score: item.count, frequency: item.count, metric: item.count === 1 ? 'vez' : 'veces' }}))
           .slice(0, 10);
       }}
-      const from = compareFrom.value;
-      const to = compareTo.value;
-      if (!from && !to) return payload.suggestions || [];
-      const counts = new Map();
-      (payload.history || []).forEach((row) => {{
-        if (from && row.date < from) return;
-        if (to && row.date > to) return;
-        (row.numbers || []).forEach((number) => counts.set(number, (counts.get(number) || 0) + 1));
-      }});
-      return [...counts.entries()]
-        .map(([number, count]) => ({{ number, score: count, frequency: count, metric: count === 1 ? 'vez' : 'veces' }}))
-        .sort((a, b) => b.score - a.score || a.number.localeCompare(b.number))
-        .slice(0, 10);
+      return payload.suggestions || [];
     }}
     function renderCompare() {{
       const first = compareItems(firstSelect.value);
@@ -425,8 +402,6 @@ def _render_html(predictions: dict[str, object]) -> str:
     firstSelect.addEventListener('change', renderCompare);
     secondSelect.addEventListener('change', renderCompare);
     compareDay.addEventListener('change', renderCompare);
-    compareFrom.addEventListener('change', renderCompare);
-    compareTo.addEventListener('change', renderCompare);
     renderCompare();
     const drawData = JSON.parse(document.getElementById('draw-data').textContent);
     const drawModal = document.querySelector('.draw-modal');
@@ -542,7 +517,7 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
 </section>"""
 
 
-def _render_compare_panel(lottery_items: dict[str, object]) -> str:
+def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str) -> str:
     names = list(lottery_items)
     options = "\n".join(f"""<option value="{escape(name)}">{escape(name)}</option>""" for name in names)
     second_options = "\n".join(
@@ -561,18 +536,10 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
                 if isinstance(item, dict)
             ],
             "dayMonth": data.get("compare_day_month", {}),
-            "history": [
-                {
-                    "date": str(item.get("draw_date")),
-                    "draw": str(item.get("draw")),
-                    "numbers": [f"{int(number):02d}" for number in item.get("numbers", [])[:3]],
-                }
-                for item in data.get("compare_results", [])
-                if isinstance(item, dict)
-            ],
         }
     json_data = json.dumps(compare_data, ensure_ascii=False).replace("</", "<\\/")
-    return f"""<section class="compare-panel">
+    current_month = actual_to_date[5:7] if len(actual_to_date) >= 7 else ""
+    return f"""<section class="compare-panel" data-compare-month="{escape(current_month)}">
   <button class="compare-toggle" type="button" data-compare-toggle aria-expanded="false">
     <span class="compare-toggle-label">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
@@ -585,8 +552,6 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
       <select data-compare-first>{options}</select>
       <select data-compare-second>{second_options}</select>
       <label class="compare-date-field">Día histórico <select data-compare-day><option value="">Todos</option>{day_options}</select></label>
-      <label class="compare-date-field">Desde <input type="date" data-compare-from></label>
-      <label class="compare-date-field">Hasta <input type="date" data-compare-to></label>
     </div>
     <div class="compare-body" data-compare-output></div>
   </div>
