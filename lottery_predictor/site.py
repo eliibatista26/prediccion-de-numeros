@@ -729,7 +729,7 @@ def _render_today_results(lottery_items: dict[str, object]) -> str:
                 f'<span class="sugg-ball">{escape(n)}</span>' for n in sugg_nums
             )
             sugg_html = f"""<div class="today-suggestions">
-    <span class="sugg-label">Sugeridos</span>
+    <span class="sugg-label">★ Sugeridos</span>
     <div class="sugg-balls">{sugg_balls}</div>
   </div>"""
         else:
@@ -1553,37 +1553,39 @@ main {
 .today-suggestions {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-top: 1px solid #fde8d4;
+  gap: 10px;
+  padding: 9px 14px;
+  background: linear-gradient(90deg, #fff4ec 0%, #fff9f5 100%);
+  border-top: 2px solid #fb923c;
   flex-wrap: wrap;
 }
 
 .sugg-label {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 900;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #9ba3b8;
+  color: #ea580c;
   white-space: nowrap;
 }
 
 .sugg-balls {
   display: flex;
-  gap: 5px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 
 .sugg-ball {
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #fff7ed;
-  border: 2px solid #fed7aa;
-  color: #ea580c;
-  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  padding: 0 6px;
+  border-radius: 8px;
+  background: #ea580c;
+  color: #ffffff;
+  font-size: 13px;
   font-weight: 900;
 }
 
@@ -2642,8 +2644,9 @@ main {
 
   .today-lottery-name { color: #fb923c; }
 
-  .today-suggestions { border-top-color: #3d2208; }
-  .sugg-ball { background: #14161f; border-color: #3d2208; color: #fb923c; }
+  .today-suggestions { background: linear-gradient(90deg, #1e0e00 0%, #180d00 100%); border-top-color: #c2410c; }
+  .sugg-label { color: #fb923c; }
+  .sugg-ball { background: #c2410c; color: #fff; }
 
   .b10-panel {
     border-color: #3d2208;
