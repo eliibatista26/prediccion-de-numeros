@@ -69,6 +69,7 @@ BASE_DRAW_ALIASES = {
 }
 
 BASE_ANALYSIS_FROM = date(2010, 8, 1)
+COMPARE_RESULTS_LIMIT = 730
 MIRRORS = {number: int(f"{number:02d}"[::-1]) for number in range(100)}
 
 
@@ -100,6 +101,10 @@ def build_predictions(
         lotteries[lottery] = {
             "suggestions": _serialize_suggestions(suggestions),
             "last_results": [result.to_dict() for result in sorted(lottery_results, key=lambda item: item.draw_date, reverse=True)[:8]],
+            "compare_results": [
+                result.to_dict()
+                for result in sorted(lottery_results, key=lambda item: item.draw_date, reverse=True)[:COMPARE_RESULTS_LIMIT]
+            ],
             "total_results": len(lottery_results),
             "draws": {
                 draw: {

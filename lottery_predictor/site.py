@@ -163,6 +163,7 @@ def _public_lottery_payload(name: str, payload: object) -> object:
     if not isinstance(payload, dict):
         return payload
     public = dict(payload)
+    public.pop("compare_results", None)
     last_results = payload.get("last_results", [])
     if isinstance(last_results, list):
         public["last_results"] = [
@@ -357,23 +358,51 @@ def _render_html(predictions: dict[str, object]) -> str:
     const compareData = JSON.parse(document.getElementById('compare-data').textContent);
     const firstSelect = document.querySelector('[data-compare-first]');
     const secondSelect = document.querySelector('[data-compare-second]');
+    const compareFrom = document.querySelector('[data-compare-from]');
+    const compareTo = document.querySelector('[data-compare-to]');
     const compareOutput = document.querySelector('[data-compare-output]');
+    const allCompareDates = Object.values(compareData)
+      .flatMap((payload) => (payload.history || []).map((item) => item.date))
+      .filter(Boolean)
+      .sort();
+    if (allCompareDates.length) {{
+      compareFrom.min = allCompareDates[0];
+      compareFrom.max = allCompareDates[allCompareDates.length - 1];
+      compareTo.min = allCompareDates[0];
+      compareTo.max = allCompareDates[allCompareDates.length - 1];
+    }}
+    function compareItems(name) {{
+      const payload = compareData[name] || {{}};
+      const from = compareFrom.value;
+      const to = compareTo.value;
+      if (!from && !to) return payload.suggestions || [];
+      const counts = new Map();
+      (payload.history || []).forEach((row) => {{
+        if (from && row.date < from) return;
+        if (to && row.date > to) return;
+        (row.numbers || []).forEach((number) => counts.set(number, (counts.get(number) || 0) + 1));
+      }});
+      return [...counts.entries()]
+        .map(([number, count]) => ({{ number, score: count, frequency: count, metric: count === 1 ? 'vez' : 'veces' }}))
+        .sort((a, b) => b.score - a.score || a.number.localeCompare(b.number))
+        .slice(0, 10);
+    }}
     function renderCompare() {{
-      const first = compareData[firstSelect.value] || [];
-      const second = compareData[secondSelect.value] || [];
+      const first = compareItems(firstSelect.value);
+      const second = compareItems(secondSelect.value);
       const secondSet = new Set(second.map((item) => item.number));
       const firstSet = new Set(first.map((item) => item.number));
       const sharedCount = [...firstSet].filter((n) => secondSet.has(n)).length;
       const renderCol = (items, otherSet, title) => `
         <div class="cmp-col">
           <p class="cmp-col-title">${{title}}</p>
-          ${{items.map((item) => `
+          ${{items.length ? items.map((item) => `
             <div class="cmp-row${{otherSet.has(item.number) ? ' is-shared' : ''}}">
               <span class="cmp-num">${{item.number}}</span>
-              <span class="cmp-score">${{item.score}} pts</span>
+              <span class="cmp-score">${{item.score}} ${{item.metric || 'pts'}}</span>
               ${{otherSet.has(item.number) ? '<span class="cmp-badge">coincide</span>' : ''}}
             </div>
-          `).join('')}}
+          `).join('') : '<div class="cmp-empty">Sin datos en ese rango</div>'}}
         </div>`;
       compareOutput.innerHTML = `
         <div class="cmp-cols">
@@ -386,6 +415,8 @@ def _render_html(predictions: dict[str, object]) -> str:
     }}
     firstSelect.addEventListener('change', renderCompare);
     secondSelect.addEventListener('change', renderCompare);
+    compareFrom.addEventListener('change', renderCompare);
+    compareTo.addEventListener('change', renderCompare);
     renderCompare();
     const drawData = JSON.parse(document.getElementById('draw-data').textContent);
     const drawModal = document.querySelector('.draw-modal');
@@ -508,15 +539,26 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
         f"""<option value="{escape(name)}"{" selected" if index == 1 else ""}>{escape(name)}</option>"""
         for index, name in enumerate(names)
     )
-    compare_data = {
-        name: [
-            {"number": str(item.get("number")), "score": item.get("score"), "frequency": item.get("frequency")}
-            for item in data.get("suggestions", [])[:10]
-            if isinstance(item, dict)
-        ]
-        for name, data in lottery_items.items()
-        if isinstance(data, dict)
-    }
+    compare_data = {}
+    for name, data in lottery_items.items():
+        if not isinstance(data, dict):
+            continue
+        compare_data[name] = {
+            "suggestions": [
+                {"number": str(item.get("number")), "score": item.get("score"), "frequency": item.get("frequency"), "metric": "pts"}
+                for item in data.get("suggestions", [])[:10]
+                if isinstance(item, dict)
+            ],
+            "history": [
+                {
+                    "date": str(item.get("draw_date")),
+                    "draw": str(item.get("draw")),
+                    "numbers": [f"{int(number):02d}" for number in item.get("numbers", [])[:3]],
+                }
+                for item in data.get("compare_results", [])
+                if isinstance(item, dict)
+            ],
+        }
     json_data = json.dumps(compare_data, ensure_ascii=False).replace("</", "<\\/")
     return f"""<section class="compare-panel">
   <button class="compare-toggle" type="button" data-compare-toggle aria-expanded="false">
@@ -530,6 +572,8 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
     <div class="compare-controls">
       <select data-compare-first>{options}</select>
       <select data-compare-second>{second_options}</select>
+      <label class="compare-date-field">Desde <input type="date" data-compare-from></label>
+      <label class="compare-date-field">Hasta <input type="date" data-compare-to></label>
     </div>
     <div class="compare-body" data-compare-output></div>
   </div>
@@ -1133,6 +1177,28 @@ h1 {
   margin-bottom: 18px;
 }
 
+.compare-date-field {
+  display: grid;
+  gap: 4px;
+  color: #5f6680;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.compare-date-field input {
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid #d8dce8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #17202a;
+  font: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .compare-body {
   margin-top: 4px;
 }
@@ -1202,6 +1268,13 @@ h1 {
   font-size: 13px;
   font-weight: 700;
   flex: 1;
+}
+
+.cmp-empty {
+  padding: 14px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .cmp-badge {

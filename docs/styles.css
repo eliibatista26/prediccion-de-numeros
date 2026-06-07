@@ -395,6 +395,28 @@ h1 {
   margin-bottom: 18px;
 }
 
+.compare-date-field {
+  display: grid;
+  gap: 4px;
+  color: #5f6680;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.compare-date-field input {
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid #d8dce8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #17202a;
+  font: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .compare-body {
   margin-top: 4px;
 }
@@ -464,6 +486,13 @@ h1 {
   font-size: 13px;
   font-weight: 700;
   flex: 1;
+}
+
+.cmp-empty {
+  padding: 14px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .cmp-badge {
