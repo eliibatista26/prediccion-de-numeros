@@ -789,7 +789,7 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
     <div class="b10-four-list">{four_cond_html}</div>
   </div>
 
-  <!-- Analysis grid -->
+  <!-- Analysis grid: 3 balanced columns -->
   <div class="b10-analysis-grid">
     <div class="b10-col-1">
       <article class="b10-card b10-strength">
@@ -801,7 +801,11 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
       </article>
       <article class="b10-card">
         <h3>Top 10 histórico</h3>
-        <ol class="b10-numlist">{simple_rank_rows(top_hist, "count", "veces")}</ol>
+        <ol class="b10-numlist b10-inline">{simple_rank_rows(top_hist, "count", "veces")}</ol>
+      </article>
+      <article class="b10-card">
+        <h3>Repetición reciente <small>(últimos 30 días)</small></h3>
+        <ol class="b10-numlist b10-inline">{simple_rank_rows(top_recent, "count", "veces")}</ol>
       </article>
     </div>
 
@@ -819,13 +823,6 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
         <ol class="b10-numlist">{delay_rows(delayed_pos.get("3", []))}</ol>
       </article>
       <article class="b10-card">
-        <h3>Repetición reciente <small>(últimos 30 días)</small></h3>
-        <ol class="b10-numlist b10-inline">{simple_rank_rows(top_recent, "count", "veces")}</ol>
-      </article>
-    </div>
-
-    <div class="b10-col-3">
-      <article class="b10-card">
         <h3>Coincidencias <small>entre loterías</small></h3>
         <ol class="b10-numlist b10-inline">{coinc_rows}</ol>
       </article>
@@ -833,6 +830,9 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
         <h3>Arrastres <small>día siguiente</small></h3>
         <ol class="b10-numlist b10-inline">{drag_rows}</ol>
       </article>
+    </div>
+
+    <div class="b10-col-3">
       <article class="b10-card">
         <h3>Espejos activos <small>≤14 días</small></h3>
         <ul class="b10-mirror-list">{mirror_rows if mirror_rows else "<li class='b10-empty'>Sin espejos activos</li>"}</ul>
