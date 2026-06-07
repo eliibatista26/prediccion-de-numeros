@@ -225,6 +225,46 @@ main {
   white-space: nowrap;
 }
 
+/* ── Suggested numbers row ───────────────────────────────────────────── */
+.today-suggestions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  background: linear-gradient(90deg, #fff4ec 0%, #fff9f5 100%);
+  border-top: 2px solid #fb923c;
+  flex-wrap: wrap;
+}
+
+.sugg-label {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ea580c;
+  white-space: nowrap;
+}
+
+.sugg-balls {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.sugg-ball {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  padding: 0 6px;
+  border-radius: 8px;
+  background: #ea580c;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+}
+
 /* ── Las 10 Base ─────────────────────────────────────────────────────── */
 .b10-panel {
   background: #ffffff;
@@ -703,131 +743,85 @@ main {
   border-top: 1px solid #e5e8ef;
 }
 
-.compare-controls {
+/* ── Compare controls ─────────────────────────────── */
+.compare-controls { margin-bottom: 16px; }
+
+.cmp-row-selects {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
-.compare-date-field {
+.cmp-row-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.cmp-label {
   display: grid;
   gap: 4px;
   color: #5f6680;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.compare-date-field input,
-.compare-date-field select {
-  min-height: 42px;
+.cmp-label input,
+.cmp-label select {
+  min-height: 40px;
   padding: 0 12px;
   border: 1px solid #d8dce8;
   border-radius: 8px;
   background: #ffffff;
   color: #17202a;
   font: inherit;
+  font-size: 14px;
   letter-spacing: 0;
   text-transform: none;
 }
 
-.cmp-cols {
+.cmp-run-btn {
+  height: 40px;
+  padding: 0 18px;
+  background: #ea580c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.cmp-run-btn:hover { background: #c2410c; }
+
+.cmp-hint {
+  padding: 20px;
+  color: #9ba3b8;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Dual grid — same gap as b10-analysis-grid */
+.cmp-dual-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  margin-bottom: 14px;
+  align-items: start;
 }
 
-.cmp-col {
-  border: 1px solid #e5e8ef;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.cmp-col-title {
-  margin: 0;
-  padding: 10px 14px;
-  background: #f8fafc;
-  border-bottom: 1px solid #e5e8ef;
-  color: #17202a;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.cmp-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 14px;
-  border-bottom: 1px solid #f0f2f7;
-  transition: background 0.15s;
-}
-
-.cmp-row:last-child { border-bottom: 0; }
-
-.cmp-row.is-shared { background: #fff7ed; }
-
-.cmp-num {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  border-radius: 50%;
-  color: #ffffff;
-  background: #f97316;
-  font-weight: 950;
-  font-size: 15px;
-  flex-shrink: 0;
-}
-
-.cmp-row.is-shared .cmp-num {
-  background: #ea580c;
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.25);
-}
-
-.cmp-score {
-  color: #6b7280;
-  font-size: 13px;
-  font-weight: 700;
-  flex: 1;
-}
-
-.cmp-empty {
-  padding: 14px;
-  color: #6b7280;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.cmp-badge {
-  padding: 3px 8px;
+/* Shared badge inside b10-numlist li */
+.cmp-badge-shared {
+  margin-left: auto;
+  padding: 2px 6px;
   border-radius: 999px;
   background: #f97316;
   color: #ffffff;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 900;
-  letter-spacing: 0.08em;
   white-space: nowrap;
-}
-
-.cmp-summary {
-  margin: 0;
-  padding: 12px 14px;
-  border: 1px solid #fed7aa;
-  border-radius: 8px;
-  background: #fff7ed;
-  color: #9a3412;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.cmp-summary strong {
-  font-size: 18px;
-  font-weight: 950;
 }
 
 /* ── Draws Panel (historical/predictions) ────────────────────────────── */
@@ -1241,7 +1235,7 @@ main {
     justify-content: flex-start;
   }
 
-  .cmp-cols {
+  .cmp-dual-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1326,6 +1320,10 @@ main {
 
   .today-lottery-name { color: #fb923c; }
 
+  .today-suggestions { background: linear-gradient(90deg, #1e0e00 0%, #180d00 100%); border-top-color: #c2410c; }
+  .sugg-label { color: #fb923c; }
+  .sugg-ball { background: #c2410c; color: #fff; }
+
   .b10-panel {
     border-color: #3d2208;
     background: #14161f;
@@ -1387,23 +1385,9 @@ main {
 
   .compare-toggle { color: #e2e4ed; }
   .compare-body-wrap { border-top-color: #1e2130; }
-  .cmp-col { border-color: #1e2130; }
 
-  .cmp-col-title {
-    background: #1a1d27;
-    color: #9ba3b8;
-    border-bottom-color: #1e2130;
-  }
-
-  .cmp-row { border-bottom-color: #1e2130; }
-  .cmp-row.is-shared { background: #1a1108; }
-  .cmp-score { color: #6b7280; }
-
-  .cmp-summary {
-    border-color: #3d2208;
-    background: #1a1108;
-    color: #fb923c;
-  }
+  .cmp-label input,
+  .cmp-label select { background: #1a1d27; border-color: #1e2130; color: #e2e4ed; }
 
   .draws-panel {
     border-color: #3d2208;
