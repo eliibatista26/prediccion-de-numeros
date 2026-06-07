@@ -436,17 +436,10 @@ def _render_html(predictions: dict[str, object]) -> str:
       }}
     }});
 
-    // Compare panel
-    function normalizeFilterValue(value) {{
-      return String(value || '')
-        .normalize('NFD')
-        .replace(/[\\u0300-\\u036f]/g, '')
-        .trim()
-        .toLowerCase();
-    }}
+    // ── Compare panel ──────────────────────────────────────────────────────
     const compareToggle = document.querySelector('[data-compare-toggle]');
-    const comparePanel = document.querySelector('[data-compare-month]');
     const compareWrap = document.querySelector('[data-compare-wrap]');
+    const comparePanel = document.querySelector('[data-compare-month]');
     compareToggle.addEventListener('click', () => {{
       const open = !compareWrap.hidden;
       compareWrap.hidden = open;
@@ -454,92 +447,267 @@ def _render_html(predictions: dict[str, object]) -> str:
       compareToggle.querySelector('.compare-toggle-arrow').textContent = open ? '▼' : '▲';
       if (!open) renderCompare();
     }});
+
     const compareData = JSON.parse(document.getElementById('compare-data').textContent);
-    const firstSelect = document.querySelector('[data-compare-first]');
+    const firstSelect  = document.querySelector('[data-compare-first]');
     const secondSelect = document.querySelector('[data-compare-second]');
-    const compareMode = document.querySelector('[data-compare-mode]');
-    const compareFrom = document.querySelector('[data-compare-from]');
-    const compareTo = document.querySelector('[data-compare-to]');
-    const compareDay = document.querySelector('[data-compare-day]');
-    const compareDateFields = document.querySelectorAll('[data-compare-date-field]');
+    const compareMode  = document.querySelector('[data-compare-mode]');
+    const compareFrom  = document.querySelector('[data-compare-from]');
+    const compareTo    = document.querySelector('[data-compare-to]');
+    const compareDay   = document.querySelector('[data-compare-day]');
+    const compareDateFields      = document.querySelectorAll('[data-compare-date-field]');
     const compareHistoricalFields = document.querySelectorAll('[data-compare-historical-field]');
     const compareOutput = document.querySelector('[data-compare-output]');
     const currentCompareMonth = comparePanel ? comparePanel.dataset.compareMonth : '';
-    function countDateItems(payload) {{
-      const dates = payload.dates || {{}};
-      // Keys are YYYY-MM; truncate date inputs to same format for correct comparison
-      const from = compareFrom.value ? compareFrom.value.slice(0, 7) : '';
-      const to = compareTo.value ? compareTo.value.slice(0, 7) : '';
-      const counts = {{}};
-      Object.entries(dates).forEach(([date, items]) => {{
-        if (from && date < from) return;
-        if (to && date > to) return;
-        items.forEach((item) => {{
-          counts[item.number] = (counts[item.number] || 0) + Number(item.count || 0);
-        }});
+
+    // ── helpers ────────────────────────────────────────────────────────────
+    const cmpBall = (n, cls='') =>
+      `<span class="b10-ball${{cls ? ' ' + cls : ''}}">${{n}}</span>`;
+
+    /** Aggregate months data for a lottery within a date range.
+        Returns {{counts, p1, p2, p3}} each as {{num: totalCount}} */
+    function aggregateMonths(payload, from, to) {{
+      const months = payload.months || {{}};
+      const c={{}}, p1={{}}, p2={{}}, p3={{}};
+      Object.entries(months).forEach(([month, data]) => {{
+        if (from && month < from) return;
+        if (to   && month > to)   return;
+        Object.entries(data.c  ||{{}}).forEach(([n,v])=>{{ c[n]  = (c[n]  ||0)+v; }});
+        Object.entries(data.p1 ||{{}}).forEach(([n,v])=>{{ p1[n] = (p1[n] ||0)+v; }});
+        Object.entries(data.p2 ||{{}}).forEach(([n,v])=>{{ p2[n] = (p2[n] ||0)+v; }});
+        Object.entries(data.p3 ||{{}}).forEach(([n,v])=>{{ p3[n] = (p3[n] ||0)+v; }});
       }});
-      return Object.entries(counts)
-        .map(([number, count]) => ({{ number, score: count, frequency: count, metric: count === 1 ? 'vez' : 'veces' }}))
-        .sort((a, b) => b.score - a.score || a.number.localeCompare(b.number))
-        .slice(0, 10);
+      return {{c, p1, p2, p3}};
     }}
-    function compareItems(name) {{
+
+    /** Sort descending by count, return top N as array of {{number, count}} */
+    function topN(obj, n=10) {{
+      return Object.entries(obj)
+        .map(([number, count]) => ({{number, count}}))
+        .sort((a,b) => b.count - a.count || a.number.localeCompare(b.number))
+        .slice(0, n);
+    }}
+
+    /** Sort ascending by count (= most delayed = least seen in position), top N */
+    function delayedN(obj, n=3) {{
+      const entries = Object.entries(obj)
+        .map(([number, count]) => ({{number, count}}))
+        .sort((a,b) => a.count - b.count || a.number.localeCompare(b.number))
+        .slice(0, n);
+      return entries;
+    }}
+
+    /** Get per-lottery data for current mode */
+    function getLotteryStats(name) {{
       const payload = compareData[name] || {{}};
-      if (compareMode.value === 'date') {{
-        return countDateItems(payload);
+      const mode = compareMode.value;
+      if (mode === 'date') {{
+        const from = compareFrom.value ? compareFrom.value.slice(0,7) : '';
+        const to   = compareTo.value   ? compareTo.value.slice(0,7)   : '';
+        if (!from && !to) return null; // require at least one date
+        return aggregateMonths(payload, from, to);
       }}
-      if (compareMode.value === 'historical' && compareDay.value && currentCompareMonth) {{
+      if (mode === 'historical' && compareDay.value && currentCompareMonth) {{
         const dayMonth = `${{currentCompareMonth}}-${{compareDay.value}}`;
-        return ((payload.dayMonth || {{}})[dayMonth] || [])
-          .map((item) => ({{ number: item.number, score: item.count, frequency: item.count, metric: item.count === 1 ? 'vez' : 'veces' }}))
-          .slice(0, 10);
+        const items = ((payload.dayMonth || {{}})[dayMonth] || []);
+        const c={{}};
+        items.forEach(i => {{ c[i.number] = (c[i.number]||0) + i.count; }});
+        return {{c, p1:{{}}, p2:{{}}, p3:{{}}}};
       }}
-      return payload.suggestions || [];
+      // "current" — use pre-computed suggestions as frequency proxy
+      const c={{}};
+      (payload.suggestions||[]).forEach(s => {{ c[s.number] = s.frequency || s.score || 1; }});
+      return {{c, p1:{{}}, p2:{{}}, p3:{{}}}};
     }}
+
+    /** Check 4 conditions for a number given aggregated stats from both lotteries */
+    function fourConditions(num, statsA, statsB, top10A, top10B, top10BothSet) {{
+      const top10ASet = new Set(top10A.map(x=>x.number));
+      // 1. Repetición reciente: in top 10 of lotería A
+      const cond1 = top10ASet.has(num);
+      // 2. Atraso útil: NOT in top 3 of A (has some delay), but appeared at least once
+      const top3A = top10A.slice(0,3).map(x=>x.number);
+      const cond2 = (statsA.c[num]||0) > 0 && !top3A.includes(num);
+      // 3. Coincidencias históricas: appears in top 20 of lotería B
+      const top20B = topN(statsB.c, 20).map(x=>x.number);
+      const cond3 = top20B.includes(num);
+      // 4. Arrastre: in top 10 of BOTH lotteries
+      const cond4 = top10BothSet.has(num);
+      return [cond1, cond2, cond3, cond4];
+    }}
+
+    // ── render ─────────────────────────────────────────────────────────────
     function updateCompareFields() {{
       const dateMode = compareMode.value === 'date';
-      const historicalMode = compareMode.value === 'historical';
-      compareDateFields.forEach((field) => {{ field.hidden = !dateMode; }});
-      compareHistoricalFields.forEach((field) => {{ field.hidden = !historicalMode; }});
-      if (!dateMode) {{
-        compareFrom.value = '';
-        compareTo.value = '';
-      }}
-      if (!historicalMode) compareDay.value = '';
+      const histMode = compareMode.value === 'historical';
+      compareDateFields.forEach(f => {{ f.hidden = !dateMode; }});
+      compareHistoricalFields.forEach(f => {{ f.hidden = !histMode; }});
     }}
+
     function renderCompare() {{
       updateCompareFields();
-      const first = compareItems(firstSelect.value);
-      const second = compareItems(secondSelect.value);
-      const secondSet = new Set(second.map((item) => item.number));
-      const firstSet = new Set(first.map((item) => item.number));
-      const sharedCount = [...firstSet].filter((n) => secondSet.has(n)).length;
-      const renderCol = (items, otherSet, title) => `
-        <div class="cmp-col">
-          <p class="cmp-col-title">${{title}}</p>
-          ${{items.length ? items.map((item) => `
-            <div class="cmp-row${{otherSet.has(item.number) ? ' is-shared' : ''}}">
-              <span class="cmp-num">${{item.number}}</span>
-              <span class="cmp-score">${{item.score}} ${{item.metric || 'pts'}}</span>
-              ${{otherSet.has(item.number) ? '<span class="cmp-badge">coincide</span>' : ''}}
-            </div>
-          `).join('') : '<div class="cmp-empty">Sin datos en ese rango</div>'}}
+      const nameA = firstSelect.value;
+      const nameB = secondSelect.value;
+      const statsA = getLotteryStats(nameA);
+      const statsB = getLotteryStats(nameB);
+
+      if (!statsA || !statsB) {{
+        compareOutput.innerHTML = '<p class="cmp-hint">Selecciona un rango de fechas para comparar.</p>';
+        return;
+      }}
+
+      const top10A = topN(statsA.c, 10);
+      const top10B = topN(statsB.c, 10);
+      const top10ASet = new Set(top10A.map(x=>x.number));
+      const top10BSet = new Set(top10B.map(x=>x.number));
+      const top10BothSet = new Set([...top10ASet].filter(n=>top10BSet.has(n)));
+      const coincidencias = [...top10BothSet];
+
+      // Delayed by position (top 3 least seen per position = most delayed)
+      const del1A = delayedN(statsA.p1, 3);
+      const del2A = delayedN(statsA.p2, 3);
+      const del3A = delayedN(statsA.p3, 3);
+      const del1B = delayedN(statsB.p1, 3);
+      const del2B = delayedN(statsB.p2, 3);
+      const del3B = delayedN(statsB.p3, 3);
+
+      // 4 conditions: find numbers that meet all 4 (check union of both top 20)
+      const candidates = [...new Set([
+        ...topN(statsA.c, 20).map(x=>x.number),
+        ...topN(statsB.c, 20).map(x=>x.number),
+      ])];
+      const fourCondNums = [];
+      candidates.forEach(num => {{
+        const conds = fourConditions(num, statsA, statsB, top10A, top10B, top10BothSet);
+        if (conds.every(Boolean)) fourCondNums.push(num);
+      }});
+
+      // ── HTML rendering ─────────────────────────────────────────────────
+      const condNames = ['Repetición reciente','Atraso útil','Coincidencias históricas','Arrastre'];
+
+      const renderTop10 = (items, otherSet) => items.length
+        ? items.map(item => `
+          <div class="cmp-num-row${{otherSet.has(item.number) ? ' cmp-shared' : ''}}">
+            ${{cmpBall(item.number, otherSet.has(item.number) ? 'cmp-shared-ball' : '')}}
+            <span class="cmp-cnt">${{item.count}}×</span>
+            ${{otherSet.has(item.number) ? '<span class="cmp-badge-shared">coincide</span>' : ''}}
+          </div>`).join('')
+        : '<div class="cmp-empty">Sin datos</div>';
+
+      const renderDelayed = (items) => items.length
+        ? items.map((item,i) => `
+          <div class="cmp-del-row">
+            <span class="cmp-del-rank">#${{i+1}}</span>
+            ${{cmpBall(item.number)}}
+            <span class="cmp-cnt">${{item.count}}×</span>
+          </div>`).join('')
+        : '<div class="cmp-empty">—</div>';
+
+      const renderFour = (conds, num) => `
+        <div class="cmp-four-item">
+          ${{cmpBall(num, 'b10-elite')}}
+          <div class="cmp-four-badges">
+            ${{condNames.map((n,i) => `<span class="cond-badge ${{conds[i]?'cond-ok':'cond-no'}}">${{n}}</span>`).join('')}}
+          </div>
         </div>`;
+
+      // Build 4-conditions section with per-number condition check
+      const allCandidatesFor4 = [...new Set([
+        ...topN(statsA.c, 15).map(x=>x.number),
+        ...topN(statsB.c, 15).map(x=>x.number),
+      ])];
+      const fourCondDetails = allCandidatesFor4.map(num => {{
+        const conds = fourConditions(num, statsA, statsB, top10A, top10B, top10BothSet);
+        return {{num, conds, total: conds.filter(Boolean).length}};
+      }}).sort((a,b) => b.total - a.total || a.num.localeCompare(b.num)).slice(0, 6);
+
       compareOutput.innerHTML = `
-        <div class="cmp-cols">
-          ${{renderCol(first, secondSet, firstSelect.options[firstSelect.selectedIndex].text)}}
-          ${{renderCol(second, firstSet, secondSelect.options[secondSelect.selectedIndex].text)}}
+        <!-- 4 condiciones -->
+        <div class="cmp-section">
+          <div class="cmp-section-head">
+            <span class="cmp-eyebrow">Las 4 condiciones</span>
+            <h4>Números que cumplen todas las condiciones — ${{nameA}} vs ${{nameB}}</h4>
+            <p class="cmp-desc">Repetición reciente · Atraso útil · Coincidencias históricas · Arrastre entre loterías</p>
+          </div>
+          <div class="cmp-four-grid">
+            ${{fourCondDetails.length
+              ? fourCondDetails.map(d => renderFour(d.conds, d.num)).join('')
+              : '<p class="cmp-empty">Sin datos suficientes en el rango seleccionado.</p>'}}
+          </div>
         </div>
-        <p class="cmp-summary">${{sharedCount > 0
-          ? `<strong>${{sharedCount}}</strong> número${{sharedCount !== 1 ? 's' : ''}} coinciden en ambas loterías`
-          : 'Ningún número coincide en el top 10 de ambas loterías'}}</p>`;
+
+        <!-- Coincidencias -->
+        ${{coincidencias.length ? `
+        <div class="cmp-section cmp-coinc-section">
+          <span class="cmp-eyebrow">Coincidencias en top 10</span>
+          <h4>${{coincidencias.length}} número${{coincidencias.length!==1?'s':''}} aparecen en ambas loterías</h4>
+          <div class="cmp-coinc-balls">
+            ${{coincidencias.map(n=>cmpBall(n,'b10-elite')).join('')}}
+          </div>
+        </div>` : ''}}
+
+        <!-- Side-by-side analysis -->
+        <div class="cmp-dual-grid">
+          <!-- Lotería A -->
+          <div class="cmp-side">
+            <p class="cmp-side-title">${{nameA}}</p>
+
+            <div class="cmp-card">
+              <p class="cmp-card-label">Top 10 más repetidos</p>
+              <div class="cmp-numlist">
+                ${{renderTop10(top10A, top10BSet)}}
+              </div>
+            </div>
+
+            <div class="cmp-card">
+              <p class="cmp-card-label">3 más atrasados — 1ra posición</p>
+              <div class="cmp-numlist">${{renderDelayed(del1A)}}</div>
+            </div>
+            <div class="cmp-card">
+              <p class="cmp-card-label">3 más atrasados — 2da posición</p>
+              <div class="cmp-numlist">${{renderDelayed(del2A)}}</div>
+            </div>
+            <div class="cmp-card">
+              <p class="cmp-card-label">3 más atrasados — 3ra posición</p>
+              <div class="cmp-numlist">${{renderDelayed(del3A)}}</div>
+            </div>
+          </div>
+
+          <!-- Lotería B -->
+          <div class="cmp-side">
+            <p class="cmp-side-title">${{nameB}}</p>
+
+            <div class="cmp-card">
+              <p class="cmp-card-label">Top 10 más repetidos</p>
+              <div class="cmp-numlist">
+                ${{renderTop10(top10B, top10ASet)}}
+              </div>
+            </div>
+
+            <div class="cmp-card">
+              <p class="cmp-card-label">3 más atrasados — 1ra posición</p>
+              <div class="cmp-numlist">${{renderDelayed(del1B)}}</div>
+            </div>
+            <div class="cmp-card">
+              <p class="cmp-card-label">3 más atrasados — 2da posición</p>
+              <div class="cmp-numlist">${{renderDelayed(del2B)}}</div>
+            </div>
+            <div class="cmp-card">
+              <p class="cmp-card-label">3 más atrasados — 3ra posición</p>
+              <div class="cmp-numlist">${{renderDelayed(del3B)}}</div>
+            </div>
+          </div>
+        </div>
+      `;
     }}
+
     firstSelect.addEventListener('change', renderCompare);
     secondSelect.addEventListener('change', renderCompare);
     compareMode.addEventListener('change', renderCompare);
-    compareFrom.addEventListener('change', renderCompare);
-    compareTo.addEventListener('change', renderCompare);
     compareDay.addEventListener('change', renderCompare);
+    // "Por fechas" only runs on button click to avoid partial-date renders
+    const cmpRunBtn = document.querySelector('[data-compare-run]');
+    if (cmpRunBtn) cmpRunBtn.addEventListener('click', renderCompare);
     renderCompare();
 
     // Draw modal
@@ -986,11 +1154,11 @@ def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str)
             continue
         compare_data[name] = {
             "suggestions": [
-                {"number": str(item.get("number")), "score": item.get("score"), "frequency": item.get("frequency"), "metric": "pts"}
+                {"number": str(item.get("number")), "score": item.get("score"), "frequency": item.get("frequency")}
                 for item in data.get("suggestions", [])[:10]
                 if isinstance(item, dict)
             ],
-            "dates": _compare_date_counts(data.get("compare_results", [])),
+            "months": _compare_month_data(data.get("compare_results", [])),
             "dayMonth": data.get("compare_day_month", {}),
         }
     json_data = json.dumps(compare_data, ensure_ascii=False).replace("</", "<\\/")
@@ -1005,12 +1173,27 @@ def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str)
   </button>
   <div class="compare-body-wrap" data-compare-wrap hidden>
     <div class="compare-controls">
-      <select data-compare-first>{options}</select>
-      <select data-compare-second>{second_options}</select>
-      <label class="compare-date-field">Consulta <select data-compare-mode><option value="current">Actual</option><option value="date">Fechas</option><option value="historical">Día histórico</option></select></label>
-      <label class="compare-date-field" data-compare-date-field hidden>Desde <input type="date" data-compare-from></label>
-      <label class="compare-date-field" data-compare-date-field hidden>Hasta <input type="date" data-compare-to></label>
-      <label class="compare-date-field" data-compare-historical-field hidden>Día histórico <select data-compare-day><option value="">Selecciona</option>{day_options}</select></label>
+      <div class="cmp-row-selects">
+        <label class="cmp-label">Lotería A <select data-compare-first>{options}</select></label>
+        <label class="cmp-label">Lotería B <select data-compare-second>{second_options}</select></label>
+        <label class="cmp-label">Consulta
+          <select data-compare-mode>
+            <option value="current">Actual</option>
+            <option value="date">Por fechas</option>
+            <option value="historical">Día histórico</option>
+          </select>
+        </label>
+      </div>
+      <div class="cmp-row-dates" data-compare-date-field hidden>
+        <label class="cmp-label">Desde <input type="date" data-compare-from></label>
+        <label class="cmp-label">Hasta <input type="date" data-compare-to></label>
+        <button type="button" class="cmp-run-btn" data-compare-run>Comparar</button>
+      </div>
+      <div class="cmp-row-dates" data-compare-historical-field hidden>
+        <label class="cmp-label">Día del mes
+          <select data-compare-day><option value="">Selecciona día</option>{day_options}</select>
+        </label>
+      </div>
     </div>
     <div class="compare-body" data-compare-output></div>
   </div>
@@ -1018,31 +1201,42 @@ def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str)
 </section>"""
 
 
-def _compare_date_counts(results: object) -> dict[str, list[dict[str, object]]]:
-    """Agrega resultados por año-mes (YYYY-MM) para reducir tamaño del JSON
-    mientras se cubre todo el histórico desde 1999."""
-    by_month: dict[str, Counter[int]] = defaultdict(Counter)
+def _compare_month_data(results: object) -> dict[str, object]:
+    """Agrega resultados por año-mes con desglose por posición (1ra, 2da, 3ra).
+    Permite calcular: top repetidos, atrasados por posición y las 4 condiciones en JS."""
     if not isinstance(results, list):
         return {}
+    by_month: dict[str, list[Counter]] = {}  # month → [all, pos1, pos2, pos3]
     for result in results:
         if not isinstance(result, dict):
             continue
         draw_date = str(result.get("draw_date") or "")
         if len(draw_date) < 7:
             continue
-        month_key = draw_date[:7]  # YYYY-MM
-        for number in result.get("numbers", [])[:3]:
+        month_key = draw_date[:7]
+        if month_key not in by_month:
+            by_month[month_key] = [Counter(), Counter(), Counter(), Counter()]
+        nums = result.get("numbers", [])[:3]
+        for n in nums:
             try:
-                by_month[month_key][int(number)] += 1
+                by_month[month_key][0][int(n)] += 1
             except (TypeError, ValueError):
-                continue
-    return {
-        month_key: [
-            {"number": f"{number:02d}", "count": count}
-            for number, count in counter.most_common()
-        ]
-        for month_key, counter in sorted(by_month.items())
-    }
+                pass
+        for i in range(min(3, len(nums))):
+            try:
+                by_month[month_key][i + 1][int(nums[i])] += 1
+            except (TypeError, ValueError):
+                pass
+
+    out = {}
+    for month_key, (all_c, p1, p2, p3) in sorted(by_month.items()):
+        out[month_key] = {
+            "c":  {f"{n:02d}": v for n, v in all_c.most_common()},
+            "p1": {f"{n:02d}": v for n, v in p1.most_common()},
+            "p2": {f"{n:02d}": v for n, v in p2.most_common()},
+            "p3": {f"{n:02d}": v for n, v in p3.most_common()},
+        }
+    return out
 
 
 def _render_draws_panel(lottery_items: dict[str, object]) -> str:
@@ -1925,132 +2119,221 @@ main {
   border-top: 1px solid #e5e8ef;
 }
 
-.compare-controls {
+.compare-controls { margin-bottom: 18px; }
+
+.cmp-row-selects {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
-.compare-date-field {
+.cmp-row-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.cmp-label {
   display: grid;
   gap: 4px;
   color: #5f6680;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.compare-date-field input,
-.compare-date-field select {
-  min-height: 42px;
+.cmp-label input,
+.cmp-label select {
+  min-height: 40px;
   padding: 0 12px;
   border: 1px solid #d8dce8;
   border-radius: 8px;
   background: #ffffff;
   color: #17202a;
   font: inherit;
+  font-size: 14px;
   letter-spacing: 0;
   text-transform: none;
 }
 
-.cmp-cols {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+.cmp-run-btn {
+  height: 40px;
+  padding: 0 18px;
+  background: #ea580c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+}
+.cmp-run-btn:hover { background: #c2410c; }
+
+.cmp-hint {
+  padding: 20px;
+  color: #9ba3b8;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ── Section blocks ─────────────────────────────────── */
+.cmp-section {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+  padding: 16px 18px;
   margin-bottom: 14px;
 }
 
-.cmp-col {
-  border: 1px solid #e5e8ef;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.cmp-section-head { margin-bottom: 14px; }
 
-.cmp-col-title {
-  margin: 0;
-  padding: 10px 14px;
-  background: #f8fafc;
-  border-bottom: 1px solid #e5e8ef;
-  color: #17202a;
-  font-size: 13px;
+.cmp-eyebrow {
+  display: block;
+  font-size: 10px;
   font-weight: 900;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: #ea580c;
+  margin-bottom: 4px;
 }
 
-.cmp-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 14px;
-  border-bottom: 1px solid #f0f2f7;
-  transition: background 0.15s;
-}
-
-.cmp-row:last-child { border-bottom: 0; }
-
-.cmp-row.is-shared { background: #fff7ed; }
-
-.cmp-num {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  border-radius: 50%;
-  color: #ffffff;
-  background: #f97316;
-  font-weight: 950;
+.cmp-section h4 {
+  margin: 0 0 4px;
   font-size: 15px;
-  flex-shrink: 0;
+  font-weight: 900;
+  color: #7c2d12;
 }
 
-.cmp-row.is-shared .cmp-num {
-  background: #ea580c;
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.25);
+.cmp-desc {
+  margin: 0;
+  font-size: 12px;
+  color: #9ba3b8;
 }
 
-.cmp-score {
-  color: #6b7280;
-  font-size: 13px;
-  font-weight: 700;
+/* 4-conditions grid */
+.cmp-four-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.cmp-four-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #fde8d4;
+  border-radius: 10px;
+}
+
+.cmp-four-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
   flex: 1;
 }
 
-.cmp-empty {
-  padding: 14px;
-  color: #6b7280;
-  font-size: 14px;
-  font-weight: 700;
+/* Coincidencias */
+.cmp-coinc-section { background: #f0fdf4; border-color: #86efac; }
+.cmp-coinc-section h4 { color: #14532d; }
+.cmp-coinc-section .cmp-eyebrow { color: #16a34a; }
+
+.cmp-coinc-balls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.cmp-badge {
-  padding: 3px 8px;
+/* Dual grid (side by side) */
+.cmp-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.cmp-side-title {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #374151;
+  border-bottom: 2px solid #fed7aa;
+  padding-bottom: 6px;
+}
+
+.cmp-card {
+  background: #f8fafc;
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.cmp-card-label {
+  margin: 0 0 8px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5f6680;
+}
+
+.cmp-numlist {
+  display: grid;
+  gap: 5px;
+}
+
+.cmp-num-row,
+.cmp-del-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #f0f2f7;
+}
+
+.cmp-num-row.cmp-shared { background: #fff7ed; border-color: #fed7aa; }
+
+.cmp-cnt {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.cmp-badge-shared {
+  padding: 2px 6px;
   border-radius: 999px;
   background: #f97316;
   color: #ffffff;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   white-space: nowrap;
 }
 
-.cmp-summary {
-  margin: 0;
-  padding: 12px 14px;
-  border: 1px solid #fed7aa;
-  border-radius: 8px;
-  background: #fff7ed;
-  color: #9a3412;
-  font-size: 14px;
-  font-weight: 700;
+.cmp-del-rank {
+  color: #9ba3b8;
+  font-size: 11px;
+  font-weight: 900;
+  width: 20px;
 }
 
-.cmp-summary strong {
-  font-size: 18px;
-  font-weight: 950;
+.cmp-empty {
+  padding: 8px;
+  color: #9ba3b8;
+  font-size: 13px;
 }
+
+.cmp-shared-ball { background: #ea580c !important; box-shadow: 0 0 0 3px rgba(249,115,22,0.25); }
 
 /* ── Draws Panel (historical/predictions) ────────────────────────────── */
 .draws-panel {
@@ -2463,7 +2746,11 @@ main {
     justify-content: flex-start;
   }
 
-  .cmp-cols {
+  .cmp-dual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cmp-four-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2609,23 +2896,29 @@ main {
 
   .compare-toggle { color: #e2e4ed; }
   .compare-body-wrap { border-top-color: #1e2130; }
-  .cmp-col { border-color: #1e2130; }
 
-  .cmp-col-title {
-    background: #1a1d27;
-    color: #9ba3b8;
-    border-bottom-color: #1e2130;
-  }
+  .cmp-label input,
+  .cmp-label select { background: #1a1d27; border-color: #1e2130; color: #e2e4ed; }
 
-  .cmp-row { border-bottom-color: #1e2130; }
-  .cmp-row.is-shared { background: #1a1108; }
-  .cmp-score { color: #6b7280; }
+  .cmp-section { background: #1a1108; border-color: #3d2208; }
+  .cmp-section h4 { color: #fb923c; }
 
-  .cmp-summary {
-    border-color: #3d2208;
-    background: #1a1108;
-    color: #fb923c;
-  }
+  .cmp-coinc-section { background: #052e16; border-color: #166534; }
+  .cmp-coinc-section h4 { color: #86efac; }
+  .cmp-coinc-section .cmp-eyebrow { color: #4ade80; }
+
+  .cmp-four-item { background: #14161f; border-color: #3d2208; }
+
+  .cmp-card { background: #1a1d27; border-color: #1e2130; }
+  .cmp-card-label { color: #6b7280; }
+  .cmp-side-title { color: #9ba3b8; border-bottom-color: #3d2208; }
+
+  .cmp-num-row,
+  .cmp-del-row { background: #0e1014; border-color: #1e2130; }
+
+  .cmp-num-row.cmp-shared { background: #1a1108; border-color: #3d2208; }
+  .cmp-cnt { color: #6b7280; }
+  .cmp-del-rank { color: #6b7280; }
 
   .draws-panel {
     border-color: #3d2208;
