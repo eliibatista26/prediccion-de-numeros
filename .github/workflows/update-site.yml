@@ -38,8 +38,12 @@ jobs:
           echo "DATABASE_URL length: ${#DATABASE_URL}"
           python -m lottery_predictor.cli
 
+      - name: Pull latest before commit (avoid push conflicts)
+        run: git pull --rebase origin main
+
       - name: Commit generated files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update lottery predictions"
           file_pattern: "data/results.json docs/index.html docs/styles.css docs/predictions.json"
+          push_options: "--force-with-lease"
