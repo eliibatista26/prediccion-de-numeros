@@ -93,6 +93,42 @@ DRAW_ALIASES = {
     "la suerte 18:00": "La Suerte 6PM",
 }
 
+# The 10 canonical draws shown in the "Today's Results" section, in display order
+DRAW_LABELS = {
+    ("Lotería Nacional", "Gana Más"): "Nacional Día",
+    ("Lotería Nacional", "Lotería Gana Más"): "Nacional Día",
+    ("Lotería Nacional", "Lotería Nacional"): "Nacional Noche",
+    ("Lotería Nacional", "Nacional Noche"): "Nacional Noche",
+    ("Lotería Nacional", "Quiniela Nacional"): "Nacional Noche",
+    ("Leidsa", "Quiniela Leidsa"): "Leidsa",
+    ("Lotería Real", "Quiniela Real"): "Real",
+    ("Loteka", "Quiniela Loteka"): "Loteka",
+    ("La Primera", "La Primera Día"): "La Primera Día",
+    ("La Primera", "Lotería La Primera 12PM"): "La Primera Día",
+    ("La Primera", "La Primera Noche"): "La Primera Noche",
+    ("La Primera", "Lotería La Primera Noche 8PM"): "La Primera Noche",
+    ("La Primera", "Primera Noche"): "La Primera Noche",
+    ("La Suerte Dominicana", "La Suerte MD"): "La Suerte MD",
+    ("La Suerte Dominicana", "La Suerte 12:30"): "La Suerte MD",
+    ("La Suerte Dominicana", "La Suerte 6PM"): "La Suerte 6PM",
+    ("La Suerte Dominicana", "La Suerte 18:00"): "La Suerte 6PM",
+    ("Lotedom", "LoteDom"): "Lotedom",
+    ("Lotedom", "Quiniela LoteDom"): "Lotedom",
+    ("Lotedom", "Quiniela Lotedom"): "Lotedom",
+}
+
+TODAY_DRAW_ORDER = [
+    "Nacional Día",
+    "Nacional Noche",
+    "Leidsa",
+    "Real",
+    "Loteka",
+    "La Primera Día",
+    "La Primera Noche",
+    "La Suerte MD",
+    "La Suerte 6PM",
+    "Lotedom",
+]
 
 _FAVICON_SVG = """\
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -193,18 +229,12 @@ def _render_html(predictions: dict[str, object]) -> str:
     }
     generated_at = escape(str(predictions.get("generated_at_display") or predictions.get("generated_at") or ""))
     generated_timezone = escape(str(predictions.get("generated_timezone") or ""))
-    requested_from_date = escape(str(predictions.get("requested_from_date") or ""))
     actual_from_date = escape(str(predictions.get("actual_from_date") or ""))
     actual_to_date = escape(str(predictions.get("actual_to_date") or ""))
-    disclaimer = escape(str(predictions.get("disclaimer", "")))
-    result_count = sum(
-        int(data.get("total_results", 0))
-        for data in lottery_items.values()
-        if isinstance(data, dict)
-    )
-    chips = "\n".join(_render_chip(name) for name in lottery_items)
+
     base_10 = predictions.get("base_10", {})
     base_10_panel = _render_base_10_panel(base_10 if isinstance(base_10, dict) else {})
+    today_results = _render_today_results(lottery_items)
     compare_panel = _render_compare_panel(lottery_items, actual_to_date)
     draws_panel = _render_draws_panel(lottery_items)
 
@@ -213,67 +243,38 @@ def _render_html(predictions: dict[str, object]) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Predicción de números · Loterías dominicanas</title>
+  <title>Predicción Loterías RD</title>
   <meta name="description" content="Predicción estadística de números para Leidsa, Lotería Nacional, Loteka, Lotería Real, La Primera, La Suerte y Lotedom. Actualización automática con datos reales.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Predicción de números · Loterías dominicanas">
+  <meta property="og:title" content="Predicción Loterías RD">
   <meta property="og:description" content="Análisis estadístico de Leidsa, Nacional, Loteka, Real, La Primera y más. Datos reales desde 2010, actualización automática.">
   <meta property="og:locale" content="es_DO">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Predicción de números · Loterías dominicanas">
+  <meta name="twitter:title" content="Predicción Loterías RD">
   <meta name="twitter:description" content="Estadísticas y sugerencias para loterías dominicanas. Actualización automática.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="app-header">
+    <div class="header-brand">
+      <span class="header-logo">RD</span>
+      <span class="header-title">Predicción Loterías RD</span>
+    </div>
     <p class="update-line">Última actualización: {generated_at} · {generated_timezone}</p>
     <div class="header-actions">
-      <button type="button" data-open-help>Cómo usar la predicción</button>
+      <button type="button" data-open-help>Cómo usar</button>
     </div>
   </header>
 
   <main>
-    <section class="title-row">
-      <div>
-        <p class="eyebrow">Predicción estadística</p>
-        <h1>Números sugeridos por lotería</h1>
-      </div>
-      <div class="meta">
-        <span>{result_count:,} resultados</span>
-        <span>Cobertura real: {actual_from_date} a {actual_to_date}</span>
-      </div>
-    </section>
-
-    <section class="filter-panel">
-      <p>Filtrar por operador</p>
-      <div class="chips">
-        <button class="chip active" type="button" data-filter="all">Todas</button>
-        {chips}
-      </div>
-      <div class="schedule">
-        <strong>Actualización</strong>
-        <span>Última generación: {generated_at} ({generated_timezone}). Automática por GitHub Actions.</span>
-      </div>
-      <div class="coverage-note">
-        <strong>Cobertura verificada</strong>
-        <span>Usamos datos reales desde {actual_from_date}. No es todo el año 2010 completo: empieza en {actual_from_date}, que es la primera fecha que Conectate devuelve con resultados.</span>
-      </div>
-    </section>
-
-    <section class="explain">
-      <div class="score-grid">
-        <div><b>Frecuencia</b><span>Datos válidos desde {actual_from_date}.</span></div>
-        <div><b>Tendencia</b><span>Más próximo a los sorteos recientes.</span></div>
-        <div><b>Atraso</b><span>Extra si lleva días sin aparecer.</span></div>
-      </div>
-    </section>
-
-    {draws_panel}
+    {today_results}
     {base_10_panel}
     {compare_panel}
+    {draws_panel}
   </main>
+
   <dialog class="help-modal" aria-labelledby="help-title">
     <div class="modal-head">
       <div>
@@ -284,24 +285,24 @@ def _render_html(predictions: dict[str, object]) -> str:
     </div>
     <div class="modal-body">
       <section>
-        <h3>1. Elige una lotería</h3>
-        <p>Usa los filtros de arriba para ver solo Leidsa, Nacional, Loteka, Real u otra. El botón “Todas” vuelve a mostrar todos los operadores.</p>
+        <h3>1. Resultados de hoy</h3>
+        <p>La sección principal muestra los últimos resultados de cada sorteo como bolas grandes con posición (1RO, 2DO, 3RO).</p>
       </section>
       <section>
-        <h3>2. Lee primero los círculos grandes</h3>
-        <p>Los primeros tres números son la recomendación principal. Los círculos pequeños son alternativas cercanas que también tienen buena puntuación.</p>
+        <h3>2. Las 10 Base</h3>
+        <p>El análisis completo muestra el Grupo Élite, Número Líder, y todos los indicadores estadísticos para elegir números.</p>
       </section>
       <section>
-        <h3>3. Revisa los parámetros</h3>
-        <p>Frecuencia indica cuántas veces apareció. Tendencia reciente favorece datos cercanos. Atraso suma cuando un número lleva tiempo sin salir.</p>
+        <h3>3. Las 4 condiciones</h3>
+        <p>Un número que cumple las 4 condiciones (repetición reciente, atraso útil, coincidencias históricas y arrastre) tiene mayor probabilidad estadística.</p>
       </section>
       <section>
-        <h3>4. Compara con resultados recientes</h3>
-        <p>La columna de la derecha muestra los últimos sorteos guardados. Sirve para evitar jugar a ciegas y ver si un número sugerido acaba de aparecer.</p>
+        <h3>4. Atrasados por posición</h3>
+        <p>Muestra qué números llevan más días sin aparecer en 1ra, 2da y 3ra posición para cada lotería.</p>
       </section>
       <section>
         <h3>5. Cobertura desde 2010</h3>
-        <p>Estamos usando histórico real desde {actual_from_date} hasta {actual_to_date}. No es el año 2010 completo; empieza en la primera fecha confirmada por Conectate.</p>
+        <p>Usamos histórico real desde {actual_from_date} hasta {actual_to_date}. No es el año 2010 completo; empieza en la primera fecha confirmada.</p>
       </section>
       <section>
         <h3>6. Actualización automática</h3>
@@ -312,6 +313,7 @@ def _render_html(predictions: dict[str, object]) -> str:
       <strong>Importante:</strong> esto es análisis estadístico, no una promesa de resultado.
     </div>
   </dialog>
+
   <dialog class="draw-modal" aria-labelledby="draw-modal-title">
     <div class="draw-modal-head">
       <div>
@@ -323,13 +325,17 @@ def _render_html(predictions: dict[str, object]) -> str:
     </div>
     <div class="draw-modal-body" data-draw-modal-body></div>
   </dialog>
+
   <script>
+    // Help modal
     const helpModal = document.querySelector('.help-modal');
     document.querySelector('[data-open-help]').addEventListener('click', () => helpModal.showModal());
     document.querySelector('[data-close-help]').addEventListener('click', () => helpModal.close());
     helpModal.addEventListener('click', (event) => {{
       if (event.target === helpModal) helpModal.close();
     }});
+
+    // Compare panel
     function normalizeFilterValue(value) {{
       return String(value || '')
         .normalize('NFD')
@@ -337,17 +343,6 @@ def _render_html(predictions: dict[str, object]) -> str:
         .trim()
         .toLowerCase();
     }}
-    document.querySelectorAll('[data-filter]').forEach((button) => {{
-      button.addEventListener('click', () => {{
-        const selected = button.dataset.filter;
-        const selectedKey = normalizeFilterValue(selected);
-        document.querySelectorAll('[data-filter]').forEach((item) => item.classList.remove('active'));
-        button.classList.add('active');
-        document.querySelectorAll('[data-lottery]').forEach((section) => {{
-          section.hidden = selected !== 'all' && normalizeFilterValue(section.dataset.lottery) !== selectedKey;
-        }});
-      }});
-    }});
     const compareToggle = document.querySelector('[data-compare-toggle]');
     const comparePanel = document.querySelector('[data-compare-month]');
     const compareWrap = document.querySelector('[data-compare-wrap]');
@@ -444,6 +439,8 @@ def _render_html(predictions: dict[str, object]) -> str:
     compareTo.addEventListener('change', renderCompare);
     compareDay.addEventListener('change', renderCompare);
     renderCompare();
+
+    // Draw modal
     const drawData = JSON.parse(document.getElementById('draw-data').textContent);
     const drawModal = document.querySelector('.draw-modal');
     const drawTitle = document.querySelector('[data-draw-modal-title], #draw-modal-title');
@@ -498,19 +495,88 @@ def _render_html(predictions: dict[str, object]) -> str:
 """
 
 
-def _render_chip(name: str) -> str:
-    color = BRAND_COLORS.get(name, "#334155")
-    safe_name = escape(name)
-    return f"""<button class="chip" type="button" data-filter="{safe_name}" style="--brand: {color}"><i></i>{safe_name}</button>"""
+def _render_today_results(lottery_items: dict[str, object]) -> str:
+    """Render the top section with today's (most recent) results for the 10 draws."""
+    # Collect most recent result for each of the 10 canonical draws
+    draw_results: dict[str, dict] = {}
+    prev_results: dict[str, list[str]] = {}  # previous draw numbers for "repite" badges
 
+    for lottery_name, data in lottery_items.items():
+        if not isinstance(data, dict):
+            continue
+        results = [item for item in data.get("last_results", []) if isinstance(item, dict)]
+        # Track the last 2 results per canonical draw to detect repeats
+        canonical_seen: dict[str, list] = {}
+        for result in results:
+            raw_draw = str(result.get("draw", ""))
+            if not _is_visible_draw(lottery_name, raw_draw):
+                continue
+            label = DRAW_LABELS.get((lottery_name, raw_draw))
+            if not label:
+                # Try alias resolution
+                alias = DRAW_ALIASES.get(normalize_text(raw_draw))
+                if alias:
+                    label = DRAW_LABELS.get((lottery_name, alias))
+            if not label:
+                continue
+            nums = [f"{int(n):02d}" for n in result.get("numbers", [])[:3]]
+            draw_date = str(result.get("draw_date", ""))
+            if label not in canonical_seen:
+                canonical_seen[label] = []
+            canonical_seen[label].append((draw_date, nums))
 
-def _logo_path(name: str) -> str:
-    return f"assets/logos/{LOGO_FILES.get(name, 'loteria-nacional.svg')}"
+        for label, entries in canonical_seen.items():
+            entries.sort(key=lambda e: e[0], reverse=True)
+            if entries and label not in draw_results:
+                draw_results[label] = {"date": entries[0][0], "numbers": entries[0][1]}
+            if len(entries) >= 2 and label not in prev_results:
+                prev_results[label] = entries[1][1]
 
+    def result_card(label: str) -> str:
+        info = draw_results.get(label)
+        date_str = ""
+        numbers = ["--", "--", "--"]
+        if info:
+            numbers = info.get("numbers", ["--", "--", "--"])
+            while len(numbers) < 3:
+                numbers.append("--")
+            date_str = _short_date(info.get("date", ""))
+        prev = prev_results.get(label, [])
+        prev_set = set(prev)
 
-def _render_lottery_image(name: str, class_name: str = "lottery-photo") -> str:
-    safe_name = escape(clean_text(name))
-    return f"""<img class="{class_name}" src="{_logo_path(name)}" alt="{safe_name}" loading="lazy">"""
+        def ball_html(num: str, pos_label: str) -> str:
+            repite = num in prev_set and num != "--"
+            badge = '<span class="repite-badge">repite</span>' if repite else ""
+            return f"""<div class="today-ball-wrap">
+              <span class="today-ball">{escape(num)}</span>
+              {badge}
+              <small>{escape(pos_label)}</small>
+            </div>"""
+
+        balls_html = (
+            ball_html(numbers[0], "1RO")
+            + ball_html(numbers[1], "2DO")
+            + ball_html(numbers[2], "3RO")
+        )
+        return f"""<article class="today-card">
+  <div class="today-card-head">
+    <span class="today-lottery-name">{escape(label)}</span>
+    <span class="today-date">{escape(date_str)}</span>
+  </div>
+  <div class="today-balls">{balls_html}</div>
+</article>"""
+
+    cards_html = "\n".join(result_card(label) for label in TODAY_DRAW_ORDER)
+
+    return f"""<section class="results-today">
+  <div class="results-today-head">
+    <p class="eyebrow">Resultados de hoy</p>
+    <h2>Últimos sorteos</h2>
+  </div>
+  <div class="today-grid">
+    {cards_html}
+  </div>
+</section>"""
 
 
 def _render_base_10_panel(base_10: dict[str, object]) -> str:
@@ -525,6 +591,7 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
     coincidences = base_10.get("coincidences", []) if isinstance(base_10.get("coincidences"), list) else []
     drags = base_10.get("drags", []) if isinstance(base_10.get("drags"), list) else []
     active_mirrors = base_10.get("active_mirrors", []) if isinstance(base_10.get("active_mirrors"), list) else []
+    moving_numbers = base_10.get("moving_numbers", []) if isinstance(base_10.get("moving_numbers"), list) else []
     frequent_pairs = base_10.get("frequent_pairs", []) if isinstance(base_10.get("frequent_pairs"), list) else []
     elite = base_10.get("elite_group", []) if isinstance(base_10.get("elite_group"), list) else []
     leader = base_10.get("leader") if isinstance(base_10.get("leader"), dict) else {}
@@ -539,10 +606,73 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
         v = escape(str(item.get(val_key, "")))
         return f'<li>{ball(n)}<b>{v}{" " + escape(suffix) if suffix else ""}</b></li>'
 
-    # Elite balls
-    elite_balls = "".join(ball(escape(str(e.get("number",""))), "elite") for e in elite[:5])
+    # ── Hero: Elite + Leader ───────────────────────────────────────────────
+    elite_balls_html = "".join(
+        f'<span class="b10-ball b10-elite">{escape(str(e.get("number","")))} </span>'
+        for e in elite[:5]
+    )
+    leader_num = escape(str(leader.get("number", "N/D"))) if leader else "N/D"
+    leader_score = escape(str(round(float(leader.get("score", 0)), 1))) if leader else "N/D"
+    pair_str = "-".join(escape(str(x)) for x in pair_nums) if pair_nums else "N/D"
+    results_count = escape(str(window.get("results", 0)))
+    date_from = escape(str(window.get("from", "")))
+    date_to = escape(str(window.get("to", "")))
 
-    # Strength ranking rows
+    # ── 4-condition analysis ───────────────────────────────────────────────
+    # Build sets for condition checking
+    recent_set = {str(item.get("number", "")) for item in top_recent[:10]}
+    coinc_map = {str(item.get("number", "")): int(item.get("count", 0)) for item in coincidences}
+    drag_map = {str(item.get("number", "")): int(item.get("count", 0)) for item in drags}
+
+    four_cond_html = ""
+    four_cond_count = 0
+    for item in strength[:10]:
+        num = str(item.get("number", ""))
+        delay = float(item.get("delay_days", 0) or 0)
+        cond_recent = num in recent_set
+        cond_delay = 3 <= delay <= 45
+        cond_coinc = coinc_map.get(num, 0) > 50
+        cond_drag = drag_map.get(num, 0) > 100
+        if cond_recent and cond_delay and cond_coinc and cond_drag:
+            badges = ""
+            badges += '<span class="cond-badge cond-ok">Repetición reciente</span>'
+            badges += '<span class="cond-badge cond-ok">Atraso útil</span>'
+            badges += '<span class="cond-badge cond-ok">Coincidencias hist.</span>'
+            badges += '<span class="cond-badge cond-ok">Arrastre</span>'
+            four_cond_html += f'''<div class="four-cond-item">
+              {ball(num, "elite")}
+              <div class="four-cond-badges">{badges}</div>
+            </div>'''
+            four_cond_count += 1
+            if four_cond_count >= 5:
+                break
+
+    if not four_cond_html:
+        # Show top 3 that meet the most conditions
+        scored = []
+        for item in strength[:10]:
+            num = str(item.get("number", ""))
+            delay = float(item.get("delay_days", 0) or 0)
+            conds = [
+                num in recent_set,
+                3 <= delay <= 45,
+                coinc_map.get(num, 0) > 50,
+                drag_map.get(num, 0) > 100,
+            ]
+            scored.append((sum(conds), num, conds, item))
+        scored.sort(key=lambda x: -x[0])
+        for total, num, conds, item in scored[:3]:
+            cond_names = ["Repetición reciente", "Atraso útil", "Coincidencias hist.", "Arrastre"]
+            badges = "".join(
+                f'<span class="cond-badge {"cond-ok" if c else "cond-no"}">{escape(n)}</span>'
+                for c, n in zip(conds, cond_names)
+            )
+            four_cond_html += f'''<div class="four-cond-item">
+              {ball(num, "elite")}
+              <div class="four-cond-badges">{badges}</div>
+            </div>'''
+
+    # ── Strength ranking rows ──────────────────────────────────────────────
     def strength_row(item, rank):
         n = escape(str(item.get("number", "")))
         sc = escape(str(round(float(item.get("score", 0)), 1)))
@@ -584,6 +714,18 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
         ab = escape(str(m.get("days_ago_b", "")))
         mirror_rows += f'<li><span class="mirror-pair">{ball(a)} <i>↔</i> {ball(b_m)}</span><small>{diff}d dif · {a}:{aa}d, {b_m}:{ab}d</small></li>'
 
+    # Moving numbers rows
+    moving_rows = ""
+    for mv in (moving_numbers or [])[:6]:
+        if not isinstance(mv, dict):
+            continue
+        num = escape(str(mv.get("number", "")))
+        lots = mv.get("lotteries", [])
+        if not isinstance(lots, list):
+            lots = []
+        lot_tags = " ".join(f'<span class="lot-tag">{escape(str(l))}</span>' for l in lots[:3])
+        moving_rows += f'<li>{ball(num)}{lot_tags}</li>'
+
     # Pair rows
     pair_rows = ""
     for p in (frequent_pairs or [])[:8]:
@@ -616,13 +758,6 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
           {pos_cells("3")}
         </tr>'''
 
-    leader_num = escape(str(leader.get("number", "N/D"))) if leader else "N/D"
-    leader_score = escape(str(round(float(leader.get("score", 0)), 1))) if leader else "N/D"
-    pair_str = "-".join(escape(str(x)) for x in pair_nums) if pair_nums else "N/D"
-    results_count = escape(str(window.get("results", 0)))
-    date_from = escape(str(window.get("from", "")))
-    date_to = escape(str(window.get("to", "")))
-
     return f"""<section class="b10-panel">
   <div class="b10-header">
     <div>
@@ -630,69 +765,94 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
       <h2>Análisis completo</h2>
       <p class="b10-meta-line">{results_count} sorteos · {date_from} → {date_to}</p>
     </div>
-    <div class="b10-elite-wrap">
-      <p class="b10-elite-label">🏆 Grupo Élite</p>
-      <div class="b10-elite-balls">{elite_balls}</div>
-      <p class="b10-elite-footer">Líder: <strong>{leader_num}</strong> · Score: <strong>{leader_score}</strong> · Palé bala: <strong>{pair_str}</strong></p>
+  </div>
+
+  <!-- Hero: Elite & Leader -->
+  <div class="b10-hero">
+    <div class="b10-elite-box">
+      <p class="b10-section-label">Grupo Élite</p>
+      <div class="b10-elite-balls">{elite_balls_html}</div>
+    </div>
+    <div class="b10-leader-box">
+      <p class="b10-section-label">Número Líder</p>
+      <span class="b10-leader-ball">{leader_num}</span>
+      <p class="b10-leader-sub">Score: <strong>{leader_score}</strong></p>
+    </div>
+    <div class="b10-bala-box">
+      <p class="b10-section-label">Palé Bala</p>
+      <span class="b10-bala-nums">{pair_str}</span>
     </div>
   </div>
 
-  <div class="b10-main-grid">
-    <article class="b10-card b10-strength">
-      <h3>🥇 Ranking de fuerza</h3>
-      <table class="b10-table">
-        <thead><tr><th></th><th>Núm.</th><th>Score</th><th>Rec.</th><th>Coinc.</th><th>Arr.</th><th>Hist.</th></tr></thead>
-        <tbody>{strength_rows_html}</tbody>
-      </table>
-    </article>
-    <div class="b10-side-col">
+  <!-- 4-condition analysis -->
+  <div class="b10-card b10-four-cond">
+    <h3>Las 4 condiciones — números que cumplen todo</h3>
+    <p class="b10-four-desc">Repetición reciente · Atraso útil (3–45 días) · Coincidencias históricas · Arrastre entre loterías</p>
+    <div class="b10-four-list">{four_cond_html}</div>
+  </div>
+
+  <!-- Analysis grid -->
+  <div class="b10-analysis-grid">
+    <div class="b10-col-1">
+      <article class="b10-card b10-strength">
+        <h3>Ranking de fuerza</h3>
+        <table class="b10-table">
+          <thead><tr><th></th><th>Núm.</th><th>Score</th><th>Rec.</th><th>Coinc.</th><th>Arr.</th><th>Hist.</th></tr></thead>
+          <tbody>{strength_rows_html}</tbody>
+        </table>
+      </article>
       <article class="b10-card">
-        <h3>📊 Top 10 repetidos <small>(histórico)</small></h3>
+        <h3>Top 10 histórico</h3>
         <ol class="b10-numlist">{simple_rank_rows(top_hist, "count", "veces")}</ol>
       </article>
+    </div>
+
+    <div class="b10-col-2">
       <article class="b10-card">
-        <h3>🔥 Repetición reciente <small>(30 días)</small></h3>
-        <ol class="b10-numlist">{simple_rank_rows(top_recent, "count", "veces")}</ol>
+        <h3>Atrasados 1ra posición</h3>
+        <ol class="b10-numlist">{delay_rows(delayed_pos.get("1", []))}</ol>
+      </article>
+      <article class="b10-card">
+        <h3>Atrasados 2da posición</h3>
+        <ol class="b10-numlist">{delay_rows(delayed_pos.get("2", []))}</ol>
+      </article>
+      <article class="b10-card">
+        <h3>Atrasados 3ra posición</h3>
+        <ol class="b10-numlist">{delay_rows(delayed_pos.get("3", []))}</ol>
+      </article>
+      <article class="b10-card">
+        <h3>Repetición reciente <small>(últimos 30 días)</small></h3>
+        <ol class="b10-numlist b10-inline">{simple_rank_rows(top_recent, "count", "veces")}</ol>
+      </article>
+    </div>
+
+    <div class="b10-col-3">
+      <article class="b10-card">
+        <h3>Coincidencias <small>entre loterías</small></h3>
+        <ol class="b10-numlist b10-inline">{coinc_rows}</ol>
+      </article>
+      <article class="b10-card">
+        <h3>Arrastres <small>día siguiente</small></h3>
+        <ol class="b10-numlist b10-inline">{drag_rows}</ol>
+      </article>
+      <article class="b10-card">
+        <h3>Espejos activos <small>≤14 días</small></h3>
+        <ul class="b10-mirror-list">{mirror_rows if mirror_rows else "<li class='b10-empty'>Sin espejos activos</li>"}</ul>
+      </article>
+      <article class="b10-card">
+        <h3>Palés frecuentes</h3>
+        <ul class="b10-pale-list">{pair_rows if pair_rows else "<li class='b10-empty'>Sin datos</li>"}</ul>
+      </article>
+      <article class="b10-card">
+        <h3>Números que cambian de lotería</h3>
+        <ul class="b10-numlist b10-moving">{moving_rows if moving_rows else "<li class='b10-empty'>Sin datos</li>"}</ul>
       </article>
     </div>
   </div>
 
-  <div class="b10-delay-grid">
-    <article class="b10-card">
-      <h3>⏳ Atrasados 1ra posición</h3>
-      <ol class="b10-numlist">{delay_rows(delayed_pos.get("1", []))}</ol>
-    </article>
-    <article class="b10-card">
-      <h3>⏳ Atrasados 2da posición</h3>
-      <ol class="b10-numlist">{delay_rows(delayed_pos.get("2", []))}</ol>
-    </article>
-    <article class="b10-card">
-      <h3>⏳ Atrasados 3ra posición</h3>
-      <ol class="b10-numlist">{delay_rows(delayed_pos.get("3", []))}</ol>
-    </article>
-  </div>
-
-  <div class="b10-stats-grid">
-    <article class="b10-card">
-      <h3>🔗 Coincidencias <small>entre loterías</small></h3>
-      <ol class="b10-numlist b10-inline">{coinc_rows}</ol>
-    </article>
-    <article class="b10-card">
-      <h3>🎯 Arrastres <small>día siguiente</small></h3>
-      <ol class="b10-numlist b10-inline">{drag_rows}</ol>
-    </article>
-    <article class="b10-card">
-      <h3>🪞 Espejos activos <small>≤14 días</small></h3>
-      <ul class="b10-mirror-list">{mirror_rows}</ul>
-    </article>
-    <article class="b10-card">
-      <h3>🎰 Palés frecuentes</h3>
-      <ul class="b10-pale-list">{pair_rows}</ul>
-    </article>
-  </div>
-
+  <!-- Per-lottery delayed table -->
   <article class="b10-card b10-lottery-table-wrap">
-    <h3>📋 Atrasados por lotería — top 3 en cada posición</h3>
+    <h3>Atrasados por lotería — top 3 en cada posición</h3>
     <div class="b10-table-scroll">
       <table class="b10-lot-table">
         <thead>
@@ -802,8 +962,8 @@ def _render_draws_panel(lottery_items: dict[str, object]) -> str:
     return f"""<section class="draws-panel">
   <div class="draws-head">
     <div>
-      <p class="eyebrow">Sorteos recientes</p>
-      <h2>Resultados con historial y predicción</h2>
+      <p class="eyebrow">Historial y predicciones</p>
+      <h2>Sorteos recientes con predicción</h2>
     </div>
     <span>{len(items)} sorteos visibles</span>
   </div>
@@ -915,18 +1075,9 @@ def _render_draw_card(item: dict[str, object], index: int) -> str:
 
 def _short_date(value: str) -> str:
     month_names = {
-        "01": "Ene",
-        "02": "Feb",
-        "03": "Mar",
-        "04": "Abr",
-        "05": "May",
-        "06": "Jun",
-        "07": "Jul",
-        "08": "Ago",
-        "09": "Sep",
-        "10": "Oct",
-        "11": "Nov",
-        "12": "Dic",
+        "01": "Ene", "02": "Feb", "03": "Mar", "04": "Abr",
+        "05": "May", "06": "Jun", "07": "Jul", "08": "Ago",
+        "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dic",
     }
     parts = value.split("-")
     if len(parts) != 3:
@@ -949,28 +1100,13 @@ def _is_visible_draw(lottery_name: str, draw: str) -> bool:
     return draw_key in visible_keys or bool(alias and normalize_text(alias) in visible_keys)
 
 
-def _render_simple_rank(items: object, value_key: str) -> str:
-    rows = []
-    for item in items if isinstance(items, list) else []:
-        if isinstance(item, dict):
-            rows.append(f"""<li><span>{escape(str(item.get("number")))}</span><b>{escape(str(item.get(value_key)))}</b></li>""")
-    return "\n".join(rows)
+def _render_lottery_image(name: str, class_name: str = "lottery-photo") -> str:
+    safe_name = escape(clean_text(name))
+    return f"""<img class="{class_name}" src="{_logo_path(name)}" alt="{safe_name}" loading="lazy">"""
 
 
-def _render_strength_rows(items: object) -> str:
-    rows = []
-    for item in items if isinstance(items, list) else []:
-        if isinstance(item, dict):
-            rows.append(f"""<li><span>{escape(str(item.get("number")))}</span><b>{escape(str(item.get("score")))} pts</b></li>""")
-    return "\n".join(rows)
-
-
-def _render_delay_rows(items: object) -> str:
-    rows = []
-    for item in (items if isinstance(items, list) else [])[:3]:
-        if isinstance(item, dict):
-            rows.append(f"""<li><span>{escape(str(item.get("number")))}</span><b>{escape(str(item.get("delay_days")))} días</b></li>""")
-    return "\n".join(rows)
+def _logo_path(name: str) -> str:
+    return f"assets/logos/{LOGO_FILES.get(name, 'loteria-nacional.svg')}"
 
 
 def _initials(name: str) -> str:
@@ -1016,6 +1152,62 @@ select {
   font-weight: 800;
 }
 
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1 { font-size: 32px; line-height: 1.1; }
+h2 { font-size: 28px; line-height: 1.1; }
+
+/* ── Header ──────────────────────────────────────────────────────────── */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px clamp(16px, 4vw, 56px);
+  border-bottom: 1px solid #fed7aa;
+  background: rgba(255, 247, 237, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  background: #f97316;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.header-title {
+  font-size: 17px;
+  font-weight: 900;
+  color: #9a3412;
+  white-space: nowrap;
+}
+
+.update-line {
+  color: #697087;
+  font-size: 13px;
+  font-weight: 700;
+  flex: 1;
+  text-align: center;
+}
+
 .header-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1023,281 +1215,189 @@ select {
   gap: 10px;
 }
 
-.header-actions button:first-child {
+.header-actions button {
   color: #ffffff;
   border-color: #f97316;
   background: #f97316;
-}
-
-.app-header {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 16px clamp(16px, 4vw, 56px);
-  border-bottom: 1px solid #e1e3ea;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(10px);
-}
-
-.update-line {
-  color: #697087;
-  font-size: 14px;
-  font-weight: 800;
-}
-
-main {
-  width: min(1280px, 100%);
-  margin: 0 auto;
-  padding: 22px clamp(14px, 4vw, 42px) 56px;
-}
-
-.title-row {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 22px;
+  font-weight: 900;
 }
 
 .eyebrow {
-  margin: 0 0 6px;
-  color: #6d7288;
-  font-size: 13px;
+  margin: 0 0 4px;
+  color: #9a3412;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
-
-h1 {
-  font-size: 32px;
-  line-height: 1.1;
-}
-
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 8px;
-}
-
-.meta span,
-.section-count {
-  padding: 8px 11px;
-  border: 1px solid #e1e3ea;
-  border-radius: 999px;
-  color: #5f6680;
-  background: #ffffff;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.filter-panel,
-.explain {
-  margin-bottom: 22px;
-  padding: 18px;
-  border: 1px solid #e1e3ea;
-  border-radius: 8px;
-  background: #ffffff;
-}
-
-.filter-panel p {
-  margin-bottom: 12px;
-  color: #6d7288;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 38px;
-  padding: 0 14px;
-  border: 2px solid var(--brand, #1f2937);
-  border-radius: 999px;
-  color: #1d2437;
-  background: #ffffff;
-  font-weight: 900;
-  font-family: inherit;
-}
-
-.chip.active {
-  color: #ffffff;
-  border-color: #151927;
-  background: #151927;
-}
-
-.chip i {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--brand, #1f2937);
-}
-
-.schedule {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid #e6e8ee;
-  color: #5f6680;
-}
-
-.schedule strong {
-  color: #17202a;
-}
-
-.coverage-note {
+main {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  padding: 24px clamp(14px, 4vw, 48px) 72px;
   display: grid;
-  gap: 4px;
-  margin-top: 12px;
-  padding: 12px 14px;
+  gap: 28px;
+}
+
+/* ── Today's Results ─────────────────────────────────────────────────── */
+.results-today {
+  background: #ffffff;
   border: 1px solid #fed7aa;
-  border-radius: 8px;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(154, 52, 18, 0.08);
+}
+
+.results-today-head {
+  margin-bottom: 18px;
+}
+
+.results-today-head h2 {
+  color: #9a3412;
+  font-size: 26px;
+}
+
+.today-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.today-card {
   background: #fff7ed;
-}
-
-.coverage-note strong {
-  color: #f97316;
-}
-
-.coverage-note span {
-  color: #4f5b75;
-  line-height: 1.4;
-}
-
-.score-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.score-grid div {
-  min-height: 112px;
-  padding: 18px;
-  border: 1px solid #e6e8ee;
-  border-radius: 12px;
-  background: #f8fafc;
-}
-
-.score-grid b,
-.score-grid span {
-  display: block;
-}
-
-.score-grid b {
-  margin-bottom: 8px;
-  color: #141a2e;
-  font-size: 19px;
-}
-
-.score-grid span {
-  color: #667089;
-  font-size: 16px;
-  line-height: 1.35;
-}
-
-.base-panel,
-.compare-panel {
-  margin-bottom: 24px;
-  padding: 20px;
-  border: 1px solid #d8dce8;
+  border: 1px solid #fed7aa;
   border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0 12px 26px rgba(26, 35, 65, 0.06);
-}
-
-.base-head {
+  padding: 14px 16px;
   display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 16px;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.base-head h2 {
-  font-size: 27px;
-}
-
-.base-grid,
-.delay-grid {
-  display: grid;
-  gap: 14px;
-}
-
-.base-grid {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(260px, 0.75fr);
-  margin-bottom: 14px;
-}
-
-.delay-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.base-grid article,
-.delay-grid article {
-  padding: 16px;
-  border: 1px solid #e5e8ef;
-  border-radius: 8px;
-  background: #f8fafc;
-}
-
-.base-grid h3,
-.delay-grid h3 {
-  margin-bottom: 10px;
-  color: #17202a;
-  font-size: 15px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.base-grid ol,
-.delay-grid ol {
-  display: grid;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.base-grid li,
-.delay-grid li {
+.today-card-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 9px 10px;
-  border-radius: 8px;
-  background: #ffffff;
+  gap: 8px;
 }
 
-.base-grid li span,
-.delay-grid li span,
-.elite-box div span,
-.compare-result span {
+.today-lottery-name {
+  font-size: 15px;
+  font-weight: 900;
+  color: #9a3412;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.today-date {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9ba3b8;
+}
+
+.today-balls {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.today-ball-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+}
+
+.today-ball {
   display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 950;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
+}
+
+.today-ball-wrap small {
+  font-size: 11px;
+  font-weight: 900;
+  color: #9ba3b8;
+  letter-spacing: 0.08em;
+}
+
+.repite-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #22c55e;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 900;
+  padding: 2px 5px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* ── Las 10 Base ─────────────────────────────────────────────────────── */
+.b10-panel {
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(154, 52, 18, 0.08);
+}
+
+.b10-header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #fed7aa;
+}
+
+.b10-header h2 {
+  color: #9a3412;
+  margin: 4px 0 6px;
+}
+
+.b10-meta-line {
+  color: #9ba3b8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.b10-section-label {
+  font-size: 11px;
+  font-weight: 900;
+  color: #9ba3b8;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+/* Hero row */
+.b10-hero {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+}
+
+.b10-elite-balls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.b10-ball {
+  display: inline-grid;
   width: 38px;
   height: 38px;
   place-items: center;
@@ -1305,27 +1405,382 @@ h1 {
   color: #ffffff;
   background: #f97316;
   font-weight: 950;
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
-.base-grid li b,
-.delay-grid li b {
-  color: #5f6680;
+.b10-ball.elite {
+  width: 46px;
+  height: 46px;
+  font-size: 17px;
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4);
 }
 
-.elite-box div {
+.b10-leader-box {
+  text-align: center;
+  padding: 12px 20px;
+  border-left: 2px solid #fed7aa;
+  border-right: 2px solid #fed7aa;
+}
+
+.b10-leader-ball {
+  display: inline-grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 950;
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+}
+
+.b10-leader-sub {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #697087;
+}
+
+.b10-leader-sub strong {
+  color: #f97316;
+}
+
+.b10-bala-box {
+  text-align: center;
+  padding: 12px 16px;
+}
+
+.b10-bala-nums {
+  display: block;
+  font-size: 28px;
+  font-weight: 950;
+  color: #9a3412;
+  letter-spacing: 0.05em;
+}
+
+/* 4-condition */
+.b10-four-cond {
+  margin-bottom: 20px;
+}
+
+.b10-four-cond h3 {
+  font-size: 14px;
+  font-weight: 900;
+  color: #374151;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.b10-four-desc {
+  font-size: 12px;
+  color: #9ba3b8;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.b10-four-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 10px 0 14px;
+  gap: 12px;
 }
 
-.elite-box p {
+.four-cond-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.four-cond-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.cond-badge {
+  font-size: 10px;
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.cond-ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.cond-no {
+  background: #f1f5f9;
+  color: #9ba3b8;
+}
+
+/* Analysis grid — 3 columns */
+.b10-analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+  align-items: start;
+}
+
+.b10-col-1,
+.b10-col-2,
+.b10-col-3 {
+  display: grid;
+  gap: 14px;
+}
+
+/* Cards */
+.b10-card {
+  padding: 16px;
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.b10-card h3 {
+  font-size: 12px;
+  font-weight: 900;
+  color: #374151;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.b10-card h3 small {
+  font-size: 10px;
+  color: #9ba3b8;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 700;
+  display: block;
+  margin-top: 2px;
+}
+
+.b10-empty {
+  color: #9ba3b8;
+  font-size: 13px;
+  padding: 8px 10px;
+}
+
+/* Numlists */
+.b10-numlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.b10-numlist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.b10-numlist b {
+  color: #6b7280;
+  font-size: 12px;
+  margin-left: auto;
+}
+
+.b10-numlist.b10-inline {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Moving numbers */
+.b10-moving li {
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lot-tag {
+  font-size: 10px;
+  font-weight: 900;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+/* Strength table */
+.b10-strength { overflow: hidden; }
+
+.b10-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.b10-table th {
+  padding: 7px 6px;
+  background: #f0f2f7;
   color: #5f6680;
-  line-height: 1.45;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid #e5e8ef;
 }
 
-.elite-box strong {
+.b10-tr td {
+  padding: 6px;
+  border-bottom: 1px solid #f0f2f7;
+  vertical-align: middle;
+}
+
+.b10-tr:last-child td { border-bottom: 0; }
+
+.b10-rank {
+  color: #9ba3b8;
+  font-weight: 900;
+  font-size: 10px;
+  width: 22px;
+}
+
+.b10-sc {
+  font-weight: 900;
   color: #f97316;
+  font-size: 12px;
+}
+
+.b10-meta {
+  color: #6b7280;
+  font-size: 11px;
+}
+
+.b10-meta small {
+  display: block;
+  font-size: 9px;
+  color: #9ba3b8;
+  font-weight: 700;
+}
+
+/* Mirror & pale lists */
+.b10-mirror-list,
+.b10-pale-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.b10-mirror-list li,
+.b10-pale-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #ffffff;
+  flex-wrap: wrap;
+}
+
+.mirror-pair,
+.pale-pair {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mirror-pair i,
+.pale-pair i {
+  color: #9ba3b8;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.b10-mirror-list small {
+  color: #9ba3b8;
+  font-size: 10px;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.b10-pale-list b {
+  color: #6b7280;
+  font-size: 12px;
+  margin-left: auto;
+}
+
+/* Lottery table */
+.b10-lottery-table-wrap { overflow: hidden; }
+
+.b10-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.b10-lot-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 600px;
+}
+
+.b10-lot-table th {
+  padding: 9px 12px;
+  background: #f0f2f7;
+  color: #5f6680;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid #e5e8ef;
+}
+
+.b10-lot-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f0f2f7;
+  vertical-align: middle;
+}
+
+.b10-lot-table tr:last-child td { border-bottom: 0; }
+
+.lot-name {
+  font-weight: 900;
+  color: #374151;
+  white-space: nowrap;
+  min-width: 130px;
+}
+
+.lot-pos-nums {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lot-pos-nums small {
+  font-size: 10px;
+  color: #9ba3b8;
+  font-weight: 700;
+}
+
+/* ── Compare Panel ────────────────────────────────────────────────────── */
+.compare-panel {
+  background: #ffffff;
+  border: 1px solid #d8dce8;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(26, 35, 65, 0.06);
 }
 
 .compare-toggle {
@@ -1344,9 +1799,7 @@ h1 {
   cursor: pointer;
 }
 
-.compare-toggle:hover {
-  color: #f97316;
-}
+.compare-toggle:hover { color: #f97316; }
 
 .compare-toggle-label {
   display: flex;
@@ -1360,9 +1813,7 @@ h1 {
   transition: color 0.15s;
 }
 
-.compare-toggle:hover .compare-toggle-arrow {
-  color: #f97316;
-}
+.compare-toggle:hover .compare-toggle-arrow { color: #f97316; }
 
 .compare-body-wrap {
   padding-top: 16px;
@@ -1399,10 +1850,6 @@ h1 {
   text-transform: none;
 }
 
-.compare-body {
-  margin-top: 4px;
-}
-
 .cmp-cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1437,13 +1884,9 @@ h1 {
   transition: background 0.15s;
 }
 
-.cmp-row:last-child {
-  border-bottom: 0;
-}
+.cmp-row:last-child { border-bottom: 0; }
 
-.cmp-row.is-shared {
-  background: #fff7ed;
-}
+.cmp-row.is-shared { background: #fff7ed; }
 
 .cmp-num {
   display: grid;
@@ -1504,38 +1947,32 @@ h1 {
   font-weight: 950;
 }
 
+/* ── Draws Panel (historical/predictions) ────────────────────────────── */
 .draws-panel {
-  margin-bottom: 26px;
-  padding: 20px;
-  border: 1px solid #fed7aa;
-  border-radius: 10px;
   background: #fffaf5;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  padding: 22px;
 }
 
 .draws-head {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-.draws-head h2 {
-  font-size: 27px;
-}
+.draws-head h2 { font-size: 24px; }
 
 .draws-head > span {
   color: #5f6680;
   font-weight: 900;
+  font-size: 13px;
 }
 
-.lottery-draw-group {
-  margin-bottom: 24px;
-}
-
-.lottery-draw-group:last-of-type {
-  margin-bottom: 0;
-}
+.lottery-draw-group { margin-bottom: 24px; }
+.lottery-draw-group:last-of-type { margin-bottom: 0; }
 
 .lottery-group-title {
   display: flex;
@@ -1545,7 +1982,7 @@ h1 {
   padding-bottom: 8px;
   border-bottom: 3px solid var(--brand, #f97316);
   color: var(--brand, #f97316);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1553,36 +1990,37 @@ h1 {
 
 .draw-card-list {
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
 .draw-card {
   display: grid;
-  grid-template-columns: minmax(220px, 0.9fr) minmax(220px, 0.7fr) minmax(270px, 0.8fr);
+  grid-template-columns: minmax(200px, 0.9fr) minmax(200px, 0.7fr) minmax(240px, 0.8fr);
   align-items: center;
-  gap: 18px;
-  min-height: 148px;
-  padding: 18px 22px;
+  gap: 16px;
+  min-height: 130px;
+  padding: 16px 20px;
   border: 1px solid #fed7aa;
-  border-radius: 14px;
+  border-radius: 12px;
   background: #ffffff;
-  box-shadow: 0 14px 30px rgba(154, 52, 18, 0.1);
+  box-shadow: 0 8px 22px rgba(154, 52, 18, 0.08);
 }
 
 .draw-identity {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   min-width: 0;
 }
 
 .draw-logo {
-  width: 78px;
-  height: 58px;
+  width: 72px;
+  height: 52px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #fff7ed;
   box-shadow: inset 0 0 0 1px #fed7aa;
+  flex-shrink: 0;
 }
 
 .draw-logo-img {
@@ -1594,41 +2032,41 @@ h1 {
 
 .draw-identity h3 {
   color: #202638;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.1;
 }
 
 .draw-identity p {
-  margin-top: 8px;
+  margin-top: 6px;
   color: #172033;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 950;
 }
 
 .confidence-badge {
   display: inline-flex;
-  margin-top: 9px;
-  padding: 6px 9px;
+  margin-top: 7px;
+  padding: 5px 8px;
   border: 1px solid #fed7aa;
   border-radius: 999px;
   color: #9a3412;
   background: #fff7ed;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 950;
 }
 
 .draw-numbers {
   display: flex;
   justify-content: center;
-  gap: 22px;
+  gap: 18px;
 }
 
 .draw-numbers span {
   display: grid;
-  min-width: 54px;
+  min-width: 48px;
   justify-items: center;
   color: #59636a;
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 500;
   line-height: 0.95;
 }
@@ -1639,9 +2077,9 @@ h1 {
 }
 
 .draw-numbers small {
-  margin-top: 8px;
+  margin-top: 7px;
   color: #a1a8b1;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 800;
 }
 
@@ -1652,10 +2090,10 @@ h1 {
 
 .draw-numbers .first small::before {
   position: absolute;
-  top: -7px;
+  top: -6px;
   left: 50%;
-  width: 38px;
-  height: 4px;
+  width: 34px;
+  height: 3px;
   border-radius: 999px;
   background: #fb923c;
   content: "";
@@ -1665,14 +2103,14 @@ h1 {
 .draw-actions {
   display: flex;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 10px;
 }
 
 .draw-actions button {
-  min-width: 124px;
-  min-height: 50px;
-  border-radius: 10px;
-  font-size: 15px;
+  min-width: 110px;
+  min-height: 44px;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
 .draw-actions button:last-child {
@@ -1681,318 +2119,7 @@ h1 {
   background: #fff7ed;
 }
 
-.draw-modal {
-  width: min(680px, calc(100% - 28px));
-  padding: 0;
-  border: 0;
-  border-radius: 12px;
-  color: #161b2d;
-  background: #ffffff;
-  box-shadow: 0 24px 80px rgba(16, 24, 48, 0.28);
-}
-
-.draw-modal::backdrop {
-  background: rgba(13, 18, 32, 0.54);
-  backdrop-filter: blur(4px);
-}
-
-.draw-modal-head {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 22px;
-  border-bottom: 1px solid #e5e8ef;
-}
-
-.draw-modal-head h2 {
-  font-size: 28px;
-}
-
-.draw-modal-head span {
-  display: block;
-  margin-top: 6px;
-  color: #697087;
-  font-weight: 800;
-}
-
-.draw-modal-body {
-  display: grid;
-  gap: 12px;
-  padding: 18px;
-}
-
-.modal-result-row,
-.modal-prediction {
-  padding: 14px;
-  border: 1px solid #e5e8ef;
-  border-radius: 10px;
-  background: #f8fafc;
-}
-
-.modal-result-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-.modal-result-row strong,
-.modal-result-row span {
-  display: block;
-}
-
-.modal-result-row span,
-.modal-prediction p {
-  color: #697087;
-}
-
-.modal-balls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.modal-balls span {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border-radius: 50%;
-  color: #ffffff;
-  background: #f97316;
-  font-weight: 950;
-}
-
-.modal-prediction p {
-  margin-bottom: 12px;
-}
-
-.backtest-box {
-  display: grid;
-  gap: 4px;
-  margin-bottom: 14px;
-  padding: 12px;
-  border: 1px solid #fed7aa;
-  border-radius: 10px;
-  background: #fff7ed;
-}
-
-.backtest-box strong {
-  color: #9a3412;
-}
-
-.backtest-box span {
-  color: #697087;
-  font-weight: 800;
-}
-
-.modal-prediction ol {
-  display: grid;
-  gap: 8px;
-  margin: 14px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.modal-prediction li {
-  display: flex;
-  justify-content: space-between;
-  padding: 9px 10px;
-  border-radius: 8px;
-  background: #ffffff;
-}
-
-.lottery-section {
-  margin-top: 0;
-  padding-top: 18px;
-  border-top: 3px solid var(--brand);
-}
-
-.lottery-section + .lottery-section {
-  margin-top: 28px;
-}
-
-.section-head {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.section-head h2 {
-  color: var(--brand);
-  font-size: 34px;
-}
-
-.section-head span {
-  color: #6d7288;
-  font-weight: 800;
-}
-
-.result-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.75fr);
-  align-items: start;
-  gap: 16px;
-}
-
-.result-card {
-  display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
-  gap: 16px;
-  min-height: 210px;
-  padding: 18px;
-  border: 1px solid #dadde7;
-  border-left: 6px solid var(--brand);
-  border-radius: 8px;
-  background: #ffffff;
-  box-shadow: 0 12px 28px rgba(26, 35, 65, 0.08);
-}
-
-.side-results {
-  display: grid;
-  gap: 12px;
-}
-
-.side-results > h3 {
-  color: #687087;
-  font-size: 13px;
-  font-weight: 950;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.compact {
-  grid-template-columns: 1fr;
-  min-height: 0;
-  padding: 14px;
-  border-left-width: 4px;
-}
-
-.logo-box {
-  display: grid;
-  width: 104px;
-  height: 104px;
-  place-items: center;
-  align-self: start;
-  border: 1px solid #edf0f5;
-  border-radius: 8px;
-  color: var(--brand);
-  background: #ffffff;
-  font-size: 34px;
-  font-weight: 950;
-  box-shadow: inset 0 0 0 1px #f5f6fa;
-}
-
-.card-main {
-  min-width: 0;
-}
-
-.card-title {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.card-title h3 {
-  color: var(--brand);
-  font-size: 25px;
-}
-
-.card-title p {
-  color: #646b80;
-  font-size: 18px;
-}
-
-.compact .card-title {
-  margin-bottom: 12px;
-}
-
-.compact .card-title p {
-  color: #202638;
-  font-size: 15px;
-  font-weight: 850;
-}
-
-.compact .ball-row {
-  gap: 8px;
-}
-
-.compact .ball {
-  width: 42px;
-  height: 42px;
-  font-size: 17px;
-}
-
-.card-title strong {
-  color: #6d7288;
-  font-size: 13px;
-  font-weight: 950;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.ball-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.ball {
-  display: grid;
-  width: 58px;
-  height: 58px;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--brand);
-  background: color-mix(in srgb, var(--brand) 14%, white);
-  font-size: 24px;
-  font-weight: 950;
-  box-shadow: 0 3px 8px rgba(26, 35, 65, 0.08);
-}
-
-.prediction-ball:first-child {
-  width: 76px;
-  height: 76px;
-  color: #ffffff;
-  background: var(--brand);
-  font-size: 30px;
-}
-
-.score-list {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 8px;
-  margin: 16px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.score-list li {
-  padding: 8px;
-  border-radius: 8px;
-  background: #f8f9fc;
-}
-
-.score-list span,
-.score-list b {
-  display: block;
-}
-
-.score-list span {
-  color: var(--brand);
-  font-weight: 950;
-}
-
-.score-list b {
-  color: #6d7288;
-  font-size: 11px;
-}
-
+/* ── Modals ───────────────────────────────────────────────────────────── */
 .help-modal {
   width: min(760px, calc(100% - 28px));
   padding: 0;
@@ -2015,17 +2142,11 @@ h1 {
   gap: 18px;
   padding: 22px;
   color: #ffffff;
-  background:
-    linear-gradient(135deg, rgba(249, 115, 22, 0.94), rgba(194, 65, 12, 0.82));
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.94), rgba(194, 65, 12, 0.82));
 }
 
-.modal-head .eyebrow {
-  color: #dfe7ff;
-}
-
-.modal-head h2 {
-  font-size: 28px;
-}
+.modal-head .eyebrow { color: #fde8d4; }
+.modal-head h2 { font-size: 26px; }
 
 .modal-head button {
   color: #ffffff;
@@ -2066,672 +2187,165 @@ h1 {
   color: #4d5568;
 }
 
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(340px, 0.85fr);
-  gap: 22px;
-  align-items: start;
-  margin-bottom: 28px;
-}
-
-.content-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.38fr);
-  gap: 24px;
-  align-items: start;
-}
-
-.lottery-list {
-  min-width: 0;
-}
-
-.global-latest {
-  position: sticky;
-  top: 88px;
-}
-
-.featured-panel,
-.latest-panel {
-  border: 1px solid #d8dce8;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0 12px 26px rgba(26, 35, 65, 0.08);
-}
-
-.featured-panel {
-  min-height: 420px;
-  padding: 28px;
-  border-left: 5px solid var(--brand);
-  background: linear-gradient(180deg, #ffffff 0%, #fffaf5 100%);
-}
-
-.featured-head,
-.latest-head {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.featured-title {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  min-width: 0;
-}
-
-.lottery-photo {
-  width: 112px;
-  height: 74px;
-  flex: 0 0 auto;
-  border: 1px solid #fed7aa;
-  border-radius: 10px;
-  object-fit: cover;
-  background: #fff7ed;
-  box-shadow: 0 8px 18px rgba(154, 52, 18, 0.1);
-}
-
-.featured-head h2 {
-  color: var(--brand);
-  font-size: 30px;
-}
-
-.featured-head p {
-  margin-top: 4px;
-  color: #616a80;
-}
-
-.featured-head > span {
-  padding: 7px 12px;
-  border-radius: 8px;
-  color: #f97316;
-  background: #ffedd5;
-  font-size: 12px;
-  font-weight: 950;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.featured-balls {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 18px;
-  margin: 36px 0;
-}
-
-.hero-ball {
-  display: grid;
-  width: 68px;
-  height: 68px;
-  place-items: center;
-  border-radius: 50%;
-  color: #ffffff;
-  background: var(--brand);
-  font-size: 24px;
-  font-weight: 950;
-  box-shadow: 0 10px 18px color-mix(in srgb, var(--brand) 28%, transparent);
-}
-
-.mini-balls {
-  display: flex;
-  gap: 10px;
-  margin-left: 18px;
-}
-
-.mini-ball {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  place-items: center;
-  border: 3px solid var(--brand);
-  border-radius: 50%;
-  color: var(--brand);
-  background: #ffffff;
-  font-weight: 950;
-}
-
-.metric-table {
-  overflow: hidden;
-  border: 1px solid #e1e4eb;
-  border-radius: 8px;
-}
-
-.metric-header,
-.metric-row {
-  display: grid;
-  grid-template-columns: 1.4fr 0.8fr 0.6fr;
-  gap: 12px;
-  padding: 12px 14px;
-}
-
-.metric-header {
-  color: #4f566b;
-  background: #f0f2f5;
-  font-size: 12px;
-  font-weight: 950;
-  letter-spacing: 0.08em;
-}
-
-.metric-row {
-  border-top: 1px solid #e7e9ef;
-}
-
-.metric-row strong {
-  color: #f97316;
-}
-
-.latest-panel {
-  padding: 20px;
-}
-
-.latest-head {
-  margin-bottom: 14px;
-}
-
-.latest-head h2 {
-  font-size: 21px;
-}
-
-.latest-head a,
-.latest-head span {
-  color: #f97316;
-  font-size: 12px;
-  font-weight: 950;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.latest-list {
-  display: grid;
-  gap: 12px;
-}
-
-.latest-card {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px;
-  border: 1px solid #d8dce8;
-  border-radius: 10px;
-  background: #ffffff;
-}
-
-.latest-card h3 {
-  color: #f97316;
-  font-size: 13px;
-  text-transform: uppercase;
-}
-
-.latest-card p {
-  margin: 2px 0 10px;
-  color: #5f6678;
-  font-size: 12px;
-}
-
-.latest-card div div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.latest-card div div span {
-  display: grid;
-  width: 30px;
-  height: 30px;
-  place-items: center;
-  border-radius: 50%;
-  color: #f97316;
-  background: #ffedd5;
-  font-size: 12px;
-  font-weight: 950;
-}
-
-.latest-card > b {
-  align-self: center;
-  color: #a1a8b8;
-  font-size: 28px;
-}
-
-.weekly-box {
-  margin-top: 16px;
-  padding: 14px;
-  border-radius: 10px;
-  background: #eef0f3;
-}
-
-.weekly-box span {
-  display: block;
-  color: #555e73;
-  font-size: 12px;
-  font-weight: 950;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.weekly-box strong {
-  color: #f97316;
-  font-size: 32px;
-}
-
-.weekly-box p {
-  display: inline;
-  color: #4f566b;
-}
-
-/* ── Las 10 Base redesign ─────────────────────────────── */
-.b10-panel {
-  margin-bottom: 24px;
-  padding: 22px;
-  border: 1px solid #fed7aa;
+.draw-modal {
+  width: min(680px, calc(100% - 28px));
+  padding: 0;
+  border: 0;
   border-radius: 12px;
+  color: #161b2d;
   background: #ffffff;
-  box-shadow: 0 12px 28px rgba(154, 52, 18, 0.07);
+  box-shadow: 0 24px 80px rgba(16, 24, 48, 0.28);
 }
 
-.b10-header {
+.draw-modal::backdrop {
+  background: rgba(13, 18, 32, 0.54);
+  backdrop-filter: blur(4px);
+}
+
+.draw-modal-head {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  padding-bottom: 18px;
-  border-bottom: 2px solid #fed7aa;
+  gap: 18px;
+  padding: 22px;
+  border-bottom: 1px solid #e5e8ef;
 }
 
-.b10-header h2 {
-  font-size: 28px;
-  margin: 4px 0 6px;
-}
+.draw-modal-head h2 { font-size: 26px; }
 
-.b10-meta-line {
-  color: #9a3412;
-  font-size: 13px;
+.draw-modal-head span {
+  display: block;
+  margin-top: 6px;
+  color: #697087;
   font-weight: 800;
 }
 
-.b10-elite-wrap {
-  text-align: right;
-  min-width: 260px;
-}
-
-.b10-elite-label {
-  font-size: 13px;
-  font-weight: 900;
-  color: #6d7288;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.b10-elite-balls {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-
-.b10-elite-footer {
-  font-size: 13px;
-  color: #697087;
-}
-
-.b10-elite-footer strong {
-  color: #f97316;
-  font-size: 15px;
-}
-
-.b10-ball {
-  display: inline-grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  border-radius: 50%;
-  color: #ffffff;
-  background: #f97316;
-  font-weight: 950;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
-.b10-ball.elite {
-  width: 44px;
-  height: 44px;
-  font-size: 16px;
-  background: linear-gradient(135deg, #f97316, #c2410c);
-  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
-}
-
-.b10-main-grid {
+.draw-modal-body {
   display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 14px;
-  margin-bottom: 14px;
+  gap: 12px;
+  padding: 18px;
 }
 
-.b10-side-col {
-  display: grid;
-  gap: 14px;
-}
-
-.b10-delay-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-bottom: 14px;
-}
-
-.b10-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-bottom: 14px;
-}
-
-.b10-card {
-  padding: 16px;
+.modal-result-row,
+.modal-prediction {
+  padding: 14px;
   border: 1px solid #e5e8ef;
   border-radius: 10px;
   background: #f8fafc;
 }
 
-.b10-card h3 {
-  font-size: 13px;
-  font-weight: 900;
-  color: #374151;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.b10-card h3 small {
-  font-size: 11px;
-  color: #9ba3b8;
-  text-transform: none;
-  letter-spacing: 0;
-  font-weight: 700;
-  display: block;
-  margin-top: 2px;
-}
-
-.b10-numlist {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 6px;
-}
-
-.b10-numlist li {
+.modal-result-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 7px 10px;
-  border-radius: 8px;
-  background: #ffffff;
+  justify-content: space-between;
+  gap: 14px;
 }
 
-.b10-numlist b {
-  color: #6b7280;
-  font-size: 13px;
-  margin-left: auto;
-}
+.modal-result-row strong,
+.modal-result-row span { display: block; }
 
-.b10-numlist.b10-inline {
-  grid-template-columns: repeat(2, 1fr);
-}
+.modal-result-row span,
+.modal-prediction p { color: #697087; }
 
-.b10-strength {
-  overflow: hidden;
-}
-
-.b10-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.b10-table th {
-  padding: 7px 8px;
-  background: #f0f2f7;
-  color: #5f6680;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-align: left;
-  border-bottom: 1px solid #e5e8ef;
-}
-
-.b10-tr td {
-  padding: 7px 8px;
-  border-bottom: 1px solid #f0f2f7;
-  vertical-align: middle;
-}
-
-.b10-tr:last-child td {
-  border-bottom: 0;
-}
-
-.b10-rank {
-  color: #9ba3b8;
-  font-weight: 900;
-  font-size: 11px;
-  width: 24px;
-}
-
-.b10-sc {
-  font-weight: 900;
-  color: #f97316;
-}
-
-.b10-meta {
-  color: #6b7280;
-  font-size: 12px;
-}
-
-.b10-meta small {
-  display: block;
-  font-size: 10px;
-  color: #9ba3b8;
-  font-weight: 700;
-}
-
-.b10-mirror-list,
-.b10-pale-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 6px;
-}
-
-.b10-mirror-list li,
-.b10-pale-list li {
+.modal-balls {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
-  padding: 6px 8px;
+}
+
+.modal-balls span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #f97316;
+  font-weight: 950;
+}
+
+.modal-prediction p { margin-bottom: 12px; }
+
+.backtest-box {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 14px;
+  padding: 12px;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  background: #fff7ed;
+}
+
+.backtest-box strong { color: #9a3412; }
+.backtest-box span { color: #697087; font-weight: 800; }
+
+.modal-prediction ol {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.modal-prediction li {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 10px;
   border-radius: 8px;
   background: #ffffff;
-  flex-wrap: wrap;
 }
 
-.mirror-pair,
-.pale-pair {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.mirror-pair i,
-.pale-pair i {
-  color: #9ba3b8;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 13px;
-}
-
-.b10-mirror-list small {
-  color: #9ba3b8;
-  font-size: 10px;
-  font-weight: 700;
-  margin-left: auto;
-}
-
-.b10-pale-list b {
-  color: #6b7280;
-  font-size: 13px;
-  margin-left: auto;
-}
-
-.b10-lottery-table-wrap {
-  overflow: hidden;
-}
-
-.b10-table-scroll {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.b10-lot-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  min-width: 600px;
-}
-
-.b10-lot-table th {
-  padding: 9px 12px;
-  background: #f0f2f7;
-  color: #5f6680;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-align: left;
-  border-bottom: 1px solid #e5e8ef;
-}
-
-.b10-lot-table td {
-  padding: 8px 12px;
-  border-bottom: 1px solid #f0f2f7;
-  vertical-align: middle;
-}
-
-.b10-lot-table tr:last-child td {
-  border-bottom: 0;
-}
-
-.lot-name {
-  font-weight: 900;
-  color: #374151;
-  white-space: nowrap;
-  min-width: 130px;
-}
-
-.lot-pos-nums {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.lot-pos-nums small {
-  font-size: 10px;
-  color: #9ba3b8;
-  font-weight: 700;
-}
-
-/* dark mode for b10 */
-@media (prefers-color-scheme: dark) {
-  .b10-panel {
-    border-color: #3d2208;
-    background: #14161f;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+/* ── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .b10-analysis-grid {
+    grid-template-columns: 1fr 1fr;
   }
-  .b10-header {
-    border-bottom-color: #3d2208;
-  }
-  .b10-card {
-    border-color: #1e2130;
-    background: #1a1d27;
-  }
-  .b10-card h3 {
-    color: #9ba3b8;
-  }
-  .b10-numlist li {
-    background: #0e1014;
-  }
-  .b10-mirror-list li,
-  .b10-pale-list li {
-    background: #0e1014;
-  }
-  .b10-table th,
-  .b10-lot-table th {
-    background: #1e2130;
-    color: #9ba3b8;
-    border-bottom-color: #2e3140;
-  }
-  .b10-tr td,
-  .b10-lot-table td {
-    border-bottom-color: #1e2130;
-  }
-  .b10-lot-table tr:last-child td,
-  .b10-tr:last-child td {
-    border-bottom: 0;
-  }
-  .b10-rank {
-    color: #6b7280;
-  }
-  .b10-meta-line {
-    color: #fb923c;
-  }
-  .b10-elite-footer {
-    color: #6b7280;
+  .b10-col-3 {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 820px) {
-  .title-row,
-  .section-head,
   .app-header {
-    align-items: start;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
-  .title-row,
-  .draws-head,
-  .app-header,
-  .section-head {
-    display: grid;
+  .update-line {
+    order: 3;
+    width: 100%;
+    text-align: left;
   }
 
-  .header-actions {
-    justify-content: start;
-  }
-
-  .meta {
-    justify-content: start;
-  }
-
-  .dashboard-grid,
-  .content-layout,
-  .explain,
-  .score-grid,
-  .base-grid,
-  .delay-grid,
-  .result-grid,
-  .modal-body {
+  .today-grid {
     grid-template-columns: 1fr;
   }
 
-  .compare-panel {
-    display: grid;
+  .b10-hero {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
-  .cmp-cols {
+  .b10-leader-box {
+    border-left: 0;
+    border-right: 0;
+    border-top: 2px solid #fed7aa;
+    border-bottom: 2px solid #fed7aa;
+    padding: 14px 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .b10-analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .b10-col-3 {
+    grid-column: auto;
     grid-template-columns: 1fr;
   }
 
@@ -2744,120 +2358,45 @@ h1 {
     justify-content: flex-start;
   }
 
-  .compare-result {
-    justify-content: start;
-  }
-
-  .global-latest {
-    position: static;
-  }
-
-  .result-card {
+  .cmp-cols {
     grid-template-columns: 1fr;
   }
 
-  .logo-box {
-    width: 84px;
-    height: 84px;
-    font-size: 28px;
+  .modal-body {
+    grid-template-columns: 1fr;
+  }
+
+  .draws-head {
+    display: grid;
   }
 }
 
 @media (max-width: 520px) {
-  h1 {
-    font-size: 27px;
+  .header-title { display: none; }
+
+  .today-ball { width: 46px; height: 46px; font-size: 18px; }
+
+  .b10-numlist.b10-inline {
+    grid-template-columns: 1fr;
   }
 
-  .section-head h2 {
-    font-size: 28px;
-  }
+  .draw-card { padding: 14px; }
 
-  .card-title {
-    display: grid;
-  }
+  .draw-identity h3 { font-size: 18px; }
 
-  .ball {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-  }
-
-  .score-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .draw-card {
-    padding: 16px;
-  }
-
-  .draw-identity {
-    align-items: flex-start;
-  }
-
-  .draw-logo {
-    width: 58px;
-    height: 50px;
-    font-size: 18px;
-  }
-
-  .draw-identity h3 {
-    font-size: 22px;
-  }
-
-  .draw-numbers {
-    gap: 16px;
-  }
-
-  .draw-numbers span {
-    font-size: 36px;
-  }
+  .draw-numbers span { font-size: 32px; }
 
   .draw-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .modal-result-row {
-    display: grid;
-  }
-
-  .b10-main-grid,
-  .b10-stats-grid {
-    grid-template-columns: 1fr;
-  }
-  .b10-delay-grid {
-    grid-template-columns: 1fr;
-  }
-  .b10-numlist.b10-inline {
-    grid-template-columns: 1fr;
-  }
-  .b10-elite-wrap {
-    text-align: left;
-    min-width: 0;
-  }
-  .b10-elite-balls {
-    justify-content: flex-start;
-  }
+  .modal-result-row { display: grid; }
 }
 
-@media (max-width: 820px) {
-  .chips {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-bottom: 4px;
-  }
-
-  .chips::-webkit-scrollbar {
-    display: none;
-  }
-}
-
+/* ── Dark mode ────────────────────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
+  :root { color-scheme: dark; }
 
   body {
     color: #e2e4ed;
@@ -2877,97 +2416,110 @@ h1 {
   }
 
   .app-header {
-    border-bottom-color: #1e2130;
-    background: rgba(14, 16, 20, 0.94);
+    border-bottom-color: #3d2208;
+    background: rgba(14, 16, 20, 0.96);
   }
 
-  .update-line {
-    color: #6b7280;
+  .header-title { color: #fb923c; }
+  .update-line { color: #6b7280; }
+
+  .header-actions button {
+    color: #ffffff;
+    border-color: #ea580c;
+    background: #ea580c;
   }
 
-  .filter-panel,
-  .explain {
-    border-color: #1e2130;
+  .results-today {
     background: #14161f;
+    border-color: #3d2208;
   }
 
-  .filter-panel p {
-    color: #6b7280;
+  .results-today-head h2 { color: #fb923c; }
+
+  .today-card {
+    background: #1a1108;
+    border-color: #3d2208;
   }
 
-  .chip {
-    color: #c8cadc;
-    border-color: color-mix(in srgb, var(--brand) 50%, #2e3140);
+  .today-lottery-name { color: #fb923c; }
+
+  .b10-panel {
+    border-color: #3d2208;
+    background: #14161f;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  }
+
+  .b10-header {
+    border-bottom-color: #3d2208;
+  }
+
+  .b10-header h2 { color: #fb923c; }
+
+  .b10-hero {
+    background: linear-gradient(135deg, #1a1108, #1c1205);
+    border-color: #3d2208;
+  }
+
+  .b10-card {
+    border-color: #1e2130;
     background: #1a1d27;
   }
 
-  .chip.active {
-    color: #ffffff;
-    border-color: #e2e4ed;
-    background: #1e2236;
+  .b10-card h3 { color: #9ba3b8; }
+
+  .b10-numlist li { background: #0e1014; }
+
+  .b10-mirror-list li,
+  .b10-pale-list li { background: #0e1014; }
+
+  .b10-table th,
+  .b10-lot-table th {
+    background: #1e2130;
+    color: #9ba3b8;
+    border-bottom-color: #2e3140;
   }
 
-  .schedule {
-    border-top-color: #1e2130;
-    color: #6b7280;
-  }
+  .b10-tr td,
+  .b10-lot-table td { border-bottom-color: #1e2130; }
 
-  .schedule strong {
-    color: #c8cadc;
-  }
+  .b10-lot-table tr:last-child td,
+  .b10-tr:last-child td { border-bottom: 0; }
 
-  .coverage-note {
-    border-color: #3d2208;
+  .b10-rank { color: #6b7280; }
+  .b10-meta-line { color: #6b7280; }
+
+  .four-cond-item {
     background: #1a1108;
+    border-color: #3d2208;
   }
 
-  .coverage-note span {
-    color: #8b9299;
-  }
+  .cond-ok { background: #14532d; color: #86efac; }
+  .cond-no { background: #1e2130; color: #6b7280; }
 
-  .score-grid div {
-    border-color: #1e2130;
-    background: #14161f;
-  }
-
-  .score-grid b {
-    color: #e2e4ed;
-  }
-
-  .score-grid span {
-    color: #6b7280;
-  }
-
-  .base-panel,
   .compare-panel {
     border-color: #1e2130;
     background: #14161f;
-    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
   }
 
-  .base-grid article,
-  .delay-grid article {
-    border-color: #1e2130;
+  .compare-toggle { color: #e2e4ed; }
+  .compare-body-wrap { border-top-color: #1e2130; }
+  .cmp-col { border-color: #1e2130; }
+
+  .cmp-col-title {
     background: #1a1d27;
-  }
-
-  .base-grid h3,
-  .delay-grid h3 {
     color: #9ba3b8;
+    border-bottom-color: #1e2130;
   }
 
-  .base-grid li,
-  .delay-grid li {
-    background: #0e1014;
-  }
+  .cmp-row { border-bottom-color: #1e2130; }
+  .cmp-row.is-shared { background: #1a1108; }
+  .cmp-score { color: #6b7280; }
 
-  .base-grid li b,
-  .delay-grid li b {
-    color: #6b7280;
-  }
-
-  .elite-box p {
-    color: #6b7280;
+  .cmp-summary {
+    border-color: #3d2208;
+    background: #1a1108;
+    color: #fb923c;
   }
 
   .draws-panel {
@@ -2978,16 +2530,11 @@ h1 {
   .draw-card {
     border-color: #3d2208;
     background: #14161f;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
   }
 
-  .draw-identity h3 {
-    color: #e2e4ed;
-  }
-
-  .draw-identity p {
-    color: #c8cadc;
-  }
+  .draw-identity h3 { color: #e2e4ed; }
+  .draw-identity p { color: #c8cadc; }
 
   .confidence-badge {
     border-color: #3d2208;
@@ -2995,9 +2542,7 @@ h1 {
     color: #fb923c;
   }
 
-  .draw-numbers span {
-    color: #6b7280;
-  }
+  .draw-numbers span { color: #6b7280; }
 
   .draw-actions button:last-child {
     color: #fb923c;
@@ -3016,13 +2561,8 @@ h1 {
     color: #e2e4ed;
   }
 
-  .draw-modal-head {
-    border-bottom-color: #1e2130;
-  }
-
-  .draw-modal-head span {
-    color: #6b7280;
-  }
+  .draw-modal-head { border-bottom-color: #1e2130; }
+  .draw-modal-head span { color: #6b7280; }
 
   .modal-result-row,
   .modal-prediction {
@@ -3035,77 +2575,26 @@ h1 {
     background: #1a1108;
   }
 
-  .backtest-box span {
-    color: #6b7280;
-  }
-
-  .modal-prediction li {
-    background: #0e1014;
-  }
+  .backtest-box span { color: #6b7280; }
+  .modal-prediction li { background: #0e1014; }
 
   .modal-body section {
     border-color: #1e2130;
     background: #1a1d27;
   }
 
-  .modal-body h3 {
-    color: #e2e4ed;
-  }
-
-  .modal-body p {
-    color: #6b7280;
-  }
+  .modal-body h3 { color: #e2e4ed; }
+  .modal-body p { color: #6b7280; }
 
   .modal-note {
     background: #1a1108;
     color: #9ba3b8;
   }
 
-  .meta span,
-  .section-count {
-    border-color: #1e2130;
-    background: #14161f;
-    color: #6b7280;
-  }
-
-  .compare-toggle {
-    color: #e2e4ed;
-  }
-
-  .compare-body-wrap {
-    border-top-color: #1e2130;
-  }
-
-  .cmp-col {
-    border-color: #1e2130;
-  }
-
-  .cmp-col-title {
-    background: #1a1d27;
-    color: #9ba3b8;
-    border-bottom-color: #1e2130;
-  }
-
-  .cmp-row {
-    border-bottom-color: #1e2130;
-  }
-
-  .cmp-row.is-shared {
-    background: #1a1108;
-  }
-
-  .cmp-score {
-    color: #6b7280;
-  }
-
-  .cmp-summary {
-    border-color: #3d2208;
-    background: #1a1108;
-    color: #fb923c;
-  }
-
   .lottery-group-title {
     border-bottom-color: color-mix(in srgb, var(--brand) 60%, #1e2130);
   }
+
+  .lot-tag { background: #3d2208; color: #fb923c; }
 }
 """
