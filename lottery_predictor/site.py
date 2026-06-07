@@ -263,7 +263,6 @@ def _render_html(predictions: dict[str, object]) -> str:
     </div>
     <p class="update-line">Última actualización: {generated_at} · {generated_timezone}</p>
     <div class="header-actions">
-      <button type="button" id="btn-update" data-open-update>⟳ Actualizar</button>
       <button type="button" data-open-help>Cómo usar</button>
     </div>
   </header>
@@ -313,39 +312,6 @@ def _render_html(predictions: dict[str, object]) -> str:
     </div>
   </dialog>
 
-  <dialog class="update-modal" id="update-modal" aria-labelledby="update-modal-title">
-    <div class="modal-head">
-      <div>
-        <p class="eyebrow">Actualización</p>
-        <h2 id="update-modal-title">Actualizar datos</h2>
-      </div>
-      <button type="button" id="close-update-modal" aria-label="Cerrar">✕</button>
-    </div>
-    <div class="modal-body">
-      <p style="margin:0 0 12px;font-size:14px;color:#374151;line-height:1.6;">
-        La página se actualiza <strong>automáticamente</strong> varias veces al día con los últimos sorteos.
-      </p>
-      <p style="margin:0 0 20px;font-size:14px;color:#374151;line-height:1.6;">
-        Para forzar una actualización <em>ahora mismo</em>, haz clic en el botón de abajo.
-        Se abrirá GitHub Actions — inicia sesión en tu cuenta y pulsa <strong>"Run workflow"</strong>.
-      </p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a href="https://github.com/eliibatista26/prediccion-de-numeros/actions/workflows/update-site.yml"
-           target="_blank" rel="noopener noreferrer"
-           style="display:inline-block;background:#ea580c;color:#fff;text-decoration:none;padding:10px 22px;border-radius:8px;font-weight:700;font-size:14px;">
-          ⟳ Ir a GitHub Actions
-        </a>
-        <button type="button" id="close-update-modal-2"
-          style="background:transparent;color:#6b7280;border:1px solid #e5e7eb;padding:10px 18px;border-radius:8px;font-size:13px;cursor:pointer;">
-          Cerrar
-        </button>
-      </div>
-      <p style="margin:16px 0 0;font-size:11px;color:#9ba3b8;">
-        La actualización tarda aproximadamente 2 minutos. Recarga la página después para ver los nuevos datos.
-      </p>
-    </div>
-  </dialog>
-
   <dialog class="draw-modal" aria-labelledby="draw-modal-title">
     <div class="draw-modal-head">
       <div>
@@ -366,13 +332,6 @@ def _render_html(predictions: dict[str, object]) -> str:
     helpModal.addEventListener('click', (event) => {{
       if (event.target === helpModal) helpModal.close();
     }});
-
-    // Update modal
-    const updateModal = document.getElementById('update-modal');
-    document.querySelector('[data-open-update]').addEventListener('click', () => updateModal.showModal());
-    document.getElementById('close-update-modal').addEventListener('click', () => updateModal.close());
-    document.getElementById('close-update-modal-2').addEventListener('click', () => updateModal.close());
-    updateModal.addEventListener('click', (e) => {{ if (e.target === updateModal) updateModal.close(); }});
 
     // ── Compare panel ──────────────────────────────────────────────────────
     const compareToggle = document.querySelector('[data-compare-toggle]');
