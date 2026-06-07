@@ -21,6 +21,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Pull latest changes first
+        run: git pull --rebase origin main
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -35,15 +40,10 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           echo "DATABASE_URL set: $([ -n "$DATABASE_URL" ] && echo YES || echo NO)"
-          echo "DATABASE_URL length: ${#DATABASE_URL}"
           python -m lottery_predictor.cli
-
-      - name: Pull latest before commit (avoid push conflicts)
-        run: git pull --rebase origin main
 
       - name: Commit generated files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update lottery predictions"
           file_pattern: "data/results.json docs/index.html docs/styles.css docs/predictions.json"
-          push_options: "--force-with-lease"
