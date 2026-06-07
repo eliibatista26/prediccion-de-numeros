@@ -18,7 +18,7 @@
 </head>
 <body>
   <header class="app-header">
-    <p class="update-line">Última actualización: 07/06/2026 06:22 · America/Santo_Domingo</p>
+    <p class="update-line">Última actualización: 07/06/2026 06:26 · America/Santo_Domingo</p>
     <div class="header-actions">
       <button type="button" data-open-help>Cómo usar la predicción</button>
     </div>
@@ -50,7 +50,7 @@
       </div>
       <div class="schedule">
         <strong>Actualización</strong>
-        <span>Última generación: 07/06/2026 06:22 (America/Santo_Domingo). Automática por GitHub Actions.</span>
+        <span>Última generación: 07/06/2026 06:26 (America/Santo_Domingo). Automática por GitHub Actions.</span>
       </div>
       <div class="coverage-note">
         <strong>Cobertura verificada</strong>
@@ -368,7 +368,37 @@
 <option value="La Primera">La Primera</option>
 <option value="La Suerte Dominicana">La Suerte Dominicana</option>
 <option value="Lotedom">Lotedom</option></select>
-      <label class="compare-date-field">Día histórico <input type="date" data-compare-day></label>
+      <label class="compare-date-field">Día histórico <select data-compare-day><option value="">Todos</option><option value="01">1</option>
+<option value="02">2</option>
+<option value="03">3</option>
+<option value="04">4</option>
+<option value="05">5</option>
+<option value="06">6</option>
+<option value="07">7</option>
+<option value="08">8</option>
+<option value="09">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option></select></label>
       <label class="compare-date-field">Desde <input type="date" data-compare-from></label>
       <label class="compare-date-field">Hasta <input type="date" data-compare-to></label>
     </div>
@@ -408,7 +438,7 @@
       </section>
       <section>
         <h3>6. Actualización automática</h3>
-        <p>Última actualización: 07/06/2026 06:22 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
+        <p>Última actualización: 07/06/2026 06:26 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
       </section>
     </div>
     <div class="modal-note">
@@ -476,12 +506,11 @@
       compareFrom.max = allCompareDates[allCompareDates.length - 1];
       compareTo.min = allCompareDates[0];
       compareTo.max = allCompareDates[allCompareDates.length - 1];
-      compareDay.min = allCompareDates[0];
-      compareDay.max = allCompareDates[allCompareDates.length - 1];
     }
+    const currentCompareMonth = allCompareDates.length ? allCompareDates[allCompareDates.length - 1].slice(5, 7) : '';
     function compareItems(name) {
       const payload = compareData[name] || {};
-      const dayMonth = compareDay.value ? compareDay.value.slice(5) : '';
+      const dayMonth = compareDay.value && currentCompareMonth ? `${currentCompareMonth}-${compareDay.value}` : '';
       if (dayMonth) {
         return ((payload.dayMonth || {})[dayMonth] || [])
           .map((item) => ({ number: item.number, score: item.count, frequency: item.count, metric: item.count === 1 ? 'vez' : 'veces' }))

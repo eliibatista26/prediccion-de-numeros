@@ -372,12 +372,11 @@ def _render_html(predictions: dict[str, object]) -> str:
       compareFrom.max = allCompareDates[allCompareDates.length - 1];
       compareTo.min = allCompareDates[0];
       compareTo.max = allCompareDates[allCompareDates.length - 1];
-      compareDay.min = allCompareDates[0];
-      compareDay.max = allCompareDates[allCompareDates.length - 1];
     }}
+    const currentCompareMonth = allCompareDates.length ? allCompareDates[allCompareDates.length - 1].slice(5, 7) : '';
     function compareItems(name) {{
       const payload = compareData[name] || {{}};
-      const dayMonth = compareDay.value ? compareDay.value.slice(5) : '';
+      const dayMonth = compareDay.value && currentCompareMonth ? `${{currentCompareMonth}}-${{compareDay.value}}` : '';
       if (dayMonth) {{
         return ((payload.dayMonth || {{}})[dayMonth] || [])
           .map((item) => ({{ number: item.number, score: item.count, frequency: item.count, metric: item.count === 1 ? 'vez' : 'veces' }}))
@@ -550,6 +549,7 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
         f"""<option value="{escape(name)}"{" selected" if index == 1 else ""}>{escape(name)}</option>"""
         for index, name in enumerate(names)
     )
+    day_options = "\n".join(f"""<option value="{day:02d}">{day}</option>""" for day in range(1, 32))
     compare_data = {}
     for name, data in lottery_items.items():
         if not isinstance(data, dict):
@@ -584,7 +584,7 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
     <div class="compare-controls">
       <select data-compare-first>{options}</select>
       <select data-compare-second>{second_options}</select>
-      <label class="compare-date-field">Día histórico <input type="date" data-compare-day></label>
+      <label class="compare-date-field">Día histórico <select data-compare-day><option value="">Todos</option>{day_options}</select></label>
       <label class="compare-date-field">Desde <input type="date" data-compare-from></label>
       <label class="compare-date-field">Hasta <input type="date" data-compare-to></label>
     </div>
@@ -1200,7 +1200,8 @@ h1 {
   text-transform: uppercase;
 }
 
-.compare-date-field input {
+.compare-date-field input,
+.compare-date-field select {
   min-height: 42px;
   padding: 0 12px;
   border: 1px solid #d8dce8;
