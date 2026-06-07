@@ -316,32 +316,33 @@ def _render_html(predictions: dict[str, object]) -> str:
   <dialog class="update-modal" id="update-modal" aria-labelledby="update-modal-title">
     <div class="modal-head">
       <div>
-        <p class="eyebrow">GitHub Actions</p>
-        <h2 id="update-modal-title">Actualizar ahora</h2>
+        <p class="eyebrow">Actualización</p>
+        <h2 id="update-modal-title">Actualizar datos</h2>
       </div>
-      <button type="button" id="close-update-modal" aria-label="Cerrar">Cerrar</button>
+      <button type="button" id="close-update-modal" aria-label="Cerrar">✕</button>
     </div>
     <div class="modal-body">
-      <p id="update-status-msg">Para disparar la actualización necesitas un token de GitHub con permiso <code>workflow</code>. Se guarda solo en tu navegador.</p>
-      <div id="update-token-section">
-        <label style="display:block;margin-bottom:8px;font-size:13px;font-weight:700;">
-          GitHub Personal Access Token (PAT)
-        </label>
-        <input type="password" id="gh-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
-          style="width:100%;padding:10px;border-radius:8px;border:1px solid #fed7aa;font-size:14px;box-sizing:border-box;background:#fff7ed;">
-        <p style="font-size:11px;color:#9ba3b8;margin-top:6px;">
-          Crea el token en GitHub → Settings → Developer settings → Personal access tokens → Fine-grained → permiso <strong>Actions: Write</strong> en este repo.
-        </p>
-      </div>
-      <div id="update-action-row" style="display:flex;gap:10px;margin-top:16px;align-items:center;flex-wrap:wrap;">
-        <button type="button" id="btn-trigger-update" style="background:#ea580c;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-weight:700;cursor:pointer;font-size:14px;">
-          Disparar actualización
+      <p style="margin:0 0 12px;font-size:14px;color:#374151;line-height:1.6;">
+        La página se actualiza <strong>automáticamente</strong> varias veces al día con los últimos sorteos.
+      </p>
+      <p style="margin:0 0 20px;font-size:14px;color:#374151;line-height:1.6;">
+        Para forzar una actualización <em>ahora mismo</em>, haz clic en el botón de abajo.
+        Se abrirá GitHub Actions — inicia sesión en tu cuenta y pulsa <strong>"Run workflow"</strong>.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="https://github.com/eliibatista26/prediccion-de-numeros/actions/workflows/update-site.yml"
+           target="_blank" rel="noopener noreferrer"
+           style="display:inline-block;background:#ea580c;color:#fff;text-decoration:none;padding:10px 22px;border-radius:8px;font-weight:700;font-size:14px;">
+          ⟳ Ir a GitHub Actions
+        </a>
+        <button type="button" id="close-update-modal-2"
+          style="background:transparent;color:#6b7280;border:1px solid #e5e7eb;padding:10px 18px;border-radius:8px;font-size:13px;cursor:pointer;">
+          Cerrar
         </button>
-        <button type="button" id="btn-clear-token" style="background:transparent;color:#9ba3b8;border:1px solid #e5e7eb;padding:10px 16px;border-radius:8px;font-size:13px;cursor:pointer;">
-          Borrar token guardado
-        </button>
-        <span id="update-feedback" style="font-size:13px;font-weight:600;"></span>
       </div>
+      <p style="margin:16px 0 0;font-size:11px;color:#9ba3b8;">
+        La actualización tarda aproximadamente 2 minutos. Recarga la página después para ver los nuevos datos.
+      </p>
     </div>
   </dialog>
 
@@ -368,73 +369,10 @@ def _render_html(predictions: dict[str, object]) -> str:
 
     // Update modal
     const updateModal = document.getElementById('update-modal');
-    const ghTokenInput = document.getElementById('gh-token-input');
-    const updateFeedback = document.getElementById('update-feedback');
-    const REPO = 'eliibatista26/prediccion-de-numeros';
-    const WORKFLOW = 'update-site.yml';
-    const TOKEN_KEY = 'gh_update_token';
-
-    function loadToken() {{
-      const saved = localStorage.getItem(TOKEN_KEY) || '';
-      if (saved) ghTokenInput.value = saved;
-    }}
-
-    document.querySelector('[data-open-update]').addEventListener('click', () => {{
-      loadToken();
-      updateFeedback.textContent = '';
-      updateModal.showModal();
-    }});
+    document.querySelector('[data-open-update]').addEventListener('click', () => updateModal.showModal());
     document.getElementById('close-update-modal').addEventListener('click', () => updateModal.close());
+    document.getElementById('close-update-modal-2').addEventListener('click', () => updateModal.close());
     updateModal.addEventListener('click', (e) => {{ if (e.target === updateModal) updateModal.close(); }});
-
-    document.getElementById('btn-clear-token').addEventListener('click', () => {{
-      localStorage.removeItem(TOKEN_KEY);
-      ghTokenInput.value = '';
-      updateFeedback.textContent = 'Token borrado.';
-      updateFeedback.style.color = '#9ba3b8';
-    }});
-
-    document.getElementById('btn-trigger-update').addEventListener('click', async () => {{
-      const token = ghTokenInput.value.trim();
-      if (!token) {{
-        updateFeedback.textContent = '⚠ Introduce el token primero.';
-        updateFeedback.style.color = '#ea580c';
-        return;
-      }}
-      localStorage.setItem(TOKEN_KEY, token);
-      updateFeedback.textContent = 'Enviando…';
-      updateFeedback.style.color = '#9ba3b8';
-      try {{
-        const res = await fetch(
-          `https://api.github.com/repos/${{REPO}}/actions/workflows/${{WORKFLOW}}/dispatches`,
-          {{
-            method: 'POST',
-            headers: {{
-              'Authorization': `Bearer ${{token}}`,
-              'Accept': 'application/vnd.github+json',
-              'X-GitHub-Api-Version': '2022-11-28',
-              'Content-Type': 'application/json',
-            }},
-            body: JSON.stringify({{ ref: 'main' }}),
-          }}
-        );
-        if (res.status === 204) {{
-          updateFeedback.textContent = '✅ Actualización en marcha (~2 min)';
-          updateFeedback.style.color = '#16a34a';
-          setTimeout(() => updateModal.close(), 2500);
-        }} else if (res.status === 401) {{
-          updateFeedback.textContent = '❌ Token inválido o sin permisos.';
-          updateFeedback.style.color = '#dc2626';
-        }} else {{
-          const body = await res.json().catch(() => ({{}}));
-          updateFeedback.textContent = `❌ Error ${{res.status}}: ${{body.message || 'desconocido'}}`;
-          updateFeedback.style.color = '#dc2626';
-        }}
-      }} catch (err) {{
-        updateFeedback.textContent = `❌ ${{err.message}}`;
-        updateFeedback.style.color = '#dc2626';
-      }}
-    }});
 
     // ── Compare panel ──────────────────────────────────────────────────────
     const compareToggle = document.querySelector('[data-compare-toggle]');
