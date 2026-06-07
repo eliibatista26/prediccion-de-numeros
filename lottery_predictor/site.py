@@ -231,6 +231,8 @@ def _render_html(predictions: dict[str, object]) -> str:
     generated_timezone = escape(str(predictions.get("generated_timezone") or ""))
     actual_from_date = escape(str(predictions.get("actual_from_date") or ""))
     actual_to_date = escape(str(predictions.get("actual_to_date") or ""))
+    import hashlib as _hashlib
+    css_version = _hashlib.md5(_render_css().encode()).hexdigest()[:8]
 
     base_10 = predictions.get("base_10", {})
     base_10_panel = _render_base_10_panel(base_10 if isinstance(base_10, dict) else {})
@@ -253,7 +255,7 @@ def _render_html(predictions: dict[str, object]) -> str:
   <meta name="twitter:title" content="Predicción Loterías RD">
   <meta name="twitter:description" content="Estadísticas y sugerencias para loterías dominicanas. Actualización automática.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v={css_version}">
 </head>
 <body>
   <header class="app-header">
