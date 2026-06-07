@@ -1,36 +1,44 @@
 {
-  "generated_at": "2026-06-07T09:08:57-04:00",
-  "generated_at_display": "07/06/2026 09:08",
+  "generated_at": "2026-06-07T10:21:00-04:00",
+  "generated_at_display": "07/06/2026 10:21",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "2010-08-01",
-  "actual_to_date": "2026-06-06",
+  "actual_to_date": "2026-06-07",
   "disclaimer": "Estas sugerencias son estadísticas y no garantizan resultados.",
   "base_10": {
     "window": {
       "from": "2010-08-01",
       "to": "2026-06-06",
-      "results": 38187
+      "results": 38204
     },
     "top_10_repeated": [
       {
         "number": "41",
-        "count": 22
+        "count": 23
       },
       {
         "number": "64",
         "count": 20
       },
       {
-        "number": "70",
-        "count": 19
+        "number": "51",
+        "count": 20
       },
       {
-        "number": "31",
+        "number": "70",
+        "count": 20
+      },
+      {
+        "number": "26",
         "count": 18
       },
       {
-        "number": "51",
+        "number": "83",
+        "count": 18
+      },
+      {
+        "number": "31",
         "count": 18
       },
       {
@@ -42,16 +50,8 @@
         "count": 17
       },
       {
-        "number": "83",
-        "count": 17
-      },
-      {
-        "number": "68",
-        "count": 17
-      },
-      {
         "number": "73",
-        "count": 16
+        "count": 17
       }
     ],
     "delayed_by_position": {
@@ -330,26 +330,31 @@
       {
         "number": "43",
         "mirror": "34",
-        "count": 2541
+        "count": 2542
       },
       {
         "number": "34",
         "mirror": "43",
-        "count": 2541
+        "count": 2542
       },
       {
         "number": "25",
         "mirror": "52",
-        "count": 2515
+        "count": 2516
       },
       {
         "number": "52",
         "mirror": "25",
-        "count": 2515
+        "count": 2516
       },
       {
         "number": "89",
         "mirror": "98",
+        "count": 2492
+      },
+      {
+        "number": "09",
+        "mirror": "90",
         "count": 2492
       },
       {
@@ -358,24 +363,19 @@
         "count": 2492
       },
       {
-        "number": "09",
-        "mirror": "90",
-        "count": 2491
-      },
-      {
         "number": "90",
         "mirror": "09",
-        "count": 2491
+        "count": 2492
       },
       {
         "number": "26",
         "mirror": "62",
-        "count": 2479
+        "count": 2481
       },
       {
         "number": "62",
         "mirror": "26",
-        "count": 2479
+        "count": 2481
       }
     ],
     "moving_numbers": [
@@ -495,9 +495,9 @@
     "strength_ranking": [
       {
         "number": "64",
-        "score": 557.81,
+        "score": 549.84,
         "frequency": 1130,
-        "recent": 9,
+        "recent": 6,
         "recent_7": 9,
         "recent_30": 20,
         "coincidences": 115,
@@ -506,58 +506,94 @@
         "moves": 7
       },
       {
-        "number": "70",
-        "score": 525.48,
-        "frequency": 1319,
-        "recent": 6,
-        "recent_7": 7,
-        "recent_30": 19,
-        "coincidences": 118,
-        "drags": 159,
-        "mirror": "07",
-        "moves": 7
-      },
-      {
         "number": "41",
-        "score": 524.92,
-        "frequency": 1154,
+        "score": 544.06,
+        "frequency": 1155,
         "recent": 4,
-        "recent_7": 4,
-        "recent_30": 22,
+        "recent_7": 5,
+        "recent_30": 23,
         "coincidences": 112,
         "drags": 196,
         "mirror": "14",
         "moves": 7
       },
       {
+        "number": "70",
+        "score": 541.62,
+        "frequency": 1320,
+        "recent": 5,
+        "recent_7": 8,
+        "recent_30": 20,
+        "coincidences": 118,
+        "drags": 159,
+        "mirror": "07",
+        "moves": 7
+      },
+      {
         "number": "51",
-        "score": 473.18,
-        "frequency": 1210,
-        "recent": 4,
-        "recent_7": 4,
-        "recent_30": 18,
-        "coincidences": 115,
+        "score": 521.73,
+        "frequency": 1212,
+        "recent": 5,
+        "recent_7": 6,
+        "recent_30": 20,
+        "coincidences": 117,
         "drags": 186,
         "mirror": "15",
         "moves": 7
       },
       {
+        "number": "26",
+        "score": 519.2,
+        "frequency": 1164,
+        "recent": 7,
+        "recent_7": 7,
+        "recent_30": 18,
+        "coincidences": 122,
+        "drags": 189,
+        "mirror": "62",
+        "moves": 7
+      },
+      {
+        "number": "49",
+        "score": 493.58,
+        "frequency": 1122,
+        "recent": 7,
+        "recent_7": 7,
+        "recent_30": 17,
+        "coincidences": 132,
+        "drags": 184,
+        "mirror": "94",
+        "moves": 7
+      },
+      {
         "number": "32",
-        "score": 472.07,
-        "frequency": 1184,
-        "recent": 6,
-        "recent_7": 6,
-        "recent_30": 15,
+        "score": 493.18,
+        "frequency": 1185,
+        "recent": 7,
+        "recent_7": 7,
+        "recent_30": 16,
         "coincidences": 116,
         "drags": 197,
         "mirror": "23",
         "moves": 7
       },
       {
+        "number": "82",
+        "score": 487.12,
+        "frequency": 1126,
+        "recent": 6,
+        "recent_7": 6,
+        "recent_30": 16,
+        "coincidences": 113,
+        "drags": 182,
+        "mirror": "28",
+        "moves": 7
+      },
+      {
         "number": "31",
-        "score": 470.64,
+        "score": 468.67,
         "frequency": 1152,
-        "recent": 5,
+        "recent": 4,
         "recent_7": 5,
         "recent_30": 18,
         "coincidences": 132,
@@ -566,60 +602,24 @@
         "moves": 7
       },
       {
-        "number": "26",
-        "score": 468.68,
-        "frequency": 1162,
-        "recent": 5,
-        "recent_7": 5,
-        "recent_30": 16,
-        "coincidences": 120,
-        "drags": 189,
-        "mirror": "62",
-        "moves": 7
-      },
-      {
-        "number": "72",
-        "score": 464.01,
-        "frequency": 1111,
-        "recent": 6,
-        "recent_7": 6,
-        "recent_30": 14,
-        "coincidences": 130,
-        "drags": 190,
-        "mirror": "27",
-        "moves": 7
-      },
-      {
-        "number": "89",
-        "score": 456.5,
-        "frequency": 1413,
-        "recent": 3,
-        "recent_7": 3,
-        "recent_30": 15,
-        "coincidences": 113,
-        "drags": 205,
-        "mirror": "98",
-        "moves": 7
-      },
-      {
-        "number": "68",
-        "score": 448.1,
-        "frequency": 1117,
+        "number": "73",
+        "score": 464.02,
+        "frequency": 1182,
         "recent": 4,
         "recent_7": 4,
         "recent_30": 17,
-        "coincidences": 128,
-        "drags": 188,
-        "mirror": "86",
+        "coincidences": 109,
+        "drags": 180,
+        "mirror": "37",
         "moves": 7
       }
     ],
     "elite_group": [
       {
         "number": "64",
-        "score": 557.81,
+        "score": 549.84,
         "frequency": 1130,
-        "recent": 9,
+        "recent": 6,
         "recent_7": 9,
         "recent_30": 20,
         "coincidences": 115,
@@ -628,59 +628,59 @@
         "moves": 7
       },
       {
-        "number": "70",
-        "score": 525.48,
-        "frequency": 1319,
-        "recent": 6,
-        "recent_7": 7,
-        "recent_30": 19,
-        "coincidences": 118,
-        "drags": 159,
-        "mirror": "07",
-        "moves": 7
-      },
-      {
         "number": "41",
-        "score": 524.92,
-        "frequency": 1154,
+        "score": 544.06,
+        "frequency": 1155,
         "recent": 4,
-        "recent_7": 4,
-        "recent_30": 22,
+        "recent_7": 5,
+        "recent_30": 23,
         "coincidences": 112,
         "drags": 196,
         "mirror": "14",
         "moves": 7
       },
       {
+        "number": "70",
+        "score": 541.62,
+        "frequency": 1320,
+        "recent": 5,
+        "recent_7": 8,
+        "recent_30": 20,
+        "coincidences": 118,
+        "drags": 159,
+        "mirror": "07",
+        "moves": 7
+      },
+      {
         "number": "51",
-        "score": 473.18,
-        "frequency": 1210,
-        "recent": 4,
-        "recent_7": 4,
-        "recent_30": 18,
-        "coincidences": 115,
+        "score": 521.73,
+        "frequency": 1212,
+        "recent": 5,
+        "recent_7": 6,
+        "recent_30": 20,
+        "coincidences": 117,
         "drags": 186,
         "mirror": "15",
         "moves": 7
       },
       {
-        "number": "32",
-        "score": 472.07,
-        "frequency": 1184,
-        "recent": 6,
-        "recent_7": 6,
-        "recent_30": 15,
-        "coincidences": 116,
-        "drags": 197,
-        "mirror": "23",
+        "number": "26",
+        "score": 519.2,
+        "frequency": 1164,
+        "recent": 7,
+        "recent_7": 7,
+        "recent_30": 18,
+        "coincidences": 122,
+        "drags": 189,
+        "mirror": "62",
         "moves": 7
       }
     ],
     "leader": {
       "number": "64",
-      "score": 557.81,
+      "score": 549.84,
       "frequency": 1130,
-      "recent": 9,
+      "recent": 6,
       "recent_7": 9,
       "recent_30": 20,
       "coincidences": 115,
@@ -690,10 +690,10 @@
     },
     "bullet_pair": {
       "pair": [
-        "64",
-        "66"
+        "27",
+        "73"
       ],
-      "count": 4
+      "count": 5
     }
   },
   "lotteries": {
