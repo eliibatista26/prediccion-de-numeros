@@ -44,6 +44,42 @@ def preserve_existing_base_10(predictions: dict[str, object], output_path: Path)
     return True
 
 
+def preserve_existing_predictions(predictions: dict[str, object], output_path: Path) -> bool:
+    """Preserva sugeridos y análisis del día anterior. Solo actualiza last_results."""
+    predictions_path = output_path / "predictions.json"
+    if not predictions_path.exists():
+        return False
+    try:
+        previous = json.loads(predictions_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return False
+    if not isinstance(previous, dict):
+        return False
+
+    # Preservar Las 10 Base completo
+    if isinstance(previous.get("base_10"), dict):
+        predictions["base_10"] = previous["base_10"]
+
+    # Preservar sugeridos por lotería y por sorteo
+    prev_lotteries = previous.get("lotteries", {})
+    curr_lotteries = predictions.get("lotteries", {})
+    if isinstance(prev_lotteries, dict) and isinstance(curr_lotteries, dict):
+        for name, prev_data in prev_lotteries.items():
+            if name not in curr_lotteries or not isinstance(prev_data, dict):
+                continue
+            # Sugeridos a nivel de lotería
+            if "suggestions" in prev_data:
+                curr_lotteries[name]["suggestions"] = prev_data["suggestions"]
+            # Sugeridos a nivel de sorteo
+            prev_draws = prev_data.get("draws", {})
+            curr_draws = curr_lotteries[name].get("draws", {})
+            if isinstance(prev_draws, dict) and isinstance(curr_draws, dict):
+                for draw_name, prev_draw in prev_draws.items():
+                    if draw_name in curr_draws and isinstance(prev_draw, dict) and "suggestions" in prev_draw:
+                        curr_draws[draw_name]["suggestions"] = prev_draw["suggestions"]
+    return True
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Actualiza resultados y genera la página estática.")
     parser.add_argument("--skip-scrape", action="store_true", help="Solo genera la página con los datos existentes.")
@@ -51,6 +87,11 @@ def main() -> None:
         "--preserve-base-10",
         action="store_true",
         help="Actualiza resultados visibles sin recalcular Las 10 Base.",
+    )
+    parser.add_argument(
+        "--preserve-predictions",
+        action="store_true",
+        help="Solo actualiza últimos resultados; mantiene sugeridos y análisis del día anterior.",
     )
     parser.add_argument("--data", type=Path, default=DATA_PATH)
     parser.add_argument("--output", type=Path, default=DOCS_PATH)
@@ -97,7 +138,10 @@ def main() -> None:
         save_results(args.data, all_results)
 
     predictions = build_predictions(all_results)
-    if args.preserve_base_10:
+    if args.preserve_predictions:
+        preserved = preserve_existing_predictions(predictions, args.output)
+        print(f"Predicciones preservadas (modo resultados): {'SÍ' if preserved else 'NO'}")
+    elif args.preserve_base_10:
         preserved = preserve_existing_base_10(predictions, args.output)
         print(f"Base 10 preservada: {'SÍ' if preserved else 'NO'}")
     build_site(predictions, args.output)

@@ -2,9 +2,16 @@ name: Update lottery predictions
 
 on:
   workflow_dispatch:
+    inputs:
+      full_analysis:
+        description: "Recalcular análisis completo (sugeridos)"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
   schedule:
-    - cron: "7,22,37,52 * * * *"
-    - cron: "20 12,18,22 * * *"
+    - cron: "7,22,37,52 * * * *"   # Cada 15 min: actualiza resultados
+    - cron: "0 3 * * *"             # 3 AM UTC (11 PM RD): análisis completo
 
 permissions:
   contents: write
@@ -39,8 +46,17 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
-          echo "DATABASE_URL set: $([ -n "$DATABASE_URL" ] && echo YES || echo NO)"
-          python -m lottery_predictor.cli
+          HOUR=$(date -u +%H)
+          FULL_ANALYSIS="${{ github.event.inputs.full_analysis }}"
+
+          # Análisis completo: run de las 3 AM UTC o workflow_dispatch con full_analysis=true
+          if [ "$HOUR" = "03" ] || [ "$FULL_ANALYSIS" = "true" ]; then
+            echo "Modo: ANÁLISIS COMPLETO (recalcula sugeridos)"
+            python -m lottery_predictor.cli
+          else
+            echo "Modo: SOLO RESULTADOS (preserva sugeridos de hoy)"
+            python -m lottery_predictor.cli --preserve-predictions
+          fi
 
       - name: Commit generated files
         uses: stefanzweifel/git-auto-commit-action@v5
