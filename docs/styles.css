@@ -117,9 +117,9 @@ h2 { font-size: 28px; line-height: 1.1; }
 main {
   width: min(1400px, 100%);
   margin: 0 auto;
-  padding: 24px clamp(14px, 4vw, 48px) 72px;
+  padding: 16px clamp(12px, 3vw, 36px) 40px;
   display: grid;
-  gap: 28px;
+  gap: 16px;
 }
 
 /* ── Today's Results ─────────────────────────────────────────────────── */

@@ -9,7 +9,7 @@ from .analysis import build_predictions
 from . import db
 from .scraper import scrape_all_sources
 from .site import build_site
-from .storage import load_results, merge_results, remove_future_republished_results, save_results
+from .storage import load_results, merge_results, save_results
 
 
 DATA_PATH = Path("data/results.json")
@@ -62,34 +62,38 @@ def main() -> None:
 
     using_db = db.is_available()
 
+    # Siempre cargamos JSON como base histórica
+    json_results = load_results(args.data)
+    print(f"Registros en JSON: {len(json_results)}")
+
     if using_db:
-        print("Modo: base de datos PostgreSQL (Neon)")
+        print("Modo: base de datos PostgreSQL (Neon) + JSON histórico")
         try:
             db.setup()
-            existing = db.load_results()
-            print(f"Registros en DB: {len(existing)}")
-            if not existing:
-                _migrate_json_to_db(args.data)
-                existing = db.load_results()
-                print(f"Registros en DB tras migración: {len(existing)}")
+            db_count = len(db.load_results())
+            print(f"Registros en DB: {db_count}")
         except Exception as exc:
             print(f"ERROR conectando a Neon: {exc}")
-            print("Cayendo a modo JSON local como respaldo...")
+            print("Continuando solo con JSON local...")
             using_db = False
-            existing = load_results(args.data)
     else:
         print("Modo: archivo JSON local")
-        existing = load_results(args.data)
 
     new_results = [] if args.skip_scrape else scrape_all_sources()
 
     if using_db:
+        # Guardar nuevos resultados en DB (solo acumula nuevos scraping diarios)
         if new_results:
-            inserted = db.save_results(new_results)
-            print(f"Resultados nuevos insertados en DB: {inserted}")
-        all_results = remove_future_republished_results(db.load_results(), new_results)
+            try:
+                inserted = db.save_results(new_results)
+                print(f"Resultados nuevos insertados en DB: {inserted}")
+            except Exception as exc:
+                print(f"ERROR guardando en DB: {exc}")
+        # Para el análisis usamos JSON histórico + nuevos resultados de hoy
+        all_results = merge_results(json_results, new_results)
+        save_results(args.data, all_results)
     else:
-        all_results = merge_results(existing, new_results)
+        all_results = merge_results(json_results, new_results)
         save_results(args.data, all_results)
 
     predictions = build_predictions(all_results)
@@ -97,7 +101,7 @@ def main() -> None:
         preserved = preserve_existing_base_10(predictions, args.output)
         print(f"Base 10 preservada: {'SÍ' if preserved else 'NO'}")
     build_site(predictions, args.output)
-    print(f"Resultados existentes: {len(existing)}")
+    print(f"Registros históricos (JSON): {len(json_results)}")
     print(f"Resultados nuevos del scraper: {len(new_results)}")
     print(f"Resultados totales: {len(all_results)}")
     print(f"Página generada en: {args.output}")

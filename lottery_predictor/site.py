@@ -236,7 +236,6 @@ def _render_html(predictions: dict[str, object]) -> str:
     base_10_panel = _render_base_10_panel(base_10 if isinstance(base_10, dict) else {})
     today_results = _render_today_results(lottery_items)
     compare_panel = _render_compare_panel(lottery_items, actual_to_date)
-    draws_panel = _render_draws_panel(lottery_items)
 
     return f"""<!doctype html>
 <html lang="es">
@@ -272,7 +271,6 @@ def _render_html(predictions: dict[str, object]) -> str:
     {today_results}
     {base_10_panel}
     {compare_panel}
-    {draws_panel}
   </main>
 
   <dialog class="help-modal" aria-labelledby="help-title">
@@ -1234,9 +1232,9 @@ h2 { font-size: 28px; line-height: 1.1; }
 main {
   width: min(1400px, 100%);
   margin: 0 auto;
-  padding: 24px clamp(14px, 4vw, 48px) 72px;
+  padding: 16px clamp(12px, 3vw, 36px) 40px;
   display: grid;
-  gap: 28px;
+  gap: 16px;
 }
 
 /* ── Today's Results ─────────────────────────────────────────────────── */
