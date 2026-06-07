@@ -69,7 +69,7 @@ BASE_DRAW_ALIASES = {
 }
 
 BASE_ANALYSIS_FROM = date(2010, 8, 1)
-COMPARE_RESULTS_LIMIT = 730
+COMPARE_RESULTS_LIMIT = 99999  # all history — aggregated by month in site.py
 MIRRORS = {number: int(f"{number:02d}"[::-1]) for number in range(100)}
 
 

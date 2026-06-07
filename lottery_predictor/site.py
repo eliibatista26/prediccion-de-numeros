@@ -364,8 +364,9 @@ def _render_html(predictions: dict[str, object]) -> str:
     const currentCompareMonth = comparePanel ? comparePanel.dataset.compareMonth : '';
     function countDateItems(payload) {{
       const dates = payload.dates || {{}};
-      const from = compareFrom.value || '';
-      const to = compareTo.value || '';
+      // Keys are YYYY-MM; truncate date inputs to same format for correct comparison
+      const from = compareFrom.value ? compareFrom.value.slice(0, 7) : '';
+      const to = compareTo.value ? compareTo.value.slice(0, 7) : '';
       const counts = {{}};
       Object.entries(dates).forEach(([date, items]) => {{
         if (from && date < from) return;
@@ -915,26 +916,29 @@ def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str)
 
 
 def _compare_date_counts(results: object) -> dict[str, list[dict[str, object]]]:
-    by_date: dict[str, Counter[int]] = defaultdict(Counter)
+    """Agrega resultados por año-mes (YYYY-MM) para reducir tamaño del JSON
+    mientras se cubre todo el histórico desde 1999."""
+    by_month: dict[str, Counter[int]] = defaultdict(Counter)
     if not isinstance(results, list):
         return {}
     for result in results:
         if not isinstance(result, dict):
             continue
         draw_date = str(result.get("draw_date") or "")
-        if not draw_date:
+        if len(draw_date) < 7:
             continue
+        month_key = draw_date[:7]  # YYYY-MM
         for number in result.get("numbers", [])[:3]:
             try:
-                by_date[draw_date][int(number)] += 1
+                by_month[month_key][int(number)] += 1
             except (TypeError, ValueError):
                 continue
     return {
-        draw_date: [
+        month_key: [
             {"number": f"{number:02d}", "count": count}
             for number, count in counter.most_common()
         ]
-        for draw_date, counter in sorted(by_date.items())
+        for month_key, counter in sorted(by_month.items())
     }
 
 
