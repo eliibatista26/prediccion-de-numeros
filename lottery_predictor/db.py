@@ -43,6 +43,15 @@ def setup() -> None:
     print("Tabla lottery_results lista.")
 
 
+def truncate() -> None:
+    """Borra todos los registros de la tabla (para empezar de cero)."""
+    with _connect() as conn:
+        with conn.cursor() as cur:
+            cur.execute("TRUNCATE TABLE lottery_results RESTART IDENTITY;")
+        conn.commit()
+    print("Tabla lottery_results vaciada.")
+
+
 def load_results() -> list[LotteryResult]:
     with _connect() as conn:
         with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
