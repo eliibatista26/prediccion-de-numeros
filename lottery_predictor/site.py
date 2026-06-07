@@ -164,6 +164,7 @@ def _public_lottery_payload(name: str, payload: object) -> object:
         return payload
     public = dict(payload)
     public.pop("compare_results", None)
+    public.pop("compare_day_month", None)
     last_results = payload.get("last_results", [])
     if isinstance(last_results, list):
         public["last_results"] = [
@@ -358,6 +359,7 @@ def _render_html(predictions: dict[str, object]) -> str:
     const compareData = JSON.parse(document.getElementById('compare-data').textContent);
     const firstSelect = document.querySelector('[data-compare-first]');
     const secondSelect = document.querySelector('[data-compare-second]');
+    const compareDay = document.querySelector('[data-compare-day]');
     const compareFrom = document.querySelector('[data-compare-from]');
     const compareTo = document.querySelector('[data-compare-to]');
     const compareOutput = document.querySelector('[data-compare-output]');
@@ -370,9 +372,17 @@ def _render_html(predictions: dict[str, object]) -> str:
       compareFrom.max = allCompareDates[allCompareDates.length - 1];
       compareTo.min = allCompareDates[0];
       compareTo.max = allCompareDates[allCompareDates.length - 1];
+      compareDay.min = allCompareDates[0];
+      compareDay.max = allCompareDates[allCompareDates.length - 1];
     }}
     function compareItems(name) {{
       const payload = compareData[name] || {{}};
+      const dayMonth = compareDay.value ? compareDay.value.slice(5) : '';
+      if (dayMonth) {{
+        return ((payload.dayMonth || {{}})[dayMonth] || [])
+          .map((item) => ({{ number: item.number, score: item.count, frequency: item.count, metric: item.count === 1 ? 'vez' : 'veces' }}))
+          .slice(0, 10);
+      }}
       const from = compareFrom.value;
       const to = compareTo.value;
       if (!from && !to) return payload.suggestions || [];
@@ -415,6 +425,7 @@ def _render_html(predictions: dict[str, object]) -> str:
     }}
     firstSelect.addEventListener('change', renderCompare);
     secondSelect.addEventListener('change', renderCompare);
+    compareDay.addEventListener('change', renderCompare);
     compareFrom.addEventListener('change', renderCompare);
     compareTo.addEventListener('change', renderCompare);
     renderCompare();
@@ -549,6 +560,7 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
                 for item in data.get("suggestions", [])[:10]
                 if isinstance(item, dict)
             ],
+            "dayMonth": data.get("compare_day_month", {}),
             "history": [
                 {
                     "date": str(item.get("draw_date")),
@@ -572,6 +584,7 @@ def _render_compare_panel(lottery_items: dict[str, object]) -> str:
     <div class="compare-controls">
       <select data-compare-first>{options}</select>
       <select data-compare-second>{second_options}</select>
+      <label class="compare-date-field">Día histórico <input type="date" data-compare-day></label>
       <label class="compare-date-field">Desde <input type="date" data-compare-from></label>
       <label class="compare-date-field">Hasta <input type="date" data-compare-to></label>
     </div>

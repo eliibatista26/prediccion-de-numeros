@@ -101,6 +101,7 @@ def build_predictions(
         lotteries[lottery] = {
             "suggestions": _serialize_suggestions(suggestions),
             "last_results": [result.to_dict() for result in sorted(lottery_results, key=lambda item: item.draw_date, reverse=True)[:8]],
+            "compare_day_month": _compare_day_month_counts(lottery_results),
             "compare_results": [
                 result.to_dict()
                 for result in sorted(lottery_results, key=lambda item: item.draw_date, reverse=True)[:COMPARE_RESULTS_LIMIT]
@@ -141,6 +142,21 @@ def _serialize_suggestions(suggestions: list[NumberSuggestion]) -> list[dict[str
         }
         for item in suggestions
     ]
+
+
+def _compare_day_month_counts(results: list[LotteryResult]) -> dict[str, list[dict[str, object]]]:
+    by_day_month: dict[str, Counter[int]] = defaultdict(Counter)
+    for result in results:
+        key = result.draw_date.strftime("%m-%d")
+        for number in result.numbers[:3]:
+            by_day_month[key][number] += 1
+    return {
+        key: [
+            {"number": f"{number:02d}", "count": count}
+            for number, count in counter.most_common(20)
+        ]
+        for key, counter in sorted(by_day_month.items())
+    }
 
 
 def suggest_numbers(
