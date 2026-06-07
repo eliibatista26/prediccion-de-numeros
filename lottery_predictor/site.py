@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from collections import Counter, defaultdict
 from html import escape
 from pathlib import Path
 
@@ -360,20 +361,57 @@ def _render_html(predictions: dict[str, object]) -> str:
     const compareData = JSON.parse(document.getElementById('compare-data').textContent);
     const firstSelect = document.querySelector('[data-compare-first]');
     const secondSelect = document.querySelector('[data-compare-second]');
+    const compareMode = document.querySelector('[data-compare-mode]');
+    const compareFrom = document.querySelector('[data-compare-from]');
+    const compareTo = document.querySelector('[data-compare-to]');
     const compareDay = document.querySelector('[data-compare-day]');
+    const compareDateFields = document.querySelectorAll('[data-compare-date-field]');
+    const compareHistoricalFields = document.querySelectorAll('[data-compare-historical-field]');
     const compareOutput = document.querySelector('[data-compare-output]');
     const currentCompareMonth = comparePanel ? comparePanel.dataset.compareMonth : '';
+    function countDateItems(payload) {{
+      const dates = payload.dates || {{}};
+      const from = compareFrom.value || '';
+      const to = compareTo.value || '';
+      const counts = {{}};
+      Object.entries(dates).forEach(([date, items]) => {{
+        if (from && date < from) return;
+        if (to && date > to) return;
+        items.forEach((item) => {{
+          counts[item.number] = (counts[item.number] || 0) + Number(item.count || 0);
+        }});
+      }});
+      return Object.entries(counts)
+        .map(([number, count]) => ({{ number, score: count, frequency: count, metric: count === 1 ? 'vez' : 'veces' }}))
+        .sort((a, b) => b.score - a.score || a.number.localeCompare(b.number))
+        .slice(0, 10);
+    }}
     function compareItems(name) {{
       const payload = compareData[name] || {{}};
-      const dayMonth = compareDay.value && currentCompareMonth ? `${{currentCompareMonth}}-${{compareDay.value}}` : '';
-      if (dayMonth) {{
+      if (compareMode.value === 'date') {{
+        return countDateItems(payload);
+      }}
+      if (compareMode.value === 'historical' && compareDay.value && currentCompareMonth) {{
+        const dayMonth = `${{currentCompareMonth}}-${{compareDay.value}}`;
         return ((payload.dayMonth || {{}})[dayMonth] || [])
           .map((item) => ({{ number: item.number, score: item.count, frequency: item.count, metric: item.count === 1 ? 'vez' : 'veces' }}))
           .slice(0, 10);
       }}
       return payload.suggestions || [];
     }}
+    function updateCompareFields() {{
+      const dateMode = compareMode.value === 'date';
+      const historicalMode = compareMode.value === 'historical';
+      compareDateFields.forEach((field) => {{ field.hidden = !dateMode; }});
+      compareHistoricalFields.forEach((field) => {{ field.hidden = !historicalMode; }});
+      if (!dateMode) {{
+        compareFrom.value = '';
+        compareTo.value = '';
+      }}
+      if (!historicalMode) compareDay.value = '';
+    }}
     function renderCompare() {{
+      updateCompareFields();
       const first = compareItems(firstSelect.value);
       const second = compareItems(secondSelect.value);
       const secondSet = new Set(second.map((item) => item.number));
@@ -401,6 +439,9 @@ def _render_html(predictions: dict[str, object]) -> str:
     }}
     firstSelect.addEventListener('change', renderCompare);
     secondSelect.addEventListener('change', renderCompare);
+    compareMode.addEventListener('change', renderCompare);
+    compareFrom.addEventListener('change', renderCompare);
+    compareTo.addEventListener('change', renderCompare);
     compareDay.addEventListener('change', renderCompare);
     renderCompare();
     const drawData = JSON.parse(document.getElementById('draw-data').textContent);
@@ -535,6 +576,7 @@ def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str)
                 for item in data.get("suggestions", [])[:10]
                 if isinstance(item, dict)
             ],
+            "dates": _compare_date_counts(data.get("compare_results", [])),
             "dayMonth": data.get("compare_day_month", {}),
         }
     json_data = json.dumps(compare_data, ensure_ascii=False).replace("</", "<\\/")
@@ -551,12 +593,39 @@ def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str)
     <div class="compare-controls">
       <select data-compare-first>{options}</select>
       <select data-compare-second>{second_options}</select>
-      <label class="compare-date-field">Día histórico <select data-compare-day><option value="">Todos</option>{day_options}</select></label>
+      <label class="compare-date-field">Consulta <select data-compare-mode><option value="current">Actual</option><option value="date">Fechas</option><option value="historical">Día histórico</option></select></label>
+      <label class="compare-date-field" data-compare-date-field hidden>Desde <input type="date" data-compare-from></label>
+      <label class="compare-date-field" data-compare-date-field hidden>Hasta <input type="date" data-compare-to></label>
+      <label class="compare-date-field" data-compare-historical-field hidden>Día histórico <select data-compare-day><option value="">Selecciona</option>{day_options}</select></label>
     </div>
     <div class="compare-body" data-compare-output></div>
   </div>
   <script type="application/json" id="compare-data">{json_data}</script>
 </section>"""
+
+
+def _compare_date_counts(results: object) -> dict[str, list[dict[str, object]]]:
+    by_date: dict[str, Counter[int]] = defaultdict(Counter)
+    if not isinstance(results, list):
+        return {}
+    for result in results:
+        if not isinstance(result, dict):
+            continue
+        draw_date = str(result.get("draw_date") or "")
+        if not draw_date:
+            continue
+        for number in result.get("numbers", [])[:3]:
+            try:
+                by_date[draw_date][int(number)] += 1
+            except (TypeError, ValueError):
+                continue
+    return {
+        draw_date: [
+            {"number": f"{number:02d}", "count": count}
+            for number, count in counter.most_common()
+        ]
+        for draw_date, counter in sorted(by_date.items())
+    }
 
 
 def _render_draws_panel(lottery_items: dict[str, object]) -> str:
