@@ -675,13 +675,16 @@ def _render_html(predictions: dict[str, object]) -> str:
     secondSelect.addEventListener('change', renderCompare);
     compareMode.addEventListener('change', renderCompare);
     compareDay.addEventListener('change', renderCompare);
-    // "Por fechas" only runs on button click to avoid partial-date renders
+    // "Por fechas": auto-fire when both dates filled; button also works
     const cmpRunBtn = document.querySelector('[data-compare-run]');
     if (cmpRunBtn) cmpRunBtn.addEventListener('click', renderCompare);
+    compareFrom.addEventListener('change', () => {{ if (compareTo.value) renderCompare(); }});
+    compareTo.addEventListener('change', () => {{ if (compareFrom.value) renderCompare(); }});
     renderCompare();
 
     // Draw modal
-    const drawData = JSON.parse(document.getElementById('draw-data').textContent);
+    const drawDataEl = document.getElementById('draw-data');
+    const drawData = drawDataEl ? JSON.parse(drawDataEl.textContent) : {{}};
     const drawModal = document.querySelector('.draw-modal');
     const drawTitle = document.querySelector('[data-draw-modal-title], #draw-modal-title');
     const drawKicker = document.querySelector('[data-draw-modal-kicker]');

@@ -22,7 +22,7 @@
       <span class="header-logo">RD</span>
       <span class="header-title">Predicción Loterías RD</span>
     </div>
-    <p class="update-line">Última actualización: 07/06/2026 16:28 · America/Santo_Domingo</p>
+    <p class="update-line">Última actualización: 07/06/2026 17:17 · America/Santo_Domingo</p>
     <div class="header-actions">
       <button type="button" id="btn-update" data-open-update>⟳ Actualizar</button>
       <button type="button" data-open-help>Cómo usar</button>
@@ -628,7 +628,7 @@
       </section>
       <section>
         <h3>6. Actualización automática</h3>
-        <p>Última actualización: 07/06/2026 16:28 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
+        <p>Última actualización: 07/06/2026 17:17 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
       </section>
     </div>
     <div class="modal-note">
@@ -998,13 +998,16 @@
     secondSelect.addEventListener('change', renderCompare);
     compareMode.addEventListener('change', renderCompare);
     compareDay.addEventListener('change', renderCompare);
-    // "Por fechas" only runs on button click to avoid partial-date renders
+    // "Por fechas": auto-fire when both dates filled; button also works
     const cmpRunBtn = document.querySelector('[data-compare-run]');
     if (cmpRunBtn) cmpRunBtn.addEventListener('click', renderCompare);
+    compareFrom.addEventListener('change', () => { if (compareTo.value) renderCompare(); });
+    compareTo.addEventListener('change', () => { if (compareFrom.value) renderCompare(); });
     renderCompare();
 
     // Draw modal
-    const drawData = JSON.parse(document.getElementById('draw-data').textContent);
+    const drawDataEl = document.getElementById('draw-data');
+    const drawData = drawDataEl ? JSON.parse(drawDataEl.textContent) : {};
     const drawModal = document.querySelector('.draw-modal');
     const drawTitle = document.querySelector('[data-draw-modal-title], #draw-modal-title');
     const drawKicker = document.querySelector('[data-draw-modal-kicker]');
