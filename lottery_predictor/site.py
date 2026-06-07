@@ -741,11 +741,29 @@ def _render_today_results(lottery_items: dict[str, object]) -> str:
     draw_results: dict[str, dict] = {}
     prev_results: dict[str, list[str]] = {}  # previous draw numbers for "repite" badges
 
+    # Reverse map: label → suggestions list (top 5 numbers)
+    label_suggestions: dict[str, list[str]] = {}
+    # Build reverse DRAW_LABELS: label → (lottery_name, canonical_draw)
+    label_to_draw: dict[str, tuple[str, str]] = {}
+    for (lot, drw), lbl in DRAW_LABELS.items():
+        if lbl not in label_to_draw:
+            label_to_draw[lbl] = (lot, drw)
+
+    for label, (lot, drw) in label_to_draw.items():
+        lot_data = lottery_items.get(lot)
+        if not isinstance(lot_data, dict):
+            continue
+        draws = lot_data.get("draws", {}) if isinstance(lot_data.get("draws"), dict) else {}
+        draw_data = draws.get(drw, {}) if isinstance(draws.get(drw), dict) else {}
+        suggs = draw_data.get("suggestions", [])
+        nums = [f"{int(float(s['number'])):02d}" for s in suggs[:5] if isinstance(s, dict) and "number" in s]
+        if nums:
+            label_suggestions[label] = nums
+
     for lottery_name, data in lottery_items.items():
         if not isinstance(data, dict):
             continue
         results = [item for item in data.get("last_results", []) if isinstance(item, dict)]
-        # Track the last 2 results per canonical draw to detect repeats
         canonical_seen: dict[str, list] = {}
         for result in results:
             raw_draw = str(result.get("draw", ""))
@@ -753,7 +771,6 @@ def _render_today_results(lottery_items: dict[str, object]) -> str:
                 continue
             label = DRAW_LABELS.get((lottery_name, raw_draw))
             if not label:
-                # Try alias resolution
                 alias = DRAW_ALIASES.get(normalize_text(raw_draw))
                 if alias:
                     label = DRAW_LABELS.get((lottery_name, alias))
@@ -798,12 +815,27 @@ def _render_today_results(lottery_items: dict[str, object]) -> str:
             + ball_html(numbers[1], "2DO")
             + ball_html(numbers[2], "3RO")
         )
+
+        # Suggestions row
+        sugg_nums = label_suggestions.get(label, [])
+        if sugg_nums:
+            sugg_balls = "".join(
+                f'<span class="sugg-ball">{escape(n)}</span>' for n in sugg_nums
+            )
+            sugg_html = f"""<div class="today-suggestions">
+    <span class="sugg-label">Sugeridos</span>
+    <div class="sugg-balls">{sugg_balls}</div>
+  </div>"""
+        else:
+            sugg_html = ""
+
         return f"""<article class="today-card">
   <div class="today-card-head">
     <span class="today-lottery-name">{escape(label)}</span>
     <span class="today-date">{escape(date_str)}</span>
   </div>
   <div class="today-balls">{balls_html}</div>
+  {sugg_html}
 </article>"""
 
     cards_html = "\n".join(result_card(label) for label in TODAY_DRAW_ORDER)
@@ -1609,6 +1641,44 @@ main {
   border-radius: 999px;
   letter-spacing: 0.05em;
   white-space: nowrap;
+}
+
+/* ── Suggested numbers row ───────────────────────────────────────────── */
+.today-suggestions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-top: 1px solid #fde8d4;
+  flex-wrap: wrap;
+}
+
+.sugg-label {
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ba3b8;
+  white-space: nowrap;
+}
+
+.sugg-balls {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.sugg-ball {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff7ed;
+  border: 2px solid #fed7aa;
+  color: #ea580c;
+  font-size: 11px;
+  font-weight: 900;
 }
 
 /* ── Las 10 Base ─────────────────────────────────────────────────────── */
@@ -2665,6 +2735,9 @@ main {
   }
 
   .today-lottery-name { color: #fb923c; }
+
+  .today-suggestions { border-top-color: #3d2208; }
+  .sugg-ball { background: #14161f; border-color: #3d2208; color: #fb923c; }
 
   .b10-panel {
     border-color: #3d2208;
