@@ -22,7 +22,7 @@
       <span class="header-logo">RD</span>
       <span class="header-title">Predicción Loterías RD</span>
     </div>
-    <p class="update-line">Última actualización: 07/06/2026 13:53 · America/Santo_Domingo</p>
+    <p class="update-line">Última actualización: 07/06/2026 14:01 · America/Santo_Domingo</p>
     <div class="header-actions">
       <button type="button" id="btn-update" data-open-update>⟳ Actualizar</button>
       <button type="button" data-open-help>Cómo usar</button>
@@ -588,7 +588,7 @@
       </section>
       <section>
         <h3>6. Actualización automática</h3>
-        <p>Última actualización: 07/06/2026 13:53 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
+        <p>Última actualización: 07/06/2026 14:01 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
       </section>
     </div>
     <div class="modal-note">
@@ -865,36 +865,41 @@
         if (conds.every(Boolean)) fourCondNums.push(num);
       });
 
-      // ── HTML rendering ─────────────────────────────────────────────────
+      // ── HTML rendering — usa exactamente las mismas clases que b10-panel ──
       const condNames = ['Repetición reciente','Atraso útil','Coincidencias históricas','Arrastre'];
 
-      const renderTop10 = (items, otherSet) => items.length
-        ? items.map(item => `
-          <div class="cmp-num-row${otherSet.has(item.number) ? ' cmp-shared' : ''}">
-            ${cmpBall(item.number, otherSet.has(item.number) ? 'cmp-shared-ball' : '')}
-            <span class="cmp-cnt">${item.count}×</span>
-            ${otherSet.has(item.number) ? '<span class="cmp-badge-shared">coincide</span>' : ''}
-          </div>`).join('')
-        : '<div class="cmp-empty">Sin datos</div>';
+      // Top 10: usa b10-numlist + b10-ball igual que el resto de la página
+      const renderTop10 = (items, otherSet) => `<ol class="b10-numlist b10-inline">
+        ${items.length
+          ? items.map(item => `<li style="${otherSet.has(item.number)?'border:1px solid #f97316;':''}">
+              ${cmpBall(item.number, otherSet.has(item.number)?'b10-elite':'')}
+              <b>${item.count} veces</b>
+              ${otherSet.has(item.number)?'<span class="cmp-badge-shared">✓</span>':''}
+            </li>`).join('')
+          : '<li class="b10-empty">Sin datos</li>'}
+      </ol>`;
 
-      const renderDelayed = (items) => items.length
-        ? items.map((item,i) => `
-          <div class="cmp-del-row">
-            <span class="cmp-del-rank">#${i+1}</span>
-            ${cmpBall(item.number)}
-            <span class="cmp-cnt">${item.count}×</span>
-          </div>`).join('')
-        : '<div class="cmp-empty">—</div>';
+      // Atrasados: usa b10-numlist estilo rank
+      const renderDelayed = (items) => `<ol class="b10-numlist">
+        ${items.length
+          ? items.map((item,i) => `<li>
+              <span class="b10-rank">#${i+1}</span>
+              ${cmpBall(item.number)}
+              <b>${item.count} veces</b>
+            </li>`).join('')
+          : '<li class="b10-empty">—</li>'}
+      </ol>`;
 
+      // 4 condiciones: usa four-cond-item igual que b10-panel
       const renderFour = (conds, num) => `
-        <div class="cmp-four-item">
+        <div class="four-cond-item">
           ${cmpBall(num, 'b10-elite')}
-          <div class="cmp-four-badges">
+          <div class="four-cond-badges">
             ${condNames.map((n,i) => `<span class="cond-badge ${conds[i]?'cond-ok':'cond-no'}">${n}</span>`).join('')}
           </div>
         </div>`;
 
-      // Build 4-conditions section with per-number condition check
+      // Build 4-conditions with top candidates sorted by conditions met
       const allCandidatesFor4 = [...new Set([
         ...topN(statsA.c, 15).map(x=>x.number),
         ...topN(statsB.c, 15).map(x=>x.number),
@@ -904,81 +909,46 @@
         return {num, conds, total: conds.filter(Boolean).length};
       }).sort((a,b) => b.total - a.total || a.num.localeCompare(b.num)).slice(0, 6);
 
+      // b10-card helper: same card style as rest of page
+      const card = (title, body) =>
+        `<article class="b10-card"><h3>${title}</h3>${body}</article>`;
+
       compareOutput.innerHTML = `
-        <!-- 4 condiciones -->
-        <div class="cmp-section">
-          <div class="cmp-section-head">
-            <span class="cmp-eyebrow">Las 4 condiciones</span>
-            <h4>Números que cumplen todas las condiciones — ${nameA} vs ${nameB}</h4>
-            <p class="cmp-desc">Repetición reciente · Atraso útil · Coincidencias históricas · Arrastre entre loterías</p>
-          </div>
-          <div class="cmp-four-grid">
+        <!-- 4 condiciones — igual que en Las 10 Base -->
+        <div class="b10-card b10-four-cond">
+          <h3>Las 4 condiciones — ${nameA} vs ${nameB}</h3>
+          <p class="b10-four-desc">Repetición reciente · Atraso útil · Coincidencias históricas · Arrastre entre loterías</p>
+          <div class="b10-four-list">
             ${fourCondDetails.length
               ? fourCondDetails.map(d => renderFour(d.conds, d.num)).join('')
-              : '<p class="cmp-empty">Sin datos suficientes en el rango seleccionado.</p>'}
+              : '<p class="b10-empty">Sin datos suficientes en el rango seleccionado.</p>'}
           </div>
         </div>
 
         <!-- Coincidencias -->
         ${coincidencias.length ? `
-        <div class="cmp-section cmp-coinc-section">
-          <span class="cmp-eyebrow">Coincidencias en top 10</span>
-          <h4>${coincidencias.length} número${coincidencias.length!==1?'s':''} aparecen en ambas loterías</h4>
-          <div class="cmp-coinc-balls">
+        <article class="b10-card">
+          <h3>Coincidencias top 10 — ${coincidencias.length} número${coincidencias.length!==1?'s':''} en ambas loterías</h3>
+          <div class="b10-elite-balls">
             ${coincidencias.map(n=>cmpBall(n,'b10-elite')).join('')}
           </div>
-        </div>` : ''}
+        </article>` : ''}
 
-        <!-- Side-by-side analysis -->
+        <!-- Análisis lado a lado usando b10-analysis-grid de 2 columnas -->
         <div class="cmp-dual-grid">
-          <!-- Lotería A -->
-          <div class="cmp-side">
-            <p class="cmp-side-title">${nameA}</p>
-
-            <div class="cmp-card">
-              <p class="cmp-card-label">Top 10 más repetidos</p>
-              <div class="cmp-numlist">
-                ${renderTop10(top10A, top10BSet)}
-              </div>
-            </div>
-
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 1ra posición</p>
-              <div class="cmp-numlist">${renderDelayed(del1A)}</div>
-            </div>
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 2da posición</p>
-              <div class="cmp-numlist">${renderDelayed(del2A)}</div>
-            </div>
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 3ra posición</p>
-              <div class="cmp-numlist">${renderDelayed(del3A)}</div>
-            </div>
+          <div class="b10-col-1">
+            <p class="eyebrow" style="padding:4px 0 8px">${nameA}</p>
+            ${card('Top 10 más repetidos', renderTop10(top10A, top10BSet))}
+            ${card('3 más atrasados — 1ra posición', renderDelayed(del1A))}
+            ${card('3 más atrasados — 2da posición', renderDelayed(del2A))}
+            ${card('3 más atrasados — 3ra posición', renderDelayed(del3A))}
           </div>
-
-          <!-- Lotería B -->
-          <div class="cmp-side">
-            <p class="cmp-side-title">${nameB}</p>
-
-            <div class="cmp-card">
-              <p class="cmp-card-label">Top 10 más repetidos</p>
-              <div class="cmp-numlist">
-                ${renderTop10(top10B, top10ASet)}
-              </div>
-            </div>
-
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 1ra posición</p>
-              <div class="cmp-numlist">${renderDelayed(del1B)}</div>
-            </div>
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 2da posición</p>
-              <div class="cmp-numlist">${renderDelayed(del2B)}</div>
-            </div>
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 3ra posición</p>
-              <div class="cmp-numlist">${renderDelayed(del3B)}</div>
-            </div>
+          <div class="b10-col-2">
+            <p class="eyebrow" style="padding:4px 0 8px">${nameB}</p>
+            ${card('Top 10 más repetidos', renderTop10(top10B, top10ASet))}
+            ${card('3 más atrasados — 1ra posición', renderDelayed(del1B))}
+            ${card('3 más atrasados — 2da posición', renderDelayed(del2B))}
+            ${card('3 más atrasados — 3ra posición', renderDelayed(del3B))}
           </div>
         </div>
       `;

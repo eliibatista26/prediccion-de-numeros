@@ -582,36 +582,41 @@ def _render_html(predictions: dict[str, object]) -> str:
         if (conds.every(Boolean)) fourCondNums.push(num);
       }});
 
-      // ── HTML rendering ─────────────────────────────────────────────────
+      // ── HTML rendering — usa exactamente las mismas clases que b10-panel ──
       const condNames = ['Repetición reciente','Atraso útil','Coincidencias históricas','Arrastre'];
 
-      const renderTop10 = (items, otherSet) => items.length
-        ? items.map(item => `
-          <div class="cmp-num-row${{otherSet.has(item.number) ? ' cmp-shared' : ''}}">
-            ${{cmpBall(item.number, otherSet.has(item.number) ? 'cmp-shared-ball' : '')}}
-            <span class="cmp-cnt">${{item.count}}×</span>
-            ${{otherSet.has(item.number) ? '<span class="cmp-badge-shared">coincide</span>' : ''}}
-          </div>`).join('')
-        : '<div class="cmp-empty">Sin datos</div>';
+      // Top 10: usa b10-numlist + b10-ball igual que el resto de la página
+      const renderTop10 = (items, otherSet) => `<ol class="b10-numlist b10-inline">
+        ${{items.length
+          ? items.map(item => `<li style="${{otherSet.has(item.number)?'border:1px solid #f97316;':''}}">
+              ${{cmpBall(item.number, otherSet.has(item.number)?'b10-elite':'')}}
+              <b>${{item.count}} veces</b>
+              ${{otherSet.has(item.number)?'<span class="cmp-badge-shared">✓</span>':''}}
+            </li>`).join('')
+          : '<li class="b10-empty">Sin datos</li>'}}
+      </ol>`;
 
-      const renderDelayed = (items) => items.length
-        ? items.map((item,i) => `
-          <div class="cmp-del-row">
-            <span class="cmp-del-rank">#${{i+1}}</span>
-            ${{cmpBall(item.number)}}
-            <span class="cmp-cnt">${{item.count}}×</span>
-          </div>`).join('')
-        : '<div class="cmp-empty">—</div>';
+      // Atrasados: usa b10-numlist estilo rank
+      const renderDelayed = (items) => `<ol class="b10-numlist">
+        ${{items.length
+          ? items.map((item,i) => `<li>
+              <span class="b10-rank">#${{i+1}}</span>
+              ${{cmpBall(item.number)}}
+              <b>${{item.count}} veces</b>
+            </li>`).join('')
+          : '<li class="b10-empty">—</li>'}}
+      </ol>`;
 
+      // 4 condiciones: usa four-cond-item igual que b10-panel
       const renderFour = (conds, num) => `
-        <div class="cmp-four-item">
+        <div class="four-cond-item">
           ${{cmpBall(num, 'b10-elite')}}
-          <div class="cmp-four-badges">
+          <div class="four-cond-badges">
             ${{condNames.map((n,i) => `<span class="cond-badge ${{conds[i]?'cond-ok':'cond-no'}}">${{n}}</span>`).join('')}}
           </div>
         </div>`;
 
-      // Build 4-conditions section with per-number condition check
+      // Build 4-conditions with top candidates sorted by conditions met
       const allCandidatesFor4 = [...new Set([
         ...topN(statsA.c, 15).map(x=>x.number),
         ...topN(statsB.c, 15).map(x=>x.number),
@@ -621,81 +626,46 @@ def _render_html(predictions: dict[str, object]) -> str:
         return {{num, conds, total: conds.filter(Boolean).length}};
       }}).sort((a,b) => b.total - a.total || a.num.localeCompare(b.num)).slice(0, 6);
 
+      // b10-card helper: same card style as rest of page
+      const card = (title, body) =>
+        `<article class="b10-card"><h3>${{title}}</h3>${{body}}</article>`;
+
       compareOutput.innerHTML = `
-        <!-- 4 condiciones -->
-        <div class="cmp-section">
-          <div class="cmp-section-head">
-            <span class="cmp-eyebrow">Las 4 condiciones</span>
-            <h4>Números que cumplen todas las condiciones — ${{nameA}} vs ${{nameB}}</h4>
-            <p class="cmp-desc">Repetición reciente · Atraso útil · Coincidencias históricas · Arrastre entre loterías</p>
-          </div>
-          <div class="cmp-four-grid">
+        <!-- 4 condiciones — igual que en Las 10 Base -->
+        <div class="b10-card b10-four-cond">
+          <h3>Las 4 condiciones — ${{nameA}} vs ${{nameB}}</h3>
+          <p class="b10-four-desc">Repetición reciente · Atraso útil · Coincidencias históricas · Arrastre entre loterías</p>
+          <div class="b10-four-list">
             ${{fourCondDetails.length
               ? fourCondDetails.map(d => renderFour(d.conds, d.num)).join('')
-              : '<p class="cmp-empty">Sin datos suficientes en el rango seleccionado.</p>'}}
+              : '<p class="b10-empty">Sin datos suficientes en el rango seleccionado.</p>'}}
           </div>
         </div>
 
         <!-- Coincidencias -->
         ${{coincidencias.length ? `
-        <div class="cmp-section cmp-coinc-section">
-          <span class="cmp-eyebrow">Coincidencias en top 10</span>
-          <h4>${{coincidencias.length}} número${{coincidencias.length!==1?'s':''}} aparecen en ambas loterías</h4>
-          <div class="cmp-coinc-balls">
+        <article class="b10-card">
+          <h3>Coincidencias top 10 — ${{coincidencias.length}} número${{coincidencias.length!==1?'s':''}} en ambas loterías</h3>
+          <div class="b10-elite-balls">
             ${{coincidencias.map(n=>cmpBall(n,'b10-elite')).join('')}}
           </div>
-        </div>` : ''}}
+        </article>` : ''}}
 
-        <!-- Side-by-side analysis -->
+        <!-- Análisis lado a lado usando b10-analysis-grid de 2 columnas -->
         <div class="cmp-dual-grid">
-          <!-- Lotería A -->
-          <div class="cmp-side">
-            <p class="cmp-side-title">${{nameA}}</p>
-
-            <div class="cmp-card">
-              <p class="cmp-card-label">Top 10 más repetidos</p>
-              <div class="cmp-numlist">
-                ${{renderTop10(top10A, top10BSet)}}
-              </div>
-            </div>
-
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 1ra posición</p>
-              <div class="cmp-numlist">${{renderDelayed(del1A)}}</div>
-            </div>
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 2da posición</p>
-              <div class="cmp-numlist">${{renderDelayed(del2A)}}</div>
-            </div>
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 3ra posición</p>
-              <div class="cmp-numlist">${{renderDelayed(del3A)}}</div>
-            </div>
+          <div class="b10-col-1">
+            <p class="eyebrow" style="padding:4px 0 8px">${{nameA}}</p>
+            ${{card('Top 10 más repetidos', renderTop10(top10A, top10BSet))}}
+            ${{card('3 más atrasados — 1ra posición', renderDelayed(del1A))}}
+            ${{card('3 más atrasados — 2da posición', renderDelayed(del2A))}}
+            ${{card('3 más atrasados — 3ra posición', renderDelayed(del3A))}}
           </div>
-
-          <!-- Lotería B -->
-          <div class="cmp-side">
-            <p class="cmp-side-title">${{nameB}}</p>
-
-            <div class="cmp-card">
-              <p class="cmp-card-label">Top 10 más repetidos</p>
-              <div class="cmp-numlist">
-                ${{renderTop10(top10B, top10ASet)}}
-              </div>
-            </div>
-
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 1ra posición</p>
-              <div class="cmp-numlist">${{renderDelayed(del1B)}}</div>
-            </div>
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 2da posición</p>
-              <div class="cmp-numlist">${{renderDelayed(del2B)}}</div>
-            </div>
-            <div class="cmp-card">
-              <p class="cmp-card-label">3 más atrasados — 3ra posición</p>
-              <div class="cmp-numlist">${{renderDelayed(del3B)}}</div>
-            </div>
+          <div class="b10-col-2">
+            <p class="eyebrow" style="padding:4px 0 8px">${{nameB}}</p>
+            ${{card('Top 10 más repetidos', renderTop10(top10B, top10ASet))}}
+            ${{card('3 más atrasados — 1ra posición', renderDelayed(del1B))}}
+            ${{card('3 más atrasados — 2da posición', renderDelayed(del2B))}}
+            ${{card('3 más atrasados — 3ra posición', renderDelayed(del3B))}}
           </div>
         </div>
       `;
@@ -2119,7 +2089,8 @@ main {
   border-top: 1px solid #e5e8ef;
 }
 
-.compare-controls { margin-bottom: 18px; }
+/* ── Compare controls ─────────────────────────────── */
+.compare-controls { margin-bottom: 16px; }
 
 .cmp-row-selects {
   display: flex;
@@ -2169,7 +2140,6 @@ main {
   font-size: 13px;
   font-weight: 900;
   cursor: pointer;
-  letter-spacing: 0.04em;
 }
 .cmp-run-btn:hover { background: #c2410c; }
 
@@ -2180,160 +2150,25 @@ main {
   text-align: center;
 }
 
-/* ── Section blocks ─────────────────────────────────── */
-.cmp-section {
-  background: #fff7ed;
-  border: 1px solid #fed7aa;
-  border-radius: 12px;
-  padding: 16px 18px;
-  margin-bottom: 14px;
-}
-
-.cmp-section-head { margin-bottom: 14px; }
-
-.cmp-eyebrow {
-  display: block;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #ea580c;
-  margin-bottom: 4px;
-}
-
-.cmp-section h4 {
-  margin: 0 0 4px;
-  font-size: 15px;
-  font-weight: 900;
-  color: #7c2d12;
-}
-
-.cmp-desc {
-  margin: 0;
-  font-size: 12px;
-  color: #9ba3b8;
-}
-
-/* 4-conditions grid */
-.cmp-four-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 10px;
-}
-
-.cmp-four-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px;
-  background: #ffffff;
-  border: 1px solid #fde8d4;
-  border-radius: 10px;
-}
-
-.cmp-four-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  flex: 1;
-}
-
-/* Coincidencias */
-.cmp-coinc-section { background: #f0fdf4; border-color: #86efac; }
-.cmp-coinc-section h4 { color: #14532d; }
-.cmp-coinc-section .cmp-eyebrow { color: #16a34a; }
-
-.cmp-coinc-balls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-/* Dual grid (side by side) */
+/* Dual grid — same gap as b10-analysis-grid */
 .cmp-dual-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
+  align-items: start;
 }
 
-.cmp-side-title {
-  margin: 0 0 10px;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #374151;
-  border-bottom: 2px solid #fed7aa;
-  padding-bottom: 6px;
-}
-
-.cmp-card {
-  background: #f8fafc;
-  border: 1px solid #e5e8ef;
-  border-radius: 10px;
-  padding: 12px;
-  margin-bottom: 10px;
-}
-
-.cmp-card-label {
-  margin: 0 0 8px;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #5f6680;
-}
-
-.cmp-numlist {
-  display: grid;
-  gap: 5px;
-}
-
-.cmp-num-row,
-.cmp-del-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 8px;
-  border-radius: 8px;
-  background: #ffffff;
-  border: 1px solid #f0f2f7;
-}
-
-.cmp-num-row.cmp-shared { background: #fff7ed; border-color: #fed7aa; }
-
-.cmp-cnt {
-  color: #6b7280;
-  font-size: 12px;
-  font-weight: 700;
-  margin-left: auto;
-}
-
+/* Shared badge inside b10-numlist li */
 .cmp-badge-shared {
+  margin-left: auto;
   padding: 2px 6px;
   border-radius: 999px;
   background: #f97316;
   color: #ffffff;
   font-size: 10px;
   font-weight: 900;
-  letter-spacing: 0.06em;
   white-space: nowrap;
 }
-
-.cmp-del-rank {
-  color: #9ba3b8;
-  font-size: 11px;
-  font-weight: 900;
-  width: 20px;
-}
-
-.cmp-empty {
-  padding: 8px;
-  color: #9ba3b8;
-  font-size: 13px;
-}
-
-.cmp-shared-ball { background: #ea580c !important; box-shadow: 0 0 0 3px rgba(249,115,22,0.25); }
 
 /* ── Draws Panel (historical/predictions) ────────────────────────────── */
 .draws-panel {
@@ -2750,10 +2585,6 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .cmp-four-grid {
-    grid-template-columns: 1fr;
-  }
-
   .modal-body {
     grid-template-columns: 1fr;
   }
@@ -2899,26 +2730,6 @@ main {
 
   .cmp-label input,
   .cmp-label select { background: #1a1d27; border-color: #1e2130; color: #e2e4ed; }
-
-  .cmp-section { background: #1a1108; border-color: #3d2208; }
-  .cmp-section h4 { color: #fb923c; }
-
-  .cmp-coinc-section { background: #052e16; border-color: #166534; }
-  .cmp-coinc-section h4 { color: #86efac; }
-  .cmp-coinc-section .cmp-eyebrow { color: #4ade80; }
-
-  .cmp-four-item { background: #14161f; border-color: #3d2208; }
-
-  .cmp-card { background: #1a1d27; border-color: #1e2130; }
-  .cmp-card-label { color: #6b7280; }
-  .cmp-side-title { color: #9ba3b8; border-bottom-color: #3d2208; }
-
-  .cmp-num-row,
-  .cmp-del-row { background: #0e1014; border-color: #1e2130; }
-
-  .cmp-num-row.cmp-shared { background: #1a1108; border-color: #3d2208; }
-  .cmp-cnt { color: #6b7280; }
-  .cmp-del-rank { color: #6b7280; }
 
   .draws-panel {
     border-color: #3d2208;
