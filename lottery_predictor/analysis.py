@@ -427,6 +427,44 @@ def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
     leader = strength_rows[0] if strength_rows else None
     bullet_pair = (recent_pair_counts or pair_counts).most_common(1)
 
+    DRAW_CANONICAL = {
+        "Lotería Nacional": {"Gana Más": "Gana Más", "Lotería Nacional": "Nacional Noche"},
+        "Leidsa": {"Quiniela Leidsa": "Leidsa"},
+        "Lotería Real": {"Quiniela Real": "Real"},
+        "Loteka": {"Quiniela Loteka": "Loteka"},
+        "La Primera": {"La Primera Día": "La Primera Día", "La Primera Noche": "La Primera Noche",
+                       "Primera Noche": "La Primera Noche", "Lotería La Primera 12PM": "La Primera Día",
+                       "Lotería La Primera Noche 8PM": "La Primera Noche"},
+        "La Suerte Dominicana": {"La Suerte MD": "La Suerte MD", "La Suerte 6PM": "La Suerte 6PM",
+                                  "La Suerte 12:30": "La Suerte MD", "La Suerte 18:00": "La Suerte 6PM"},
+        "Lotedom": {"LoteDom": "Lotedom", "Quiniela LoteDom": "Lotedom", "Quiniela Lotedom": "Lotedom"},
+    }
+
+    delayed_by_lottery: dict[str, dict[str, list[dict[str, object]]]] = {}
+    by_draw_label: dict[str, list[LotteryResult]] = defaultdict(list)
+    for result in base_results:
+        draw_map = DRAW_CANONICAL.get(result.lottery, {})
+        label = draw_map.get(result.draw)
+        if label:
+            by_draw_label[label].append(result)
+
+    for label, draw_results in sorted(by_draw_label.items()):
+        pos_last_seen: list[dict[int, date]] = [dict(), dict(), dict()]
+        pos_counts: list[Counter] = [Counter(), Counter(), Counter()]
+        for r in sorted(draw_results, key=lambda x: x.draw_date):
+            for idx, n in enumerate(r.numbers[:3]):
+                pos_last_seen[idx][n] = r.draw_date
+                pos_counts[idx][n] += 1
+        positions = {}
+        for idx in range(3):
+            rows = sorted(
+                [{"number": f"{n:02d}", "delay_days": (analysis_to - d).days, "frequency": pos_counts[idx][n]}
+                 for n, d in pos_last_seen[idx].items()],
+                key=lambda x: (-x["delay_days"], -x["frequency"])
+            )[:3]
+            positions[str(idx + 1)] = rows
+        delayed_by_lottery[label] = positions
+
     return {
         "window": {
             "from": BASE_ANALYSIS_FROM.isoformat(),
@@ -434,10 +472,12 @@ def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
             "results": len(base_results),
         },
         "top_10_repeated": top_10,
+        "top_10_historical": [{"number": f"{number:02d}", "count": count} for number, count in total_counts.most_common(10)],
         "delayed_by_position": delayed_by_position,
+        "delayed_by_lottery": delayed_by_lottery,
         "coincidences": [{"number": f"{number:02d}", "count": count} for number, count in coincidences.most_common(10)],
         "drags": [{"number": f"{number:02d}", "count": count} for number, count in drags.most_common(10)],
-        "active_mirrors": [{"number": f"{number:02d}", "mirror": f"{MIRRORS[number]:02d}", "count": count} for number, count in mirror_counts.most_common(10)],
+        "active_mirrors": _active_mirror_pairs(base_results, analysis_to),
         "moving_numbers": [{"number": f"{number:02d}", "lotteries": count} for number, count in moves.most_common(10)],
         "frequent_pairs": [{"pair": [f"{a:02d}", f"{b:02d}"], "count": count} for (a, b), count in pair_counts.most_common(10)],
         "strength_ranking": strength_rows[:10],
@@ -445,6 +485,33 @@ def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
         "leader": leader,
         "bullet_pair": {"pair": [f"{bullet_pair[0][0][0]:02d}", f"{bullet_pair[0][0][1]:02d}"], "count": bullet_pair[0][1]} if bullet_pair else None,
     }
+
+
+def _active_mirror_pairs(results: list[LotteryResult], reference_date: date) -> list[dict[str, object]]:
+    cutoff = reference_date - timedelta(days=14)
+    last_seen: dict[int, date] = {}
+    for r in sorted(results, key=lambda x: x.draw_date):
+        for n in r.numbers[:3]:
+            last_seen[n] = r.draw_date
+    pairs = []
+    seen = set()
+    for n in range(100):
+        m = MIRRORS[n]
+        if m == n or (m, n) in seen:
+            continue
+        seen.add((n, m))
+        d1 = last_seen.get(n)
+        d2 = last_seen.get(m)
+        if d1 and d2 and d1 >= cutoff and d2 >= cutoff:
+            diff = abs((d1 - d2).days)
+            pairs.append({
+                "number": f"{n:02d}",
+                "mirror": f"{m:02d}",
+                "diff_days": diff,
+                "days_ago_a": (reference_date - d1).days,
+                "days_ago_b": (reference_date - d2).days,
+            })
+    return sorted(pairs, key=lambda x: (x["diff_days"], x["days_ago_a"]))[:12]
 
 
 def _delayed_rows(last_seen: dict[int, date], reference_date: date, counts: Counter[int]) -> list[dict[str, object]]:

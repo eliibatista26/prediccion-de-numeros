@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-07T12:03:29-04:00",
-  "generated_at_display": "07/06/2026 12:03",
+  "generated_at": "2026-06-07T12:25:10-04:00",
+  "generated_at_display": "07/06/2026 12:25",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "2010-08-01",
@@ -52,6 +52,48 @@
       {
         "number": "51",
         "count": 12
+      }
+    ],
+    "top_10_historical": [
+      {
+        "number": "21",
+        "count": 962
+      },
+      {
+        "number": "42",
+        "count": 956
+      },
+      {
+        "number": "14",
+        "count": 954
+      },
+      {
+        "number": "91",
+        "count": 928
+      },
+      {
+        "number": "32",
+        "count": 928
+      },
+      {
+        "number": "63",
+        "count": 923
+      },
+      {
+        "number": "52",
+        "count": 922
+      },
+      {
+        "number": "61",
+        "count": 920
+      },
+      {
+        "number": "26",
+        "count": 918
+      },
+      {
+        "number": "56",
+        "count": 917
       }
     ],
     "delayed_by_position": {
@@ -242,6 +284,538 @@
         }
       ]
     },
+    "delayed_by_lottery": {
+      "Gana Más": {
+        "1": [
+          {
+            "number": "47",
+            "delay_days": 433,
+            "frequency": 47
+          },
+          {
+            "number": "10",
+            "delay_days": 430,
+            "frequency": 56
+          },
+          {
+            "number": "60",
+            "delay_days": 405,
+            "frequency": 57
+          }
+        ],
+        "2": [
+          {
+            "number": "58",
+            "delay_days": 488,
+            "frequency": 39
+          },
+          {
+            "number": "43",
+            "delay_days": 477,
+            "frequency": 55
+          },
+          {
+            "number": "16",
+            "delay_days": 470,
+            "frequency": 51
+          }
+        ],
+        "3": [
+          {
+            "number": "61",
+            "delay_days": 532,
+            "frequency": 43
+          },
+          {
+            "number": "72",
+            "delay_days": 393,
+            "frequency": 37
+          },
+          {
+            "number": "70",
+            "delay_days": 359,
+            "frequency": 54
+          }
+        ]
+      },
+      "La Primera Día": {
+        "1": [
+          {
+            "number": "99",
+            "delay_days": 541,
+            "frequency": 5
+          },
+          {
+            "number": "71",
+            "delay_days": 503,
+            "frequency": 6
+          },
+          {
+            "number": "20",
+            "delay_days": 423,
+            "frequency": 8
+          }
+        ],
+        "2": [
+          {
+            "number": "26",
+            "delay_days": 494,
+            "frequency": 9
+          },
+          {
+            "number": "60",
+            "delay_days": 466,
+            "frequency": 6
+          },
+          {
+            "number": "02",
+            "delay_days": 377,
+            "frequency": 3
+          }
+        ],
+        "3": [
+          {
+            "number": "00",
+            "delay_days": 605,
+            "frequency": 4
+          },
+          {
+            "number": "35",
+            "delay_days": 485,
+            "frequency": 6
+          },
+          {
+            "number": "41",
+            "delay_days": 421,
+            "frequency": 9
+          }
+        ]
+      },
+      "La Primera Noche": {
+        "1": [
+          {
+            "number": "91",
+            "delay_days": 419,
+            "frequency": 11
+          },
+          {
+            "number": "18",
+            "delay_days": 403,
+            "frequency": 16
+          },
+          {
+            "number": "36",
+            "delay_days": 390,
+            "frequency": 11
+          }
+        ],
+        "2": [
+          {
+            "number": "48",
+            "delay_days": 450,
+            "frequency": 14
+          },
+          {
+            "number": "06",
+            "delay_days": 399,
+            "frequency": 8
+          },
+          {
+            "number": "59",
+            "delay_days": 372,
+            "frequency": 8
+          }
+        ],
+        "3": [
+          {
+            "number": "46",
+            "delay_days": 625,
+            "frequency": 4
+          },
+          {
+            "number": "57",
+            "delay_days": 524,
+            "frequency": 10
+          },
+          {
+            "number": "85",
+            "delay_days": 447,
+            "frequency": 14
+          }
+        ]
+      },
+      "La Suerte 6PM": {
+        "1": [
+          {
+            "number": "58",
+            "delay_days": 505,
+            "frequency": 13
+          },
+          {
+            "number": "77",
+            "delay_days": 434,
+            "frequency": 10
+          },
+          {
+            "number": "08",
+            "delay_days": 432,
+            "frequency": 12
+          }
+        ],
+        "2": [
+          {
+            "number": "69",
+            "delay_days": 723,
+            "frequency": 7
+          },
+          {
+            "number": "61",
+            "delay_days": 428,
+            "frequency": 8
+          },
+          {
+            "number": "45",
+            "delay_days": 413,
+            "frequency": 13
+          }
+        ],
+        "3": [
+          {
+            "number": "17",
+            "delay_days": 442,
+            "frequency": 13
+          },
+          {
+            "number": "94",
+            "delay_days": 416,
+            "frequency": 15
+          },
+          {
+            "number": "97",
+            "delay_days": 388,
+            "frequency": 9
+          }
+        ]
+      },
+      "La Suerte MD": {
+        "1": [
+          {
+            "number": "77",
+            "delay_days": 725,
+            "frequency": 21
+          },
+          {
+            "number": "15",
+            "delay_days": 534,
+            "frequency": 19
+          },
+          {
+            "number": "84",
+            "delay_days": 471,
+            "frequency": 17
+          }
+        ],
+        "2": [
+          {
+            "number": "42",
+            "delay_days": 545,
+            "frequency": 22
+          },
+          {
+            "number": "89",
+            "delay_days": 423,
+            "frequency": 22
+          },
+          {
+            "number": "23",
+            "delay_days": 421,
+            "frequency": 16
+          }
+        ],
+        "3": [
+          {
+            "number": "88",
+            "delay_days": 538,
+            "frequency": 17
+          },
+          {
+            "number": "01",
+            "delay_days": 482,
+            "frequency": 16
+          },
+          {
+            "number": "55",
+            "delay_days": 397,
+            "frequency": 14
+          }
+        ]
+      },
+      "Leidsa": {
+        "1": [
+          {
+            "number": "48",
+            "delay_days": 473,
+            "frequency": 54
+          },
+          {
+            "number": "81",
+            "delay_days": 438,
+            "frequency": 59
+          },
+          {
+            "number": "30",
+            "delay_days": 380,
+            "frequency": 56
+          }
+        ],
+        "2": [
+          {
+            "number": "60",
+            "delay_days": 609,
+            "frequency": 48
+          },
+          {
+            "number": "62",
+            "delay_days": 454,
+            "frequency": 67
+          },
+          {
+            "number": "90",
+            "delay_days": 426,
+            "frequency": 56
+          }
+        ],
+        "3": [
+          {
+            "number": "38",
+            "delay_days": 505,
+            "frequency": 45
+          },
+          {
+            "number": "90",
+            "delay_days": 364,
+            "frequency": 47
+          },
+          {
+            "number": "00",
+            "delay_days": 357,
+            "frequency": 40
+          }
+        ]
+      },
+      "Lotedom": {
+        "1": [
+          {
+            "number": "52",
+            "delay_days": 768,
+            "frequency": 13
+          },
+          {
+            "number": "86",
+            "delay_days": 511,
+            "frequency": 20
+          },
+          {
+            "number": "30",
+            "delay_days": 506,
+            "frequency": 16
+          }
+        ],
+        "2": [
+          {
+            "number": "45",
+            "delay_days": 470,
+            "frequency": 16
+          },
+          {
+            "number": "71",
+            "delay_days": 311,
+            "frequency": 18
+          },
+          {
+            "number": "19",
+            "delay_days": 298,
+            "frequency": 20
+          }
+        ],
+        "3": [
+          {
+            "number": "57",
+            "delay_days": 437,
+            "frequency": 12
+          },
+          {
+            "number": "98",
+            "delay_days": 431,
+            "frequency": 11
+          },
+          {
+            "number": "14",
+            "delay_days": 352,
+            "frequency": 18
+          }
+        ]
+      },
+      "Loteka": {
+        "1": [
+          {
+            "number": "61",
+            "delay_days": 3476,
+            "frequency": 23
+          },
+          {
+            "number": "71",
+            "delay_days": 3367,
+            "frequency": 23
+          },
+          {
+            "number": "01",
+            "delay_days": 3325,
+            "frequency": 22
+          }
+        ],
+        "2": [
+          {
+            "number": "25",
+            "delay_days": 3191,
+            "frequency": 25
+          },
+          {
+            "number": "40",
+            "delay_days": 3024,
+            "frequency": 25
+          },
+          {
+            "number": "87",
+            "delay_days": 2704,
+            "frequency": 31
+          }
+        ],
+        "3": [
+          {
+            "number": "80",
+            "delay_days": 3428,
+            "frequency": 20
+          },
+          {
+            "number": "92",
+            "delay_days": 3402,
+            "frequency": 25
+          },
+          {
+            "number": "49",
+            "delay_days": 3344,
+            "frequency": 18
+          }
+        ]
+      },
+      "Nacional Noche": {
+        "1": [
+          {
+            "number": "66",
+            "delay_days": 723,
+            "frequency": 49
+          },
+          {
+            "number": "47",
+            "delay_days": 691,
+            "frequency": 49
+          },
+          {
+            "number": "18",
+            "delay_days": 497,
+            "frequency": 45
+          }
+        ],
+        "2": [
+          {
+            "number": "49",
+            "delay_days": 467,
+            "frequency": 43
+          },
+          {
+            "number": "03",
+            "delay_days": 320,
+            "frequency": 55
+          },
+          {
+            "number": "23",
+            "delay_days": 315,
+            "frequency": 49
+          }
+        ],
+        "3": [
+          {
+            "number": "23",
+            "delay_days": 384,
+            "frequency": 42
+          },
+          {
+            "number": "01",
+            "delay_days": 356,
+            "frequency": 50
+          },
+          {
+            "number": "06",
+            "delay_days": 346,
+            "frequency": 60
+          }
+        ]
+      },
+      "Real": {
+        "1": [
+          {
+            "number": "78",
+            "delay_days": 528,
+            "frequency": 27
+          },
+          {
+            "number": "88",
+            "delay_days": 491,
+            "frequency": 38
+          },
+          {
+            "number": "66",
+            "delay_days": 482,
+            "frequency": 32
+          }
+        ],
+        "2": [
+          {
+            "number": "17",
+            "delay_days": 516,
+            "frequency": 40
+          },
+          {
+            "number": "12",
+            "delay_days": 421,
+            "frequency": 28
+          },
+          {
+            "number": "03",
+            "delay_days": 381,
+            "frequency": 27
+          }
+        ],
+        "3": [
+          {
+            "number": "84",
+            "delay_days": 506,
+            "frequency": 32
+          },
+          {
+            "number": "11",
+            "delay_days": 468,
+            "frequency": 32
+          },
+          {
+            "number": "94",
+            "delay_days": 438,
+            "frequency": 28
+          }
+        ]
+      }
+    },
     "coincidences": [
       {
         "number": "91",
@@ -328,54 +902,88 @@
     ],
     "active_mirrors": [
       {
-        "number": "41",
-        "mirror": "14",
-        "count": 1837
+        "number": "13",
+        "mirror": "31",
+        "diff_days": 0,
+        "days_ago_a": 1,
+        "days_ago_b": 1
       },
       {
-        "number": "14",
-        "mirror": "41",
-        "count": 1837
+        "number": "02",
+        "mirror": "20",
+        "diff_days": 0,
+        "days_ago_a": 2,
+        "days_ago_b": 2
+      },
+      {
+        "number": "15",
+        "mirror": "51",
+        "diff_days": 0,
+        "days_ago_a": 2,
+        "days_ago_b": 2
+      },
+      {
+        "number": "47",
+        "mirror": "74",
+        "diff_days": 0,
+        "days_ago_a": 2,
+        "days_ago_b": 2
+      },
+      {
+        "number": "57",
+        "mirror": "75",
+        "diff_days": 0,
+        "days_ago_a": 2,
+        "days_ago_b": 2
+      },
+      {
+        "number": "29",
+        "mirror": "92",
+        "diff_days": 0,
+        "days_ago_a": 5,
+        "days_ago_b": 5
+      },
+      {
+        "number": "36",
+        "mirror": "63",
+        "diff_days": 0,
+        "days_ago_a": 12,
+        "days_ago_b": 12
+      },
+      {
+        "number": "06",
+        "mirror": "60",
+        "diff_days": 1,
+        "days_ago_a": 0,
+        "days_ago_b": 1
       },
       {
         "number": "12",
         "mirror": "21",
-        "count": 1817
+        "diff_days": 1,
+        "days_ago_a": 0,
+        "days_ago_b": 1
       },
       {
-        "number": "21",
-        "mirror": "12",
-        "count": 1817
+        "number": "07",
+        "mirror": "70",
+        "diff_days": 1,
+        "days_ago_a": 1,
+        "days_ago_b": 2
       },
       {
-        "number": "43",
-        "mirror": "34",
-        "count": 1816
+        "number": "28",
+        "mirror": "82",
+        "diff_days": 1,
+        "days_ago_a": 1,
+        "days_ago_b": 2
       },
       {
-        "number": "34",
-        "mirror": "43",
-        "count": 1816
-      },
-      {
-        "number": "56",
-        "mirror": "65",
-        "count": 1800
-      },
-      {
-        "number": "65",
-        "mirror": "56",
-        "count": 1800
-      },
-      {
-        "number": "19",
-        "mirror": "91",
-        "count": 1799
-      },
-      {
-        "number": "91",
-        "mirror": "19",
-        "count": 1799
+        "number": "35",
+        "mirror": "53",
+        "diff_days": 1,
+        "days_ago_a": 1,
+        "days_ago_b": 2
       }
     ],
     "moving_numbers": [
@@ -2654,6 +3262,17 @@
         },
         {
           "lottery": "La Primera",
+          "draw": "Primera Noche",
+          "draw_date": "2026-06-06",
+          "numbers": [
+            95,
+            90,
+            83
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
           "draw": "La Primera Noche",
           "draw_date": "2026-06-06",
           "numbers": [
@@ -2671,17 +3290,6 @@
             38,
             94,
             87
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "Primera Noche",
-          "draw_date": "2026-06-06",
-          "numbers": [
-            95,
-            90,
-            83
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },

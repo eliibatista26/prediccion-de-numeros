@@ -514,47 +514,199 @@ def _render_lottery_image(name: str, class_name: str = "lottery-photo") -> str:
 
 
 def _render_base_10_panel(base_10: dict[str, object]) -> str:
+    if not base_10:
+        return ""
     window = base_10.get("window", {}) if isinstance(base_10.get("window"), dict) else {}
-    top_rows = _render_simple_rank(base_10.get("top_10_repeated", []), "count")
-    strength_rows = _render_strength_rows(base_10.get("strength_ranking", []))
-    delayed_first = _render_delay_rows(base_10.get("delayed_by_position", {}).get("1", []) if isinstance(base_10.get("delayed_by_position"), dict) else [])
-    delayed_second = _render_delay_rows(base_10.get("delayed_by_position", {}).get("2", []) if isinstance(base_10.get("delayed_by_position"), dict) else [])
-    delayed_third = _render_delay_rows(base_10.get("delayed_by_position", {}).get("3", []) if isinstance(base_10.get("delayed_by_position"), dict) else [])
-    elite = " ".join(f"""<span>{escape(str(item.get("number")))}</span>""" for item in base_10.get("elite_group", []) if isinstance(item, dict))
+    strength = base_10.get("strength_ranking", []) if isinstance(base_10.get("strength_ranking"), list) else []
+    top_hist = base_10.get("top_10_historical", []) if isinstance(base_10.get("top_10_historical"), list) else []
+    top_recent = base_10.get("top_10_repeated", []) if isinstance(base_10.get("top_10_repeated"), list) else []
+    delayed_pos = base_10.get("delayed_by_position", {}) if isinstance(base_10.get("delayed_by_position"), dict) else {}
+    delayed_by_lot = base_10.get("delayed_by_lottery", {}) if isinstance(base_10.get("delayed_by_lottery"), dict) else {}
+    coincidences = base_10.get("coincidences", []) if isinstance(base_10.get("coincidences"), list) else []
+    drags = base_10.get("drags", []) if isinstance(base_10.get("drags"), list) else []
+    active_mirrors = base_10.get("active_mirrors", []) if isinstance(base_10.get("active_mirrors"), list) else []
+    frequent_pairs = base_10.get("frequent_pairs", []) if isinstance(base_10.get("frequent_pairs"), list) else []
+    elite = base_10.get("elite_group", []) if isinstance(base_10.get("elite_group"), list) else []
     leader = base_10.get("leader") if isinstance(base_10.get("leader"), dict) else {}
     bullet_pair = base_10.get("bullet_pair") if isinstance(base_10.get("bullet_pair"), dict) else {}
-    pair = bullet_pair.get("pair") if isinstance(bullet_pair.get("pair"), list) else []
-    return f"""<section class="base-panel">
-  <div class="base-head">
+    pair_nums = bullet_pair.get("pair", []) if isinstance(bullet_pair, dict) else []
+
+    def ball(num, cls=""):
+        return f'<span class="b10-ball{" " + cls if cls else ""}">{escape(str(num))}</span>'
+
+    def num_row(item, val_key="count", suffix=""):
+        n = escape(str(item.get("number", "")))
+        v = escape(str(item.get(val_key, "")))
+        return f'<li>{ball(n)}<b>{v}{" " + escape(suffix) if suffix else ""}</b></li>'
+
+    # Elite balls
+    elite_balls = "".join(ball(escape(str(e.get("number",""))), "elite") for e in elite[:5])
+
+    # Strength ranking rows
+    def strength_row(item, rank):
+        n = escape(str(item.get("number", "")))
+        sc = escape(str(round(float(item.get("score", 0)), 1)))
+        rec = escape(str(item.get("recent_30", item.get("recent", 0))))
+        coinc = escape(str(item.get("coincidences", 0)))
+        drg = escape(str(item.get("drags", 0)))
+        freq = escape(str(item.get("frequency", 0)))
+        return f'''<tr class="b10-tr">
+          <td class="b10-rank">#{rank}</td>
+          <td>{ball(n)}</td>
+          <td class="b10-sc">{sc}</td>
+          <td class="b10-meta">{rec}<small>rec.</small></td>
+          <td class="b10-meta">{coinc}<small>coinc.</small></td>
+          <td class="b10-meta">{drg}<small>arr.</small></td>
+          <td class="b10-meta">{freq}<small>hist.</small></td>
+        </tr>'''
+
+    strength_rows_html = "".join(strength_row(item, i+1) for i, item in enumerate(strength[:10]))
+
+    def simple_rank_rows(items, val_key="count", suffix=""):
+        return "".join(num_row(item, val_key, suffix) for item in (items or [])[:10])
+
+    def delay_rows(items):
+        rows = []
+        for item in (items if isinstance(items, list) else [])[:3]:
+            if isinstance(item, dict):
+                n = escape(str(item.get("number", "")))
+                d = escape(str(item.get("delay_days", "")))
+                rows.append(f'<li>{ball(n)}<b>{d}d</b></li>')
+        return "".join(rows)
+
+    # Mirror rows
+    mirror_rows = ""
+    for m in (active_mirrors or [])[:8]:
+        a = escape(str(m.get("number", "")))
+        b_m = escape(str(m.get("mirror", "")))
+        diff = escape(str(m.get("diff_days", "")))
+        aa = escape(str(m.get("days_ago_a", "")))
+        ab = escape(str(m.get("days_ago_b", "")))
+        mirror_rows += f'<li><span class="mirror-pair">{ball(a)} <i>↔</i> {ball(b_m)}</span><small>{diff}d dif · {a}:{aa}d, {b_m}:{ab}d</small></li>'
+
+    # Pair rows
+    pair_rows = ""
+    for p in (frequent_pairs or [])[:8]:
+        pair = p.get("pair", [])
+        cnt = p.get("count", 0)
+        if len(pair) >= 2:
+            pair_rows += f'<li><span class="pale-pair">{ball(escape(str(pair[0])))} <i>-</i> {ball(escape(str(pair[1])))}</span><b>{escape(str(cnt))}x</b></li>'
+
+    # Coincidences and drags rows
+    coinc_rows = "".join(f'<li>{ball(escape(str(c.get("number",""))))}<b>{escape(str(c.get("count",0)))}x</b></li>' for c in (coincidences or [])[:8])
+    drag_rows = "".join(f'<li>{ball(escape(str(d.get("number",""))))}<b>{escape(str(d.get("count",0)))}x</b></li>' for d in (drags or [])[:8])
+
+    # Delayed by lottery table
+    LOTTERY_ORDER = ["Gana Más", "Nacional Noche", "Leidsa", "Real", "Loteka", "La Primera Día", "La Primera Noche", "La Suerte MD", "La Suerte 6PM", "Lotedom"]
+    lot_table_rows = ""
+    for lot_label in LOTTERY_ORDER:
+        positions = delayed_by_lot.get(lot_label, {})
+        if not positions:
+            continue
+        def pos_cells(pos_key):
+            items = positions.get(pos_key, [])[:3]
+            if not items:
+                return "<td>—</td>"
+            cells = " ".join(f'{ball(escape(str(it.get("number",""))))}<small>{escape(str(it.get("delay_days","")))}</small>' for it in items)
+            return f"<td><div class='lot-pos-nums'>{cells}</div></td>"
+        lot_table_rows += f'''<tr>
+          <td class="lot-name">{escape(lot_label)}</td>
+          {pos_cells("1")}
+          {pos_cells("2")}
+          {pos_cells("3")}
+        </tr>'''
+
+    leader_num = escape(str(leader.get("number", "N/D"))) if leader else "N/D"
+    leader_score = escape(str(round(float(leader.get("score", 0)), 1))) if leader else "N/D"
+    pair_str = "-".join(escape(str(x)) for x in pair_nums) if pair_nums else "N/D"
+    results_count = escape(str(window.get("results", 0)))
+    date_from = escape(str(window.get("from", "")))
+    date_to = escape(str(window.get("to", "")))
+
+    return f"""<section class="b10-panel">
+  <div class="b10-header">
     <div>
       <p class="eyebrow">LAS 10 BASE</p>
       <h2>Análisis completo</h2>
+      <p class="b10-meta-line">{results_count} sorteos · {date_from} → {date_to}</p>
     </div>
-    <div class="meta">
-      <span>{escape(str(window.get("results", 0)))} resultados</span>
-      <span>{escape(str(window.get("from", "")))} a {escape(str(window.get("to", "")))}</span>
+    <div class="b10-elite-wrap">
+      <p class="b10-elite-label">🏆 Grupo Élite</p>
+      <div class="b10-elite-balls">{elite_balls}</div>
+      <p class="b10-elite-footer">Líder: <strong>{leader_num}</strong> · Score: <strong>{leader_score}</strong> · Palé bala: <strong>{pair_str}</strong></p>
     </div>
   </div>
-  <div class="base-grid">
-    <article>
-      <h3>Top 10 repetidos</h3>
-      <ol>{top_rows}</ol>
+
+  <div class="b10-main-grid">
+    <article class="b10-card b10-strength">
+      <h3>🥇 Ranking de fuerza</h3>
+      <table class="b10-table">
+        <thead><tr><th></th><th>Núm.</th><th>Score</th><th>Rec.</th><th>Coinc.</th><th>Arr.</th><th>Hist.</th></tr></thead>
+        <tbody>{strength_rows_html}</tbody>
+      </table>
     </article>
-    <article>
-      <h3>Ranking de fuerza</h3>
-      <ol>{strength_rows}</ol>
+    <div class="b10-side-col">
+      <article class="b10-card">
+        <h3>📊 Top 10 repetidos <small>(histórico)</small></h3>
+        <ol class="b10-numlist">{simple_rank_rows(top_hist, "count", "veces")}</ol>
+      </article>
+      <article class="b10-card">
+        <h3>🔥 Repetición reciente <small>(30 días)</small></h3>
+        <ol class="b10-numlist">{simple_rank_rows(top_recent, "count", "veces")}</ol>
+      </article>
+    </div>
+  </div>
+
+  <div class="b10-delay-grid">
+    <article class="b10-card">
+      <h3>⏳ Atrasados 1ra posición</h3>
+      <ol class="b10-numlist">{delay_rows(delayed_pos.get("1", []))}</ol>
     </article>
-    <article class="elite-box">
-      <h3>Grupo Élite</h3>
-      <div>{elite}</div>
-      <p>Líder: <strong>{escape(str(leader.get("number", "N/D")))}</strong> · Palé bala: <strong>{"-".join(escape(str(item)) for item in pair) or "N/D"}</strong></p>
+    <article class="b10-card">
+      <h3>⏳ Atrasados 2da posición</h3>
+      <ol class="b10-numlist">{delay_rows(delayed_pos.get("2", []))}</ol>
+    </article>
+    <article class="b10-card">
+      <h3>⏳ Atrasados 3ra posición</h3>
+      <ol class="b10-numlist">{delay_rows(delayed_pos.get("3", []))}</ol>
     </article>
   </div>
-  <div class="delay-grid">
-    <article><h3>Atrasados 1ra posición</h3><ol>{delayed_first}</ol></article>
-    <article><h3>Atrasados 2da posición</h3><ol>{delayed_second}</ol></article>
-    <article><h3>Atrasados 3ra posición</h3><ol>{delayed_third}</ol></article>
+
+  <div class="b10-stats-grid">
+    <article class="b10-card">
+      <h3>🔗 Coincidencias <small>entre loterías</small></h3>
+      <ol class="b10-numlist b10-inline">{coinc_rows}</ol>
+    </article>
+    <article class="b10-card">
+      <h3>🎯 Arrastres <small>día siguiente</small></h3>
+      <ol class="b10-numlist b10-inline">{drag_rows}</ol>
+    </article>
+    <article class="b10-card">
+      <h3>🪞 Espejos activos <small>≤14 días</small></h3>
+      <ul class="b10-mirror-list">{mirror_rows}</ul>
+    </article>
+    <article class="b10-card">
+      <h3>🎰 Palés frecuentes</h3>
+      <ul class="b10-pale-list">{pair_rows}</ul>
+    </article>
   </div>
+
+  <article class="b10-card b10-lottery-table-wrap">
+    <h3>📋 Atrasados por lotería — top 3 en cada posición</h3>
+    <div class="b10-table-scroll">
+      <table class="b10-lot-table">
+        <thead>
+          <tr>
+            <th>Lotería</th>
+            <th>1ra posición</th>
+            <th>2da posición</th>
+            <th>3ra posición</th>
+          </tr>
+        </thead>
+        <tbody>{lot_table_rows}</tbody>
+      </table>
+    </div>
+  </article>
 </section>"""
 
 
@@ -2168,6 +2320,380 @@ h1 {
   color: #4f566b;
 }
 
+/* ── Las 10 Base redesign ─────────────────────────────── */
+.b10-panel {
+  margin-bottom: 24px;
+  padding: 22px;
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(154, 52, 18, 0.07);
+}
+
+.b10-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #fed7aa;
+}
+
+.b10-header h2 {
+  font-size: 28px;
+  margin: 4px 0 6px;
+}
+
+.b10-meta-line {
+  color: #9a3412;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.b10-elite-wrap {
+  text-align: right;
+  min-width: 260px;
+}
+
+.b10-elite-label {
+  font-size: 13px;
+  font-weight: 900;
+  color: #6d7288;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.b10-elite-balls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.b10-elite-footer {
+  font-size: 13px;
+  color: #697087;
+}
+
+.b10-elite-footer strong {
+  color: #f97316;
+  font-size: 15px;
+}
+
+.b10-ball {
+  display: inline-grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #f97316;
+  font-weight: 950;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.b10-ball.elite {
+  width: 44px;
+  height: 44px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
+}
+
+.b10-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.b10-side-col {
+  display: grid;
+  gap: 14px;
+}
+
+.b10-delay-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.b10-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.b10-card {
+  padding: 16px;
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.b10-card h3 {
+  font-size: 13px;
+  font-weight: 900;
+  color: #374151;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.b10-card h3 small {
+  font-size: 11px;
+  color: #9ba3b8;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 700;
+  display: block;
+  margin-top: 2px;
+}
+
+.b10-numlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.b10-numlist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.b10-numlist b {
+  color: #6b7280;
+  font-size: 13px;
+  margin-left: auto;
+}
+
+.b10-numlist.b10-inline {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.b10-strength {
+  overflow: hidden;
+}
+
+.b10-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.b10-table th {
+  padding: 7px 8px;
+  background: #f0f2f7;
+  color: #5f6680;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid #e5e8ef;
+}
+
+.b10-tr td {
+  padding: 7px 8px;
+  border-bottom: 1px solid #f0f2f7;
+  vertical-align: middle;
+}
+
+.b10-tr:last-child td {
+  border-bottom: 0;
+}
+
+.b10-rank {
+  color: #9ba3b8;
+  font-weight: 900;
+  font-size: 11px;
+  width: 24px;
+}
+
+.b10-sc {
+  font-weight: 900;
+  color: #f97316;
+}
+
+.b10-meta {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.b10-meta small {
+  display: block;
+  font-size: 10px;
+  color: #9ba3b8;
+  font-weight: 700;
+}
+
+.b10-mirror-list,
+.b10-pale-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.b10-mirror-list li,
+.b10-pale-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #ffffff;
+  flex-wrap: wrap;
+}
+
+.mirror-pair,
+.pale-pair {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mirror-pair i,
+.pale-pair i {
+  color: #9ba3b8;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.b10-mirror-list small {
+  color: #9ba3b8;
+  font-size: 10px;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.b10-pale-list b {
+  color: #6b7280;
+  font-size: 13px;
+  margin-left: auto;
+}
+
+.b10-lottery-table-wrap {
+  overflow: hidden;
+}
+
+.b10-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.b10-lot-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 600px;
+}
+
+.b10-lot-table th {
+  padding: 9px 12px;
+  background: #f0f2f7;
+  color: #5f6680;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid #e5e8ef;
+}
+
+.b10-lot-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f0f2f7;
+  vertical-align: middle;
+}
+
+.b10-lot-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.lot-name {
+  font-weight: 900;
+  color: #374151;
+  white-space: nowrap;
+  min-width: 130px;
+}
+
+.lot-pos-nums {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lot-pos-nums small {
+  font-size: 10px;
+  color: #9ba3b8;
+  font-weight: 700;
+}
+
+/* dark mode for b10 */
+@media (prefers-color-scheme: dark) {
+  .b10-panel {
+    border-color: #3d2208;
+    background: #14161f;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+  }
+  .b10-header {
+    border-bottom-color: #3d2208;
+  }
+  .b10-card {
+    border-color: #1e2130;
+    background: #1a1d27;
+  }
+  .b10-card h3 {
+    color: #9ba3b8;
+  }
+  .b10-numlist li {
+    background: #0e1014;
+  }
+  .b10-mirror-list li,
+  .b10-pale-list li {
+    background: #0e1014;
+  }
+  .b10-table th,
+  .b10-lot-table th {
+    background: #1e2130;
+    color: #9ba3b8;
+    border-bottom-color: #2e3140;
+  }
+  .b10-tr td,
+  .b10-lot-table td {
+    border-bottom-color: #1e2130;
+  }
+  .b10-lot-table tr:last-child td,
+  .b10-tr:last-child td {
+    border-bottom: 0;
+  }
+  .b10-rank {
+    color: #6b7280;
+  }
+  .b10-meta-line {
+    color: #fb923c;
+  }
+  .b10-elite-footer {
+    color: #6b7280;
+  }
+}
+
 @media (max-width: 820px) {
   .title-row,
   .section-head,
@@ -2293,6 +2819,24 @@ h1 {
 
   .modal-result-row {
     display: grid;
+  }
+
+  .b10-main-grid,
+  .b10-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .b10-delay-grid {
+    grid-template-columns: 1fr;
+  }
+  .b10-numlist.b10-inline {
+    grid-template-columns: 1fr;
+  }
+  .b10-elite-wrap {
+    text-align: left;
+    min-width: 0;
+  }
+  .b10-elite-balls {
+    justify-content: flex-start;
   }
 }
 
