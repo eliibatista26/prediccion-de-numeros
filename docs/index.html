@@ -22,7 +22,7 @@
       <span class="header-logo">RD</span>
       <span class="header-title">Predicción Loterías RD</span>
     </div>
-    <p class="update-line">Última actualización: 07/06/2026 17:24 · America/Santo_Domingo</p>
+    <p class="update-line">Última actualización: 07/06/2026 17:53 · America/Santo_Domingo</p>
     <div class="header-actions">
       <button type="button" id="btn-update" data-open-update>⟳ Actualizar</button>
       <button type="button" data-open-help>Cómo usar</button>
@@ -628,7 +628,7 @@
       </section>
       <section>
         <h3>6. Actualización automática</h3>
-        <p>Última actualización: 07/06/2026 17:24 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
+        <p>Última actualización: 07/06/2026 17:53 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
       </section>
     </div>
     <div class="modal-note">
@@ -806,6 +806,8 @@
     }
 
     function renderCompare() {
+      if (!compareOutput) return;
+      try {
       updateCompareFields();
       const nameA = firstSelect.value;
       const nameB = secondSelect.value;
@@ -930,6 +932,10 @@
           </div>
         </div>
       `;
+      compareOutput.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } catch(err) {
+        compareOutput.innerHTML = `<p style="color:#dc2626;font-size:13px;padding:12px;">⚠ Error al renderizar: ${err.message}</p>`;
+      }
     }
 
     firstSelect.addEventListener('change', renderCompare);

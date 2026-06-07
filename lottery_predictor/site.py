@@ -483,6 +483,8 @@ def _render_html(predictions: dict[str, object]) -> str:
     }}
 
     function renderCompare() {{
+      if (!compareOutput) return;
+      try {{
       updateCompareFields();
       const nameA = firstSelect.value;
       const nameB = secondSelect.value;
@@ -607,6 +609,10 @@ def _render_html(predictions: dict[str, object]) -> str:
           </div>
         </div>
       `;
+      compareOutput.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+      }} catch(err) {{
+        compareOutput.innerHTML = `<p style="color:#dc2626;font-size:13px;padding:12px;">⚠ Error al renderizar: ${{err.message}}</p>`;
+      }}
     }}
 
     firstSelect.addEventListener('change', renderCompare);
