@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-08T03:25:18-04:00",
-  "generated_at_display": "08/06/2026 03:25",
+  "generated_at": "2026-06-08T03:56:19-04:00",
+  "generated_at_display": "08/06/2026 03:56",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -10,7 +10,7 @@
     "window": {
       "from": "2010-08-01",
       "to": "2026-06-07",
-      "results": 29265
+      "results": 29267
     },
     "top_10_repeated": [
       {
@@ -197,12 +197,6 @@
           "frequency": 283
         },
         {
-          "number": "09",
-          "delay_days": 32,
-          "last_seen": "2026-05-06",
-          "frequency": 282
-        },
-        {
           "number": "12",
           "delay_days": 30,
           "last_seen": "2026-05-08",
@@ -219,6 +213,12 @@
           "delay_days": 28,
           "last_seen": "2026-05-10",
           "frequency": 285
+        },
+        {
+          "number": "16",
+          "delay_days": 27,
+          "last_seen": "2026-05-11",
+          "frequency": 281
         }
       ],
       "3": [
@@ -916,6 +916,13 @@
         "days_ago_b": 0
       },
       {
+        "number": "37",
+        "mirror": "73",
+        "diff_days": 0,
+        "days_ago_a": 0,
+        "days_ago_b": 0
+      },
+      {
         "number": "13",
         "mirror": "31",
         "diff_days": 0,
@@ -951,6 +958,13 @@
         "days_ago_b": 1
       },
       {
+        "number": "09",
+        "mirror": "90",
+        "diff_days": 1,
+        "days_ago_a": 0,
+        "days_ago_b": 1
+      },
+      {
         "number": "12",
         "mirror": "21",
         "diff_days": 1,
@@ -970,20 +984,6 @@
         "diff_days": 1,
         "days_ago_a": 0,
         "days_ago_b": 1
-      },
-      {
-        "number": "07",
-        "mirror": "70",
-        "diff_days": 1,
-        "days_ago_a": 1,
-        "days_ago_b": 2
-      },
-      {
-        "number": "28",
-        "mirror": "82",
-        "diff_days": 1,
-        "days_ago_a": 1,
-        "days_ago_b": 2
       }
     ],
     "moving_numbers": [
@@ -1127,7 +1127,7 @@
       },
       {
         "number": "73",
-        "score": 354.12,
+        "score": 355.15,
         "frequency": 884,
         "recent": 3,
         "recent_7": 3,
@@ -1249,7 +1249,7 @@
       },
       {
         "number": "73",
-        "score": 354.12,
+        "score": 355.15,
         "frequency": 884,
         "recent": 3,
         "recent_7": 3,
@@ -2773,10 +2773,17 @@
           "recent_frequency": 0
         },
         {
+          "number": "09",
+          "score": 92.61,
+          "frequency": 89,
+          "delay_days": 1,
+          "recent_frequency": 2
+        },
+        {
           "number": "56",
-          "score": 90.8,
-          "frequency": 87,
-          "delay_days": 24,
+          "score": 91.61,
+          "frequency": 88,
+          "delay_days": 1,
           "recent_frequency": 2
         },
         {
@@ -2785,13 +2792,6 @@
           "frequency": 87,
           "delay_days": 13,
           "recent_frequency": 2
-        },
-        {
-          "number": "63",
-          "score": 90.41,
-          "frequency": 90,
-          "delay_days": 50,
-          "recent_frequency": 0
         }
       ],
       "last_results": [
@@ -2902,6 +2902,13 @@
               "recent_frequency": 2
             },
             {
+              "number": "56",
+              "score": 93.41,
+              "frequency": 88,
+              "delay_days": 1,
+              "recent_frequency": 3
+            },
+            {
               "number": "52",
               "score": 93.28,
               "frequency": 93,
@@ -2916,25 +2923,18 @@
               "recent_frequency": 0
             },
             {
-              "number": "93",
-              "score": 91.44,
-              "frequency": 86,
-              "delay_days": 5,
-              "recent_frequency": 3
-            },
-            {
-              "number": "56",
-              "score": 90.8,
-              "frequency": 87,
-              "delay_days": 24,
-              "recent_frequency": 2
-            },
-            {
               "number": "10",
               "score": 90.71,
               "frequency": 87,
               "delay_days": 13,
               "recent_frequency": 2
+            },
+            {
+              "number": "63",
+              "score": 90.41,
+              "frequency": 90,
+              "delay_days": 50,
+              "recent_frequency": 0
             }
           ],
           "last_results": [
@@ -3127,10 +3127,10 @@
       "suggestions": [
         {
           "number": "18",
-          "score": 88.52,
+          "score": 86.72,
           "frequency": 83,
           "delay_days": 14,
-          "recent_frequency": 3
+          "recent_frequency": 2
         },
         {
           "number": "42",
@@ -3138,13 +3138,6 @@
           "frequency": 78,
           "delay_days": 11,
           "recent_frequency": 4
-        },
-        {
-          "number": "14",
-          "score": 83.97,
-          "frequency": 82,
-          "delay_days": 21,
-          "recent_frequency": 1
         },
         {
           "number": "79",
@@ -3161,11 +3154,25 @@
           "recent_frequency": 2
         },
         {
+          "number": "14",
+          "score": 82.17,
+          "frequency": 82,
+          "delay_days": 21,
+          "recent_frequency": 0
+        },
+        {
           "number": "41",
           "score": 81.84,
           "frequency": 80,
           "delay_days": 5,
           "recent_frequency": 1
+        },
+        {
+          "number": "43",
+          "score": 80.61,
+          "frequency": 77,
+          "delay_days": 1,
+          "recent_frequency": 2
         },
         {
           "number": "19",
@@ -3175,10 +3182,10 @@
           "recent_frequency": 3
         },
         {
-          "number": "43",
-          "score": 77.95,
-          "frequency": 76,
-          "delay_days": 18,
+          "number": "55",
+          "score": 78.81,
+          "frequency": 77,
+          "delay_days": 1,
           "recent_frequency": 1
         },
         {
@@ -3187,13 +3194,6 @@
           "frequency": 76,
           "delay_days": 14,
           "recent_frequency": 1
-        },
-        {
-          "number": "56",
-          "score": 77.76,
-          "frequency": 74,
-          "delay_days": 19,
-          "recent_frequency": 2
         }
       ],
       "last_results": [
@@ -3806,6 +3806,27 @@
               "recent_frequency": 1
             },
             {
+              "number": "09",
+              "score": 2.81,
+              "frequency": 1,
+              "delay_days": 1,
+              "recent_frequency": 1
+            },
+            {
+              "number": "39",
+              "score": 2.81,
+              "frequency": 1,
+              "delay_days": 1,
+              "recent_frequency": 1
+            },
+            {
+              "number": "85",
+              "score": 2.81,
+              "frequency": 1,
+              "delay_days": 1,
+              "recent_frequency": 1
+            },
+            {
               "number": "00",
               "score": 0.75,
               "frequency": 0,
@@ -3828,27 +3849,6 @@
             },
             {
               "number": "03",
-              "score": 0.75,
-              "frequency": 0,
-              "delay_days": null,
-              "recent_frequency": 0
-            },
-            {
-              "number": "04",
-              "score": 0.75,
-              "frequency": 0,
-              "delay_days": null,
-              "recent_frequency": 0
-            },
-            {
-              "number": "05",
-              "score": 0.75,
-              "frequency": 0,
-              "delay_days": null,
-              "recent_frequency": 0
-            },
-            {
-              "number": "06",
               "score": 0.75,
               "frequency": 0,
               "delay_days": null,
