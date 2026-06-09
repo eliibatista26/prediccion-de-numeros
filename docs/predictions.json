@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-09T00:40:51-04:00",
-  "generated_at_display": "09/06/2026 00:40",
+  "generated_at": "2026-06-09T04:24:34-04:00",
+  "generated_at_display": "09/06/2026 04:24",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1381,23 +1381,23 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-06-08",
-          "numbers": [
-            81,
-            88,
-            82
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-06-08",
           "numbers": [
             37,
             17,
             73
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-06-08",
+          "numbers": [
+            81,
+            88,
+            82
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
