@@ -2121,6 +2121,10 @@ main {
   align-items: flex-end;
 }
 
+.cmp-row-dates[hidden] {
+  display: none;
+}
+
 .cmp-label {
   display: grid;
   gap: 4px;
