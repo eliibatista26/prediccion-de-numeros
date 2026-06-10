@@ -356,6 +356,7 @@ def _render_html(predictions: dict[str, object]) -> str:
     const compareTo    = document.querySelector('[data-compare-to]');
     const compareDay   = document.querySelector('[data-compare-day]');
     const compareWeekday = document.querySelector('[data-compare-weekday]');
+    const compareMonthPick = document.querySelector('[data-compare-monthpick]');
     const compareDateFields      = document.querySelectorAll('[data-compare-date-field]');
     const compareHistoricalFields = document.querySelectorAll('[data-compare-historical-field]');
     const compareOutput = document.querySelector('[data-compare-output]');
@@ -410,11 +411,13 @@ def _render_html(predictions: dict[str, object]) -> str:
       if (mode === 'historical') {{
         const dd = compareDay.value;                       // '' o '01'-'31'
         const wd = compareWeekday ? compareWeekday.value : ''; // '' (todos) o '0'-'6' (0=domingo)
-        if (!dd && wd === '') return null; // requiere al menos un filtro
+        const mm = compareMonthPick ? compareMonthPick.value : ''; // '' o '01'-'12'
+        if (!dd && wd === '' && !mm) return null; // requiere al menos un filtro
         const c={{}}, p1={{}}, p2={{}}, p3={{}};
         (payload.daily || []).forEach(row => {{
           const ds = row[0]; // 'YYYYMMDD'
-          // Ambos filtros se exigen a la vez: solo fechas que son miércoles Y día 10
+          // Los filtros elegidos se exigen a la vez (ej. junio + miércoles + día 10)
+          if (mm && ds.slice(4, 6) !== mm) return;
           if (dd && ds.slice(6, 8) !== dd) return;
           if (wd !== '') {{
             const dt = new Date(+ds.slice(0,4), +ds.slice(4,6) - 1, +ds.slice(6,8));
@@ -469,7 +472,7 @@ def _render_html(predictions: dict[str, object]) -> str:
 
       if (!statsA || !statsB) {{
         compareOutput.innerHTML = compareMode.value === 'historical'
-          ? '<p class="cmp-hint">Selecciona un día de la semana y/o un día del mes. Si eliges ambos, busca las fechas que cumplen los dos (ej. todos los miércoles que caen en día 10).</p>'
+          ? '<p class="cmp-hint">Selecciona mes, día de la semana y/o día del mes. Los filtros se combinan (ej. todos los miércoles que caen en día 10, o todos los junios).</p>'
           : '<p class="cmp-hint">Selecciona un rango de fechas para comparar.</p>';
         return;
       }}
@@ -603,6 +606,7 @@ def _render_html(predictions: dict[str, object]) -> str:
     compareMode.addEventListener('change', renderCompare);
     compareDay.addEventListener('change', renderCompare);
     if (compareWeekday) compareWeekday.addEventListener('change', renderCompare);
+    if (compareMonthPick) compareMonthPick.addEventListener('change', renderCompare);
     // "Por fechas": auto-fire when both dates filled; button also works
     const cmpRunBtn = document.querySelector('[data-compare-run]');
     if (cmpRunBtn) cmpRunBtn.addEventListener('click', renderCompare);
@@ -1123,6 +1127,23 @@ def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str)
         <button type="button" class="cmp-run-btn" data-compare-run>Comparar</button>
       </div>
       <div class="cmp-row-dates" data-compare-historical-field hidden>
+        <label class="cmp-label">Mes
+          <select data-compare-monthpick>
+            <option value="">Todos</option>
+            <option value="01">Enero</option>
+            <option value="02">Febrero</option>
+            <option value="03">Marzo</option>
+            <option value="04">Abril</option>
+            <option value="05">Mayo</option>
+            <option value="06">Junio</option>
+            <option value="07">Julio</option>
+            <option value="08">Agosto</option>
+            <option value="09">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+          </select>
+        </label>
         <label class="cmp-label">Día de la semana
           <select data-compare-weekday>
             <option value="">Todos</option>
