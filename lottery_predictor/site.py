@@ -202,6 +202,7 @@ def _public_lottery_payload(name: str, payload: object) -> object:
     public = dict(payload)
     public.pop("compare_results", None)
     public.pop("compare_day_month", None)
+    public.pop("compare_daily", None)
     last_results = payload.get("last_results", [])
     if isinstance(last_results, list):
         public["last_results"] = [
@@ -354,10 +355,10 @@ def _render_html(predictions: dict[str, object]) -> str:
     const compareFrom  = document.querySelector('[data-compare-from]');
     const compareTo    = document.querySelector('[data-compare-to]');
     const compareDay   = document.querySelector('[data-compare-day]');
+    const compareWeekday = document.querySelector('[data-compare-weekday]');
     const compareDateFields      = document.querySelectorAll('[data-compare-date-field]');
     const compareHistoricalFields = document.querySelectorAll('[data-compare-historical-field]');
     const compareOutput = document.querySelector('[data-compare-output]');
-    const currentCompareMonth = comparePanel ? comparePanel.dataset.compareMonth : '';
 
     // ── helpers ────────────────────────────────────────────────────────────
     const cmpBall = (n, cls='') =>
@@ -406,12 +407,26 @@ def _render_html(predictions: dict[str, object]) -> str:
         if (!from && !to) return null; // require at least one date
         return aggregateMonths(payload, from, to);
       }}
-      if (mode === 'historical' && compareDay.value && currentCompareMonth) {{
-        const dayMonth = `${{currentCompareMonth}}-${{compareDay.value}}`;
-        const items = ((payload.dayMonth || {{}})[dayMonth] || []);
-        const c={{}};
-        items.forEach(i => {{ c[i.number] = (c[i.number]||0) + i.count; }});
-        return {{c, p1:{{}}, p2:{{}}, p3:{{}}}};
+      if (mode === 'historical') {{
+        const dd = compareDay.value;                       // '' o '01'-'31'
+        const wd = compareWeekday ? compareWeekday.value : ''; // '' (todos) o '0'-'6' (0=domingo)
+        if (!dd && wd === '') return null; // requiere al menos un filtro
+        const c={{}}, p1={{}}, p2={{}}, p3={{}};
+        (payload.daily || []).forEach(row => {{
+          const ds = row[0]; // 'YYYYMMDD'
+          // Ambos filtros se exigen a la vez: solo fechas que son miércoles Y día 10
+          if (dd && ds.slice(6, 8) !== dd) return;
+          if (wd !== '') {{
+            const dt = new Date(+ds.slice(0,4), +ds.slice(4,6) - 1, +ds.slice(6,8));
+            if (String(dt.getDay()) !== wd) return;
+          }}
+          const nums = row.slice(1).map(n => String(n).padStart(2, '0'));
+          nums.forEach(n => {{ c[n] = (c[n]||0) + 1; }});
+          if (nums[0] !== undefined) p1[nums[0]] = (p1[nums[0]]||0) + 1;
+          if (nums[1] !== undefined) p2[nums[1]] = (p2[nums[1]]||0) + 1;
+          if (nums[2] !== undefined) p3[nums[2]] = (p3[nums[2]]||0) + 1;
+        }});
+        return {{c, p1, p2, p3}};
       }}
       // "current" — use pre-computed suggestions as frequency proxy
       const c={{}};
@@ -453,7 +468,9 @@ def _render_html(predictions: dict[str, object]) -> str:
       const statsB = getLotteryStats(nameB);
 
       if (!statsA || !statsB) {{
-        compareOutput.innerHTML = '<p class="cmp-hint">Selecciona un rango de fechas para comparar.</p>';
+        compareOutput.innerHTML = compareMode.value === 'historical'
+          ? '<p class="cmp-hint">Selecciona un día de la semana y/o un día del mes. Si eliges ambos, busca las fechas que cumplen los dos (ej. todos los miércoles que caen en día 10).</p>'
+          : '<p class="cmp-hint">Selecciona un rango de fechas para comparar.</p>';
         return;
       }}
 
@@ -531,7 +548,12 @@ def _render_html(predictions: dict[str, object]) -> str:
       const card = (title, body) =>
         `<article class="b10-card"><h3>${{title}}</h3>${{body}}</article>`;
 
+      const histSummary = compareMode.value === 'historical'
+        ? `<p class="cmp-hint">Sorteos que coinciden con el filtro — ${{nameA}}: ${{Object.values(statsA.p1).reduce((a,b)=>a+b,0)}} · ${{nameB}}: ${{Object.values(statsB.p1).reduce((a,b)=>a+b,0)}}</p>`
+        : '';
+
       compareOutput.innerHTML = `
+        ${{histSummary}}
         <!-- 4 condiciones — igual que en Las 10 Base -->
         <div class="b10-card b10-four-cond">
           <h3>Las 4 condiciones — ${{nameA}} vs ${{nameB}}</h3>
@@ -580,6 +602,7 @@ def _render_html(predictions: dict[str, object]) -> str:
     secondSelect.addEventListener('change', renderCompare);
     compareMode.addEventListener('change', renderCompare);
     compareDay.addEventListener('change', renderCompare);
+    if (compareWeekday) compareWeekday.addEventListener('change', renderCompare);
     // "Por fechas": auto-fire when both dates filled; button also works
     const cmpRunBtn = document.querySelector('[data-compare-run]');
     if (cmpRunBtn) cmpRunBtn.addEventListener('click', renderCompare);
@@ -1069,7 +1092,7 @@ def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str)
                 if isinstance(item, dict)
             ],
             "months": _compare_month_data(data.get("compare_results", [])),
-            "dayMonth": data.get("compare_day_month", {}),
+            "daily": data.get("compare_daily", []),
         }
     json_data = json.dumps(compare_data, ensure_ascii=False).replace("</", "<\\/")
     current_month = actual_to_date[5:7] if len(actual_to_date) >= 7 else ""
@@ -1100,8 +1123,20 @@ def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str)
         <button type="button" class="cmp-run-btn" data-compare-run>Comparar</button>
       </div>
       <div class="cmp-row-dates" data-compare-historical-field hidden>
+        <label class="cmp-label">Día de la semana
+          <select data-compare-weekday>
+            <option value="">Todos</option>
+            <option value="1">Lunes</option>
+            <option value="2">Martes</option>
+            <option value="3">Miércoles</option>
+            <option value="4">Jueves</option>
+            <option value="5">Viernes</option>
+            <option value="6">Sábado</option>
+            <option value="0">Domingo</option>
+          </select>
+        </label>
         <label class="cmp-label">Día del mes
-          <select data-compare-day><option value="">Selecciona día</option>{day_options}</select>
+          <select data-compare-day><option value="">Todos</option>{day_options}</select>
         </label>
       </div>
     </div>

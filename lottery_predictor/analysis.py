@@ -101,7 +101,7 @@ def build_predictions(
         lotteries[lottery] = {
             "suggestions": _serialize_suggestions(suggestions),
             "last_results": [result.to_dict() for result in sorted(lottery_results, key=lambda item: item.draw_date, reverse=True)[:8]],
-            "compare_day_month": _compare_day_month_counts(lottery_results),
+            "compare_daily": _compare_daily_results(lottery_results),
             "compare_results": [
                 result.to_dict()
                 for result in sorted(lottery_results, key=lambda item: item.draw_date, reverse=True)[:COMPARE_RESULTS_LIMIT]
@@ -144,19 +144,17 @@ def _serialize_suggestions(suggestions: list[NumberSuggestion]) -> list[dict[str
     ]
 
 
-def _compare_day_month_counts(results: list[LotteryResult]) -> dict[str, list[dict[str, object]]]:
-    by_day_month: dict[str, Counter[int]] = defaultdict(Counter)
-    for result in results:
-        key = result.draw_date.strftime("%m-%d")
-        for number in result.numbers[:3]:
-            by_day_month[key][number] += 1
-    return {
-        key: [
-            {"number": f"{number:02d}", "count": count}
-            for number, count in counter.most_common(20)
-        ]
-        for key, counter in sorted(by_day_month.items())
-    }
+def _compare_daily_results(results: list[LotteryResult]) -> list[list[object]]:
+    """Lista compacta [fecha YYYYMMDD, n1, n2, n3] por sorteo.
+    Permite filtrar en JS por día del mes, día de la semana y rango de fechas,
+    conservando el orden de posiciones (1ra, 2da, 3ra)."""
+    rows: list[list[object]] = []
+    for result in sorted(results, key=lambda item: item.draw_date):
+        nums = [int(n) for n in result.numbers[:3]]
+        if not nums:
+            continue
+        rows.append([result.draw_date.strftime("%Y%m%d"), *nums])
+    return rows
 
 
 def suggest_numbers(
