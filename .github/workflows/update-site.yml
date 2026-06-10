@@ -45,17 +45,18 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
-          TODAY_UTC=$(date -u +%Y-%m-%d)
+          TODAY_RD=$(TZ=America/Santo_Domingo date +%Y-%m-%d)
+          HOUR_RD=$(TZ=America/Santo_Domingo date +%H)
           LAST_ANALYSIS=$(cat docs/.last-analysis-date 2>/dev/null || echo "")
           FULL_ANALYSIS="${{ github.event.inputs.full_analysis }}"
 
-          # Análisis completo si: es un día nuevo O se forzó manualmente
-          if [ "$LAST_ANALYSIS" != "$TODAY_UTC" ] || [ "$FULL_ANALYSIS" = "true" ]; then
-            echo "Modo: ANÁLISIS COMPLETO (último: $LAST_ANALYSIS → hoy: $TODAY_UTC)"
+          # Análisis completo: a las 11 PM hora de RD (una vez por día) O si se forzó manualmente
+          if { [ "$LAST_ANALYSIS" != "$TODAY_RD" ] && [ "$HOUR_RD" -ge 23 ]; } || [ "$FULL_ANALYSIS" = "true" ]; then
+            echo "Modo: ANÁLISIS COMPLETO (último: $LAST_ANALYSIS → hoy RD: $TODAY_RD, hora RD: $HOUR_RD)"
             python -m lottery_predictor.cli
-            echo "$TODAY_UTC" > docs/.last-analysis-date
+            echo "$TODAY_RD" > docs/.last-analysis-date
           else
-            echo "Modo: SOLO RESULTADOS (análisis ya hecho hoy: $LAST_ANALYSIS)"
+            echo "Modo: SOLO RESULTADOS (último análisis: $LAST_ANALYSIS, hora RD: $HOUR_RD)"
             python -m lottery_predictor.cli --preserve-predictions
           fi
 
