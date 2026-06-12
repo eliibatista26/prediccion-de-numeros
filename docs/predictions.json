@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-12T18:11:42-04:00",
-  "generated_at_display": "12/06/2026 18:11",
+  "generated_at": "2026-06-12T19:56:35-04:00",
+  "generated_at_display": "12/06/2026 19:56",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -3158,6 +3158,17 @@
         {
           "lottery": "La Primera",
           "draw": "Primera Noche",
+          "draw_date": "2026-06-12",
+          "numbers": [
+            73,
+            47,
+            9
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "Primera Noche",
           "draw_date": "2026-06-11",
           "numbers": [
             63,
@@ -3198,20 +3209,9 @@
             84
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "La Primera Día",
-          "draw_date": "2026-06-09",
-          "numbers": [
-            14,
-            54,
-            76
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 2229,
+      "total_results": 2231,
       "draws": {
         "La Primera Día": {
           "suggestions": [
@@ -3808,6 +3808,17 @@
             {
               "lottery": "La Primera",
               "draw": "Primera Noche",
+              "draw_date": "2026-06-12",
+              "numbers": [
+                73,
+                47,
+                9
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Primera",
+              "draw": "Primera Noche",
               "draw_date": "2026-06-11",
               "numbers": [
                 63,
@@ -3872,7 +3883,7 @@
               "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 6,
+          "total_results": 7,
           "backtest": {
             "status": "insufficient",
             "window_days": 60,
