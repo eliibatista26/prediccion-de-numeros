@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-11T20:24:51-04:00",
-  "generated_at_display": "11/06/2026 20:24",
+  "generated_at": "2026-06-12T01:18:48-04:00",
+  "generated_at_display": "12/06/2026 01:18",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1393,6 +1393,17 @@
         {
           "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
+          "draw_date": "2026-06-11",
+          "numbers": [
+            69,
+            40,
+            75
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Lotería Nacional",
           "draw_date": "2026-06-10",
           "numbers": [
             89,
@@ -1422,20 +1433,9 @@
             58
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-06-09",
-          "numbers": [
-            67,
-            66,
-            37
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 12601,
+      "total_results": 12602,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -1771,6 +1771,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Lotería Nacional",
+              "draw_date": "2026-06-11",
+              "numbers": [
+                69,
+                40,
+                75
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Lotería Nacional",
               "draw_date": "2026-06-10",
               "numbers": [
                 89,
@@ -1844,48 +1855,19 @@
                 22
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Lotería Nacional",
-              "draw_date": "2026-06-03",
-              "numbers": [
-                28,
-                31,
-                5
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 7526,
+          "total_results": 7527,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
             "top3_any_hit_rate": 0.082,
-            "top5_any_hit_rate": 0.131,
+            "top5_any_hit_rate": 0.148,
             "first_position_hit_rate": 0.016,
-            "average_hits_top5": 0.13,
+            "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-06",
-                "actual": [
-                  "07",
-                  "84",
-                  "80"
-                ],
-                "predicted": [
-                  "14",
-                  "61",
-                  "53",
-                  "75",
-                  "80"
-                ],
-                "hits": [
-                  "80"
-                ]
-              },
               {
                 "date": "2026-06-07",
                 "actual": [
@@ -1953,6 +1935,24 @@
                   "75"
                 ],
                 "hits": []
+              },
+              {
+                "date": "2026-06-11",
+                "actual": [
+                  "69",
+                  "40",
+                  "75"
+                ],
+                "predicted": [
+                  "14",
+                  "53",
+                  "61",
+                  "80",
+                  "75"
+                ],
+                "hits": [
+                  "75"
+                ]
               }
             ]
           }
@@ -2036,6 +2036,17 @@
         {
           "lottery": "Leidsa",
           "draw": "Quiniela Leidsa",
+          "draw_date": "2026-06-11",
+          "numbers": [
+            71,
+            32,
+            20
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Leidsa",
+          "draw": "Quiniela Leidsa",
           "draw_date": "2026-06-10",
           "numbers": [
             38,
@@ -2043,20 +2054,9 @@
             27
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Leidsa",
-          "draw": "Quiniela Leidsa",
-          "draw_date": "2026-06-09",
-          "numbers": [
-            14,
-            31,
-            78
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 5245,
+      "total_results": 5249,
       "draws": {
         "Quiniela Leidsa": {
           "suggestions": [
@@ -2135,6 +2135,17 @@
             {
               "lottery": "Leidsa",
               "draw": "Quiniela Leidsa",
+              "draw_date": "2026-06-11",
+              "numbers": [
+                71,
+                32,
+                20
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Leidsa",
+              "draw": "Quiniela Leidsa",
               "draw_date": "2026-06-10",
               "numbers": [
                 38,
@@ -2208,46 +2219,19 @@
                 34
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela Leidsa",
-              "draw_date": "2026-06-03",
-              "numbers": [
-                20,
-                49,
-                82
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5228,
+          "total_results": 5229,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
-            "top3_any_hit_rate": 0.115,
-            "top5_any_hit_rate": 0.131,
+            "top3_any_hit_rate": 0.098,
+            "top5_any_hit_rate": 0.115,
             "first_position_hit_rate": 0.049,
-            "average_hits_top5": 0.13,
+            "average_hits_top5": 0.11,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-06",
-                "actual": [
-                  "46",
-                  "18",
-                  "14"
-                ],
-                "predicted": [
-                  "21",
-                  "57",
-                  "63",
-                  "22",
-                  "81"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-07",
                 "actual": [
@@ -2302,6 +2286,22 @@
                   "38",
                   "95",
                   "27"
+                ],
+                "predicted": [
+                  "21",
+                  "57",
+                  "22",
+                  "63",
+                  "81"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-11",
+                "actual": [
+                  "71",
+                  "32",
+                  "20"
                 ],
                 "predicted": [
                   "21",
