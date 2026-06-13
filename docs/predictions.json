@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-13T18:50:42-04:00",
-  "generated_at_display": "13/06/2026 18:50",
+  "generated_at": "2026-06-13T19:56:02-04:00",
+  "generated_at_display": "13/06/2026 19:56",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -3158,6 +3158,17 @@
         {
           "lottery": "La Primera",
           "draw": "Primera Noche",
+          "draw_date": "2026-06-13",
+          "numbers": [
+            83,
+            60,
+            47
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "Primera Noche",
           "draw_date": "2026-06-12",
           "numbers": [
             73,
@@ -3187,31 +3198,9 @@
             45
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "La Primera Día",
-          "draw_date": "2026-06-10",
-          "numbers": [
-            79,
-            18,
-            54
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "Primera Noche",
-          "draw_date": "2026-06-09",
-          "numbers": [
-            39,
-            14,
-            84
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 2231,
+      "total_results": 2233,
       "draws": {
         "La Primera Día": {
           "suggestions": [
@@ -3808,6 +3797,17 @@
             {
               "lottery": "La Primera",
               "draw": "Primera Noche",
+              "draw_date": "2026-06-13",
+              "numbers": [
+                83,
+                60,
+                47
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Primera",
+              "draw": "Primera Noche",
               "draw_date": "2026-06-12",
               "numbers": [
                 73,
@@ -3883,7 +3883,7 @@
               "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 7,
+          "total_results": 8,
           "backtest": {
             "status": "insufficient",
             "window_days": 60,
