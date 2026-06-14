@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-14T14:21:20-04:00",
-  "generated_at_display": "14/06/2026 14:21",
+  "generated_at": "2026-06-14T16:03:23-04:00",
+  "generated_at_display": "14/06/2026 16:03",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1381,6 +1381,17 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-06-14",
+          "numbers": [
+            37,
+            42,
+            33
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-06-13",
           "numbers": [
@@ -1422,20 +1433,9 @@
             35
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Lotería Nacional",
-          "draw_date": "2026-06-11",
-          "numbers": [
-            69,
-            40,
-            75
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 12608,
+      "total_results": 12610,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -1514,6 +1514,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Gana Más",
+              "draw_date": "2026-06-14",
+              "numbers": [
+                37,
+                42,
+                33
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Gana Más",
               "draw_date": "2026-06-13",
               "numbers": [
                 61,
@@ -1587,20 +1598,9 @@
                 78
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Gana Más",
-              "draw_date": "2026-06-06",
-              "numbers": [
-                13,
-                60,
-                30
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5071,
+          "total_results": 5072,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -1611,22 +1611,6 @@
             "average_hits_top5": 0.13,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-09",
-                "actual": [
-                  "67",
-                  "66",
-                  "37"
-                ],
-                "predicted": [
-                  "41",
-                  "32",
-                  "91",
-                  "89",
-                  "26"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-10",
                 "actual": [
@@ -1681,6 +1665,22 @@
                   "61",
                   "39",
                   "11"
+                ],
+                "predicted": [
+                  "41",
+                  "32",
+                  "91",
+                  "89",
+                  "26"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-14",
+                "actual": [
+                  "37",
+                  "42",
+                  "33"
                 ],
                 "predicted": [
                   "41",
@@ -2036,6 +2036,17 @@
         {
           "lottery": "Leidsa",
           "draw": "Quiniela Leidsa",
+          "draw_date": "2026-06-14",
+          "numbers": [
+            19,
+            32,
+            85
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Leidsa",
+          "draw": "Quiniela Leidsa",
           "draw_date": "2026-06-13",
           "numbers": [
             85,
@@ -2043,20 +2054,9 @@
             78
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Leidsa",
-          "draw": "Quiniela Leidsa",
-          "draw_date": "2026-06-12",
-          "numbers": [
-            53,
-            7,
-            63
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 5258,
+      "total_results": 5262,
       "draws": {
         "Quiniela Leidsa": {
           "suggestions": [
@@ -2135,6 +2135,17 @@
             {
               "lottery": "Leidsa",
               "draw": "Quiniela Leidsa",
+              "draw_date": "2026-06-14",
+              "numbers": [
+                19,
+                32,
+                85
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Leidsa",
+              "draw": "Quiniela Leidsa",
               "draw_date": "2026-06-13",
               "numbers": [
                 85,
@@ -2208,20 +2219,9 @@
                 77
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela Leidsa",
-              "draw_date": "2026-06-06",
-              "numbers": [
-                46,
-                18,
-                14
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5231,
+          "total_results": 5232,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -2232,22 +2232,6 @@
             "average_hits_top5": 0.11,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-09",
-                "actual": [
-                  "14",
-                  "31",
-                  "78"
-                ],
-                "predicted": [
-                  "21",
-                  "57",
-                  "22",
-                  "63",
-                  "81"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-10",
                 "actual": [
@@ -2304,6 +2288,22 @@
                   "85",
                   "45",
                   "78"
+                ],
+                "predicted": [
+                  "21",
+                  "57",
+                  "63",
+                  "22",
+                  "81"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-14",
+                "actual": [
+                  "19",
+                  "32",
+                  "85"
                 ],
                 "predicted": [
                   "21",
