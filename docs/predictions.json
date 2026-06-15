@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-15T12:30:54-04:00",
-  "generated_at_display": "15/06/2026 12:30",
+  "generated_at": "2026-06-15T16:05:48-04:00",
+  "generated_at_display": "15/06/2026 16:05",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1381,6 +1381,17 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-06-15",
+          "numbers": [
+            44,
+            50,
+            62
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-06-14",
           "numbers": [
@@ -1422,20 +1433,9 @@
             11
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Lotería Nacional",
-          "draw_date": "2026-06-12",
-          "numbers": [
-            94,
-            45,
-            42
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 12611,
+      "total_results": 12613,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -1514,6 +1514,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Gana Más",
+              "draw_date": "2026-06-15",
+              "numbers": [
+                44,
+                50,
+                62
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Gana Más",
               "draw_date": "2026-06-14",
               "numbers": [
                 37,
@@ -1587,20 +1598,9 @@
                 82
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Gana Más",
-              "draw_date": "2026-06-07",
-              "numbers": [
-                96,
-                51,
-                78
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5072,
+          "total_results": 5073,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -1611,22 +1611,6 @@
             "average_hits_top5": 0.13,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-10",
-                "actual": [
-                  "02",
-                  "17",
-                  "28"
-                ],
-                "predicted": [
-                  "41",
-                  "32",
-                  "91",
-                  "89",
-                  "26"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-11",
                 "actual": [
@@ -1688,6 +1672,22 @@
                   "91",
                   "89",
                   "26"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-15",
+                "actual": [
+                  "44",
+                  "50",
+                  "62"
+                ],
+                "predicted": [
+                  "41",
+                  "32",
+                  "91",
+                  "42",
+                  "89"
                 ],
                 "hits": []
               }
@@ -2394,6 +2394,17 @@
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
+          "draw_date": "2026-06-15",
+          "numbers": [
+            18,
+            18,
+            24
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Real",
+          "draw": "Quiniela Real",
           "draw_date": "2026-06-14",
           "numbers": [
             49,
@@ -2423,20 +2434,9 @@
             98
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Real",
-          "draw": "Quiniela Real",
-          "draw_date": "2026-06-11",
-          "numbers": [
-            44,
-            85,
-            65
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 3437,
+      "total_results": 3439,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -2515,6 +2515,17 @@
             {
               "lottery": "Lotería Real",
               "draw": "Quiniela Real",
+              "draw_date": "2026-06-15",
+              "numbers": [
+                18,
+                18,
+                24
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Real",
+              "draw": "Quiniela Real",
               "draw_date": "2026-06-14",
               "numbers": [
                 49,
@@ -2588,20 +2599,9 @@
                 31
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Real",
-              "draw": "Quiniela Real",
-              "draw_date": "2026-06-07",
-              "numbers": [
-                57,
-                99,
-                26
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 3425,
+          "total_results": 3426,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -2612,22 +2612,6 @@
             "average_hits_top5": 0.16,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-10",
-                "actual": [
-                  "62",
-                  "51",
-                  "76"
-                ],
-                "predicted": [
-                  "26",
-                  "65",
-                  "43",
-                  "17",
-                  "89"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-11",
                 "actual": [
@@ -2684,6 +2668,22 @@
                   "49",
                   "39",
                   "37"
+                ],
+                "predicted": [
+                  "26",
+                  "65",
+                  "43",
+                  "17",
+                  "89"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-15",
+                "actual": [
+                  "18",
+                  "18",
+                  "24"
                 ],
                 "predicted": [
                   "26",
@@ -3970,6 +3970,17 @@
         {
           "lottery": "La Suerte Dominicana",
           "draw": "La Suerte MD",
+          "draw_date": "2026-06-15",
+          "numbers": [
+            4,
+            96,
+            24
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Suerte Dominicana",
+          "draw": "La Suerte MD",
           "draw_date": "2026-06-14",
           "numbers": [
             3,
@@ -4043,20 +4054,9 @@
             8
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Suerte Dominicana",
-          "draw": "La Suerte 6PM",
-          "draw_date": "2026-06-11",
-          "numbers": [
-            41,
-            33,
-            0
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 3269,
+      "total_results": 3270,
       "draws": {
         "La Suerte 6PM": {
           "suggestions": [
@@ -4393,6 +4393,17 @@
             {
               "lottery": "La Suerte Dominicana",
               "draw": "La Suerte MD",
+              "draw_date": "2026-06-15",
+              "numbers": [
+                4,
+                96,
+                24
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Suerte Dominicana",
+              "draw": "La Suerte MD",
               "draw_date": "2026-06-14",
               "numbers": [
                 3,
@@ -4466,20 +4477,9 @@
                 94
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Suerte Dominicana",
-              "draw": "La Suerte MD",
-              "draw_date": "2026-06-07",
-              "numbers": [
-                43,
-                73,
-                55
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2034,
+          "total_results": 2035,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -4490,22 +4490,6 @@
             "average_hits_top5": 0.13,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-10",
-                "actual": [
-                  "08",
-                  "30",
-                  "97"
-                ],
-                "predicted": [
-                  "18",
-                  "07",
-                  "42",
-                  "61",
-                  "71"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-11",
                 "actual": [
@@ -4560,6 +4544,22 @@
                   "03",
                   "80",
                   "55"
+                ],
+                "predicted": [
+                  "18",
+                  "07",
+                  "42",
+                  "61",
+                  "71"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-15",
+                "actual": [
+                  "04",
+                  "96",
+                  "24"
                 ],
                 "predicted": [
                   "18",
