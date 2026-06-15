@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-14T19:56:12-04:00",
-  "generated_at_display": "14/06/2026 19:56",
+  "generated_at": "2026-06-15T01:23:22-04:00",
+  "generated_at_display": "15/06/2026 01:23",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -2776,6 +2776,17 @@
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
+          "draw_date": "2026-06-14",
+          "numbers": [
+            86,
+            83,
+            74
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Loteka",
+          "draw": "Quiniela Loteka",
           "draw_date": "2026-06-13",
           "numbers": [
             19,
@@ -2805,20 +2816,9 @@
             81
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Loteka",
-          "draw": "Quiniela Loteka",
-          "draw_date": "2026-06-10",
-          "numbers": [
-            7,
-            25,
-            12
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 2632,
+      "total_results": 2634,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -2897,6 +2897,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-06-14",
+              "numbers": [
+                86,
+                83,
+                74
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-06-13",
               "numbers": [
                 19,
@@ -2970,20 +2981,9 @@
                 11
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-06-06",
-              "numbers": [
-                99,
-                21,
-                94
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2624,
+          "total_results": 2625,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -2994,22 +2994,6 @@
             "average_hits_top5": 0.16,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-09",
-                "actual": [
-                  "41",
-                  "58",
-                  "24"
-                ],
-                "predicted": [
-                  "28",
-                  "17",
-                  "98",
-                  "75",
-                  "42"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-10",
                 "actual": [
@@ -3075,6 +3059,22 @@
                 "hits": [
                   "17"
                 ]
+              },
+              {
+                "date": "2026-06-14",
+                "actual": [
+                  "86",
+                  "83",
+                  "74"
+                ],
+                "predicted": [
+                  "28",
+                  "17",
+                  "98",
+                  "75",
+                  "52"
+                ],
+                "hits": []
               }
             ]
           }
