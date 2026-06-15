@@ -80,6 +80,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "La Suerte Dominicana",
+    "draw": "La Suerte 6PM",
+    "draw_date": "2026-06-15",
+    "numbers": [
+      25,
+      47,
+      76
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "King Lottery",
     "draw": "King Lottery 12:30",
     "draw_date": "2026-06-15",
@@ -98,6 +109,17 @@
       81,
       30,
       40
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 6:00 PM",
+    "draw_date": "2026-06-15",
+    "numbers": [
+      70,
+      14,
+      27
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
