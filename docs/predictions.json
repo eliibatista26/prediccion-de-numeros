@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-16T18:01:38-04:00",
-  "generated_at_display": "16/06/2026 18:01",
+  "generated_at": "2026-06-16T19:44:55-04:00",
+  "generated_at_display": "16/06/2026 19:44",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -3156,6 +3156,17 @@
         {
           "lottery": "La Primera",
           "draw": "Primera Noche",
+          "draw_date": "2026-06-16",
+          "numbers": [
+            57,
+            4,
+            68
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "Primera Noche",
           "draw_date": "2026-06-15",
           "numbers": [
             79,
@@ -3185,20 +3196,9 @@
             47
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "Primera Noche",
-          "draw_date": "2026-06-12",
-          "numbers": [
-            73,
-            47,
-            9
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 2237,
+      "total_results": 2239,
       "draws": {
         "La Primera Día": {
           "suggestions": [
@@ -3795,6 +3795,17 @@
             {
               "lottery": "La Primera",
               "draw": "Primera Noche",
+              "draw_date": "2026-06-16",
+              "numbers": [
+                57,
+                4,
+                68
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Primera",
+              "draw": "Primera Noche",
               "draw_date": "2026-06-15",
               "numbers": [
                 79,
@@ -3868,20 +3879,9 @@
                 84
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Primera",
-              "draw": "Primera Noche",
-              "draw_date": "2026-06-08",
-              "numbers": [
-                61,
-                79,
-                72
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 10,
+          "total_results": 11,
           "backtest": {
             "status": "insufficient",
             "window_days": 60,
@@ -3978,6 +3978,17 @@
         },
         {
           "lottery": "La Suerte Dominicana",
+          "draw": "La Suerte 6PM",
+          "draw_date": "2026-06-16",
+          "numbers": [
+            39,
+            59,
+            34
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Suerte Dominicana",
           "draw": "La Suerte MD",
           "draw_date": "2026-06-15",
           "numbers": [
@@ -4041,20 +4052,9 @@
             13
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Suerte Dominicana",
-          "draw": "La Suerte MD",
-          "draw_date": "2026-06-12",
-          "numbers": [
-            29,
-            59,
-            49
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 3272,
+      "total_results": 3273,
       "draws": {
         "La Suerte 6PM": {
           "suggestions": [
@@ -4133,6 +4133,17 @@
             {
               "lottery": "La Suerte Dominicana",
               "draw": "La Suerte 6PM",
+              "draw_date": "2026-06-16",
+              "numbers": [
+                39,
+                59,
+                34
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Suerte Dominicana",
+              "draw": "La Suerte 6PM",
               "draw_date": "2026-06-15",
               "numbers": [
                 25,
@@ -4206,20 +4217,9 @@
                 79
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Suerte Dominicana",
-              "draw": "La Suerte 6PM",
-              "draw_date": "2026-06-08",
-              "numbers": [
-                4,
-                1,
-                42
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 1236,
+          "total_results": 1237,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -4230,22 +4230,6 @@
             "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-11",
-                "actual": [
-                  "41",
-                  "33",
-                  "00"
-                ],
-                "predicted": [
-                  "73",
-                  "53",
-                  "79",
-                  "35",
-                  "92"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-12",
                 "actual": [
@@ -4300,6 +4284,22 @@
                   "25",
                   "47",
                   "76"
+                ],
+                "predicted": [
+                  "73",
+                  "53",
+                  "79",
+                  "35",
+                  "92"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-16",
+                "actual": [
+                  "39",
+                  "59",
+                  "34"
                 ],
                 "predicted": [
                   "73",
