@@ -58,6 +58,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "Loteka",
+    "draw": "Quiniela Loteka",
+    "draw_date": "2026-06-17",
+    "numbers": [
+      68,
+      79,
+      42
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotedom",
     "draw": "LoteDom",
     "draw_date": "2026-06-17",
@@ -87,6 +98,42 @@
       44,
       34,
       80
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Primera",
+    "draw": "Primera Noche",
+    "draw_date": "2026-06-17",
+    "numbers": [
+      28,
+      84,
+      72
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Primera",
+    "draw": "Loto 5",
+    "draw_date": "2026-06-17",
+    "numbers": [
+      21,
+      20,
+      27,
+      31,
+      22,
+      1
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "King Lottery 7:30",
+    "draw_date": "2026-06-17",
+    "numbers": [
+      63,
+      82,
+      60
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
