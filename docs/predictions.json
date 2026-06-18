@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-18T08:39:15-04:00",
-  "generated_at_display": "18/06/2026 08:39",
+  "generated_at": "2026-06-18T12:19:35-04:00",
+  "generated_at_display": "18/06/2026 12:19",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
-  "actual_to_date": "2026-06-17",
+  "actual_to_date": "2026-06-18",
   "disclaimer": "Estas sugerencias son estadísticas y no garantizan resultados.",
   "base_10": {
     "window": {
@@ -4645,6 +4645,17 @@
         {
           "lottery": "Lotedom",
           "draw": "LoteDom",
+          "draw_date": "2026-06-18",
+          "numbers": [
+            68,
+            35,
+            82
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotedom",
+          "draw": "LoteDom",
           "draw_date": "2026-06-17",
           "numbers": [
             14,
@@ -4718,20 +4729,9 @@
             28
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotedom",
-          "draw": "LoteDom",
-          "draw_date": "2026-06-10",
-          "numbers": [
-            45,
-            18,
-            86
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 2053,
+      "total_results": 2054,
       "draws": {
         "LoteDom": {
           "suggestions": [
@@ -4810,6 +4810,17 @@
             {
               "lottery": "Lotedom",
               "draw": "LoteDom",
+              "draw_date": "2026-06-18",
+              "numbers": [
+                68,
+                35,
+                82
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotedom",
+              "draw": "LoteDom",
               "draw_date": "2026-06-17",
               "numbers": [
                 14,
@@ -4883,20 +4894,9 @@
                 28
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotedom",
-              "draw": "LoteDom",
-              "draw_date": "2026-06-10",
-              "numbers": [
-                45,
-                18,
-                86
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2053,
+          "total_results": 2054,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -4907,24 +4907,6 @@
             "average_hits_top5": 0.31,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-06-13",
-                "actual": [
-                  "28",
-                  "11",
-                  "80"
-                ],
-                "predicted": [
-                  "12",
-                  "28",
-                  "21",
-                  "49",
-                  "48"
-                ],
-                "hits": [
-                  "28"
-                ]
-              },
               {
                 "date": "2026-06-14",
                 "actual": [
@@ -4984,6 +4966,22 @@
                   "12",
                   "28",
                   "21",
+                  "49",
+                  "80"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-18",
+                "actual": [
+                  "68",
+                  "35",
+                  "82"
+                ],
+                "predicted": [
+                  "12",
+                  "21",
+                  "28",
                   "49",
                   "80"
                 ],
