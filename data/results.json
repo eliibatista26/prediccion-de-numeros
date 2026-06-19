@@ -1,5 +1,16 @@
 [
   {
+    "lottery": "New York",
+    "draw": "New York 3:30",
+    "draw_date": "2026-06-19",
+    "numbers": [
+      87,
+      45,
+      64
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotería Real",
     "draw": "Quiniela Real",
     "draw_date": "2026-06-19",
@@ -19,6 +30,30 @@
       52,
       30,
       48
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
+    "draw": "Juega + Pega +",
+    "draw_date": "2026-06-19",
+    "numbers": [
+      18,
+      26,
+      8,
+      3,
+      20
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
+    "draw": "Gana Más",
+    "draw_date": "2026-06-19",
+    "numbers": [
+      87,
+      30,
+      86
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -52,6 +87,28 @@
       44,
       37,
       90
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
+    "draw": "Florida Día",
+    "draw_date": "2026-06-19",
+    "numbers": [
+      56,
+      67,
+      85
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 1:00 PM",
+    "draw_date": "2026-06-19",
+    "numbers": [
+      65,
+      15,
+      22
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
