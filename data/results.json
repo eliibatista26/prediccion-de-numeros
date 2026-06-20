@@ -1,5 +1,16 @@
 [
   {
+    "lottery": "New York",
+    "draw": "New York 3:30",
+    "draw_date": "2026-06-20",
+    "numbers": [
+      76,
+      40,
+      88
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotería Real",
     "draw": "Quiniela Real",
     "draw_date": "2026-06-20",
@@ -18,6 +29,30 @@
       74,
       53,
       33,
+      10
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
+    "draw": "Juega + Pega +",
+    "draw_date": "2026-06-20",
+    "numbers": [
+      19,
+      16,
+      17,
+      2,
+      18
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
+    "draw": "Gana Más",
+    "draw_date": "2026-06-20",
+    "numbers": [
+      99,
+      53,
       10
     ],
     "source": "https://www.conectate.com.do/loterias/"
