@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-19T21:33:26-04:00",
-  "generated_at_display": "19/06/2026 21:33",
+  "generated_at": "2026-06-20T02:01:22-04:00",
+  "generated_at_display": "20/06/2026 02:01",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1381,23 +1381,23 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-06-19",
-          "numbers": [
-            87,
-            30,
-            86
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-06-19",
           "numbers": [
             63,
             29,
             61
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-06-19",
+          "numbers": [
+            87,
+            30,
+            86
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -3162,6 +3162,17 @@
         },
         {
           "lottery": "La Primera",
+          "draw": "La Primera Día",
+          "draw_date": "2026-06-19",
+          "numbers": [
+            54,
+            56,
+            13
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
           "draw": "Primera Noche",
           "draw_date": "2026-06-18",
           "numbers": [
@@ -3194,7 +3205,7 @@
           "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 2245,
+      "total_results": 2246,
       "draws": {
         "La Primera Día": {
           "suggestions": [
@@ -3273,6 +3284,17 @@
             {
               "lottery": "La Primera",
               "draw": "La Primera Día",
+              "draw_date": "2026-06-19",
+              "numbers": [
+                54,
+                56,
+                13
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Primera",
+              "draw": "La Primera Día",
               "draw_date": "2026-06-10",
               "numbers": [
                 79,
@@ -3346,46 +3368,19 @@
                 1
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Primera",
-              "draw": "La Primera Día",
-              "draw_date": "2026-05-24",
-              "numbers": [
-                90,
-                42,
-                49
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 860,
+          "total_results": 861,
           "backtest": {
             "status": "ok",
             "window_days": 60,
-            "tested_draws": 48,
-            "top3_any_hit_rate": 0.104,
-            "top5_any_hit_rate": 0.146,
-            "first_position_hit_rate": 0.083,
-            "average_hits_top5": 0.15,
+            "tested_draws": 40,
+            "top3_any_hit_rate": 0.075,
+            "top5_any_hit_rate": 0.125,
+            "first_position_hit_rate": 0.05,
+            "average_hits_top5": 0.12,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-06",
-                "actual": [
-                  "38",
-                  "94",
-                  "87"
-                ],
-                "predicted": [
-                  "14",
-                  "23",
-                  "97",
-                  "64",
-                  "90"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-07",
                 "actual": [
@@ -3442,6 +3437,22 @@
                   "79",
                   "18",
                   "54"
+                ],
+                "predicted": [
+                  "14",
+                  "23",
+                  "97",
+                  "64",
+                  "90"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-19",
+                "actual": [
+                  "54",
+                  "56",
+                  "13"
                 ],
                 "predicted": [
                   "14",

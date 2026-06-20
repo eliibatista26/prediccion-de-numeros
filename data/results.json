@@ -11,6 +11,31 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-06-19",
+    "numbers": [
+      11,
+      73,
+      62
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Mega Millions",
+    "draw": "Mega Millions",
+    "draw_date": "2026-06-19",
+    "numbers": [
+      13,
+      16,
+      21,
+      26,
+      50,
+      12
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotería Real",
     "draw": "Quiniela Real",
     "draw_date": "2026-06-19",
@@ -228,6 +253,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "La Primera",
+    "draw": "La Primera Día",
+    "draw_date": "2026-06-19",
+    "numbers": [
+      54,
+      56,
+      13
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "King Lottery",
     "draw": "King Lottery 7:30",
     "draw_date": "2026-06-19",
@@ -246,6 +282,17 @@
       44,
       37,
       90
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-06-19",
+    "numbers": [
+      37,
+      32,
+      30
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
