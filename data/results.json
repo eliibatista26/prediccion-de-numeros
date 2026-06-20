@@ -1,5 +1,49 @@
 [
   {
+    "lottery": "Lotedom",
+    "draw": "LoteDom",
+    "draw_date": "2026-06-20",
+    "numbers": [
+      25,
+      60,
+      99
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Suerte Dominicana",
+    "draw": "La Suerte MD",
+    "draw_date": "2026-06-20",
+    "numbers": [
+      52,
+      21,
+      59
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Primera",
+    "draw": "La Primera Día",
+    "draw_date": "2026-06-20",
+    "numbers": [
+      39,
+      93,
+      61
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "King Lottery 12:30",
+    "draw_date": "2026-06-20",
+    "numbers": [
+      16,
+      95,
+      43
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Anguila",
     "draw": "Anguila 10:00 AM",
     "draw_date": "2026-06-20",
