@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-21T15:58:33-04:00",
-  "generated_at_display": "21/06/2026 15:58",
+  "generated_at": "2026-06-21T17:38:39-04:00",
+  "generated_at_display": "21/06/2026 17:38",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -2035,6 +2035,17 @@
         {
           "lottery": "Leidsa",
           "draw": "Quiniela Leidsa",
+          "draw_date": "2026-06-21",
+          "numbers": [
+            70,
+            33,
+            82
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Leidsa",
+          "draw": "Quiniela Leidsa",
           "draw_date": "2026-06-20",
           "numbers": [
             80,
@@ -2042,20 +2053,9 @@
             64
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Leidsa",
-          "draw": "Quiniela Leidsa",
-          "draw_date": "2026-06-19",
-          "numbers": [
-            14,
-            26,
-            53
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 5288,
+      "total_results": 5292,
       "draws": {
         "Quiniela Leidsa": {
           "suggestions": [
@@ -2134,6 +2134,17 @@
             {
               "lottery": "Leidsa",
               "draw": "Quiniela Leidsa",
+              "draw_date": "2026-06-21",
+              "numbers": [
+                70,
+                33,
+                82
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Leidsa",
+              "draw": "Quiniela Leidsa",
               "draw_date": "2026-06-20",
               "numbers": [
                 80,
@@ -2207,46 +2218,19 @@
                 85
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela Leidsa",
-              "draw_date": "2026-06-13",
-              "numbers": [
-                85,
-                45,
-                78
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5238,
+          "total_results": 5239,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
-            "top3_any_hit_rate": 0.066,
-            "top5_any_hit_rate": 0.082,
+            "top3_any_hit_rate": 0.049,
+            "top5_any_hit_rate": 0.066,
             "first_position_hit_rate": 0.033,
-            "average_hits_top5": 0.08,
+            "average_hits_top5": 0.07,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-16",
-                "actual": [
-                  "80",
-                  "02",
-                  "79"
-                ],
-                "predicted": [
-                  "21",
-                  "57",
-                  "63",
-                  "22",
-                  "81"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-17",
                 "actual": [
@@ -2301,6 +2285,22 @@
                   "80",
                   "20",
                   "64"
+                ],
+                "predicted": [
+                  "21",
+                  "57",
+                  "63",
+                  "22",
+                  "81"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-21",
+                "actual": [
+                  "70",
+                  "33",
+                  "82"
                 ],
                 "predicted": [
                   "21",
