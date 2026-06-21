@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-20T18:53:48-04:00",
-  "generated_at_display": "20/06/2026 18:53",
+  "generated_at": "2026-06-20T20:18:48-04:00",
+  "generated_at_display": "20/06/2026 20:18",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -2770,6 +2770,17 @@
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
+          "draw_date": "2026-06-20",
+          "numbers": [
+            64,
+            12,
+            76
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Loteka",
+          "draw": "Quiniela Loteka",
           "draw_date": "2026-06-19",
           "numbers": [
             94,
@@ -2799,20 +2810,9 @@
             42
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Loteka",
-          "draw": "Quiniela Loteka",
-          "draw_date": "2026-06-16",
-          "numbers": [
-            90,
-            82,
-            0
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 2644,
+      "total_results": 2646,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -2891,6 +2891,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-06-20",
+              "numbers": [
+                64,
+                12,
+                76
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-06-19",
               "numbers": [
                 94,
@@ -2964,46 +2975,19 @@
                 17
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-06-12",
-              "numbers": [
-                37,
-                82,
-                55
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2630,
+          "total_results": 2631,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
             "top3_any_hit_rate": 0.082,
-            "top5_any_hit_rate": 0.164,
-            "first_position_hit_rate": 0.033,
-            "average_hits_top5": 0.16,
+            "top5_any_hit_rate": 0.148,
+            "first_position_hit_rate": 0.016,
+            "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-06-15",
-                "actual": [
-                  "95",
-                  "77",
-                  "99"
-                ],
-                "predicted": [
-                  "28",
-                  "17",
-                  "98",
-                  "74",
-                  "75"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-06-16",
                 "actual": [
@@ -3060,6 +3044,22 @@
                   "94",
                   "91",
                   "70"
+                ],
+                "predicted": [
+                  "28",
+                  "17",
+                  "98",
+                  "74",
+                  "52"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-06-20",
+                "actual": [
+                  "64",
+                  "12",
+                  "76"
                 ],
                 "predicted": [
                   "28",
@@ -3163,6 +3163,17 @@
         {
           "lottery": "La Primera",
           "draw": "Primera Noche",
+          "draw_date": "2026-06-20",
+          "numbers": [
+            11,
+            40,
+            66
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "Primera Noche",
           "draw_date": "2026-06-19",
           "numbers": [
             61,
@@ -3192,20 +3203,9 @@
             44
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "Primera Noche",
-          "draw_date": "2026-06-17",
-          "numbers": [
-            28,
-            84,
-            72
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
-      "total_results": 2247,
+      "total_results": 2249,
       "draws": {
         "La Primera Día": {
           "suggestions": [
@@ -3802,6 +3802,17 @@
             {
               "lottery": "La Primera",
               "draw": "Primera Noche",
+              "draw_date": "2026-06-20",
+              "numbers": [
+                11,
+                40,
+                66
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Primera",
+              "draw": "Primera Noche",
               "draw_date": "2026-06-19",
               "numbers": [
                 61,
@@ -3875,20 +3886,9 @@
                 47
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Primera",
-              "draw": "Primera Noche",
-              "draw_date": "2026-06-12",
-              "numbers": [
-                73,
-                47,
-                9
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 14,
+          "total_results": 15,
           "backtest": {
             "status": "insufficient",
             "window_days": 60,
