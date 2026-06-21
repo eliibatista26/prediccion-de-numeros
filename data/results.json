@@ -1,5 +1,27 @@
 [
   {
+    "lottery": "Lotedom",
+    "draw": "LoteDom",
+    "draw_date": "2026-06-21",
+    "numbers": [
+      60,
+      92,
+      81
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Primera",
+    "draw": "La Primera Día",
+    "draw_date": "2026-06-21",
+    "numbers": [
+      85,
+      5,
+      92
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Anguila",
     "draw": "Anguila 10:00 AM",
     "draw_date": "2026-06-21",
