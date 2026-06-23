@@ -11,6 +11,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-06-22",
+    "numbers": [
+      71,
+      44,
+      5
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotería Real",
     "draw": "Quiniela Real",
     "draw_date": "2026-06-22",
@@ -243,6 +254,17 @@
       29,
       92,
       0
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-06-22",
+    "numbers": [
+      61,
+      73,
+      57
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
