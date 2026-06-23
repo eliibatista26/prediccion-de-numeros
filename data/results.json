@@ -35,6 +35,17 @@
   },
   {
     "lottery": "Lotería Nacional",
+    "draw": "Lotería Nacional",
+    "draw_date": "2026-06-22",
+    "numbers": [
+      74,
+      5,
+      20
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
     "draw": "Juega + Pega +",
     "draw_date": "2026-06-22",
     "numbers": [
@@ -58,6 +69,30 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "Loteka",
+    "draw": "Quiniela Loteka",
+    "draw_date": "2026-06-22",
+    "numbers": [
+      73,
+      74,
+      98
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Loteka",
+    "draw": "Mega Chances",
+    "draw_date": "2026-06-22",
+    "numbers": [
+      51,
+      88,
+      65,
+      37,
+      9
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotedom",
     "draw": "LoteDom",
     "draw_date": "2026-06-22",
@@ -65,6 +100,69 @@
       27,
       95,
       53
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Kino TV",
+    "draw_date": "2026-06-22",
+    "numbers": [
+      18,
+      21,
+      25,
+      26,
+      28,
+      32,
+      33,
+      34,
+      35,
+      37,
+      39,
+      41,
+      42,
+      45,
+      48,
+      50,
+      56,
+      57,
+      72,
+      78
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Quiniela Leidsa",
+    "draw_date": "2026-06-22",
+    "numbers": [
+      21,
+      66,
+      68
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Pega 3 Más",
+    "draw_date": "2026-06-22",
+    "numbers": [
+      29,
+      49,
+      11
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Loto Pool",
+    "draw_date": "2026-06-22",
+    "numbers": [
+      1,
+      4,
+      10,
+      13,
+      25
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -156,6 +254,17 @@
       82,
       19,
       70
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 9:00 PM",
+    "draw_date": "2026-06-22",
+    "numbers": [
+      64,
+      13,
+      75
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
