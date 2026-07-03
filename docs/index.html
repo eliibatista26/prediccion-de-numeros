@@ -14,7 +14,7 @@
   <meta name="twitter:title" content="Predicción Loterías RD">
   <meta name="twitter:description" content="Estadísticas y sugerencias para loterías dominicanas. Actualización automática.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=7e14f18f">
+  <link rel="stylesheet" href="styles.css?v=78512b4d">
 </head>
 <body>
   <header class="app-header">
@@ -22,7 +22,7 @@
       <span class="header-logo">RD</span>
       <span class="header-title">Predicción Loterías RD</span>
     </div>
-    <p class="update-line">Última actualización: 03/07/2026 13:53 · America/Santo_Domingo</p>
+    <p class="update-line">Última actualización: 03/07/2026 14:04 · America/Santo_Domingo</p>
     <div class="header-actions">
       <button type="button" data-open-help>Cómo usar</button>
     </div>
@@ -650,7 +650,7 @@
       </section>
       <section>
         <h3>6. Actualización automática</h3>
-        <p>Última actualización: 03/07/2026 13:53 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
+        <p>Última actualización: 03/07/2026 14:04 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
       </section>
     </div>
     <div class="modal-note">
@@ -947,7 +947,7 @@
       const condNames = ['Repetición reciente','Atraso útil','Coincidencias históricas','Arrastre'];
 
       // Top 10: muestra número + fechas con resultados inline
-      const renderTop10 = (items, otherSet, lotteryName, filteredDaily) => `<ol class="b10-numlist cmp-top10-full">
+      const renderTop10 = (items, otherSet, lotteryName, filteredDaily) => `<ol class="cmp-top10-full">
         ${items.length
           ? items.map(item => {
               const target = String(parseInt(item.number, 10));
@@ -958,19 +958,23 @@
                 .map(row => {
                   const d = String(row[0]);
                   const date = d.slice(6)+'/'+d.slice(4,6)+'/'+d.slice(0,4);
-                  const nums = row.slice(2).map(n => String(n).padStart(2,'0')).join('  ');
-                  return `<span class="cmp-hist-row">${date} → ${nums}</span>`;
+                  const chips = row.slice(2).map(n => {
+                    const nn = String(n).padStart(2,'0');
+                    const isTarget = String(parseInt(n,10)) === target;
+                    return `<span class="cmp-num-chip${isTarget?' cmp-num-target':''}">${nn}</span>`;
+                  }).join('');
+                  return `<div class="cmp-hist-row"><span class="cmp-hist-date">${date}</span><span class="cmp-hist-sep">→</span><span class="cmp-hist-chips">${chips}</span></div>`;
                 }).join('');
               return `<li class="cmp-top10-full-li${otherSet.has(item.number)?' cmp-shared':''}">
                 <div class="cmp-top10-head">
                   ${cmpBall(item.number, otherSet.has(item.number)?'b10-elite':'')}
-                  <b>${item.count} veces</b>
+                  <span class="cmp-veces">${item.count} veces</span>
                   ${otherSet.has(item.number)?'<span class="cmp-badge-shared">✓</span>':''}
                 </div>
                 ${rows ? `<div class="cmp-hist-rows">${rows}</div>` : ''}
               </li>`;
             }).join('')
-          : '<li class="b10-empty">Sin datos</li>'}
+          : '<li style="padding:10px;color:#6b7280">Sin datos</li>'}
       </ol>`;
 
       // 5 más repetidos por posición

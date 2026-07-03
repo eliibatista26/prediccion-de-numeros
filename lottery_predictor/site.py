@@ -604,7 +604,7 @@ def _render_html(predictions: dict[str, object]) -> str:
       const condNames = ['Repetición reciente','Atraso útil','Coincidencias históricas','Arrastre'];
 
       // Top 10: muestra número + fechas con resultados inline
-      const renderTop10 = (items, otherSet, lotteryName, filteredDaily) => `<ol class="b10-numlist cmp-top10-full">
+      const renderTop10 = (items, otherSet, lotteryName, filteredDaily) => `<ol class="cmp-top10-full">
         ${{items.length
           ? items.map(item => {{
               const target = String(parseInt(item.number, 10));
@@ -615,19 +615,23 @@ def _render_html(predictions: dict[str, object]) -> str:
                 .map(row => {{
                   const d = String(row[0]);
                   const date = d.slice(6)+'/'+d.slice(4,6)+'/'+d.slice(0,4);
-                  const nums = row.slice(2).map(n => String(n).padStart(2,'0')).join('  ');
-                  return `<span class="cmp-hist-row">${{date}} → ${{nums}}</span>`;
+                  const chips = row.slice(2).map(n => {{
+                    const nn = String(n).padStart(2,'0');
+                    const isTarget = String(parseInt(n,10)) === target;
+                    return `<span class="cmp-num-chip${{isTarget?' cmp-num-target':''}}">${{nn}}</span>`;
+                  }}).join('');
+                  return `<div class="cmp-hist-row"><span class="cmp-hist-date">${{date}}</span><span class="cmp-hist-sep">→</span><span class="cmp-hist-chips">${{chips}}</span></div>`;
                 }}).join('');
               return `<li class="cmp-top10-full-li${{otherSet.has(item.number)?' cmp-shared':''}}">
                 <div class="cmp-top10-head">
                   ${{cmpBall(item.number, otherSet.has(item.number)?'b10-elite':'')}}
-                  <b>${{item.count}} veces</b>
+                  <span class="cmp-veces">${{item.count}} veces</span>
                   ${{otherSet.has(item.number)?'<span class="cmp-badge-shared">✓</span>':''}}
                 </div>
                 ${{rows ? `<div class="cmp-hist-rows">${{rows}}</div>` : ''}}
               </li>`;
             }}).join('')
-          : '<li class="b10-empty">Sin datos</li>'}}
+          : '<li style="padding:10px;color:#6b7280">Sin datos</li>'}}
       </ol>`;
 
       // 5 más repetidos por posición
@@ -2862,27 +2866,93 @@ main {
 }
 
 /* Top 10 con historial inline en compare panel */
-.cmp-top10-full { grid-template-columns: 1fr; }
-.cmp-top10-full-li {
+.cmp-top10-full {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  padding: 10px 12px;
+  gap: 10px;
 }
-.cmp-top10-full-li.cmp-shared { border: 1px solid #f97316; }
-.cmp-top10-head { display: flex; align-items: center; gap: 10px; width: 100%; }
+
+.cmp-top10-full-li {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cmp-top10-full-li.cmp-shared {
+  border-color: #f97316;
+  background: #fff4ec;
+}
+
+.cmp-top10-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cmp-veces {
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+  margin-left: auto;
+}
+
 .cmp-hist-rows {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  padding-left: 4px;
-  width: 100%;
+  gap: 5px;
 }
+
 .cmp-hist-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #f3e8da;
+}
+
+.cmp-hist-date {
   font-size: 12px;
   font-weight: 700;
-  color: #9a3412;
-  letter-spacing: 0.03em;
+  color: #6b7280;
+  min-width: 82px;
+}
+
+.cmp-hist-sep {
+  font-size: 12px;
+  color: #d1d5db;
+  font-weight: 700;
+}
+
+.cmp-hist-chips {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.cmp-num-chip {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.cmp-num-chip.cmp-num-target {
+  background: #f97316;
+  color: #ffffff;
 }
 
 .draw-modal::backdrop {
@@ -3174,8 +3244,14 @@ main {
   .nh-date { color: #cbd5e1; }
   .nh-nums-plain { color: #fb923c; }
   .nh-draw { color: #9ba3b8; }
-  .cmp-hist-row { color: #fb923c; }
-  .cmp-top10-full-li { background: #0e1014; }
+  .cmp-top10-full-li { background: #1a0e00; border-color: #3d1a00; }
+  .cmp-top10-full-li.cmp-shared { border-color: #c2410c; background: #1e0a00; }
+  .cmp-hist-row { background: #0e1014; border-color: #2a1500; }
+  .cmp-hist-date { color: #9ba3b8; }
+  .cmp-hist-sep { color: #4b5563; }
+  .cmp-num-chip { background: #2d3142; color: #e2e8f0; }
+  .cmp-num-chip.cmp-num-target { background: #c2410c; color: #fff; }
+  .cmp-veces { color: #cbd5e1; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }
