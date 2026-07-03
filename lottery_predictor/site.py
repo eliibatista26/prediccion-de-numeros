@@ -498,13 +498,13 @@ def _render_html(predictions: dict[str, object]) -> str:
       const top10BothSet = new Set([...top10ASet].filter(n=>top10BSet.has(n)));
       const coincidencias = [...top10BothSet];
 
-      // Delayed by position (top 3 least seen per position = most delayed)
-      const del1A = delayedN(statsA.p1, 3);
-      const del2A = delayedN(statsA.p2, 3);
-      const del3A = delayedN(statsA.p3, 3);
-      const del1B = delayedN(statsB.p1, 3);
-      const del2B = delayedN(statsB.p2, 3);
-      const del3B = delayedN(statsB.p3, 3);
+      // Top 5 most repeated per position
+      const rep1A = topN(statsA.p1, 5);
+      const rep2A = topN(statsA.p2, 5);
+      const rep3A = topN(statsA.p3, 5);
+      const rep1B = topN(statsB.p1, 5);
+      const rep2B = topN(statsB.p2, 5);
+      const rep3B = topN(statsB.p3, 5);
 
       // 4 conditions: find numbers that meet all 4 (check union of both top 20)
       const candidates = [...new Set([
@@ -531,8 +531,8 @@ def _render_html(predictions: dict[str, object]) -> str:
           : '<li class="b10-empty">Sin datos</li>'}}
       </ol>`;
 
-      // Atrasados: usa b10-numlist estilo rank
-      const renderDelayed = (items) => `<ol class="b10-numlist">
+      // 5 más repetidos por posición
+      const renderRepPos = (items) => `<ol class="b10-numlist b10-inline">
         ${{items.length
           ? items.map((item,i) => `<li>
               <span class="b10-rank">#${{i+1}}</span>
@@ -596,16 +596,16 @@ def _render_html(predictions: dict[str, object]) -> str:
           <div class="b10-col-1">
             <p class="eyebrow" style="padding:4px 0 8px">${{nameA}}</p>
             ${{card('Top 10 más repetidos', renderTop10(top10A, top10BSet))}}
-            ${{card('3 más atrasados — 1ra posición', renderDelayed(del1A))}}
-            ${{card('3 más atrasados — 2da posición', renderDelayed(del2A))}}
-            ${{card('3 más atrasados — 3ra posición', renderDelayed(del3A))}}
+            ${{card('5 más repetidos — 1ra posición', renderRepPos(rep1A))}}
+            ${{card('5 más repetidos — 2da posición', renderRepPos(rep2A))}}
+            ${{card('5 más repetidos — 3ra posición', renderRepPos(rep3A))}}
           </div>
           <div class="b10-col-2">
             <p class="eyebrow" style="padding:4px 0 8px">${{nameB}}</p>
             ${{card('Top 10 más repetidos', renderTop10(top10B, top10ASet))}}
-            ${{card('3 más atrasados — 1ra posición', renderDelayed(del1B))}}
-            ${{card('3 más atrasados — 2da posición', renderDelayed(del2B))}}
-            ${{card('3 más atrasados — 3ra posición', renderDelayed(del3B))}}
+            ${{card('5 más repetidos — 1ra posición', renderRepPos(rep1B))}}
+            ${{card('5 más repetidos — 2da posición', renderRepPos(rep2B))}}
+            ${{card('5 más repetidos — 3ra posición', renderRepPos(rep3B))}}
           </div>
         </div>
       `;
