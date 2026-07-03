@@ -238,7 +238,6 @@ def _render_html(predictions: dict[str, object]) -> str:
     base_10 = predictions.get("base_10", {})
     base_10_panel = _render_base_10_panel(base_10 if isinstance(base_10, dict) else {})
     today_results = _render_today_results(lottery_items)
-    top10_section = _render_top10_section(lottery_items)
     compare_panel = _render_compare_panel(lottery_items, actual_to_date)
 
     return f"""<!doctype html>
@@ -273,7 +272,6 @@ def _render_html(predictions: dict[str, object]) -> str:
 
   <main>
     {today_results}
-    {top10_section}
     {base_10_panel}
     {compare_panel}
   </main>
