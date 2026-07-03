@@ -568,22 +568,15 @@ def _render_html(predictions: dict[str, object]) -> str:
       const condNames = ['Repetición reciente','Atraso útil','Coincidencias históricas','Arrastre'];
 
       // Top 10: usa b10-numlist + b10-ball igual que el resto de la página
-      const renderTop10 = (items, otherSet, daily) => `<ol class="b10-numlist cmp-top10-list">
+      const renderTop10 = (items, otherSet, lotteryName) => `<ol class="b10-numlist b10-inline">
         ${{items.length
-          ? items.map(item => {{
-              const dates = daily ? getDatesForNum(daily, item.number) : [];
-              const datesHtml = dates.length
-                ? `<span class="cmp-dates">${{dates.join(' · ')}}</span>`
-                : '';
-              return `<li class="cmp-top10-li" style="${{otherSet.has(item.number)?'border:1px solid #f97316;':''}}">
-                <div class="cmp-top10-main">
-                  ${{cmpBall(item.number, otherSet.has(item.number)?'b10-elite':'')}}
-                  <b>${{item.count}} veces</b>
-                  ${{otherSet.has(item.number)?'<span class="cmp-badge-shared">✓</span>':''}}
-                </div>
-                ${{datesHtml}}
-              </li>`;
-            }}).join('')
+          ? items.map(item => `<li style="${{otherSet.has(item.number)?'border:1px solid #f97316;':''}}">
+              <button class="b10-ball${{otherSet.has(item.number)?' b10-elite':''}} top10-btn"
+                data-num-hist data-lottery="${{lotteryName}}" data-num="${{item.number}}"
+                title="Ver historial de ${{item.number}}">${{item.number}}</button>
+              <b>${{item.count}} veces</b>
+              ${{otherSet.has(item.number)?'<span class="cmp-badge-shared">✓</span>':''}}
+            </li>`).join('')
           : '<li class="b10-empty">Sin datos</li>'}}
       </ol>`;
 
@@ -651,14 +644,14 @@ def _render_html(predictions: dict[str, object]) -> str:
         <div class="cmp-dual-grid">
           <div class="b10-col-1">
             <p class="eyebrow" style="padding:4px 0 8px">${{nameA}}</p>
-            ${{card('Top 10 más repetidos', renderTop10(top10A, top10BSet, dailyA))}}
+            ${{card('Top 10 más repetidos', renderTop10(top10A, top10BSet, nameA))}}
             ${{card('5 más repetidos — 1ra posición', renderRepPos(rep1A))}}
             ${{card('5 más repetidos — 2da posición', renderRepPos(rep2A))}}
             ${{card('5 más repetidos — 3ra posición', renderRepPos(rep3A))}}
           </div>
           <div class="b10-col-2">
             <p class="eyebrow" style="padding:4px 0 8px">${{nameB}}</p>
-            ${{card('Top 10 más repetidos', renderTop10(top10B, top10ASet, dailyB))}}
+            ${{card('Top 10 más repetidos', renderTop10(top10B, top10ASet, nameB))}}
             ${{card('5 más repetidos — 1ra posición', renderRepPos(rep1B))}}
             ${{card('5 más repetidos — 2da posición', renderRepPos(rep2B))}}
             ${{card('5 más repetidos — 3ra posición', renderRepPos(rep3B))}}
@@ -742,10 +735,9 @@ def _render_html(predictions: dict[str, object]) -> str:
 
     function fmtDate(yyyymmdd) {{
       if (!yyyymmdd) return '';
-      const s = String(yyyymmdd);
+      const s = String(yyyymmdd).replace(/-/g,'');
       if (s.length === 8) return s.slice(6)+'/'+s.slice(4,6)+'/'+s.slice(0,4);
-      if (s.length === 10) return s.slice(8)+'/'+s.slice(5,7)+'/'+s.slice(0,4);
-      return s;
+      return String(yyyymmdd);
     }}
 
     function openNumHist(lottery, num) {{
