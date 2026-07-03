@@ -102,6 +102,7 @@ def build_predictions(
             "suggestions": _serialize_suggestions(suggestions),
             "last_results": [result.to_dict() for result in sorted(lottery_results, key=lambda item: item.draw_date, reverse=True)[:8]],
             "compare_daily": _compare_daily_results(lottery_results),
+            "compare_daily_full": _compare_daily_full(lottery_results),
             "compare_results": [
                 result.to_dict()
                 for result in sorted(lottery_results, key=lambda item: item.draw_date, reverse=True)[:COMPARE_RESULTS_LIMIT]
@@ -154,6 +155,17 @@ def _compare_daily_results(results: list[LotteryResult]) -> list[list[object]]:
         if not nums:
             continue
         rows.append([result.draw_date.strftime("%Y%m%d"), *nums])
+    return rows
+
+
+def _compare_daily_full(results: list[LotteryResult]) -> list[list[object]]:
+    """Lista completa [fecha YYYYMMDD, sorteo, n1, n2, ...] con todos los números."""
+    rows: list[list[object]] = []
+    for result in sorted(results, key=lambda item: item.draw_date):
+        nums = [int(n) for n in result.numbers]
+        if not nums:
+            continue
+        rows.append([result.draw_date.strftime("%Y%m%d"), result.draw, *nums])
     return rows
 
 

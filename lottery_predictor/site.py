@@ -750,20 +750,28 @@ def _render_html(predictions: dict[str, object]) -> str:
 
     function openNumHist(lottery, num) {{
       const payload = (window.compareData || {{}})[lottery] || {{}};
-      const daily = payload.daily || [];
+      const daily = payload.daily_full || [];
       const target = String(parseInt(num, 10));
       const matches = daily.filter(row => {{
-        if (!Array.isArray(row) || row.length < 2) return false;
-        return row.slice(1).some(n => String(parseInt(n,10)) === target);
+        if (!Array.isArray(row) || row.length < 3) return false;
+        // row = [YYYYMMDD, draw_name, n1, n2, ...]
+        return row.slice(2).some(n => String(parseInt(n,10)) === target);
       }});
-      numHistTitle.textContent = num + ' en ' + lottery;
+      numHistTitle.textContent = num + ' — ' + lottery;
       if (!matches.length) {{
         numHistBody.innerHTML = '<p style="color:#6b7280;padding:12px 0">Sin registros encontrados.</p>';
       }} else {{
         const rows = matches.slice().reverse().map(row => {{
           const date = fmtDate(row[0]);
-          const nums = row.slice(1,4).map(n => `<span class="nh-ball${{String(parseInt(n,10))===target?' nh-target':''}}">${{String(n).padStart(2,'0')}}</span>`).join('');
-          return `<li class="nh-row"><span class="nh-date">${{date}}</span><span class="nh-nums">${{nums}}</span></li>`;
+          const draw = row[1];
+          const nums = row.slice(2).map(n => String(n).padStart(2,'0')).join('  ');
+          return `<li class="nh-row">
+            <span class="nh-date">${{date}}</span>
+            <span class="nh-arrow">→</span>
+            <span class="nh-draw">${{draw}}</span>
+            <span class="nh-arrow">→</span>
+            <span class="nh-nums-plain">${{nums}}</span>
+          </li>`;
         }}).join('');
         numHistBody.innerHTML = `<p class="nh-count">${{matches.length}} sorteos encontrados</p><ol class="nh-list">${{rows}}</ol>`;
       }}
@@ -1213,6 +1221,7 @@ def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str)
             ],
             "months": _compare_month_data(data.get("compare_results", [])),
             "daily": data.get("compare_daily", []),
+            "daily_full": data.get("compare_daily_full", []),
         }
     json_data = json.dumps(compare_data, ensure_ascii=False).replace("</", "<\\/")
     current_month = actual_to_date[5:7] if len(actual_to_date) >= 7 else ""
@@ -2765,39 +2774,37 @@ main {
 .nh-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   padding: 8px 12px;
   border-radius: 8px;
   background: #fff7ed;
+  flex-wrap: wrap;
 }
 
 .nh-date {
   font-size: 13px;
   font-weight: 700;
   color: #374151;
-  min-width: 80px;
+  min-width: 82px;
 }
 
-.nh-nums {
-  display: flex;
-  gap: 6px;
-}
-
-.nh-ball {
-  display: inline-grid;
-  width: 32px;
-  height: 32px;
-  place-items: center;
-  border-radius: 50%;
-  background: #e5e7eb;
-  color: #374151;
-  font-weight: 800;
+.nh-arrow {
   font-size: 13px;
+  color: #9a3412;
+  font-weight: 700;
 }
 
-.nh-ball.nh-target {
-  background: #f97316;
-  color: #ffffff;
+.nh-draw {
+  font-size: 11px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.nh-nums-plain {
+  font-size: 14px;
+  font-weight: 800;
+  color: #9a3412;
+  letter-spacing: 0.05em;
 }
 
 .top10-btn {
@@ -3111,8 +3118,8 @@ main {
   .num-hist-modal { background: #161b2d; color: #e2e8f0; }
   .nh-row { background: #1a0e00; }
   .nh-date { color: #cbd5e1; }
-  .nh-ball { background: #2d3142; color: #cbd5e1; }
-  .nh-ball.nh-target { background: #c2410c; color: #fff; }
+  .nh-nums-plain { color: #fb923c; }
+  .nh-draw { color: #9ba3b8; }
   .cmp-dates { color: #fb923c; }
 
   .b10-mirror-list li,
