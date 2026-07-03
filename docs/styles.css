@@ -1233,6 +1233,18 @@ main {
   box-shadow: 0 4px 12px rgba(249,115,22,0.4);
 }
 
+/* Fechas en Top 10 del compare panel */
+.cmp-top10-list { grid-template-columns: 1fr; }
+.cmp-top10-li { flex-direction: column; align-items: flex-start; gap: 4px; }
+.cmp-top10-main { display: flex; align-items: center; gap: 10px; width: 100%; }
+.cmp-dates {
+  font-size: 11px;
+  color: #9a3412;
+  padding-left: 4px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
 .draw-modal::backdrop {
   background: rgba(13, 18, 32, 0.54);
   backdrop-filter: blur(4px);
@@ -1522,6 +1534,7 @@ main {
   .nh-date { color: #cbd5e1; }
   .nh-ball { background: #2d3142; color: #cbd5e1; }
   .nh-ball.nh-target { background: #c2410c; color: #fff; }
+  .cmp-dates { color: #fb923c; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }

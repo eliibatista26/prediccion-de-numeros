@@ -498,6 +498,55 @@ def _render_html(predictions: dict[str, object]) -> str:
       const top10BothSet = new Set([...top10ASet].filter(n=>top10BSet.has(n)));
       const coincidencias = [...top10BothSet];
 
+      // Helper: filter daily rows by current mode/filters
+      function getFilteredDaily(name) {{
+        const payload = compareData[name] || {{}};
+        const mode = compareMode.value;
+        const daily = payload.daily || [];
+        if (mode === 'date') {{
+          const from = compareFrom.value ? compareFrom.value.replace(/-/g,'').slice(0,6) : '';
+          const to   = compareTo.value   ? compareTo.value.replace(/-/g,'').slice(0,6) : '';
+          return daily.filter(row => {{
+            const ym = String(row[0]).slice(0,6);
+            if (from && ym < from) return false;
+            if (to   && ym > to)   return false;
+            return true;
+          }});
+        }}
+        if (mode === 'historical') {{
+          const dd = compareDay.value;
+          const wd = compareWeekday ? compareWeekday.value : '';
+          const mm = compareMonthPick ? compareMonthPick.value : '';
+          if (!dd && wd === '' && !mm) return [];
+          return daily.filter(row => {{
+            const ds = String(row[0]);
+            if (mm && ds.slice(4,6) !== mm) return false;
+            if (dd && ds.slice(6,8) !== dd) return false;
+            if (wd !== '') {{
+              const dt = new Date(+ds.slice(0,4), +ds.slice(4,6)-1, +ds.slice(6,8));
+              if (String(dt.getDay()) !== wd) return false;
+            }}
+            return true;
+          }});
+        }}
+        return [];
+      }}
+
+      function fmtDateShort(yyyymmdd) {{
+        const s = String(yyyymmdd);
+        if (s.length !== 8) return s;
+        return s.slice(6)+'/'+s.slice(4,6)+'/'+s.slice(2,4);
+      }}
+
+      function getDatesForNum(filteredDaily, num) {{
+        return filteredDaily
+          .filter(row => row.slice(1).some(n => String(n).padStart(2,'0') === num))
+          .map(row => fmtDateShort(row[0]));
+      }}
+
+      const dailyA = getFilteredDaily(nameA);
+      const dailyB = getFilteredDaily(nameB);
+
       // Top 5 most repeated per position
       const rep1A = topN(statsA.p1, 5);
       const rep2A = topN(statsA.p2, 5);
@@ -521,13 +570,22 @@ def _render_html(predictions: dict[str, object]) -> str:
       const condNames = ['Repetición reciente','Atraso útil','Coincidencias históricas','Arrastre'];
 
       // Top 10: usa b10-numlist + b10-ball igual que el resto de la página
-      const renderTop10 = (items, otherSet) => `<ol class="b10-numlist b10-inline">
+      const renderTop10 = (items, otherSet, daily) => `<ol class="b10-numlist cmp-top10-list">
         ${{items.length
-          ? items.map(item => `<li style="${{otherSet.has(item.number)?'border:1px solid #f97316;':''}}">
-              ${{cmpBall(item.number, otherSet.has(item.number)?'b10-elite':'')}}
-              <b>${{item.count}} veces</b>
-              ${{otherSet.has(item.number)?'<span class="cmp-badge-shared">✓</span>':''}}
-            </li>`).join('')
+          ? items.map(item => {{
+              const dates = daily ? getDatesForNum(daily, item.number) : [];
+              const datesHtml = dates.length
+                ? `<span class="cmp-dates">${{dates.join(' · ')}}</span>`
+                : '';
+              return `<li class="cmp-top10-li" style="${{otherSet.has(item.number)?'border:1px solid #f97316;':''}}">
+                <div class="cmp-top10-main">
+                  ${{cmpBall(item.number, otherSet.has(item.number)?'b10-elite':'')}}
+                  <b>${{item.count}} veces</b>
+                  ${{otherSet.has(item.number)?'<span class="cmp-badge-shared">✓</span>':''}}
+                </div>
+                ${{datesHtml}}
+              </li>`;
+            }}).join('')
           : '<li class="b10-empty">Sin datos</li>'}}
       </ol>`;
 
@@ -595,14 +653,14 @@ def _render_html(predictions: dict[str, object]) -> str:
         <div class="cmp-dual-grid">
           <div class="b10-col-1">
             <p class="eyebrow" style="padding:4px 0 8px">${{nameA}}</p>
-            ${{card('Top 10 más repetidos', renderTop10(top10A, top10BSet))}}
+            ${{card('Top 10 más repetidos', renderTop10(top10A, top10BSet, dailyA))}}
             ${{card('5 más repetidos — 1ra posición', renderRepPos(rep1A))}}
             ${{card('5 más repetidos — 2da posición', renderRepPos(rep2A))}}
             ${{card('5 más repetidos — 3ra posición', renderRepPos(rep3A))}}
           </div>
           <div class="b10-col-2">
             <p class="eyebrow" style="padding:4px 0 8px">${{nameB}}</p>
-            ${{card('Top 10 más repetidos', renderTop10(top10B, top10ASet))}}
+            ${{card('Top 10 más repetidos', renderTop10(top10B, top10ASet, dailyB))}}
             ${{card('5 más repetidos — 1ra posición', renderRepPos(rep1B))}}
             ${{card('5 más repetidos — 2da posición', renderRepPos(rep2B))}}
             ${{card('5 más repetidos — 3ra posición', renderRepPos(rep3B))}}
@@ -2753,6 +2811,18 @@ main {
   box-shadow: 0 4px 12px rgba(249,115,22,0.4);
 }
 
+/* Fechas en Top 10 del compare panel */
+.cmp-top10-list { grid-template-columns: 1fr; }
+.cmp-top10-li { flex-direction: column; align-items: flex-start; gap: 4px; }
+.cmp-top10-main { display: flex; align-items: center; gap: 10px; width: 100%; }
+.cmp-dates {
+  font-size: 11px;
+  color: #9a3412;
+  padding-left: 4px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
 .draw-modal::backdrop {
   background: rgba(13, 18, 32, 0.54);
   backdrop-filter: blur(4px);
@@ -3042,6 +3112,7 @@ main {
   .nh-date { color: #cbd5e1; }
   .nh-ball { background: #2d3142; color: #cbd5e1; }
   .nh-ball.nh-target { background: #c2410c; color: #fff; }
+  .cmp-dates { color: #fb923c; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }
