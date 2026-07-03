@@ -544,6 +544,42 @@ def _render_html(predictions: dict[str, object]) -> str:
 
       const dailyA = getFilteredDaily(nameA);
       const dailyB = getFilteredDaily(nameB);
+      const dailyFullA = (compareData[nameA]||{{}}).daily_full || [];
+      const dailyFullB = (compareData[nameB]||{{}}).daily_full || [];
+      // Filter daily_full by the same criteria as getFilteredDaily
+      function filterDailyFull(full) {{
+        const mode = compareMode.value;
+        if (mode === 'date') {{
+          const from = compareFrom.value ? compareFrom.value.replace(/-/g,'').slice(0,6) : '';
+          const to   = compareTo.value   ? compareTo.value.replace(/-/g,'').slice(0,6)   : '';
+          if (!from && !to) return [];
+          return full.filter(row => {{
+            const ym = String(row[0]).slice(0,6);
+            if (from && ym < from) return false;
+            if (to   && ym > to)   return false;
+            return true;
+          }});
+        }}
+        if (mode === 'historical') {{
+          const dd = compareDay.value;
+          const wd = compareWeekday ? compareWeekday.value : '';
+          const mm = compareMonthPick ? compareMonthPick.value : '';
+          if (!dd && wd === '' && !mm) return [];
+          return full.filter(row => {{
+            const ds = String(row[0]);
+            if (mm && ds.slice(4,6) !== mm) return false;
+            if (dd && ds.slice(6,8) !== dd) return false;
+            if (wd !== '') {{
+              const dt = new Date(+ds.slice(0,4), +ds.slice(4,6)-1, +ds.slice(6,8));
+              if (String(dt.getDay()) !== wd) return false;
+            }}
+            return true;
+          }});
+        }}
+        return [];
+      }}
+      const filteredFullA = filterDailyFull(dailyFullA);
+      const filteredFullB = filterDailyFull(dailyFullB);
 
       // Top 5 most repeated per position
       const rep1A = topN(statsA.p1, 5);
@@ -567,16 +603,30 @@ def _render_html(predictions: dict[str, object]) -> str:
       // ── HTML rendering — usa exactamente las mismas clases que b10-panel ──
       const condNames = ['Repetición reciente','Atraso útil','Coincidencias históricas','Arrastre'];
 
-      // Top 10: usa b10-numlist + b10-ball igual que el resto de la página
-      const renderTop10 = (items, otherSet, lotteryName) => `<ol class="b10-numlist b10-inline">
+      // Top 10: muestra número + fechas con resultados inline
+      const renderTop10 = (items, otherSet, lotteryName, filteredDaily) => `<ol class="b10-numlist cmp-top10-full">
         ${{items.length
-          ? items.map(item => `<li style="${{otherSet.has(item.number)?'border:1px solid #f97316;':''}}">
-              <button class="b10-ball${{otherSet.has(item.number)?' b10-elite':''}} top10-btn"
-                data-num-hist data-lottery="${{lotteryName}}" data-num="${{item.number}}"
-                title="Ver historial de ${{item.number}}">${{item.number}}</button>
-              <b>${{item.count}} veces</b>
-              ${{otherSet.has(item.number)?'<span class="cmp-badge-shared">✓</span>':''}}
-            </li>`).join('')
+          ? items.map(item => {{
+              const target = String(parseInt(item.number, 10));
+              const rows = (filteredDaily || [])
+                .filter(row => Array.isArray(row) && row.length >= 3 &&
+                  row.slice(2).some(n => String(parseInt(n,10)) === target))
+                .slice().reverse()
+                .map(row => {{
+                  const d = String(row[0]);
+                  const date = d.slice(6)+'/'+d.slice(4,6)+'/'+d.slice(0,4);
+                  const nums = row.slice(2).map(n => String(n).padStart(2,'0')).join('  ');
+                  return `<span class="cmp-hist-row">${{date}} → ${{nums}}</span>`;
+                }}).join('');
+              return `<li class="cmp-top10-full-li${{otherSet.has(item.number)?' cmp-shared':''}}">
+                <div class="cmp-top10-head">
+                  ${{cmpBall(item.number, otherSet.has(item.number)?'b10-elite':'')}}
+                  <b>${{item.count}} veces</b>
+                  ${{otherSet.has(item.number)?'<span class="cmp-badge-shared">✓</span>':''}}
+                </div>
+                ${{rows ? `<div class="cmp-hist-rows">${{rows}}</div>` : ''}}
+              </li>`;
+            }}).join('')
           : '<li class="b10-empty">Sin datos</li>'}}
       </ol>`;
 
@@ -644,14 +694,14 @@ def _render_html(predictions: dict[str, object]) -> str:
         <div class="cmp-dual-grid">
           <div class="b10-col-1">
             <p class="eyebrow" style="padding:4px 0 8px">${{nameA}}</p>
-            ${{card('Top 10 más repetidos', renderTop10(top10A, top10BSet, nameA))}}
+            ${{card('Top 10 más repetidos', renderTop10(top10A, top10BSet, nameA, filteredFullA))}}
             ${{card('5 más repetidos — 1ra posición', renderRepPos(rep1A))}}
             ${{card('5 más repetidos — 2da posición', renderRepPos(rep2A))}}
             ${{card('5 más repetidos — 3ra posición', renderRepPos(rep3A))}}
           </div>
           <div class="b10-col-2">
             <p class="eyebrow" style="padding:4px 0 8px">${{nameB}}</p>
-            ${{card('Top 10 más repetidos', renderTop10(top10B, top10ASet, nameB))}}
+            ${{card('Top 10 más repetidos', renderTop10(top10B, top10ASet, nameB, filteredFullB))}}
             ${{card('5 más repetidos — 1ra posición', renderRepPos(rep1B))}}
             ${{card('5 más repetidos — 2da posición', renderRepPos(rep2B))}}
             ${{card('5 más repetidos — 3ra posición', renderRepPos(rep3B))}}
@@ -2811,16 +2861,28 @@ main {
   box-shadow: 0 4px 12px rgba(249,115,22,0.4);
 }
 
-/* Fechas en Top 10 del compare panel */
-.cmp-top10-list { grid-template-columns: 1fr; }
-.cmp-top10-li { flex-direction: column; align-items: flex-start; gap: 4px; }
-.cmp-top10-main { display: flex; align-items: center; gap: 10px; width: 100%; }
-.cmp-dates {
-  font-size: 11px;
-  color: #9a3412;
+/* Top 10 con historial inline en compare panel */
+.cmp-top10-full { grid-template-columns: 1fr; }
+.cmp-top10-full-li {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 10px 12px;
+}
+.cmp-top10-full-li.cmp-shared { border: 1px solid #f97316; }
+.cmp-top10-head { display: flex; align-items: center; gap: 10px; width: 100%; }
+.cmp-hist-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
   padding-left: 4px;
-  line-height: 1.5;
-  word-break: break-word;
+  width: 100%;
+}
+.cmp-hist-row {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9a3412;
+  letter-spacing: 0.03em;
 }
 
 .draw-modal::backdrop {
@@ -3112,7 +3174,8 @@ main {
   .nh-date { color: #cbd5e1; }
   .nh-nums-plain { color: #fb923c; }
   .nh-draw { color: #9ba3b8; }
-  .cmp-dates { color: #fb923c; }
+  .cmp-hist-row { color: #fb923c; }
+  .cmp-top10-full-li { background: #0e1014; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }

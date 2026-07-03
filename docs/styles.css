@@ -1231,16 +1231,28 @@ main {
   box-shadow: 0 4px 12px rgba(249,115,22,0.4);
 }
 
-/* Fechas en Top 10 del compare panel */
-.cmp-top10-list { grid-template-columns: 1fr; }
-.cmp-top10-li { flex-direction: column; align-items: flex-start; gap: 4px; }
-.cmp-top10-main { display: flex; align-items: center; gap: 10px; width: 100%; }
-.cmp-dates {
-  font-size: 11px;
-  color: #9a3412;
+/* Top 10 con historial inline en compare panel */
+.cmp-top10-full { grid-template-columns: 1fr; }
+.cmp-top10-full-li {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 10px 12px;
+}
+.cmp-top10-full-li.cmp-shared { border: 1px solid #f97316; }
+.cmp-top10-head { display: flex; align-items: center; gap: 10px; width: 100%; }
+.cmp-hist-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
   padding-left: 4px;
-  line-height: 1.5;
-  word-break: break-word;
+  width: 100%;
+}
+.cmp-hist-row {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9a3412;
+  letter-spacing: 0.03em;
 }
 
 .draw-modal::backdrop {
@@ -1532,7 +1544,8 @@ main {
   .nh-date { color: #cbd5e1; }
   .nh-nums-plain { color: #fb923c; }
   .nh-draw { color: #9ba3b8; }
-  .cmp-dates { color: #fb923c; }
+  .cmp-hist-row { color: #fb923c; }
+  .cmp-top10-full-li { background: #0e1014; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }
