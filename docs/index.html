@@ -14,7 +14,7 @@
   <meta name="twitter:title" content="Predicción Loterías RD">
   <meta name="twitter:description" content="Estadísticas y sugerencias para loterías dominicanas. Actualización automática.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=97bceac9">
+  <link rel="stylesheet" href="styles.css?v=8d7d2d4b">
 </head>
 <body>
   <header class="app-header">
@@ -22,7 +22,7 @@
       <span class="header-logo">RD</span>
       <span class="header-title">Predicción Loterías RD</span>
     </div>
-    <p class="update-line">Última actualización: 03/07/2026 14:08 · America/Santo_Domingo</p>
+    <p class="update-line">Última actualización: 03/07/2026 14:10 · America/Santo_Domingo</p>
     <div class="header-actions">
       <button type="button" data-open-help>Cómo usar</button>
     </div>
@@ -650,7 +650,7 @@
       </section>
       <section>
         <h3>6. Actualización automática</h3>
-        <p>Última actualización: 03/07/2026 14:08 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
+        <p>Última actualización: 03/07/2026 14:10 (America/Santo_Domingo). GitHub Actions recalcula la predicción y publica la página automáticamente.</p>
       </section>
     </div>
     <div class="modal-note">
@@ -1049,21 +1049,28 @@
           </div>
         </div>
 
-        <!-- 5 más repetidos por posición — separado abajo -->
+        <!-- 5 más repetidos por posición — filas completas debajo -->
         <div class="cmp-pos-section">
-          <p class="eyebrow" style="margin-bottom:10px">5 más repetidos por posición</p>
-          <div class="cmp-dual-grid">
-            <div class="b10-col-1">
-              <p class="eyebrow" style="padding:4px 0 8px">${nameA}</p>
-              ${card('1ra posición', renderRepPos(rep1A))}
-              ${card('2da posición', renderRepPos(rep2A))}
-              ${card('3ra posición', renderRepPos(rep3A))}
+          <p class="eyebrow cmp-pos-title">5 más repetidos por posición</p>
+          <div class="cmp-pos-row">
+            <span class="cmp-pos-label">1ra posición</span>
+            <div class="cmp-dual-grid">
+              <div>${renderRepPos(rep1A)}</div>
+              <div>${renderRepPos(rep1B)}</div>
             </div>
-            <div class="b10-col-2">
-              <p class="eyebrow" style="padding:4px 0 8px">${nameB}</p>
-              ${card('1ra posición', renderRepPos(rep1B))}
-              ${card('2da posición', renderRepPos(rep2B))}
-              ${card('3ra posición', renderRepPos(rep3B))}
+          </div>
+          <div class="cmp-pos-row">
+            <span class="cmp-pos-label">2da posición</span>
+            <div class="cmp-dual-grid">
+              <div>${renderRepPos(rep2A)}</div>
+              <div>${renderRepPos(rep2B)}</div>
+            </div>
+          </div>
+          <div class="cmp-pos-row">
+            <span class="cmp-pos-label">3ra posición</span>
+            <div class="cmp-dual-grid">
+              <div>${renderRepPos(rep3A)}</div>
+              <div>${renderRepPos(rep3B)}</div>
             </div>
           </div>
         </div>

@@ -1322,9 +1322,36 @@ main {
 }
 
 .cmp-pos-section {
-  margin-top: 24px;
+  margin-top: 28px;
   padding-top: 20px;
-  border-top: 2px dashed #fed7aa;
+  border-top: 3px solid #f97316;
+}
+
+.cmp-pos-title {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9a3412;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.cmp-pos-row {
+  margin-bottom: 16px;
+}
+
+.cmp-pos-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: #f97316;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
 }
 
 .draw-modal::backdrop {
@@ -1624,7 +1651,8 @@ main {
   .cmp-num-chip { background: #2d3142; color: #e2e8f0; }
   .cmp-num-chip.cmp-num-target { background: #c2410c; color: #fff; }
   .cmp-veces { color: #cbd5e1; }
-  .cmp-pos-section { border-top-color: #3d1a00; }
+  .cmp-pos-section { border-top-color: #c2410c; }
+  .cmp-pos-title { color: #fb923c; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }
