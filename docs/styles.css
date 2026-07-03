@@ -828,6 +828,46 @@ main {
   white-space: nowrap;
 }
 
+/* ── Top 10 Más Repetidos por lotería ───────────────────────────────── */
+.top10-section {
+  max-width: 1160px;
+  margin: 0 auto 28px;
+  padding: 0 20px;
+}
+
+.top10-section-head {
+  margin-bottom: 16px;
+}
+
+.top10-section-head h2 {
+  margin: 4px 0 0;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.top10-lots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.top10-lot-block {
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-top: 3px solid var(--brand, #f97316);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.top10-lot-name {
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--brand, #9a3412);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 /* ── Draws Panel (historical/predictions) ────────────────────────────── */
 .draws-panel {
   background: #fffaf5;
@@ -872,6 +912,48 @@ main {
 .draw-card-list {
   display: grid;
   gap: 14px;
+}
+
+/* Top 10 más repetidos por lotería */
+.lottery-top10 {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+}
+
+.top10-title {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #9a3412;
+  margin: 0 0 10px;
+}
+
+.top10-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.top10-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: #fff7ed;
+}
+
+.top10-count {
+  font-size: 12px;
+  color: #6b7280;
+  margin-left: auto;
 }
 
 .draw-card {
@@ -1353,6 +1435,14 @@ main {
   .b10-card h3 { color: #9ba3b8; }
 
   .b10-numlist li { background: #0e1014; }
+
+  .lottery-top10 { background: #131720; border-color: #3d1a00; }
+  .top10-title { color: #fb923c; }
+  .top10-item { background: #1a0e00; }
+  .top10-count { color: #9ba3b8; }
+
+  .top10-lot-block { background: #131720; border-color: #3d1a00; }
+  .top10-section-head h2 { color: #f1f5f9; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }

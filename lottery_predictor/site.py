@@ -238,6 +238,7 @@ def _render_html(predictions: dict[str, object]) -> str:
     base_10 = predictions.get("base_10", {})
     base_10_panel = _render_base_10_panel(base_10 if isinstance(base_10, dict) else {})
     today_results = _render_today_results(lottery_items)
+    top10_section = _render_top10_section(lottery_items)
     compare_panel = _render_compare_panel(lottery_items, actual_to_date)
 
     return f"""<!doctype html>
@@ -272,6 +273,7 @@ def _render_html(predictions: dict[str, object]) -> str:
 
   <main>
     {today_results}
+    {top10_section}
     {base_10_panel}
     {compare_panel}
   </main>
@@ -1205,6 +1207,82 @@ def _compare_month_data(results: object) -> dict[str, object]:
     return out
 
 
+def _render_top10_section(lottery_items: dict[str, object]) -> str:
+    """Section showing Top 10 most repeated numbers per lottery."""
+    blocks = []
+    for lottery_name in DISPLAY_LOTTERIES:
+        data = lottery_items.get(lottery_name)
+        if not isinstance(data, dict):
+            continue
+        compare_results = data.get("compare_results", [])
+        if not isinstance(compare_results, list) or not compare_results:
+            continue
+        counts: Counter[int] = Counter()
+        for result in compare_results:
+            if not isinstance(result, dict):
+                continue
+            for n in result.get("numbers", [])[:3]:
+                try:
+                    counts[int(n)] += 1
+                except (TypeError, ValueError):
+                    pass
+        if not counts:
+            continue
+        top10 = counts.most_common(10)
+        rows = "".join(
+            f'<li class="top10-item"><span class="b10-ball">{n:02d}</span>'
+            f'<span class="top10-count">{c} veces</span></li>'
+            for n, c in top10
+        )
+        color = BRAND_COLORS.get(lottery_name, "#9a3412")
+        blocks.append(
+            f"""<div class="top10-lot-block" style="--brand:{color}">
+  <h3 class="top10-lot-name">{escape(lottery_name)}</h3>
+  <ol class="top10-grid">{rows}</ol>
+</div>"""
+        )
+
+    if not blocks:
+        return ""
+
+    inner = "\n".join(blocks)
+    return f"""<section class="top10-section">
+  <div class="top10-section-head">
+    <p class="eyebrow">Histórico por lotería</p>
+    <h2>Top 10 más repetidos</h2>
+  </div>
+  <div class="top10-lots-grid">{inner}</div>
+</section>"""
+
+
+def _render_lottery_top10(data: dict[str, object]) -> str:
+    """Renders the Top 10 most repeated numbers for a lottery from its compare_results."""
+    compare_results = data.get("compare_results", [])
+    if not isinstance(compare_results, list) or not compare_results:
+        return ""
+    counts: Counter[int] = Counter()
+    for result in compare_results:
+        if not isinstance(result, dict):
+            continue
+        for n in result.get("numbers", [])[:3]:
+            try:
+                counts[int(n)] += 1
+            except (TypeError, ValueError):
+                pass
+    if not counts:
+        return ""
+    top10 = counts.most_common(10)
+    rows = "".join(
+        f'<li class="top10-item"><span class="b10-ball">{n:02d}</span>'
+        f'<span class="top10-count">{c} veces</span></li>'
+        for n, c in top10
+    )
+    return f"""<div class="lottery-top10">
+  <h4 class="top10-title">Top 10 más repetidos</h4>
+  <ol class="top10-grid">{rows}</ol>
+</div>"""
+
+
 def _render_draws_panel(lottery_items: dict[str, object]) -> str:
     items = _draw_items(lottery_items)
     json_data = json.dumps({str(index): item for index, item in enumerate(items)}, ensure_ascii=False).replace("</", "<\\/")
@@ -1218,9 +1296,12 @@ def _render_draws_panel(lottery_items: dict[str, object]) -> str:
     for lottery_name, lottery_cards in by_lottery.items():
         color = BRAND_COLORS.get(lottery_name, "#9a3412")
         cards = "\n".join(_render_draw_card(item, index) for index, item in lottery_cards)
+        lot_data = lottery_items.get(lottery_name, {})
+        top10_html = _render_lottery_top10(lot_data) if isinstance(lot_data, dict) else ""
         sections += f"""<section class="lottery-draw-group" data-lottery="{escape(lottery_name)}" style="--brand: {color}">
   <h3 class="lottery-group-title">{escape(lottery_name)}</h3>
   <div class="draw-card-list">{cards}</div>
+  {top10_html}
 </section>
 """
 
@@ -2210,6 +2291,46 @@ main {
   white-space: nowrap;
 }
 
+/* ── Top 10 Más Repetidos por lotería ───────────────────────────────── */
+.top10-section {
+  max-width: 1160px;
+  margin: 0 auto 28px;
+  padding: 0 20px;
+}
+
+.top10-section-head {
+  margin-bottom: 16px;
+}
+
+.top10-section-head h2 {
+  margin: 4px 0 0;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.top10-lots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.top10-lot-block {
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-top: 3px solid var(--brand, #f97316);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.top10-lot-name {
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--brand, #9a3412);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 /* ── Draws Panel (historical/predictions) ────────────────────────────── */
 .draws-panel {
   background: #fffaf5;
@@ -2254,6 +2375,48 @@ main {
 .draw-card-list {
   display: grid;
   gap: 14px;
+}
+
+/* Top 10 más repetidos por lotería */
+.lottery-top10 {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+}
+
+.top10-title {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #9a3412;
+  margin: 0 0 10px;
+}
+
+.top10-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.top10-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: #fff7ed;
+}
+
+.top10-count {
+  font-size: 12px;
+  color: #6b7280;
+  margin-left: auto;
 }
 
 .draw-card {
@@ -2735,6 +2898,14 @@ main {
   .b10-card h3 { color: #9ba3b8; }
 
   .b10-numlist li { background: #0e1014; }
+
+  .lottery-top10 { background: #131720; border-color: #3d1a00; }
+  .top10-title { color: #fb923c; }
+  .top10-item { background: #1a0e00; }
+  .top10-count { color: #9ba3b8; }
+
+  .top10-lot-block { background: #131720; border-color: #3d1a00; }
+  .top10-section-head h2 { color: #f1f5f9; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }
