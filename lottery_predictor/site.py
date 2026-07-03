@@ -329,6 +329,17 @@ def _render_html(predictions: dict[str, object]) -> str:
     <div class="draw-modal-body" data-draw-modal-body></div>
   </dialog>
 
+  <dialog class="num-hist-modal" id="num-hist-modal" aria-labelledby="num-hist-title">
+    <div class="draw-modal-head">
+      <div>
+        <p class="eyebrow">Historial del número</p>
+        <h2 id="num-hist-title"></h2>
+      </div>
+      <button type="button" id="num-hist-close" aria-label="Cerrar">Cerrar</button>
+    </div>
+    <div class="num-hist-body" id="num-hist-body"></div>
+  </dialog>
+
   <script>
     // Help modal
     const helpModal = document.querySelector('.help-modal');
@@ -350,7 +361,8 @@ def _render_html(predictions: dict[str, object]) -> str:
       if (!open) renderCompare();
     }});
 
-    const compareData = JSON.parse(document.getElementById('compare-data').textContent);
+    window.compareData = JSON.parse(document.getElementById('compare-data').textContent);
+    const compareData = window.compareData;
     const firstSelect  = document.querySelector('[data-compare-first]');
     const secondSelect = document.querySelector('[data-compare-second]');
     const compareMode  = document.querySelector('[data-compare-mode]');
@@ -666,6 +678,49 @@ def _render_html(predictions: dict[str, object]) -> str:
     drawModal.addEventListener('click', (event) => {{
       if (event.target === drawModal) drawModal.close();
     }});
+
+    // ── Historial de número (Top 10 click) ────────────────────────────────
+    const numHistModal  = document.getElementById('num-hist-modal');
+    const numHistTitle  = document.getElementById('num-hist-title');
+    const numHistBody   = document.getElementById('num-hist-body');
+
+    function fmtDate(yyyymmdd) {{
+      if (!yyyymmdd) return '';
+      const s = String(yyyymmdd);
+      if (s.length === 8) return s.slice(6)+'/'+s.slice(4,6)+'/'+s.slice(0,4);
+      if (s.length === 10) return s.slice(8)+'/'+s.slice(5,7)+'/'+s.slice(0,4);
+      return s;
+    }}
+
+    function openNumHist(lottery, num) {{
+      const payload = (window.compareData || {{}})[lottery] || {{}};
+      const daily = payload.daily || [];
+      const target = String(parseInt(num, 10));
+      const matches = daily.filter(row => {{
+        if (!Array.isArray(row) || row.length < 2) return false;
+        return row.slice(1).some(n => String(parseInt(n,10)) === target);
+      }});
+      numHistTitle.textContent = num + ' en ' + lottery;
+      if (!matches.length) {{
+        numHistBody.innerHTML = '<p style="color:#6b7280;padding:12px 0">Sin registros encontrados.</p>';
+      }} else {{
+        const rows = matches.slice().reverse().map(row => {{
+          const date = fmtDate(row[0]);
+          const nums = row.slice(1,4).map(n => `<span class="nh-ball${{String(parseInt(n,10))===target?' nh-target':''}}">${{String(n).padStart(2,'0')}}</span>`).join('');
+          return `<li class="nh-row"><span class="nh-date">${{date}}</span><span class="nh-nums">${{nums}}</span></li>`;
+        }}).join('');
+        numHistBody.innerHTML = `<p class="nh-count">${{matches.length}} sorteos encontrados</p><ol class="nh-list">${{rows}}</ol>`;
+      }}
+      numHistModal.showModal();
+    }}
+
+    document.querySelectorAll('[data-num-hist]').forEach(btn => {{
+      btn.addEventListener('click', () => openNumHist(btn.dataset.lottery, btn.dataset.num));
+    }});
+    if (numHistModal) {{
+      document.getElementById('num-hist-close').addEventListener('click', () => numHistModal.close());
+      numHistModal.addEventListener('click', e => {{ if (e.target === numHistModal) numHistModal.close(); }});
+    }}
   </script>
 </body>
 </html>
@@ -1229,8 +1284,10 @@ def _render_top10_section(lottery_items: dict[str, object]) -> str:
         if not counts:
             continue
         top10 = counts.most_common(10)
+        lot_esc = escape(lottery_name)
         rows = "".join(
-            f'<li class="top10-item"><span class="b10-ball">{n:02d}</span>'
+            f'<li class="top10-item">'
+            f'<button class="b10-ball top10-btn" data-num-hist data-lottery="{lot_esc}" data-num="{n:02d}" title="Ver historial del {n:02d}">{n:02d}</button>'
             f'<span class="top10-count">{c} veces</span></li>'
             for n, c in top10
         )
@@ -2613,7 +2670,8 @@ main {
   color: #4d5568;
 }
 
-.draw-modal {
+.draw-modal,
+.num-hist-modal {
   width: min(680px, calc(100% - 28px));
   padding: 0;
   border: 0;
@@ -2621,6 +2679,78 @@ main {
   color: #161b2d;
   background: #ffffff;
   box-shadow: 0 24px 80px rgba(16, 24, 48, 0.28);
+}
+
+/* Número historial modal body */
+.num-hist-body {
+  padding: 16px 22px 22px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.nh-count {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0 0 10px;
+}
+
+.nh-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nh-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fff7ed;
+}
+
+.nh-date {
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+  min-width: 80px;
+}
+
+.nh-nums {
+  display: flex;
+  gap: 6px;
+}
+
+.nh-ball {
+  display: inline-grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #374151;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.nh-ball.nh-target {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.top10-btn {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  font: inherit;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.top10-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 12px rgba(249,115,22,0.4);
 }
 
 .draw-modal::backdrop {
@@ -2906,6 +3036,12 @@ main {
 
   .top10-lot-block { background: #131720; border-color: #3d1a00; }
   .top10-section-head h2 { color: #f1f5f9; }
+
+  .num-hist-modal { background: #161b2d; color: #e2e8f0; }
+  .nh-row { background: #1a0e00; }
+  .nh-date { color: #cbd5e1; }
+  .nh-ball { background: #2d3142; color: #cbd5e1; }
+  .nh-ball.nh-target { background: #c2410c; color: #fff; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }

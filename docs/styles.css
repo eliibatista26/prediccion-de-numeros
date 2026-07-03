@@ -1150,7 +1150,8 @@ main {
   color: #4d5568;
 }
 
-.draw-modal {
+.draw-modal,
+.num-hist-modal {
   width: min(680px, calc(100% - 28px));
   padding: 0;
   border: 0;
@@ -1158,6 +1159,78 @@ main {
   color: #161b2d;
   background: #ffffff;
   box-shadow: 0 24px 80px rgba(16, 24, 48, 0.28);
+}
+
+/* Número historial modal body */
+.num-hist-body {
+  padding: 16px 22px 22px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.nh-count {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0 0 10px;
+}
+
+.nh-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nh-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fff7ed;
+}
+
+.nh-date {
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+  min-width: 80px;
+}
+
+.nh-nums {
+  display: flex;
+  gap: 6px;
+}
+
+.nh-ball {
+  display: inline-grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #374151;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.nh-ball.nh-target {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.top10-btn {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  font: inherit;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.top10-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 12px rgba(249,115,22,0.4);
 }
 
 .draw-modal::backdrop {
@@ -1443,6 +1516,12 @@ main {
 
   .top10-lot-block { background: #131720; border-color: #3d1a00; }
   .top10-section-head h2 { color: #f1f5f9; }
+
+  .num-hist-modal { background: #161b2d; color: #e2e8f0; }
+  .nh-row { background: #1a0e00; }
+  .nh-date { color: #cbd5e1; }
+  .nh-ball { background: #2d3142; color: #cbd5e1; }
+  .nh-ball.nh-target { background: #c2410c; color: #fff; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }
