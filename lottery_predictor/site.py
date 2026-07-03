@@ -1190,8 +1190,11 @@ def _render_base_10_panel(base_10: dict[str, object]) -> str:
 </section>"""
 
 
+COMPARE_LOTTERIES = ("Lotería Nacional", "Leidsa", "Lotería Real", "Loteka")
+
+
 def _render_compare_panel(lottery_items: dict[str, object], actual_to_date: str) -> str:
-    names = list(lottery_items)
+    names = [n for n in COMPARE_LOTTERIES if n in lottery_items]
     options = "\n".join(f"""<option value="{escape(name)}">{escape(name)}</option>""" for name in names)
     second_options = "\n".join(
         f"""<option value="{escape(name)}"{" selected" if index == 1 else ""}>{escape(name)}</option>"""
