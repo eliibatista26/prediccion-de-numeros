@@ -694,21 +694,34 @@ def _render_html(predictions: dict[str, object]) -> str:
           </div>
         </article>` : ''}}
 
-        <!-- Análisis lado a lado usando b10-analysis-grid de 2 columnas -->
+        <!-- Top 10 lado a lado -->
         <div class="cmp-dual-grid">
           <div class="b10-col-1">
             <p class="eyebrow" style="padding:4px 0 8px">${{nameA}}</p>
             ${{card('Top 10 más repetidos', renderTop10(top10A, top10BSet, nameA, filteredFullA))}}
-            ${{card('5 más repetidos — 1ra posición', renderRepPos(rep1A))}}
-            ${{card('5 más repetidos — 2da posición', renderRepPos(rep2A))}}
-            ${{card('5 más repetidos — 3ra posición', renderRepPos(rep3A))}}
           </div>
           <div class="b10-col-2">
             <p class="eyebrow" style="padding:4px 0 8px">${{nameB}}</p>
             ${{card('Top 10 más repetidos', renderTop10(top10B, top10ASet, nameB, filteredFullB))}}
-            ${{card('5 más repetidos — 1ra posición', renderRepPos(rep1B))}}
-            ${{card('5 más repetidos — 2da posición', renderRepPos(rep2B))}}
-            ${{card('5 más repetidos — 3ra posición', renderRepPos(rep3B))}}
+          </div>
+        </div>
+
+        <!-- 5 más repetidos por posición — separado abajo -->
+        <div class="cmp-pos-section">
+          <p class="eyebrow" style="margin-bottom:10px">5 más repetidos por posición</p>
+          <div class="cmp-dual-grid">
+            <div class="b10-col-1">
+              <p class="eyebrow" style="padding:4px 0 8px">${{nameA}}</p>
+              ${{card('1ra posición', renderRepPos(rep1A))}}
+              ${{card('2da posición', renderRepPos(rep2A))}}
+              ${{card('3ra posición', renderRepPos(rep3A))}}
+            </div>
+            <div class="b10-col-2">
+              <p class="eyebrow" style="padding:4px 0 8px">${{nameB}}</p>
+              ${{card('1ra posición', renderRepPos(rep1B))}}
+              ${{card('2da posición', renderRepPos(rep2B))}}
+              ${{card('3ra posición', renderRepPos(rep3B))}}
+            </div>
           </div>
         </div>
       `;
@@ -2955,6 +2968,12 @@ main {
   color: #ffffff;
 }
 
+.cmp-pos-section {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 2px dashed #fed7aa;
+}
+
 .draw-modal::backdrop {
   background: rgba(13, 18, 32, 0.54);
   backdrop-filter: blur(4px);
@@ -3252,6 +3271,7 @@ main {
   .cmp-num-chip { background: #2d3142; color: #e2e8f0; }
   .cmp-num-chip.cmp-num-target { background: #c2410c; color: #fff; }
   .cmp-veces { color: #cbd5e1; }
+  .cmp-pos-section { border-top-color: #3d1a00; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }

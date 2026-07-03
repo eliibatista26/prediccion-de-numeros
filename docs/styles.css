@@ -1321,6 +1321,12 @@ main {
   color: #ffffff;
 }
 
+.cmp-pos-section {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 2px dashed #fed7aa;
+}
+
 .draw-modal::backdrop {
   background: rgba(13, 18, 32, 0.54);
   backdrop-filter: blur(4px);
@@ -1618,6 +1624,7 @@ main {
   .cmp-num-chip { background: #2d3142; color: #e2e8f0; }
   .cmp-num-chip.cmp-num-target { background: #c2410c; color: #fff; }
   .cmp-veces { color: #cbd5e1; }
+  .cmp-pos-section { border-top-color: #3d1a00; }
 
   .b10-mirror-list li,
   .b10-pale-list li { background: #0e1014; }
