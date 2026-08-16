@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-16T15:39:13-04:00",
-  "generated_at_display": "16/08/2026 15:39",
+  "generated_at": "2026-08-16T15:59:58-04:00",
+  "generated_at_display": "16/08/2026 15:59",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -91757,6 +91757,17 @@
         {
           "lottery": "Leidsa",
           "draw": "Quiniela Leidsa",
+          "draw_date": "2026-08-16",
+          "numbers": [
+            83,
+            53,
+            51
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Leidsa",
+          "draw": "Quiniela Leidsa",
           "draw_date": "2026-08-15",
           "numbers": [
             71,
@@ -132239,9 +132250,56 @@
           4,
           9,
           15
+        ],
+        [
+          "20260816",
+          "Quiniela Leidsa",
+          83,
+          53,
+          51
+        ],
+        [
+          "20260816",
+          "Super Kino TV",
+          33,
+          77,
+          21,
+          8,
+          24,
+          79,
+          40,
+          47,
+          72,
+          68,
+          71,
+          62,
+          64,
+          42,
+          80,
+          63,
+          30,
+          50,
+          56,
+          32
+        ],
+        [
+          "20260816",
+          "Loto Pool",
+          27,
+          26,
+          12,
+          20,
+          6
+        ],
+        [
+          "20260816",
+          "Pega 3 Más",
+          34,
+          26,
+          15
         ]
       ],
-      "total_results": 5582,
+      "total_results": 5586,
       "draws": {
         "Quiniela Leidsa": {
           "suggestions": [
@@ -132320,6 +132378,17 @@
             {
               "lottery": "Leidsa",
               "draw": "Quiniela Leidsa",
+              "draw_date": "2026-08-16",
+              "numbers": [
+                83,
+                53,
+                51
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Leidsa",
+              "draw": "Quiniela Leidsa",
               "draw_date": "2026-08-15",
               "numbers": [
                 71,
@@ -132393,20 +132462,9 @@
                 20
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela Leidsa",
-              "draw_date": "2026-08-08",
-              "numbers": [
-                88,
-                54,
-                86
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5294,
+          "total_results": 5295,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -132417,22 +132475,6 @@
             "average_hits_top5": 0.08,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-11",
-                "actual": [
-                  "85",
-                  "74",
-                  "34"
-                ],
-                "predicted": [
-                  "21",
-                  "57",
-                  "63",
-                  "22",
-                  "81"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-12",
                 "actual": [
@@ -132489,6 +132531,22 @@
                   "71",
                   "76",
                   "96"
+                ],
+                "predicted": [
+                  "21",
+                  "63",
+                  "57",
+                  "22",
+                  "81"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-16",
+                "actual": [
+                  "83",
+                  "53",
+                  "51"
                 ],
                 "predicted": [
                   "21",
