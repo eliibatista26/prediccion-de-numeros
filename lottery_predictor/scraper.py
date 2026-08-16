@@ -16,6 +16,7 @@ LOTERIAS_DO_URL = "https://loterias.do/"
 LOTERIAS_RD_URL = "https://www.loteriasrd.com.do/"
 YELU_BASE_URL = "https://www.yelu.do"
 CONNECTATE_LOTERIAS_URL = "https://www.conectate.com.do/loterias/"
+CONECTATE_API_URL = "https://api.conectate.com.do/conectate/sessions"
 RESULTS_DO_SUPABASE_URL = "https://zfqtqdhyodsivygnvnfh.supabase.co/rest/v1/resultados"
 RESULTS_DO_SUPABASE_KEY = (
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."
@@ -71,6 +72,92 @@ YELU_HISTORY_ENDPOINTS = (
     ("/lottery/results/history", "Lotería Nacional"),
     ("/leidsa/results/history", "Leidsa"),
 )
+
+# Conéctate migró a una SPA (Nuxt); los resultados ya no están en el HTML sino
+# en la API api.conectate.com.do/conectate/sessions. Esta responde por game_id,
+# así que mapeamos cada game_id a (lotería, sorteo) con los nombres canónicos
+# usados en el histórico. Los IDs son ObjectIds estables de conéctate.
+CONECTATE_GAME_MAP: dict[str, tuple[str, str]] = {
+    '6966a6d3ea7015c3b8a3d635': ('Anguila', 'Anguila 10:00 AM'),
+    '6a511b0a07d516b9c5107d05': ('Anguila', 'Anguila 10:00 PM'),
+    '6a3e935d5036a431f5f3e8b2': ('Anguila', 'Anguila 11:00 AM'),
+    '6a3e94f85036a431f5f407b0': ('Anguila', 'Anguila 12:00 PM'),
+    '6966a6d3ea7015c3b8a3d611': ('Anguila', 'Anguila 1:00 PM'),
+    '6a3e96e25036a431f5f40c87': ('Anguila', 'Anguila 2:00 PM'),
+    '6a3e97a25036a431f5f41eef': ('Anguila', 'Anguila 3:00 PM'),
+    '6a5116a607d516b9c5102db7': ('Anguila', 'Anguila 4:00 PM'),
+    '6a5116f607d516b9c510302f': ('Anguila', 'Anguila 5:00 PM'),
+    '6966a6d3ea7015c3b8a3d617': ('Anguila', 'Anguila 6:00 PM'),
+    '6a51185b07d516b9c5104c69': ('Anguila', 'Anguila 7:00 PM'),
+    '6a5114d907d516b9c5101dd5': ('Anguila', 'Anguila 8:00 AM'),
+    '6a511ab407d516b9c510788d': ('Anguila', 'Anguila 8:00 PM'),
+    '6a3e91bd5036a431f5f3e801': ('Anguila', 'Anguila 9:00 AM'),
+    '6966a6d3ea7015c3b8a3d61d': ('Anguila', 'Anguila 9:00 PM'),
+    '6966a6d3ea7015c3b8a3d63b': ('Anguila', 'La Cuarteta 10:00 AM'),
+    '6966a6d3ea7015c3b8a3d623': ('Anguila', 'La Cuarteta 1:00 PM'),
+    '6966a6d3ea7015c3b8a3d629': ('Anguila', 'La Cuarteta 6:00 PM'),
+    '6966a6d3ea7015c3b8a3d62f': ('Anguila', 'La Cuarteta 9:00 PM'),
+    '6966a6d2ea7015c3b8a3d521': ('Cash 4 Life', 'Cash 4 Life'),
+    '6966a6d2ea7015c3b8a3d515': ('Florida', 'Florida Día'),
+    '6966a6d2ea7015c3b8a3d51b': ('Florida', 'Florida Noche'),
+    '6a44125c7f178816db95a378': ('Haiti', 'Haiti Bolet 10:30 AM'),
+    '6a4414807f178816db95ac68': ('Haiti', 'Haiti Bolet 11:30 AM'),
+    '6a4414ae7f178816db95ac7e': ('Haiti', 'Haiti Bolet 5:30 PM'),
+    '6a4414d17f178816db95aca1': ('Haiti', 'Haiti Bolet 6:30 PM'),
+    '6a4414fc7f178816db95acb7': ('Haiti', 'Haiti Bolet 7:30 PM'),
+    '6a4411b07f178816db959f3d': ('Haiti', 'Haiti Bolet 9:30 AM'),
+    '6966a6d3ea7015c3b8a3d66a': ('King Lottery', 'King Lottery 12:30'),
+    '6966a6d3ea7015c3b8a3d670': ('King Lottery', 'King Lottery 7:30'),
+    '6966a6d3ea7015c3b8a3d646': ('King Lottery', 'Loto Pool Día'),
+    '6966a6d3ea7015c3b8a3d64c': ('King Lottery', 'Loto Pool Noche'),
+    '6966a6d3ea7015c3b8a3d676': ('King Lottery', 'Philipsburg Día'),
+    '6966a6d3ea7015c3b8a3d67c': ('King Lottery', 'Philipsburg Noche'),
+    '6966a6d3ea7015c3b8a3d652': ('King Lottery', 'Pick 3 Día'),
+    '6966a6d3ea7015c3b8a3d658': ('King Lottery', 'Pick 3 Noche'),
+    '6966a6d3ea7015c3b8a3d65e': ('King Lottery', 'Pick 4 Día'),
+    '6966a6d3ea7015c3b8a3d664': ('King Lottery', 'Pick 4 Noche'),
+    '6966a6d2ea7015c3b8a3d5d2': ('La Primera', 'El Quinielón Día'),
+    '6966a6d2ea7015c3b8a3d5c0': ('La Primera', 'La Primera Día'),
+    '6966a6d2ea7015c3b8a3d5cc': ('La Primera', 'Loto 5'),
+    '6966a6d2ea7015c3b8a3d5c6': ('La Primera', 'Primera Noche'),
+    '6966a6d2ea7015c3b8a3d5d8': ('La Primera', 'Quinielón Noche'),
+    '6966a6d3ea7015c3b8a3d5e9': ('La Suerte Dominicana', 'La Suerte 6PM'),
+    '6966a6d3ea7015c3b8a3d5e3': ('La Suerte Dominicana', 'La Suerte MD'),
+    '6966a6d1ea7015c3b8a3d44d': ('Leidsa', 'Loto - Loto Más'),
+    '6966a6d1ea7015c3b8a3d45f': ('Leidsa', 'Loto Pool'),
+    '6966a6d1ea7015c3b8a3d471': ('Leidsa', 'Pega 3 Más'),
+    '6966a6d1ea7015c3b8a3d453': ('Leidsa', 'Quiniela Leidsa'),
+    '6966a6d1ea7015c3b8a3d459': ('Leidsa', 'Super Kino TV'),
+    '6966a6d1ea7015c3b8a3d465': ('Leidsa', 'Super Palé'),
+    '6966a6d3ea7015c3b8a3d606': ('Lotedom', 'Agarra 4'),
+    '6966a6d3ea7015c3b8a3d5fa': ('Lotedom', 'El Quemaito Mayor'),
+    '6966a6d3ea7015c3b8a3d5f4': ('Lotedom', 'LoteDom'),
+    '6966a6d3ea7015c3b8a3d600': ('Lotedom', 'Super Palé'),
+    '6966a6d2ea7015c3b8a3d4dd': ('Loteka', 'Mega Chances'),
+    '6966a6d2ea7015c3b8a3d4ec': ('Loteka', 'Mega Chances Repartidera'),
+    '6966a6d2ea7015c3b8a3d4e6': ('Loteka', 'MegaLotto'),
+    '6966a6d2ea7015c3b8a3d4d7': ('Loteka', 'Quiniela Loteka'),
+    '6966a6d2ea7015c3b8a3d4f2': ('Loteka', 'Toca 3'),
+    '6966a6d2ea7015c3b8a3d488': ('Lotería Nacional', 'Billetes Domingo'),
+    '6966a6d1ea7015c3b8a3d482': ('Lotería Nacional', 'Gana Más'),
+    '6966a6d2ea7015c3b8a3d48e': ('Lotería Nacional', 'Juega + Pega +'),
+    '6966a6d1ea7015c3b8a3d47c': ('Lotería Nacional', 'Lotería Nacional'),
+    '69fd98465e76585b602695be': ('Lotería Real', 'Chance Real'),
+    '6966a6d2ea7015c3b8a3d4c6': ('Lotería Real', 'Loto Pool'),
+    '69fd98465e76585b602695cc': ('Lotería Real', 'Loto Pool Noche'),
+    '6966a6d2ea7015c3b8a3d4a8': ('Lotería Real', 'Loto Real'),
+    '6966a6d2ea7015c3b8a3d4cc': ('Lotería Real', 'Nueva Yol Real'),
+    '6966a6d2ea7015c3b8a3d4c0': ('Lotería Real', 'Pega 4 Real'),
+    '6966a6d2ea7015c3b8a3d4ae': ('Lotería Real', 'Quiniela Real'),
+    '69fd98465e76585b602695c5': ('Lotería Real', 'Repartidera Real'),
+    '6966a6d2ea7015c3b8a3d4b4': ('Lotería Real', 'Super Palé'),
+    '6966a6d2ea7015c3b8a3d4ba': ('Lotería Real', 'Tu Fecha Real'),
+    '6966a6d2ea7015c3b8a3d4fd': ('Mega Millions', 'Mega Millions'),
+    '6966a6d2ea7015c3b8a3d50f': ('New York', 'New York 11:30'),
+    '6966a6d2ea7015c3b8a3d509': ('New York', 'New York 3:30'),
+    '6966a6d2ea7015c3b8a3d503': ('Powerball', 'PowerBall'),
+    '6966a6d2ea7015c3b8a3d527': ('Powerball', 'Powerball Double Play'),
+}
 
 
 class TextExtractor(HTMLParser):
@@ -217,9 +304,15 @@ def scrape_loterias_rd() -> list[LotteryResult]:
 
 
 def scrape_all_sources() -> list[LotteryResult]:
+    # Ventana de 2 días (ayer y hoy): captura resultados publicados tarde y evita
+    # el hueco de la madrugada cuando aún no hay sorteos del día.
+    today = date.today()
+    yesterday = today - timedelta(days=1)
     try:
-        results = scrape_conectate_date(date.today())
-        print(f"Conectate: {len(results)} resultados")
+        results = scrape_conectate_range(yesterday, today)
+        print(f"Conectate: {len(results)} resultados ({yesterday} .. {today})")
+        if not results:
+            print("ADVERTENCIA: Conectate no devolvió resultados para la ventana consultada.")
         return results
     except requests.RequestException as exc:
         print(f"No se pudo actualizar Conectate: {exc}")
@@ -257,17 +350,72 @@ def scrape_yelu_history(start_year: int = 2010) -> list[LotteryResult]:
 
 def scrape_conectate_date(draw_date: date, session: requests.Session | None = None) -> list[LotteryResult]:
     http = session or requests.Session()
+    # La API indexa por medianoche de RD (America/Santo_Domingo, UTC-4 => T04:00Z).
     response = http.get(
-        CONNECTATE_LOTERIAS_URL,
-        params={"date": draw_date.strftime("%d-%m-%Y")},
+        CONECTATE_API_URL,
+        params={
+            "date": draw_date.strftime("%Y-%m-%dT04:00:00.000Z"),
+            "limit": 3,
+        },
         timeout=20,
         headers={
             "User-Agent": "Mozilla/5.0 lottery-predictor-bot/1.0",
-            "Accept-Language": "es-DO,es;q=0.9,en;q=0.6",
+            "Accept": "application/json",
+            "Origin": "https://loterias.conectate.com.do",
+            "Referer": "https://loterias.conectate.com.do/",
         },
     )
     response.raise_for_status()
-    return _parse_conectate_results(response.text, draw_date=draw_date)
+    return _parse_conectate_api(response.json())
+
+
+def _parse_conectate_api(payload: Any) -> list[LotteryResult]:
+    if not isinstance(payload, list):
+        return []
+    results: list[LotteryResult] = []
+    for game in payload:
+        if not isinstance(game, dict):
+            continue
+        mapping = CONECTATE_GAME_MAP.get(str(game.get("game_id", "")))
+        if not mapping:
+            continue
+        lottery, draw = mapping
+        for session in game.get("sessions") or []:
+            if not isinstance(session, dict):
+                continue
+            rows = session.get("score") or []
+            if not rows or not isinstance(rows[0], list):
+                continue
+            numbers = tuple(
+                int(value)
+                for value in rows[0]
+                if str(value).strip().isdigit() and 0 <= int(value) <= 99
+            )
+            if len(numbers) < 2:
+                continue
+            draw_date = _parse_conectate_session_date(session.get("date"))
+            if not draw_date:
+                continue
+            results.append(
+                LotteryResult(
+                    lottery=lottery,
+                    draw=draw,
+                    draw_date=draw_date,
+                    numbers=numbers,
+                    source=CONNECTATE_LOTERIAS_URL,
+                )
+            )
+    return _dedupe(results)
+
+
+def _parse_conectate_session_date(raw: Any) -> date | None:
+    # "2026-08-15T04:00:00.000Z" (T04:00Z = medianoche RD) -> el día RD es la fecha.
+    if not isinstance(raw, str) or len(raw) < 10:
+        return None
+    try:
+        return datetime.strptime(raw[:10], "%Y-%m-%d").date()
+    except ValueError:
+        return None
 
 
 def scrape_conectate_range(start_date: date, end_date: date, workers: int = 8) -> list[LotteryResult]:

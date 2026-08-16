@@ -581,13 +581,13 @@ def _render_html(predictions: dict[str, object]) -> str:
       const filteredFullA = filterDailyFull(dailyFullA);
       const filteredFullB = filterDailyFull(dailyFullB);
 
-      // Top 5 most repeated per position
-      const rep1A = topN(statsA.p1, 5);
-      const rep2A = topN(statsA.p2, 5);
-      const rep3A = topN(statsA.p3, 5);
-      const rep1B = topN(statsB.p1, 5);
-      const rep2B = topN(statsB.p2, 5);
-      const rep3B = topN(statsB.p3, 5);
+      // Top 10 most repeated per position
+      const rep1A = topN(statsA.p1, 10);
+      const rep2A = topN(statsA.p2, 10);
+      const rep3A = topN(statsA.p3, 10);
+      const rep1B = topN(statsB.p1, 10);
+      const rep2B = topN(statsB.p2, 10);
+      const rep3B = topN(statsB.p3, 10);
 
       // 4 conditions: find numbers that meet all 4 (check union of both top 20)
       const candidates = [...new Set([
@@ -706,9 +706,9 @@ def _render_html(predictions: dict[str, object]) -> str:
           </div>
         </div>
 
-        <!-- 5 más repetidos por posición — filas completas debajo -->
+        <!-- 10 más repetidos por posición — filas completas debajo -->
         <div class="cmp-pos-section">
-          <p class="eyebrow cmp-pos-title">5 más repetidos por posición</p>
+          <p class="eyebrow cmp-pos-title">10 más repetidos por posición</p>
           <div class="cmp-pos-row">
             <span class="cmp-pos-label">1ra posición</span>
             <div class="cmp-dual-grid">
