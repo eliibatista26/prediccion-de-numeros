@@ -1,5 +1,16 @@
 [
   {
+    "lottery": "New York",
+    "draw": "New York 3:30",
+    "draw_date": "2026-08-16",
+    "numbers": [
+      85,
+      18,
+      7
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotería Real",
     "draw": "Quiniela Real",
     "draw_date": "2026-08-16",
@@ -221,6 +232,17 @@
       68,
       76,
       94
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 3:00 PM",
+    "draw_date": "2026-08-16",
+    "numbers": [
+      84,
+      96,
+      32
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
