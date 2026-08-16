@@ -88,13 +88,16 @@ def build_predictions(
     requested_from_date: str = "2010-08-01",
 ) -> dict[str, object]:
     generated_at = datetime.now(ZoneInfo("America/Santo_Domingo"))
+    # Fecha de referencia en hora RD (no UTC): el runner corre en UTC y los
+    # atrasos (delay_days) deben medirse contra el día dominicano actual.
+    reference_date = generated_at.date()
     grouped: dict[str, list[LotteryResult]] = defaultdict(list)
     for result in results:
         grouped[result.lottery].append(result)
 
     lotteries = {}
     for lottery, lottery_results in sorted(grouped.items()):
-        suggestions = suggest_numbers(lottery_results, limit=limit)
+        suggestions = suggest_numbers(lottery_results, limit=limit, reference_date=reference_date)
         draw_groups: dict[str, list[LotteryResult]] = defaultdict(list)
         for result in lottery_results:
             draw_groups[result.draw].append(result)
@@ -110,7 +113,7 @@ def build_predictions(
             "total_results": len(lottery_results),
             "draws": {
                 draw: {
-                    "suggestions": _serialize_suggestions(suggest_numbers(draw_results, limit=limit)),
+                    "suggestions": _serialize_suggestions(suggest_numbers(draw_results, limit=limit, reference_date=reference_date)),
                     "last_results": [result.to_dict() for result in sorted(draw_results, key=lambda item: item.draw_date, reverse=True)[:8]],
                     "total_results": len(draw_results),
                     "backtest": backtest_draw(draw_results, limit=limit),

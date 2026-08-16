@@ -107,12 +107,13 @@ def main() -> None:
     json_results = load_results(args.data)
     print(f"Registros en JSON: {len(json_results)}")
 
+    db_results: list = []
     if using_db:
         print("Modo: base de datos PostgreSQL (Neon) + JSON histórico")
         try:
             db.setup()
-            db_count = len(db.load_results())
-            print(f"Registros en DB: {db_count}")
+            db_results = db.load_results()
+            print(f"Registros en DB: {len(db_results)}")
         except Exception as exc:
             print(f"ERROR conectando a Neon: {exc}")
             print("Continuando solo con JSON local...")
@@ -122,20 +123,18 @@ def main() -> None:
 
     new_results = [] if args.skip_scrape else scrape_all_sources()
 
-    if using_db:
-        # Guardar nuevos resultados en DB (solo acumula nuevos scraping diarios)
-        if new_results:
-            try:
-                inserted = db.save_results(new_results)
-                print(f"Resultados nuevos insertados en DB: {inserted}")
-            except Exception as exc:
-                print(f"ERROR guardando en DB: {exc}")
-        # Para el análisis usamos JSON histórico + nuevos resultados de hoy
-        all_results = merge_results(json_results, new_results)
-        save_results(args.data, all_results)
-    else:
-        all_results = merge_results(json_results, new_results)
-        save_results(args.data, all_results)
+    if using_db and new_results:
+        # Acumula los scrapings nuevos en la DB (histórico durable).
+        try:
+            inserted = db.save_results(new_results)
+            print(f"Resultados nuevos insertados en DB: {inserted}")
+        except Exception as exc:
+            print(f"ERROR guardando en DB: {exc}")
+
+    # El análisis usa el histórico completo (JSON + DB) más los resultados de hoy.
+    # Si la DB no está disponible, db_results queda vacío y solo pesa el JSON.
+    all_results = merge_results(json_results + db_results, new_results)
+    save_results(args.data, all_results)
 
     predictions = build_predictions(all_results)
     if args.preserve_predictions:
