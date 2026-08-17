@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-16T19:52:01-04:00",
-  "generated_at_display": "16/08/2026 19:52",
+  "generated_at": "2026-08-16T20:40:20-04:00",
+  "generated_at_display": "16/08/2026 20:40",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -159494,9 +159494,26 @@
           72,
           7,
           18
+        ],
+        [
+          "20260816",
+          "Chance Real",
+          83,
+          4,
+          93,
+          21,
+          31
+        ],
+        [
+          "20260816",
+          "Loto Pool Noche",
+          21,
+          59,
+          89,
+          26
         ]
       ],
-      "total_results": 3799,
+      "total_results": 3801,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -159838,6 +159855,17 @@
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
+          "draw_date": "2026-08-16",
+          "numbers": [
+            25,
+            39,
+            78
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Loteka",
+          "draw": "Quiniela Loteka",
           "draw_date": "2026-08-15",
           "numbers": [
             19,
@@ -159854,17 +159882,6 @@
             51,
             80,
             19
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Loteka",
-          "draw": "Quiniela Loteka",
-          "draw_date": "2026-08-13",
-          "numbers": [
-            75,
-            80,
-            28
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -179886,9 +179903,32 @@
           47,
           93,
           52
+        ],
+        [
+          "20260816",
+          "Quiniela Loteka",
+          25,
+          39,
+          78
+        ],
+        [
+          "20260816",
+          "Mega Chances",
+          76,
+          92,
+          98,
+          11,
+          1
+        ],
+        [
+          "20260816",
+          "Toca 3",
+          6,
+          7,
+          8
         ]
       ],
-      "total_results": 2828,
+      "total_results": 2831,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -179967,6 +180007,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-08-16",
+              "numbers": [
+                25,
+                39,
+                78
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-08-15",
               "numbers": [
                 19,
@@ -180040,20 +180091,9 @@
                 3
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-08-08",
-              "numbers": [
-                54,
-                58,
-                19
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2687,
+          "total_results": 2688,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -180064,22 +180104,6 @@
             "average_hits_top5": 0.16,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-11",
-                "actual": [
-                  "34",
-                  "02",
-                  "40"
-                ],
-                "predicted": [
-                  "28",
-                  "17",
-                  "98",
-                  "52",
-                  "09"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-12",
                 "actual": [
@@ -180143,6 +180167,22 @@
                   "98",
                   "52",
                   "75"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-16",
+                "actual": [
+                  "25",
+                  "39",
+                  "78"
+                ],
+                "predicted": [
+                  "28",
+                  "17",
+                  "98",
+                  "19",
+                  "52"
                 ],
                 "hits": []
               }
