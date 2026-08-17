@@ -135,6 +135,31 @@
   },
   {
     "lottery": "La Primera",
+    "draw": "Primera Noche",
+    "draw_date": "2026-08-17",
+    "numbers": [
+      60,
+      74,
+      65
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Primera",
+    "draw": "Loto 5",
+    "draw_date": "2026-08-17",
+    "numbers": [
+      33,
+      22,
+      10,
+      32,
+      21,
+      1
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Primera",
     "draw": "La Primera Día",
     "draw_date": "2026-08-17",
     "numbers": [
@@ -311,6 +336,17 @@
       73,
       1,
       82
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 7:00 PM",
+    "draw_date": "2026-08-17",
+    "numbers": [
+      93,
+      73,
+      72
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
