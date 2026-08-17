@@ -418,12 +418,35 @@
   },
   {
     "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-08-16",
+    "numbers": [
+      62,
+      81,
+      33
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
     "draw": "Florida Día",
     "draw_date": "2026-08-16",
     "numbers": [
       74,
       49,
       14
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "La Cuarteta 9:00 PM",
+    "draw_date": "2026-08-16",
+    "numbers": [
+      93,
+      26,
+      61,
+      59
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -460,6 +483,17 @@
       5,
       93,
       46
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 9:00 PM",
+    "draw_date": "2026-08-16",
+    "numbers": [
+      16,
+      20,
+      86
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -591,6 +625,17 @@
     "numbers": [
       35,
       61,
+      60
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-08-16",
+    "numbers": [
+      13,
+      21,
       60
     ],
     "source": "https://www.conectate.com.do/loterias/"
