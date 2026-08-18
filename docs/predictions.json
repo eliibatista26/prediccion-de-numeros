@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-18T12:53:24-04:00",
-  "generated_at_display": "18/08/2026 12:53",
+  "generated_at": "2026-08-18T13:37:37-04:00",
+  "generated_at_display": "18/08/2026 13:37",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -132715,22 +132715,22 @@
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
-          "draw_date": "2026-08-17",
+          "draw_date": "2026-08-18",
           "numbers": [
-            99,
-            83,
-            27
+            11,
+            74,
+            99
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
-          "draw_date": "2026-08-16",
+          "draw_date": "2026-08-17",
           "numbers": [
-            42,
-            85,
-            71
+            99,
+            83,
+            27
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -159632,9 +159632,31 @@
           50,
           83,
           91
+        ],
+        [
+          "20260818",
+          "Quiniela Real",
+          11,
+          74,
+          99
+        ],
+        [
+          "20260818",
+          "Loto Pool",
+          81,
+          58,
+          45,
+          42
+        ],
+        [
+          "20260818",
+          "Nueva Yol Real",
+          5,
+          5,
+          68
         ]
       ],
-      "total_results": 3807,
+      "total_results": 3810,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -159713,6 +159735,17 @@
             {
               "lottery": "Lotería Real",
               "draw": "Quiniela Real",
+              "draw_date": "2026-08-18",
+              "numbers": [
+                11,
+                74,
+                99
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Real",
+              "draw": "Quiniela Real",
               "draw_date": "2026-08-17",
               "numbers": [
                 99,
@@ -159786,20 +159819,9 @@
                 31
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Real",
-              "draw": "Quiniela Real",
-              "draw_date": "2026-08-10",
-              "numbers": [
-                73,
-                11,
-                3
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 3489,
+          "total_results": 3490,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -159810,22 +159832,6 @@
             "average_hits_top5": 0.18,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-08-13",
-                "actual": [
-                  "45",
-                  "02",
-                  "31"
-                ],
-                "predicted": [
-                  "26",
-                  "43",
-                  "17",
-                  "59",
-                  "65"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-14",
                 "actual": [
@@ -159884,6 +159890,22 @@
                   "99",
                   "83",
                   "27"
+                ],
+                "predicted": [
+                  "26",
+                  "43",
+                  "17",
+                  "65",
+                  "59"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-18",
+                "actual": [
+                  "11",
+                  "74",
+                  "99"
                 ],
                 "predicted": [
                   "26",
