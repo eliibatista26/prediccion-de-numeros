@@ -171,6 +171,18 @@
   },
   {
     "lottery": "King Lottery",
+    "draw": "Pick 4 Noche",
+    "draw_date": "2026-08-18",
+    "numbers": [
+      0,
+      3,
+      4,
+      1
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
     "draw": "Pick 4 Día",
     "draw_date": "2026-08-18",
     "numbers": [
@@ -178,6 +190,17 @@
       4,
       3,
       6
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "Pick 3 Noche",
+    "draw_date": "2026-08-18",
+    "numbers": [
+      1,
+      6,
+      1
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -213,6 +236,17 @@
       51,
       18,
       82
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "King Lottery 7:30",
+    "draw_date": "2026-08-18",
+    "numbers": [
+      61,
+      3,
+      41
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
