@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-18T11:51:19-04:00",
-  "generated_at_display": "18/08/2026 11:51",
+  "generated_at": "2026-08-18T12:18:12-04:00",
+  "generated_at_display": "18/08/2026 12:18",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -180414,6 +180414,17 @@
       "last_results": [
         {
           "lottery": "La Primera",
+          "draw": "La Primera Día",
+          "draw_date": "2026-08-18",
+          "numbers": [
+            40,
+            8,
+            39
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
           "draw": "Primera Noche",
           "draw_date": "2026-08-17",
           "numbers": [
@@ -197654,9 +197665,16 @@
           80,
           2,
           56
+        ],
+        [
+          "20260818",
+          "La Primera Día",
+          40,
+          8,
+          39
         ]
       ],
-      "total_results": 2423,
+      "total_results": 2424,
       "draws": {
         "La Primera Día": {
           "suggestions": [
@@ -197735,6 +197753,17 @@
             {
               "lottery": "La Primera",
               "draw": "La Primera Día",
+              "draw_date": "2026-08-18",
+              "numbers": [
+                40,
+                8,
+                39
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Primera",
+              "draw": "La Primera Día",
               "draw_date": "2026-08-17",
               "numbers": [
                 80,
@@ -197808,46 +197837,19 @@
                 20
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Primera",
-              "draw": "La Primera Día",
-              "draw_date": "2026-08-10",
-              "numbers": [
-                61,
-                39,
-                61
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 920,
+          "total_results": 921,
           "backtest": {
             "status": "ok",
             "window_days": 60,
-            "tested_draws": 60,
-            "top3_any_hit_rate": 0.05,
-            "top5_any_hit_rate": 0.167,
-            "first_position_hit_rate": 0.05,
-            "average_hits_top5": 0.17,
+            "tested_draws": 61,
+            "top3_any_hit_rate": 0.049,
+            "top5_any_hit_rate": 0.164,
+            "first_position_hit_rate": 0.049,
+            "average_hits_top5": 0.16,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-13",
-                "actual": [
-                  "19",
-                  "83",
-                  "99"
-                ],
-                "predicted": [
-                  "16",
-                  "14",
-                  "24",
-                  "64",
-                  "56"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-14",
                 "actual": [
@@ -197909,6 +197911,22 @@
                   "24",
                   "64",
                   "19"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-18",
+                "actual": [
+                  "40",
+                  "08",
+                  "39"
+                ],
+                "predicted": [
+                  "16",
+                  "14",
+                  "24",
+                  "56",
+                  "64"
                 ],
                 "hits": []
               }
@@ -222971,6 +222989,17 @@
         {
           "lottery": "Lotedom",
           "draw": "LoteDom",
+          "draw_date": "2026-08-18",
+          "numbers": [
+            7,
+            50,
+            98
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotedom",
+          "draw": "LoteDom",
           "draw_date": "2026-08-17",
           "numbers": [
             9,
@@ -222987,17 +223016,6 @@
             16,
             37,
             45
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotedom",
-          "draw": "LoteDom",
-          "draw_date": "2026-08-15",
-          "numbers": [
-            57,
-            90,
-            99
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -238584,9 +238602,30 @@
           92,
           48,
           46
+        ],
+        [
+          "20260818",
+          "LoteDom",
+          7,
+          50,
+          98
+        ],
+        [
+          "20260818",
+          "Super Palé",
+          7,
+          90
+        ],
+        [
+          "20260818",
+          "Agarra 4",
+          7,
+          50,
+          98,
+          90
         ]
       ],
-      "total_results": 2226,
+      "total_results": 2229,
       "draws": {
         "LoteDom": {
           "suggestions": [
@@ -238665,6 +238704,17 @@
             {
               "lottery": "Lotedom",
               "draw": "LoteDom",
+              "draw_date": "2026-08-18",
+              "numbers": [
+                7,
+                50,
+                98
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotedom",
+              "draw": "LoteDom",
               "draw_date": "2026-08-17",
               "numbers": [
                 9,
@@ -238738,20 +238788,9 @@
                 8
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotedom",
-              "draw": "LoteDom",
-              "draw_date": "2026-08-10",
-              "numbers": [
-                17,
-                65,
-                71
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2114,
+          "total_results": 2115,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -238762,22 +238801,6 @@
             "average_hits_top5": 0.08,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-13",
-                "actual": [
-                  "99",
-                  "81",
-                  "11"
-                ],
-                "predicted": [
-                  "12",
-                  "21",
-                  "28",
-                  "08",
-                  "49"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-14",
                 "actual": [
@@ -238839,6 +238862,22 @@
                   "28",
                   "99",
                   "08"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-18",
+                "actual": [
+                  "07",
+                  "50",
+                  "98"
+                ],
+                "predicted": [
+                  "12",
+                  "09",
+                  "21",
+                  "28",
+                  "48"
                 ],
                 "hits": []
               }
