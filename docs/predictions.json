@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-19T19:09:48-04:00",
-  "generated_at_display": "19/08/2026 19:09",
+  "generated_at": "2026-08-19T19:41:48-04:00",
+  "generated_at_display": "19/08/2026 19:41",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -180606,23 +180606,23 @@
       "last_results": [
         {
           "lottery": "La Primera",
-          "draw": "La Primera Día",
-          "draw_date": "2026-08-19",
-          "numbers": [
-            85,
-            56,
-            59
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
           "draw": "Primera Noche",
           "draw_date": "2026-08-19",
           "numbers": [
             13,
             63,
             20
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "La Primera Día",
+          "draw_date": "2026-08-19",
+          "numbers": [
+            85,
+            56,
+            59
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -197873,13 +197873,6 @@
         ],
         [
           "20260819",
-          "La Primera Día",
-          85,
-          56,
-          59
-        ],
-        [
-          "20260819",
           "Primera Noche",
           13,
           63,
@@ -197894,6 +197887,13 @@
           20,
           7,
           8
+        ],
+        [
+          "20260819",
+          "La Primera Día",
+          85,
+          56,
+          59
         ]
       ],
       "total_results": 2429,
