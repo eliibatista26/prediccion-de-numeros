@@ -171,11 +171,34 @@
   },
   {
     "lottery": "King Lottery",
+    "draw": "Pick 4 Noche",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      7,
+      3,
+      2,
+      6
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
     "draw": "Pick 4 Día",
     "draw_date": "2026-08-20",
     "numbers": [
       5,
       4,
+      4,
+      9
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "Pick 3 Noche",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      6,
       4,
       9
     ],
@@ -194,6 +217,18 @@
   },
   {
     "lottery": "King Lottery",
+    "draw": "Loto Pool Noche",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      6,
+      21,
+      66,
+      59
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
     "draw": "Loto Pool Día",
     "draw_date": "2026-08-20",
     "numbers": [
@@ -201,6 +236,17 @@
       71,
       56,
       60
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "King Lottery 7:30",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      49,
+      73,
+      26
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -223,6 +269,17 @@
       24,
       16,
       11
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Haiti",
+    "draw": "Haiti Bolet 7:30 PM",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      28,
+      60,
+      83
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
