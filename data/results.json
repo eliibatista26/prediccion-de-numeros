@@ -44,6 +44,18 @@
   },
   {
     "lottery": "Lotería Real",
+    "draw": "Loto Pool Noche",
+    "draw_date": "2026-08-19",
+    "numbers": [
+      19,
+      75,
+      55,
+      8
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
     "draw": "Loto Pool",
     "draw_date": "2026-08-19",
     "numbers": [
@@ -51,6 +63,19 @@
       90,
       23,
       70
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
+    "draw": "Chance Real",
+    "draw_date": "2026-08-19",
+    "numbers": [
+      58,
+      67,
+      27,
+      16,
+      15
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -75,6 +100,41 @@
       40,
       72,
       18
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Loteka",
+    "draw": "Toca 3",
+    "draw_date": "2026-08-19",
+    "numbers": [
+      2,
+      2,
+      9
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Loteka",
+    "draw": "Quiniela Loteka",
+    "draw_date": "2026-08-19",
+    "numbers": [
+      67,
+      64,
+      96
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Loteka",
+    "draw": "Mega Chances",
+    "draw_date": "2026-08-19",
+    "numbers": [
+      15,
+      71,
+      59,
+      39,
+      77
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -382,6 +442,17 @@
       28,
       81,
       15
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 8:00 PM",
+    "draw_date": "2026-08-19",
+    "numbers": [
+      85,
+      28,
+      13
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
