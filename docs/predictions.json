@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-20T18:49:07-04:00",
-  "generated_at_display": "20/08/2026 18:49",
+  "generated_at": "2026-08-20T19:12:40-04:00",
+  "generated_at_display": "20/08/2026 19:12",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -180772,6 +180772,17 @@
         {
           "lottery": "La Primera",
           "draw": "Primera Noche",
+          "draw_date": "2026-08-20",
+          "numbers": [
+            97,
+            63,
+            29
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "Primera Noche",
           "draw_date": "2026-08-19",
           "numbers": [
             13,
@@ -180799,28 +180810,6 @@
             57,
             20,
             25
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "La Primera Día",
-          "draw_date": "2026-08-18",
-          "numbers": [
-            40,
-            8,
-            39
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "Primera Noche",
-          "draw_date": "2026-08-17",
-          "numbers": [
-            60,
-            74,
-            65
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -198066,9 +198055,26 @@
           6,
           88,
           29
+        ],
+        [
+          "20260820",
+          "Primera Noche",
+          97,
+          63,
+          29
+        ],
+        [
+          "20260820",
+          "Loto 5",
+          6,
+          4,
+          21,
+          27,
+          18,
+          8
         ]
       ],
-      "total_results": 2430,
+      "total_results": 2432,
       "draws": {
         "La Primera Día": {
           "suggestions": [
@@ -198665,6 +198671,17 @@
             {
               "lottery": "La Primera",
               "draw": "Primera Noche",
+              "draw_date": "2026-08-20",
+              "numbers": [
+                97,
+                63,
+                29
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Primera",
+              "draw": "Primera Noche",
               "draw_date": "2026-08-19",
               "numbers": [
                 13,
@@ -198738,46 +198755,19 @@
                 16
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Primera",
-              "draw": "Primera Noche",
-              "draw_date": "2026-08-12",
-              "numbers": [
-                76,
-                59,
-                31
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 75,
+          "total_results": 76,
           "backtest": {
             "status": "ok",
             "window_days": 60,
-            "tested_draws": 45,
-            "top3_any_hit_rate": 0.044,
-            "top5_any_hit_rate": 0.067,
+            "tested_draws": 46,
+            "top3_any_hit_rate": 0.043,
+            "top5_any_hit_rate": 0.087,
             "first_position_hit_rate": 0.0,
-            "average_hits_top5": 0.07,
+            "average_hits_top5": 0.09,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-15",
-                "actual": [
-                  "82",
-                  "11",
-                  "05"
-                ],
-                "predicted": [
-                  "40",
-                  "32",
-                  "95",
-                  "14",
-                  "86"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-16",
                 "actual": [
@@ -198841,6 +198831,24 @@
                   "74"
                 ],
                 "hits": []
+              },
+              {
+                "date": "2026-08-20",
+                "actual": [
+                  "97",
+                  "63",
+                  "29"
+                ],
+                "predicted": [
+                  "32",
+                  "33",
+                  "74",
+                  "63",
+                  "65"
+                ],
+                "hits": [
+                  "63"
+                ]
               }
             ]
           }
