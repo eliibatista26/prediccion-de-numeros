@@ -1,5 +1,19 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-08-19",
+    "numbers": [
+      61,
+      21,
+      64,
+      10,
+      58,
+      17
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-08-19",
@@ -7,6 +21,17 @@
       3,
       58,
       34
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-08-19",
+    "numbers": [
+      90,
+      0,
+      72
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
