@@ -1,6 +1,17 @@
 [
   {
     "lottery": "Anguila",
+    "draw": "Anguila 9:00 AM",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      27,
+      64,
+      53
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
     "draw": "Anguila 8:00 AM",
     "draw_date": "2026-08-20",
     "numbers": [
