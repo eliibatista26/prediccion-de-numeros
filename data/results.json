@@ -1,5 +1,39 @@
 [
   {
+    "lottery": "Lotería Real",
+    "draw": "Quiniela Real",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      39,
+      89,
+      29
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
+    "draw": "Nueva Yol Real",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      72,
+      0,
+      17
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
+    "draw": "Loto Pool",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      42,
+      20,
+      84,
+      38
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotedom",
     "draw": "Super Palé",
     "draw_date": "2026-08-20",
@@ -135,6 +169,18 @@
   },
   {
     "lottery": "Anguila",
+    "draw": "La Cuarteta 1:00 PM",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      35,
+      71,
+      73,
+      19
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
     "draw": "La Cuarteta 10:00 AM",
     "draw_date": "2026-08-20",
     "numbers": [
@@ -163,6 +209,17 @@
       80,
       28,
       48
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 1:00 PM",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      86,
+      75,
+      17
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
