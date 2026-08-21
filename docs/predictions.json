@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-21T17:56:31-04:00",
-  "generated_at_display": "21/08/2026 17:56",
+  "generated_at": "2026-08-21T18:36:14-04:00",
+  "generated_at_display": "21/08/2026 18:36",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -199114,6 +199114,17 @@
         },
         {
           "lottery": "La Suerte Dominicana",
+          "draw": "La Suerte 6PM",
+          "draw_date": "2026-08-21",
+          "numbers": [
+            53,
+            71,
+            40
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Suerte Dominicana",
           "draw": "La Suerte MD",
           "draw_date": "2026-08-20",
           "numbers": [
@@ -199175,17 +199186,6 @@
             27,
             53,
             57
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Suerte Dominicana",
-          "draw": "La Suerte MD",
-          "draw_date": "2026-08-17",
-          "numbers": [
-            37,
-            92,
-            74
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -223017,9 +223017,16 @@
           54,
           46,
           25
+        ],
+        [
+          "20260821",
+          "La Suerte 6PM",
+          53,
+          71,
+          40
         ]
       ],
-      "total_results": 3404,
+      "total_results": 3405,
       "draws": {
         "La Suerte 6PM": {
           "suggestions": [
@@ -223098,6 +223105,17 @@
             {
               "lottery": "La Suerte Dominicana",
               "draw": "La Suerte 6PM",
+              "draw_date": "2026-08-21",
+              "numbers": [
+                53,
+                71,
+                40
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Suerte Dominicana",
+              "draw": "La Suerte 6PM",
               "draw_date": "2026-08-20",
               "numbers": [
                 66,
@@ -223171,46 +223189,19 @@
                 77
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Suerte Dominicana",
-              "draw": "La Suerte 6PM",
-              "draw_date": "2026-08-13",
-              "numbers": [
-                50,
-                10,
-                21
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 1302,
+          "total_results": 1303,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
-            "top3_any_hit_rate": 0.164,
-            "top5_any_hit_rate": 0.197,
-            "first_position_hit_rate": 0.049,
-            "average_hits_top5": 0.21,
+            "top3_any_hit_rate": 0.18,
+            "top5_any_hit_rate": 0.213,
+            "first_position_hit_rate": 0.066,
+            "average_hits_top5": 0.23,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-08-16",
-                "actual": [
-                  "10",
-                  "98",
-                  "24"
-                ],
-                "predicted": [
-                  "73",
-                  "53",
-                  "79",
-                  "35",
-                  "92"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-17",
                 "actual": [
@@ -223276,6 +223267,24 @@
                   "92"
                 ],
                 "hits": []
+              },
+              {
+                "date": "2026-08-21",
+                "actual": [
+                  "53",
+                  "71",
+                  "40"
+                ],
+                "predicted": [
+                  "53",
+                  "73",
+                  "79",
+                  "35",
+                  "92"
+                ],
+                "hits": [
+                  "53"
+                ]
               }
             ]
           }
