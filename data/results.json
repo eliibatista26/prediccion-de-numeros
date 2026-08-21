@@ -81,6 +81,17 @@
   },
   {
     "lottery": "Lotería Nacional",
+    "draw": "Lotería Nacional",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      97,
+      82,
+      74
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
     "draw": "Juega + Pega +",
     "draw_date": "2026-08-20",
     "numbers": [
@@ -184,6 +195,79 @@
       18,
       34,
       1
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Palé",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      77,
+      97
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Kino TV",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      30,
+      79,
+      56,
+      71,
+      37,
+      4,
+      27,
+      77,
+      23,
+      55,
+      15,
+      2,
+      12,
+      42,
+      38,
+      59,
+      50,
+      43,
+      7,
+      72
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Quiniela Leidsa",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      77,
+      23,
+      92
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Pega 3 Más",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      16,
+      11,
+      14
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Loto Pool",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      17,
+      25,
+      28,
+      23,
+      30
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -405,12 +489,35 @@
   },
   {
     "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      18,
+      54,
+      89
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
     "draw": "Florida Día",
     "draw_date": "2026-08-20",
     "numbers": [
       52,
       76,
       54
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "La Cuarteta 9:00 PM",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      48,
+      11,
+      81,
+      51
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -446,6 +553,17 @@
       75,
       4,
       39
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 9:00 PM",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      97,
+      31,
+      5
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -578,6 +696,17 @@
       92,
       95,
       85
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-08-20",
+    "numbers": [
+      49,
+      71,
+      39
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
