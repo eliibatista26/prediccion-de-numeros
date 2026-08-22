@@ -1,5 +1,49 @@
 [
   {
+    "lottery": "Lotedom",
+    "draw": "Super Palé",
+    "draw_date": "2026-08-22",
+    "numbers": [
+      98,
+      40
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotedom",
+    "draw": "LoteDom",
+    "draw_date": "2026-08-22",
+    "numbers": [
+      98,
+      6,
+      1
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotedom",
+    "draw": "Agarra 4",
+    "draw_date": "2026-08-22",
+    "numbers": [
+      98,
+      6,
+      1,
+      40
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Primera",
+    "draw": "La Primera Día",
+    "draw_date": "2026-08-22",
+    "numbers": [
+      32,
+      45,
+      11
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Haiti",
     "draw": "Haiti Bolet 9:30 AM",
     "draw_date": "2026-08-22",
@@ -60,6 +104,17 @@
       16,
       72,
       23
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 12:00 PM",
+    "draw_date": "2026-08-22",
+    "numbers": [
+      29,
+      52,
+      95
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
