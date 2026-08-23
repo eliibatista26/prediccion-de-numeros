@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-23T18:33:58-04:00",
-  "generated_at_display": "23/08/2026 18:33",
+  "generated_at": "2026-08-23T18:54:26-04:00",
+  "generated_at_display": "23/08/2026 18:54",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1381,22 +1381,22 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-08-23",
-          "numbers": [
-            54,
-            41
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-08-23",
           "numbers": [
             18,
             86,
             74
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-08-23",
+          "numbers": [
+            54,
+            41
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -91292,6 +91292,13 @@
         ],
         [
           "20260823",
+          "Lotería Nacional",
+          18,
+          86,
+          74
+        ],
+        [
+          "20260823",
           "Juega + Pega +",
           19,
           32,
@@ -91304,13 +91311,6 @@
           "Gana Más",
           54,
           41
-        ],
-        [
-          "20260823",
-          "Lotería Nacional",
-          18,
-          86,
-          74
         ]
       ],
       "total_results": 12818,
@@ -132793,6 +132793,12 @@
         ],
         [
           "20260823",
+          "Super Palé",
+          59,
+          18
+        ],
+        [
+          "20260823",
           "Super Kino TV",
           16,
           43,
@@ -132837,12 +132843,6 @@
           17,
           5,
           32
-        ],
-        [
-          "20260823",
-          "Super Palé",
-          59,
-          18
         ]
       ],
       "total_results": 5623,
