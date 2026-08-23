@@ -12,6 +12,18 @@
   },
   {
     "lottery": "Anguila",
+    "draw": "La Cuarteta 10:00 AM",
+    "draw_date": "2026-08-23",
+    "numbers": [
+      43,
+      69,
+      15,
+      10
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
     "draw": "Anguila 9:00 AM",
     "draw_date": "2026-08-23",
     "numbers": [
@@ -29,6 +41,17 @@
       87,
       77,
       39
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 AM",
+    "draw_date": "2026-08-23",
+    "numbers": [
+      8,
+      20,
+      34
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
