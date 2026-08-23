@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-23T12:37:39-04:00",
-  "generated_at_display": "23/08/2026 12:37",
+  "generated_at": "2026-08-23T13:09:15-04:00",
+  "generated_at_display": "23/08/2026 13:09",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -133100,22 +133100,22 @@
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
-          "draw_date": "2026-08-22",
+          "draw_date": "2026-08-23",
           "numbers": [
-            54,
-            15,
-            2
+            78,
+            5,
+            10
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
-          "draw_date": "2026-08-21",
+          "draw_date": "2026-08-22",
           "numbers": [
-            42,
-            84,
-            59
+            54,
+            15,
+            2
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -160262,9 +160262,31 @@
           76,
           54,
           33
+        ],
+        [
+          "20260823",
+          "Quiniela Real",
+          78,
+          5,
+          10
+        ],
+        [
+          "20260823",
+          "Loto Pool",
+          72,
+          3,
+          41,
+          79
+        ],
+        [
+          "20260823",
+          "Nueva Yol Real",
+          5,
+          47,
+          95
         ]
       ],
-      "total_results": 3839,
+      "total_results": 3842,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -160343,6 +160365,17 @@
             {
               "lottery": "Lotería Real",
               "draw": "Quiniela Real",
+              "draw_date": "2026-08-23",
+              "numbers": [
+                78,
+                5,
+                10
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Real",
+              "draw": "Quiniela Real",
               "draw_date": "2026-08-22",
               "numbers": [
                 54,
@@ -160416,20 +160449,9 @@
                 71
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Real",
-              "draw": "Quiniela Real",
-              "draw_date": "2026-08-15",
-              "numbers": [
-                74,
-                26,
-                48
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 3494,
+          "total_results": 3495,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -160440,22 +160462,6 @@
             "average_hits_top5": 0.16,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-18",
-                "actual": [
-                  "11",
-                  "74",
-                  "99"
-                ],
-                "predicted": [
-                  "26",
-                  "43",
-                  "17",
-                  "65",
-                  "59"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-19",
                 "actual": [
@@ -160510,6 +160516,22 @@
                   "54",
                   "15",
                   "02"
+                ],
+                "predicted": [
+                  "26",
+                  "43",
+                  "17",
+                  "65",
+                  "59"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-23",
+                "actual": [
+                  "78",
+                  "05",
+                  "10"
                 ],
                 "predicted": [
                   "26",
@@ -239677,16 +239699,16 @@
         ],
         [
           "20260823",
+          "Super Palé",
+          65,
+          85
+        ],
+        [
+          "20260823",
           "LoteDom",
           65,
           49,
           94
-        ],
-        [
-          "20260823",
-          "Super Palé",
-          65,
-          85
         ],
         [
           "20260823",
