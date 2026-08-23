@@ -1,5 +1,19 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-08-22",
+    "numbers": [
+      31,
+      13,
+      57,
+      65,
+      54,
+      23
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-08-22",
@@ -7,6 +21,17 @@
       58,
       88,
       97
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-08-22",
+    "numbers": [
+      71,
+      85,
+      50
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -694,6 +719,17 @@
       90,
       2,
       57
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-08-22",
+    "numbers": [
+      28,
+      28,
+      23
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
