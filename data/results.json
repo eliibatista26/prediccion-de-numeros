@@ -123,6 +123,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "La Suerte Dominicana",
+    "draw": "La Suerte 6PM",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      0,
+      2,
+      69
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "La Primera",
     "draw": "La Primera Día",
     "draw_date": "2026-08-24",
@@ -236,6 +247,18 @@
   },
   {
     "lottery": "Anguila",
+    "draw": "La Cuarteta 6:00 PM",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      32,
+      5,
+      72,
+      11
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
     "draw": "La Cuarteta 1:00 PM",
     "draw_date": "2026-08-24",
     "numbers": [
@@ -277,6 +300,17 @@
       32,
       51,
       76
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 6:00 PM",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      68,
+      71,
+      36
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
