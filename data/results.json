@@ -11,6 +11,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-08-23",
+    "numbers": [
+      85,
+      1,
+      25
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotería Real",
     "draw": "Super Palé",
     "draw_date": "2026-08-23",
@@ -679,6 +690,17 @@
       16,
       7,
       95
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-08-23",
+    "numbers": [
+      36,
+      23,
+      55
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
