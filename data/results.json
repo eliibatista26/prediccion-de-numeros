@@ -1,5 +1,106 @@
 [
   {
+    "lottery": "Lotedom",
+    "draw": "Super Palé",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      20,
+      21
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotedom",
+    "draw": "LoteDom",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      20,
+      28,
+      95
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotedom",
+    "draw": "Agarra 4",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      20,
+      28,
+      95,
+      21
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Suerte Dominicana",
+    "draw": "La Suerte MD",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      64,
+      83,
+      65
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Primera",
+    "draw": "La Primera Día",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      20,
+      74,
+      35
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "Pick 4 Día",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      9,
+      0,
+      3,
+      4
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "Pick 3 Día",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      5,
+      0,
+      4
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "Loto Pool Día",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      47,
+      55,
+      67,
+      42
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "King Lottery 12:30",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      4,
+      90,
+      34
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Haiti",
     "draw": "Haiti Bolet 9:30 AM",
     "draw_date": "2026-08-24",
@@ -63,6 +164,17 @@
       32,
       51,
       76
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 12:00 PM",
+    "draw_date": "2026-08-24",
+    "numbers": [
+      49,
+      75,
+      23
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
