@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-25T17:48:09-04:00",
-  "generated_at_display": "25/08/2026 17:48",
+  "generated_at": "2026-08-25T18:10:40-04:00",
+  "generated_at_display": "25/08/2026 18:10",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -199816,6 +199816,17 @@
         },
         {
           "lottery": "La Suerte Dominicana",
+          "draw": "La Suerte 6PM",
+          "draw_date": "2026-08-25",
+          "numbers": [
+            3,
+            41,
+            90
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Suerte Dominicana",
           "draw": "La Suerte MD",
           "draw_date": "2026-08-24",
           "numbers": [
@@ -199877,17 +199888,6 @@
             31,
             57,
             42
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Suerte Dominicana",
-          "draw": "La Suerte MD",
-          "draw_date": "2026-08-21",
-          "numbers": [
-            54,
-            46,
-            25
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -223775,9 +223775,16 @@
           31,
           85,
           3
+        ],
+        [
+          "20260825",
+          "La Suerte 6PM",
+          3,
+          41,
+          90
         ]
       ],
-      "total_results": 3412,
+      "total_results": 3413,
       "draws": {
         "La Suerte 6PM": {
           "suggestions": [
@@ -223856,6 +223863,17 @@
             {
               "lottery": "La Suerte Dominicana",
               "draw": "La Suerte 6PM",
+              "draw_date": "2026-08-25",
+              "numbers": [
+                3,
+                41,
+                90
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Suerte Dominicana",
+              "draw": "La Suerte 6PM",
               "draw_date": "2026-08-24",
               "numbers": [
                 0,
@@ -223929,20 +223947,9 @@
                 57
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Suerte Dominicana",
-              "draw": "La Suerte 6PM",
-              "draw_date": "2026-08-17",
-              "numbers": [
-                91,
-                78,
-                56
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 1306,
+          "total_results": 1307,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -223953,22 +223960,6 @@
             "average_hits_top5": 0.23,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-08-20",
-                "actual": [
-                  "66",
-                  "14",
-                  "69"
-                ],
-                "predicted": [
-                  "53",
-                  "73",
-                  "79",
-                  "35",
-                  "92"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-21",
                 "actual": [
@@ -224027,6 +224018,22 @@
                   "00",
                   "02",
                   "69"
+                ],
+                "predicted": [
+                  "53",
+                  "73",
+                  "79",
+                  "35",
+                  "92"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-25",
+                "actual": [
+                  "03",
+                  "41",
+                  "90"
                 ],
                 "predicted": [
                   "53",
