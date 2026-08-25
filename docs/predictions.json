@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-24T19:41:10-04:00",
-  "generated_at_display": "24/08/2026 19:41",
+  "generated_at": "2026-08-24T20:23:57-04:00",
+  "generated_at_display": "24/08/2026 20:23",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -160436,9 +160436,26 @@
           5,
           97,
           83
+        ],
+        [
+          "20260824",
+          "Chance Real",
+          13,
+          81,
+          78,
+          47,
+          23
+        ],
+        [
+          "20260824",
+          "Loto Pool Noche",
+          87,
+          76,
+          1,
+          39
         ]
       ],
-      "total_results": 3849,
+      "total_results": 3851,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -160776,33 +160793,22 @@
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
+          "draw_date": "2026-08-24",
+          "numbers": [
+            13,
+            15,
+            75
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Loteka",
+          "draw": "Quiniela Loteka",
           "draw_date": "2026-08-23",
           "numbers": [
             28,
             3,
             24
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Loteka",
-          "draw": "Quiniela Loteka",
-          "draw_date": "2026-08-22",
-          "numbers": [
-            60,
-            2,
-            44
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Loteka",
-          "draw": "Quiniela Loteka",
-          "draw_date": "2026-08-21",
-          "numbers": [
-            42,
-            95,
-            55
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -181032,9 +181038,44 @@
           69,
           4,
           64
+        ],
+        [
+          "20260824",
+          "Quiniela Loteka",
+          13,
+          15,
+          75
+        ],
+        [
+          "20260824",
+          "Mega Chances",
+          79,
+          29,
+          44,
+          80,
+          28
+        ],
+        [
+          "20260824",
+          "MegaLotto",
+          4,
+          9,
+          27,
+          36,
+          37,
+          10,
+          5,
+          6
+        ],
+        [
+          "20260824",
+          "Toca 3",
+          7,
+          0,
+          3
         ]
       ],
-      "total_results": 2854,
+      "total_results": 2858,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -181113,6 +181154,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-08-24",
+              "numbers": [
+                13,
+                15,
+                75
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-08-23",
               "numbers": [
                 28,
@@ -181186,46 +181238,19 @@
                 19
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-08-16",
-              "numbers": [
-                25,
-                39,
-                78
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2695,
+          "total_results": 2696,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
             "top3_any_hit_rate": 0.131,
-            "top5_any_hit_rate": 0.164,
+            "top5_any_hit_rate": 0.18,
             "first_position_hit_rate": 0.066,
-            "average_hits_top5": 0.16,
-            "confidence_label": "Baja",
+            "average_hits_top5": 0.18,
+            "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-08-19",
-                "actual": [
-                  "67",
-                  "64",
-                  "96"
-                ],
-                "predicted": [
-                  "28",
-                  "17",
-                  "98",
-                  "19",
-                  "52"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-20",
                 "actual": [
@@ -181292,6 +181317,24 @@
                 ],
                 "hits": [
                   "28"
+                ]
+              },
+              {
+                "date": "2026-08-24",
+                "actual": [
+                  "13",
+                  "15",
+                  "75"
+                ],
+                "predicted": [
+                  "28",
+                  "17",
+                  "19",
+                  "98",
+                  "75"
+                ],
+                "hits": [
+                  "75"
                 ]
               }
             ]
