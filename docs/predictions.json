@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-25T12:52:13-04:00",
-  "generated_at_display": "25/08/2026 12:52",
+  "generated_at": "2026-08-25T13:22:22-04:00",
+  "generated_at_display": "25/08/2026 13:22",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -133259,22 +133259,22 @@
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
-          "draw_date": "2026-08-24",
+          "draw_date": "2026-08-25",
           "numbers": [
-            63,
-            97,
-            73
+            27,
+            93,
+            47
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
-          "draw_date": "2026-08-23",
+          "draw_date": "2026-08-24",
           "numbers": [
-            78,
-            5,
-            10
+            63,
+            97,
+            73
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -160511,9 +160511,31 @@
           78,
           47,
           23
+        ],
+        [
+          "20260825",
+          "Quiniela Real",
+          27,
+          93,
+          47
+        ],
+        [
+          "20260825",
+          "Loto Pool",
+          35,
+          59,
+          97,
+          65
+        ],
+        [
+          "20260825",
+          "Nueva Yol Real",
+          32,
+          37,
+          43
         ]
       ],
-      "total_results": 3851,
+      "total_results": 3854,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -160592,6 +160614,17 @@
             {
               "lottery": "Lotería Real",
               "draw": "Quiniela Real",
+              "draw_date": "2026-08-25",
+              "numbers": [
+                27,
+                93,
+                47
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Real",
+              "draw": "Quiniela Real",
               "draw_date": "2026-08-24",
               "numbers": [
                 63,
@@ -160665,20 +160698,9 @@
                 99
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Real",
-              "draw": "Quiniela Real",
-              "draw_date": "2026-08-17",
-              "numbers": [
-                99,
-                83,
-                27
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 3496,
+          "total_results": 3497,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -160689,22 +160711,6 @@
             "average_hits_top5": 0.16,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-20",
-                "actual": [
-                  "39",
-                  "89",
-                  "29"
-                ],
-                "predicted": [
-                  "26",
-                  "43",
-                  "17",
-                  "65",
-                  "59"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-21",
                 "actual": [
@@ -160759,6 +160765,22 @@
                   "63",
                   "97",
                   "73"
+                ],
+                "predicted": [
+                  "26",
+                  "43",
+                  "65",
+                  "59",
+                  "17"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-25",
+                "actual": [
+                  "27",
+                  "93",
+                  "47"
                 ],
                 "predicted": [
                   "26",
