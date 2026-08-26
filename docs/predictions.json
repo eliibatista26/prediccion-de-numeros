@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-26T15:15:05-04:00",
-  "generated_at_display": "26/08/2026 15:15",
+  "generated_at": "2026-08-26T18:20:17-04:00",
+  "generated_at_display": "26/08/2026 18:20",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -91361,19 +91361,19 @@
         ],
         [
           "20260826",
-          "Gana Más",
-          68,
-          80,
-          12
-        ],
-        [
-          "20260826",
           "Juega + Pega +",
           24,
           8,
           9,
           10,
           5
+        ],
+        [
+          "20260826",
+          "Gana Más",
+          68,
+          80,
+          12
         ]
       ],
       "total_results": 12826,
@@ -160664,6 +160664,12 @@
         ],
         [
           "20260826",
+          "Super Palé",
+          73,
+          66
+        ],
+        [
+          "20260826",
           "Quiniela Real",
           73,
           19,
@@ -160671,9 +160677,10 @@
         ],
         [
           "20260826",
-          "Super Palé",
-          73,
-          66
+          "Nueva Yol Real",
+          67,
+          82,
+          58
         ],
         [
           "20260826",
@@ -160682,13 +160689,6 @@
           31,
           41,
           30
-        ],
-        [
-          "20260826",
-          "Nueva Yol Real",
-          67,
-          82,
-          58
         ]
       ],
       "total_results": 3862,
@@ -199995,6 +199995,17 @@
         },
         {
           "lottery": "La Suerte Dominicana",
+          "draw": "La Suerte 6PM",
+          "draw_date": "2026-08-26",
+          "numbers": [
+            12,
+            0,
+            56
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Suerte Dominicana",
           "draw": "La Suerte MD",
           "draw_date": "2026-08-25",
           "numbers": [
@@ -200056,17 +200067,6 @@
             73,
             46,
             87
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Suerte Dominicana",
-          "draw": "La Suerte MD",
-          "draw_date": "2026-08-22",
-          "numbers": [
-            31,
-            77,
-            3
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -223968,9 +223968,16 @@
           68,
           76,
           59
+        ],
+        [
+          "20260826",
+          "La Suerte 6PM",
+          12,
+          0,
+          56
         ]
       ],
-      "total_results": 3414,
+      "total_results": 3415,
       "draws": {
         "La Suerte 6PM": {
           "suggestions": [
@@ -224049,6 +224056,17 @@
             {
               "lottery": "La Suerte Dominicana",
               "draw": "La Suerte 6PM",
+              "draw_date": "2026-08-26",
+              "numbers": [
+                12,
+                0,
+                56
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Suerte Dominicana",
+              "draw": "La Suerte 6PM",
               "draw_date": "2026-08-25",
               "numbers": [
                 3,
@@ -224122,20 +224140,9 @@
                 67
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Suerte Dominicana",
-              "draw": "La Suerte 6PM",
-              "draw_date": "2026-08-18",
-              "numbers": [
-                27,
-                53,
-                57
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 1307,
+          "total_results": 1308,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -224146,24 +224153,6 @@
             "average_hits_top5": 0.23,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-08-21",
-                "actual": [
-                  "53",
-                  "71",
-                  "40"
-                ],
-                "predicted": [
-                  "53",
-                  "73",
-                  "79",
-                  "35",
-                  "92"
-                ],
-                "hits": [
-                  "53"
-                ]
-              },
               {
                 "date": "2026-08-22",
                 "actual": [
@@ -224220,6 +224209,22 @@
                   "03",
                   "41",
                   "90"
+                ],
+                "predicted": [
+                  "53",
+                  "73",
+                  "79",
+                  "35",
+                  "92"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-26",
+                "actual": [
+                  "12",
+                  "00",
+                  "56"
                 ],
                 "predicted": [
                   "53",
