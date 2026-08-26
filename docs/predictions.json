@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-25T22:11:35-04:00",
-  "generated_at_display": "25/08/2026 22:11",
+  "generated_at": "2026-08-25T23:28:30-04:00",
+  "generated_at_display": "25/08/2026 23:28",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -9,8 +9,8 @@
   "base_10": {
     "window": {
       "from": "2010-08-01",
-      "to": "2026-08-24",
-      "results": 30036
+      "to": "2026-08-25",
+      "results": 30046
     },
     "top_10_repeated": [
       {
@@ -19,23 +19,15 @@
       },
       {
         "number": "03",
-        "count": 17
+        "count": 18
       },
       {
         "number": "31",
-        "count": 16
+        "count": 17
       },
       {
         "number": "02",
         "count": 15
-      },
-      {
-        "number": "28",
-        "count": 14
-      },
-      {
-        "number": "87",
-        "count": 14
       },
       {
         "number": "34",
@@ -52,6 +44,14 @@
       {
         "number": "99",
         "count": 13
+      },
+      {
+        "number": "87",
+        "count": 13
+      },
+      {
+        "number": "40",
+        "count": 13
       }
     ],
     "top_10_historical": [
@@ -61,11 +61,11 @@
       },
       {
         "number": "21",
-        "count": 996
+        "count": 997
       },
       {
         "number": "14",
-        "count": 995
+        "count": 996
       },
       {
         "number": "32",
@@ -100,123 +100,123 @@
       "1": [
         {
           "number": "23",
-          "delay_days": 50,
+          "delay_days": 51,
           "last_seen": "2026-07-05",
           "frequency": 295
         },
         {
           "number": "08",
-          "delay_days": 40,
+          "delay_days": 41,
           "last_seen": "2026-07-15",
           "frequency": 270
         },
         {
           "number": "96",
-          "delay_days": 39,
+          "delay_days": 40,
           "last_seen": "2026-07-16",
           "frequency": 311
         },
         {
-          "number": "41",
-          "delay_days": 38,
-          "last_seen": "2026-07-17",
-          "frequency": 292
-        },
-        {
           "number": "44",
-          "delay_days": 28,
+          "delay_days": 29,
           "last_seen": "2026-07-27",
           "frequency": 289
         },
         {
           "number": "43",
-          "delay_days": 25,
+          "delay_days": 26,
           "last_seen": "2026-07-30",
           "frequency": 317
         },
         {
           "number": "56",
-          "delay_days": 25,
+          "delay_days": 26,
           "last_seen": "2026-07-30",
           "frequency": 295
         },
         {
           "number": "46",
-          "delay_days": 24,
+          "delay_days": 25,
           "last_seen": "2026-07-31",
           "frequency": 274
         },
         {
           "number": "05",
-          "delay_days": 23,
+          "delay_days": 24,
           "last_seen": "2026-08-01",
           "frequency": 281
         },
         {
           "number": "02",
-          "delay_days": 22,
+          "delay_days": 23,
           "last_seen": "2026-08-02",
           "frequency": 305
+        },
+        {
+          "number": "48",
+          "delay_days": 23,
+          "last_seen": "2026-08-02",
+          "frequency": 273
         }
       ],
       "2": [
         {
           "number": "61",
-          "delay_days": 58,
+          "delay_days": 59,
           "last_seen": "2026-06-27",
           "frequency": 323
         },
         {
           "number": "69",
-          "delay_days": 42,
+          "delay_days": 43,
           "last_seen": "2026-07-13",
           "frequency": 278
         },
         {
           "number": "70",
-          "delay_days": 33,
+          "delay_days": 34,
           "last_seen": "2026-07-22",
           "frequency": 315
         },
         {
           "number": "19",
-          "delay_days": 28,
+          "delay_days": 29,
           "last_seen": "2026-07-27",
           "frequency": 310
         },
         {
           "number": "94",
-          "delay_days": 28,
+          "delay_days": 29,
           "last_seen": "2026-07-27",
           "frequency": 271
         },
         {
           "number": "52",
-          "delay_days": 27,
+          "delay_days": 28,
           "last_seen": "2026-07-28",
           "frequency": 326
         },
         {
           "number": "66",
-          "delay_days": 27,
+          "delay_days": 28,
           "last_seen": "2026-07-28",
           "frequency": 306
         },
         {
           "number": "01",
-          "delay_days": 27,
+          "delay_days": 28,
           "last_seen": "2026-07-28",
           "frequency": 302
         },
         {
           "number": "44",
-          "delay_days": 22,
+          "delay_days": 23,
           "last_seen": "2026-08-02",
           "frequency": 300
         },
         {
           "number": "75",
-          "delay_days": 22,
+          "delay_days": 23,
           "last_seen": "2026-08-02",
           "frequency": 296
         }
@@ -224,63 +224,63 @@
       "3": [
         {
           "number": "13",
-          "delay_days": 58,
+          "delay_days": 59,
           "last_seen": "2026-06-27",
           "frequency": 302
         },
         {
-          "number": "70",
-          "delay_days": 47,
-          "last_seen": "2026-07-08",
-          "frequency": 291
-        },
-        {
           "number": "50",
-          "delay_days": 44,
+          "delay_days": 45,
           "last_seen": "2026-07-11",
           "frequency": 292
         },
         {
           "number": "79",
-          "delay_days": 42,
+          "delay_days": 43,
           "last_seen": "2026-07-13",
           "frequency": 308
         },
         {
           "number": "91",
-          "delay_days": 41,
+          "delay_days": 42,
           "last_seen": "2026-07-14",
           "frequency": 306
         },
         {
           "number": "60",
-          "delay_days": 40,
+          "delay_days": 41,
           "last_seen": "2026-07-15",
           "frequency": 305
         },
         {
           "number": "52",
-          "delay_days": 37,
+          "delay_days": 38,
           "last_seen": "2026-07-18",
           "frequency": 306
         },
         {
           "number": "07",
-          "delay_days": 32,
+          "delay_days": 33,
           "last_seen": "2026-07-23",
           "frequency": 271
         },
         {
           "number": "49",
-          "delay_days": 30,
+          "delay_days": 31,
           "last_seen": "2026-07-25",
           "frequency": 294
         },
         {
           "number": "89",
-          "delay_days": 28,
+          "delay_days": 29,
           "last_seen": "2026-07-27",
           "frequency": 331
+        },
+        {
+          "number": "85",
+          "delay_days": 25,
+          "last_seen": "2026-07-31",
+          "frequency": 290
         }
       ]
     },
@@ -289,51 +289,51 @@
         "1": [
           {
             "number": "10",
-            "delay_days": 508,
+            "delay_days": 509,
             "frequency": 56
           },
           {
             "number": "43",
-            "delay_days": 451,
+            "delay_days": 452,
             "frequency": 45
           },
           {
             "number": "78",
-            "delay_days": 412,
+            "delay_days": 413,
             "frequency": 45
           }
         ],
         "2": [
           {
             "number": "16",
-            "delay_days": 548,
+            "delay_days": 549,
             "frequency": 51
           },
           {
             "number": "56",
-            "delay_days": 454,
+            "delay_days": 455,
             "frequency": 58
           },
           {
             "number": "02",
-            "delay_days": 406,
+            "delay_days": 407,
             "frequency": 52
           }
         ],
         "3": [
           {
             "number": "72",
-            "delay_days": 471,
+            "delay_days": 472,
             "frequency": 37
           },
           {
             "number": "60",
-            "delay_days": 389,
+            "delay_days": 390,
             "frequency": 56
           },
           {
             "number": "56",
-            "delay_days": 319,
+            "delay_days": 320,
             "frequency": 45
           }
         ]
@@ -342,51 +342,51 @@
         "1": [
           {
             "number": "71",
-            "delay_days": 581,
+            "delay_days": 582,
             "frequency": 6
           },
           {
             "number": "11",
-            "delay_days": 498,
+            "delay_days": 499,
             "frequency": 4
           },
           {
             "number": "48",
-            "delay_days": 401,
+            "delay_days": 402,
             "frequency": 6
           }
         ],
         "2": [
           {
             "number": "60",
-            "delay_days": 544,
+            "delay_days": 545,
             "frequency": 6
           },
           {
             "number": "38",
-            "delay_days": 444,
+            "delay_days": 445,
             "frequency": 6
           },
           {
             "number": "55",
-            "delay_days": 395,
+            "delay_days": 396,
             "frequency": 8
           }
         ],
         "3": [
           {
             "number": "95",
-            "delay_days": 423,
+            "delay_days": 424,
             "frequency": 3
           },
           {
             "number": "66",
-            "delay_days": 409,
+            "delay_days": 410,
             "frequency": 1
           },
           {
             "number": "75",
-            "delay_days": 389,
+            "delay_days": 390,
             "frequency": 8
           }
         ]
@@ -395,51 +395,51 @@
         "1": [
           {
             "number": "06",
-            "delay_days": 388,
+            "delay_days": 389,
             "frequency": 11
           },
           {
             "number": "54",
-            "delay_days": 314,
+            "delay_days": 315,
             "frequency": 15
           },
           {
             "number": "15",
-            "delay_days": 290,
+            "delay_days": 291,
             "frequency": 14
           }
         ],
         "2": [
           {
             "number": "48",
-            "delay_days": 528,
+            "delay_days": 529,
             "frequency": 14
           },
           {
             "number": "34",
-            "delay_days": 422,
+            "delay_days": 423,
             "frequency": 16
           },
           {
             "number": "75",
-            "delay_days": 407,
+            "delay_days": 408,
             "frequency": 13
           }
         ],
         "3": [
           {
             "number": "46",
-            "delay_days": 703,
+            "delay_days": 704,
             "frequency": 4
           },
           {
             "number": "49",
-            "delay_days": 510,
+            "delay_days": 511,
             "frequency": 4
           },
           {
             "number": "94",
-            "delay_days": 468,
+            "delay_days": 469,
             "frequency": 11
           }
         ]
@@ -448,51 +448,51 @@
         "1": [
           {
             "number": "77",
-            "delay_days": 512,
+            "delay_days": 513,
             "frequency": 10
           },
           {
             "number": "08",
-            "delay_days": 510,
+            "delay_days": 511,
             "frequency": 12
           },
           {
             "number": "23",
-            "delay_days": 396,
+            "delay_days": 397,
             "frequency": 9
           }
         ],
         "2": [
           {
             "number": "61",
-            "delay_days": 506,
+            "delay_days": 507,
             "frequency": 8
           },
           {
             "number": "24",
-            "delay_days": 461,
+            "delay_days": 462,
             "frequency": 8
           },
           {
             "number": "04",
-            "delay_days": 421,
+            "delay_days": 422,
             "frequency": 12
           }
         ],
         "3": [
           {
             "number": "17",
-            "delay_days": 520,
+            "delay_days": 521,
             "frequency": 13
           },
           {
             "number": "97",
-            "delay_days": 466,
+            "delay_days": 467,
             "frequency": 9
           },
           {
             "number": "37",
-            "delay_days": 400,
+            "delay_days": 401,
             "frequency": 5
           }
         ]
@@ -501,51 +501,51 @@
         "1": [
           {
             "number": "15",
-            "delay_days": 612,
+            "delay_days": 613,
             "frequency": 19
           },
           {
             "number": "80",
-            "delay_days": 386,
+            "delay_days": 387,
             "frequency": 20
           },
           {
             "number": "02",
-            "delay_days": 383,
+            "delay_days": 384,
             "frequency": 16
           }
         ],
         "2": [
           {
             "number": "42",
-            "delay_days": 623,
+            "delay_days": 624,
             "frequency": 22
           },
           {
             "number": "89",
-            "delay_days": 501,
+            "delay_days": 502,
             "frequency": 22
           },
           {
             "number": "23",
-            "delay_days": 499,
+            "delay_days": 500,
             "frequency": 16
           }
         ],
         "3": [
           {
             "number": "01",
-            "delay_days": 560,
+            "delay_days": 561,
             "frequency": 16
           },
           {
             "number": "68",
-            "delay_days": 374,
+            "delay_days": 375,
             "frequency": 15
           },
           {
             "number": "92",
-            "delay_days": 358,
+            "delay_days": 359,
             "frequency": 16
           }
         ]
@@ -554,51 +554,51 @@
         "1": [
           {
             "number": "81",
-            "delay_days": 516,
+            "delay_days": 517,
             "frequency": 59
           },
           {
             "number": "02",
-            "delay_days": 312,
+            "delay_days": 313,
             "frequency": 53
           },
           {
             "number": "07",
-            "delay_days": 307,
+            "delay_days": 308,
             "frequency": 58
           }
         ],
         "2": [
           {
             "number": "62",
-            "delay_days": 532,
+            "delay_days": 533,
             "frequency": 67
           },
           {
             "number": "68",
-            "delay_days": 469,
+            "delay_days": 470,
             "frequency": 46
           },
           {
             "number": "63",
-            "delay_days": 416,
+            "delay_days": 417,
             "frequency": 54
           }
         ],
         "3": [
           {
             "number": "38",
-            "delay_days": 583,
+            "delay_days": 584,
             "frequency": 45
           },
           {
             "number": "90",
-            "delay_days": 442,
+            "delay_days": 443,
             "frequency": 47
           },
           {
             "number": "00",
-            "delay_days": 435,
+            "delay_days": 436,
             "frequency": 40
           }
         ]
@@ -607,51 +607,51 @@
         "1": [
           {
             "number": "86",
-            "delay_days": 589,
+            "delay_days": 590,
             "frequency": 20
           },
           {
             "number": "64",
-            "delay_days": 534,
+            "delay_days": 535,
             "frequency": 17
           },
           {
             "number": "74",
-            "delay_days": 365,
+            "delay_days": 366,
             "frequency": 20
           }
         ],
         "2": [
           {
             "number": "71",
-            "delay_days": 389,
+            "delay_days": 390,
             "frequency": 18
           },
           {
             "number": "19",
-            "delay_days": 376,
+            "delay_days": 377,
             "frequency": 20
           },
           {
             "number": "05",
-            "delay_days": 372,
+            "delay_days": 373,
             "frequency": 19
           }
         ],
         "3": [
           {
             "number": "78",
-            "delay_days": 382,
+            "delay_days": 383,
             "frequency": 20
           },
           {
             "number": "07",
-            "delay_days": 370,
+            "delay_days": 371,
             "frequency": 11
           },
           {
             "number": "91",
-            "delay_days": 293,
+            "delay_days": 294,
             "frequency": 19
           }
         ]
@@ -660,51 +660,51 @@
         "1": [
           {
             "number": "61",
-            "delay_days": 3554,
+            "delay_days": 3555,
             "frequency": 23
           },
           {
             "number": "01",
-            "delay_days": 3403,
+            "delay_days": 3404,
             "frequency": 22
           },
           {
             "number": "44",
-            "delay_days": 1694,
+            "delay_days": 1695,
             "frequency": 17
           }
         ],
         "2": [
           {
             "number": "84",
-            "delay_days": 2080,
+            "delay_days": 2081,
             "frequency": 23
           },
           {
             "number": "36",
-            "delay_days": 2031,
+            "delay_days": 2032,
             "frequency": 27
           },
           {
             "number": "20",
-            "delay_days": 1829,
+            "delay_days": 1830,
             "frequency": 31
           }
         ],
         "3": [
           {
             "number": "80",
-            "delay_days": 3506,
+            "delay_days": 3507,
             "frequency": 20
           },
           {
             "number": "92",
-            "delay_days": 3480,
+            "delay_days": 3481,
             "frequency": 25
           },
           {
             "number": "49",
-            "delay_days": 3422,
+            "delay_days": 3423,
             "frequency": 18
           }
         ]
@@ -713,51 +713,51 @@
         "1": [
           {
             "number": "26",
-            "delay_days": 355,
+            "delay_days": 356,
             "frequency": 52
           },
           {
             "number": "45",
-            "delay_days": 341,
+            "delay_days": 342,
             "frequency": 56
           },
           {
             "number": "04",
-            "delay_days": 302,
+            "delay_days": 303,
             "frequency": 58
           }
         ],
         "2": [
           {
             "number": "49",
-            "delay_days": 545,
+            "delay_days": 546,
             "frequency": 46
           },
           {
             "number": "23",
-            "delay_days": 393,
+            "delay_days": 394,
             "frequency": 51
           },
           {
             "number": "73",
-            "delay_days": 376,
+            "delay_days": 377,
             "frequency": 55
           }
         ],
         "3": [
           {
             "number": "23",
-            "delay_days": 462,
+            "delay_days": 463,
             "frequency": 44
           },
           {
             "number": "15",
-            "delay_days": 408,
+            "delay_days": 409,
             "frequency": 42
           },
           {
             "number": "32",
-            "delay_days": 355,
+            "delay_days": 356,
             "frequency": 54
           }
         ]
@@ -766,51 +766,51 @@
         "1": [
           {
             "number": "88",
-            "delay_days": 569,
+            "delay_days": 570,
             "frequency": 38
           },
           {
             "number": "29",
-            "delay_days": 414,
+            "delay_days": 415,
             "frequency": 33
           },
           {
             "number": "98",
-            "delay_days": 381,
+            "delay_days": 382,
             "frequency": 27
           }
         ],
         "2": [
           {
             "number": "22",
-            "delay_days": 410,
+            "delay_days": 411,
             "frequency": 32
           },
           {
             "number": "36",
-            "delay_days": 395,
+            "delay_days": 396,
             "frequency": 31
           },
           {
             "number": "09",
-            "delay_days": 309,
+            "delay_days": 310,
             "frequency": 33
           }
         ],
         "3": [
           {
             "number": "84",
-            "delay_days": 584,
+            "delay_days": 585,
             "frequency": 32
           },
           {
             "number": "11",
-            "delay_days": 546,
+            "delay_days": 547,
             "frequency": 32
           },
           {
             "number": "94",
-            "delay_days": 516,
+            "delay_days": 517,
             "frequency": 28
           }
         ]
@@ -902,29 +902,36 @@
     ],
     "active_mirrors": [
       {
+        "number": "03",
+        "mirror": "30",
+        "diff_days": 0,
+        "days_ago_a": 0,
+        "days_ago_b": 0
+      },
+      {
+        "number": "12",
+        "mirror": "21",
+        "diff_days": 0,
+        "days_ago_a": 0,
+        "days_ago_b": 0
+      },
+      {
+        "number": "14",
+        "mirror": "41",
+        "diff_days": 0,
+        "days_ago_a": 0,
+        "days_ago_b": 0
+      },
+      {
+        "number": "59",
+        "mirror": "95",
+        "diff_days": 0,
+        "days_ago_a": 0,
+        "days_ago_b": 0
+      },
+      {
         "number": "02",
         "mirror": "20",
-        "diff_days": 0,
-        "days_ago_a": 0,
-        "days_ago_b": 0
-      },
-      {
-        "number": "13",
-        "mirror": "31",
-        "diff_days": 0,
-        "days_ago_a": 0,
-        "days_ago_b": 0
-      },
-      {
-        "number": "49",
-        "mirror": "94",
-        "diff_days": 0,
-        "days_ago_a": 1,
-        "days_ago_b": 1
-      },
-      {
-        "number": "68",
-        "mirror": "86",
         "diff_days": 0,
         "days_ago_a": 1,
         "days_ago_b": 1
@@ -933,54 +940,47 @@
         "number": "06",
         "mirror": "60",
         "diff_days": 0,
-        "days_ago_a": 2,
-        "days_ago_b": 2
+        "days_ago_a": 3,
+        "days_ago_b": 3
+      },
+      {
+        "number": "37",
+        "mirror": "73",
+        "diff_days": 1,
+        "days_ago_a": 0,
+        "days_ago_b": 1
+      },
+      {
+        "number": "47",
+        "mirror": "74",
+        "diff_days": 1,
+        "days_ago_a": 0,
+        "days_ago_b": 1
+      },
+      {
+        "number": "57",
+        "mirror": "75",
+        "diff_days": 1,
+        "days_ago_a": 0,
+        "days_ago_b": 1
       },
       {
         "number": "01",
         "mirror": "10",
         "diff_days": 1,
-        "days_ago_a": 0,
-        "days_ago_b": 1
-      },
-      {
-        "number": "78",
-        "mirror": "87",
-        "diff_days": 1,
-        "days_ago_a": 0,
-        "days_ago_b": 1
-      },
-      {
-        "number": "03",
-        "mirror": "30",
-        "diff_days": 1,
         "days_ago_a": 1,
         "days_ago_b": 2
       },
       {
-        "number": "24",
-        "mirror": "42",
-        "diff_days": 1,
-        "days_ago_a": 1,
-        "days_ago_b": 2
-      },
-      {
-        "number": "34",
-        "mirror": "43",
+        "number": "13",
+        "mirror": "31",
         "diff_days": 1,
         "days_ago_a": 1,
         "days_ago_b": 0
       },
       {
-        "number": "38",
-        "mirror": "83",
-        "diff_days": 1,
-        "days_ago_a": 1,
-        "days_ago_b": 0
-      },
-      {
-        "number": "46",
-        "mirror": "64",
+        "number": "17",
+        "mirror": "71",
         "diff_days": 1,
         "days_ago_a": 1,
         "days_ago_b": 0
@@ -1080,6 +1080,13 @@
       },
       {
         "pair": [
+          "21",
+          "49"
+        ],
+        "count": 32
+      },
+      {
+        "pair": [
           "85",
           "89"
         ],
@@ -1091,34 +1098,39 @@
           "46"
         ],
         "count": 31
-      },
-      {
-        "pair": [
-          "39",
-          "63"
-        ],
-        "count": 31
       }
     ],
     "strength_ranking": [
       {
         "number": "31",
-        "score": 423.33,
-        "frequency": 933,
-        "recent": 5,
-        "recent_7": 5,
-        "recent_30": 16,
+        "score": 444.44,
+        "frequency": 934,
+        "recent": 6,
+        "recent_7": 6,
+        "recent_30": 17,
         "coincidences": 124,
         "drags": 27,
         "mirror": "13",
         "moves": 7
       },
       {
+        "number": "03",
+        "score": 417.23,
+        "frequency": 906,
+        "recent": 5,
+        "recent_7": 4,
+        "recent_30": 18,
+        "coincidences": 149,
+        "drags": 33,
+        "mirror": "30",
+        "moves": 7
+      },
+      {
         "number": "74",
-        "score": 419.73,
+        "score": 404.76,
         "frequency": 886,
-        "recent": 7,
-        "recent_7": 5,
+        "recent": 5,
+        "recent_7": 4,
         "recent_30": 19,
         "coincidences": 100,
         "drags": 23,
@@ -1126,22 +1138,10 @@
         "moves": 7
       },
       {
-        "number": "03",
-        "score": 388.33,
-        "frequency": 904,
-        "recent": 3,
-        "recent_7": 3,
-        "recent_30": 17,
-        "coincidences": 149,
-        "drags": 32,
-        "mirror": "30",
-        "moves": 7
-      },
-      {
         "number": "02",
-        "score": 381.31,
+        "score": 378.31,
         "frequency": 898,
-        "recent": 5,
+        "recent": 4,
         "recent_7": 4,
         "recent_30": 15,
         "coincidences": 113,
@@ -1150,11 +1150,23 @@
         "moves": 7
       },
       {
-        "number": "20",
-        "score": 381.1,
-        "frequency": 911,
+        "number": "28",
+        "score": 371.65,
+        "frequency": 900,
         "recent": 6,
         "recent_7": 6,
+        "recent_30": 13,
+        "coincidences": 115,
+        "drags": 21,
+        "mirror": "82",
+        "moves": 7
+      },
+      {
+        "number": "20",
+        "score": 371.1,
+        "frequency": 911,
+        "recent": 6,
+        "recent_7": 5,
         "recent_30": 12,
         "coincidences": 122,
         "drags": 21,
@@ -1162,51 +1174,15 @@
         "moves": 7
       },
       {
-        "number": "28",
-        "score": 379.65,
-        "frequency": 900,
-        "recent": 6,
-        "recent_7": 6,
-        "recent_30": 14,
-        "coincidences": 115,
-        "drags": 21,
-        "mirror": "82",
-        "moves": 7
-      },
-      {
         "number": "40",
-        "score": 375.73,
+        "score": 363.76,
         "frequency": 874,
-        "recent": 7,
-        "recent_7": 6,
+        "recent": 6,
+        "recent_7": 5,
         "recent_30": 13,
         "coincidences": 111,
         "drags": 23,
         "mirror": "04",
-        "moves": 7
-      },
-      {
-        "number": "34",
-        "score": 355.0,
-        "frequency": 942,
-        "recent": 3,
-        "recent_7": 3,
-        "recent_30": 13,
-        "coincidences": 123,
-        "drags": 27,
-        "mirror": "43",
-        "moves": 7
-      },
-      {
-        "number": "43",
-        "score": 347.67,
-        "frequency": 946,
-        "recent": 4,
-        "recent_7": 4,
-        "recent_30": 10,
-        "coincidences": 146,
-        "drags": 33,
-        "mirror": "34",
         "moves": 7
       },
       {
@@ -1220,27 +1196,63 @@
         "drags": 40,
         "mirror": "36",
         "moves": 7
+      },
+      {
+        "number": "29",
+        "score": 343.46,
+        "frequency": 851,
+        "recent": 5,
+        "recent_7": 5,
+        "recent_30": 11,
+        "coincidences": 98,
+        "drags": 26,
+        "mirror": "92",
+        "moves": 7
+      },
+      {
+        "number": "34",
+        "score": 343.0,
+        "frequency": 942,
+        "recent": 3,
+        "recent_7": 2,
+        "recent_30": 13,
+        "coincidences": 123,
+        "drags": 27,
+        "mirror": "43",
+        "moves": 7
       }
     ],
     "elite_group": [
       {
         "number": "31",
-        "score": 423.33,
-        "frequency": 933,
-        "recent": 5,
-        "recent_7": 5,
-        "recent_30": 16,
+        "score": 444.44,
+        "frequency": 934,
+        "recent": 6,
+        "recent_7": 6,
+        "recent_30": 17,
         "coincidences": 124,
         "drags": 27,
         "mirror": "13",
         "moves": 7
       },
       {
+        "number": "03",
+        "score": 417.23,
+        "frequency": 906,
+        "recent": 5,
+        "recent_7": 4,
+        "recent_30": 18,
+        "coincidences": 149,
+        "drags": 33,
+        "mirror": "30",
+        "moves": 7
+      },
+      {
         "number": "74",
-        "score": 419.73,
+        "score": 404.76,
         "frequency": 886,
-        "recent": 7,
-        "recent_7": 5,
+        "recent": 5,
+        "recent_7": 4,
         "recent_30": 19,
         "coincidences": 100,
         "drags": 23,
@@ -1248,22 +1260,10 @@
         "moves": 7
       },
       {
-        "number": "03",
-        "score": 388.33,
-        "frequency": 904,
-        "recent": 3,
-        "recent_7": 3,
-        "recent_30": 17,
-        "coincidences": 149,
-        "drags": 32,
-        "mirror": "30",
-        "moves": 7
-      },
-      {
         "number": "02",
-        "score": 381.31,
+        "score": 378.31,
         "frequency": 898,
-        "recent": 5,
+        "recent": 4,
         "recent_7": 4,
         "recent_30": 15,
         "coincidences": 113,
@@ -1272,25 +1272,25 @@
         "moves": 7
       },
       {
-        "number": "20",
-        "score": 381.1,
-        "frequency": 911,
+        "number": "28",
+        "score": 371.65,
+        "frequency": 900,
         "recent": 6,
         "recent_7": 6,
-        "recent_30": 12,
-        "coincidences": 122,
+        "recent_30": 13,
+        "coincidences": 115,
         "drags": 21,
-        "mirror": "02",
+        "mirror": "82",
         "moves": 7
       }
     ],
     "leader": {
       "number": "31",
-      "score": 423.33,
-      "frequency": 933,
-      "recent": 5,
-      "recent_7": 5,
-      "recent_30": 16,
+      "score": 444.44,
+      "frequency": 934,
+      "recent": 6,
+      "recent_7": 6,
+      "recent_30": 17,
       "coincidences": 124,
       "drags": 27,
       "mirror": "13",
@@ -1298,8 +1298,8 @@
     },
     "bullet_pair": {
       "pair": [
-        "21",
-        "50"
+        "15",
+        "75"
       ],
       "count": 3
     }
@@ -1309,87 +1309,76 @@
       "suggestions": [
         {
           "number": "14",
-          "score": 463.68,
+          "score": 460.09,
           "frequency": 460,
-          "delay_days": 10,
-          "recent_frequency": 2
-        },
-        {
-          "number": "26",
-          "score": 443.4,
-          "frequency": 435,
-          "delay_days": 0,
-          "recent_frequency": 3
+          "delay_days": 11,
+          "recent_frequency": 0
         },
         {
           "number": "25",
-          "score": 441.01,
-          "frequency": 432,
-          "delay_days": 1,
+          "score": 445.0,
+          "frequency": 433,
+          "delay_days": 0,
           "recent_frequency": 5
         },
         {
-          "number": "19",
-          "score": 420.41,
-          "frequency": 415,
+          "number": "26",
+          "score": 440.41,
+          "frequency": 435,
           "delay_days": 1,
           "recent_frequency": 3
         },
         {
-          "number": "20",
-          "score": 419.4,
-          "frequency": 411,
-          "delay_days": 0,
+          "number": "19",
+          "score": 420.42,
+          "frequency": 415,
+          "delay_days": 2,
           "recent_frequency": 3
         },
         {
           "number": "61",
-          "score": 419.14,
+          "score": 419.15,
           "frequency": 419,
-          "delay_days": 17,
+          "delay_days": 18,
           "recent_frequency": 0
         },
         {
           "number": "88",
           "score": 416.82,
           "frequency": 415,
-          "delay_days": 2,
+          "delay_days": 3,
           "recent_frequency": 1
         },
         {
           "number": "40",
-          "score": 416.62,
+          "score": 416.63,
           "frequency": 413,
-          "delay_days": 3,
+          "delay_days": 4,
           "recent_frequency": 2
         },
         {
-          "number": "91",
-          "score": 415.84,
-          "frequency": 414,
-          "delay_days": 5,
-          "recent_frequency": 1
+          "number": "24",
+          "score": 416.6,
+          "frequency": 410,
+          "delay_days": 0,
+          "recent_frequency": 2
         },
         {
-          "number": "63",
-          "score": 415.8,
+          "number": "20",
+          "score": 416.41,
           "frequency": 411,
-          "delay_days": 0,
+          "delay_days": 1,
+          "recent_frequency": 3
+        },
+        {
+          "number": "91",
+          "score": 415.85,
+          "frequency": 414,
+          "delay_days": 6,
           "recent_frequency": 1
         }
       ],
       "last_results": [
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-08-25",
-          "numbers": [
-            62,
-            57,
-            22
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
         {
           "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
@@ -1398,6 +1387,17 @@
             83,
             64,
             90
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-08-25",
+          "numbers": [
+            62,
+            57,
+            22
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -91338,6 +91338,13 @@
         ],
         [
           "20260825",
+          "Lotería Nacional",
+          83,
+          64,
+          90
+        ],
+        [
+          "20260825",
           "Juega + Pega +",
           24,
           10,
@@ -91351,13 +91358,6 @@
           62,
           57,
           22
-        ],
-        [
-          "20260825",
-          "Lotería Nacional",
-          83,
-          64,
-          90
         ]
       ],
       "total_results": 12824,
@@ -91366,72 +91366,72 @@
           "suggestions": [
             {
               "number": "41",
-              "score": 187.81,
+              "score": 187.82,
               "frequency": 186,
-              "delay_days": 1,
+              "delay_days": 2,
               "recent_frequency": 1
             },
             {
               "number": "89",
-              "score": 182.47,
+              "score": 182.48,
               "frequency": 177,
-              "delay_days": 9,
+              "delay_days": 10,
               "recent_frequency": 3
             },
             {
               "number": "42",
-              "score": 180.68,
+              "score": 180.69,
               "frequency": 177,
-              "delay_days": 10,
+              "delay_days": 11,
               "recent_frequency": 2
             },
             {
               "number": "32",
-              "score": 177.86,
+              "score": 177.87,
               "frequency": 176,
-              "delay_days": 7,
+              "delay_days": 8,
               "recent_frequency": 1
             },
             {
               "number": "88",
               "score": 177.42,
               "frequency": 172,
-              "delay_days": 2,
+              "delay_days": 3,
               "recent_frequency": 3
             },
             {
               "number": "91",
               "score": 176.99,
               "frequency": 176,
-              "delay_days": 120,
+              "delay_days": 121,
               "recent_frequency": 0
             },
             {
               "number": "40",
-              "score": 175.64,
+              "score": 175.65,
               "frequency": 172,
-              "delay_days": 5,
+              "delay_days": 6,
               "recent_frequency": 2
             },
             {
               "number": "26",
-              "score": 172.87,
+              "score": 172.88,
               "frequency": 171,
-              "delay_days": 9,
+              "delay_days": 10,
               "recent_frequency": 1
             },
             {
               "number": "60",
-              "score": 171.02,
+              "score": 171.03,
               "frequency": 169,
-              "delay_days": 27,
+              "delay_days": 28,
               "recent_frequency": 1
             },
             {
               "number": "34",
-              "score": 170.85,
+              "score": 170.86,
               "frequency": 169,
-              "delay_days": 6,
+              "delay_days": 7,
               "recent_frequency": 1
             }
           ],
@@ -91623,73 +91623,73 @@
           "suggestions": [
             {
               "number": "14",
-              "score": 289.68,
+              "score": 289.69,
               "frequency": 286,
-              "delay_days": 10,
+              "delay_days": 11,
               "recent_frequency": 2
             },
             {
               "number": "61",
-              "score": 263.45,
+              "score": 263.46,
               "frequency": 263,
-              "delay_days": 55,
+              "delay_days": 56,
               "recent_frequency": 0
             },
             {
               "number": "53",
-              "score": 261.98,
+              "score": 261.99,
               "frequency": 260,
-              "delay_days": 22,
+              "delay_days": 23,
               "recent_frequency": 1
             },
             {
               "number": "07",
               "score": 256.52,
               "frequency": 251,
-              "delay_days": 14,
+              "delay_days": 15,
               "recent_frequency": 3
             },
             {
               "number": "75",
-              "score": 253.35,
+              "score": 253.36,
               "frequency": 253,
-              "delay_days": 43,
+              "delay_days": 44,
               "recent_frequency": 0
             },
             {
               "number": "45",
-              "score": 252.7,
+              "score": 252.71,
               "frequency": 249,
-              "delay_days": 12,
+              "delay_days": 13,
               "recent_frequency": 2
             },
             {
               "number": "80",
-              "score": 252.34,
+              "score": 252.35,
               "frequency": 252,
-              "delay_days": 41,
+              "delay_days": 42,
               "recent_frequency": 0
             },
             {
-              "number": "43",
-              "score": 251.8,
-              "frequency": 247,
-              "delay_days": 0,
-              "recent_frequency": 1
-            },
-            {
               "number": "02",
-              "score": 251.62,
+              "score": 251.63,
               "frequency": 248,
-              "delay_days": 3,
+              "delay_days": 4,
               "recent_frequency": 2
             },
             {
               "number": "38",
-              "score": 250.44,
+              "score": 250.45,
               "frequency": 245,
-              "delay_days": 5,
+              "delay_days": 6,
               "recent_frequency": 3
+            },
+            {
+              "number": "01",
+              "score": 249.96,
+              "frequency": 248,
+              "delay_days": 20,
+              "recent_frequency": 1
             }
           ],
           "last_results": [
@@ -91882,73 +91882,73 @@
       "suggestions": [
         {
           "number": "21",
-          "score": 244.6,
-          "frequency": 238,
+          "score": 247.4,
+          "frequency": 239,
           "delay_days": 0,
-          "recent_frequency": 2
+          "recent_frequency": 3
         },
         {
           "number": "22",
-          "score": 236.2,
+          "score": 233.21,
           "frequency": 226,
-          "delay_days": 0,
+          "delay_days": 1,
           "recent_frequency": 4
         },
         {
           "number": "14",
-          "score": 227.2,
+          "score": 224.21,
           "frequency": 217,
-          "delay_days": 0,
+          "delay_days": 1,
           "recent_frequency": 4
         },
         {
           "number": "37",
-          "score": 222.2,
-          "frequency": 212,
+          "score": 223.2,
+          "frequency": 213,
           "delay_days": 0,
+          "recent_frequency": 4
+        },
+        {
+          "number": "12",
+          "score": 223.0,
+          "frequency": 211,
+          "delay_days": 0,
+          "recent_frequency": 5
+        },
+        {
+          "number": "07",
+          "score": 221.0,
+          "frequency": 209,
+          "delay_days": 0,
+          "recent_frequency": 5
+        },
+        {
+          "number": "15",
+          "score": 218.0,
+          "frequency": 206,
+          "delay_days": 0,
+          "recent_frequency": 5
+        },
+        {
+          "number": "20",
+          "score": 217.21,
+          "frequency": 210,
+          "delay_days": 1,
           "recent_frequency": 4
         },
         {
           "number": "17",
-          "score": 221.8,
+          "score": 217.01,
           "frequency": 208,
-          "delay_days": 0,
-          "recent_frequency": 6
+          "delay_days": 1,
+          "recent_frequency": 5
         },
         {
-          "number": "12",
-          "score": 220.2,
-          "frequency": 210,
+          "number": "39",
+          "score": 215.4,
+          "frequency": 207,
           "delay_days": 0,
-          "recent_frequency": 4
-        },
-        {
-          "number": "20",
-          "score": 220.2,
-          "frequency": 210,
-          "delay_days": 0,
-          "recent_frequency": 4
-        },
-        {
-          "number": "07",
-          "score": 218.2,
-          "frequency": 208,
-          "delay_days": 0,
-          "recent_frequency": 4
-        },
-        {
-          "number": "57",
-          "score": 218.2,
-          "frequency": 208,
-          "delay_days": 0,
-          "recent_frequency": 4
-        },
-        {
-          "number": "31",
-          "score": 216.6,
-          "frequency": 210,
-          "delay_days": 0,
-          "recent_frequency": 2
+          "recent_frequency": 3
         }
       ],
       "last_results": [
@@ -132946,10 +132946,9 @@
         ],
         [
           "20260825",
-          "Quiniela Leidsa",
+          "Super Palé",
           49,
-          12,
-          21
+          81
         ],
         [
           "20260825",
@@ -132977,24 +132976,25 @@
         ],
         [
           "20260825",
-          "Loto Pool",
-          6,
-          7,
-          32,
-          34,
-          15
-        ],
-        [
-          "20260825",
-          "Super Palé",
+          "Quiniela Leidsa",
           49,
-          81
+          12,
+          21
         ],
         [
           "20260825",
           "Pega 3 Más",
           33,
           18,
+          15
+        ],
+        [
+          "20260825",
+          "Loto Pool",
+          6,
+          7,
+          32,
+          34,
           15
         ]
       ],
@@ -133004,72 +133004,72 @@
           "suggestions": [
             {
               "number": "21",
-              "score": 197.3,
-              "frequency": 197,
-              "delay_days": 36,
-              "recent_frequency": 0
+              "score": 202.8,
+              "frequency": 198,
+              "delay_days": 0,
+              "recent_frequency": 1
             },
             {
               "number": "63",
-              "score": 184.9,
+              "score": 184.91,
               "frequency": 183,
-              "delay_days": 12,
+              "delay_days": 13,
               "recent_frequency": 1
             },
             {
               "number": "81",
-              "score": 183.64,
+              "score": 183.65,
               "frequency": 180,
-              "delay_days": 5,
+              "delay_days": 6,
               "recent_frequency": 2
             },
             {
               "number": "57",
-              "score": 183.42,
+              "score": 183.43,
               "frequency": 183,
-              "delay_days": 51,
+              "delay_days": 52,
               "recent_frequency": 0
             },
             {
               "number": "22",
-              "score": 181.15,
+              "score": 181.16,
               "frequency": 180,
-              "delay_days": 140,
+              "delay_days": 141,
               "recent_frequency": 0
             },
             {
               "number": "51",
               "score": 178.87,
               "frequency": 177,
-              "delay_days": 8,
+              "delay_days": 9,
               "recent_frequency": 1
             },
             {
               "number": "52",
-              "score": 178.64,
+              "score": 178.65,
               "frequency": 175,
-              "delay_days": 5,
+              "delay_days": 6,
               "recent_frequency": 2
             },
             {
               "number": "88",
-              "score": 177.73,
+              "score": 177.74,
               "frequency": 174,
-              "delay_days": 16,
+              "delay_days": 17,
               "recent_frequency": 2
             },
             {
               "number": "74",
-              "score": 177.71,
+              "score": 177.72,
               "frequency": 174,
-              "delay_days": 13,
+              "delay_days": 14,
               "recent_frequency": 2
             },
             {
               "number": "91",
-              "score": 176.3,
+              "score": 176.31,
               "frequency": 176,
-              "delay_days": 37,
+              "delay_days": 38,
               "recent_frequency": 0
             }
           ],
@@ -133264,74 +133264,74 @@
     "Lotería Real": {
       "suggestions": [
         {
+          "number": "43",
+          "score": 148.8,
+          "frequency": 144,
+          "delay_days": 0,
+          "recent_frequency": 1
+        },
+        {
           "number": "26",
           "score": 146.07,
           "frequency": 146,
-          "delay_days": 8,
-          "recent_frequency": 0
-        },
-        {
-          "number": "43",
-          "score": 143.1,
-          "frequency": 143,
-          "delay_days": 12,
+          "delay_days": 9,
           "recent_frequency": 0
         },
         {
           "number": "17",
-          "score": 141.83,
-          "frequency": 140,
-          "delay_days": 4,
-          "recent_frequency": 1
-        },
-        {
-          "number": "05",
-          "score": 141.0,
-          "frequency": 129,
+          "score": 145.8,
+          "frequency": 141,
           "delay_days": 0,
-          "recent_frequency": 5
-        },
-        {
-          "number": "89",
-          "score": 139.83,
-          "frequency": 138,
-          "delay_days": 4,
           "recent_frequency": 1
-        },
-        {
-          "number": "42",
-          "score": 139.22,
-          "frequency": 132,
-          "delay_days": 3,
-          "recent_frequency": 4
-        },
-        {
-          "number": "12",
-          "score": 139.2,
-          "frequency": 129,
-          "delay_days": 0,
-          "recent_frequency": 4
         },
         {
           "number": "65",
-          "score": 138.81,
-          "frequency": 137,
-          "delay_days": 1,
-          "recent_frequency": 1
-        },
-        {
-          "number": "59",
-          "score": 138.62,
-          "frequency": 135,
-          "delay_days": 2,
+          "score": 144.6,
+          "frequency": 138,
+          "delay_days": 0,
           "recent_frequency": 2
         },
         {
-          "number": "56",
+          "number": "59",
+          "score": 144.4,
+          "frequency": 136,
+          "delay_days": 0,
+          "recent_frequency": 3
+        },
+        {
+          "number": "89",
+          "score": 138.04,
+          "frequency": 138,
+          "delay_days": 5,
+          "recent_frequency": 0
+        },
+        {
+          "number": "85",
           "score": 137.82,
           "frequency": 136,
-          "delay_days": 3,
+          "delay_days": 2,
           "recent_frequency": 1
+        },
+        {
+          "number": "16",
+          "score": 137.8,
+          "frequency": 133,
+          "delay_days": 0,
+          "recent_frequency": 1
+        },
+        {
+          "number": "32",
+          "score": 137.8,
+          "frequency": 133,
+          "delay_days": 0,
+          "recent_frequency": 1
+        },
+        {
+          "number": "52",
+          "score": 137.6,
+          "frequency": 131,
+          "delay_days": 0,
+          "recent_frequency": 2
         }
       ],
       "last_results": [
@@ -160642,72 +160642,72 @@
           "suggestions": [
             {
               "number": "26",
-              "score": 139.87,
+              "score": 139.88,
               "frequency": 138,
-              "delay_days": 9,
-              "recent_frequency": 1
-            },
-            {
-              "number": "43",
-              "score": 135.56,
-              "frequency": 130,
-              "delay_days": 19,
-              "recent_frequency": 3
-            },
-            {
-              "number": "65",
-              "score": 127.88,
-              "frequency": 126,
               "delay_days": 10,
               "recent_frequency": 1
             },
             {
+              "number": "43",
+              "score": 133.76,
+              "frequency": 130,
+              "delay_days": 20,
+              "recent_frequency": 2
+            },
+            {
+              "number": "65",
+              "score": 127.89,
+              "frequency": 126,
+              "delay_days": 11,
+              "recent_frequency": 1
+            },
+            {
               "number": "59",
-              "score": 126.42,
+              "score": 126.43,
               "frequency": 121,
-              "delay_days": 3,
+              "delay_days": 4,
               "recent_frequency": 3
             },
             {
               "number": "17",
-              "score": 126.25,
+              "score": 126.26,
               "frequency": 126,
-              "delay_days": 31,
+              "delay_days": 32,
               "recent_frequency": 0
             },
             {
               "number": "89",
-              "score": 124.83,
+              "score": 124.84,
               "frequency": 123,
-              "delay_days": 4,
+              "delay_days": 5,
               "recent_frequency": 1
             },
             {
               "number": "02",
               "score": 124.02,
               "frequency": 115,
-              "delay_days": 2,
+              "delay_days": 3,
               "recent_frequency": 5
             },
             {
               "number": "32",
-              "score": 123.58,
+              "score": 123.59,
               "frequency": 118,
-              "delay_days": 22,
+              "delay_days": 23,
               "recent_frequency": 3
             },
             {
               "number": "56",
-              "score": 123.45,
+              "score": 123.46,
               "frequency": 123,
-              "delay_days": 55,
+              "delay_days": 56,
               "recent_frequency": 0
             },
             {
               "number": "86",
-              "score": 121.7,
+              "score": 121.71,
               "frequency": 118,
-              "delay_days": 12,
+              "delay_days": 13,
               "recent_frequency": 2
             }
           ],
@@ -160901,73 +160901,73 @@
       "suggestions": [
         {
           "number": "04",
-          "score": 137.4,
-          "frequency": 120,
+          "score": 140.2,
+          "frequency": 121,
           "delay_days": 0,
-          "recent_frequency": 8
+          "recent_frequency": 9
         },
         {
           "number": "05",
-          "score": 133.6,
+          "score": 130.61,
           "frequency": 118,
-          "delay_days": 0,
+          "delay_days": 1,
           "recent_frequency": 7
         },
         {
           "number": "09",
-          "score": 133.2,
+          "score": 130.21,
           "frequency": 123,
-          "delay_days": 0,
+          "delay_days": 1,
           "recent_frequency": 4
         },
         {
           "number": "03",
-          "score": 121.8,
-          "frequency": 108,
+          "score": 124.6,
+          "frequency": 109,
           "delay_days": 0,
-          "recent_frequency": 6
-        },
-        {
-          "number": "07",
-          "score": 118.8,
-          "frequency": 105,
-          "delay_days": 0,
-          "recent_frequency": 6
+          "recent_frequency": 7
         },
         {
           "number": "00",
-          "score": 118.4,
-          "frequency": 110,
+          "score": 121.2,
+          "frequency": 111,
           "delay_days": 0,
-          "recent_frequency": 3
-        },
-        {
-          "number": "28",
-          "score": 116.6,
-          "frequency": 110,
-          "delay_days": 0,
-          "recent_frequency": 2
+          "recent_frequency": 4
         },
         {
           "number": "06",
-          "score": 116.0,
-          "frequency": 104,
+          "score": 117.0,
+          "frequency": 105,
           "delay_days": 0,
           "recent_frequency": 5
-        },
-        {
-          "number": "01",
-          "score": 114.87,
-          "frequency": 113,
-          "delay_days": 8,
-          "recent_frequency": 1
         },
         {
           "number": "02",
           "score": 114.62,
           "frequency": 102,
-          "delay_days": 2,
+          "delay_days": 3,
           "recent_frequency": 7
+        },
+        {
+          "number": "07",
+          "score": 114.01,
+          "frequency": 105,
+          "delay_days": 1,
+          "recent_frequency": 5
+        },
+        {
+          "number": "28",
+          "score": 113.61,
+          "frequency": 110,
+          "delay_days": 1,
+          "recent_frequency": 2
+        },
+        {
+          "number": "01",
+          "score": 113.07,
+          "frequency": 113,
+          "delay_days": 9,
+          "recent_frequency": 0
         }
       ],
       "last_results": [
@@ -181285,72 +181285,72 @@
           "suggestions": [
             {
               "number": "28",
-              "score": 113.21,
+              "score": 113.22,
               "frequency": 106,
-              "delay_days": 1,
+              "delay_days": 2,
               "recent_frequency": 4
             },
             {
               "number": "17",
-              "score": 101.94,
+              "score": 101.95,
               "frequency": 100,
-              "delay_days": 17,
+              "delay_days": 18,
               "recent_frequency": 1
             },
             {
-              "number": "75",
-              "score": 101.4,
-              "frequency": 93,
-              "delay_days": 0,
-              "recent_frequency": 3
-            },
-            {
               "number": "19",
-              "score": 99.83,
+              "score": 99.84,
               "frequency": 89,
-              "delay_days": 4,
+              "delay_days": 5,
               "recent_frequency": 6
             },
             {
+              "number": "75",
+              "score": 98.41,
+              "frequency": 93,
+              "delay_days": 1,
+              "recent_frequency": 3
+            },
+            {
               "number": "98",
-              "score": 97.97,
+              "score": 97.98,
               "frequency": 96,
-              "delay_days": 21,
+              "delay_days": 22,
               "recent_frequency": 1
             },
             {
               "number": "74",
-              "score": 95.52,
+              "score": 95.53,
               "frequency": 95,
-              "delay_days": 63,
+              "delay_days": 64,
               "recent_frequency": 0
             },
             {
               "number": "42",
-              "score": 94.82,
+              "score": 94.83,
               "frequency": 93,
-              "delay_days": 3,
+              "delay_days": 4,
               "recent_frequency": 1
             },
             {
               "number": "52",
-              "score": 94.27,
+              "score": 94.28,
               "frequency": 94,
-              "delay_days": 33,
+              "delay_days": 34,
               "recent_frequency": 0
-            },
-            {
-              "number": "03",
-              "score": 92.41,
-              "frequency": 87,
-              "delay_days": 1,
-              "recent_frequency": 3
             },
             {
               "number": "09",
               "score": 92.01,
               "frequency": 90,
-              "delay_days": 25,
+              "delay_days": 26,
+              "recent_frequency": 1
+            },
+            {
+              "number": "12",
+              "score": 91.96,
+              "frequency": 90,
+              "delay_days": 19,
               "recent_frequency": 1
             }
           ],
@@ -181548,73 +181548,73 @@
       "suggestions": [
         {
           "number": "14",
-          "score": 108.42,
-          "frequency": 103,
-          "delay_days": 3,
-          "recent_frequency": 3
-        },
-        {
-          "number": "18",
-          "score": 106.4,
-          "frequency": 98,
+          "score": 114.2,
+          "frequency": 104,
           "delay_days": 0,
-          "recent_frequency": 3
-        },
-        {
-          "number": "33",
-          "score": 102.0,
-          "frequency": 90,
-          "delay_days": 0,
-          "recent_frequency": 5
-        },
-        {
-          "number": "31",
-          "score": 100.8,
-          "frequency": 96,
-          "delay_days": 0,
-          "recent_frequency": 1
-        },
-        {
-          "number": "08",
-          "score": 99.23,
-          "frequency": 92,
-          "delay_days": 4,
           "recent_frequency": 4
         },
         {
-          "number": "06",
-          "score": 99.0,
-          "frequency": 87,
+          "number": "18",
+          "score": 107.4,
+          "frequency": 99,
           "delay_days": 0,
+          "recent_frequency": 3
+        },
+        {
+          "number": "16",
+          "score": 100.6,
+          "frequency": 94,
+          "delay_days": 0,
+          "recent_frequency": 2
+        },
+        {
+          "number": "08",
+          "score": 99.24,
+          "frequency": 92,
+          "delay_days": 5,
+          "recent_frequency": 4
+        },
+        {
+          "number": "33",
+          "score": 99.01,
+          "frequency": 90,
+          "delay_days": 1,
           "recent_frequency": 5
         },
         {
-          "number": "07",
-          "score": 95.8,
-          "frequency": 82,
+          "number": "02",
+          "score": 98.6,
+          "frequency": 92,
           "delay_days": 0,
-          "recent_frequency": 6
+          "recent_frequency": 2
+        },
+        {
+          "number": "31",
+          "score": 97.81,
+          "frequency": 96,
+          "delay_days": 1,
+          "recent_frequency": 1
+        },
+        {
+          "number": "03",
+          "score": 96.6,
+          "frequency": 90,
+          "delay_days": 0,
+          "recent_frequency": 2
+        },
+        {
+          "number": "06",
+          "score": 96.01,
+          "frequency": 87,
+          "delay_days": 1,
+          "recent_frequency": 5
         },
         {
           "number": "10",
           "score": 95.62,
           "frequency": 92,
-          "delay_days": 2,
+          "delay_days": 3,
           "recent_frequency": 2
-        },
-        {
-          "number": "05",
-          "score": 95.47,
-          "frequency": 90,
-          "delay_days": 8,
-          "recent_frequency": 3
-        },
-        {
-          "number": "16",
-          "score": 94.84,
-          "frequency": 93,
-          "delay_days": 5,
-          "recent_frequency": 1
         }
       ],
       "last_results": [
@@ -199060,73 +199060,73 @@
           "suggestions": [
             {
               "number": "16",
-              "score": 40.5,
-              "frequency": 35,
-              "delay_days": 12,
-              "recent_frequency": 3
+              "score": 46.2,
+              "frequency": 36,
+              "delay_days": 0,
+              "recent_frequency": 4
             },
             {
               "number": "56",
-              "score": 39.64,
+              "score": 39.65,
               "frequency": 36,
-              "delay_days": 5,
+              "delay_days": 6,
               "recent_frequency": 2
             },
             {
               "number": "39",
-              "score": 39.25,
+              "score": 39.26,
               "frequency": 32,
-              "delay_days": 6,
+              "delay_days": 7,
               "recent_frequency": 4
             },
             {
-              "number": "14",
-              "score": 39.04,
-              "frequency": 37,
-              "delay_days": 29,
-              "recent_frequency": 1
-            },
-            {
               "number": "85",
-              "score": 38.64,
+              "score": 38.65,
               "frequency": 35,
-              "delay_days": 5,
+              "delay_days": 6,
               "recent_frequency": 2
             },
             {
+              "number": "62",
+              "score": 38.2,
+              "frequency": 28,
+              "delay_days": 0,
+              "recent_frequency": 4
+            },
+            {
               "number": "19",
-              "score": 37.69,
+              "score": 37.7,
               "frequency": 34,
-              "delay_days": 11,
+              "delay_days": 12,
               "recent_frequency": 2
             },
             {
               "number": "23",
-              "score": 37.38,
+              "score": 37.39,
               "frequency": 37,
-              "delay_days": 46,
+              "delay_days": 47,
+              "recent_frequency": 0
+            },
+            {
+              "number": "14",
+              "score": 37.25,
+              "frequency": 37,
+              "delay_days": 30,
               "recent_frequency": 0
             },
             {
               "number": "24",
-              "score": 36.92,
+              "score": 36.93,
               "frequency": 35,
-              "delay_days": 15,
+              "delay_days": 16,
               "recent_frequency": 1
             },
             {
-              "number": "64",
-              "score": 36.28,
-              "frequency": 36,
-              "delay_days": 34,
-              "recent_frequency": 0
-            },
-            {
-              "number": "83",
-              "score": 35.89,
-              "frequency": 34,
-              "delay_days": 11,
-              "recent_frequency": 1
+              "number": "30",
+              "score": 36.6,
+              "frequency": 30,
+              "delay_days": 0,
+              "recent_frequency": 2
             }
           ],
           "last_results": [
@@ -199319,72 +199319,72 @@
           "suggestions": [
             {
               "number": "18",
-              "score": 59.35,
+              "score": 59.36,
               "frequency": 55,
-              "delay_days": 91,
+              "delay_days": 92,
               "recent_frequency": 2
             },
             {
               "number": "41",
-              "score": 57.87,
+              "score": 57.88,
               "frequency": 50,
-              "delay_days": 82,
+              "delay_days": 83,
               "recent_frequency": 4
             },
             {
               "number": "79",
-              "score": 56.48,
+              "score": 56.49,
               "frequency": 52,
-              "delay_days": 107,
+              "delay_days": 108,
               "recent_frequency": 2
             },
             {
               "number": "42",
-              "score": 56.12,
+              "score": 56.13,
               "frequency": 50,
-              "delay_days": 88,
+              "delay_days": 89,
               "recent_frequency": 3
             },
             {
               "number": "95",
-              "score": 55.25,
+              "score": 55.26,
               "frequency": 51,
-              "delay_days": 79,
+              "delay_days": 80,
               "recent_frequency": 2
             },
             {
               "number": "68",
-              "score": 54.4,
+              "score": 54.41,
               "frequency": 50,
-              "delay_days": 97,
+              "delay_days": 98,
               "recent_frequency": 2
             },
             {
               "number": "99",
-              "score": 54.35,
+              "score": 54.36,
               "frequency": 50,
-              "delay_days": 91,
+              "delay_days": 92,
               "recent_frequency": 2
             },
             {
               "number": "31",
-              "score": 51.62,
+              "score": 51.63,
               "frequency": 49,
-              "delay_days": 100,
+              "delay_days": 101,
               "recent_frequency": 1
             },
             {
               "number": "65",
-              "score": 51.43,
+              "score": 51.44,
               "frequency": 47,
-              "delay_days": 101,
+              "delay_days": 102,
               "recent_frequency": 2
             },
             {
               "number": "32",
-              "score": 51.27,
+              "score": 51.28,
               "frequency": 47,
-              "delay_days": 82,
+              "delay_days": 83,
               "recent_frequency": 2
             }
           ],
@@ -199577,73 +199577,73 @@
         "Primera Noche": {
           "suggestions": [
             {
-              "number": "31",
-              "score": 14.2,
-              "frequency": 4,
+              "number": "14",
+              "score": 15.4,
+              "frequency": 7,
               "delay_days": 0,
-              "recent_frequency": 4
+              "recent_frequency": 3
             },
             {
-              "number": "48",
-              "score": 10.6,
+              "number": "31",
+              "score": 11.21,
               "frequency": 4,
-              "delay_days": 0,
-              "recent_frequency": 2
+              "delay_days": 1,
+              "recent_frequency": 4
             },
             {
               "number": "15",
               "score": 10.42,
               "frequency": 5,
-              "delay_days": 2,
+              "delay_days": 3,
               "recent_frequency": 3
             },
             {
-              "number": "14",
-              "score": 9.62,
-              "frequency": 6,
-              "delay_days": 3,
+              "number": "71",
+              "score": 9.6,
+              "frequency": 3,
+              "delay_days": 0,
               "recent_frequency": 2
             },
             {
               "number": "33",
               "score": 9.47,
               "frequency": 4,
-              "delay_days": 8,
+              "delay_days": 9,
               "recent_frequency": 3
             },
             {
               "number": "74",
-              "score": 9.46,
+              "score": 9.47,
               "frequency": 4,
-              "delay_days": 7,
+              "delay_days": 8,
               "recent_frequency": 3
             },
             {
               "number": "65",
-              "score": 8.66,
+              "score": 8.67,
               "frequency": 5,
-              "delay_days": 7,
+              "delay_days": 8,
               "recent_frequency": 2
             },
             {
               "number": "63",
-              "score": 8.63,
+              "score": 8.64,
               "frequency": 5,
-              "delay_days": 4,
+              "delay_days": 5,
               "recent_frequency": 2
             },
             {
               "number": "80",
               "score": 8.52,
               "frequency": 3,
-              "delay_days": 14,
+              "delay_days": 15,
               "recent_frequency": 3
             },
             {
               "number": "13",
-              "score": 8.44,
+              "score": 8.45,
               "frequency": 3,
-              "delay_days": 5,
+              "delay_days": 6,
               "recent_frequency": 3
             }
           ],
@@ -199839,73 +199839,73 @@
       "suggestions": [
         {
           "number": "53",
-          "score": 126.42,
+          "score": 126.43,
           "frequency": 121,
-          "delay_days": 3,
+          "delay_days": 4,
           "recent_frequency": 3
         },
         {
           "number": "07",
-          "score": 124.52,
+          "score": 124.53,
           "frequency": 124,
-          "delay_days": 63,
+          "delay_days": 64,
           "recent_frequency": 0
         },
         {
           "number": "71",
-          "score": 121.82,
+          "score": 121.83,
           "frequency": 120,
-          "delay_days": 3,
+          "delay_days": 4,
           "recent_frequency": 1
         },
         {
           "number": "42",
           "score": 120.82,
           "frequency": 119,
-          "delay_days": 2,
+          "delay_days": 3,
           "recent_frequency": 1
         },
         {
           "number": "35",
-          "score": 120.13,
+          "score": 120.14,
           "frequency": 120,
-          "delay_days": 16,
+          "delay_days": 17,
           "recent_frequency": 0
         },
         {
           "number": "18",
-          "score": 118.87,
+          "score": 118.88,
           "frequency": 117,
-          "delay_days": 9,
+          "delay_days": 10,
           "recent_frequency": 1
         },
         {
           "number": "73",
-          "score": 118.81,
+          "score": 118.82,
           "frequency": 117,
-          "delay_days": 1,
-          "recent_frequency": 1
-        },
-        {
-          "number": "02",
-          "score": 117.8,
-          "frequency": 113,
-          "delay_days": 0,
+          "delay_days": 2,
           "recent_frequency": 1
         },
         {
           "number": "56",
-          "score": 117.66,
+          "score": 117.67,
           "frequency": 114,
-          "delay_days": 7,
+          "delay_days": 8,
           "recent_frequency": 2
         },
         {
           "number": "59",
-          "score": 117.18,
+          "score": 117.19,
           "frequency": 117,
-          "delay_days": 22,
+          "delay_days": 23,
           "recent_frequency": 0
+        },
+        {
+          "number": "92",
+          "score": 116.87,
+          "frequency": 115,
+          "delay_days": 8,
+          "recent_frequency": 1
         }
       ],
       "last_results": [
@@ -223896,73 +223896,73 @@
           "suggestions": [
             {
               "number": "53",
-              "score": 62.62,
+              "score": 62.63,
               "frequency": 59,
-              "delay_days": 3,
+              "delay_days": 4,
               "recent_frequency": 2
             },
             {
               "number": "73",
-              "score": 60.61,
+              "score": 60.62,
               "frequency": 57,
-              "delay_days": 1,
+              "delay_days": 2,
               "recent_frequency": 2
             },
             {
               "number": "79",
-              "score": 56.53,
+              "score": 56.54,
               "frequency": 51,
-              "delay_days": 16,
+              "delay_days": 17,
               "recent_frequency": 3
             },
             {
               "number": "35",
-              "score": 55.73,
+              "score": 55.74,
               "frequency": 52,
-              "delay_days": 16,
+              "delay_days": 17,
               "recent_frequency": 2
             },
             {
               "number": "92",
-              "score": 52.27,
+              "score": 52.28,
               "frequency": 52,
-              "delay_days": 33,
+              "delay_days": 34,
               "recent_frequency": 0
             },
             {
               "number": "66",
-              "score": 51.83,
+              "score": 51.84,
               "frequency": 50,
-              "delay_days": 4,
-              "recent_frequency": 1
-            },
-            {
-              "number": "21",
-              "score": 51.69,
-              "frequency": 48,
-              "delay_days": 11,
-              "recent_frequency": 2
-            },
-            {
-              "number": "71",
-              "score": 51.62,
-              "frequency": 48,
-              "delay_days": 3,
-              "recent_frequency": 2
-            },
-            {
-              "number": "25",
-              "score": 50.84,
-              "frequency": 49,
               "delay_days": 5,
               "recent_frequency": 1
             },
             {
-              "number": "00",
-              "score": 50.8,
-              "frequency": 46,
-              "delay_days": 0,
+              "number": "21",
+              "score": 51.7,
+              "frequency": 48,
+              "delay_days": 12,
+              "recent_frequency": 2
+            },
+            {
+              "number": "71",
+              "score": 51.63,
+              "frequency": 48,
+              "delay_days": 4,
+              "recent_frequency": 2
+            },
+            {
+              "number": "25",
+              "score": 50.85,
+              "frequency": 49,
+              "delay_days": 6,
               "recent_frequency": 1
+            },
+            {
+              "number": "87",
+              "score": 50.42,
+              "frequency": 45,
+              "delay_days": 2,
+              "recent_frequency": 3
             }
           ],
           "last_results": [
@@ -224159,71 +224159,71 @@
               "number": "18",
               "score": 85.72,
               "frequency": 85,
-              "delay_days": 87,
+              "delay_days": 88,
               "recent_frequency": 0
             },
             {
               "number": "50",
-              "score": 80.78,
+              "score": 80.79,
               "frequency": 77,
-              "delay_days": 22,
+              "delay_days": 23,
               "recent_frequency": 2
             },
             {
               "number": "42",
-              "score": 79.46,
+              "score": 79.47,
               "frequency": 79,
-              "delay_days": 56,
+              "delay_days": 57,
               "recent_frequency": 0
             },
             {
+              "number": "03",
+              "score": 78.4,
+              "frequency": 70,
+              "delay_days": 0,
+              "recent_frequency": 3
+            },
+            {
               "number": "27",
-              "score": 78.33,
+              "score": 78.34,
               "frequency": 71,
-              "delay_days": 16,
+              "delay_days": 17,
               "recent_frequency": 4
             },
             {
               "number": "07",
-              "score": 77.65,
+              "score": 77.66,
               "frequency": 77,
-              "delay_days": 79,
+              "delay_days": 80,
               "recent_frequency": 0
             },
             {
               "number": "63",
               "score": 76.67,
               "frequency": 73,
-              "delay_days": 8,
-              "recent_frequency": 2
-            },
-            {
-              "number": "34",
-              "score": 76.41,
-              "frequency": 71,
-              "delay_days": 1,
-              "recent_frequency": 3
-            },
-            {
-              "number": "61",
-              "score": 76.28,
-              "frequency": 76,
-              "delay_days": 34,
-              "recent_frequency": 0
-            },
-            {
-              "number": "56",
-              "score": 75.67,
-              "frequency": 72,
               "delay_days": 9,
               "recent_frequency": 2
             },
             {
-              "number": "62",
-              "score": 75.61,
-              "frequency": 70,
-              "delay_days": 26,
+              "number": "34",
+              "score": 76.42,
+              "frequency": 71,
+              "delay_days": 2,
               "recent_frequency": 3
+            },
+            {
+              "number": "61",
+              "score": 76.29,
+              "frequency": 76,
+              "delay_days": 35,
+              "recent_frequency": 0
+            },
+            {
+              "number": "56",
+              "score": 75.68,
+              "frequency": 72,
+              "delay_days": 10,
+              "recent_frequency": 2
             }
           ],
           "last_results": [
@@ -224416,72 +224416,72 @@
       "suggestions": [
         {
           "number": "28",
-          "score": 102.0,
+          "score": 99.01,
           "frequency": 90,
-          "delay_days": 0,
+          "delay_days": 1,
           "recent_frequency": 5
         },
         {
           "number": "09",
-          "score": 93.46,
+          "score": 93.47,
           "frequency": 88,
-          "delay_days": 7,
+          "delay_days": 8,
           "recent_frequency": 3
         },
         {
-          "number": "21",
-          "score": 90.6,
-          "frequency": 84,
-          "delay_days": 0,
-          "recent_frequency": 2
-        },
-        {
           "number": "12",
-          "score": 90.13,
+          "score": 90.14,
           "frequency": 90,
-          "delay_days": 16,
+          "delay_days": 17,
           "recent_frequency": 0
         },
         {
           "number": "89",
-          "score": 89.1,
+          "score": 89.11,
           "frequency": 89,
-          "delay_days": 12,
+          "delay_days": 13,
           "recent_frequency": 0
         },
         {
-          "number": "99",
-          "score": 88.67,
-          "frequency": 85,
-          "delay_days": 9,
-          "recent_frequency": 2
-        },
-        {
-          "number": "49",
-          "score": 86.61,
-          "frequency": 83,
+          "number": "21",
+          "score": 87.61,
+          "frequency": 84,
           "delay_days": 1,
           "recent_frequency": 2
         },
         {
-          "number": "20",
-          "score": 86.4,
-          "frequency": 78,
-          "delay_days": 0,
-          "recent_frequency": 3
-        },
-        {
-          "number": "48",
-          "score": 84.66,
-          "frequency": 81,
-          "delay_days": 7,
+          "number": "49",
+          "score": 86.62,
+          "frequency": 83,
+          "delay_days": 2,
           "recent_frequency": 2
         },
         {
+          "number": "99",
+          "score": 85.08,
+          "frequency": 85,
+          "delay_days": 10,
+          "recent_frequency": 0
+        },
+        {
+          "number": "48",
+          "score": 84.67,
+          "frequency": 81,
+          "delay_days": 8,
+          "recent_frequency": 2
+        },
+        {
+          "number": "20",
+          "score": 83.41,
+          "frequency": 78,
+          "delay_days": 1,
+          "recent_frequency": 3
+        },
+        {
           "number": "56",
-          "score": 83.25,
+          "score": 83.26,
           "frequency": 83,
-          "delay_days": 31,
+          "delay_days": 32,
           "recent_frequency": 0
         }
       ],
@@ -240278,72 +240278,72 @@
           "suggestions": [
             {
               "number": "28",
-              "score": 90.6,
+              "score": 87.61,
               "frequency": 84,
-              "delay_days": 0,
+              "delay_days": 1,
               "recent_frequency": 2
             },
             {
               "number": "12",
-              "score": 85.97,
+              "score": 85.98,
               "frequency": 84,
-              "delay_days": 21,
+              "delay_days": 22,
               "recent_frequency": 1
             },
             {
               "number": "09",
-              "score": 83.46,
+              "score": 83.47,
               "frequency": 78,
-              "delay_days": 7,
+              "delay_days": 8,
               "recent_frequency": 3
             },
             {
               "number": "49",
-              "score": 82.81,
+              "score": 82.82,
               "frequency": 81,
-              "delay_days": 1,
+              "delay_days": 2,
               "recent_frequency": 1
             },
             {
               "number": "21",
-              "score": 82.76,
+              "score": 82.77,
               "frequency": 82,
-              "delay_days": 93,
+              "delay_days": 94,
               "recent_frequency": 0
             },
             {
               "number": "48",
-              "score": 81.66,
+              "score": 81.67,
               "frequency": 78,
-              "delay_days": 7,
+              "delay_days": 8,
               "recent_frequency": 2
             },
             {
               "number": "08",
-              "score": 80.91,
+              "score": 80.92,
               "frequency": 79,
+              "delay_days": 14,
+              "recent_frequency": 1
+            },
+            {
+              "number": "99",
+              "score": 79.68,
+              "frequency": 76,
+              "delay_days": 10,
+              "recent_frequency": 2
+            },
+            {
+              "number": "89",
+              "score": 77.91,
+              "frequency": 76,
               "delay_days": 13,
               "recent_frequency": 1
             },
             {
-              "number": "89",
-              "score": 79.7,
-              "frequency": 76,
-              "delay_days": 12,
-              "recent_frequency": 2
-            },
-            {
-              "number": "99",
-              "score": 79.67,
-              "frequency": 76,
-              "delay_days": 9,
-              "recent_frequency": 2
-            },
-            {
               "number": "03",
-              "score": 77.52,
+              "score": 77.53,
               "frequency": 72,
-              "delay_days": 15,
+              "delay_days": 16,
               "recent_frequency": 3
             }
           ],

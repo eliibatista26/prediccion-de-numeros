@@ -11,6 +11,31 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-08-25",
+    "numbers": [
+      70,
+      75,
+      12
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Mega Millions",
+    "draw": "Mega Millions",
+    "draw_date": "2026-08-25",
+    "numbers": [
+      12,
+      19,
+      57,
+      53,
+      51,
+      20
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotería Real",
     "draw": "Super Palé",
     "draw_date": "2026-08-25",
