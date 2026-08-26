@@ -44,6 +44,32 @@
   },
   {
     "lottery": "Lotería Real",
+    "draw": "Loto Real",
+    "draw_date": "2026-08-25",
+    "numbers": [
+      9,
+      13,
+      38,
+      23,
+      24,
+      17
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
+    "draw": "Loto Pool Noche",
+    "draw_date": "2026-08-25",
+    "numbers": [
+      79,
+      47,
+      3,
+      87
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
     "draw": "Loto Pool",
     "draw_date": "2026-08-25",
     "numbers": [
@@ -51,6 +77,19 @@
       59,
       97,
       65
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
+    "draw": "Chance Real",
+    "draw_date": "2026-08-25",
+    "numbers": [
+      52,
+      16,
+      55,
+      15,
+      41
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -75,6 +114,41 @@
       62,
       57,
       22
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Loteka",
+    "draw": "Toca 3",
+    "draw_date": "2026-08-25",
+    "numbers": [
+      6,
+      3,
+      4
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Loteka",
+    "draw": "Quiniela Loteka",
+    "draw_date": "2026-08-25",
+    "numbers": [
+      59,
+      68,
+      95
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Loteka",
+    "draw": "Mega Chances",
+    "draw_date": "2026-08-25",
+    "numbers": [
+      52,
+      24,
+      30,
+      0,
+      40
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -382,6 +456,17 @@
       87,
       44,
       99
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 8:00 PM",
+    "draw_date": "2026-08-25",
+    "numbers": [
+      12,
+      53,
+      28
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
