@@ -1,5 +1,27 @@
 [
   {
+    "lottery": "Haiti",
+    "draw": "Haiti Bolet 9:30 AM",
+    "draw_date": "2026-08-26",
+    "numbers": [
+      98,
+      79,
+      12
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 9:00 AM",
+    "draw_date": "2026-08-26",
+    "numbers": [
+      25,
+      27,
+      8
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Anguila",
     "draw": "Anguila 8:00 AM",
     "draw_date": "2026-08-26",
