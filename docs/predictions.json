@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-26T12:03:51-04:00",
-  "generated_at_display": "26/08/2026 12:03",
+  "generated_at": "2026-08-26T12:55:48-04:00",
+  "generated_at_display": "26/08/2026 12:55",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -199930,6 +199930,17 @@
         {
           "lottery": "La Suerte Dominicana",
           "draw": "La Suerte MD",
+          "draw_date": "2026-08-26",
+          "numbers": [
+            68,
+            76,
+            59
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Suerte Dominicana",
+          "draw": "La Suerte MD",
           "draw_date": "2026-08-25",
           "numbers": [
             31,
@@ -200001,17 +200012,6 @@
             31,
             77,
             3
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Suerte Dominicana",
-          "draw": "La Suerte 6PM",
-          "draw_date": "2026-08-22",
-          "numbers": [
-            31,
-            57,
-            42
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -223906,9 +223906,16 @@
           3,
           41,
           90
+        ],
+        [
+          "20260826",
+          "La Suerte MD",
+          68,
+          76,
+          59
         ]
       ],
-      "total_results": 3413,
+      "total_results": 3414,
       "draws": {
         "La Suerte 6PM": {
           "suggestions": [
@@ -224248,6 +224255,17 @@
             {
               "lottery": "La Suerte Dominicana",
               "draw": "La Suerte MD",
+              "draw_date": "2026-08-26",
+              "numbers": [
+                68,
+                76,
+                59
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Suerte Dominicana",
+              "draw": "La Suerte MD",
               "draw_date": "2026-08-25",
               "numbers": [
                 31,
@@ -224321,20 +224339,9 @@
                 20
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Suerte Dominicana",
-              "draw": "La Suerte MD",
-              "draw_date": "2026-08-18",
-              "numbers": [
-                72,
-                9,
-                23
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2106,
+          "total_results": 2107,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -224345,22 +224352,6 @@
             "average_hits_top5": 0.05,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-21",
-                "actual": [
-                  "54",
-                  "46",
-                  "25"
-                ],
-                "predicted": [
-                  "18",
-                  "50",
-                  "42",
-                  "27",
-                  "07"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-22",
                 "actual": [
@@ -224415,6 +224406,22 @@
                   "31",
                   "85",
                   "03"
+                ],
+                "predicted": [
+                  "18",
+                  "50",
+                  "42",
+                  "27",
+                  "07"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-26",
+                "actual": [
+                  "68",
+                  "76",
+                  "59"
                 ],
                 "predicted": [
                   "18",
@@ -240291,16 +240298,16 @@
         ],
         [
           "20260826",
+          "Super Palé",
+          6,
+          91
+        ],
+        [
+          "20260826",
           "LoteDom",
           6,
           2,
           24
-        ],
-        [
-          "20260826",
-          "Super Palé",
-          6,
-          91
         ],
         [
           "20260826",
