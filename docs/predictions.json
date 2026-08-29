@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-28T23:21:31-04:00",
-  "generated_at_display": "28/08/2026 23:21",
+  "generated_at": "2026-08-29T06:16:15-04:00",
+  "generated_at_display": "29/08/2026 06:16",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1381,23 +1381,23 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-08-28",
-          "numbers": [
-            80,
-            30,
-            48
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-08-28",
           "numbers": [
             17,
             34,
             81
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-08-28",
+          "numbers": [
+            80,
+            30,
+            48
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -91407,6 +91407,13 @@
         ],
         [
           "20260828",
+          "Lotería Nacional",
+          17,
+          34,
+          81
+        ],
+        [
+          "20260828",
           "Juega + Pega +",
           5,
           6,
@@ -91420,13 +91427,6 @@
           80,
           30,
           48
-        ],
-        [
-          "20260828",
-          "Lotería Nacional",
-          17,
-          34,
-          81
         ]
       ],
       "total_results": 12833,
@@ -133185,10 +133185,9 @@
         ],
         [
           "20260828",
-          "Quiniela Leidsa",
+          "Super Palé",
           24,
-          37,
-          63
+          17
         ],
         [
           "20260828",
@@ -133216,18 +133215,10 @@
         ],
         [
           "20260828",
-          "Loto Pool",
-          18,
-          8,
-          28,
-          9,
-          21
-        ],
-        [
-          "20260828",
-          "Super Palé",
+          "Quiniela Leidsa",
           24,
-          17
+          37,
+          63
         ],
         [
           "20260828",
@@ -133235,6 +133226,15 @@
           45,
           11,
           29
+        ],
+        [
+          "20260828",
+          "Loto Pool",
+          18,
+          8,
+          28,
+          9,
+          21
         ]
       ],
       "total_results": 5649,
@@ -160988,14 +160988,6 @@
         ],
         [
           "20260828",
-          "Loto Pool",
-          42,
-          85,
-          57,
-          99
-        ],
-        [
-          "20260828",
           "Loto Real",
           23,
           30,
@@ -161006,20 +160998,28 @@
         ],
         [
           "20260828",
+          "Loto Pool Noche",
+          91,
+          24,
+          4,
+          23
+        ],
+        [
+          "20260828",
+          "Loto Pool",
+          42,
+          85,
+          57,
+          99
+        ],
+        [
+          "20260828",
           "Chance Real",
           73,
           46,
           29,
           27,
           25
-        ],
-        [
-          "20260828",
-          "Loto Pool Noche",
-          91,
-          24,
-          4,
-          23
         ]
       ],
       "total_results": 3877,
@@ -181724,6 +181724,13 @@
         ],
         [
           "20260828",
+          "Toca 3",
+          5,
+          8,
+          4
+        ],
+        [
+          "20260828",
           "Quiniela Loteka",
           46,
           52,
@@ -181737,13 +181744,6 @@
           50,
           43,
           96
-        ],
-        [
-          "20260828",
-          "Toca 3",
-          5,
-          8,
-          4
         ]
       ],
       "total_results": 2871,
@@ -182085,23 +182085,23 @@
       "last_results": [
         {
           "lottery": "La Primera",
-          "draw": "La Primera Día",
-          "draw_date": "2026-08-28",
-          "numbers": [
-            6,
-            99,
-            56
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
           "draw": "Primera Noche",
           "draw_date": "2026-08-28",
           "numbers": [
             67,
             92,
             99
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "La Primera Día",
+          "draw_date": "2026-08-28",
+          "numbers": [
+            6,
+            99,
+            56
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -199568,13 +199568,6 @@
         ],
         [
           "20260828",
-          "La Primera Día",
-          6,
-          99,
-          56
-        ],
-        [
-          "20260828",
           "Primera Noche",
           67,
           92,
@@ -199589,6 +199582,13 @@
           18,
           25,
           4
+        ],
+        [
+          "20260828",
+          "La Primera Día",
+          6,
+          99,
+          56
         ]
       ],
       "total_results": 2456,
