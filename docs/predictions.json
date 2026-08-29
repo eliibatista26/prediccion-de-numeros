@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-29T14:26:18-04:00",
-  "generated_at_display": "29/08/2026 14:26",
+  "generated_at": "2026-08-29T17:09:39-04:00",
+  "generated_at_display": "29/08/2026 17:09",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1381,6 +1381,17 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-08-29",
+          "numbers": [
+            87,
+            31,
+            97
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-08-28",
           "numbers": [
@@ -1420,17 +1431,6 @@
             58,
             6,
             5
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Lotería Nacional",
-          "draw_date": "2026-08-26",
-          "numbers": [
-            87,
-            62,
-            8
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -91427,9 +91427,25 @@
           80,
           30,
           48
+        ],
+        [
+          "20260829",
+          "Gana Más",
+          87,
+          31,
+          97
+        ],
+        [
+          "20260829",
+          "Juega + Pega +",
+          5,
+          23,
+          9,
+          1,
+          19
         ]
       ],
-      "total_results": 12833,
+      "total_results": 12835,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -91508,6 +91524,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Gana Más",
+              "draw_date": "2026-08-29",
+              "numbers": [
+                87,
+                31,
+                97
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Gana Más",
               "draw_date": "2026-08-28",
               "numbers": [
                 80,
@@ -91580,20 +91607,9 @@
                 30
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Gana Más",
-              "draw_date": "2026-08-21",
-              "numbers": [
-                82,
-                54,
-                16
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5146,
+          "total_results": 5147,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -91604,22 +91620,6 @@
             "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-24",
-                "actual": [
-                  "01",
-                  "45",
-                  "00"
-                ],
-                "predicted": [
-                  "41",
-                  "89",
-                  "42",
-                  "32",
-                  "88"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-25",
                 "actual": [
@@ -91674,6 +91674,22 @@
                   "80",
                   "30",
                   "48"
+                ],
+                "predicted": [
+                  "41",
+                  "42",
+                  "89",
+                  "32",
+                  "88"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-29",
+                "actual": [
+                  "87",
+                  "31",
+                  "97"
                 ],
                 "predicted": [
                   "41",
@@ -161041,6 +161057,13 @@
         ],
         [
           "20260829",
+          "Nueva Yol Real",
+          70,
+          46,
+          52
+        ],
+        [
+          "20260829",
           "Loto Pool",
           76,
           16,
@@ -161049,13 +161072,12 @@
         ],
         [
           "20260829",
-          "Nueva Yol Real",
-          70,
-          46,
-          52
+          "Super Palé",
+          94,
+          87
         ]
       ],
-      "total_results": 3880,
+      "total_results": 3881,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -240975,16 +240997,16 @@
         ],
         [
           "20260829",
+          "Super Palé",
+          57,
+          78
+        ],
+        [
+          "20260829",
           "LoteDom",
           57,
           44,
           88
-        ],
-        [
-          "20260829",
-          "Super Palé",
-          57,
-          78
         ],
         [
           "20260829",
