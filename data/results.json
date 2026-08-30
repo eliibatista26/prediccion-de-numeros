@@ -1,5 +1,33 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-08-29",
+    "numbers": [
+      57,
+      16,
+      58,
+      59,
+      27,
+      7
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-08-29",
+    "numbers": [
+      56,
+      18,
+      65,
+      67,
+      62,
+      18
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-08-29",
@@ -7,6 +35,17 @@
       59,
       35,
       97
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-08-29",
+    "numbers": [
+      42,
+      62,
+      39
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -489,6 +528,17 @@
   },
   {
     "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-08-29",
+    "numbers": [
+      4,
+      35,
+      43
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
     "draw": "Florida Día",
     "draw_date": "2026-08-29",
     "numbers": [
@@ -686,6 +736,17 @@
       44,
       35,
       28
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-08-29",
+    "numbers": [
+      11,
+      77,
+      33
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
