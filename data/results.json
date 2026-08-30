@@ -1,5 +1,27 @@
 [
   {
+    "lottery": "Anguila",
+    "draw": "Anguila 9:00 AM",
+    "draw_date": "2026-08-30",
+    "numbers": [
+      31,
+      3,
+      42
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 8:00 AM",
+    "draw_date": "2026-08-30",
+    "numbers": [
+      16,
+      51,
+      50
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Powerball",
     "draw": "Powerball Double Play",
     "draw_date": "2026-08-29",
