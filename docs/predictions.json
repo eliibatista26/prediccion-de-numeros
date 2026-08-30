@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-29T19:25:15-04:00",
-  "generated_at_display": "29/08/2026 19:25",
+  "generated_at": "2026-08-29T21:36:41-04:00",
+  "generated_at_display": "29/08/2026 21:36",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1393,6 +1393,17 @@
         {
           "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
+          "draw_date": "2026-08-29",
+          "numbers": [
+            6,
+            71,
+            73
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Lotería Nacional",
           "draw_date": "2026-08-28",
           "numbers": [
             17,
@@ -1420,17 +1431,6 @@
             36,
             44,
             4
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-08-27",
-          "numbers": [
-            58,
-            6,
-            5
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -91443,9 +91443,16 @@
           87,
           31,
           97
+        ],
+        [
+          "20260829",
+          "Lotería Nacional",
+          6,
+          71,
+          73
         ]
       ],
-      "total_results": 12835,
+      "total_results": 12836,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -91780,6 +91787,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Lotería Nacional",
+              "draw_date": "2026-08-29",
+              "numbers": [
+                6,
+                71,
+                73
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Lotería Nacional",
               "draw_date": "2026-08-28",
               "numbers": [
                 17,
@@ -91853,20 +91871,9 @@
                 73
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Lotería Nacional",
-              "draw_date": "2026-08-21",
-              "numbers": [
-                35,
-                2,
-                40
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 7604,
+          "total_results": 7605,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -91877,22 +91884,6 @@
             "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-24",
-                "actual": [
-                  "65",
-                  "43",
-                  "63"
-                ],
-                "predicted": [
-                  "14",
-                  "61",
-                  "53",
-                  "07",
-                  "75"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-25",
                 "actual": [
@@ -91947,6 +91938,22 @@
                   "17",
                   "34",
                   "81"
+                ],
+                "predicted": [
+                  "14",
+                  "61",
+                  "53",
+                  "07",
+                  "75"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-29",
+                "actual": [
+                  "06",
+                  "71",
+                  "73"
                 ],
                 "predicted": [
                   "14",
@@ -92039,22 +92046,11 @@
         {
           "lottery": "Leidsa",
           "draw": "Quiniela Leidsa",
-          "draw_date": "2026-08-28",
+          "draw_date": "2026-08-29",
           "numbers": [
-            24,
-            37,
-            63
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Leidsa",
-          "draw": "Quiniela Leidsa",
-          "draw_date": "2026-08-27",
-          "numbers": [
-            44,
-            65,
-            60
+            25,
+            19,
+            85
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -133251,9 +133247,74 @@
           28,
           9,
           21
+        ],
+        [
+          "20260829",
+          "Loto - Loto Más",
+          17,
+          24,
+          31,
+          10,
+          11,
+          25,
+          10,
+          10
+        ],
+        [
+          "20260829",
+          "Quiniela Leidsa",
+          25,
+          19,
+          85
+        ],
+        [
+          "20260829",
+          "Super Kino TV",
+          22,
+          16,
+          56,
+          67,
+          72,
+          78,
+          23,
+          47,
+          25,
+          43,
+          40,
+          53,
+          77,
+          12,
+          70,
+          59,
+          36,
+          32,
+          37,
+          34
+        ],
+        [
+          "20260829",
+          "Loto Pool",
+          29,
+          27,
+          24,
+          12,
+          31
+        ],
+        [
+          "20260829",
+          "Super Palé",
+          25,
+          6
+        ],
+        [
+          "20260829",
+          "Pega 3 Más",
+          19,
+          1,
+          39
         ]
       ],
-      "total_results": 5649,
+      "total_results": 5655,
       "draws": {
         "Quiniela Leidsa": {
           "suggestions": [
@@ -133332,6 +133393,17 @@
             {
               "lottery": "Leidsa",
               "draw": "Quiniela Leidsa",
+              "draw_date": "2026-08-29",
+              "numbers": [
+                25,
+                19,
+                85
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Leidsa",
+              "draw": "Quiniela Leidsa",
               "draw_date": "2026-08-28",
               "numbers": [
                 24,
@@ -133405,20 +133477,9 @@
                 43
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela Leidsa",
-              "draw_date": "2026-08-21",
-              "numbers": [
-                33,
-                29,
-                86
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5307,
+          "total_results": 5308,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -133429,22 +133490,6 @@
             "average_hits_top5": 0.11,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-24",
-                "actual": [
-                  "26",
-                  "17",
-                  "31"
-                ],
-                "predicted": [
-                  "21",
-                  "63",
-                  "81",
-                  "57",
-                  "22"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-25",
                 "actual": [
@@ -133512,6 +133557,22 @@
                 "hits": [
                   "63"
                 ]
+              },
+              {
+                "date": "2026-08-29",
+                "actual": [
+                  "25",
+                  "19",
+                  "85"
+                ],
+                "predicted": [
+                  "21",
+                  "63",
+                  "81",
+                  "57",
+                  "22"
+                ],
+                "hits": []
               }
             ]
           }
@@ -161075,9 +161136,26 @@
           16,
           84,
           0
+        ],
+        [
+          "20260829",
+          "Chance Real",
+          27,
+          62,
+          47,
+          90,
+          17
+        ],
+        [
+          "20260829",
+          "Loto Pool Noche",
+          12,
+          60,
+          73,
+          53
         ]
       ],
-      "total_results": 3881,
+      "total_results": 3883,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -161412,6 +161490,17 @@
         }
       ],
       "last_results": [
+        {
+          "lottery": "Loteka",
+          "draw": "Quiniela Loteka",
+          "draw_date": "2026-08-29",
+          "numbers": [
+            48,
+            9,
+            62
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
@@ -181799,9 +181888,32 @@
           50,
           43,
           96
+        ],
+        [
+          "20260829",
+          "Quiniela Loteka",
+          48,
+          9,
+          62
+        ],
+        [
+          "20260829",
+          "Mega Chances",
+          82,
+          14,
+          98,
+          10,
+          61
+        ],
+        [
+          "20260829",
+          "Toca 3",
+          9,
+          6,
+          4
         ]
       ],
-      "total_results": 2871,
+      "total_results": 2874,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -181880,6 +181992,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-08-29",
+              "numbers": [
+                48,
+                9,
+                62
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-08-28",
               "numbers": [
                 46,
@@ -181953,20 +182076,9 @@
                 44
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-08-21",
-              "numbers": [
-                42,
-                95,
-                55
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2700,
+          "total_results": 2701,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -181977,24 +182089,6 @@
             "average_hits_top5": 0.18,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-08-24",
-                "actual": [
-                  "13",
-                  "15",
-                  "75"
-                ],
-                "predicted": [
-                  "28",
-                  "17",
-                  "19",
-                  "98",
-                  "75"
-                ],
-                "hits": [
-                  "75"
-                ]
-              },
               {
                 "date": "2026-08-25",
                 "actual": [
@@ -182056,6 +182150,22 @@
                   "19",
                   "98",
                   "75"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-08-29",
+                "actual": [
+                  "48",
+                  "09",
+                  "62"
+                ],
+                "predicted": [
+                  "28",
+                  "17",
+                  "19",
+                  "98",
+                  "52"
                 ],
                 "hits": []
               }
@@ -182140,23 +182250,23 @@
       "last_results": [
         {
           "lottery": "La Primera",
-          "draw": "La Primera Día",
-          "draw_date": "2026-08-29",
-          "numbers": [
-            61,
-            46,
-            41
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
           "draw": "Primera Noche",
           "draw_date": "2026-08-29",
           "numbers": [
             47,
             69,
             73
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "La Primera Día",
+          "draw_date": "2026-08-29",
+          "numbers": [
+            61,
+            46,
+            41
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -199647,13 +199757,6 @@
         ],
         [
           "20260829",
-          "La Primera Día",
-          61,
-          46,
-          41
-        ],
-        [
-          "20260829",
           "Primera Noche",
           47,
           69,
@@ -199668,6 +199771,13 @@
           23,
           20,
           7
+        ],
+        [
+          "20260829",
+          "La Primera Día",
+          61,
+          46,
+          41
         ]
       ],
       "total_results": 2459,
