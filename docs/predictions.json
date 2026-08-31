@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-30T20:55:43-04:00",
-  "generated_at_display": "30/08/2026 20:55",
+  "generated_at": "2026-08-31T02:58:40-04:00",
+  "generated_at_display": "31/08/2026 02:58",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -161261,6 +161261,14 @@
         ],
         [
           "20260830",
+          "Loto Pool Noche",
+          52,
+          90,
+          80,
+          95
+        ],
+        [
+          "20260830",
           "Loto Pool",
           33,
           85,
@@ -161275,14 +161283,6 @@
           2,
           43,
           70
-        ],
-        [
-          "20260830",
-          "Loto Pool Noche",
-          52,
-          90,
-          80,
-          95
         ]
       ],
       "total_results": 3889,
@@ -182044,6 +182044,13 @@
         ],
         [
           "20260830",
+          "Toca 3",
+          2,
+          3,
+          5
+        ],
+        [
+          "20260830",
           "Quiniela Loteka",
           41,
           61,
@@ -182057,13 +182064,6 @@
           79,
           34,
           51
-        ],
-        [
-          "20260830",
-          "Toca 3",
-          2,
-          3,
-          5
         ]
       ],
       "total_results": 2877,
@@ -182403,23 +182403,23 @@
       "last_results": [
         {
           "lottery": "La Primera",
-          "draw": "La Primera Día",
-          "draw_date": "2026-08-30",
-          "numbers": [
-            62,
-            5,
-            70
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
           "draw": "Primera Noche",
           "draw_date": "2026-08-30",
           "numbers": [
             47,
             40,
             56
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "La Primera Día",
+          "draw_date": "2026-08-30",
+          "numbers": [
+            62,
+            5,
+            70
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -199934,13 +199934,6 @@
         ],
         [
           "20260830",
-          "La Primera Día",
-          62,
-          5,
-          70
-        ],
-        [
-          "20260830",
           "Primera Noche",
           47,
           40,
@@ -199955,6 +199948,13 @@
           17,
           38,
           5
+        ],
+        [
+          "20260830",
+          "La Primera Día",
+          62,
+          5,
+          70
         ]
       ],
       "total_results": 2462,
