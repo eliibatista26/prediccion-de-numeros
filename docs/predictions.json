@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-01T01:20:18-04:00",
-  "generated_at_display": "01/09/2026 01:20",
+  "generated_at": "2026-09-01T06:15:24-04:00",
+  "generated_at_display": "01/09/2026 06:15",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1381,23 +1381,23 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-08-31",
-          "numbers": [
-            49,
-            87,
-            14
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-08-31",
           "numbers": [
             59,
             33,
             79
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-08-31",
+          "numbers": [
+            49,
+            87,
+            14
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -91476,6 +91476,13 @@
         ],
         [
           "20260831",
+          "Lotería Nacional",
+          59,
+          33,
+          79
+        ],
+        [
+          "20260831",
           "Juega + Pega +",
           28,
           6,
@@ -91489,13 +91496,6 @@
           49,
           87,
           14
-        ],
-        [
-          "20260831",
-          "Lotería Nacional",
-          59,
-          33,
-          79
         ]
       ],
       "total_results": 12842,
@@ -133426,10 +133426,9 @@
         ],
         [
           "20260831",
-          "Quiniela Leidsa",
+          "Super Palé",
           40,
-          82,
-          69
+          57
         ],
         [
           "20260831",
@@ -133457,24 +133456,25 @@
         ],
         [
           "20260831",
-          "Loto Pool",
-          10,
-          31,
-          11,
-          32,
-          29
-        ],
-        [
-          "20260831",
-          "Super Palé",
+          "Quiniela Leidsa",
           40,
-          57
+          82,
+          69
         ],
         [
           "20260831",
           "Pega 3 Más",
           18,
           7,
+          29
+        ],
+        [
+          "20260831",
+          "Loto Pool",
+          10,
+          31,
+          11,
+          32,
           29
         ]
       ],
