@@ -44,6 +44,32 @@
   },
   {
     "lottery": "Lotería Real",
+    "draw": "Loto Real",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      12,
+      26,
+      10,
+      24,
+      32,
+      27
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
+    "draw": "Loto Pool Noche",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      74,
+      79,
+      3,
+      88
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
     "draw": "Loto Pool",
     "draw_date": "2026-09-01",
     "numbers": [
@@ -51,6 +77,30 @@
       55,
       12,
       38
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
+    "draw": "Chance Real",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      37,
+      29,
+      36,
+      87,
+      18
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
+    "draw": "Lotería Nacional",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      8,
+      27,
+      41
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -75,6 +125,41 @@
       87,
       38,
       88
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Loteka",
+    "draw": "Toca 3",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      8,
+      9,
+      0
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Loteka",
+    "draw": "Quiniela Loteka",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      92,
+      64,
+      91
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Loteka",
+    "draw": "Mega Chances",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      54,
+      52,
+      19,
+      5,
+      8
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -108,6 +193,79 @@
       45,
       43,
       68
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Palé",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      49,
+      6
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Kino TV",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      33,
+      20,
+      26,
+      62,
+      27,
+      13,
+      79,
+      25,
+      41,
+      18,
+      56,
+      72,
+      50,
+      80,
+      28,
+      49,
+      23,
+      22,
+      10,
+      54
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Quiniela Leidsa",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      49,
+      43,
+      16
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Pega 3 Más",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      16,
+      12,
+      22
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Loto Pool",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      18,
+      12,
+      24,
+      36,
+      3
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -171,6 +329,18 @@
   },
   {
     "lottery": "King Lottery",
+    "draw": "Pick 4 Noche",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      3,
+      7,
+      8,
+      1
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
     "draw": "Pick 4 Día",
     "draw_date": "2026-09-01",
     "numbers": [
@@ -178,6 +348,17 @@
       0,
       7,
       6
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "Pick 3 Noche",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      1,
+      0,
+      9
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -194,6 +375,18 @@
   },
   {
     "lottery": "King Lottery",
+    "draw": "Loto Pool Noche",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      47,
+      43,
+      87,
+      84
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
     "draw": "Loto Pool Día",
     "draw_date": "2026-09-01",
     "numbers": [
@@ -201,6 +394,17 @@
       64,
       79,
       58
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "King Lottery",
+    "draw": "King Lottery 7:30",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      18,
+      4,
+      78
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -223,6 +427,17 @@
       66,
       50,
       99
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Haiti",
+    "draw": "Haiti Bolet 7:30 PM",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      40,
+      56,
+      22
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -283,6 +498,18 @@
   },
   {
     "lottery": "Anguila",
+    "draw": "La Cuarteta 9:00 PM",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      47,
+      60,
+      43,
+      68
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
     "draw": "La Cuarteta 6:00 PM",
     "draw_date": "2026-09-01",
     "numbers": [
@@ -319,12 +546,34 @@
   },
   {
     "lottery": "Anguila",
+    "draw": "Anguila 9:00 PM",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      4,
+      11,
+      20
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
     "draw": "Anguila 9:00 AM",
     "draw_date": "2026-09-01",
     "numbers": [
       30,
       96,
       99
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 8:00 PM",
+    "draw_date": "2026-09-01",
+    "numbers": [
+      48,
+      30,
+      49
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
