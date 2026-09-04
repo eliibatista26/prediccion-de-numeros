@@ -11,6 +11,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-09-03",
+    "numbers": [
+      24,
+      62,
+      3
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotería Real",
     "draw": "Super Palé",
     "draw_date": "2026-09-03",
@@ -489,6 +500,17 @@
   },
   {
     "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-09-03",
+    "numbers": [
+      85,
+      62,
+      15
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
     "draw": "Florida Día",
     "draw_date": "2026-09-03",
     "numbers": [
@@ -686,6 +708,17 @@
       90,
       91,
       41
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-09-03",
+    "numbers": [
+      88,
+      61,
+      59
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-03T21:19:28-04:00",
-  "generated_at_display": "03/09/2026 21:19",
+  "generated_at": "2026-09-04T02:02:31-04:00",
+  "generated_at_display": "04/09/2026 02:02",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1381,23 +1381,23 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-09-03",
-          "numbers": [
-            54,
-            49,
-            95
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-09-03",
           "numbers": [
             47,
             7,
             43
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-09-03",
+          "numbers": [
+            54,
+            49,
+            95
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -91545,6 +91545,13 @@
         ],
         [
           "20260903",
+          "Lotería Nacional",
+          47,
+          7,
+          43
+        ],
+        [
+          "20260903",
           "Juega + Pega +",
           24,
           13,
@@ -91558,13 +91565,6 @@
           54,
           49,
           95
-        ],
-        [
-          "20260903",
-          "Lotería Nacional",
-          47,
-          7,
-          43
         ]
       ],
       "total_results": 12851,
@@ -133670,10 +133670,9 @@
         ],
         [
           "20260903",
-          "Quiniela Leidsa",
+          "Super Palé",
           27,
-          22,
-          66
+          45
         ],
         [
           "20260903",
@@ -133701,18 +133700,10 @@
         ],
         [
           "20260903",
-          "Loto Pool",
-          33,
-          38,
-          14,
-          30,
-          9
-        ],
-        [
-          "20260903",
-          "Super Palé",
+          "Quiniela Leidsa",
           27,
-          45
+          22,
+          66
         ],
         [
           "20260903",
@@ -133720,6 +133711,15 @@
           37,
           7,
           17
+        ],
+        [
+          "20260903",
+          "Loto Pool",
+          33,
+          38,
+          14,
+          30,
+          9
         ]
       ],
       "total_results": 5681,
@@ -161772,6 +161772,14 @@
         ],
         [
           "20260903",
+          "Loto Pool Noche",
+          21,
+          95,
+          1,
+          10
+        ],
+        [
+          "20260903",
           "Loto Pool",
           45,
           47,
@@ -161786,14 +161794,6 @@
           37,
           57,
           87
-        ],
-        [
-          "20260903",
-          "Loto Pool Noche",
-          21,
-          95,
-          1,
-          10
         ]
       ],
       "total_results": 3914,
@@ -182648,19 +182648,17 @@
         ],
         [
           "20260903",
+          "Toca 3",
+          0,
+          7,
+          3
+        ],
+        [
+          "20260903",
           "Quiniela Loteka",
           12,
           26,
           93
-        ],
-        [
-          "20260903",
-          "Mega Chances",
-          97,
-          18,
-          83,
-          72,
-          5
         ],
         [
           "20260903",
@@ -182676,10 +182674,12 @@
         ],
         [
           "20260903",
-          "Toca 3",
-          0,
-          7,
-          3
+          "Mega Chances",
+          97,
+          18,
+          83,
+          72,
+          5
         ]
       ],
       "total_results": 2891,
