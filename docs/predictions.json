@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-04T18:38:15-04:00",
-  "generated_at_display": "04/09/2026 18:38",
+  "generated_at": "2026-09-04T20:25:58-04:00",
+  "generated_at_display": "04/09/2026 20:25",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -134085,17 +134085,6 @@
             74
           ],
           "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Real",
-          "draw": "Quiniela Real",
-          "draw_date": "2026-09-03",
-          "numbers": [
-            49,
-            37,
-            57
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
         }
       ],
       "compare_daily_full": [
@@ -161838,9 +161827,36 @@
           1,
           37,
           22
+        ],
+        [
+          "20260904",
+          "Loto Real",
+          33,
+          32,
+          37,
+          10,
+          44,
+          11
+        ],
+        [
+          "20260904",
+          "Chance Real",
+          89,
+          37,
+          81,
+          85,
+          30
+        ],
+        [
+          "20260904",
+          "Loto Pool Noche",
+          68,
+          12,
+          69,
+          93
         ]
       ],
-      "total_results": 3918,
+      "total_results": 3921,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -162178,22 +162194,22 @@
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
-          "draw_date": "2026-09-03",
+          "draw_date": "2026-09-04",
           "numbers": [
-            12,
-            26,
-            93
+            4,
+            19,
+            76
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
-          "draw_date": "2026-09-02",
+          "draw_date": "2026-09-03",
           "numbers": [
-            87,
-            32,
-            64
+            12,
+            26,
+            93
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -182724,9 +182740,32 @@
           83,
           72,
           5
+        ],
+        [
+          "20260904",
+          "Quiniela Loteka",
+          4,
+          19,
+          76
+        ],
+        [
+          "20260904",
+          "Mega Chances",
+          35,
+          64,
+          8,
+          99,
+          82
+        ],
+        [
+          "20260904",
+          "Toca 3",
+          3,
+          5,
+          7
         ]
       ],
-      "total_results": 2891,
+      "total_results": 2894,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -182805,6 +182844,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-09-04",
+              "numbers": [
+                4,
+                19,
+                76
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-09-03",
               "numbers": [
                 12,
@@ -182878,46 +182928,19 @@
                 72
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-08-27",
-              "numbers": [
-                51,
-                33,
-                86
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2706,
+          "total_results": 2707,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
-            "top3_any_hit_rate": 0.098,
-            "top5_any_hit_rate": 0.148,
+            "top3_any_hit_rate": 0.115,
+            "top5_any_hit_rate": 0.164,
             "first_position_hit_rate": 0.033,
-            "average_hits_top5": 0.15,
+            "average_hits_top5": 0.16,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-30",
-                "actual": [
-                  "41",
-                  "61",
-                  "88"
-                ],
-                "predicted": [
-                  "28",
-                  "17",
-                  "19",
-                  "98",
-                  "52"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-08-31",
                 "actual": [
@@ -182981,6 +183004,24 @@
                   "75"
                 ],
                 "hits": []
+              },
+              {
+                "date": "2026-09-04",
+                "actual": [
+                  "04",
+                  "19",
+                  "76"
+                ],
+                "predicted": [
+                  "28",
+                  "17",
+                  "19",
+                  "52",
+                  "75"
+                ],
+                "hits": [
+                  "19"
+                ]
               }
             ]
           }
@@ -183075,6 +183116,17 @@
         {
           "lottery": "La Primera",
           "draw": "Primera Noche",
+          "draw_date": "2026-09-04",
+          "numbers": [
+            89,
+            22,
+            58
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "La Primera",
+          "draw": "Primera Noche",
           "draw_date": "2026-09-03",
           "numbers": [
             99,
@@ -183102,28 +183154,6 @@
             39,
             52,
             83
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "La Primera Día",
-          "draw_date": "2026-09-02",
-          "numbers": [
-            98,
-            24,
-            81
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "La Primera",
-          "draw": "Primera Noche",
-          "draw_date": "2026-09-01",
-          "numbers": [
-            85,
-            54,
-            24
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -200729,9 +200759,26 @@
           56,
           28,
           63
+        ],
+        [
+          "20260904",
+          "Primera Noche",
+          89,
+          22,
+          58
+        ],
+        [
+          "20260904",
+          "Loto 5",
+          12,
+          8,
+          29,
+          30,
+          22,
+          5
         ]
       ],
-      "total_results": 2475,
+      "total_results": 2477,
       "draws": {
         "La Primera Día": {
           "suggestions": [
@@ -201330,6 +201377,17 @@
             {
               "lottery": "La Primera",
               "draw": "Primera Noche",
+              "draw_date": "2026-09-04",
+              "numbers": [
+                89,
+                22,
+                58
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "La Primera",
+              "draw": "Primera Noche",
               "draw_date": "2026-09-03",
               "numbers": [
                 99,
@@ -201403,48 +201461,19 @@
                 99
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "La Primera",
-              "draw": "Primera Noche",
-              "draw_date": "2026-08-27",
-              "numbers": [
-                2,
-                20,
-                14
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 90,
+          "total_results": 91,
           "backtest": {
             "status": "ok",
             "window_days": 60,
-            "tested_draws": 60,
-            "top3_any_hit_rate": 0.067,
-            "top5_any_hit_rate": 0.117,
-            "first_position_hit_rate": 0.017,
-            "average_hits_top5": 0.12,
+            "tested_draws": 61,
+            "top3_any_hit_rate": 0.066,
+            "top5_any_hit_rate": 0.115,
+            "first_position_hit_rate": 0.016,
+            "average_hits_top5": 0.11,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-08-30",
-                "actual": [
-                  "47",
-                  "40",
-                  "56"
-                ],
-                "predicted": [
-                  "14",
-                  "31",
-                  "15",
-                  "47",
-                  "33"
-                ],
-                "hits": [
-                  "47"
-                ]
-              },
               {
                 "date": "2026-08-31",
                 "actual": [
@@ -201499,6 +201528,22 @@
                   "99",
                   "81",
                   "68"
+                ],
+                "predicted": [
+                  "14",
+                  "31",
+                  "40",
+                  "47",
+                  "15"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-09-04",
+                "actual": [
+                  "89",
+                  "22",
+                  "58"
                 ],
                 "predicted": [
                   "14",
