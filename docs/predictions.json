@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-05T18:32:28-04:00",
-  "generated_at_display": "05/09/2026 18:32",
+  "generated_at": "2026-09-05T19:02:50-04:00",
+  "generated_at_display": "05/09/2026 19:02",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -10,12 +10,12 @@
     "window": {
       "from": "2010-08-01",
       "to": "2026-09-05",
-      "results": 22198
+      "results": 22609
     },
     "top_10_repeated": [
       {
         "number": "54",
-        "count": 9
+        "count": 10
       },
       {
         "number": "80",
@@ -27,6 +27,10 @@
       },
       {
         "number": "19",
+        "count": 8
+      },
+      {
+        "number": "41",
         "count": 8
       },
       {
@@ -48,52 +52,48 @@
       {
         "number": "30",
         "count": 7
-      },
-      {
-        "number": "41",
-        "count": 7
       }
     ],
     "top_10_historical": [
       {
-        "number": "14",
-        "count": 738
-      },
-      {
         "number": "42",
-        "count": 737
+        "count": 752
       },
       {
-        "number": "63",
-        "count": 732
+        "number": "14",
+        "count": 749
       },
       {
         "number": "21",
-        "count": 730
+        "count": 744
       },
       {
-        "number": "32",
-        "count": 721
-      },
-      {
-        "number": "88",
-        "count": 713
-      },
-      {
-        "number": "17",
-        "count": 712
+        "number": "63",
+        "count": 744
       },
       {
         "number": "61",
-        "count": 710
+        "count": 727
       },
       {
-        "number": "43",
-        "count": 707
+        "number": "32",
+        "count": 727
       },
       {
         "number": "91",
-        "count": 707
+        "count": 724
+      },
+      {
+        "number": "17",
+        "count": 723
+      },
+      {
+        "number": "26",
+        "count": 721
+      },
+      {
+        "number": "43",
+        "count": 720
       }
     ],
     "delayed_by_position": {
@@ -102,61 +102,61 @@
           "number": "22",
           "delay_days": 126,
           "last_seen": "2026-05-02",
-          "frequency": 206
+          "frequency": 211
         },
         {
           "number": "10",
           "delay_days": 99,
           "last_seen": "2026-05-29",
-          "frequency": 214
+          "frequency": 218
         },
         {
           "number": "76",
           "delay_days": 88,
           "last_seen": "2026-06-09",
-          "frequency": 242
+          "frequency": 244
         },
         {
           "number": "61",
           "delay_days": 84,
           "last_seen": "2026-06-13",
-          "frequency": 220
+          "frequency": 226
         },
         {
           "number": "81",
           "delay_days": 79,
           "last_seen": "2026-06-18",
-          "frequency": 219
+          "frequency": 225
         },
         {
           "number": "72",
           "delay_days": 65,
           "last_seen": "2026-07-02",
-          "frequency": 220
+          "frequency": 223
         },
         {
           "number": "29",
           "delay_days": 63,
           "last_seen": "2026-07-04",
-          "frequency": 205
+          "frequency": 211
         },
         {
           "number": "23",
           "delay_days": 62,
           "last_seen": "2026-07-05",
-          "frequency": 220
+          "frequency": 225
         },
         {
           "number": "00",
           "delay_days": 61,
           "last_seen": "2026-07-06",
-          "frequency": 216
+          "frequency": 218
         },
         {
           "number": "15",
           "delay_days": 60,
           "last_seen": "2026-07-07",
-          "frequency": 221
+          "frequency": 226
         }
       ],
       "2": [
@@ -164,61 +164,61 @@
           "number": "16",
           "delay_days": 285,
           "last_seen": "2025-11-24",
-          "frequency": 205
+          "frequency": 206
         },
         {
           "number": "59",
           "delay_days": 118,
           "last_seen": "2026-05-10",
-          "frequency": 230
+          "frequency": 235
         },
         {
           "number": "56",
           "delay_days": 90,
           "last_seen": "2026-06-07",
-          "frequency": 226
+          "frequency": 231
         },
         {
           "number": "66",
           "delay_days": 75,
           "last_seen": "2026-06-22",
-          "frequency": 235
+          "frequency": 241
         },
         {
           "number": "01",
           "delay_days": 74,
           "last_seen": "2026-06-23",
-          "frequency": 235
+          "frequency": 245
         },
         {
           "number": "63",
           "delay_days": 72,
           "last_seen": "2026-06-25",
-          "frequency": 253
+          "frequency": 259
         },
         {
           "number": "70",
           "delay_days": 68,
           "last_seen": "2026-06-29",
-          "frequency": 245
+          "frequency": 250
         },
         {
           "number": "10",
           "delay_days": 68,
           "last_seen": "2026-06-29",
-          "frequency": 205
+          "frequency": 207
         },
         {
           "number": "75",
           "delay_days": 59,
           "last_seen": "2026-07-08",
-          "frequency": 212
+          "frequency": 216
         },
         {
           "number": "73",
           "delay_days": 59,
           "last_seen": "2026-07-08",
-          "frequency": 206
+          "frequency": 209
         }
       ],
       "3": [
@@ -226,61 +226,61 @@
           "number": "35",
           "delay_days": 85,
           "last_seen": "2026-06-12",
-          "frequency": 219
+          "frequency": 222
         },
         {
           "number": "13",
           "delay_days": 70,
           "last_seen": "2026-06-27",
-          "frequency": 218
+          "frequency": 222
         },
         {
           "number": "23",
           "delay_days": 63,
           "last_seen": "2026-07-04",
-          "frequency": 229
+          "frequency": 232
         },
         {
           "number": "11",
           "delay_days": 61,
           "last_seen": "2026-07-06",
-          "frequency": 231
+          "frequency": 233
         },
         {
           "number": "70",
           "delay_days": 59,
           "last_seen": "2026-07-08",
-          "frequency": 226
+          "frequency": 229
         },
         {
           "number": "42",
           "delay_days": 56,
           "last_seen": "2026-07-11",
-          "frequency": 276
+          "frequency": 282
         },
         {
           "number": "01",
           "delay_days": 56,
           "last_seen": "2026-07-11",
-          "frequency": 209
+          "frequency": 210
         },
         {
           "number": "94",
           "delay_days": 52,
           "last_seen": "2026-07-15",
-          "frequency": 215
+          "frequency": 218
         },
         {
           "number": "46",
           "delay_days": 51,
           "last_seen": "2026-07-16",
-          "frequency": 236
+          "frequency": 241
         },
         {
           "number": "52",
           "delay_days": 49,
           "last_seen": "2026-07-18",
-          "frequency": 221
+          "frequency": 223
         }
       ]
     },
@@ -341,53 +341,53 @@
       "Loteka": {
         "1": [
           {
-            "number": "61",
-            "delay_days": 3566,
-            "frequency": 23
+            "number": "01",
+            "delay_days": 1036,
+            "frequency": 26
           },
           {
-            "number": "01",
-            "delay_days": 3415,
-            "frequency": 22
+            "number": "61",
+            "delay_days": 1009,
+            "frequency": 29
           },
           {
             "number": "44",
-            "delay_days": 1706,
-            "frequency": 17
+            "delay_days": 988,
+            "frequency": 20
           }
         ],
         "2": [
           {
-            "number": "84",
-            "delay_days": 2092,
-            "frequency": 23
+            "number": "20",
+            "delay_days": 1841,
+            "frequency": 39
+          },
+          {
+            "number": "27",
+            "delay_days": 1075,
+            "frequency": 29
           },
           {
             "number": "36",
-            "delay_days": 2043,
-            "frequency": 27
-          },
-          {
-            "number": "20",
-            "delay_days": 1841,
+            "delay_days": 1025,
             "frequency": 31
           }
         ],
         "3": [
           {
-            "number": "80",
-            "delay_days": 3518,
-            "frequency": 20
-          },
-          {
-            "number": "92",
-            "delay_days": 3492,
+            "number": "07",
+            "delay_days": 1105,
             "frequency": 25
           },
           {
             "number": "49",
-            "delay_days": 3434,
-            "frequency": 18
+            "delay_days": 1104,
+            "frequency": 20
+          },
+          {
+            "number": "73",
+            "delay_days": 1062,
+            "frequency": 33
           }
         ]
       },
@@ -554,18 +554,26 @@
     "coincidences": [
       {
         "number": "91",
-        "count": 73
+        "count": 77
+      },
+      {
+        "number": "34",
+        "count": 74
       },
       {
         "number": "43",
         "count": 72
       },
       {
-        "number": "34",
-        "count": 70
+        "number": "03",
+        "count": 69
       },
       {
         "number": "52",
+        "count": 68
+      },
+      {
+        "number": "61",
         "count": 68
       },
       {
@@ -581,16 +589,8 @@
         "count": 66
       },
       {
-        "number": "03",
-        "count": 65
-      },
-      {
-        "number": "21",
-        "count": 64
-      },
-      {
-        "number": "61",
-        "count": 64
+        "number": "87",
+        "count": 66
       }
     ],
     "drags": [
@@ -599,11 +599,27 @@
         "count": 29
       },
       {
+        "number": "03",
+        "count": 28
+      },
+      {
         "number": "58",
-        "count": 29
+        "count": 28
+      },
+      {
+        "number": "86",
+        "count": 27
       },
       {
         "number": "80",
+        "count": 26
+      },
+      {
+        "number": "05",
+        "count": 26
+      },
+      {
+        "number": "61",
         "count": 26
       },
       {
@@ -611,27 +627,11 @@
         "count": 26
       },
       {
-        "number": "86",
+        "number": "10",
         "count": 26
       },
       {
-        "number": "98",
-        "count": 26
-      },
-      {
-        "number": "12",
-        "count": 26
-      },
-      {
-        "number": "21",
-        "count": 26
-      },
-      {
-        "number": "03",
-        "count": 26
-      },
-      {
-        "number": "66",
+        "number": "65",
         "count": 25
       }
     ],
@@ -776,7 +776,28 @@
           "04",
           "71"
         ],
-        "count": 27
+        "count": 28
+      },
+      {
+        "pair": [
+          "49",
+          "72"
+        ],
+        "count": 26
+      },
+      {
+        "pair": [
+          "42",
+          "57"
+        ],
+        "count": 26
+      },
+      {
+        "pair": [
+          "25",
+          "63"
+        ],
+        "count": 26
       },
       {
         "pair": [
@@ -808,29 +829,8 @@
       },
       {
         "pair": [
-          "42",
-          "57"
-        ],
-        "count": 25
-      },
-      {
-        "pair": [
           "04",
           "43"
-        ],
-        "count": 25
-      },
-      {
-        "pair": [
-          "25",
-          "63"
-        ],
-        "count": 25
-      },
-      {
-        "pair": [
-          "04",
-          "95"
         ],
         "count": 25
       }
@@ -838,195 +838,195 @@
     "strength_ranking": [
       {
         "number": "49",
-        "score": 269.39,
-        "frequency": 676,
+        "score": 271.4,
+        "frequency": 688,
         "recent": 6,
         "recent_7": 5,
         "recent_30": 7,
-        "coincidences": 62,
+        "coincidences": 64,
         "drags": 23,
         "mirror": "94",
         "moves": 4
       },
       {
         "number": "80",
-        "score": 251.75,
-        "frequency": 681,
+        "score": 253.75,
+        "frequency": 694,
         "recent": 5,
         "recent_7": 3,
         "recent_30": 9,
-        "coincidences": 52,
+        "coincidences": 54,
         "drags": 26,
         "mirror": "08",
         "moves": 4
       },
       {
         "number": "54",
-        "score": 238.83,
-        "frequency": 635,
+        "score": 248.99,
+        "frequency": 650,
         "recent": 5,
         "recent_7": 2,
-        "recent_30": 9,
-        "coincidences": 40,
-        "drags": 14,
+        "recent_30": 10,
+        "coincidences": 42,
+        "drags": 13,
         "mirror": "45",
         "moves": 4
       },
       {
         "number": "93",
-        "score": 229.0,
-        "frequency": 653,
+        "score": 230.61,
+        "frequency": 666,
         "recent": 4,
         "recent_7": 3,
         "recent_30": 7,
         "coincidences": 58,
-        "drags": 23,
+        "drags": 22,
         "mirror": "39",
         "moves": 4
       },
       {
         "number": "34",
-        "score": 224.83,
-        "frequency": 702,
+        "score": 227.77,
+        "frequency": 717,
         "recent": 2,
         "recent_7": 1,
         "recent_30": 8,
-        "coincidences": 70,
-        "drags": 16,
+        "coincidences": 74,
+        "drags": 18,
         "mirror": "43",
         "moves": 4
       },
       {
+        "number": "41",
+        "score": 226.4,
+        "frequency": 698,
+        "recent": 5,
+        "recent_7": 2,
+        "recent_30": 8,
+        "coincidences": 40,
+        "drags": 21,
+        "mirror": "14",
+        "moves": 4
+      },
+      {
         "number": "85",
-        "score": 222.71,
-        "frequency": 661,
+        "score": 224.88,
+        "frequency": 675,
         "recent": 4,
         "recent_7": 3,
         "recent_30": 6,
-        "coincidences": 63,
+        "coincidences": 65,
         "drags": 22,
         "mirror": "58",
         "moves": 4
       },
       {
         "number": "87",
-        "score": 222.19,
-        "frequency": 678,
+        "score": 223.85,
+        "frequency": 689,
         "recent": 5,
         "recent_7": 3,
         "recent_30": 7,
-        "coincidences": 64,
-        "drags": 21,
+        "coincidences": 66,
+        "drags": 20,
         "mirror": "78",
         "moves": 4
       },
       {
+        "number": "26",
+        "score": 222.45,
+        "frequency": 721,
+        "recent": 4,
+        "recent_7": 2,
+        "recent_30": 6,
+        "coincidences": 51,
+        "drags": 21,
+        "mirror": "62",
+        "moves": 4
+      },
+      {
         "number": "14",
-        "score": 215.92,
-        "frequency": 738,
+        "score": 218.88,
+        "frequency": 749,
         "recent": 4,
         "recent_7": 3,
         "recent_30": 5,
-        "coincidences": 56,
-        "drags": 18,
+        "coincidences": 58,
+        "drags": 19,
         "mirror": "41",
-        "moves": 4
-      },
-      {
-        "number": "86",
-        "score": 214.59,
-        "frequency": 653,
-        "recent": 4,
-        "recent_7": 1,
-        "recent_30": 7,
-        "coincidences": 45,
-        "drags": 26,
-        "mirror": "68",
-        "moves": 4
-      },
-      {
-        "number": "41",
-        "score": 213.52,
-        "frequency": 688,
-        "recent": 4,
-        "recent_7": 2,
-        "recent_30": 7,
-        "coincidences": 38,
-        "drags": 20,
-        "mirror": "14",
         "moves": 4
       }
     ],
     "elite_group": [
       {
         "number": "49",
-        "score": 269.39,
-        "frequency": 676,
+        "score": 271.4,
+        "frequency": 688,
         "recent": 6,
         "recent_7": 5,
         "recent_30": 7,
-        "coincidences": 62,
+        "coincidences": 64,
         "drags": 23,
         "mirror": "94",
         "moves": 4
       },
       {
         "number": "80",
-        "score": 251.75,
-        "frequency": 681,
+        "score": 253.75,
+        "frequency": 694,
         "recent": 5,
         "recent_7": 3,
         "recent_30": 9,
-        "coincidences": 52,
+        "coincidences": 54,
         "drags": 26,
         "mirror": "08",
         "moves": 4
       },
       {
         "number": "54",
-        "score": 238.83,
-        "frequency": 635,
+        "score": 248.99,
+        "frequency": 650,
         "recent": 5,
         "recent_7": 2,
-        "recent_30": 9,
-        "coincidences": 40,
-        "drags": 14,
+        "recent_30": 10,
+        "coincidences": 42,
+        "drags": 13,
         "mirror": "45",
         "moves": 4
       },
       {
         "number": "93",
-        "score": 229.0,
-        "frequency": 653,
+        "score": 230.61,
+        "frequency": 666,
         "recent": 4,
         "recent_7": 3,
         "recent_30": 7,
         "coincidences": 58,
-        "drags": 23,
+        "drags": 22,
         "mirror": "39",
         "moves": 4
       },
       {
         "number": "34",
-        "score": 224.83,
-        "frequency": 702,
+        "score": 227.77,
+        "frequency": 717,
         "recent": 2,
         "recent_7": 1,
         "recent_30": 8,
-        "coincidences": 70,
-        "drags": 16,
+        "coincidences": 74,
+        "drags": 18,
         "mirror": "43",
         "moves": 4
       }
     ],
     "leader": {
       "number": "49",
-      "score": 269.39,
-      "frequency": 676,
+      "score": 271.4,
+      "frequency": 688,
       "recent": 6,
       "recent_7": 5,
       "recent_30": 7,
-      "coincidences": 62,
+      "coincidences": 64,
       "drags": 23,
       "mirror": "94",
       "moves": 4
@@ -1050,17 +1050,17 @@
           "recent_frequency": 2
         },
         {
+          "number": "26",
+          "score": 424.62,
+          "frequency": 421,
+          "delay_days": 3,
+          "recent_frequency": 2
+        },
+        {
           "number": "61",
           "score": 421.85,
           "frequency": 420,
           "delay_days": 6,
-          "recent_frequency": 1
-        },
-        {
-          "number": "26",
-          "score": 421.82,
-          "frequency": 420,
-          "delay_days": 3,
           "recent_frequency": 1
         },
         {
@@ -90559,10 +90559,10 @@
           "suggestions": [
             {
               "number": "41",
-              "score": 185.6,
-              "frequency": 185,
-              "delay_days": 73,
-              "recent_frequency": 0
+              "score": 187.91,
+              "frequency": 186,
+              "delay_days": 13,
+              "recent_frequency": 1
             },
             {
               "number": "42",
@@ -90600,17 +90600,17 @@
               "recent_frequency": 0
             },
             {
+              "number": "26",
+              "score": 175.71,
+              "frequency": 172,
+              "delay_days": 13,
+              "recent_frequency": 2
+            },
+            {
               "number": "40",
               "score": 173.94,
               "frequency": 172,
               "delay_days": 17,
-              "recent_frequency": 1
-            },
-            {
-              "number": "26",
-              "score": 172.97,
-              "frequency": 171,
-              "delay_days": 21,
               "recent_frequency": 1
             },
             {
@@ -153667,74 +153667,74 @@
     "Loteka": {
       "suggestions": [
         {
+          "number": "19",
+          "score": 133.81,
+          "frequency": 123,
+          "delay_days": 1,
+          "recent_frequency": 6
+        },
+        {
           "number": "28",
-          "score": 109.71,
-          "frequency": 106,
+          "score": 133.71,
+          "frequency": 130,
           "delay_days": 13,
           "recent_frequency": 2
         },
         {
           "number": "17",
-          "score": 102.04,
-          "frequency": 100,
+          "score": 126.04,
+          "frequency": 124,
           "delay_days": 29,
           "recent_frequency": 1
         },
         {
-          "number": "19",
-          "score": 100.81,
-          "frequency": 90,
-          "delay_days": 1,
-          "recent_frequency": 6
-        },
-        {
-          "number": "52",
-          "score": 96.87,
-          "frequency": 95,
-          "delay_days": 8,
-          "recent_frequency": 1
-        },
-        {
           "number": "75",
-          "score": 96.7,
-          "frequency": 93,
+          "score": 123.7,
+          "frequency": 120,
           "delay_days": 12,
           "recent_frequency": 2
         },
         {
-          "number": "98",
-          "score": 96.27,
-          "frequency": 96,
-          "delay_days": 33,
-          "recent_frequency": 0
+          "number": "84",
+          "score": 122.01,
+          "frequency": 120,
+          "delay_days": 26,
+          "recent_frequency": 1
         },
         {
-          "number": "74",
-          "score": 95.62,
-          "frequency": 95,
-          "delay_days": 75,
-          "recent_frequency": 0
+          "number": "61",
+          "score": 120.85,
+          "frequency": 119,
+          "delay_days": 6,
+          "recent_frequency": 1
         },
         {
-          "number": "42",
-          "score": 94.92,
-          "frequency": 93,
-          "delay_days": 15,
+          "number": "68",
+          "score": 119.89,
+          "frequency": 118,
+          "delay_days": 11,
+          "recent_frequency": 1
+        },
+        {
+          "number": "52",
+          "score": 119.87,
+          "frequency": 118,
+          "delay_days": 8,
           "recent_frequency": 1
         },
         {
           "number": "12",
-          "score": 94.62,
-          "frequency": 91,
+          "score": 119.62,
+          "frequency": 116,
           "delay_days": 2,
           "recent_frequency": 2
         },
         {
-          "number": "09",
-          "score": 92.86,
-          "frequency": 91,
-          "delay_days": 7,
-          "recent_frequency": 1
+          "number": "98",
+          "score": 118.27,
+          "frequency": 118,
+          "delay_days": 33,
+          "recent_frequency": 0
         }
       ],
       "last_results": [
@@ -153828,6 +153828,2540 @@
         }
       ],
       "compare_daily_full": [
+        [
+          "20090730",
+          "Quiniela Loteka",
+          40,
+          91,
+          4
+        ],
+        [
+          "20090731",
+          "Quiniela Loteka",
+          28,
+          56,
+          83
+        ],
+        [
+          "20090801",
+          "Quiniela Loteka",
+          9,
+          70,
+          96
+        ],
+        [
+          "20090802",
+          "Quiniela Loteka",
+          46,
+          70,
+          6
+        ],
+        [
+          "20090803",
+          "Quiniela Loteka",
+          81,
+          79,
+          74
+        ],
+        [
+          "20090804",
+          "Quiniela Loteka",
+          26,
+          63,
+          45
+        ],
+        [
+          "20090805",
+          "Quiniela Loteka",
+          12,
+          19,
+          46
+        ],
+        [
+          "20090806",
+          "Quiniela Loteka",
+          10,
+          38,
+          26
+        ],
+        [
+          "20090807",
+          "Quiniela Loteka",
+          83,
+          55,
+          66
+        ],
+        [
+          "20090808",
+          "Quiniela Loteka",
+          24,
+          33,
+          93
+        ],
+        [
+          "20090809",
+          "Quiniela Loteka",
+          75,
+          72,
+          94
+        ],
+        [
+          "20090810",
+          "Quiniela Loteka",
+          86,
+          23,
+          90
+        ],
+        [
+          "20090811",
+          "Quiniela Loteka",
+          2,
+          76,
+          73
+        ],
+        [
+          "20090812",
+          "Quiniela Loteka",
+          6,
+          85,
+          28
+        ],
+        [
+          "20090813",
+          "Quiniela Loteka",
+          8,
+          19,
+          29
+        ],
+        [
+          "20090814",
+          "Quiniela Loteka",
+          82,
+          32,
+          2
+        ],
+        [
+          "20090815",
+          "Quiniela Loteka",
+          34,
+          85,
+          43
+        ],
+        [
+          "20090816",
+          "Quiniela Loteka",
+          69,
+          83,
+          21
+        ],
+        [
+          "20090817",
+          "Quiniela Loteka",
+          84,
+          81,
+          22
+        ],
+        [
+          "20090818",
+          "Quiniela Loteka",
+          58,
+          17,
+          64
+        ],
+        [
+          "20090819",
+          "Quiniela Loteka",
+          90,
+          40,
+          42
+        ],
+        [
+          "20090820",
+          "Quiniela Loteka",
+          55,
+          27,
+          8
+        ],
+        [
+          "20090821",
+          "Quiniela Loteka",
+          38,
+          83,
+          62
+        ],
+        [
+          "20090822",
+          "Quiniela Loteka",
+          62,
+          19,
+          38
+        ],
+        [
+          "20090823",
+          "Quiniela Loteka",
+          90,
+          48,
+          89
+        ],
+        [
+          "20090824",
+          "Quiniela Loteka",
+          26,
+          68,
+          37
+        ],
+        [
+          "20090825",
+          "Quiniela Loteka",
+          28,
+          69,
+          80
+        ],
+        [
+          "20090826",
+          "Quiniela Loteka",
+          37,
+          48,
+          70
+        ],
+        [
+          "20090827",
+          "Quiniela Loteka",
+          19,
+          18,
+          88
+        ],
+        [
+          "20090828",
+          "Quiniela Loteka",
+          66,
+          87,
+          98
+        ],
+        [
+          "20090829",
+          "Quiniela Loteka",
+          25,
+          14,
+          98
+        ],
+        [
+          "20090830",
+          "Quiniela Loteka",
+          53,
+          40,
+          15
+        ],
+        [
+          "20090831",
+          "Quiniela Loteka",
+          44,
+          18,
+          60
+        ],
+        [
+          "20090901",
+          "Quiniela Loteka",
+          35,
+          71,
+          26
+        ],
+        [
+          "20090902",
+          "Quiniela Loteka",
+          97,
+          66,
+          58
+        ],
+        [
+          "20090903",
+          "Quiniela Loteka",
+          98,
+          45,
+          7
+        ],
+        [
+          "20090904",
+          "Quiniela Loteka",
+          8,
+          95,
+          28
+        ],
+        [
+          "20090905",
+          "Quiniela Loteka",
+          61,
+          97,
+          31
+        ],
+        [
+          "20090906",
+          "Quiniela Loteka",
+          90,
+          3,
+          74
+        ],
+        [
+          "20090907",
+          "Quiniela Loteka",
+          1,
+          24,
+          25
+        ],
+        [
+          "20090908",
+          "Quiniela Loteka",
+          27,
+          48,
+          23
+        ],
+        [
+          "20090909",
+          "Quiniela Loteka",
+          34,
+          32,
+          48
+        ],
+        [
+          "20090910",
+          "Quiniela Loteka",
+          75,
+          49,
+          97
+        ],
+        [
+          "20090911",
+          "Quiniela Loteka",
+          99,
+          53,
+          87
+        ],
+        [
+          "20090912",
+          "Quiniela Loteka",
+          67,
+          8,
+          78
+        ],
+        [
+          "20090913",
+          "Quiniela Loteka",
+          41,
+          50,
+          63
+        ],
+        [
+          "20090914",
+          "Quiniela Loteka",
+          5,
+          75,
+          26
+        ],
+        [
+          "20090915",
+          "Quiniela Loteka",
+          89,
+          83,
+          85
+        ],
+        [
+          "20090916",
+          "Quiniela Loteka",
+          99,
+          34,
+          65
+        ],
+        [
+          "20090917",
+          "Quiniela Loteka",
+          52,
+          11,
+          66
+        ],
+        [
+          "20090918",
+          "Quiniela Loteka",
+          61,
+          31,
+          92
+        ],
+        [
+          "20090919",
+          "Quiniela Loteka",
+          36,
+          86,
+          59
+        ],
+        [
+          "20090920",
+          "Quiniela Loteka",
+          89,
+          9,
+          91
+        ],
+        [
+          "20090921",
+          "Quiniela Loteka",
+          83,
+          35,
+          26
+        ],
+        [
+          "20090922",
+          "Quiniela Loteka",
+          32,
+          14,
+          80
+        ],
+        [
+          "20090923",
+          "Quiniela Loteka",
+          19,
+          56,
+          21
+        ],
+        [
+          "20090924",
+          "Quiniela Loteka",
+          9,
+          40,
+          28
+        ],
+        [
+          "20090925",
+          "Quiniela Loteka",
+          6,
+          77,
+          17
+        ],
+        [
+          "20090926",
+          "Quiniela Loteka",
+          34,
+          41,
+          36
+        ],
+        [
+          "20090928",
+          "Quiniela Loteka",
+          94,
+          88,
+          83
+        ],
+        [
+          "20090929",
+          "Quiniela Loteka",
+          3,
+          15,
+          53
+        ],
+        [
+          "20090930",
+          "Quiniela Loteka",
+          54,
+          41,
+          35
+        ],
+        [
+          "20091001",
+          "Quiniela Loteka",
+          82,
+          79,
+          57
+        ],
+        [
+          "20091002",
+          "Quiniela Loteka",
+          40,
+          0,
+          24
+        ],
+        [
+          "20091003",
+          "Quiniela Loteka",
+          88,
+          29,
+          7
+        ],
+        [
+          "20091004",
+          "Quiniela Loteka",
+          12,
+          94,
+          27
+        ],
+        [
+          "20091005",
+          "Quiniela Loteka",
+          96,
+          8,
+          35
+        ],
+        [
+          "20091006",
+          "Quiniela Loteka",
+          33,
+          84,
+          48
+        ],
+        [
+          "20091007",
+          "Quiniela Loteka",
+          90,
+          36,
+          83
+        ],
+        [
+          "20091008",
+          "Quiniela Loteka",
+          59,
+          76,
+          91
+        ],
+        [
+          "20091009",
+          "Quiniela Loteka",
+          31,
+          80,
+          28
+        ],
+        [
+          "20091010",
+          "Quiniela Loteka",
+          70,
+          37,
+          31
+        ],
+        [
+          "20091011",
+          "Quiniela Loteka",
+          64,
+          72,
+          13
+        ],
+        [
+          "20091012",
+          "Quiniela Loteka",
+          17,
+          68,
+          31
+        ],
+        [
+          "20091013",
+          "Quiniela Loteka",
+          41,
+          25,
+          0
+        ],
+        [
+          "20091014",
+          "Quiniela Loteka",
+          0,
+          80,
+          58
+        ],
+        [
+          "20091015",
+          "Quiniela Loteka",
+          25,
+          66,
+          19
+        ],
+        [
+          "20091016",
+          "Quiniela Loteka",
+          36,
+          15,
+          64
+        ],
+        [
+          "20091017",
+          "Quiniela Loteka",
+          66,
+          80,
+          86
+        ],
+        [
+          "20091018",
+          "Quiniela Loteka",
+          80,
+          68,
+          63
+        ],
+        [
+          "20091019",
+          "Quiniela Loteka",
+          6,
+          76,
+          0
+        ],
+        [
+          "20091020",
+          "Quiniela Loteka",
+          18,
+          15,
+          85
+        ],
+        [
+          "20091021",
+          "Quiniela Loteka",
+          28,
+          87,
+          19
+        ],
+        [
+          "20091022",
+          "Quiniela Loteka",
+          44,
+          17,
+          4
+        ],
+        [
+          "20091023",
+          "Quiniela Loteka",
+          90,
+          46,
+          87
+        ],
+        [
+          "20091024",
+          "Quiniela Loteka",
+          68,
+          61,
+          20
+        ],
+        [
+          "20091025",
+          "Quiniela Loteka",
+          66,
+          80,
+          86
+        ],
+        [
+          "20091026",
+          "Quiniela Loteka",
+          1,
+          98,
+          53
+        ],
+        [
+          "20091027",
+          "Quiniela Loteka",
+          91,
+          11,
+          35
+        ],
+        [
+          "20091028",
+          "Quiniela Loteka",
+          79,
+          56,
+          17
+        ],
+        [
+          "20091029",
+          "Quiniela Loteka",
+          50,
+          83,
+          80
+        ],
+        [
+          "20091030",
+          "Quiniela Loteka",
+          89,
+          57,
+          45
+        ],
+        [
+          "20091031",
+          "Quiniela Loteka",
+          9,
+          26,
+          64
+        ],
+        [
+          "20091101",
+          "Quiniela Loteka",
+          65,
+          7,
+          38
+        ],
+        [
+          "20091102",
+          "Quiniela Loteka",
+          56,
+          79,
+          51
+        ],
+        [
+          "20091103",
+          "Quiniela Loteka",
+          55,
+          99,
+          15
+        ],
+        [
+          "20091104",
+          "Quiniela Loteka",
+          25,
+          67,
+          26
+        ],
+        [
+          "20091105",
+          "Quiniela Loteka",
+          7,
+          75,
+          15
+        ],
+        [
+          "20091106",
+          "Quiniela Loteka",
+          72,
+          12,
+          85
+        ],
+        [
+          "20091107",
+          "Quiniela Loteka",
+          31,
+          2,
+          53
+        ],
+        [
+          "20091108",
+          "Quiniela Loteka",
+          38,
+          32,
+          17
+        ],
+        [
+          "20091109",
+          "Quiniela Loteka",
+          6,
+          23,
+          95
+        ],
+        [
+          "20091110",
+          "Quiniela Loteka",
+          63,
+          36,
+          35
+        ],
+        [
+          "20091111",
+          "Quiniela Loteka",
+          86,
+          11,
+          97
+        ],
+        [
+          "20091112",
+          "Quiniela Loteka",
+          96,
+          26,
+          76
+        ],
+        [
+          "20091113",
+          "Quiniela Loteka",
+          82,
+          75,
+          73
+        ],
+        [
+          "20091114",
+          "Quiniela Loteka",
+          84,
+          47,
+          79
+        ],
+        [
+          "20091115",
+          "Quiniela Loteka",
+          45,
+          89,
+          58
+        ],
+        [
+          "20091116",
+          "Quiniela Loteka",
+          4,
+          68,
+          34
+        ],
+        [
+          "20091117",
+          "Quiniela Loteka",
+          7,
+          59,
+          5
+        ],
+        [
+          "20091118",
+          "Quiniela Loteka",
+          20,
+          73,
+          70
+        ],
+        [
+          "20091119",
+          "Quiniela Loteka",
+          1,
+          32,
+          26
+        ],
+        [
+          "20091120",
+          "Quiniela Loteka",
+          40,
+          64,
+          60
+        ],
+        [
+          "20091121",
+          "Quiniela Loteka",
+          54,
+          14,
+          39
+        ],
+        [
+          "20091122",
+          "Quiniela Loteka",
+          9,
+          10,
+          77
+        ],
+        [
+          "20091123",
+          "Quiniela Loteka",
+          78,
+          89,
+          52
+        ],
+        [
+          "20091124",
+          "Quiniela Loteka",
+          56,
+          23,
+          84
+        ],
+        [
+          "20091125",
+          "Quiniela Loteka",
+          19,
+          98,
+          22
+        ],
+        [
+          "20091126",
+          "Quiniela Loteka",
+          82,
+          94,
+          90
+        ],
+        [
+          "20091127",
+          "Quiniela Loteka",
+          52,
+          39,
+          9
+        ],
+        [
+          "20091128",
+          "Quiniela Loteka",
+          99,
+          85,
+          93
+        ],
+        [
+          "20091129",
+          "Quiniela Loteka",
+          11,
+          81,
+          59
+        ],
+        [
+          "20091130",
+          "Quiniela Loteka",
+          94,
+          88,
+          42
+        ],
+        [
+          "20091201",
+          "Quiniela Loteka",
+          31,
+          18,
+          47
+        ],
+        [
+          "20091202",
+          "Quiniela Loteka",
+          60,
+          48,
+          7
+        ],
+        [
+          "20091203",
+          "Quiniela Loteka",
+          67,
+          91,
+          69
+        ],
+        [
+          "20091204",
+          "Quiniela Loteka",
+          79,
+          11,
+          71
+        ],
+        [
+          "20091205",
+          "Quiniela Loteka",
+          82,
+          50,
+          36
+        ],
+        [
+          "20091206",
+          "Quiniela Loteka",
+          49,
+          53,
+          61
+        ],
+        [
+          "20091207",
+          "Quiniela Loteka",
+          10,
+          39,
+          83
+        ],
+        [
+          "20091208",
+          "Quiniela Loteka",
+          41,
+          81,
+          94
+        ],
+        [
+          "20091209",
+          "Quiniela Loteka",
+          76,
+          83,
+          41
+        ],
+        [
+          "20091210",
+          "Quiniela Loteka",
+          46,
+          18,
+          79
+        ],
+        [
+          "20091211",
+          "Quiniela Loteka",
+          73,
+          25,
+          17
+        ],
+        [
+          "20091212",
+          "Quiniela Loteka",
+          22,
+          77,
+          21
+        ],
+        [
+          "20091213",
+          "Quiniela Loteka",
+          66,
+          97,
+          10
+        ],
+        [
+          "20091214",
+          "Quiniela Loteka",
+          61,
+          78,
+          24
+        ],
+        [
+          "20091215",
+          "Quiniela Loteka",
+          57,
+          97,
+          82
+        ],
+        [
+          "20091216",
+          "Quiniela Loteka",
+          5,
+          16,
+          88
+        ],
+        [
+          "20091217",
+          "Quiniela Loteka",
+          75,
+          48,
+          83
+        ],
+        [
+          "20091218",
+          "Quiniela Loteka",
+          62,
+          63,
+          25
+        ],
+        [
+          "20091219",
+          "Quiniela Loteka",
+          30,
+          44,
+          6
+        ],
+        [
+          "20091220",
+          "Quiniela Loteka",
+          61,
+          86,
+          75
+        ],
+        [
+          "20091221",
+          "Quiniela Loteka",
+          11,
+          4,
+          52
+        ],
+        [
+          "20091222",
+          "Quiniela Loteka",
+          69,
+          36,
+          82
+        ],
+        [
+          "20091223",
+          "Quiniela Loteka",
+          86,
+          74,
+          21
+        ],
+        [
+          "20091224",
+          "Quiniela Loteka",
+          85,
+          79,
+          8
+        ],
+        [
+          "20091226",
+          "Quiniela Loteka",
+          29,
+          79,
+          10
+        ],
+        [
+          "20091227",
+          "Quiniela Loteka",
+          31,
+          82,
+          30
+        ],
+        [
+          "20091228",
+          "Quiniela Loteka",
+          78,
+          37,
+          21
+        ],
+        [
+          "20091229",
+          "Quiniela Loteka",
+          77,
+          79,
+          28
+        ],
+        [
+          "20091230",
+          "Quiniela Loteka",
+          25,
+          73,
+          80
+        ],
+        [
+          "20091231",
+          "Quiniela Loteka",
+          78,
+          77,
+          80
+        ],
+        [
+          "20100102",
+          "Quiniela Loteka",
+          45,
+          7,
+          24
+        ],
+        [
+          "20100103",
+          "Quiniela Loteka",
+          26,
+          9,
+          23
+        ],
+        [
+          "20100104",
+          "Quiniela Loteka",
+          38,
+          50,
+          9
+        ],
+        [
+          "20100105",
+          "Quiniela Loteka",
+          86,
+          47,
+          12
+        ],
+        [
+          "20100106",
+          "Quiniela Loteka",
+          55,
+          24,
+          60
+        ],
+        [
+          "20100107",
+          "Quiniela Loteka",
+          32,
+          40,
+          26
+        ],
+        [
+          "20100108",
+          "Quiniela Loteka",
+          48,
+          42,
+          89
+        ],
+        [
+          "20100109",
+          "Quiniela Loteka",
+          83,
+          68,
+          47
+        ],
+        [
+          "20100110",
+          "Quiniela Loteka",
+          64,
+          66,
+          40
+        ],
+        [
+          "20100111",
+          "Quiniela Loteka",
+          22,
+          12,
+          91
+        ],
+        [
+          "20100112",
+          "Quiniela Loteka",
+          8,
+          56,
+          33
+        ],
+        [
+          "20100113",
+          "Quiniela Loteka",
+          65,
+          78,
+          36
+        ],
+        [
+          "20100114",
+          "Quiniela Loteka",
+          66,
+          36,
+          8
+        ],
+        [
+          "20100115",
+          "Quiniela Loteka",
+          80,
+          54,
+          96
+        ],
+        [
+          "20100116",
+          "Quiniela Loteka",
+          23,
+          12,
+          53
+        ],
+        [
+          "20100117",
+          "Quiniela Loteka",
+          12,
+          78,
+          36
+        ],
+        [
+          "20100118",
+          "Quiniela Loteka",
+          69,
+          13,
+          10
+        ],
+        [
+          "20100119",
+          "Quiniela Loteka",
+          84,
+          63,
+          58
+        ],
+        [
+          "20100120",
+          "Quiniela Loteka",
+          13,
+          29,
+          14
+        ],
+        [
+          "20100121",
+          "Quiniela Loteka",
+          20,
+          72,
+          22
+        ],
+        [
+          "20100122",
+          "Quiniela Loteka",
+          85,
+          33,
+          92
+        ],
+        [
+          "20100123",
+          "Quiniela Loteka",
+          1,
+          89,
+          53
+        ],
+        [
+          "20100124",
+          "Quiniela Loteka",
+          4,
+          99,
+          71
+        ],
+        [
+          "20100125",
+          "Quiniela Loteka",
+          19,
+          1,
+          26
+        ],
+        [
+          "20100126",
+          "Quiniela Loteka",
+          7,
+          66,
+          34
+        ],
+        [
+          "20100127",
+          "Quiniela Loteka",
+          91,
+          46,
+          87
+        ],
+        [
+          "20100128",
+          "Quiniela Loteka",
+          65,
+          61,
+          18
+        ],
+        [
+          "20100129",
+          "Quiniela Loteka",
+          77,
+          15,
+          12
+        ],
+        [
+          "20100130",
+          "Quiniela Loteka",
+          49,
+          13,
+          36
+        ],
+        [
+          "20100131",
+          "Quiniela Loteka",
+          45,
+          57,
+          21
+        ],
+        [
+          "20100201",
+          "Quiniela Loteka",
+          12,
+          36,
+          3
+        ],
+        [
+          "20100202",
+          "Quiniela Loteka",
+          1,
+          64,
+          83
+        ],
+        [
+          "20100203",
+          "Quiniela Loteka",
+          98,
+          69,
+          6
+        ],
+        [
+          "20100204",
+          "Quiniela Loteka",
+          48,
+          24,
+          6
+        ],
+        [
+          "20100205",
+          "Quiniela Loteka",
+          16,
+          70,
+          16
+        ],
+        [
+          "20100206",
+          "Quiniela Loteka",
+          48,
+          8,
+          50
+        ],
+        [
+          "20100207",
+          "Quiniela Loteka",
+          81,
+          17,
+          84
+        ],
+        [
+          "20100208",
+          "Quiniela Loteka",
+          4,
+          20,
+          84
+        ],
+        [
+          "20100209",
+          "Quiniela Loteka",
+          49,
+          79,
+          70
+        ],
+        [
+          "20100210",
+          "Quiniela Loteka",
+          45,
+          83,
+          78
+        ],
+        [
+          "20100211",
+          "Quiniela Loteka",
+          0,
+          82,
+          51
+        ],
+        [
+          "20100212",
+          "Quiniela Loteka",
+          56,
+          35,
+          99
+        ],
+        [
+          "20100213",
+          "Quiniela Loteka",
+          81,
+          88,
+          53
+        ],
+        [
+          "20100214",
+          "Quiniela Loteka",
+          61,
+          95,
+          94
+        ],
+        [
+          "20100215",
+          "Quiniela Loteka",
+          86,
+          93,
+          58
+        ],
+        [
+          "20100216",
+          "Quiniela Loteka",
+          61,
+          88,
+          83
+        ],
+        [
+          "20100217",
+          "Quiniela Loteka",
+          16,
+          44,
+          38
+        ],
+        [
+          "20100218",
+          "Quiniela Loteka",
+          20,
+          38,
+          61
+        ],
+        [
+          "20100219",
+          "Quiniela Loteka",
+          53,
+          13,
+          98
+        ],
+        [
+          "20100220",
+          "Quiniela Loteka",
+          78,
+          58,
+          92
+        ],
+        [
+          "20100221",
+          "Quiniela Loteka",
+          57,
+          17,
+          95
+        ],
+        [
+          "20100222",
+          "Quiniela Loteka",
+          11,
+          52,
+          73
+        ],
+        [
+          "20100223",
+          "Quiniela Loteka",
+          94,
+          35,
+          20
+        ],
+        [
+          "20100224",
+          "Quiniela Loteka",
+          93,
+          32,
+          74
+        ],
+        [
+          "20100225",
+          "Quiniela Loteka",
+          78,
+          36,
+          91
+        ],
+        [
+          "20100226",
+          "Quiniela Loteka",
+          18,
+          19,
+          16
+        ],
+        [
+          "20100227",
+          "Quiniela Loteka",
+          45,
+          87,
+          45
+        ],
+        [
+          "20100228",
+          "Quiniela Loteka",
+          34,
+          12,
+          69
+        ],
+        [
+          "20100301",
+          "Quiniela Loteka",
+          76,
+          25,
+          3
+        ],
+        [
+          "20100302",
+          "Quiniela Loteka",
+          85,
+          55,
+          78
+        ],
+        [
+          "20100303",
+          "Quiniela Loteka",
+          0,
+          8,
+          51
+        ],
+        [
+          "20100304",
+          "Quiniela Loteka",
+          84,
+          23,
+          76
+        ],
+        [
+          "20100305",
+          "Quiniela Loteka",
+          20,
+          71,
+          57
+        ],
+        [
+          "20100306",
+          "Quiniela Loteka",
+          29,
+          63,
+          32
+        ],
+        [
+          "20100307",
+          "Quiniela Loteka",
+          51,
+          1,
+          17
+        ],
+        [
+          "20100308",
+          "Quiniela Loteka",
+          13,
+          56,
+          33
+        ],
+        [
+          "20100309",
+          "Quiniela Loteka",
+          62,
+          33,
+          7
+        ],
+        [
+          "20100310",
+          "Quiniela Loteka",
+          62,
+          33,
+          51
+        ],
+        [
+          "20100311",
+          "Quiniela Loteka",
+          88,
+          81,
+          35
+        ],
+        [
+          "20100312",
+          "Quiniela Loteka",
+          65,
+          98,
+          32
+        ],
+        [
+          "20100313",
+          "Quiniela Loteka",
+          25,
+          67,
+          5
+        ],
+        [
+          "20100314",
+          "Quiniela Loteka",
+          73,
+          85,
+          91
+        ],
+        [
+          "20100315",
+          "Quiniela Loteka",
+          79,
+          96,
+          10
+        ],
+        [
+          "20100316",
+          "Quiniela Loteka",
+          82,
+          40,
+          90
+        ],
+        [
+          "20100317",
+          "Quiniela Loteka",
+          8,
+          5,
+          10
+        ],
+        [
+          "20100318",
+          "Quiniela Loteka",
+          87,
+          92,
+          1
+        ],
+        [
+          "20100319",
+          "Quiniela Loteka",
+          74,
+          52,
+          7
+        ],
+        [
+          "20100320",
+          "Quiniela Loteka",
+          68,
+          99,
+          93
+        ],
+        [
+          "20100321",
+          "Quiniela Loteka",
+          60,
+          56,
+          38
+        ],
+        [
+          "20100322",
+          "Quiniela Loteka",
+          42,
+          67,
+          86
+        ],
+        [
+          "20100323",
+          "Quiniela Loteka",
+          98,
+          56,
+          57
+        ],
+        [
+          "20100324",
+          "Quiniela Loteka",
+          34,
+          54,
+          67
+        ],
+        [
+          "20100325",
+          "Quiniela Loteka",
+          4,
+          46,
+          98
+        ],
+        [
+          "20100326",
+          "Quiniela Loteka",
+          49,
+          60,
+          62
+        ],
+        [
+          "20100327",
+          "Quiniela Loteka",
+          5,
+          52,
+          94
+        ],
+        [
+          "20100328",
+          "Quiniela Loteka",
+          94,
+          5,
+          81
+        ],
+        [
+          "20100329",
+          "Quiniela Loteka",
+          0,
+          64,
+          6
+        ],
+        [
+          "20100330",
+          "Quiniela Loteka",
+          86,
+          13,
+          55
+        ],
+        [
+          "20100331",
+          "Quiniela Loteka",
+          94,
+          24,
+          43
+        ],
+        [
+          "20100401",
+          "Quiniela Loteka",
+          86,
+          14,
+          23
+        ],
+        [
+          "20100403",
+          "Quiniela Loteka",
+          33,
+          44,
+          7
+        ],
+        [
+          "20100404",
+          "Quiniela Loteka",
+          36,
+          41,
+          43
+        ],
+        [
+          "20100405",
+          "Quiniela Loteka",
+          87,
+          2,
+          5
+        ],
+        [
+          "20100406",
+          "Quiniela Loteka",
+          60,
+          1,
+          82
+        ],
+        [
+          "20100407",
+          "Quiniela Loteka",
+          56,
+          92,
+          93
+        ],
+        [
+          "20100408",
+          "Quiniela Loteka",
+          55,
+          79,
+          32
+        ],
+        [
+          "20100409",
+          "Quiniela Loteka",
+          50,
+          91,
+          79
+        ],
+        [
+          "20100410",
+          "Quiniela Loteka",
+          17,
+          86,
+          24
+        ],
+        [
+          "20100411",
+          "Quiniela Loteka",
+          91,
+          41,
+          33
+        ],
+        [
+          "20100412",
+          "Quiniela Loteka",
+          55,
+          24,
+          58
+        ],
+        [
+          "20100413",
+          "Quiniela Loteka",
+          92,
+          97,
+          22
+        ],
+        [
+          "20100414",
+          "Quiniela Loteka",
+          63,
+          40,
+          92
+        ],
+        [
+          "20100415",
+          "Quiniela Loteka",
+          53,
+          23,
+          39
+        ],
+        [
+          "20100416",
+          "Quiniela Loteka",
+          88,
+          19,
+          19
+        ],
+        [
+          "20100417",
+          "Quiniela Loteka",
+          50,
+          85,
+          81
+        ],
+        [
+          "20100418",
+          "Quiniela Loteka",
+          20,
+          22,
+          69
+        ],
+        [
+          "20100419",
+          "Quiniela Loteka",
+          52,
+          90,
+          39
+        ],
+        [
+          "20100420",
+          "Quiniela Loteka",
+          55,
+          95,
+          41
+        ],
+        [
+          "20100421",
+          "Quiniela Loteka",
+          59,
+          86,
+          63
+        ],
+        [
+          "20100422",
+          "Quiniela Loteka",
+          96,
+          90,
+          76
+        ],
+        [
+          "20100423",
+          "Quiniela Loteka",
+          40,
+          32,
+          10
+        ],
+        [
+          "20100424",
+          "Quiniela Loteka",
+          28,
+          30,
+          44
+        ],
+        [
+          "20100425",
+          "Quiniela Loteka",
+          65,
+          13,
+          12
+        ],
+        [
+          "20100426",
+          "Quiniela Loteka",
+          98,
+          44,
+          68
+        ],
+        [
+          "20100427",
+          "Quiniela Loteka",
+          97,
+          97,
+          83
+        ],
+        [
+          "20100428",
+          "Quiniela Loteka",
+          72,
+          76,
+          91
+        ],
+        [
+          "20100429",
+          "Quiniela Loteka",
+          73,
+          18,
+          87
+        ],
+        [
+          "20100430",
+          "Quiniela Loteka",
+          50,
+          30,
+          46
+        ],
+        [
+          "20100501",
+          "Quiniela Loteka",
+          53,
+          18,
+          68
+        ],
+        [
+          "20100502",
+          "Quiniela Loteka",
+          54,
+          20,
+          79
+        ],
+        [
+          "20100503",
+          "Quiniela Loteka",
+          77,
+          30,
+          40
+        ],
+        [
+          "20100504",
+          "Quiniela Loteka",
+          77,
+          30,
+          40
+        ],
+        [
+          "20100505",
+          "Quiniela Loteka",
+          41,
+          40,
+          76
+        ],
+        [
+          "20100506",
+          "Quiniela Loteka",
+          53,
+          32,
+          11
+        ],
+        [
+          "20100507",
+          "Quiniela Loteka",
+          69,
+          33,
+          26
+        ],
+        [
+          "20100508",
+          "Quiniela Loteka",
+          21,
+          67,
+          96
+        ],
+        [
+          "20100509",
+          "Quiniela Loteka",
+          83,
+          26,
+          1
+        ],
+        [
+          "20100510",
+          "Quiniela Loteka",
+          42,
+          65,
+          80
+        ],
+        [
+          "20100511",
+          "Quiniela Loteka",
+          68,
+          90,
+          44
+        ],
+        [
+          "20100512",
+          "Quiniela Loteka",
+          84,
+          33,
+          6
+        ],
+        [
+          "20100513",
+          "Quiniela Loteka",
+          49,
+          48,
+          30
+        ],
+        [
+          "20100514",
+          "Quiniela Loteka",
+          55,
+          7,
+          64
+        ],
+        [
+          "20100515",
+          "Quiniela Loteka",
+          59,
+          32,
+          1
+        ],
+        [
+          "20100517",
+          "Quiniela Loteka",
+          71,
+          71,
+          68
+        ],
+        [
+          "20100518",
+          "Quiniela Loteka",
+          39,
+          49,
+          47
+        ],
+        [
+          "20100519",
+          "Quiniela Loteka",
+          75,
+          71,
+          1
+        ],
+        [
+          "20100520",
+          "Quiniela Loteka",
+          48,
+          47,
+          60
+        ],
+        [
+          "20100521",
+          "Quiniela Loteka",
+          74,
+          78,
+          29
+        ],
+        [
+          "20100522",
+          "Quiniela Loteka",
+          23,
+          27,
+          0
+        ],
+        [
+          "20100523",
+          "Quiniela Loteka",
+          78,
+          41,
+          53
+        ],
+        [
+          "20100524",
+          "Quiniela Loteka",
+          70,
+          48,
+          84
+        ],
+        [
+          "20100525",
+          "Quiniela Loteka",
+          12,
+          53,
+          48
+        ],
+        [
+          "20100526",
+          "Quiniela Loteka",
+          65,
+          40,
+          43
+        ],
+        [
+          "20100527",
+          "Quiniela Loteka",
+          76,
+          65,
+          76
+        ],
+        [
+          "20100528",
+          "Quiniela Loteka",
+          59,
+          79,
+          36
+        ],
+        [
+          "20100529",
+          "Quiniela Loteka",
+          97,
+          96,
+          39
+        ],
+        [
+          "20100530",
+          "Quiniela Loteka",
+          29,
+          72,
+          37
+        ],
+        [
+          "20100531",
+          "Quiniela Loteka",
+          14,
+          92,
+          60
+        ],
+        [
+          "20100601",
+          "Quiniela Loteka",
+          18,
+          41,
+          68
+        ],
+        [
+          "20100602",
+          "Quiniela Loteka",
+          12,
+          22,
+          90
+        ],
+        [
+          "20100603",
+          "Quiniela Loteka",
+          32,
+          98,
+          84
+        ],
+        [
+          "20100604",
+          "Quiniela Loteka",
+          1,
+          7,
+          52
+        ],
+        [
+          "20100605",
+          "Quiniela Loteka",
+          78,
+          14,
+          59
+        ],
+        [
+          "20100606",
+          "Quiniela Loteka",
+          67,
+          68,
+          17
+        ],
+        [
+          "20100607",
+          "Quiniela Loteka",
+          24,
+          98,
+          3
+        ],
+        [
+          "20100608",
+          "Quiniela Loteka",
+          83,
+          24,
+          95
+        ],
+        [
+          "20100609",
+          "Quiniela Loteka",
+          89,
+          98,
+          69
+        ],
+        [
+          "20100610",
+          "Quiniela Loteka",
+          65,
+          5,
+          29
+        ],
+        [
+          "20100611",
+          "Quiniela Loteka",
+          13,
+          86,
+          35
+        ],
+        [
+          "20100612",
+          "Quiniela Loteka",
+          71,
+          74,
+          66
+        ],
+        [
+          "20100613",
+          "Quiniela Loteka",
+          51,
+          50,
+          9
+        ],
+        [
+          "20100614",
+          "Quiniela Loteka",
+          59,
+          66,
+          36
+        ],
+        [
+          "20100615",
+          "Quiniela Loteka",
+          39,
+          77,
+          4
+        ],
+        [
+          "20100616",
+          "Quiniela Loteka",
+          79,
+          30,
+          86
+        ],
+        [
+          "20100617",
+          "Quiniela Loteka",
+          86,
+          25,
+          38
+        ],
+        [
+          "20100618",
+          "Quiniela Loteka",
+          94,
+          56,
+          51
+        ],
+        [
+          "20100619",
+          "Quiniela Loteka",
+          0,
+          52,
+          1
+        ],
+        [
+          "20100620",
+          "Quiniela Loteka",
+          1,
+          33,
+          27
+        ],
+        [
+          "20100621",
+          "Quiniela Loteka",
+          20,
+          73,
+          27
+        ],
+        [
+          "20100622",
+          "Quiniela Loteka",
+          65,
+          56,
+          81
+        ],
+        [
+          "20100623",
+          "Quiniela Loteka",
+          28,
+          76,
+          27
+        ],
+        [
+          "20100624",
+          "Quiniela Loteka",
+          50,
+          2,
+          55
+        ],
+        [
+          "20100625",
+          "Quiniela Loteka",
+          44,
+          44,
+          85
+        ],
+        [
+          "20100626",
+          "Quiniela Loteka",
+          26,
+          60,
+          75
+        ],
+        [
+          "20100627",
+          "Quiniela Loteka",
+          9,
+          55,
+          10
+        ],
+        [
+          "20100628",
+          "Quiniela Loteka",
+          68,
+          65,
+          60
+        ],
+        [
+          "20100629",
+          "Quiniela Loteka",
+          78,
+          61,
+          88
+        ],
+        [
+          "20100630",
+          "Quiniela Loteka",
+          15,
+          16,
+          68
+        ],
+        [
+          "20100701",
+          "Quiniela Loteka",
+          82,
+          51,
+          29
+        ],
+        [
+          "20100702",
+          "Quiniela Loteka",
+          97,
+          98,
+          48
+        ],
+        [
+          "20100703",
+          "Quiniela Loteka",
+          44,
+          3,
+          67
+        ],
+        [
+          "20100704",
+          "Quiniela Loteka",
+          5,
+          68,
+          73
+        ],
+        [
+          "20100705",
+          "Quiniela Loteka",
+          36,
+          51,
+          11
+        ],
+        [
+          "20100706",
+          "Quiniela Loteka",
+          23,
+          3,
+          34
+        ],
+        [
+          "20100707",
+          "Quiniela Loteka",
+          37,
+          73,
+          27
+        ],
+        [
+          "20100708",
+          "Quiniela Loteka",
+          30,
+          77,
+          89
+        ],
+        [
+          "20100709",
+          "Quiniela Loteka",
+          57,
+          99,
+          53
+        ],
+        [
+          "20100710",
+          "Quiniela Loteka",
+          22,
+          1,
+          33
+        ],
+        [
+          "20100711",
+          "Quiniela Loteka",
+          3,
+          17,
+          77
+        ],
+        [
+          "20100712",
+          "Quiniela Loteka",
+          85,
+          83,
+          81
+        ],
+        [
+          "20100713",
+          "Quiniela Loteka",
+          87,
+          64,
+          11
+        ],
+        [
+          "20100714",
+          "Quiniela Loteka",
+          75,
+          84,
+          79
+        ],
+        [
+          "20100715",
+          "Quiniela Loteka",
+          43,
+          61,
+          18
+        ],
+        [
+          "20100716",
+          "Quiniela Loteka",
+          49,
+          92,
+          21
+        ],
+        [
+          "20100717",
+          "Quiniela Loteka",
+          77,
+          75,
+          94
+        ],
+        [
+          "20100718",
+          "Quiniela Loteka",
+          68,
+          28,
+          34
+        ],
+        [
+          "20100719",
+          "Quiniela Loteka",
+          30,
+          32,
+          95
+        ],
+        [
+          "20100720",
+          "Quiniela Loteka",
+          7,
+          41,
+          43
+        ],
+        [
+          "20100721",
+          "Quiniela Loteka",
+          10,
+          33,
+          81
+        ],
+        [
+          "20100722",
+          "Quiniela Loteka",
+          63,
+          42,
+          33
+        ],
+        [
+          "20100723",
+          "Quiniela Loteka",
+          39,
+          61,
+          59
+        ],
+        [
+          "20100724",
+          "Quiniela Loteka",
+          78,
+          39,
+          33
+        ],
+        [
+          "20100725",
+          "Quiniela Loteka",
+          71,
+          51,
+          93
+        ],
+        [
+          "20100726",
+          "Quiniela Loteka",
+          44,
+          31,
+          65
+        ],
+        [
+          "20100727",
+          "Quiniela Loteka",
+          32,
+          7,
+          77
+        ],
+        [
+          "20100728",
+          "Quiniela Loteka",
+          45,
+          90,
+          52
+        ],
+        [
+          "20100729",
+          "Quiniela Loteka",
+          99,
+          34,
+          9
+        ],
+        [
+          "20100730",
+          "Quiniela Loteka",
+          52,
+          24,
+          75
+        ],
+        [
+          "20100731",
+          "Quiniela Loteka",
+          79,
+          62,
+          31
+        ],
         [
           "20100801",
           "Quiniela Loteka",
@@ -154900,6 +157434,13 @@
           37
         ],
         [
+          "20110101",
+          "Quiniela Loteka",
+          23,
+          98,
+          43
+        ],
+        [
           "20110102",
           "Quiniela Loteka",
           79,
@@ -155080,6 +157621,1651 @@
           75,
           50,
           89
+        ],
+        [
+          "20110128",
+          "Quiniela Loteka",
+          7,
+          82,
+          13
+        ],
+        [
+          "20110129",
+          "Quiniela Loteka",
+          3,
+          78,
+          26
+        ],
+        [
+          "20110130",
+          "Quiniela Loteka",
+          74,
+          36,
+          63
+        ],
+        [
+          "20110131",
+          "Quiniela Loteka",
+          78,
+          37,
+          89
+        ],
+        [
+          "20110201",
+          "Quiniela Loteka",
+          92,
+          46,
+          21
+        ],
+        [
+          "20110202",
+          "Quiniela Loteka",
+          52,
+          35,
+          79
+        ],
+        [
+          "20110203",
+          "Quiniela Loteka",
+          35,
+          1,
+          29
+        ],
+        [
+          "20110204",
+          "Quiniela Loteka",
+          16,
+          31,
+          21
+        ],
+        [
+          "20110205",
+          "Quiniela Loteka",
+          54,
+          70,
+          67
+        ],
+        [
+          "20110206",
+          "Quiniela Loteka",
+          37,
+          32,
+          77
+        ],
+        [
+          "20110207",
+          "Quiniela Loteka",
+          82,
+          6,
+          38
+        ],
+        [
+          "20110208",
+          "Quiniela Loteka",
+          82,
+          17,
+          33
+        ],
+        [
+          "20110209",
+          "Quiniela Loteka",
+          49,
+          38,
+          72
+        ],
+        [
+          "20110210",
+          "Quiniela Loteka",
+          35,
+          3,
+          30
+        ],
+        [
+          "20110211",
+          "Quiniela Loteka",
+          16,
+          93,
+          5
+        ],
+        [
+          "20110212",
+          "Quiniela Loteka",
+          51,
+          87,
+          42
+        ],
+        [
+          "20110213",
+          "Quiniela Loteka",
+          81,
+          68,
+          75
+        ],
+        [
+          "20110214",
+          "Quiniela Loteka",
+          36,
+          89,
+          3
+        ],
+        [
+          "20110215",
+          "Quiniela Loteka",
+          42,
+          69,
+          84
+        ],
+        [
+          "20110216",
+          "Quiniela Loteka",
+          72,
+          55,
+          91
+        ],
+        [
+          "20110217",
+          "Quiniela Loteka",
+          61,
+          54,
+          72
+        ],
+        [
+          "20110218",
+          "Quiniela Loteka",
+          55,
+          54,
+          57
+        ],
+        [
+          "20110219",
+          "Quiniela Loteka",
+          60,
+          28,
+          26
+        ],
+        [
+          "20110220",
+          "Quiniela Loteka",
+          68,
+          68,
+          60
+        ],
+        [
+          "20110221",
+          "Quiniela Loteka",
+          59,
+          5,
+          95
+        ],
+        [
+          "20110222",
+          "Quiniela Loteka",
+          22,
+          95,
+          92
+        ],
+        [
+          "20110223",
+          "Quiniela Loteka",
+          29,
+          70,
+          44
+        ],
+        [
+          "20110224",
+          "Quiniela Loteka",
+          80,
+          51,
+          73
+        ],
+        [
+          "20110225",
+          "Quiniela Loteka",
+          50,
+          58,
+          31
+        ],
+        [
+          "20110226",
+          "Quiniela Loteka",
+          30,
+          49,
+          57
+        ],
+        [
+          "20110227",
+          "Quiniela Loteka",
+          57,
+          59,
+          50
+        ],
+        [
+          "20110228",
+          "Quiniela Loteka",
+          34,
+          26,
+          13
+        ],
+        [
+          "20110301",
+          "Quiniela Loteka",
+          46,
+          52,
+          62
+        ],
+        [
+          "20110302",
+          "Quiniela Loteka",
+          19,
+          37,
+          0
+        ],
+        [
+          "20110303",
+          "Quiniela Loteka",
+          9,
+          45,
+          69
+        ],
+        [
+          "20110304",
+          "Quiniela Loteka",
+          39,
+          93,
+          35
+        ],
+        [
+          "20110305",
+          "Quiniela Loteka",
+          15,
+          24,
+          92
+        ],
+        [
+          "20110306",
+          "Quiniela Loteka",
+          37,
+          77,
+          94
+        ],
+        [
+          "20110307",
+          "Quiniela Loteka",
+          25,
+          91,
+          46
+        ],
+        [
+          "20110308",
+          "Quiniela Loteka",
+          41,
+          63,
+          90
+        ],
+        [
+          "20110309",
+          "Quiniela Loteka",
+          99,
+          15,
+          93
+        ],
+        [
+          "20110310",
+          "Quiniela Loteka",
+          53,
+          68,
+          61
+        ],
+        [
+          "20110311",
+          "Quiniela Loteka",
+          66,
+          17,
+          89
+        ],
+        [
+          "20110312",
+          "Quiniela Loteka",
+          64,
+          70,
+          96
+        ],
+        [
+          "20110313",
+          "Quiniela Loteka",
+          66,
+          20,
+          18
+        ],
+        [
+          "20110314",
+          "Quiniela Loteka",
+          48,
+          6,
+          65
+        ],
+        [
+          "20110315",
+          "Quiniela Loteka",
+          77,
+          60,
+          14
+        ],
+        [
+          "20110316",
+          "Quiniela Loteka",
+          87,
+          1,
+          21
+        ],
+        [
+          "20110317",
+          "Quiniela Loteka",
+          32,
+          4,
+          85
+        ],
+        [
+          "20110318",
+          "Quiniela Loteka",
+          66,
+          84,
+          67
+        ],
+        [
+          "20110319",
+          "Quiniela Loteka",
+          75,
+          13,
+          50
+        ],
+        [
+          "20110320",
+          "Quiniela Loteka",
+          60,
+          86,
+          2
+        ],
+        [
+          "20110321",
+          "Quiniela Loteka",
+          18,
+          61,
+          27
+        ],
+        [
+          "20110322",
+          "Quiniela Loteka",
+          46,
+          77,
+          55
+        ],
+        [
+          "20110323",
+          "Quiniela Loteka",
+          27,
+          34,
+          90
+        ],
+        [
+          "20110324",
+          "Quiniela Loteka",
+          76,
+          43,
+          8
+        ],
+        [
+          "20110325",
+          "Quiniela Loteka",
+          59,
+          99,
+          57
+        ],
+        [
+          "20110326",
+          "Quiniela Loteka",
+          53,
+          64,
+          45
+        ],
+        [
+          "20110327",
+          "Quiniela Loteka",
+          10,
+          27,
+          6
+        ],
+        [
+          "20110328",
+          "Quiniela Loteka",
+          61,
+          98,
+          66
+        ],
+        [
+          "20110329",
+          "Quiniela Loteka",
+          54,
+          19,
+          2
+        ],
+        [
+          "20110330",
+          "Quiniela Loteka",
+          9,
+          9,
+          32
+        ],
+        [
+          "20110331",
+          "Quiniela Loteka",
+          42,
+          78,
+          85
+        ],
+        [
+          "20110401",
+          "Quiniela Loteka",
+          37,
+          1,
+          89
+        ],
+        [
+          "20110402",
+          "Quiniela Loteka",
+          61,
+          94,
+          83
+        ],
+        [
+          "20110403",
+          "Quiniela Loteka",
+          61,
+          66,
+          56
+        ],
+        [
+          "20110404",
+          "Quiniela Loteka",
+          60,
+          57,
+          10
+        ],
+        [
+          "20110405",
+          "Quiniela Loteka",
+          62,
+          82,
+          46
+        ],
+        [
+          "20110406",
+          "Quiniela Loteka",
+          18,
+          1,
+          39
+        ],
+        [
+          "20110407",
+          "Quiniela Loteka",
+          92,
+          34,
+          31
+        ],
+        [
+          "20110408",
+          "Quiniela Loteka",
+          57,
+          97,
+          79
+        ],
+        [
+          "20110409",
+          "Quiniela Loteka",
+          34,
+          75,
+          21
+        ],
+        [
+          "20110410",
+          "Quiniela Loteka",
+          94,
+          71,
+          78
+        ],
+        [
+          "20110411",
+          "Quiniela Loteka",
+          68,
+          27,
+          49
+        ],
+        [
+          "20110412",
+          "Quiniela Loteka",
+          88,
+          73,
+          80
+        ],
+        [
+          "20110413",
+          "Quiniela Loteka",
+          88,
+          42,
+          9
+        ],
+        [
+          "20110414",
+          "Quiniela Loteka",
+          99,
+          64,
+          76
+        ],
+        [
+          "20110415",
+          "Quiniela Loteka",
+          99,
+          53,
+          97
+        ],
+        [
+          "20110416",
+          "Quiniela Loteka",
+          33,
+          5,
+          73
+        ],
+        [
+          "20110417",
+          "Quiniela Loteka",
+          79,
+          61,
+          46
+        ],
+        [
+          "20110418",
+          "Quiniela Loteka",
+          31,
+          63,
+          95
+        ],
+        [
+          "20110419",
+          "Quiniela Loteka",
+          33,
+          68,
+          7
+        ],
+        [
+          "20110420",
+          "Quiniela Loteka",
+          74,
+          19,
+          44
+        ],
+        [
+          "20110421",
+          "Quiniela Loteka",
+          21,
+          72,
+          81
+        ],
+        [
+          "20110423",
+          "Quiniela Loteka",
+          37,
+          34,
+          82
+        ],
+        [
+          "20110424",
+          "Quiniela Loteka",
+          28,
+          5,
+          82
+        ],
+        [
+          "20110425",
+          "Quiniela Loteka",
+          39,
+          31,
+          19
+        ],
+        [
+          "20110426",
+          "Quiniela Loteka",
+          25,
+          43,
+          96
+        ],
+        [
+          "20110427",
+          "Quiniela Loteka",
+          4,
+          86,
+          23
+        ],
+        [
+          "20110428",
+          "Quiniela Loteka",
+          84,
+          24,
+          86
+        ],
+        [
+          "20110429",
+          "Quiniela Loteka",
+          73,
+          71,
+          77
+        ],
+        [
+          "20110430",
+          "Quiniela Loteka",
+          73,
+          88,
+          6
+        ],
+        [
+          "20110501",
+          "Quiniela Loteka",
+          60,
+          11,
+          74
+        ],
+        [
+          "20110502",
+          "Quiniela Loteka",
+          49,
+          21,
+          0
+        ],
+        [
+          "20110503",
+          "Quiniela Loteka",
+          64,
+          20,
+          82
+        ],
+        [
+          "20110504",
+          "Quiniela Loteka",
+          11,
+          59,
+          97
+        ],
+        [
+          "20110505",
+          "Quiniela Loteka",
+          58,
+          54,
+          78
+        ],
+        [
+          "20110506",
+          "Quiniela Loteka",
+          23,
+          69,
+          80
+        ],
+        [
+          "20110507",
+          "Quiniela Loteka",
+          37,
+          46,
+          84
+        ],
+        [
+          "20110508",
+          "Quiniela Loteka",
+          50,
+          14,
+          12
+        ],
+        [
+          "20110509",
+          "Quiniela Loteka",
+          19,
+          47,
+          64
+        ],
+        [
+          "20110510",
+          "Quiniela Loteka",
+          25,
+          72,
+          4
+        ],
+        [
+          "20110511",
+          "Quiniela Loteka",
+          78,
+          18,
+          69
+        ],
+        [
+          "20110512",
+          "Quiniela Loteka",
+          29,
+          49,
+          42
+        ],
+        [
+          "20110513",
+          "Quiniela Loteka",
+          81,
+          22,
+          66
+        ],
+        [
+          "20110514",
+          "Quiniela Loteka",
+          91,
+          15,
+          69
+        ],
+        [
+          "20110515",
+          "Quiniela Loteka",
+          74,
+          92,
+          25
+        ],
+        [
+          "20110516",
+          "Quiniela Loteka",
+          99,
+          19,
+          20
+        ],
+        [
+          "20110517",
+          "Quiniela Loteka",
+          2,
+          89,
+          70
+        ],
+        [
+          "20110518",
+          "Quiniela Loteka",
+          84,
+          31,
+          53
+        ],
+        [
+          "20110519",
+          "Quiniela Loteka",
+          15,
+          93,
+          47
+        ],
+        [
+          "20110520",
+          "Quiniela Loteka",
+          3,
+          56,
+          29
+        ],
+        [
+          "20110521",
+          "Quiniela Loteka",
+          95,
+          65,
+          36
+        ],
+        [
+          "20110522",
+          "Quiniela Loteka",
+          20,
+          4,
+          20
+        ],
+        [
+          "20110523",
+          "Quiniela Loteka",
+          9,
+          41,
+          40
+        ],
+        [
+          "20110524",
+          "Quiniela Loteka",
+          71,
+          20,
+          65
+        ],
+        [
+          "20110525",
+          "Quiniela Loteka",
+          75,
+          1,
+          57
+        ],
+        [
+          "20110526",
+          "Quiniela Loteka",
+          96,
+          8,
+          41
+        ],
+        [
+          "20110527",
+          "Quiniela Loteka",
+          74,
+          60,
+          87
+        ],
+        [
+          "20110528",
+          "Quiniela Loteka",
+          79,
+          20,
+          38
+        ],
+        [
+          "20110529",
+          "Quiniela Loteka",
+          8,
+          83,
+          3
+        ],
+        [
+          "20110530",
+          "Quiniela Loteka",
+          86,
+          50,
+          89
+        ],
+        [
+          "20110531",
+          "Quiniela Loteka",
+          26,
+          76,
+          77
+        ],
+        [
+          "20110601",
+          "Quiniela Loteka",
+          51,
+          43,
+          46
+        ],
+        [
+          "20110602",
+          "Quiniela Loteka",
+          20,
+          59,
+          19
+        ],
+        [
+          "20110603",
+          "Quiniela Loteka",
+          99,
+          11,
+          94
+        ],
+        [
+          "20110604",
+          "Quiniela Loteka",
+          57,
+          42,
+          12
+        ],
+        [
+          "20110605",
+          "Quiniela Loteka",
+          89,
+          6,
+          80
+        ],
+        [
+          "20110606",
+          "Quiniela Loteka",
+          30,
+          59,
+          31
+        ],
+        [
+          "20110607",
+          "Quiniela Loteka",
+          17,
+          99,
+          63
+        ],
+        [
+          "20110608",
+          "Quiniela Loteka",
+          87,
+          11,
+          3
+        ],
+        [
+          "20110609",
+          "Quiniela Loteka",
+          67,
+          86,
+          73
+        ],
+        [
+          "20110610",
+          "Quiniela Loteka",
+          44,
+          20,
+          70
+        ],
+        [
+          "20110611",
+          "Quiniela Loteka",
+          69,
+          88,
+          0
+        ],
+        [
+          "20110612",
+          "Quiniela Loteka",
+          82,
+          92,
+          86
+        ],
+        [
+          "20110613",
+          "Quiniela Loteka",
+          58,
+          33,
+          20
+        ],
+        [
+          "20110614",
+          "Quiniela Loteka",
+          61,
+          84,
+          81
+        ],
+        [
+          "20110615",
+          "Quiniela Loteka",
+          57,
+          87,
+          48
+        ],
+        [
+          "20110616",
+          "Quiniela Loteka",
+          5,
+          3,
+          21
+        ],
+        [
+          "20110617",
+          "Quiniela Loteka",
+          36,
+          68,
+          20
+        ],
+        [
+          "20110618",
+          "Quiniela Loteka",
+          71,
+          13,
+          67
+        ],
+        [
+          "20110619",
+          "Quiniela Loteka",
+          19,
+          37,
+          41
+        ],
+        [
+          "20110620",
+          "Quiniela Loteka",
+          81,
+          28,
+          20
+        ],
+        [
+          "20110621",
+          "Quiniela Loteka",
+          35,
+          46,
+          30
+        ],
+        [
+          "20110622",
+          "Quiniela Loteka",
+          87,
+          96,
+          18
+        ],
+        [
+          "20110623",
+          "Quiniela Loteka",
+          2,
+          94,
+          60
+        ],
+        [
+          "20110624",
+          "Quiniela Loteka",
+          1,
+          38,
+          83
+        ],
+        [
+          "20110625",
+          "Quiniela Loteka",
+          89,
+          26,
+          14
+        ],
+        [
+          "20110626",
+          "Quiniela Loteka",
+          23,
+          25,
+          63
+        ],
+        [
+          "20110627",
+          "Quiniela Loteka",
+          91,
+          13,
+          16
+        ],
+        [
+          "20110628",
+          "Quiniela Loteka",
+          15,
+          68,
+          3
+        ],
+        [
+          "20110629",
+          "Quiniela Loteka",
+          45,
+          97,
+          91
+        ],
+        [
+          "20110630",
+          "Quiniela Loteka",
+          91,
+          85,
+          53
+        ],
+        [
+          "20110701",
+          "Quiniela Loteka",
+          46,
+          19,
+          7
+        ],
+        [
+          "20110702",
+          "Quiniela Loteka",
+          95,
+          74,
+          40
+        ],
+        [
+          "20110703",
+          "Quiniela Loteka",
+          14,
+          52,
+          92
+        ],
+        [
+          "20110704",
+          "Quiniela Loteka",
+          63,
+          96,
+          18
+        ],
+        [
+          "20110705",
+          "Quiniela Loteka",
+          22,
+          40,
+          1
+        ],
+        [
+          "20110706",
+          "Quiniela Loteka",
+          5,
+          75,
+          77
+        ],
+        [
+          "20110707",
+          "Quiniela Loteka",
+          67,
+          93,
+          9
+        ],
+        [
+          "20110708",
+          "Quiniela Loteka",
+          89,
+          97,
+          76
+        ],
+        [
+          "20110709",
+          "Quiniela Loteka",
+          4,
+          39,
+          79
+        ],
+        [
+          "20110710",
+          "Quiniela Loteka",
+          4,
+          39,
+          79
+        ],
+        [
+          "20110711",
+          "Quiniela Loteka",
+          38,
+          52,
+          24
+        ],
+        [
+          "20110712",
+          "Quiniela Loteka",
+          13,
+          81,
+          92
+        ],
+        [
+          "20110713",
+          "Quiniela Loteka",
+          38,
+          96,
+          57
+        ],
+        [
+          "20110714",
+          "Quiniela Loteka",
+          82,
+          57,
+          93
+        ],
+        [
+          "20110715",
+          "Quiniela Loteka",
+          98,
+          60,
+          30
+        ],
+        [
+          "20110716",
+          "Quiniela Loteka",
+          72,
+          68,
+          29
+        ],
+        [
+          "20110717",
+          "Quiniela Loteka",
+          31,
+          35,
+          58
+        ],
+        [
+          "20110718",
+          "Quiniela Loteka",
+          5,
+          36,
+          69
+        ],
+        [
+          "20110719",
+          "Quiniela Loteka",
+          89,
+          78,
+          25
+        ],
+        [
+          "20110720",
+          "Quiniela Loteka",
+          91,
+          57,
+          34
+        ],
+        [
+          "20110721",
+          "Quiniela Loteka",
+          99,
+          76,
+          42
+        ],
+        [
+          "20110722",
+          "Quiniela Loteka",
+          84,
+          15,
+          96
+        ],
+        [
+          "20110723",
+          "Quiniela Loteka",
+          12,
+          84,
+          86
+        ],
+        [
+          "20110724",
+          "Quiniela Loteka",
+          36,
+          66,
+          85
+        ],
+        [
+          "20110725",
+          "Quiniela Loteka",
+          7,
+          97,
+          26
+        ],
+        [
+          "20110726",
+          "Quiniela Loteka",
+          25,
+          11,
+          78
+        ],
+        [
+          "20110727",
+          "Quiniela Loteka",
+          34,
+          15,
+          47
+        ],
+        [
+          "20110728",
+          "Quiniela Loteka",
+          1,
+          13,
+          92
+        ],
+        [
+          "20110729",
+          "Quiniela Loteka",
+          22,
+          73,
+          5
+        ],
+        [
+          "20110730",
+          "Quiniela Loteka",
+          82,
+          20,
+          10
+        ],
+        [
+          "20110731",
+          "Quiniela Loteka",
+          16,
+          76,
+          79
+        ],
+        [
+          "20110801",
+          "Quiniela Loteka",
+          34,
+          71,
+          21
+        ],
+        [
+          "20110802",
+          "Quiniela Loteka",
+          17,
+          40,
+          18
+        ],
+        [
+          "20110803",
+          "Quiniela Loteka",
+          35,
+          38,
+          92
+        ],
+        [
+          "20110804",
+          "Quiniela Loteka",
+          19,
+          63,
+          84
+        ],
+        [
+          "20110805",
+          "Quiniela Loteka",
+          52,
+          36,
+          25
+        ],
+        [
+          "20110806",
+          "Quiniela Loteka",
+          45,
+          13,
+          38
+        ],
+        [
+          "20110807",
+          "Quiniela Loteka",
+          29,
+          7,
+          60
+        ],
+        [
+          "20110808",
+          "Quiniela Loteka",
+          93,
+          89,
+          11
+        ],
+        [
+          "20110809",
+          "Quiniela Loteka",
+          57,
+          11,
+          28
+        ],
+        [
+          "20110810",
+          "Quiniela Loteka",
+          6,
+          74,
+          67
+        ],
+        [
+          "20110811",
+          "Quiniela Loteka",
+          12,
+          28,
+          27
+        ],
+        [
+          "20110812",
+          "Quiniela Loteka",
+          57,
+          20,
+          71
+        ],
+        [
+          "20110813",
+          "Quiniela Loteka",
+          20,
+          55,
+          85
+        ],
+        [
+          "20110814",
+          "Quiniela Loteka",
+          51,
+          84,
+          85
+        ],
+        [
+          "20110815",
+          "Quiniela Loteka",
+          96,
+          52,
+          24
+        ],
+        [
+          "20110816",
+          "Quiniela Loteka",
+          85,
+          85,
+          20
+        ],
+        [
+          "20110817",
+          "Quiniela Loteka",
+          64,
+          15,
+          21
+        ],
+        [
+          "20110818",
+          "Quiniela Loteka",
+          69,
+          1,
+          58
+        ],
+        [
+          "20110819",
+          "Quiniela Loteka",
+          79,
+          11,
+          24
+        ],
+        [
+          "20110820",
+          "Quiniela Loteka",
+          36,
+          71,
+          44
+        ],
+        [
+          "20110821",
+          "Quiniela Loteka",
+          83,
+          60,
+          73
+        ],
+        [
+          "20110822",
+          "Quiniela Loteka",
+          94,
+          34,
+          35
+        ],
+        [
+          "20110823",
+          "Quiniela Loteka",
+          84,
+          15,
+          6
+        ],
+        [
+          "20110824",
+          "Quiniela Loteka",
+          29,
+          54,
+          65
+        ],
+        [
+          "20110825",
+          "Quiniela Loteka",
+          77,
+          73,
+          84
+        ],
+        [
+          "20110826",
+          "Quiniela Loteka",
+          75,
+          24,
+          89
+        ],
+        [
+          "20110827",
+          "Quiniela Loteka",
+          96,
+          27,
+          97
+        ],
+        [
+          "20110828",
+          "Quiniela Loteka",
+          54,
+          7,
+          93
+        ],
+        [
+          "20110829",
+          "Quiniela Loteka",
+          73,
+          35,
+          91
+        ],
+        [
+          "20110830",
+          "Quiniela Loteka",
+          92,
+          67,
+          43
+        ],
+        [
+          "20110831",
+          "Quiniela Loteka",
+          73,
+          13,
+          20
+        ],
+        [
+          "20110901",
+          "Quiniela Loteka",
+          77,
+          6,
+          52
+        ],
+        [
+          "20110902",
+          "Quiniela Loteka",
+          70,
+          1,
+          32
+        ],
+        [
+          "20110903",
+          "Quiniela Loteka",
+          25,
+          89,
+          69
+        ],
+        [
+          "20110904",
+          "Quiniela Loteka",
+          13,
+          85,
+          73
+        ],
+        [
+          "20110905",
+          "Quiniela Loteka",
+          75,
+          77,
+          91
+        ],
+        [
+          "20110906",
+          "Quiniela Loteka",
+          7,
+          1,
+          19
+        ],
+        [
+          "20110907",
+          "Quiniela Loteka",
+          96,
+          21,
+          26
+        ],
+        [
+          "20110908",
+          "Quiniela Loteka",
+          42,
+          56,
+          42
+        ],
+        [
+          "20110909",
+          "Quiniela Loteka",
+          81,
+          79,
+          58
+        ],
+        [
+          "20110910",
+          "Quiniela Loteka",
+          13,
+          19,
+          12
+        ],
+        [
+          "20110911",
+          "Quiniela Loteka",
+          8,
+          61,
+          2
+        ],
+        [
+          "20110912",
+          "Quiniela Loteka",
+          89,
+          96,
+          44
+        ],
+        [
+          "20110913",
+          "Quiniela Loteka",
+          86,
+          9,
+          6
+        ],
+        [
+          "20110914",
+          "Quiniela Loteka",
+          99,
+          91,
+          7
+        ],
+        [
+          "20110915",
+          "Quiniela Loteka",
+          55,
+          20,
+          33
+        ],
+        [
+          "20110916",
+          "Quiniela Loteka",
+          36,
+          4,
+          2
+        ],
+        [
+          "20110917",
+          "Quiniela Loteka",
+          2,
+          34,
+          92
+        ],
+        [
+          "20110918",
+          "Quiniela Loteka",
+          72,
+          49,
+          18
+        ],
+        [
+          "20110919",
+          "Quiniela Loteka",
+          15,
+          44,
+          86
+        ],
+        [
+          "20110920",
+          "Quiniela Loteka",
+          14,
+          60,
+          36
         ],
         [
           "20110921",
@@ -170601,6 +174787,1056 @@
           31
         ],
         [
+          "20230824",
+          "Quiniela Loteka",
+          45,
+          19,
+          79
+        ],
+        [
+          "20230825",
+          "Quiniela Loteka",
+          80,
+          68,
+          14
+        ],
+        [
+          "20230826",
+          "Quiniela Loteka",
+          31,
+          76,
+          73
+        ],
+        [
+          "20230827",
+          "Quiniela Loteka",
+          47,
+          56,
+          7
+        ],
+        [
+          "20230828",
+          "Quiniela Loteka",
+          18,
+          47,
+          49
+        ],
+        [
+          "20230829",
+          "Quiniela Loteka",
+          7,
+          72,
+          82
+        ],
+        [
+          "20230830",
+          "Quiniela Loteka",
+          82,
+          30,
+          14
+        ],
+        [
+          "20230831",
+          "Quiniela Loteka",
+          43,
+          6,
+          13
+        ],
+        [
+          "20230901",
+          "Quiniela Loteka",
+          12,
+          25,
+          74
+        ],
+        [
+          "20230902",
+          "Quiniela Loteka",
+          23,
+          55,
+          55
+        ],
+        [
+          "20230903",
+          "Quiniela Loteka",
+          0,
+          61,
+          82
+        ],
+        [
+          "20230904",
+          "Quiniela Loteka",
+          32,
+          71,
+          71
+        ],
+        [
+          "20230905",
+          "Quiniela Loteka",
+          67,
+          34,
+          26
+        ],
+        [
+          "20230906",
+          "Quiniela Loteka",
+          41,
+          92,
+          91
+        ],
+        [
+          "20230907",
+          "Quiniela Loteka",
+          74,
+          51,
+          54
+        ],
+        [
+          "20230908",
+          "Quiniela Loteka",
+          17,
+          54,
+          23
+        ],
+        [
+          "20230909",
+          "Quiniela Loteka",
+          93,
+          55,
+          64
+        ],
+        [
+          "20230910",
+          "Quiniela Loteka",
+          8,
+          50,
+          68
+        ],
+        [
+          "20230911",
+          "Quiniela Loteka",
+          11,
+          82,
+          3
+        ],
+        [
+          "20230912",
+          "Quiniela Loteka",
+          53,
+          78,
+          57
+        ],
+        [
+          "20230913",
+          "Quiniela Loteka",
+          90,
+          63,
+          46
+        ],
+        [
+          "20230914",
+          "Quiniela Loteka",
+          34,
+          17,
+          18
+        ],
+        [
+          "20230915",
+          "Quiniela Loteka",
+          2,
+          55,
+          12
+        ],
+        [
+          "20230916",
+          "Quiniela Loteka",
+          2,
+          88,
+          43
+        ],
+        [
+          "20230917",
+          "Quiniela Loteka",
+          3,
+          91,
+          55
+        ],
+        [
+          "20230918",
+          "Quiniela Loteka",
+          22,
+          90,
+          35
+        ],
+        [
+          "20230919",
+          "Quiniela Loteka",
+          75,
+          60,
+          71
+        ],
+        [
+          "20230920",
+          "Quiniela Loteka",
+          10,
+          81,
+          66
+        ],
+        [
+          "20230921",
+          "Quiniela Loteka",
+          21,
+          18,
+          50
+        ],
+        [
+          "20230922",
+          "Quiniela Loteka",
+          40,
+          40,
+          91
+        ],
+        [
+          "20230923",
+          "Quiniela Loteka",
+          28,
+          27,
+          34
+        ],
+        [
+          "20230924",
+          "Quiniela Loteka",
+          20,
+          67,
+          66
+        ],
+        [
+          "20230925",
+          "Quiniela Loteka",
+          1,
+          49,
+          73
+        ],
+        [
+          "20230926",
+          "Quiniela Loteka",
+          10,
+          27,
+          58
+        ],
+        [
+          "20230927",
+          "Quiniela Loteka",
+          37,
+          85,
+          74
+        ],
+        [
+          "20230928",
+          "Quiniela Loteka",
+          57,
+          50,
+          54
+        ],
+        [
+          "20230929",
+          "Quiniela Loteka",
+          89,
+          17,
+          25
+        ],
+        [
+          "20230930",
+          "Quiniela Loteka",
+          77,
+          82,
+          5
+        ],
+        [
+          "20231001",
+          "Quiniela Loteka",
+          12,
+          75,
+          28
+        ],
+        [
+          "20231002",
+          "Quiniela Loteka",
+          87,
+          17,
+          42
+        ],
+        [
+          "20231003",
+          "Quiniela Loteka",
+          81,
+          16,
+          24
+        ],
+        [
+          "20231004",
+          "Quiniela Loteka",
+          20,
+          68,
+          37
+        ],
+        [
+          "20231005",
+          "Quiniela Loteka",
+          43,
+          34,
+          55
+        ],
+        [
+          "20231006",
+          "Quiniela Loteka",
+          98,
+          1,
+          43
+        ],
+        [
+          "20231007",
+          "Quiniela Loteka",
+          42,
+          19,
+          10
+        ],
+        [
+          "20231008",
+          "Quiniela Loteka",
+          46,
+          85,
+          37
+        ],
+        [
+          "20231009",
+          "Quiniela Loteka",
+          24,
+          97,
+          73
+        ],
+        [
+          "20231010",
+          "Quiniela Loteka",
+          44,
+          57,
+          15
+        ],
+        [
+          "20231011",
+          "Quiniela Loteka",
+          19,
+          54,
+          48
+        ],
+        [
+          "20231012",
+          "Quiniela Loteka",
+          93,
+          93,
+          81
+        ],
+        [
+          "20231013",
+          "Quiniela Loteka",
+          0,
+          85,
+          19
+        ],
+        [
+          "20231014",
+          "Quiniela Loteka",
+          49,
+          56,
+          75
+        ],
+        [
+          "20231015",
+          "Quiniela Loteka",
+          14,
+          6,
+          4
+        ],
+        [
+          "20231016",
+          "Quiniela Loteka",
+          9,
+          80,
+          5
+        ],
+        [
+          "20231017",
+          "Quiniela Loteka",
+          35,
+          17,
+          40
+        ],
+        [
+          "20231018",
+          "Quiniela Loteka",
+          21,
+          14,
+          86
+        ],
+        [
+          "20231019",
+          "Quiniela Loteka",
+          46,
+          96,
+          19
+        ],
+        [
+          "20231020",
+          "Quiniela Loteka",
+          37,
+          18,
+          94
+        ],
+        [
+          "20231021",
+          "Quiniela Loteka",
+          47,
+          3,
+          25
+        ],
+        [
+          "20231022",
+          "Quiniela Loteka",
+          46,
+          37,
+          22
+        ],
+        [
+          "20231023",
+          "Quiniela Loteka",
+          83,
+          87,
+          26
+        ],
+        [
+          "20231024",
+          "Quiniela Loteka",
+          45,
+          92,
+          54
+        ],
+        [
+          "20231025",
+          "Quiniela Loteka",
+          30,
+          98,
+          48
+        ],
+        [
+          "20231026",
+          "Quiniela Loteka",
+          76,
+          13,
+          57
+        ],
+        [
+          "20231027",
+          "Quiniela Loteka",
+          51,
+          99,
+          29
+        ],
+        [
+          "20231028",
+          "Quiniela Loteka",
+          25,
+          52,
+          53
+        ],
+        [
+          "20231029",
+          "Quiniela Loteka",
+          11,
+          29,
+          39
+        ],
+        [
+          "20231030",
+          "Quiniela Loteka",
+          42,
+          13,
+          87
+        ],
+        [
+          "20231031",
+          "Quiniela Loteka",
+          62,
+          61,
+          13
+        ],
+        [
+          "20231101",
+          "Quiniela Loteka",
+          63,
+          61,
+          11
+        ],
+        [
+          "20231102",
+          "Quiniela Loteka",
+          57,
+          29,
+          33
+        ],
+        [
+          "20231103",
+          "Quiniela Loteka",
+          80,
+          98,
+          95
+        ],
+        [
+          "20231104",
+          "Quiniela Loteka",
+          1,
+          41,
+          10
+        ],
+        [
+          "20231105",
+          "Quiniela Loteka",
+          29,
+          53,
+          89
+        ],
+        [
+          "20231106",
+          "Quiniela Loteka",
+          17,
+          91,
+          21
+        ],
+        [
+          "20231107",
+          "Quiniela Loteka",
+          33,
+          57,
+          30
+        ],
+        [
+          "20231108",
+          "Quiniela Loteka",
+          13,
+          39,
+          28
+        ],
+        [
+          "20231109",
+          "Quiniela Loteka",
+          2,
+          80,
+          12
+        ],
+        [
+          "20231110",
+          "Quiniela Loteka",
+          3,
+          45,
+          60
+        ],
+        [
+          "20231111",
+          "Quiniela Loteka",
+          81,
+          13,
+          96
+        ],
+        [
+          "20231112",
+          "Quiniela Loteka",
+          95,
+          94,
+          47
+        ],
+        [
+          "20231113",
+          "Quiniela Loteka",
+          16,
+          66,
+          71
+        ],
+        [
+          "20231114",
+          "Quiniela Loteka",
+          79,
+          1,
+          89
+        ],
+        [
+          "20231115",
+          "Quiniela Loteka",
+          31,
+          36,
+          25
+        ],
+        [
+          "20231116",
+          "Quiniela Loteka",
+          33,
+          29,
+          33
+        ],
+        [
+          "20231117",
+          "Quiniela Loteka",
+          86,
+          39,
+          22
+        ],
+        [
+          "20231118",
+          "Quiniela Loteka",
+          94,
+          30,
+          44
+        ],
+        [
+          "20231119",
+          "Quiniela Loteka",
+          94,
+          30,
+          44
+        ],
+        [
+          "20231120",
+          "Quiniela Loteka",
+          94,
+          30,
+          44
+        ],
+        [
+          "20231121",
+          "Quiniela Loteka",
+          26,
+          7,
+          41
+        ],
+        [
+          "20231122",
+          "Quiniela Loteka",
+          54,
+          92,
+          79
+        ],
+        [
+          "20231123",
+          "Quiniela Loteka",
+          25,
+          45,
+          32
+        ],
+        [
+          "20231124",
+          "Quiniela Loteka",
+          63,
+          28,
+          24
+        ],
+        [
+          "20231125",
+          "Quiniela Loteka",
+          9,
+          69,
+          56
+        ],
+        [
+          "20231126",
+          "Quiniela Loteka",
+          48,
+          34,
+          27
+        ],
+        [
+          "20231127",
+          "Quiniela Loteka",
+          17,
+          42,
+          89
+        ],
+        [
+          "20231128",
+          "Quiniela Loteka",
+          27,
+          19,
+          84
+        ],
+        [
+          "20231129",
+          "Quiniela Loteka",
+          84,
+          96,
+          89
+        ],
+        [
+          "20231130",
+          "Quiniela Loteka",
+          35,
+          93,
+          59
+        ],
+        [
+          "20231201",
+          "Quiniela Loteka",
+          61,
+          55,
+          0
+        ],
+        [
+          "20231202",
+          "Quiniela Loteka",
+          52,
+          95,
+          65
+        ],
+        [
+          "20231203",
+          "Quiniela Loteka",
+          13,
+          39,
+          89
+        ],
+        [
+          "20231204",
+          "Quiniela Loteka",
+          74,
+          70,
+          80
+        ],
+        [
+          "20231205",
+          "Quiniela Loteka",
+          25,
+          68,
+          44
+        ],
+        [
+          "20231206",
+          "Quiniela Loteka",
+          19,
+          26,
+          22
+        ],
+        [
+          "20231207",
+          "Quiniela Loteka",
+          15,
+          75,
+          97
+        ],
+        [
+          "20231208",
+          "Quiniela Loteka",
+          25,
+          80,
+          59
+        ],
+        [
+          "20231209",
+          "Quiniela Loteka",
+          43,
+          85,
+          36
+        ],
+        [
+          "20231210",
+          "Quiniela Loteka",
+          78,
+          9,
+          72
+        ],
+        [
+          "20231211",
+          "Quiniela Loteka",
+          14,
+          64,
+          64
+        ],
+        [
+          "20231212",
+          "Quiniela Loteka",
+          30,
+          52,
+          47
+        ],
+        [
+          "20231213",
+          "Quiniela Loteka",
+          30,
+          8,
+          38
+        ],
+        [
+          "20231214",
+          "Quiniela Loteka",
+          23,
+          24,
+          24
+        ],
+        [
+          "20231215",
+          "Quiniela Loteka",
+          43,
+          49,
+          29
+        ],
+        [
+          "20231216",
+          "Quiniela Loteka",
+          39,
+          40,
+          51
+        ],
+        [
+          "20231217",
+          "Quiniela Loteka",
+          20,
+          28,
+          21
+        ],
+        [
+          "20231218",
+          "Quiniela Loteka",
+          74,
+          33,
+          28
+        ],
+        [
+          "20231219",
+          "Quiniela Loteka",
+          58,
+          66,
+          19
+        ],
+        [
+          "20231220",
+          "Quiniela Loteka",
+          68,
+          18,
+          62
+        ],
+        [
+          "20231221",
+          "Quiniela Loteka",
+          80,
+          12,
+          67
+        ],
+        [
+          "20231222",
+          "Quiniela Loteka",
+          44,
+          12,
+          52
+        ],
+        [
+          "20231223",
+          "Quiniela Loteka",
+          75,
+          66,
+          92
+        ],
+        [
+          "20231224",
+          "Quiniela Loteka",
+          84,
+          84,
+          86
+        ],
+        [
+          "20231226",
+          "Quiniela Loteka",
+          8,
+          63,
+          80
+        ],
+        [
+          "20231227",
+          "Quiniela Loteka",
+          39,
+          67,
+          47
+        ],
+        [
+          "20231228",
+          "Quiniela Loteka",
+          2,
+          77,
+          76
+        ],
+        [
+          "20231229",
+          "Quiniela Loteka",
+          41,
+          58,
+          55
+        ],
+        [
+          "20231230",
+          "Quiniela Loteka",
+          64,
+          85,
+          16
+        ],
+        [
+          "20231231",
+          "Quiniela Loteka",
+          47,
+          82,
+          31
+        ],
+        [
+          "20240102",
+          "Quiniela Loteka",
+          87,
+          60,
+          58
+        ],
+        [
+          "20240103",
+          "Quiniela Loteka",
+          35,
+          38,
+          2
+        ],
+        [
+          "20240104",
+          "Quiniela Loteka",
+          37,
+          33,
+          15
+        ],
+        [
+          "20240105",
+          "Quiniela Loteka",
+          65,
+          50,
+          62
+        ],
+        [
+          "20240106",
+          "Quiniela Loteka",
+          58,
+          82,
+          84
+        ],
+        [
+          "20240107",
+          "Quiniela Loteka",
+          80,
+          70,
+          75
+        ],
+        [
+          "20240108",
+          "Quiniela Loteka",
+          46,
+          7,
+          61
+        ],
+        [
+          "20240109",
+          "Quiniela Loteka",
+          53,
+          5,
+          61
+        ],
+        [
+          "20240110",
+          "Quiniela Loteka",
+          28,
+          45,
+          72
+        ],
+        [
+          "20240111",
+          "Quiniela Loteka",
+          16,
+          45,
+          56
+        ],
+        [
+          "20240112",
+          "Quiniela Loteka",
+          75,
+          5,
+          3
+        ],
+        [
+          "20240113",
+          "Quiniela Loteka",
+          18,
+          10,
+          56
+        ],
+        [
+          "20240114",
+          "Quiniela Loteka",
+          29,
+          7,
+          81
+        ],
+        [
+          "20240115",
+          "Quiniela Loteka",
+          91,
+          64,
+          51
+        ],
+        [
+          "20240116",
+          "Quiniela Loteka",
+          45,
+          30,
+          4
+        ],
+        [
+          "20240117",
+          "Quiniela Loteka",
+          43,
+          84,
+          30
+        ],
+        [
+          "20240118",
+          "Quiniela Loteka",
+          14,
+          25,
+          74
+        ],
+        [
+          "20240119",
+          "Quiniela Loteka",
+          56,
+          76,
+          90
+        ],
+        [
+          "20240120",
+          "Quiniela Loteka",
+          26,
+          9,
+          91
+        ],
+        [
+          "20240121",
+          "Quiniela Loteka",
+          35,
+          10,
+          0
+        ],
+        [
+          "20240122",
+          "Quiniela Loteka",
+          4,
+          97,
+          10
+        ],
+        [
           "20240123",
           "Quiniela Loteka",
           68,
@@ -170648,6 +175884,174 @@
           6,
           9,
           32
+        ],
+        [
+          "20240130",
+          "Quiniela Loteka",
+          50,
+          55,
+          8
+        ],
+        [
+          "20240131",
+          "Quiniela Loteka",
+          77,
+          92,
+          19
+        ],
+        [
+          "20240201",
+          "Quiniela Loteka",
+          74,
+          3,
+          16
+        ],
+        [
+          "20240202",
+          "Quiniela Loteka",
+          77,
+          76,
+          70
+        ],
+        [
+          "20240203",
+          "Quiniela Loteka",
+          37,
+          68,
+          42
+        ],
+        [
+          "20240204",
+          "Quiniela Loteka",
+          93,
+          59,
+          47
+        ],
+        [
+          "20240205",
+          "Quiniela Loteka",
+          16,
+          72,
+          79
+        ],
+        [
+          "20240206",
+          "Quiniela Loteka",
+          26,
+          49,
+          61
+        ],
+        [
+          "20240207",
+          "Quiniela Loteka",
+          67,
+          45,
+          82
+        ],
+        [
+          "20240208",
+          "Quiniela Loteka",
+          47,
+          94,
+          60
+        ],
+        [
+          "20240209",
+          "Quiniela Loteka",
+          8,
+          89,
+          4
+        ],
+        [
+          "20240210",
+          "Quiniela Loteka",
+          31,
+          53,
+          12
+        ],
+        [
+          "20240211",
+          "Quiniela Loteka",
+          91,
+          66,
+          82
+        ],
+        [
+          "20240212",
+          "Quiniela Loteka",
+          10,
+          50,
+          62
+        ],
+        [
+          "20240213",
+          "Quiniela Loteka",
+          94,
+          49,
+          99
+        ],
+        [
+          "20240214",
+          "Quiniela Loteka",
+          71,
+          4,
+          26
+        ],
+        [
+          "20240215",
+          "Quiniela Loteka",
+          65,
+          61,
+          79
+        ],
+        [
+          "20240216",
+          "Quiniela Loteka",
+          73,
+          63,
+          18
+        ],
+        [
+          "20240217",
+          "Quiniela Loteka",
+          75,
+          67,
+          97
+        ],
+        [
+          "20240219",
+          "Quiniela Loteka",
+          42,
+          41,
+          23
+        ],
+        [
+          "20240220",
+          "Quiniela Loteka",
+          64,
+          48,
+          60
+        ],
+        [
+          "20240221",
+          "Quiniela Loteka",
+          28,
+          89,
+          98
+        ],
+        [
+          "20240222",
+          "Quiniela Loteka",
+          22,
+          56,
+          43
+        ],
+        [
+          "20240223",
+          "Quiniela Loteka",
+          27,
+          87,
+          54
         ],
         [
           "20240326",
@@ -172771,79 +178175,79 @@
           76
         ]
       ],
-      "total_results": 2706,
+      "total_results": 3478,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
             {
+              "number": "19",
+              "score": 133.81,
+              "frequency": 123,
+              "delay_days": 1,
+              "recent_frequency": 6
+            },
+            {
               "number": "28",
-              "score": 109.71,
-              "frequency": 106,
+              "score": 133.71,
+              "frequency": 130,
               "delay_days": 13,
               "recent_frequency": 2
             },
             {
               "number": "17",
-              "score": 102.04,
-              "frequency": 100,
+              "score": 126.04,
+              "frequency": 124,
               "delay_days": 29,
               "recent_frequency": 1
             },
             {
-              "number": "19",
-              "score": 100.81,
-              "frequency": 90,
-              "delay_days": 1,
-              "recent_frequency": 6
-            },
-            {
-              "number": "52",
-              "score": 96.87,
-              "frequency": 95,
-              "delay_days": 8,
-              "recent_frequency": 1
-            },
-            {
               "number": "75",
-              "score": 96.7,
-              "frequency": 93,
+              "score": 123.7,
+              "frequency": 120,
               "delay_days": 12,
               "recent_frequency": 2
             },
             {
-              "number": "98",
-              "score": 96.27,
-              "frequency": 96,
-              "delay_days": 33,
-              "recent_frequency": 0
+              "number": "84",
+              "score": 122.01,
+              "frequency": 120,
+              "delay_days": 26,
+              "recent_frequency": 1
             },
             {
-              "number": "74",
-              "score": 95.62,
-              "frequency": 95,
-              "delay_days": 75,
-              "recent_frequency": 0
+              "number": "61",
+              "score": 120.85,
+              "frequency": 119,
+              "delay_days": 6,
+              "recent_frequency": 1
             },
             {
-              "number": "42",
-              "score": 94.92,
-              "frequency": 93,
-              "delay_days": 15,
+              "number": "68",
+              "score": 119.89,
+              "frequency": 118,
+              "delay_days": 11,
+              "recent_frequency": 1
+            },
+            {
+              "number": "52",
+              "score": 119.87,
+              "frequency": 118,
+              "delay_days": 8,
               "recent_frequency": 1
             },
             {
               "number": "12",
-              "score": 94.62,
-              "frequency": 91,
+              "score": 119.62,
+              "frequency": 116,
               "delay_days": 2,
               "recent_frequency": 2
             },
             {
-              "number": "09",
-              "score": 92.86,
-              "frequency": 91,
-              "delay_days": 7,
-              "recent_frequency": 1
+              "number": "98",
+              "score": 118.27,
+              "frequency": 118,
+              "delay_days": 33,
+              "recent_frequency": 0
             }
           ],
           "last_results": [
@@ -172936,16 +178340,16 @@
               "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 2706,
+          "total_results": 3478,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
-            "top3_any_hit_rate": 0.115,
-            "top5_any_hit_rate": 0.164,
-            "first_position_hit_rate": 0.033,
-            "average_hits_top5": 0.16,
-            "confidence_label": "Baja",
+            "top3_any_hit_rate": 0.197,
+            "top5_any_hit_rate": 0.213,
+            "first_position_hit_rate": 0.066,
+            "average_hits_top5": 0.23,
+            "confidence_label": "Media",
             "recent_evaluations": [
               {
                 "date": "2026-08-31",
@@ -172956,10 +178360,10 @@
                 ],
                 "predicted": [
                   "28",
-                  "17",
                   "19",
-                  "98",
-                  "52"
+                  "17",
+                  "75",
+                  "84"
                 ],
                 "hits": []
               },
@@ -172972,10 +178376,10 @@
                 ],
                 "predicted": [
                   "28",
-                  "17",
                   "19",
-                  "98",
-                  "52"
+                  "17",
+                  "75",
+                  "84"
                 ],
                 "hits": []
               },
@@ -172988,10 +178392,10 @@
                 ],
                 "predicted": [
                   "28",
-                  "17",
                   "19",
-                  "98",
-                  "52"
+                  "17",
+                  "75",
+                  "84"
                 ],
                 "hits": []
               },
@@ -173004,10 +178408,10 @@
                 ],
                 "predicted": [
                   "28",
-                  "17",
                   "19",
-                  "52",
-                  "75"
+                  "17",
+                  "75",
+                  "84"
                 ],
                 "hits": []
               },
@@ -173020,10 +178424,10 @@
                 ],
                 "predicted": [
                   "28",
-                  "17",
                   "19",
-                  "52",
-                  "75"
+                  "17",
+                  "75",
+                  "84"
                 ],
                 "hits": [
                   "19"
