@@ -3,9 +3,15 @@ from __future__ import annotations
 import os
 
 import psycopg2
+import psycopg2.extensions
 import psycopg2.extras
 
 from .models import LotteryResult
+from .scraper import CONNECTATE_LOTERIAS_URL
+
+# Literal SQL de la fuente primaria: solo conéctate puede corregir un
+# resultado ya guardado que tenga el mismo número de bolas.
+_PRIMARY_SOURCE = psycopg2.extensions.adapt(CONNECTATE_LOTERIAS_URL).getquoted().decode()
 
 DATABASE_URL = os.environ.get("DATABASE_URL", "").strip()
 
@@ -95,12 +101,13 @@ def save_results(results: list[LotteryResult]) -> int:
         for i in range(0, len(rows), BATCH):
             batch = rows[i : i + BATCH]
             with conn.cursor() as cur:
-                # Si el sorteo ya existe, solo lo pisamos cuando el resultado
-                # nuevo trae más números: así un sorteo capturado a medias
-                # (2 de 3 bolas) se corrige solo en la siguiente corrida.
+                # Se pisa el sorteo guardado en dos casos: cuando el nuevo trae
+                # más números (captura a medias que se completa) y cuando la
+                # fuente primaria publica una corrección con las mismas bolas.
+                # Nunca con menos números ni desde una planilla.
                 psycopg2.extras.execute_values(
                     cur,
-                    """
+                    f"""
                     INSERT INTO lottery_results (result_key, lottery, draw, draw_date, numbers, source)
                     VALUES %s
                     ON CONFLICT (result_key) DO UPDATE
@@ -108,6 +115,13 @@ def save_results(results: list[LotteryResult]) -> int:
                             source  = EXCLUDED.source
                         WHERE cardinality(EXCLUDED.numbers)
                               > cardinality(lottery_results.numbers)
+                           OR (
+                                cardinality(EXCLUDED.numbers)
+                                  = cardinality(lottery_results.numbers)
+                                AND EXCLUDED.numbers
+                                    IS DISTINCT FROM lottery_results.numbers
+                                AND EXCLUDED.source = {_PRIMARY_SOURCE}
+                              )
                     """,
                     batch,
                     page_size=len(batch),
