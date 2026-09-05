@@ -15,8 +15,9 @@ class LotteryResult:
 
     @property
     def key(self) -> str:
-        numbers = "-".join(f"{number:02d}" for number in self.numbers)
-        return f"{self.draw_date.isoformat()}|{self.lottery}|{self.draw}|{numbers}"
+        # Identifica el sorteo, no sus números: un mismo sorteo capturado a
+        # medias y luego completo debe corregirse, no duplicarse.
+        return f"{self.draw_date.isoformat()}|{self.lottery}|{self.draw}"
 
     def to_dict(self) -> dict[str, Any]:
         data = asdict(self)

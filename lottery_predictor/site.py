@@ -29,9 +29,6 @@ DISPLAY_LOTTERIES = (
     "Leidsa",
     "Lotería Real",
     "Loteka",
-    "La Primera",
-    "La Suerte Dominicana",
-    "Lotedom",
 )
 
 LOGO_FILES = {
@@ -44,6 +41,8 @@ LOGO_FILES = {
     "Lotería Real": "loteria-real.svg",
 }
 
+# Debe seguir a ANALYSIS_DRAWS en analysis.py: la página solo muestra lo que
+# el análisis calcula.
 VISIBLE_DRAWS = {
     "Lotería Nacional": {
         "Gana Más",
@@ -61,39 +60,15 @@ VISIBLE_DRAWS = {
     "Loteka": {
         "Quiniela Loteka",
     },
-    "La Primera": {
-        "La Primera Día",
-        "La Primera Noche",
-        "Lotería La Primera 12PM",
-        "Lotería La Primera Noche 8PM",
-        "Primera Noche",
-    },
-    "La Suerte Dominicana": {
-        "La Suerte 12:30",
-        "La Suerte 18:00",
-        "La Suerte 6PM",
-        "La Suerte MD",
-    },
-    "Lotedom": {
-        "LoteDom",
-        "Quiniela LoteDom",
-        "Quiniela Lotedom",
-    },
 }
 
 DRAW_ALIASES = {
     "loteria gana mas": "Gana Más",
-    "loteria la primera 12pm": "La Primera Día",
-    "loteria la primera noche 8pm": "La Primera Noche",
     "nacional noche": "Lotería Nacional",
     "quiniela nacional": "Lotería Nacional",
-    "primera noche": "La Primera Noche",
-    "quiniela lotedom": "LoteDom",
-    "la suerte 12:30": "La Suerte MD",
-    "la suerte 18:00": "La Suerte 6PM",
 }
 
-# The 10 canonical draws shown in the "Today's Results" section, in display order
+# Los 5 sorteos mostrados en "Resultados de hoy", en orden de aparición
 DRAW_LABELS = {
     ("Lotería Nacional", "Gana Más"): "Nacional Día",
     ("Lotería Nacional", "Lotería Gana Más"): "Nacional Día",
@@ -103,18 +78,6 @@ DRAW_LABELS = {
     ("Leidsa", "Quiniela Leidsa"): "Leidsa",
     ("Lotería Real", "Quiniela Real"): "Real",
     ("Loteka", "Quiniela Loteka"): "Loteka",
-    ("La Primera", "La Primera Día"): "La Primera Día",
-    ("La Primera", "Lotería La Primera 12PM"): "La Primera Día",
-    ("La Primera", "La Primera Noche"): "La Primera Noche",
-    ("La Primera", "Lotería La Primera Noche 8PM"): "La Primera Noche",
-    ("La Primera", "Primera Noche"): "La Primera Noche",
-    ("La Suerte Dominicana", "La Suerte MD"): "La Suerte MD",
-    ("La Suerte Dominicana", "La Suerte 12:30"): "La Suerte MD",
-    ("La Suerte Dominicana", "La Suerte 6PM"): "La Suerte 6PM",
-    ("La Suerte Dominicana", "La Suerte 18:00"): "La Suerte 6PM",
-    ("Lotedom", "LoteDom"): "Lotedom",
-    ("Lotedom", "Quiniela LoteDom"): "Lotedom",
-    ("Lotedom", "Quiniela Lotedom"): "Lotedom",
 }
 
 TODAY_DRAW_ORDER = [
@@ -123,11 +86,6 @@ TODAY_DRAW_ORDER = [
     "Leidsa",
     "Real",
     "Loteka",
-    "La Primera Día",
-    "La Primera Noche",
-    "La Suerte MD",
-    "La Suerte 6PM",
-    "Lotedom",
 ]
 
 _FAVICON_SVG = """\
@@ -859,7 +817,7 @@ def _render_html(predictions: dict[str, object]) -> str:
 
 def _render_today_results(lottery_items: dict[str, object]) -> str:
     """Render the top section with today's (most recent) results for the 10 draws."""
-    # Collect most recent result for each of the 10 canonical draws
+    # Collect most recent result for each of the canonical draws
     draw_results: dict[str, dict] = {}
     prev_results: dict[str, list[str]] = {}  # previous draw numbers for "repite" badges
 
@@ -878,7 +836,7 @@ def _render_today_results(lottery_items: dict[str, object]) -> str:
         draws = lot_data.get("draws", {}) if isinstance(lot_data.get("draws"), dict) else {}
         draw_data = draws.get(drw, {}) if isinstance(draws.get(drw), dict) else {}
         suggs = draw_data.get("suggestions", [])
-        nums = [f"{int(float(s['number'])):02d}" for s in suggs[:5] if isinstance(s, dict) and "number" in s]
+        nums = [f"{int(float(s['number'])):02d}" for s in suggs if isinstance(s, dict) and "number" in s]
         if nums:
             label_suggestions[label] = nums
 

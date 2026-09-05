@@ -9,17 +9,11 @@ from zoneinfo import ZoneInfo
 from .models import LotteryResult
 from .utils import clean_text, normalize_text
 
-BASE_LOTTERIES = {
-    "La Primera",
-    "La Suerte Dominicana",
-    "Leidsa",
-    "Lotedom",
-    "Loteka",
-    "Lotería Nacional",
-    "Lotería Real",
-}
-
-BASE_VISIBLE_DRAWS = {
+# Solo las cuatro quinielas de 3 bolas (00-99) entran al análisis. Mezclar
+# sorteos con otro formato (Super Kino TV con 20 bolas 01-80, Loto 1-38,
+# Mega Chances, Powerball...) sesga las frecuencias hacia los números bajos:
+# el TOP 10 de Loteka salía como 09-05-01-04-00 en vez de 28-17-98-74-52.
+ANALYSIS_DRAWS: dict[str, set[str]] = {
     "Lotería Nacional": {
         "Gana Más",
         "Lotería Gana Más",
@@ -36,36 +30,20 @@ BASE_VISIBLE_DRAWS = {
     "Loteka": {
         "Quiniela Loteka",
     },
-    "La Primera": {
-        "La Primera Día",
-        "La Primera Noche",
-        "Lotería La Primera 12PM",
-        "Lotería La Primera Noche 8PM",
-        "Primera Noche",
-    },
-    "La Suerte Dominicana": {
-        "La Suerte 12:30",
-        "La Suerte 18:00",
-        "La Suerte 6PM",
-        "La Suerte MD",
-    },
-    "Lotedom": {
-        "LoteDom",
-        "Quiniela LoteDom",
-        "Quiniela Lotedom",
-    },
 }
 
+# Cada quiniela sortea exactamente 3 números; menos de 3 es un resultado
+# capturado a medias mientras conéctate publicaba.
+ANALYSIS_NUMBERS = 3
+
+BASE_LOTTERIES = set(ANALYSIS_DRAWS)
+
+BASE_VISIBLE_DRAWS = ANALYSIS_DRAWS
+
 BASE_DRAW_ALIASES = {
-    "la suerte 12:30": "La Suerte MD",
-    "la suerte 18:00": "La Suerte 6PM",
     "loteria gana mas": "Gana Más",
-    "loteria la primera 12pm": "La Primera Día",
-    "loteria la primera noche 8pm": "La Primera Noche",
     "nacional noche": "Lotería Nacional",
     "quiniela nacional": "Lotería Nacional",
-    "primera noche": "La Primera Noche",
-    "quiniela lotedom": "LoteDom",
 }
 
 BASE_ANALYSIS_FROM = date(2010, 8, 1)
@@ -91,6 +69,9 @@ def build_predictions(
     # Fecha de referencia en hora RD (no UTC): el runner corre en UTC y los
     # atrasos (delay_days) deben medirse contra el día dominicano actual.
     reference_date = generated_at.date()
+    # El histórico guarda todos los sorteos, pero solo las quinielas de 3 bolas
+    # pueden contarse juntas. Ver ANALYSIS_DRAWS.
+    results = filter_analysis_results(results)
     grouped: dict[str, list[LotteryResult]] = defaultdict(list)
     for result in results:
         grouped[result.lottery].append(result)
@@ -116,7 +97,7 @@ def build_predictions(
                     "suggestions": _serialize_suggestions(suggest_numbers(draw_results, limit=limit, reference_date=reference_date)),
                     "last_results": [result.to_dict() for result in sorted(draw_results, key=lambda item: item.draw_date, reverse=True)[:8]],
                     "total_results": len(draw_results),
-                    "backtest": backtest_draw(draw_results, limit=limit),
+                    "backtest": backtest_draw(draw_results),
                 }
                 for draw, draw_results in sorted(draw_groups.items())
             },
@@ -133,6 +114,17 @@ def build_predictions(
         "base_10": analyze_base_10(results),
         "lotteries": lotteries,
     }
+
+
+def filter_analysis_results(results: list[LotteryResult]) -> list[LotteryResult]:
+    """Deja solo las quinielas de ANALYSIS_DRAWS con sus 3 números completos."""
+    return [
+        result
+        for result in results
+        if result.lottery in ANALYSIS_DRAWS
+        and is_base_visible_draw(result.lottery, result.draw)
+        and len(result.numbers) == ANALYSIS_NUMBERS
+    ]
 
 
 def _serialize_suggestions(suggestions: list[NumberSuggestion]) -> list[dict[str, object]]:
@@ -441,16 +433,12 @@ def analyze_base_10(results: list[LotteryResult]) -> dict[str, object]:
     bullet_pair = (recent_pair_counts or pair_counts).most_common(1)
 
     DRAW_CANONICAL = {
-        "Lotería Nacional": {"Gana Más": "Gana Más", "Lotería Nacional": "Nacional Noche"},
+        "Lotería Nacional": {"Gana Más": "Nacional Día", "Lotería Gana Más": "Nacional Día",
+                             "Lotería Nacional": "Nacional Noche", "Nacional Noche": "Nacional Noche",
+                             "Quiniela Nacional": "Nacional Noche"},
         "Leidsa": {"Quiniela Leidsa": "Leidsa"},
         "Lotería Real": {"Quiniela Real": "Real"},
         "Loteka": {"Quiniela Loteka": "Loteka"},
-        "La Primera": {"La Primera Día": "La Primera Día", "La Primera Noche": "La Primera Noche",
-                       "Primera Noche": "La Primera Noche", "Lotería La Primera 12PM": "La Primera Día",
-                       "Lotería La Primera Noche 8PM": "La Primera Noche"},
-        "La Suerte Dominicana": {"La Suerte MD": "La Suerte MD", "La Suerte 6PM": "La Suerte 6PM",
-                                  "La Suerte 12:30": "La Suerte MD", "La Suerte 18:00": "La Suerte 6PM"},
-        "Lotedom": {"LoteDom": "Lotedom", "Quiniela LoteDom": "Lotedom", "Quiniela Lotedom": "Lotedom"},
     }
 
     delayed_by_lottery: dict[str, dict[str, list[dict[str, object]]]] = {}

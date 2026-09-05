@@ -100,6 +100,8 @@ CONECTATE_GAME_MAP: dict[str, tuple[str, str]] = {
     '6966a6d2ea7015c3b8a3d521': ('Cash 4 Life', 'Cash 4 Life'),
     '6966a6d2ea7015c3b8a3d515': ('Florida', 'Florida Día'),
     '6966a6d2ea7015c3b8a3d51b': ('Florida', 'Florida Noche'),
+    '6a8f03324967ae1920a80496': ('Georgia', 'Georgia Día'),
+    '6a8f04514967ae1920a8206e': ('Georgia', 'Georgia Noche'),
     '6a44125c7f178816db95a378': ('Haiti', 'Haiti Bolet 10:30 AM'),
     '6a4414807f178816db95ac68': ('Haiti', 'Haiti Bolet 11:30 AM'),
     '6a4414ae7f178816db95ac7e': ('Haiti', 'Haiti Bolet 5:30 PM'),
@@ -148,16 +150,22 @@ CONECTATE_GAME_MAP: dict[str, tuple[str, str]] = {
     '6966a6d2ea7015c3b8a3d4a8': ('Lotería Real', 'Loto Real'),
     '6966a6d2ea7015c3b8a3d4cc': ('Lotería Real', 'Nueva Yol Real'),
     '6966a6d2ea7015c3b8a3d4c0': ('Lotería Real', 'Pega 4 Real'),
+    '6a97691c445bdb3562dc7f17': ('Lotería Real', 'Lotería Real Noche'),
     '6966a6d2ea7015c3b8a3d4ae': ('Lotería Real', 'Quiniela Real'),
     '69fd98465e76585b602695c5': ('Lotería Real', 'Repartidera Real'),
     '6966a6d2ea7015c3b8a3d4b4': ('Lotería Real', 'Super Palé'),
     '6966a6d2ea7015c3b8a3d4ba': ('Lotería Real', 'Tu Fecha Real'),
     '6966a6d2ea7015c3b8a3d4fd': ('Mega Millions', 'Mega Millions'),
+    '6a8efea64967ae1920a7b8f4': ('New Jersey', 'New Jersey Día'),
+    '6a8f008d4967ae1920a7f8e6': ('New Jersey', 'New Jersey Noche'),
     '6966a6d2ea7015c3b8a3d50f': ('New York', 'New York 11:30'),
     '6966a6d2ea7015c3b8a3d509': ('New York', 'New York 3:30'),
     '6966a6d2ea7015c3b8a3d503': ('Powerball', 'PowerBall'),
     '6966a6d2ea7015c3b8a3d527': ('Powerball', 'Powerball Double Play'),
 }
+
+
+_UNKNOWN_GAMES_SEEN: set[str] = set()
 
 
 class TextExtractor(HTMLParser):
@@ -303,14 +311,19 @@ def scrape_loterias_rd() -> list[LotteryResult]:
     return _dedupe(results)
 
 
-def scrape_all_sources() -> list[LotteryResult]:
-    # Ventana de 2 días (ayer y hoy): captura resultados publicados tarde y evita
-    # el hueco de la madrugada cuando aún no hay sorteos del día.
+# La API de conéctate no sirve histórico (una fecha de hace un año devuelve
+# cero sesiones), así que un día perdido se pierde para siempre. Repasamos una
+# semana en cada corrida para recuperar lo que se cayera mientras el workflow
+# estuvo fallando; lo ya guardado se descarta por clave, no cuesta nada.
+SCRAPE_WINDOW_DAYS = 7
+
+
+def scrape_all_sources(window_days: int = SCRAPE_WINDOW_DAYS) -> list[LotteryResult]:
     today = date.today()
-    yesterday = today - timedelta(days=1)
+    start = today - timedelta(days=window_days - 1)
     try:
-        results = scrape_conectate_range(yesterday, today)
-        print(f"Conectate: {len(results)} resultados ({yesterday} .. {today})")
+        results = scrape_conectate_range(start, today)
+        print(f"Conectate: {len(results)} resultados ({start} .. {today})")
         if not results:
             print("ADVERTENCIA: Conectate no devolvió resultados para la ventana consultada.")
         return results
@@ -376,8 +389,13 @@ def _parse_conectate_api(payload: Any) -> list[LotteryResult]:
     for game in payload:
         if not isinstance(game, dict):
             continue
-        mapping = CONECTATE_GAME_MAP.get(str(game.get("game_id", "")))
+        game_id = str(game.get("game_id", ""))
+        mapping = CONECTATE_GAME_MAP.get(game_id)
         if not mapping:
+            # Conéctate añade juegos sin avisar. Sin este aviso el sorteo nuevo
+            # se descartaba en silencio; si algún día cambia el game_id de una
+            # quiniela, aquí es donde se nota.
+            _warn_unknown_game(game_id, game)
             continue
         lottery, draw = mapping
         for session in game.get("sessions") or []:
@@ -406,6 +424,18 @@ def _parse_conectate_api(payload: Any) -> list[LotteryResult]:
                 )
             )
     return _dedupe(results)
+
+
+def _warn_unknown_game(game_id: str, game: dict[str, Any]) -> None:
+    if game_id in _UNKNOWN_GAMES_SEEN:
+        return
+    _UNKNOWN_GAMES_SEEN.add(game_id)
+    sessions = game.get("sessions") or []
+    sample = sessions[0].get("score") if sessions and isinstance(sessions[0], dict) else None
+    print(
+        f"ADVERTENCIA: game_id sin mapear en CONECTATE_GAME_MAP: {game_id} "
+        f"(último resultado: {sample}). Añádelo para no perder ese sorteo."
+    )
 
 
 def _parse_conectate_session_date(raw: Any) -> date | None:
@@ -646,13 +676,22 @@ def _source_rank(source: str) -> int:
     return 99
 
 
+def is_better_result(candidate: LotteryResult, current: LotteryResult) -> bool:
+    """Gana la fuente más confiable; a igual fuente, el resultado más completo."""
+    candidate_rank = _source_rank(candidate.source)
+    current_rank = _source_rank(current.source)
+    if candidate_rank != current_rank:
+        return candidate_rank < current_rank
+    return len(candidate.numbers) > len(current.numbers)
+
+
 def _dedupe(results: list[LotteryResult]) -> list[LotteryResult]:
-    # Un solo resultado por (lotería, sorteo, fecha): gana la fuente de mayor prioridad.
+    # Un solo resultado por (lotería, sorteo, fecha).
     best: dict[str, LotteryResult] = {}
     for result in results:
-        group = f"{result.draw_date.isoformat()}|{result.lottery}|{result.draw}"
-        if group not in best or _source_rank(result.source) < _source_rank(best[group].source):
-            best[group] = result
+        current = best.get(result.key)
+        if current is None or is_better_result(result, current):
+            best[result.key] = result
     return list(best.values())
 
 

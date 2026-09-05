@@ -1,6 +1,18 @@
 from datetime import date
 
-from lottery_predictor.scraper import _parse_conectate_results, parse_result_text, scrape_loterias_do, scrape_loterias_rd
+from lottery_predictor.models import LotteryResult
+from lottery_predictor.scraper import (
+    CONNECTATE_LOTERIAS_URL,
+    RESULTS_DO_URL,
+    _UNKNOWN_GAMES_SEEN,
+    _dedupe,
+    _parse_conectate_api,
+    _parse_conectate_results,
+    is_better_result,
+    parse_result_text,
+    scrape_loterias_do,
+    scrape_loterias_rd,
+)
 
 
 def test_parse_result_text_extracts_known_lottery_result():
@@ -97,3 +109,49 @@ def test_parse_conectate_results_uses_block_date_when_present():
 
     assert len(results) == 1
     assert results[0].draw_date == date(2026, 6, 5)
+
+
+def test_result_key_identifies_the_draw_not_its_numbers():
+    """Un sorteo capturado a medias y luego completo es la misma fila."""
+    truncado = LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 7), (42, 15), "test")
+    completo = LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 7), (42, 15, 88), "test")
+
+    assert truncado.key == completo.key
+    assert truncado.key == "2026-06-07|Loteka|Quiniela Loteka"
+
+
+def test_is_better_result_prefers_the_more_complete_within_a_source():
+    truncado = LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 7), (42, 15), CONNECTATE_LOTERIAS_URL)
+    completo = LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 7), (42, 15, 88), CONNECTATE_LOTERIAS_URL)
+
+    assert is_better_result(completo, truncado)
+    assert not is_better_result(truncado, completo)
+
+
+def test_is_better_result_prefers_the_trusted_source_first():
+    confiable = LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 7), (42, 15), CONNECTATE_LOTERIAS_URL)
+    dudoso = LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 7), (1, 2, 3), RESULTS_DO_URL)
+
+    assert is_better_result(confiable, dudoso)
+
+
+def test_dedupe_keeps_the_complete_result_regardless_of_order():
+    truncado = LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 7), (42, 15), CONNECTATE_LOTERIAS_URL)
+    completo = LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 7), (42, 15, 88), CONNECTATE_LOTERIAS_URL)
+
+    for entrada in ([truncado, completo], [completo, truncado]):
+        assert _dedupe(entrada) == [completo]
+
+
+def test_unknown_game_id_is_reported_instead_of_dropped(capsys):
+    """Conéctate añade juegos sin avisar; antes desaparecían en silencio."""
+    _UNKNOWN_GAMES_SEEN.discard("juego-nuevo")
+    payload = [
+        {
+            "game_id": "juego-nuevo",
+            "sessions": [{"date": "2026-09-04T04:00:00.000Z", "score": [["11", "22", "33"]]}],
+        }
+    ]
+
+    assert _parse_conectate_api(payload) == []
+    assert "juego-nuevo" in capsys.readouterr().out

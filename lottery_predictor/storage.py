@@ -5,7 +5,7 @@ from datetime import date
 from pathlib import Path
 
 from .models import LotteryResult
-from .scraper import _source_rank
+from .scraper import is_better_result
 
 
 def load_results(path: Path) -> list[LotteryResult]:
@@ -42,12 +42,8 @@ def remove_future_republished_results(
 def merge_results(existing: list[LotteryResult], new_results: list[LotteryResult]) -> list[LotteryResult]:
     best: dict[str, LotteryResult] = {}
     existing = remove_future_republished_results(existing, new_results)
-    for result in existing:
-        group = f"{result.draw_date.isoformat()}|{result.lottery}|{result.draw}"
-        if group not in best or _source_rank(result.source) < _source_rank(best[group].source):
-            best[group] = result
-    for result in new_results:
-        group = f"{result.draw_date.isoformat()}|{result.lottery}|{result.draw}"
-        if group not in best or _source_rank(result.source) < _source_rank(best[group].source):
-            best[group] = result
+    for result in [*existing, *new_results]:
+        current = best.get(result.key)
+        if current is None or is_better_result(result, current):
+            best[result.key] = result
     return list(best.values())

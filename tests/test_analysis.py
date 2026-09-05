@@ -1,6 +1,12 @@
 from datetime import date
 
-from lottery_predictor.analysis import analyze_base_10, backtest_draw, is_base_visible_draw, suggest_numbers
+from lottery_predictor.analysis import (
+    analyze_base_10,
+    backtest_draw,
+    build_predictions,
+    is_base_visible_draw,
+    suggest_numbers,
+)
 from lottery_predictor.models import LotteryResult
 
 
@@ -38,18 +44,22 @@ def test_backtest_draw_returns_hit_rates_with_enough_history():
 
 def test_base_visible_draw_filter_excludes_loto_and_kino():
     assert is_base_visible_draw("Leidsa", "Quiniela Leidsa")
-    assert is_base_visible_draw("La Primera", "Lotería La Primera 12PM")
+    assert is_base_visible_draw("Lotería Nacional", "Quiniela Nacional")
     assert not is_base_visible_draw("Leidsa", "Super Kino TV")
-    assert not is_base_visible_draw("La Primera", "Loto 5")
+    assert not is_base_visible_draw("Loteka", "MegaLotto")
+    assert is_base_visible_draw("Lotería Nacional", "Gana Más")
+    # Fuera del alcance: solo las quinielas de ANALYSIS_DRAWS entran al análisis.
+    assert not is_base_visible_draw("Lotería Nacional", "Juega + Pega +")
+    assert not is_base_visible_draw("La Primera", "La Primera Día")
 
 
 def test_analyze_base_10_uses_only_visible_base_draws():
     results = [
-        LotteryResult("La Primera", "Loto 5", date(2010, 8, 1), (1, 2, 3), "test"),
-        LotteryResult("La Primera", "Loto 5", date(2010, 8, 2), (1, 2, 3), "test"),
-        LotteryResult("La Primera", "Loto 5", date(2010, 8, 3), (1, 2, 3), "test"),
-        LotteryResult("La Primera", "La Primera Día", date(2010, 8, 1), (88, 89, 90), "test"),
-        LotteryResult("La Primera", "La Primera Día", date(2026, 5, 2), (88, 91, 92), "test"),
+        LotteryResult("Loteka", "MegaLotto", date(2010, 8, 1), (1, 2, 3), "test"),
+        LotteryResult("Loteka", "MegaLotto", date(2010, 8, 2), (1, 2, 3), "test"),
+        LotteryResult("Loteka", "MegaLotto", date(2010, 8, 3), (1, 2, 3), "test"),
+        LotteryResult("Loteka", "Quiniela Loteka", date(2010, 8, 1), (88, 89, 90), "test"),
+        LotteryResult("Loteka", "Quiniela Loteka", date(2026, 5, 2), (88, 91, 92), "test"),
     ]
 
     report = analyze_base_10(results)
@@ -59,6 +69,40 @@ def test_analyze_base_10_uses_only_visible_base_draws():
     assert report["window"]["to"] == "2026-05-02"
     assert "88" in top_numbers
     assert "01" not in top_numbers
+
+
+def test_build_predictions_ignores_non_quiniela_draws():
+    """Super Kino TV (20 bolas 01-80) sesgaba las frecuencias hacia números bajos."""
+    results = [
+        LotteryResult("Leidsa", "Quiniela Leidsa", date(2026, 6, day), (91, 92, 93), "test")
+        for day in range(1, 11)
+    ]
+    results.extend(
+        LotteryResult("Leidsa", "Super Kino TV", date(2026, 6, day), tuple(range(1, 21)), "test")
+        for day in range(1, 11)
+    )
+
+    predictions = build_predictions(results)
+    leidsa = predictions["lotteries"]["Leidsa"]
+
+    assert set(leidsa["draws"]) == {"Quiniela Leidsa"}
+    assert leidsa["total_results"] == 10
+    frequency = {item["number"]: item["frequency"] for item in leidsa["suggestions"]}
+    assert frequency["91"] == 10
+    # 01 sale 10 veces en Super Kino TV; si contara, su frecuencia no sería 0.
+    assert frequency.get("01", 0) == 0
+
+
+def test_build_predictions_drops_truncated_results():
+    """Un resultado capturado a medias (2 de 3 bolas) no debe contar."""
+    results = [
+        LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 1), (11, 22, 33), "test"),
+        LotteryResult("Loteka", "Quiniela Loteka", date(2026, 6, 2), (44, 55), "test"),
+    ]
+
+    predictions = build_predictions(results)
+
+    assert predictions["lotteries"]["Loteka"]["total_results"] == 1
 
 
 def test_analyze_base_10_prefers_recent_momentum_over_historical_frequency():
