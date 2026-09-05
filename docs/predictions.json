@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-05T00:54:20-04:00",
-  "generated_at_display": "05/09/2026 00:54",
+  "generated_at": "2026-09-05T04:59:22-04:00",
+  "generated_at_display": "05/09/2026 04:59",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1381,23 +1381,23 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-09-04",
-          "numbers": [
-            14,
-            83,
-            85
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-09-04",
           "numbers": [
             16,
             78,
             79
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-09-04",
+          "numbers": [
+            14,
+            83,
+            85
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -91568,6 +91568,13 @@
         ],
         [
           "20260904",
+          "Lotería Nacional",
+          16,
+          78,
+          79
+        ],
+        [
+          "20260904",
           "Juega + Pega +",
           28,
           24,
@@ -91581,13 +91588,6 @@
           14,
           83,
           85
-        ],
-        [
-          "20260904",
-          "Lotería Nacional",
-          16,
-          78,
-          79
         ]
       ],
       "total_results": 12854,
@@ -133746,10 +133746,9 @@
         ],
         [
           "20260904",
-          "Quiniela Leidsa",
+          "Super Palé",
           6,
-          13,
-          22
+          16
         ],
         [
           "20260904",
@@ -133777,18 +133776,10 @@
         ],
         [
           "20260904",
-          "Loto Pool",
-          13,
-          8,
-          20,
-          12,
-          7
-        ],
-        [
-          "20260904",
-          "Super Palé",
+          "Quiniela Leidsa",
           6,
-          16
+          13,
+          22
         ],
         [
           "20260904",
@@ -133796,6 +133787,15 @@
           9,
           28,
           41
+        ],
+        [
+          "20260904",
+          "Loto Pool",
+          13,
+          8,
+          20,
+          12,
+          7
         ]
       ],
       "total_results": 5686,
