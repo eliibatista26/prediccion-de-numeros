@@ -24,7 +24,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lottery_predictor import db
 from lottery_predictor.analysis import ANALYSIS_DRAWS, ANALYSIS_NUMBERS
 
-NEW_KEY_SQL = "draw_date::text || '|' || lottery || '|' || draw"
+# to_char y no draw_date::text: el cast depende del parámetro DateStyle de la
+# sesión, así que en una base que no esté en ISO generaría "09-05-2026" y la
+# clave no coincidiría nunca con la que produce date.isoformat() en Python.
+NEW_KEY_SQL = "to_char(draw_date, 'YYYY-MM-DD') || '|' || lottery || '|' || draw"
 
 # De cada grupo (fecha, lotería, sorteo) borra todas menos la mejor: primero la
 # que tenga más números, y a igualdad la de id más bajo (la primera guardada).
@@ -97,6 +100,17 @@ def main() -> int:
             print(f"Filas actuales:            {total_before}")
             print(f"Duplicados a eliminar:     {duplicates}")
             print(f"Claves a reescribir:       {stale_keys}")
+
+            if stale_keys:
+                cur.execute("SHOW DateStyle")
+                print(f"\nDateStyle de la sesión:    {cur.fetchone()[0]}")
+                cur.execute(
+                    f"SELECT result_key, {NEW_KEY_SQL} FROM lottery_results "
+                    f"WHERE result_key <> {NEW_KEY_SQL} ORDER BY draw_date DESC LIMIT 3"
+                )
+                print("Ejemplos (clave actual -> clave nueva):")
+                for actual, nueva in cur.fetchall():
+                    print(f"  {actual}\n    -> {nueva}")
 
             cur.execute(
                 TRUNCATED_QUINIELAS,
