@@ -103,6 +103,17 @@
   },
   {
     "lottery": "Lotería Nacional",
+    "draw": "Lotería Nacional",
+    "draw_date": "2026-09-05",
+    "numbers": [
+      13,
+      73,
+      94
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
     "draw": "Juega + Pega +",
     "draw_date": "2026-09-05",
     "numbers": [
@@ -190,6 +201,95 @@
       44,
       60,
       26
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Palé",
+    "draw_date": "2026-09-05",
+    "numbers": [
+      53,
+      13
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Kino TV",
+    "draw_date": "2026-09-05",
+    "numbers": [
+      23,
+      42,
+      1,
+      33,
+      39,
+      55,
+      78,
+      45,
+      47,
+      69,
+      10,
+      54,
+      27,
+      80,
+      50,
+      35,
+      18,
+      24,
+      8,
+      43
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Quiniela Leidsa",
+    "draw_date": "2026-09-05",
+    "numbers": [
+      53,
+      30,
+      28
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Pega 3 Más",
+    "draw_date": "2026-09-05",
+    "numbers": [
+      50,
+      42,
+      9
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Loto Pool",
+    "draw_date": "2026-09-05",
+    "numbers": [
+      7,
+      12,
+      8,
+      27,
+      20
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Loto - Loto Más",
+    "draw_date": "2026-09-05",
+    "numbers": [
+      20,
+      6,
+      35,
+      34,
+      3,
+      1,
+      5,
+      11
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -433,6 +533,18 @@
   },
   {
     "lottery": "Anguila",
+    "draw": "La Cuarteta 9:00 PM",
+    "draw_date": "2026-09-05",
+    "numbers": [
+      77,
+      11,
+      36,
+      72
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
     "draw": "La Cuarteta 6:00 PM",
     "draw_date": "2026-09-05",
     "numbers": [
@@ -464,6 +576,17 @@
       47,
       77,
       20
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 9:00 PM",
+    "draw_date": "2026-09-05",
+    "numbers": [
+      5,
+      17,
+      59
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
