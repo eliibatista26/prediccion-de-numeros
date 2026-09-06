@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-05T21:18:25-04:00",
-  "generated_at_display": "05/09/2026 21:18",
+  "generated_at": "2026-09-06T02:03:55-04:00",
+  "generated_at_display": "06/09/2026 02:03",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1116,23 +1116,23 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-09-05",
-          "numbers": [
-            86,
-            78,
-            39
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-09-05",
           "numbers": [
             13,
             73,
             94
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-09-05",
+          "numbers": [
+            86,
+            78,
+            39
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -90547,17 +90547,17 @@
         ],
         [
           "20260905",
-          "Gana Más",
-          86,
-          78,
-          39
-        ],
-        [
-          "20260905",
           "Lotería Nacional",
           13,
           73,
           94
+        ],
+        [
+          "20260905",
+          "Gana Más",
+          86,
+          78,
+          39
         ]
       ],
       "total_results": 12765,
