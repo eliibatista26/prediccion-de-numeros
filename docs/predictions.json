@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-06T06:49:59-04:00",
-  "generated_at_display": "06/09/2026 06:49",
+  "generated_at": "2026-09-06T08:59:10-04:00",
+  "generated_at_display": "06/09/2026 08:59",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -10,7 +10,7 @@
     "window": {
       "from": "2010-08-01",
       "to": "2026-09-05",
-      "results": 22613
+      "results": 22897
     },
     "top_10_repeated": [
       {
@@ -22,15 +22,15 @@
         "count": 10
       },
       {
+        "number": "30",
+        "count": 10
+      },
+      {
         "number": "03",
         "count": 10
       },
       {
         "number": "34",
-        "count": 9
-      },
-      {
-        "number": "30",
         "count": 9
       },
       {
@@ -42,58 +42,58 @@
         "count": 8
       },
       {
+        "number": "19",
+        "count": 8
+      },
+      {
         "number": "41",
         "count": 8
       },
       {
         "number": "99",
         "count": 8
-      },
-      {
-        "number": "54",
-        "count": 7
       }
     ],
     "top_10_historical": [
       {
         "number": "42",
-        "count": 754
-      },
-      {
-        "number": "14",
-        "count": 746
-      },
-      {
-        "number": "21",
-        "count": 746
+        "count": 758
       },
       {
         "number": "63",
-        "count": 746
+        "count": 757
       },
       {
-        "number": "17",
-        "count": 726
+        "number": "21",
+        "count": 755
       },
       {
-        "number": "32",
-        "count": 726
-      },
-      {
-        "number": "61",
-        "count": 725
+        "number": "14",
+        "count": 751
       },
       {
         "number": "91",
-        "count": 725
+        "count": 736
       },
       {
-        "number": "43",
-        "count": 721
+        "number": "17",
+        "count": 735
+      },
+      {
+        "number": "32",
+        "count": 735
       },
       {
         "number": "26",
-        "count": 720
+        "count": 731
+      },
+      {
+        "number": "61",
+        "count": 730
+      },
+      {
+        "number": "43",
+        "count": 730
       }
     ],
     "delayed_by_position": {
@@ -108,43 +108,43 @@
           "number": "76",
           "delay_days": 88,
           "last_seen": "2026-06-09",
-          "frequency": 244
+          "frequency": 246
         },
         {
           "number": "61",
           "delay_days": 84,
           "last_seen": "2026-06-13",
-          "frequency": 226
+          "frequency": 228
         },
         {
           "number": "47",
           "delay_days": 70,
           "last_seen": "2026-06-27",
-          "frequency": 202
+          "frequency": 207
         },
         {
           "number": "29",
           "delay_days": 63,
           "last_seen": "2026-07-04",
-          "frequency": 211
+          "frequency": 216
         },
         {
           "number": "23",
           "delay_days": 62,
           "last_seen": "2026-07-05",
-          "frequency": 225
+          "frequency": 227
         },
         {
           "number": "00",
           "delay_days": 61,
           "last_seen": "2026-07-06",
-          "frequency": 218
+          "frequency": 220
         },
         {
           "number": "15",
           "delay_days": 60,
           "last_seen": "2026-07-07",
-          "frequency": 226
+          "frequency": 227
         },
         {
           "number": "20",
@@ -156,7 +156,7 @@
           "number": "96",
           "delay_days": 52,
           "last_seen": "2026-07-15",
-          "frequency": 236
+          "frequency": 240
         }
       ],
       "2": [
@@ -164,61 +164,61 @@
           "number": "59",
           "delay_days": 118,
           "last_seen": "2026-05-10",
-          "frequency": 235
+          "frequency": 238
         },
         {
           "number": "68",
           "delay_days": 94,
           "last_seen": "2026-06-03",
-          "frequency": 249
+          "frequency": 250
         },
         {
           "number": "27",
           "delay_days": 92,
           "last_seen": "2026-06-05",
-          "frequency": 208
+          "frequency": 213
         },
         {
           "number": "56",
           "delay_days": 90,
           "last_seen": "2026-06-07",
-          "frequency": 231
+          "frequency": 232
         },
         {
           "number": "61",
           "delay_days": 81,
           "last_seen": "2026-06-16",
-          "frequency": 256
+          "frequency": 258
         },
         {
           "number": "66",
           "delay_days": 75,
           "last_seen": "2026-06-22",
-          "frequency": 241
+          "frequency": 247
         },
         {
           "number": "75",
           "delay_days": 59,
           "last_seen": "2026-07-08",
-          "frequency": 216
+          "frequency": 219
         },
         {
           "number": "69",
           "delay_days": 56,
           "last_seen": "2026-07-11",
-          "frequency": 214
+          "frequency": 218
         },
         {
           "number": "00",
           "delay_days": 43,
           "last_seen": "2026-07-24",
-          "frequency": 248
+          "frequency": 253
         },
         {
           "number": "96",
           "delay_days": 43,
           "last_seen": "2026-07-24",
-          "frequency": 203
+          "frequency": 206
         }
       ],
       "3": [
@@ -226,61 +226,61 @@
           "number": "35",
           "delay_days": 85,
           "last_seen": "2026-06-12",
-          "frequency": 222
+          "frequency": 226
         },
         {
           "number": "50",
           "delay_days": 70,
           "last_seen": "2026-06-27",
-          "frequency": 211
+          "frequency": 214
         },
         {
           "number": "23",
           "delay_days": 63,
           "last_seen": "2026-07-04",
-          "frequency": 232
+          "frequency": 237
         },
         {
           "number": "11",
           "delay_days": 61,
           "last_seen": "2026-07-06",
-          "frequency": 233
+          "frequency": 238
         },
         {
           "number": "70",
           "delay_days": 59,
           "last_seen": "2026-07-08",
-          "frequency": 229
+          "frequency": 230
         },
         {
           "number": "42",
           "delay_days": 56,
           "last_seen": "2026-07-11",
-          "frequency": 281
+          "frequency": 282
         },
         {
           "number": "01",
           "delay_days": 56,
           "last_seen": "2026-07-11",
-          "frequency": 210
+          "frequency": 213
         },
         {
           "number": "00",
           "delay_days": 53,
           "last_seen": "2026-07-14",
-          "frequency": 205
-        },
-        {
-          "number": "94",
-          "delay_days": 52,
-          "last_seen": "2026-07-15",
-          "frequency": 218
+          "frequency": 207
         },
         {
           "number": "76",
           "delay_days": 52,
           "last_seen": "2026-07-15",
-          "frequency": 213
+          "frequency": 215
+        },
+        {
+          "number": "56",
+          "delay_days": 51,
+          "last_seen": "2026-07-16",
+          "frequency": 254
         }
       ]
     },
@@ -474,9 +474,9 @@
             "frequency": 51
           },
           {
-            "number": "73",
-            "delay_days": 388,
-            "frequency": 55
+            "number": "16",
+            "delay_days": 371,
+            "frequency": 49
           }
         ],
         "3": [
@@ -502,146 +502,167 @@
           {
             "number": "88",
             "delay_days": 581,
-            "frequency": 38
+            "frequency": 44
           },
           {
             "number": "29",
             "delay_days": 426,
-            "frequency": 33
+            "frequency": 38
           },
           {
             "number": "98",
             "delay_days": 393,
-            "frequency": 27
+            "frequency": 28
           }
         ],
         "2": [
           {
             "number": "22",
             "delay_days": 422,
-            "frequency": 32
+            "frequency": 33
           },
           {
             "number": "36",
             "delay_days": 407,
-            "frequency": 31
+            "frequency": 33
           },
           {
             "number": "54",
             "delay_days": 318,
-            "frequency": 30
+            "frequency": 35
           }
         ],
         "3": [
           {
             "number": "84",
             "delay_days": 596,
-            "frequency": 32
+            "frequency": 35
           },
           {
             "number": "11",
             "delay_days": 558,
-            "frequency": 32
+            "frequency": 37
           },
           {
             "number": "94",
             "delay_days": 528,
-            "frequency": 28
+            "frequency": 29
           }
         ]
       }
     },
     "coincidences": [
       {
-        "number": "91",
-        "count": 77
+        "number": "34",
+        "count": 80
       },
       {
-        "number": "34",
-        "count": 74
+        "number": "91",
+        "count": 79
       },
       {
         "number": "43",
+        "count": 74
+      },
+      {
+        "number": "87",
         "count": 72
+      },
+      {
+        "number": "37",
+        "count": 71
       },
       {
         "number": "03",
         "count": 71
       },
       {
-        "number": "52",
+        "number": "55",
         "count": 70
       },
       {
-        "number": "37",
-        "count": 69
-      },
-      {
-        "number": "55",
-        "count": 68
-      },
-      {
-        "number": "87",
-        "count": 68
+        "number": "52",
+        "count": 70
       },
       {
         "number": "98",
         "count": 68
       },
       {
-        "number": "61",
-        "count": 66
+        "number": "21",
+        "count": 67
       }
     ],
     "drags": [
+      {
+        "number": "03",
+        "count": 30
+      },
+      {
+        "number": "80",
+        "count": 29
+      },
       {
         "number": "57",
         "count": 29
       },
       {
-        "number": "03",
-        "count": 29
+        "number": "05",
+        "count": 28
       },
       {
         "number": "58",
         "count": 28
       },
       {
+        "number": "81",
+        "count": 27
+      },
+      {
         "number": "86",
         "count": 27
       },
       {
-        "number": "80",
-        "count": 26
-      },
-      {
-        "number": "05",
-        "count": 26
-      },
-      {
-        "number": "81",
-        "count": 26
-      },
-      {
-        "number": "10",
-        "count": 26
-      },
-      {
         "number": "21",
+        "count": 27
+      },
+      {
+        "number": "42",
         "count": 26
       },
       {
-        "number": "61",
-        "count": 25
+        "number": "12",
+        "count": 26
       }
     ],
     "active_mirrors": [
+      {
+        "number": "34",
+        "mirror": "43",
+        "diff_days": 0,
+        "days_ago_a": 0,
+        "days_ago_b": 0
+      },
       {
         "number": "26",
         "mirror": "62",
         "diff_days": 0,
         "days_ago_a": 3,
         "days_ago_b": 3
+      },
+      {
+        "number": "28",
+        "mirror": "82",
+        "diff_days": 1,
+        "days_ago_a": 0,
+        "days_ago_b": 1
+      },
+      {
+        "number": "03",
+        "mirror": "30",
+        "diff_days": 1,
+        "days_ago_a": 1,
+        "days_ago_b": 0
       },
       {
         "number": "01",
@@ -665,15 +686,8 @@
         "days_ago_b": 5
       },
       {
-        "number": "37",
-        "mirror": "73",
-        "diff_days": 1,
-        "days_ago_a": 4,
-        "days_ago_b": 5
-      },
-      {
-        "number": "34",
-        "mirror": "43",
+        "number": "19",
+        "mirror": "91",
         "diff_days": 2,
         "days_ago_a": 0,
         "days_ago_b": 2
@@ -700,25 +714,11 @@
         "days_ago_b": 4
       },
       {
-        "number": "17",
-        "mirror": "71",
+        "number": "49",
+        "mirror": "94",
         "diff_days": 2,
-        "days_ago_a": 3,
-        "days_ago_b": 1
-      },
-      {
-        "number": "14",
-        "mirror": "41",
-        "diff_days": 2,
-        "days_ago_a": 4,
-        "days_ago_b": 2
-      },
-      {
-        "number": "57",
-        "mirror": "75",
-        "diff_days": 2,
-        "days_ago_a": 4,
-        "days_ago_b": 6
+        "days_ago_a": 2,
+        "days_ago_b": 0
       }
     ],
     "moving_numbers": [
@@ -773,10 +773,24 @@
       },
       {
         "pair": [
+          "25",
+          "63"
+        ],
+        "count": 28
+      },
+      {
+        "pair": [
           "04",
           "71"
         ],
         "count": 28
+      },
+      {
+        "pair": [
+          "66",
+          "90"
+        ],
+        "count": 27
       },
       {
         "pair": [
@@ -787,15 +801,15 @@
       },
       {
         "pair": [
-          "25",
-          "63"
+          "45",
+          "58"
         ],
-        "count": 27
+        "count": 26
       },
       {
         "pair": [
-          "45",
-          "58"
+          "39",
+          "59"
         ],
         "count": 26
       },
@@ -815,55 +829,53 @@
       },
       {
         "pair": [
-          "00",
-          "53"
-        ],
-        "count": 25
-      },
-      {
-        "pair": [
-          "66",
-          "90"
-        ],
-        "count": 25
-      },
-      {
-        "pair": [
-          "04",
-          "43"
+          "41",
+          "80"
         ],
         "count": 25
       }
     ],
     "strength_ranking": [
       {
+        "number": "30",
+        "score": 271.16,
+        "frequency": 696,
+        "recent": 6,
+        "recent_7": 3,
+        "recent_30": 10,
+        "coincidences": 51,
+        "drags": 15,
+        "mirror": "03",
+        "moves": 4
+      },
+      {
         "number": "03",
-        "score": 262.11,
-        "frequency": 677,
+        "score": 264.93,
+        "frequency": 690,
         "recent": 4,
         "recent_7": 1,
         "recent_30": 10,
         "coincidences": 71,
-        "drags": 29,
+        "drags": 30,
         "mirror": "30",
         "moves": 4
       },
       {
         "number": "42",
-        "score": 259.98,
-        "frequency": 754,
+        "score": 261.44,
+        "frequency": 758,
         "recent": 5,
         "recent_7": 3,
         "recent_30": 10,
-        "coincidences": 56,
-        "drags": 25,
+        "coincidences": 60,
+        "drags": 26,
         "mirror": "24",
         "moves": 4
       },
       {
         "number": "86",
-        "score": 255.69,
-        "frequency": 668,
+        "score": 256.36,
+        "frequency": 673,
         "recent": 7,
         "recent_7": 3,
         "recent_30": 10,
@@ -874,44 +886,56 @@
       },
       {
         "number": "34",
-        "score": 249.91,
-        "frequency": 718,
+        "score": 253.18,
+        "frequency": 728,
         "recent": 3,
         "recent_7": 2,
         "recent_30": 9,
-        "coincidences": 74,
+        "coincidences": 80,
         "drags": 18,
         "mirror": "43",
         "moves": 4
       },
       {
-        "number": "30",
-        "score": 248.89,
-        "frequency": 688,
-        "recent": 5,
-        "recent_7": 2,
-        "recent_30": 9,
-        "coincidences": 51,
-        "drags": 15,
-        "mirror": "03",
+        "number": "43",
+        "score": 239.39,
+        "frequency": 730,
+        "recent": 6,
+        "recent_7": 3,
+        "recent_30": 6,
+        "coincidences": 74,
+        "drags": 21,
+        "mirror": "34",
         "moves": 4
       },
       {
         "number": "72",
-        "score": 231.63,
-        "frequency": 663,
+        "score": 234.13,
+        "frequency": 680,
         "recent": 6,
         "recent_7": 2,
         "recent_30": 7,
-        "coincidences": 50,
-        "drags": 22,
+        "coincidences": 52,
+        "drags": 23,
         "mirror": "27",
         "moves": 4
       },
       {
+        "number": "63",
+        "score": 224.72,
+        "frequency": 757,
+        "recent": 5,
+        "recent_7": 1,
+        "recent_30": 6,
+        "coincidences": 59,
+        "drags": 24,
+        "mirror": "36",
+        "moves": 4
+      },
+      {
         "number": "58",
-        "score": 223.29,
-        "frequency": 690,
+        "score": 224.46,
+        "frequency": 699,
         "recent": 4,
         "recent_7": 2,
         "recent_30": 8,
@@ -921,21 +945,9 @@
         "moves": 4
       },
       {
-        "number": "63",
-        "score": 222.79,
-        "frequency": 746,
-        "recent": 5,
-        "recent_7": 1,
-        "recent_30": 6,
-        "coincidences": 57,
-        "drags": 22,
-        "mirror": "36",
-        "moves": 4
-      },
-      {
         "number": "17",
-        "score": 221.58,
-        "frequency": 726,
+        "score": 222.72,
+        "frequency": 735,
         "recent": 4,
         "recent_7": 1,
         "recent_30": 8,
@@ -943,49 +955,49 @@
         "drags": 16,
         "mirror": "71",
         "moves": 4
-      },
-      {
-        "number": "79",
-        "score": 220.34,
-        "frequency": 663,
-        "recent": 5,
-        "recent_7": 2,
-        "recent_30": 7,
-        "coincidences": 60,
-        "drags": 17,
-        "mirror": "97",
-        "moves": 4
       }
     ],
     "elite_group": [
       {
+        "number": "30",
+        "score": 271.16,
+        "frequency": 696,
+        "recent": 6,
+        "recent_7": 3,
+        "recent_30": 10,
+        "coincidences": 51,
+        "drags": 15,
+        "mirror": "03",
+        "moves": 4
+      },
+      {
         "number": "03",
-        "score": 262.11,
-        "frequency": 677,
+        "score": 264.93,
+        "frequency": 690,
         "recent": 4,
         "recent_7": 1,
         "recent_30": 10,
         "coincidences": 71,
-        "drags": 29,
+        "drags": 30,
         "mirror": "30",
         "moves": 4
       },
       {
         "number": "42",
-        "score": 259.98,
-        "frequency": 754,
+        "score": 261.44,
+        "frequency": 758,
         "recent": 5,
         "recent_7": 3,
         "recent_30": 10,
-        "coincidences": 56,
-        "drags": 25,
+        "coincidences": 60,
+        "drags": 26,
         "mirror": "24",
         "moves": 4
       },
       {
         "number": "86",
-        "score": 255.69,
-        "frequency": 668,
+        "score": 256.36,
+        "frequency": 673,
         "recent": 7,
         "recent_7": 3,
         "recent_30": 10,
@@ -996,39 +1008,27 @@
       },
       {
         "number": "34",
-        "score": 249.91,
-        "frequency": 718,
+        "score": 253.18,
+        "frequency": 728,
         "recent": 3,
         "recent_7": 2,
         "recent_30": 9,
-        "coincidences": 74,
+        "coincidences": 80,
         "drags": 18,
         "mirror": "43",
-        "moves": 4
-      },
-      {
-        "number": "30",
-        "score": 248.89,
-        "frequency": 688,
-        "recent": 5,
-        "recent_7": 2,
-        "recent_30": 9,
-        "coincidences": 51,
-        "drags": 15,
-        "mirror": "03",
         "moves": 4
       }
     ],
     "leader": {
-      "number": "03",
-      "score": 262.11,
-      "frequency": 677,
-      "recent": 4,
-      "recent_7": 1,
+      "number": "30",
+      "score": 271.16,
+      "frequency": 696,
+      "recent": 6,
+      "recent_7": 3,
       "recent_30": 10,
-      "coincidences": 71,
-      "drags": 29,
-      "mirror": "30",
+      "coincidences": 51,
+      "drags": 15,
+      "mirror": "03",
       "moves": 4
     },
     "bullet_pair": {
@@ -1044,72 +1044,72 @@
       "suggestions": [
         {
           "number": "14",
-          "score": 450.18,
+          "score": 450.19,
           "frequency": 450,
-          "delay_days": 22,
+          "delay_days": 23,
           "recent_frequency": 0
         },
         {
           "number": "26",
-          "score": 424.62,
+          "score": 424.63,
           "frequency": 421,
-          "delay_days": 3,
+          "delay_days": 4,
           "recent_frequency": 2
         },
         {
           "number": "91",
           "score": 419.62,
           "frequency": 416,
-          "delay_days": 2,
+          "delay_days": 3,
           "recent_frequency": 2
         },
         {
           "number": "61",
-          "score": 419.24,
+          "score": 419.25,
           "frequency": 419,
-          "delay_days": 29,
+          "delay_days": 30,
           "recent_frequency": 0
         },
         {
           "number": "88",
           "score": 416.92,
           "frequency": 415,
-          "delay_days": 14,
-          "recent_frequency": 1
-        },
-        {
-          "number": "40",
-          "score": 414.92,
-          "frequency": 413,
           "delay_days": 15,
           "recent_frequency": 1
         },
         {
           "number": "25",
-          "score": 414.33,
+          "score": 414.34,
           "frequency": 414,
-          "delay_days": 40,
+          "delay_days": 41,
           "recent_frequency": 0
         },
         {
           "number": "34",
           "score": 413.87,
           "frequency": 412,
-          "delay_days": 8,
+          "delay_days": 9,
           "recent_frequency": 1
         },
         {
           "number": "80",
           "score": 413.67,
           "frequency": 410,
-          "delay_days": 8,
+          "delay_days": 9,
           "recent_frequency": 2
         },
         {
+          "number": "40",
+          "score": 413.13,
+          "frequency": 413,
+          "delay_days": 16,
+          "recent_frequency": 0
+        },
+        {
           "number": "63",
-          "score": 412.9,
+          "score": 412.91,
           "frequency": 411,
-          "delay_days": 12,
+          "delay_days": 13,
           "recent_frequency": 1
         }
       ],
@@ -90566,72 +90566,72 @@
           "suggestions": [
             {
               "number": "41",
-              "score": 187.9,
+              "score": 187.91,
               "frequency": 186,
-              "delay_days": 12,
+              "delay_days": 13,
               "recent_frequency": 1
             },
             {
               "number": "42",
-              "score": 183.44,
+              "score": 183.45,
               "frequency": 178,
-              "delay_days": 5,
+              "delay_days": 6,
               "recent_frequency": 3
             },
             {
               "number": "91",
               "score": 181.62,
               "frequency": 178,
-              "delay_days": 2,
+              "delay_days": 3,
               "recent_frequency": 2
             },
             {
               "number": "89",
-              "score": 180.77,
+              "score": 180.78,
               "frequency": 177,
-              "delay_days": 21,
+              "delay_days": 22,
               "recent_frequency": 2
             },
             {
               "number": "32",
               "score": 177.96,
               "frequency": 176,
-              "delay_days": 19,
+              "delay_days": 20,
               "recent_frequency": 1
             },
             {
               "number": "88",
               "score": 175.72,
               "frequency": 172,
-              "delay_days": 14,
+              "delay_days": 15,
               "recent_frequency": 2
             },
             {
               "number": "40",
-              "score": 173.94,
+              "score": 173.95,
               "frequency": 172,
-              "delay_days": 17,
+              "delay_days": 18,
               "recent_frequency": 1
             },
             {
               "number": "26",
-              "score": 172.97,
+              "score": 172.98,
               "frequency": 171,
-              "delay_days": 21,
+              "delay_days": 22,
               "recent_frequency": 1
             },
             {
               "number": "85",
-              "score": 172.82,
+              "score": 172.83,
               "frequency": 171,
-              "delay_days": 3,
+              "delay_days": 4,
               "recent_frequency": 1
             },
             {
               "number": "34",
-              "score": 170.95,
+              "score": 170.96,
               "frequency": 169,
-              "delay_days": 18,
+              "delay_days": 19,
               "recent_frequency": 1
             }
           ],
@@ -90825,72 +90825,72 @@
           "suggestions": [
             {
               "number": "14",
-              "score": 287.98,
+              "score": 287.99,
               "frequency": 286,
-              "delay_days": 22,
+              "delay_days": 23,
               "recent_frequency": 1
             },
             {
               "number": "61",
-              "score": 263.55,
+              "score": 263.56,
               "frequency": 263,
-              "delay_days": 67,
+              "delay_days": 68,
               "recent_frequency": 0
             },
             {
               "number": "53",
-              "score": 262.92,
+              "score": 262.93,
               "frequency": 261,
-              "delay_days": 15,
+              "delay_days": 16,
               "recent_frequency": 1
             },
             {
               "number": "07",
-              "score": 257.48,
+              "score": 257.49,
               "frequency": 252,
-              "delay_days": 10,
+              "delay_days": 11,
               "recent_frequency": 3
             },
             {
               "number": "75",
-              "score": 255.85,
+              "score": 255.86,
               "frequency": 254,
-              "delay_days": 6,
+              "delay_days": 7,
               "recent_frequency": 1
             },
             {
               "number": "80",
-              "score": 254.89,
+              "score": 254.9,
               "frequency": 253,
-              "delay_days": 11,
+              "delay_days": 12,
               "recent_frequency": 1
             },
             {
               "number": "26",
-              "score": 253.62,
+              "score": 253.63,
               "frequency": 250,
-              "delay_days": 3,
-              "recent_frequency": 2
-            },
-            {
-              "number": "01",
-              "score": 252.62,
-              "frequency": 249,
-              "delay_days": 2,
+              "delay_days": 4,
               "recent_frequency": 2
             },
             {
               "number": "45",
-              "score": 251.0,
+              "score": 251.01,
               "frequency": 249,
-              "delay_days": 24,
+              "delay_days": 25,
+              "recent_frequency": 1
+            },
+            {
+              "number": "01",
+              "score": 250.82,
+              "frequency": 249,
+              "delay_days": 3,
               "recent_frequency": 1
             },
             {
               "number": "02",
-              "score": 249.92,
+              "score": 249.93,
               "frequency": 248,
-              "delay_days": 15,
+              "delay_days": 16,
               "recent_frequency": 1
             }
           ],
@@ -91084,72 +91084,72 @@
       "suggestions": [
         {
           "number": "21",
-          "score": 197.39,
+          "score": 197.4,
           "frequency": 197,
-          "delay_days": 48,
+          "delay_days": 49,
           "recent_frequency": 0
         },
         {
           "number": "63",
           "score": 190.42,
           "frequency": 185,
-          "delay_days": 2,
+          "delay_days": 3,
           "recent_frequency": 3
         },
         {
           "number": "57",
-          "score": 185.88,
+          "score": 185.89,
           "frequency": 184,
-          "delay_days": 10,
+          "delay_days": 11,
           "recent_frequency": 1
         },
         {
           "number": "37",
-          "score": 184.43,
+          "score": 184.44,
           "frequency": 179,
-          "delay_days": 4,
-          "recent_frequency": 3
-        },
-        {
-          "number": "22",
-          "score": 182.81,
-          "frequency": 181,
-          "delay_days": 1,
-          "recent_frequency": 1
-        },
-        {
-          "number": "81",
-          "score": 181.94,
-          "frequency": 180,
-          "delay_days": 17,
-          "recent_frequency": 1
-        },
-        {
-          "number": "42",
-          "score": 180.43,
-          "frequency": 175,
-          "delay_days": 4,
-          "recent_frequency": 3
-        },
-        {
-          "number": "60",
-          "score": 179.44,
-          "frequency": 174,
           "delay_days": 5,
           "recent_frequency": 3
         },
         {
+          "number": "22",
+          "score": 182.82,
+          "frequency": 181,
+          "delay_days": 2,
+          "recent_frequency": 1
+        },
+        {
+          "number": "81",
+          "score": 181.95,
+          "frequency": 180,
+          "delay_days": 18,
+          "recent_frequency": 1
+        },
+        {
+          "number": "42",
+          "score": 180.44,
+          "frequency": 175,
+          "delay_days": 5,
+          "recent_frequency": 3
+        },
+        {
+          "number": "60",
+          "score": 179.45,
+          "frequency": 174,
+          "delay_days": 6,
+          "recent_frequency": 3
+        },
+        {
           "number": "51",
-          "score": 178.96,
+          "score": 178.97,
           "frequency": 177,
-          "delay_days": 20,
+          "delay_days": 21,
           "recent_frequency": 1
         },
         {
           "number": "52",
-          "score": 176.94,
+          "score": 176.95,
           "frequency": 175,
-          "delay_days": 17,
+          "delay_days": 18,
           "recent_frequency": 1
         }
       ],
@@ -128449,72 +128449,72 @@
           "suggestions": [
             {
               "number": "21",
-              "score": 197.39,
+              "score": 197.4,
               "frequency": 197,
-              "delay_days": 48,
+              "delay_days": 49,
               "recent_frequency": 0
             },
             {
               "number": "63",
               "score": 190.42,
               "frequency": 185,
-              "delay_days": 2,
+              "delay_days": 3,
               "recent_frequency": 3
             },
             {
               "number": "57",
-              "score": 185.88,
+              "score": 185.89,
               "frequency": 184,
-              "delay_days": 10,
+              "delay_days": 11,
               "recent_frequency": 1
             },
             {
               "number": "37",
-              "score": 184.43,
+              "score": 184.44,
               "frequency": 179,
-              "delay_days": 4,
-              "recent_frequency": 3
-            },
-            {
-              "number": "22",
-              "score": 182.81,
-              "frequency": 181,
-              "delay_days": 1,
-              "recent_frequency": 1
-            },
-            {
-              "number": "81",
-              "score": 181.94,
-              "frequency": 180,
-              "delay_days": 17,
-              "recent_frequency": 1
-            },
-            {
-              "number": "42",
-              "score": 180.43,
-              "frequency": 175,
-              "delay_days": 4,
-              "recent_frequency": 3
-            },
-            {
-              "number": "60",
-              "score": 179.44,
-              "frequency": 174,
               "delay_days": 5,
               "recent_frequency": 3
             },
             {
+              "number": "22",
+              "score": 182.82,
+              "frequency": 181,
+              "delay_days": 2,
+              "recent_frequency": 1
+            },
+            {
+              "number": "81",
+              "score": 181.95,
+              "frequency": 180,
+              "delay_days": 18,
+              "recent_frequency": 1
+            },
+            {
+              "number": "42",
+              "score": 180.44,
+              "frequency": 175,
+              "delay_days": 5,
+              "recent_frequency": 3
+            },
+            {
+              "number": "60",
+              "score": 179.45,
+              "frequency": 174,
+              "delay_days": 6,
+              "recent_frequency": 3
+            },
+            {
               "number": "51",
-              "score": 178.96,
+              "score": 178.97,
               "frequency": 177,
-              "delay_days": 20,
+              "delay_days": 21,
               "recent_frequency": 1
             },
             {
               "number": "52",
-              "score": 176.94,
+              "score": 176.95,
               "frequency": 175,
-              "delay_days": 17,
+              "delay_days": 18,
               "recent_frequency": 1
             }
           ],
@@ -128712,73 +128712,73 @@
       "suggestions": [
         {
           "number": "26",
-          "score": 139.97,
-          "frequency": 138,
-          "delay_days": 21,
-          "recent_frequency": 1
-        },
-        {
-          "number": "43",
-          "score": 132.89,
-          "frequency": 131,
-          "delay_days": 11,
-          "recent_frequency": 1
-        },
-        {
-          "number": "17",
-          "score": 127.35,
-          "frequency": 127,
-          "delay_days": 43,
-          "recent_frequency": 0
-        },
-        {
-          "number": "65",
-          "score": 126.98,
-          "frequency": 125,
+          "score": 162.98,
+          "frequency": 161,
           "delay_days": 22,
           "recent_frequency": 1
         },
         {
-          "number": "86",
-          "score": 125.42,
-          "frequency": 120,
-          "delay_days": 3,
-          "recent_frequency": 3
+          "number": "17",
+          "score": 151.36,
+          "frequency": 151,
+          "delay_days": 44,
+          "recent_frequency": 0
         },
         {
-          "number": "42",
-          "score": 124.22,
-          "frequency": 117,
-          "delay_days": 2,
-          "recent_frequency": 4
+          "number": "65",
+          "score": 150.99,
+          "frequency": 149,
+          "delay_days": 23,
+          "recent_frequency": 1
+        },
+        {
+          "number": "43",
+          "score": 148.9,
+          "frequency": 147,
+          "delay_days": 12,
+          "recent_frequency": 1
+        },
+        {
+          "number": "49",
+          "score": 148.89,
+          "frequency": 147,
+          "delay_days": 11,
+          "recent_frequency": 1
         },
         {
           "number": "89",
-          "score": 123.93,
-          "frequency": 122,
+          "score": 147.94,
+          "frequency": 146,
+          "delay_days": 17,
+          "recent_frequency": 1
+        },
+        {
+          "number": "21",
+          "score": 144.04,
+          "frequency": 142,
+          "delay_days": 29,
+          "recent_frequency": 1
+        },
+        {
+          "number": "59",
+          "score": 143.93,
+          "frequency": 142,
           "delay_days": 16,
           "recent_frequency": 1
         },
         {
-          "number": "56",
-          "score": 123.55,
-          "frequency": 123,
-          "delay_days": 67,
-          "recent_frequency": 0
-        },
-        {
-          "number": "59",
-          "score": 122.92,
-          "frequency": 121,
-          "delay_days": 15,
-          "recent_frequency": 1
-        },
-        {
           "number": "34",
-          "score": 122.4,
-          "frequency": 114,
-          "delay_days": 0,
+          "score": 142.41,
+          "frequency": 137,
+          "delay_days": 1,
           "recent_frequency": 3
+        },
+        {
+          "number": "72",
+          "score": 141.67,
+          "frequency": 138,
+          "delay_days": 8,
+          "recent_frequency": 2
         }
       ],
       "last_results": [
@@ -128872,6 +128872,2750 @@
         }
       ],
       "compare_daily_full": [
+        [
+          "20090624",
+          "Quiniela Real",
+          91,
+          50,
+          91
+        ],
+        [
+          "20090625",
+          "Quiniela Real",
+          73,
+          65,
+          64
+        ],
+        [
+          "20090626",
+          "Quiniela Real",
+          30,
+          37,
+          48
+        ],
+        [
+          "20090627",
+          "Quiniela Real",
+          37,
+          38,
+          10
+        ],
+        [
+          "20090628",
+          "Quiniela Real",
+          28,
+          78,
+          82
+        ],
+        [
+          "20090629",
+          "Quiniela Real",
+          18,
+          74,
+          53
+        ],
+        [
+          "20090630",
+          "Quiniela Real",
+          62,
+          61,
+          42
+        ],
+        [
+          "20090701",
+          "Quiniela Real",
+          76,
+          92,
+          67
+        ],
+        [
+          "20090702",
+          "Quiniela Real",
+          79,
+          74,
+          87
+        ],
+        [
+          "20090703",
+          "Quiniela Real",
+          78,
+          23,
+          75
+        ],
+        [
+          "20090704",
+          "Quiniela Real",
+          95,
+          81,
+          0
+        ],
+        [
+          "20090705",
+          "Quiniela Real",
+          81,
+          75,
+          41
+        ],
+        [
+          "20090706",
+          "Quiniela Real",
+          96,
+          85,
+          40
+        ],
+        [
+          "20090707",
+          "Quiniela Real",
+          68,
+          96,
+          90
+        ],
+        [
+          "20090708",
+          "Quiniela Real",
+          61,
+          25,
+          44
+        ],
+        [
+          "20090709",
+          "Quiniela Real",
+          33,
+          20,
+          12
+        ],
+        [
+          "20090710",
+          "Quiniela Real",
+          34,
+          4,
+          74
+        ],
+        [
+          "20090711",
+          "Quiniela Real",
+          25,
+          48,
+          78
+        ],
+        [
+          "20090712",
+          "Quiniela Real",
+          74,
+          67,
+          50
+        ],
+        [
+          "20090713",
+          "Quiniela Real",
+          13,
+          84,
+          1
+        ],
+        [
+          "20090714",
+          "Quiniela Real",
+          10,
+          58,
+          59
+        ],
+        [
+          "20090715",
+          "Quiniela Real",
+          44,
+          5,
+          62
+        ],
+        [
+          "20090716",
+          "Quiniela Real",
+          58,
+          89,
+          36
+        ],
+        [
+          "20090717",
+          "Quiniela Real",
+          11,
+          27,
+          45
+        ],
+        [
+          "20090718",
+          "Quiniela Real",
+          73,
+          55,
+          92
+        ],
+        [
+          "20090719",
+          "Quiniela Real",
+          86,
+          5,
+          94
+        ],
+        [
+          "20090721",
+          "Quiniela Real",
+          8,
+          4,
+          97
+        ],
+        [
+          "20090722",
+          "Quiniela Real",
+          19,
+          63,
+          94
+        ],
+        [
+          "20090723",
+          "Quiniela Real",
+          7,
+          84,
+          91
+        ],
+        [
+          "20090724",
+          "Quiniela Real",
+          28,
+          41,
+          55
+        ],
+        [
+          "20090725",
+          "Quiniela Real",
+          1,
+          90,
+          63
+        ],
+        [
+          "20090726",
+          "Quiniela Real",
+          56,
+          41,
+          66
+        ],
+        [
+          "20090727",
+          "Quiniela Real",
+          49,
+          92,
+          70
+        ],
+        [
+          "20090728",
+          "Quiniela Real",
+          88,
+          7,
+          13
+        ],
+        [
+          "20090729",
+          "Quiniela Real",
+          8,
+          21,
+          85
+        ],
+        [
+          "20090730",
+          "Quiniela Real",
+          9,
+          82,
+          77
+        ],
+        [
+          "20090731",
+          "Quiniela Real",
+          80,
+          69,
+          6
+        ],
+        [
+          "20090801",
+          "Quiniela Real",
+          71,
+          24,
+          64
+        ],
+        [
+          "20090802",
+          "Quiniela Real",
+          54,
+          86,
+          79
+        ],
+        [
+          "20090803",
+          "Quiniela Real",
+          62,
+          9,
+          32
+        ],
+        [
+          "20090804",
+          "Quiniela Real",
+          56,
+          71,
+          54
+        ],
+        [
+          "20090805",
+          "Quiniela Real",
+          74,
+          18,
+          27
+        ],
+        [
+          "20090806",
+          "Quiniela Real",
+          72,
+          68,
+          71
+        ],
+        [
+          "20090807",
+          "Quiniela Real",
+          8,
+          19,
+          74
+        ],
+        [
+          "20090808",
+          "Quiniela Real",
+          80,
+          97,
+          78
+        ],
+        [
+          "20090809",
+          "Quiniela Real",
+          4,
+          89,
+          9
+        ],
+        [
+          "20090810",
+          "Quiniela Real",
+          10,
+          30,
+          38
+        ],
+        [
+          "20090811",
+          "Quiniela Real",
+          51,
+          92,
+          90
+        ],
+        [
+          "20090812",
+          "Quiniela Real",
+          21,
+          11,
+          58
+        ],
+        [
+          "20090813",
+          "Quiniela Real",
+          80,
+          0,
+          26
+        ],
+        [
+          "20090814",
+          "Quiniela Real",
+          90,
+          9,
+          9
+        ],
+        [
+          "20090815",
+          "Quiniela Real",
+          47,
+          37,
+          93
+        ],
+        [
+          "20090816",
+          "Quiniela Real",
+          43,
+          46,
+          86
+        ],
+        [
+          "20090817",
+          "Quiniela Real",
+          25,
+          66,
+          6
+        ],
+        [
+          "20090818",
+          "Quiniela Real",
+          51,
+          3,
+          17
+        ],
+        [
+          "20090819",
+          "Quiniela Real",
+          22,
+          37,
+          97
+        ],
+        [
+          "20090820",
+          "Quiniela Real",
+          1,
+          66,
+          35
+        ],
+        [
+          "20090821",
+          "Quiniela Real",
+          21,
+          51,
+          36
+        ],
+        [
+          "20090822",
+          "Quiniela Real",
+          31,
+          91,
+          20
+        ],
+        [
+          "20090823",
+          "Quiniela Real",
+          82,
+          74,
+          23
+        ],
+        [
+          "20090824",
+          "Quiniela Real",
+          0,
+          4,
+          71
+        ],
+        [
+          "20090825",
+          "Quiniela Real",
+          74,
+          58,
+          0
+        ],
+        [
+          "20090826",
+          "Quiniela Real",
+          15,
+          51,
+          10
+        ],
+        [
+          "20090827",
+          "Quiniela Real",
+          42,
+          22,
+          45
+        ],
+        [
+          "20090828",
+          "Quiniela Real",
+          17,
+          26,
+          2
+        ],
+        [
+          "20090829",
+          "Quiniela Real",
+          55,
+          84,
+          32
+        ],
+        [
+          "20090830",
+          "Quiniela Real",
+          49,
+          8,
+          79
+        ],
+        [
+          "20090831",
+          "Quiniela Real",
+          86,
+          63,
+          60
+        ],
+        [
+          "20090901",
+          "Quiniela Real",
+          54,
+          49,
+          88
+        ],
+        [
+          "20090902",
+          "Quiniela Real",
+          10,
+          97,
+          55
+        ],
+        [
+          "20090903",
+          "Quiniela Real",
+          31,
+          94,
+          35
+        ],
+        [
+          "20090904",
+          "Quiniela Real",
+          17,
+          6,
+          91
+        ],
+        [
+          "20090905",
+          "Quiniela Real",
+          61,
+          73,
+          63
+        ],
+        [
+          "20090906",
+          "Quiniela Real",
+          95,
+          78,
+          53
+        ],
+        [
+          "20090907",
+          "Quiniela Real",
+          84,
+          88,
+          54
+        ],
+        [
+          "20090908",
+          "Quiniela Real",
+          11,
+          95,
+          12
+        ],
+        [
+          "20090909",
+          "Quiniela Real",
+          5,
+          18,
+          98
+        ],
+        [
+          "20090910",
+          "Quiniela Real",
+          60,
+          14,
+          5
+        ],
+        [
+          "20090911",
+          "Quiniela Real",
+          27,
+          40,
+          47
+        ],
+        [
+          "20090912",
+          "Quiniela Real",
+          17,
+          31,
+          43
+        ],
+        [
+          "20090913",
+          "Quiniela Real",
+          8,
+          84,
+          74
+        ],
+        [
+          "20090914",
+          "Quiniela Real",
+          39,
+          74,
+          6
+        ],
+        [
+          "20090915",
+          "Quiniela Real",
+          53,
+          84,
+          43
+        ],
+        [
+          "20090916",
+          "Quiniela Real",
+          96,
+          71,
+          72
+        ],
+        [
+          "20090917",
+          "Quiniela Real",
+          94,
+          65,
+          75
+        ],
+        [
+          "20090918",
+          "Quiniela Real",
+          24,
+          48,
+          64
+        ],
+        [
+          "20090919",
+          "Quiniela Real",
+          54,
+          44,
+          90
+        ],
+        [
+          "20090920",
+          "Quiniela Real",
+          22,
+          91,
+          80
+        ],
+        [
+          "20090921",
+          "Quiniela Real",
+          19,
+          68,
+          49
+        ],
+        [
+          "20090922",
+          "Quiniela Real",
+          17,
+          23,
+          68
+        ],
+        [
+          "20090923",
+          "Quiniela Real",
+          90,
+          50,
+          47
+        ],
+        [
+          "20090924",
+          "Quiniela Real",
+          48,
+          75,
+          6
+        ],
+        [
+          "20090925",
+          "Quiniela Real",
+          17,
+          59,
+          79
+        ],
+        [
+          "20090926",
+          "Quiniela Real",
+          83,
+          14,
+          91
+        ],
+        [
+          "20090927",
+          "Quiniela Real",
+          26,
+          87,
+          9
+        ],
+        [
+          "20090928",
+          "Quiniela Real",
+          67,
+          41,
+          48
+        ],
+        [
+          "20090929",
+          "Quiniela Real",
+          15,
+          79,
+          64
+        ],
+        [
+          "20090930",
+          "Quiniela Real",
+          17,
+          36,
+          41
+        ],
+        [
+          "20091001",
+          "Quiniela Real",
+          70,
+          91,
+          24
+        ],
+        [
+          "20091002",
+          "Quiniela Real",
+          50,
+          51,
+          80
+        ],
+        [
+          "20091003",
+          "Quiniela Real",
+          27,
+          22,
+          91
+        ],
+        [
+          "20091004",
+          "Quiniela Real",
+          4,
+          48,
+          76
+        ],
+        [
+          "20091005",
+          "Quiniela Real",
+          21,
+          36,
+          45
+        ],
+        [
+          "20091006",
+          "Quiniela Real",
+          96,
+          89,
+          51
+        ],
+        [
+          "20091007",
+          "Quiniela Real",
+          58,
+          21,
+          49
+        ],
+        [
+          "20091008",
+          "Quiniela Real",
+          65,
+          45,
+          78
+        ],
+        [
+          "20091009",
+          "Quiniela Real",
+          84,
+          84,
+          76
+        ],
+        [
+          "20091010",
+          "Quiniela Real",
+          14,
+          34,
+          62
+        ],
+        [
+          "20091011",
+          "Quiniela Real",
+          83,
+          0,
+          94
+        ],
+        [
+          "20091012",
+          "Quiniela Real",
+          14,
+          97,
+          9
+        ],
+        [
+          "20091013",
+          "Quiniela Real",
+          93,
+          99,
+          13
+        ],
+        [
+          "20091014",
+          "Quiniela Real",
+          55,
+          62,
+          49
+        ],
+        [
+          "20091015",
+          "Quiniela Real",
+          81,
+          25,
+          88
+        ],
+        [
+          "20091016",
+          "Quiniela Real",
+          36,
+          34,
+          85
+        ],
+        [
+          "20091017",
+          "Quiniela Real",
+          28,
+          62,
+          80
+        ],
+        [
+          "20091018",
+          "Quiniela Real",
+          63,
+          47,
+          37
+        ],
+        [
+          "20091019",
+          "Quiniela Real",
+          79,
+          77,
+          49
+        ],
+        [
+          "20091020",
+          "Quiniela Real",
+          64,
+          69,
+          16
+        ],
+        [
+          "20091021",
+          "Quiniela Real",
+          62,
+          52,
+          95
+        ],
+        [
+          "20091022",
+          "Quiniela Real",
+          16,
+          59,
+          2
+        ],
+        [
+          "20091023",
+          "Quiniela Real",
+          26,
+          19,
+          26
+        ],
+        [
+          "20091024",
+          "Quiniela Real",
+          61,
+          60,
+          89
+        ],
+        [
+          "20091025",
+          "Quiniela Real",
+          2,
+          95,
+          43
+        ],
+        [
+          "20091026",
+          "Quiniela Real",
+          33,
+          65,
+          81
+        ],
+        [
+          "20091027",
+          "Quiniela Real",
+          76,
+          52,
+          56
+        ],
+        [
+          "20091028",
+          "Quiniela Real",
+          1,
+          54,
+          69
+        ],
+        [
+          "20091029",
+          "Quiniela Real",
+          3,
+          79,
+          10
+        ],
+        [
+          "20091030",
+          "Quiniela Real",
+          53,
+          70,
+          48
+        ],
+        [
+          "20091031",
+          "Quiniela Real",
+          18,
+          66,
+          33
+        ],
+        [
+          "20091101",
+          "Quiniela Real",
+          11,
+          15,
+          32
+        ],
+        [
+          "20091102",
+          "Quiniela Real",
+          0,
+          97,
+          87
+        ],
+        [
+          "20091103",
+          "Quiniela Real",
+          15,
+          81,
+          94
+        ],
+        [
+          "20091104",
+          "Quiniela Real",
+          93,
+          92,
+          78
+        ],
+        [
+          "20091105",
+          "Quiniela Real",
+          48,
+          49,
+          97
+        ],
+        [
+          "20091106",
+          "Quiniela Real",
+          58,
+          1,
+          58
+        ],
+        [
+          "20091107",
+          "Quiniela Real",
+          24,
+          82,
+          20
+        ],
+        [
+          "20091108",
+          "Quiniela Real",
+          59,
+          8,
+          21
+        ],
+        [
+          "20091109",
+          "Quiniela Real",
+          11,
+          17,
+          91
+        ],
+        [
+          "20091110",
+          "Quiniela Real",
+          12,
+          63,
+          58
+        ],
+        [
+          "20091111",
+          "Quiniela Real",
+          26,
+          49,
+          64
+        ],
+        [
+          "20091112",
+          "Quiniela Real",
+          38,
+          92,
+          36
+        ],
+        [
+          "20091113",
+          "Quiniela Real",
+          78,
+          23,
+          85
+        ],
+        [
+          "20091114",
+          "Quiniela Real",
+          41,
+          38,
+          75
+        ],
+        [
+          "20091115",
+          "Quiniela Real",
+          9,
+          38,
+          97
+        ],
+        [
+          "20091116",
+          "Quiniela Real",
+          65,
+          5,
+          0
+        ],
+        [
+          "20091117",
+          "Quiniela Real",
+          38,
+          40,
+          73
+        ],
+        [
+          "20091118",
+          "Quiniela Real",
+          60,
+          36,
+          20
+        ],
+        [
+          "20091119",
+          "Quiniela Real",
+          2,
+          62,
+          0
+        ],
+        [
+          "20091120",
+          "Quiniela Real",
+          89,
+          68,
+          47
+        ],
+        [
+          "20091121",
+          "Quiniela Real",
+          74,
+          58,
+          26
+        ],
+        [
+          "20091122",
+          "Quiniela Real",
+          60,
+          11,
+          24
+        ],
+        [
+          "20091123",
+          "Quiniela Real",
+          19,
+          92,
+          95
+        ],
+        [
+          "20091124",
+          "Quiniela Real",
+          71,
+          16,
+          29
+        ],
+        [
+          "20091125",
+          "Quiniela Real",
+          10,
+          88,
+          87
+        ],
+        [
+          "20091126",
+          "Quiniela Real",
+          10,
+          37,
+          60
+        ],
+        [
+          "20091127",
+          "Quiniela Real",
+          21,
+          53,
+          97
+        ],
+        [
+          "20091128",
+          "Quiniela Real",
+          53,
+          60,
+          23
+        ],
+        [
+          "20091129",
+          "Quiniela Real",
+          56,
+          6,
+          37
+        ],
+        [
+          "20091130",
+          "Quiniela Real",
+          80,
+          45,
+          57
+        ],
+        [
+          "20091201",
+          "Quiniela Real",
+          36,
+          33,
+          56
+        ],
+        [
+          "20091202",
+          "Quiniela Real",
+          81,
+          50,
+          64
+        ],
+        [
+          "20091203",
+          "Quiniela Real",
+          37,
+          33,
+          55
+        ],
+        [
+          "20091204",
+          "Quiniela Real",
+          88,
+          50,
+          65
+        ],
+        [
+          "20091205",
+          "Quiniela Real",
+          93,
+          12,
+          53
+        ],
+        [
+          "20091206",
+          "Quiniela Real",
+          15,
+          93,
+          38
+        ],
+        [
+          "20091207",
+          "Quiniela Real",
+          20,
+          42,
+          94
+        ],
+        [
+          "20091208",
+          "Quiniela Real",
+          64,
+          65,
+          30
+        ],
+        [
+          "20091211",
+          "Quiniela Real",
+          80,
+          13,
+          12
+        ],
+        [
+          "20091212",
+          "Quiniela Real",
+          61,
+          29,
+          7
+        ],
+        [
+          "20091213",
+          "Quiniela Real",
+          72,
+          20,
+          58
+        ],
+        [
+          "20091214",
+          "Quiniela Real",
+          49,
+          39,
+          0
+        ],
+        [
+          "20091215",
+          "Quiniela Real",
+          61,
+          71,
+          81
+        ],
+        [
+          "20091216",
+          "Quiniela Real",
+          70,
+          20,
+          57
+        ],
+        [
+          "20091217",
+          "Quiniela Real",
+          46,
+          46,
+          9
+        ],
+        [
+          "20091218",
+          "Quiniela Real",
+          50,
+          50,
+          15
+        ],
+        [
+          "20091219",
+          "Quiniela Real",
+          89,
+          1,
+          56
+        ],
+        [
+          "20091220",
+          "Quiniela Real",
+          96,
+          61,
+          83
+        ],
+        [
+          "20091221",
+          "Quiniela Real",
+          49,
+          25,
+          97
+        ],
+        [
+          "20091222",
+          "Quiniela Real",
+          48,
+          38,
+          88
+        ],
+        [
+          "20091223",
+          "Quiniela Real",
+          59,
+          67,
+          16
+        ],
+        [
+          "20091226",
+          "Quiniela Real",
+          46,
+          28,
+          25
+        ],
+        [
+          "20091227",
+          "Quiniela Real",
+          27,
+          84,
+          53
+        ],
+        [
+          "20091228",
+          "Quiniela Real",
+          59,
+          90,
+          52
+        ],
+        [
+          "20091229",
+          "Quiniela Real",
+          22,
+          42,
+          82
+        ],
+        [
+          "20091230",
+          "Quiniela Real",
+          51,
+          70,
+          75
+        ],
+        [
+          "20100102",
+          "Quiniela Real",
+          96,
+          38,
+          71
+        ],
+        [
+          "20100103",
+          "Quiniela Real",
+          80,
+          74,
+          96
+        ],
+        [
+          "20100104",
+          "Quiniela Real",
+          37,
+          11,
+          92
+        ],
+        [
+          "20100105",
+          "Quiniela Real",
+          27,
+          0,
+          2
+        ],
+        [
+          "20100106",
+          "Quiniela Real",
+          79,
+          76,
+          44
+        ],
+        [
+          "20100107",
+          "Quiniela Real",
+          18,
+          98,
+          69
+        ],
+        [
+          "20100108",
+          "Quiniela Real",
+          97,
+          25,
+          21
+        ],
+        [
+          "20100109",
+          "Quiniela Real",
+          25,
+          24,
+          61
+        ],
+        [
+          "20100110",
+          "Quiniela Real",
+          24,
+          18,
+          59
+        ],
+        [
+          "20100111",
+          "Quiniela Real",
+          86,
+          47,
+          25
+        ],
+        [
+          "20100112",
+          "Quiniela Real",
+          29,
+          34,
+          55
+        ],
+        [
+          "20100113",
+          "Quiniela Real",
+          79,
+          21,
+          79
+        ],
+        [
+          "20100114",
+          "Quiniela Real",
+          31,
+          11,
+          95
+        ],
+        [
+          "20100115",
+          "Quiniela Real",
+          0,
+          17,
+          20
+        ],
+        [
+          "20100116",
+          "Quiniela Real",
+          0,
+          17,
+          20
+        ],
+        [
+          "20100117",
+          "Quiniela Real",
+          4,
+          71,
+          55
+        ],
+        [
+          "20100118",
+          "Quiniela Real",
+          15,
+          85,
+          70
+        ],
+        [
+          "20100119",
+          "Quiniela Real",
+          64,
+          62,
+          61
+        ],
+        [
+          "20100120",
+          "Quiniela Real",
+          61,
+          57,
+          43
+        ],
+        [
+          "20100121",
+          "Quiniela Real",
+          91,
+          67,
+          36
+        ],
+        [
+          "20100122",
+          "Quiniela Real",
+          4,
+          70,
+          39
+        ],
+        [
+          "20100123",
+          "Quiniela Real",
+          22,
+          96,
+          18
+        ],
+        [
+          "20100124",
+          "Quiniela Real",
+          32,
+          23,
+          67
+        ],
+        [
+          "20100125",
+          "Quiniela Real",
+          80,
+          28,
+          14
+        ],
+        [
+          "20100126",
+          "Quiniela Real",
+          18,
+          70,
+          54
+        ],
+        [
+          "20100127",
+          "Quiniela Real",
+          50,
+          14,
+          48
+        ],
+        [
+          "20100128",
+          "Quiniela Real",
+          75,
+          0,
+          26
+        ],
+        [
+          "20100129",
+          "Quiniela Real",
+          2,
+          0,
+          52
+        ],
+        [
+          "20100130",
+          "Quiniela Real",
+          21,
+          73,
+          37
+        ],
+        [
+          "20100131",
+          "Quiniela Real",
+          2,
+          9,
+          23
+        ],
+        [
+          "20100201",
+          "Quiniela Real",
+          64,
+          11,
+          4
+        ],
+        [
+          "20100202",
+          "Quiniela Real",
+          36,
+          7,
+          68
+        ],
+        [
+          "20100203",
+          "Quiniela Real",
+          62,
+          51,
+          65
+        ],
+        [
+          "20100204",
+          "Quiniela Real",
+          20,
+          50,
+          95
+        ],
+        [
+          "20100205",
+          "Quiniela Real",
+          31,
+          44,
+          52
+        ],
+        [
+          "20100206",
+          "Quiniela Real",
+          65,
+          30,
+          19
+        ],
+        [
+          "20100207",
+          "Quiniela Real",
+          22,
+          15,
+          89
+        ],
+        [
+          "20100208",
+          "Quiniela Real",
+          17,
+          44,
+          29
+        ],
+        [
+          "20100209",
+          "Quiniela Real",
+          19,
+          6,
+          48
+        ],
+        [
+          "20100210",
+          "Quiniela Real",
+          87,
+          41,
+          62
+        ],
+        [
+          "20100211",
+          "Quiniela Real",
+          5,
+          66,
+          10
+        ],
+        [
+          "20100212",
+          "Quiniela Real",
+          83,
+          87,
+          13
+        ],
+        [
+          "20100213",
+          "Quiniela Real",
+          0,
+          69,
+          70
+        ],
+        [
+          "20100214",
+          "Quiniela Real",
+          98,
+          22,
+          62
+        ],
+        [
+          "20100215",
+          "Quiniela Real",
+          67,
+          73,
+          77
+        ],
+        [
+          "20100216",
+          "Quiniela Real",
+          49,
+          28,
+          67
+        ],
+        [
+          "20100217",
+          "Quiniela Real",
+          93,
+          34,
+          81
+        ],
+        [
+          "20100218",
+          "Quiniela Real",
+          9,
+          43,
+          49
+        ],
+        [
+          "20100219",
+          "Quiniela Real",
+          63,
+          22,
+          89
+        ],
+        [
+          "20100220",
+          "Quiniela Real",
+          45,
+          29,
+          90
+        ],
+        [
+          "20100221",
+          "Quiniela Real",
+          29,
+          78,
+          8
+        ],
+        [
+          "20100222",
+          "Quiniela Real",
+          38,
+          21,
+          65
+        ],
+        [
+          "20100223",
+          "Quiniela Real",
+          33,
+          32,
+          2
+        ],
+        [
+          "20100224",
+          "Quiniela Real",
+          9,
+          83,
+          30
+        ],
+        [
+          "20100225",
+          "Quiniela Real",
+          7,
+          38,
+          94
+        ],
+        [
+          "20100226",
+          "Quiniela Real",
+          85,
+          75,
+          35
+        ],
+        [
+          "20100227",
+          "Quiniela Real",
+          30,
+          30,
+          34
+        ],
+        [
+          "20100228",
+          "Quiniela Real",
+          33,
+          84,
+          34
+        ],
+        [
+          "20100301",
+          "Quiniela Real",
+          31,
+          76,
+          12
+        ],
+        [
+          "20100302",
+          "Quiniela Real",
+          1,
+          44,
+          20
+        ],
+        [
+          "20100303",
+          "Quiniela Real",
+          31,
+          42,
+          81
+        ],
+        [
+          "20100304",
+          "Quiniela Real",
+          81,
+          15,
+          7
+        ],
+        [
+          "20100305",
+          "Quiniela Real",
+          81,
+          44,
+          75
+        ],
+        [
+          "20100306",
+          "Quiniela Real",
+          15,
+          62,
+          13
+        ],
+        [
+          "20100307",
+          "Quiniela Real",
+          91,
+          77,
+          75
+        ],
+        [
+          "20100308",
+          "Quiniela Real",
+          53,
+          71,
+          32
+        ],
+        [
+          "20100309",
+          "Quiniela Real",
+          20,
+          15,
+          26
+        ],
+        [
+          "20100310",
+          "Quiniela Real",
+          37,
+          23,
+          45
+        ],
+        [
+          "20100311",
+          "Quiniela Real",
+          27,
+          60,
+          20
+        ],
+        [
+          "20100312",
+          "Quiniela Real",
+          39,
+          84,
+          21
+        ],
+        [
+          "20100313",
+          "Quiniela Real",
+          21,
+          57,
+          59
+        ],
+        [
+          "20100314",
+          "Quiniela Real",
+          7,
+          34,
+          75
+        ],
+        [
+          "20100315",
+          "Quiniela Real",
+          56,
+          51,
+          38
+        ],
+        [
+          "20100316",
+          "Quiniela Real",
+          53,
+          84,
+          7
+        ],
+        [
+          "20100317",
+          "Quiniela Real",
+          14,
+          0,
+          67
+        ],
+        [
+          "20100318",
+          "Quiniela Real",
+          21,
+          90,
+          34
+        ],
+        [
+          "20100319",
+          "Quiniela Real",
+          88,
+          84,
+          36
+        ],
+        [
+          "20100320",
+          "Quiniela Real",
+          74,
+          7,
+          73
+        ],
+        [
+          "20100321",
+          "Quiniela Real",
+          99,
+          98,
+          52
+        ],
+        [
+          "20100322",
+          "Quiniela Real",
+          78,
+          82,
+          13
+        ],
+        [
+          "20100323",
+          "Quiniela Real",
+          23,
+          32,
+          76
+        ],
+        [
+          "20100324",
+          "Quiniela Real",
+          27,
+          12,
+          68
+        ],
+        [
+          "20100325",
+          "Quiniela Real",
+          11,
+          34,
+          63
+        ],
+        [
+          "20100326",
+          "Quiniela Real",
+          45,
+          53,
+          77
+        ],
+        [
+          "20100327",
+          "Quiniela Real",
+          26,
+          69,
+          97
+        ],
+        [
+          "20100328",
+          "Quiniela Real",
+          38,
+          14,
+          62
+        ],
+        [
+          "20100329",
+          "Quiniela Real",
+          69,
+          1,
+          71
+        ],
+        [
+          "20100330",
+          "Quiniela Real",
+          27,
+          21,
+          69
+        ],
+        [
+          "20100331",
+          "Quiniela Real",
+          2,
+          97,
+          11
+        ],
+        [
+          "20100404",
+          "Quiniela Real",
+          1,
+          65,
+          99
+        ],
+        [
+          "20100405",
+          "Quiniela Real",
+          96,
+          71,
+          45
+        ],
+        [
+          "20100406",
+          "Quiniela Real",
+          41,
+          65,
+          17
+        ],
+        [
+          "20100407",
+          "Quiniela Real",
+          20,
+          93,
+          51
+        ],
+        [
+          "20100408",
+          "Quiniela Real",
+          55,
+          56,
+          42
+        ],
+        [
+          "20100409",
+          "Quiniela Real",
+          25,
+          27,
+          56
+        ],
+        [
+          "20100410",
+          "Quiniela Real",
+          48,
+          40,
+          2
+        ],
+        [
+          "20100411",
+          "Quiniela Real",
+          27,
+          58,
+          84
+        ],
+        [
+          "20100412",
+          "Quiniela Real",
+          83,
+          5,
+          25
+        ],
+        [
+          "20100413",
+          "Quiniela Real",
+          42,
+          84,
+          47
+        ],
+        [
+          "20100414",
+          "Quiniela Real",
+          95,
+          48,
+          62
+        ],
+        [
+          "20100415",
+          "Quiniela Real",
+          31,
+          72,
+          66
+        ],
+        [
+          "20100416",
+          "Quiniela Real",
+          55,
+          13,
+          94
+        ],
+        [
+          "20100417",
+          "Quiniela Real",
+          45,
+          64,
+          75
+        ],
+        [
+          "20100418",
+          "Quiniela Real",
+          87,
+          89,
+          74
+        ],
+        [
+          "20100419",
+          "Quiniela Real",
+          25,
+          88,
+          91
+        ],
+        [
+          "20100420",
+          "Quiniela Real",
+          22,
+          69,
+          3
+        ],
+        [
+          "20100421",
+          "Quiniela Real",
+          84,
+          67,
+          28
+        ],
+        [
+          "20100422",
+          "Quiniela Real",
+          68,
+          88,
+          70
+        ],
+        [
+          "20100423",
+          "Quiniela Real",
+          98,
+          12,
+          89
+        ],
+        [
+          "20100424",
+          "Quiniela Real",
+          34,
+          76,
+          74
+        ],
+        [
+          "20100425",
+          "Quiniela Real",
+          41,
+          43,
+          80
+        ],
+        [
+          "20100426",
+          "Quiniela Real",
+          97,
+          94,
+          3
+        ],
+        [
+          "20100427",
+          "Quiniela Real",
+          90,
+          2,
+          83
+        ],
+        [
+          "20100428",
+          "Quiniela Real",
+          44,
+          30,
+          39
+        ],
+        [
+          "20100429",
+          "Quiniela Real",
+          67,
+          23,
+          86
+        ],
+        [
+          "20100430",
+          "Quiniela Real",
+          6,
+          62,
+          50
+        ],
+        [
+          "20100501",
+          "Quiniela Real",
+          37,
+          3,
+          52
+        ],
+        [
+          "20100502",
+          "Quiniela Real",
+          57,
+          23,
+          78
+        ],
+        [
+          "20100503",
+          "Quiniela Real",
+          31,
+          35,
+          89
+        ],
+        [
+          "20100504",
+          "Quiniela Real",
+          97,
+          95,
+          66
+        ],
+        [
+          "20100505",
+          "Quiniela Real",
+          22,
+          76,
+          44
+        ],
+        [
+          "20100506",
+          "Quiniela Real",
+          80,
+          40,
+          13
+        ],
+        [
+          "20100507",
+          "Quiniela Real",
+          39,
+          68,
+          2
+        ],
+        [
+          "20100508",
+          "Quiniela Real",
+          67,
+          63,
+          90
+        ],
+        [
+          "20100509",
+          "Quiniela Real",
+          3,
+          61,
+          66
+        ],
+        [
+          "20100510",
+          "Quiniela Real",
+          57,
+          61,
+          71
+        ],
+        [
+          "20100511",
+          "Quiniela Real",
+          96,
+          24,
+          36
+        ],
+        [
+          "20100512",
+          "Quiniela Real",
+          79,
+          13,
+          11
+        ],
+        [
+          "20100513",
+          "Quiniela Real",
+          29,
+          52,
+          22
+        ],
+        [
+          "20100514",
+          "Quiniela Real",
+          34,
+          33,
+          79
+        ],
+        [
+          "20100515",
+          "Quiniela Real",
+          46,
+          47,
+          20
+        ],
+        [
+          "20100517",
+          "Quiniela Real",
+          18,
+          62,
+          74
+        ],
+        [
+          "20100518",
+          "Quiniela Real",
+          83,
+          99,
+          48
+        ],
+        [
+          "20100519",
+          "Quiniela Real",
+          62,
+          0,
+          39
+        ],
+        [
+          "20100520",
+          "Quiniela Real",
+          3,
+          59,
+          33
+        ],
+        [
+          "20100521",
+          "Quiniela Real",
+          33,
+          74,
+          63
+        ],
+        [
+          "20100522",
+          "Quiniela Real",
+          69,
+          62,
+          41
+        ],
+        [
+          "20100523",
+          "Quiniela Real",
+          9,
+          87,
+          46
+        ],
+        [
+          "20100524",
+          "Quiniela Real",
+          71,
+          73,
+          4
+        ],
+        [
+          "20100525",
+          "Quiniela Real",
+          31,
+          5,
+          49
+        ],
+        [
+          "20100526",
+          "Quiniela Real",
+          20,
+          28,
+          15
+        ],
+        [
+          "20100527",
+          "Quiniela Real",
+          33,
+          62,
+          44
+        ],
+        [
+          "20100528",
+          "Quiniela Real",
+          41,
+          36,
+          63
+        ],
+        [
+          "20100529",
+          "Quiniela Real",
+          7,
+          69,
+          5
+        ],
+        [
+          "20100530",
+          "Quiniela Real",
+          25,
+          98,
+          68
+        ],
+        [
+          "20100531",
+          "Quiniela Real",
+          97,
+          95,
+          35
+        ],
+        [
+          "20100601",
+          "Quiniela Real",
+          66,
+          77,
+          61
+        ],
+        [
+          "20100602",
+          "Quiniela Real",
+          58,
+          54,
+          18
+        ],
+        [
+          "20100603",
+          "Quiniela Real",
+          31,
+          61,
+          56
+        ],
+        [
+          "20100604",
+          "Quiniela Real",
+          28,
+          85,
+          59
+        ],
+        [
+          "20100605",
+          "Quiniela Real",
+          46,
+          61,
+          31
+        ],
+        [
+          "20100606",
+          "Quiniela Real",
+          32,
+          27,
+          10
+        ],
+        [
+          "20100607",
+          "Quiniela Real",
+          93,
+          81,
+          74
+        ],
+        [
+          "20100608",
+          "Quiniela Real",
+          53,
+          98,
+          12
+        ],
+        [
+          "20100609",
+          "Quiniela Real",
+          21,
+          7,
+          89
+        ],
+        [
+          "20100610",
+          "Quiniela Real",
+          76,
+          89,
+          61
+        ],
+        [
+          "20100611",
+          "Quiniela Real",
+          97,
+          14,
+          20
+        ],
+        [
+          "20100612",
+          "Quiniela Real",
+          69,
+          0,
+          80
+        ],
+        [
+          "20100613",
+          "Quiniela Real",
+          3,
+          71,
+          98
+        ],
+        [
+          "20100614",
+          "Quiniela Real",
+          71,
+          50,
+          8
+        ],
+        [
+          "20100615",
+          "Quiniela Real",
+          41,
+          67,
+          42
+        ],
+        [
+          "20100616",
+          "Quiniela Real",
+          50,
+          84,
+          54
+        ],
+        [
+          "20100617",
+          "Quiniela Real",
+          79,
+          89,
+          26
+        ],
+        [
+          "20100618",
+          "Quiniela Real",
+          49,
+          44,
+          93
+        ],
+        [
+          "20100619",
+          "Quiniela Real",
+          84,
+          72,
+          8
+        ],
+        [
+          "20100620",
+          "Quiniela Real",
+          49,
+          90,
+          46
+        ],
+        [
+          "20100621",
+          "Quiniela Real",
+          52,
+          1,
+          44
+        ],
+        [
+          "20100622",
+          "Quiniela Real",
+          83,
+          69,
+          69
+        ],
+        [
+          "20100623",
+          "Quiniela Real",
+          43,
+          9,
+          36
+        ],
+        [
+          "20100624",
+          "Quiniela Real",
+          88,
+          21,
+          92
+        ],
+        [
+          "20100625",
+          "Quiniela Real",
+          69,
+          74,
+          84
+        ],
+        [
+          "20100626",
+          "Quiniela Real",
+          79,
+          30,
+          7
+        ],
+        [
+          "20100627",
+          "Quiniela Real",
+          76,
+          73,
+          14
+        ],
+        [
+          "20100628",
+          "Quiniela Real",
+          47,
+          76,
+          31
+        ],
+        [
+          "20100629",
+          "Quiniela Real",
+          29,
+          23,
+          17
+        ],
+        [
+          "20100630",
+          "Quiniela Real",
+          40,
+          36,
+          93
+        ],
+        [
+          "20100701",
+          "Quiniela Real",
+          95,
+          92,
+          16
+        ],
+        [
+          "20100702",
+          "Quiniela Real",
+          92,
+          44,
+          39
+        ],
+        [
+          "20100703",
+          "Quiniela Real",
+          34,
+          4,
+          1
+        ],
+        [
+          "20100704",
+          "Quiniela Real",
+          66,
+          31,
+          52
+        ],
+        [
+          "20100705",
+          "Quiniela Real",
+          24,
+          99,
+          23
+        ],
+        [
+          "20100706",
+          "Quiniela Real",
+          60,
+          37,
+          40
+        ],
+        [
+          "20100707",
+          "Quiniela Real",
+          10,
+          99,
+          72
+        ],
+        [
+          "20100708",
+          "Quiniela Real",
+          85,
+          68,
+          19
+        ],
+        [
+          "20100709",
+          "Quiniela Real",
+          52,
+          39,
+          12
+        ],
+        [
+          "20100710",
+          "Quiniela Real",
+          4,
+          83,
+          26
+        ],
+        [
+          "20100711",
+          "Quiniela Real",
+          0,
+          36,
+          4
+        ],
+        [
+          "20100712",
+          "Quiniela Real",
+          53,
+          79,
+          75
+        ],
+        [
+          "20100713",
+          "Quiniela Real",
+          89,
+          35,
+          15
+        ],
+        [
+          "20100714",
+          "Quiniela Real",
+          21,
+          13,
+          13
+        ],
+        [
+          "20100715",
+          "Quiniela Real",
+          73,
+          41,
+          19
+        ],
+        [
+          "20100716",
+          "Quiniela Real",
+          28,
+          33,
+          57
+        ],
+        [
+          "20100717",
+          "Quiniela Real",
+          46,
+          47,
+          72
+        ],
+        [
+          "20100718",
+          "Quiniela Real",
+          1,
+          96,
+          78
+        ],
+        [
+          "20100719",
+          "Quiniela Real",
+          0,
+          19,
+          50
+        ],
+        [
+          "20100720",
+          "Quiniela Real",
+          15,
+          1,
+          53
+        ],
+        [
+          "20100721",
+          "Quiniela Real",
+          90,
+          79,
+          92
+        ],
+        [
+          "20100722",
+          "Quiniela Real",
+          40,
+          48,
+          80
+        ],
+        [
+          "20100723",
+          "Quiniela Real",
+          97,
+          17,
+          87
+        ],
+        [
+          "20100724",
+          "Quiniela Real",
+          24,
+          59,
+          72
+        ],
+        [
+          "20100725",
+          "Quiniela Real",
+          16,
+          54,
+          8
+        ],
+        [
+          "20100726",
+          "Quiniela Real",
+          10,
+          52,
+          96
+        ],
+        [
+          "20100727",
+          "Quiniela Real",
+          59,
+          22,
+          91
+        ],
+        [
+          "20100728",
+          "Quiniela Real",
+          71,
+          40,
+          5
+        ],
+        [
+          "20100729",
+          "Quiniela Real",
+          62,
+          9,
+          96
+        ],
+        [
+          "20100730",
+          "Quiniela Real",
+          68,
+          17,
+          33
+        ],
+        [
+          "20100731",
+          "Quiniela Real",
+          88,
+          73,
+          7
+        ],
         [
           "20100801",
           "Quiniela Real",
@@ -130091,6 +132835,1658 @@
           99
         ],
         [
+          "20110128",
+          "Quiniela Real",
+          65,
+          54,
+          34
+        ],
+        [
+          "20110129",
+          "Quiniela Real",
+          12,
+          13,
+          10
+        ],
+        [
+          "20110130",
+          "Quiniela Real",
+          14,
+          23,
+          5
+        ],
+        [
+          "20110131",
+          "Quiniela Real",
+          37,
+          87,
+          23
+        ],
+        [
+          "20110201",
+          "Quiniela Real",
+          49,
+          81,
+          41
+        ],
+        [
+          "20110202",
+          "Quiniela Real",
+          93,
+          8,
+          19
+        ],
+        [
+          "20110203",
+          "Quiniela Real",
+          29,
+          95,
+          67
+        ],
+        [
+          "20110204",
+          "Quiniela Real",
+          87,
+          77,
+          7
+        ],
+        [
+          "20110205",
+          "Quiniela Real",
+          88,
+          0,
+          54
+        ],
+        [
+          "20110206",
+          "Quiniela Real",
+          24,
+          99,
+          1
+        ],
+        [
+          "20110207",
+          "Quiniela Real",
+          23,
+          13,
+          35
+        ],
+        [
+          "20110208",
+          "Quiniela Real",
+          52,
+          54,
+          84
+        ],
+        [
+          "20110209",
+          "Quiniela Real",
+          58,
+          39,
+          59
+        ],
+        [
+          "20110210",
+          "Quiniela Real",
+          90,
+          52,
+          19
+        ],
+        [
+          "20110211",
+          "Quiniela Real",
+          16,
+          3,
+          55
+        ],
+        [
+          "20110212",
+          "Quiniela Real",
+          94,
+          72,
+          66
+        ],
+        [
+          "20110213",
+          "Quiniela Real",
+          90,
+          38,
+          20
+        ],
+        [
+          "20110214",
+          "Quiniela Real",
+          81,
+          78,
+          20
+        ],
+        [
+          "20110215",
+          "Quiniela Real",
+          61,
+          38,
+          98
+        ],
+        [
+          "20110216",
+          "Quiniela Real",
+          79,
+          91,
+          49
+        ],
+        [
+          "20110217",
+          "Quiniela Real",
+          17,
+          24,
+          96
+        ],
+        [
+          "20110218",
+          "Quiniela Real",
+          4,
+          29,
+          85
+        ],
+        [
+          "20110219",
+          "Quiniela Real",
+          8,
+          47,
+          75
+        ],
+        [
+          "20110220",
+          "Quiniela Real",
+          18,
+          32,
+          16
+        ],
+        [
+          "20110221",
+          "Quiniela Real",
+          83,
+          57,
+          83
+        ],
+        [
+          "20110222",
+          "Quiniela Real",
+          48,
+          17,
+          35
+        ],
+        [
+          "20110223",
+          "Quiniela Real",
+          91,
+          45,
+          26
+        ],
+        [
+          "20110224",
+          "Quiniela Real",
+          76,
+          71,
+          95
+        ],
+        [
+          "20110225",
+          "Quiniela Real",
+          53,
+          41,
+          80
+        ],
+        [
+          "20110226",
+          "Quiniela Real",
+          70,
+          67,
+          65
+        ],
+        [
+          "20110227",
+          "Quiniela Real",
+          32,
+          76,
+          83
+        ],
+        [
+          "20110228",
+          "Quiniela Real",
+          87,
+          29,
+          25
+        ],
+        [
+          "20110301",
+          "Quiniela Real",
+          73,
+          81,
+          72
+        ],
+        [
+          "20110302",
+          "Quiniela Real",
+          93,
+          96,
+          54
+        ],
+        [
+          "20110303",
+          "Quiniela Real",
+          85,
+          69,
+          52
+        ],
+        [
+          "20110304",
+          "Quiniela Real",
+          3,
+          75,
+          48
+        ],
+        [
+          "20110305",
+          "Quiniela Real",
+          62,
+          49,
+          93
+        ],
+        [
+          "20110306",
+          "Quiniela Real",
+          3,
+          53,
+          31
+        ],
+        [
+          "20110307",
+          "Quiniela Real",
+          4,
+          66,
+          51
+        ],
+        [
+          "20110308",
+          "Quiniela Real",
+          59,
+          71,
+          28
+        ],
+        [
+          "20110309",
+          "Quiniela Real",
+          81,
+          80,
+          64
+        ],
+        [
+          "20110310",
+          "Quiniela Real",
+          29,
+          97,
+          90
+        ],
+        [
+          "20110311",
+          "Quiniela Real",
+          89,
+          81,
+          21
+        ],
+        [
+          "20110312",
+          "Quiniela Real",
+          64,
+          26,
+          99
+        ],
+        [
+          "20110313",
+          "Quiniela Real",
+          89,
+          27,
+          69
+        ],
+        [
+          "20110314",
+          "Quiniela Real",
+          42,
+          10,
+          95
+        ],
+        [
+          "20110315",
+          "Quiniela Real",
+          87,
+          99,
+          52
+        ],
+        [
+          "20110316",
+          "Quiniela Real",
+          93,
+          25,
+          12
+        ],
+        [
+          "20110317",
+          "Quiniela Real",
+          16,
+          77,
+          81
+        ],
+        [
+          "20110318",
+          "Quiniela Real",
+          6,
+          47,
+          55
+        ],
+        [
+          "20110319",
+          "Quiniela Real",
+          17,
+          24,
+          13
+        ],
+        [
+          "20110320",
+          "Quiniela Real",
+          40,
+          79,
+          35
+        ],
+        [
+          "20110321",
+          "Quiniela Real",
+          46,
+          81,
+          41
+        ],
+        [
+          "20110322",
+          "Quiniela Real",
+          60,
+          56,
+          18
+        ],
+        [
+          "20110323",
+          "Quiniela Real",
+          88,
+          4,
+          34
+        ],
+        [
+          "20110324",
+          "Quiniela Real",
+          72,
+          28,
+          75
+        ],
+        [
+          "20110325",
+          "Quiniela Real",
+          24,
+          65,
+          50
+        ],
+        [
+          "20110326",
+          "Quiniela Real",
+          39,
+          41,
+          53
+        ],
+        [
+          "20110327",
+          "Quiniela Real",
+          68,
+          49,
+          93
+        ],
+        [
+          "20110328",
+          "Quiniela Real",
+          10,
+          37,
+          80
+        ],
+        [
+          "20110329",
+          "Quiniela Real",
+          4,
+          17,
+          47
+        ],
+        [
+          "20110330",
+          "Quiniela Real",
+          76,
+          91,
+          28
+        ],
+        [
+          "20110331",
+          "Quiniela Real",
+          42,
+          25,
+          23
+        ],
+        [
+          "20110401",
+          "Quiniela Real",
+          24,
+          84,
+          28
+        ],
+        [
+          "20110402",
+          "Quiniela Real",
+          41,
+          70,
+          49
+        ],
+        [
+          "20110403",
+          "Quiniela Real",
+          50,
+          51,
+          72
+        ],
+        [
+          "20110404",
+          "Quiniela Real",
+          91,
+          61,
+          51
+        ],
+        [
+          "20110405",
+          "Quiniela Real",
+          45,
+          1,
+          26
+        ],
+        [
+          "20110406",
+          "Quiniela Real",
+          5,
+          99,
+          77
+        ],
+        [
+          "20110407",
+          "Quiniela Real",
+          34,
+          77,
+          75
+        ],
+        [
+          "20110408",
+          "Quiniela Real",
+          81,
+          30,
+          62
+        ],
+        [
+          "20110409",
+          "Quiniela Real",
+          70,
+          62,
+          2
+        ],
+        [
+          "20110410",
+          "Quiniela Real",
+          21,
+          85,
+          13
+        ],
+        [
+          "20110411",
+          "Quiniela Real",
+          39,
+          80,
+          6
+        ],
+        [
+          "20110412",
+          "Quiniela Real",
+          42,
+          84,
+          68
+        ],
+        [
+          "20110413",
+          "Quiniela Real",
+          31,
+          72,
+          58
+        ],
+        [
+          "20110414",
+          "Quiniela Real",
+          77,
+          58,
+          96
+        ],
+        [
+          "20110415",
+          "Quiniela Real",
+          53,
+          24,
+          5
+        ],
+        [
+          "20110416",
+          "Quiniela Real",
+          97,
+          29,
+          36
+        ],
+        [
+          "20110417",
+          "Quiniela Real",
+          77,
+          63,
+          89
+        ],
+        [
+          "20110418",
+          "Quiniela Real",
+          58,
+          43,
+          81
+        ],
+        [
+          "20110419",
+          "Quiniela Real",
+          6,
+          87,
+          0
+        ],
+        [
+          "20110420",
+          "Quiniela Real",
+          97,
+          73,
+          98
+        ],
+        [
+          "20110421",
+          "Quiniela Real",
+          78,
+          92,
+          99
+        ],
+        [
+          "20110423",
+          "Quiniela Real",
+          80,
+          16,
+          91
+        ],
+        [
+          "20110424",
+          "Quiniela Real",
+          4,
+          21,
+          99
+        ],
+        [
+          "20110425",
+          "Quiniela Real",
+          32,
+          18,
+          65
+        ],
+        [
+          "20110426",
+          "Quiniela Real",
+          91,
+          68,
+          58
+        ],
+        [
+          "20110427",
+          "Quiniela Real",
+          88,
+          78,
+          41
+        ],
+        [
+          "20110428",
+          "Quiniela Real",
+          14,
+          74,
+          9
+        ],
+        [
+          "20110429",
+          "Quiniela Real",
+          30,
+          34,
+          26
+        ],
+        [
+          "20110430",
+          "Quiniela Real",
+          79,
+          34,
+          41
+        ],
+        [
+          "20110501",
+          "Quiniela Real",
+          16,
+          11,
+          97
+        ],
+        [
+          "20110502",
+          "Quiniela Real",
+          10,
+          14,
+          91
+        ],
+        [
+          "20110503",
+          "Quiniela Real",
+          7,
+          7,
+          78
+        ],
+        [
+          "20110504",
+          "Quiniela Real",
+          25,
+          97,
+          11
+        ],
+        [
+          "20110505",
+          "Quiniela Real",
+          96,
+          43,
+          34
+        ],
+        [
+          "20110506",
+          "Quiniela Real",
+          5,
+          13,
+          85
+        ],
+        [
+          "20110507",
+          "Quiniela Real",
+          17,
+          98,
+          91
+        ],
+        [
+          "20110508",
+          "Quiniela Real",
+          41,
+          65,
+          12
+        ],
+        [
+          "20110509",
+          "Quiniela Real",
+          11,
+          0,
+          74
+        ],
+        [
+          "20110510",
+          "Quiniela Real",
+          91,
+          66,
+          81
+        ],
+        [
+          "20110511",
+          "Quiniela Real",
+          54,
+          83,
+          0
+        ],
+        [
+          "20110512",
+          "Quiniela Real",
+          67,
+          48,
+          38
+        ],
+        [
+          "20110513",
+          "Quiniela Real",
+          90,
+          27,
+          55
+        ],
+        [
+          "20110514",
+          "Quiniela Real",
+          25,
+          20,
+          54
+        ],
+        [
+          "20110515",
+          "Quiniela Real",
+          52,
+          78,
+          4
+        ],
+        [
+          "20110516",
+          "Quiniela Real",
+          79,
+          26,
+          32
+        ],
+        [
+          "20110517",
+          "Quiniela Real",
+          90,
+          39,
+          52
+        ],
+        [
+          "20110518",
+          "Quiniela Real",
+          29,
+          1,
+          93
+        ],
+        [
+          "20110519",
+          "Quiniela Real",
+          91,
+          18,
+          55
+        ],
+        [
+          "20110520",
+          "Quiniela Real",
+          79,
+          86,
+          44
+        ],
+        [
+          "20110521",
+          "Quiniela Real",
+          3,
+          87,
+          29
+        ],
+        [
+          "20110522",
+          "Quiniela Real",
+          44,
+          90,
+          7
+        ],
+        [
+          "20110523",
+          "Quiniela Real",
+          52,
+          41,
+          54
+        ],
+        [
+          "20110524",
+          "Quiniela Real",
+          96,
+          6,
+          84
+        ],
+        [
+          "20110525",
+          "Quiniela Real",
+          85,
+          33,
+          5
+        ],
+        [
+          "20110526",
+          "Quiniela Real",
+          10,
+          46,
+          10
+        ],
+        [
+          "20110527",
+          "Quiniela Real",
+          80,
+          72,
+          97
+        ],
+        [
+          "20110528",
+          "Quiniela Real",
+          53,
+          1,
+          49
+        ],
+        [
+          "20110529",
+          "Quiniela Real",
+          77,
+          27,
+          87
+        ],
+        [
+          "20110530",
+          "Quiniela Real",
+          58,
+          30,
+          98
+        ],
+        [
+          "20110531",
+          "Quiniela Real",
+          45,
+          26,
+          36
+        ],
+        [
+          "20110601",
+          "Quiniela Real",
+          69,
+          63,
+          25
+        ],
+        [
+          "20110602",
+          "Quiniela Real",
+          94,
+          46,
+          74
+        ],
+        [
+          "20110603",
+          "Quiniela Real",
+          88,
+          0,
+          4
+        ],
+        [
+          "20110604",
+          "Quiniela Real",
+          57,
+          16,
+          31
+        ],
+        [
+          "20110605",
+          "Quiniela Real",
+          21,
+          1,
+          73
+        ],
+        [
+          "20110606",
+          "Quiniela Real",
+          65,
+          21,
+          39
+        ],
+        [
+          "20110607",
+          "Quiniela Real",
+          74,
+          32,
+          7
+        ],
+        [
+          "20110608",
+          "Quiniela Real",
+          86,
+          90,
+          47
+        ],
+        [
+          "20110609",
+          "Quiniela Real",
+          48,
+          9,
+          49
+        ],
+        [
+          "20110610",
+          "Quiniela Real",
+          64,
+          10,
+          82
+        ],
+        [
+          "20110611",
+          "Quiniela Real",
+          1,
+          60,
+          70
+        ],
+        [
+          "20110612",
+          "Quiniela Real",
+          99,
+          72,
+          62
+        ],
+        [
+          "20110613",
+          "Quiniela Real",
+          75,
+          29,
+          45
+        ],
+        [
+          "20110614",
+          "Quiniela Real",
+          17,
+          46,
+          3
+        ],
+        [
+          "20110615",
+          "Quiniela Real",
+          87,
+          60,
+          20
+        ],
+        [
+          "20110616",
+          "Quiniela Real",
+          78,
+          37,
+          76
+        ],
+        [
+          "20110617",
+          "Quiniela Real",
+          64,
+          22,
+          3
+        ],
+        [
+          "20110618",
+          "Quiniela Real",
+          65,
+          66,
+          18
+        ],
+        [
+          "20110619",
+          "Quiniela Real",
+          4,
+          60,
+          78
+        ],
+        [
+          "20110620",
+          "Quiniela Real",
+          84,
+          94,
+          67
+        ],
+        [
+          "20110621",
+          "Quiniela Real",
+          68,
+          55,
+          93
+        ],
+        [
+          "20110622",
+          "Quiniela Real",
+          39,
+          33,
+          28
+        ],
+        [
+          "20110623",
+          "Quiniela Real",
+          93,
+          60,
+          43
+        ],
+        [
+          "20110624",
+          "Quiniela Real",
+          44,
+          69,
+          60
+        ],
+        [
+          "20110625",
+          "Quiniela Real",
+          47,
+          54,
+          30
+        ],
+        [
+          "20110626",
+          "Quiniela Real",
+          96,
+          82,
+          88
+        ],
+        [
+          "20110627",
+          "Quiniela Real",
+          19,
+          41,
+          54
+        ],
+        [
+          "20110628",
+          "Quiniela Real",
+          45,
+          33,
+          9
+        ],
+        [
+          "20110629",
+          "Quiniela Real",
+          63,
+          13,
+          17
+        ],
+        [
+          "20110630",
+          "Quiniela Real",
+          47,
+          72,
+          2
+        ],
+        [
+          "20110701",
+          "Quiniela Real",
+          82,
+          72,
+          60
+        ],
+        [
+          "20110702",
+          "Quiniela Real",
+          7,
+          97,
+          96
+        ],
+        [
+          "20110703",
+          "Quiniela Real",
+          88,
+          10,
+          74
+        ],
+        [
+          "20110704",
+          "Quiniela Real",
+          18,
+          25,
+          50
+        ],
+        [
+          "20110705",
+          "Quiniela Real",
+          5,
+          70,
+          81
+        ],
+        [
+          "20110706",
+          "Quiniela Real",
+          8,
+          26,
+          71
+        ],
+        [
+          "20110707",
+          "Quiniela Real",
+          83,
+          9,
+          39
+        ],
+        [
+          "20110708",
+          "Quiniela Real",
+          93,
+          1,
+          74
+        ],
+        [
+          "20110709",
+          "Quiniela Real",
+          26,
+          69,
+          49
+        ],
+        [
+          "20110710",
+          "Quiniela Real",
+          35,
+          73,
+          53
+        ],
+        [
+          "20110711",
+          "Quiniela Real",
+          74,
+          96,
+          15
+        ],
+        [
+          "20110712",
+          "Quiniela Real",
+          11,
+          89,
+          65
+        ],
+        [
+          "20110713",
+          "Quiniela Real",
+          64,
+          65,
+          50
+        ],
+        [
+          "20110714",
+          "Quiniela Real",
+          31,
+          1,
+          74
+        ],
+        [
+          "20110715",
+          "Quiniela Real",
+          44,
+          69,
+          17
+        ],
+        [
+          "20110716",
+          "Quiniela Real",
+          0,
+          59,
+          73
+        ],
+        [
+          "20110717",
+          "Quiniela Real",
+          13,
+          27,
+          56
+        ],
+        [
+          "20110718",
+          "Quiniela Real",
+          54,
+          95,
+          21
+        ],
+        [
+          "20110719",
+          "Quiniela Real",
+          75,
+          1,
+          63
+        ],
+        [
+          "20110720",
+          "Quiniela Real",
+          84,
+          24,
+          94
+        ],
+        [
+          "20110721",
+          "Quiniela Real",
+          61,
+          67,
+          1
+        ],
+        [
+          "20110722",
+          "Quiniela Real",
+          47,
+          82,
+          65
+        ],
+        [
+          "20110723",
+          "Quiniela Real",
+          95,
+          52,
+          43
+        ],
+        [
+          "20110724",
+          "Quiniela Real",
+          93,
+          72,
+          54
+        ],
+        [
+          "20110725",
+          "Quiniela Real",
+          49,
+          96,
+          99
+        ],
+        [
+          "20110726",
+          "Quiniela Real",
+          49,
+          13,
+          26
+        ],
+        [
+          "20110727",
+          "Quiniela Real",
+          55,
+          20,
+          23
+        ],
+        [
+          "20110728",
+          "Quiniela Real",
+          69,
+          79,
+          86
+        ],
+        [
+          "20110729",
+          "Quiniela Real",
+          52,
+          32,
+          46
+        ],
+        [
+          "20110730",
+          "Quiniela Real",
+          85,
+          11,
+          23
+        ],
+        [
+          "20110731",
+          "Quiniela Real",
+          23,
+          86,
+          66
+        ],
+        [
+          "20110801",
+          "Quiniela Real",
+          34,
+          95,
+          79
+        ],
+        [
+          "20110802",
+          "Quiniela Real",
+          95,
+          20,
+          45
+        ],
+        [
+          "20110803",
+          "Quiniela Real",
+          16,
+          74,
+          74
+        ],
+        [
+          "20110804",
+          "Quiniela Real",
+          49,
+          1,
+          99
+        ],
+        [
+          "20110805",
+          "Quiniela Real",
+          99,
+          59,
+          62
+        ],
+        [
+          "20110806",
+          "Quiniela Real",
+          72,
+          15,
+          55
+        ],
+        [
+          "20110807",
+          "Quiniela Real",
+          54,
+          50,
+          44
+        ],
+        [
+          "20110808",
+          "Quiniela Real",
+          92,
+          67,
+          35
+        ],
+        [
+          "20110809",
+          "Quiniela Real",
+          54,
+          75,
+          55
+        ],
+        [
+          "20110810",
+          "Quiniela Real",
+          72,
+          26,
+          63
+        ],
+        [
+          "20110811",
+          "Quiniela Real",
+          59,
+          81,
+          39
+        ],
+        [
+          "20110812",
+          "Quiniela Real",
+          34,
+          81,
+          11
+        ],
+        [
+          "20110813",
+          "Quiniela Real",
+          50,
+          65,
+          47
+        ],
+        [
+          "20110814",
+          "Quiniela Real",
+          94,
+          62,
+          75
+        ],
+        [
+          "20110815",
+          "Quiniela Real",
+          59,
+          84,
+          48
+        ],
+        [
+          "20110816",
+          "Quiniela Real",
+          87,
+          40,
+          28
+        ],
+        [
+          "20110817",
+          "Quiniela Real",
+          8,
+          88,
+          87
+        ],
+        [
+          "20110818",
+          "Quiniela Real",
+          89,
+          12,
+          75
+        ],
+        [
+          "20110819",
+          "Quiniela Real",
+          4,
+          58,
+          18
+        ],
+        [
+          "20110820",
+          "Quiniela Real",
+          72,
+          78,
+          9
+        ],
+        [
+          "20110821",
+          "Quiniela Real",
+          43,
+          27,
+          14
+        ],
+        [
+          "20110822",
+          "Quiniela Real",
+          28,
+          0,
+          89
+        ],
+        [
+          "20110823",
+          "Quiniela Real",
+          2,
+          73,
+          32
+        ],
+        [
+          "20110824",
+          "Quiniela Real",
+          12,
+          90,
+          23
+        ],
+        [
+          "20110825",
+          "Quiniela Real",
+          7,
+          71,
+          79
+        ],
+        [
+          "20110826",
+          "Quiniela Real",
+          11,
+          28,
+          11
+        ],
+        [
+          "20110827",
+          "Quiniela Real",
+          10,
+          95,
+          19
+        ],
+        [
+          "20110828",
+          "Quiniela Real",
+          4,
+          19,
+          92
+        ],
+        [
+          "20110829",
+          "Quiniela Real",
+          29,
+          66,
+          63
+        ],
+        [
+          "20110830",
+          "Quiniela Real",
+          32,
+          90,
+          87
+        ],
+        [
+          "20110831",
+          "Quiniela Real",
+          29,
+          66,
+          63
+        ],
+        [
+          "20110901",
+          "Quiniela Real",
+          65,
+          35,
+          61
+        ],
+        [
+          "20110902",
+          "Quiniela Real",
+          93,
+          89,
+          37
+        ],
+        [
+          "20110903",
+          "Quiniela Real",
+          47,
+          75,
+          62
+        ],
+        [
+          "20110904",
+          "Quiniela Real",
+          83,
+          46,
+          24
+        ],
+        [
+          "20110905",
+          "Quiniela Real",
+          25,
+          3,
+          48
+        ],
+        [
+          "20110906",
+          "Quiniela Real",
+          57,
+          3,
+          49
+        ],
+        [
+          "20110907",
+          "Quiniela Real",
+          84,
+          40,
+          63
+        ],
+        [
+          "20110908",
+          "Quiniela Real",
+          0,
+          30,
+          5
+        ],
+        [
+          "20110909",
+          "Quiniela Real",
+          8,
+          54,
+          89
+        ],
+        [
+          "20110910",
+          "Quiniela Real",
+          53,
+          46,
+          12
+        ],
+        [
+          "20110911",
+          "Quiniela Real",
+          32,
+          60,
+          16
+        ],
+        [
+          "20110912",
+          "Quiniela Real",
+          9,
+          14,
+          43
+        ],
+        [
+          "20110913",
+          "Quiniela Real",
+          27,
+          36,
+          11
+        ],
+        [
+          "20110914",
+          "Quiniela Real",
+          93,
+          87,
+          60
+        ],
+        [
+          "20110915",
+          "Quiniela Real",
+          56,
+          54,
+          11
+        ],
+        [
+          "20110916",
+          "Quiniela Real",
+          99,
+          3,
+          57
+        ],
+        [
+          "20110917",
+          "Quiniela Real",
+          64,
+          53,
+          13
+        ],
+        [
+          "20110918",
+          "Quiniela Real",
+          80,
+          71,
+          2
+        ],
+        [
+          "20110919",
+          "Quiniela Real",
+          30,
+          40,
+          59
+        ],
+        [
+          "20110920",
+          "Quiniela Real",
+          70,
+          53,
+          34
+        ],
+        [
+          "20110921",
+          "Quiniela Real",
+          34,
+          89,
+          42
+        ],
+        [
           "20110922",
           "Quiniela Real",
           11,
@@ -130747,6 +135143,13 @@
           20,
           54,
           3
+        ],
+        [
+          "20111225",
+          "Quiniela Real",
+          97,
+          72,
+          6
         ],
         [
           "20111226",
@@ -146296,6 +150699,20 @@
           38
         ],
         [
+          "20230824",
+          "Quiniela Real",
+          75,
+          37,
+          57
+        ],
+        [
+          "20230825",
+          "Quiniela Real",
+          59,
+          87,
+          92
+        ],
+        [
           "20230826",
           "Quiniela Real",
           45,
@@ -146324,6 +150741,55 @@
           63
         ],
         [
+          "20230830",
+          "Quiniela Real",
+          52,
+          29,
+          62
+        ],
+        [
+          "20230831",
+          "Quiniela Real",
+          96,
+          77,
+          24
+        ],
+        [
+          "20230901",
+          "Quiniela Real",
+          16,
+          8,
+          56
+        ],
+        [
+          "20230902",
+          "Quiniela Real",
+          10,
+          86,
+          43
+        ],
+        [
+          "20230903",
+          "Quiniela Real",
+          67,
+          74,
+          28
+        ],
+        [
+          "20230904",
+          "Quiniela Real",
+          49,
+          94,
+          2
+        ],
+        [
+          "20230905",
+          "Quiniela Real",
+          93,
+          60,
+          57
+        ],
+        [
           "20230906",
           "Quiniela Real",
           76,
@@ -146343,6 +150809,34 @@
           36,
           17,
           78
+        ],
+        [
+          "20230909",
+          "Quiniela Real",
+          49,
+          1,
+          88
+        ],
+        [
+          "20230910",
+          "Quiniela Real",
+          4,
+          49,
+          80
+        ],
+        [
+          "20230911",
+          "Quiniela Real",
+          97,
+          63,
+          21
+        ],
+        [
+          "20230912",
+          "Quiniela Real",
+          7,
+          62,
+          22
         ],
         [
           "20230913",
@@ -146366,6 +150860,34 @@
           64
         ],
         [
+          "20230916",
+          "Quiniela Real",
+          92,
+          0,
+          72
+        ],
+        [
+          "20230917",
+          "Quiniela Real",
+          72,
+          78,
+          53
+        ],
+        [
+          "20230918",
+          "Quiniela Real",
+          47,
+          43,
+          3
+        ],
+        [
+          "20230919",
+          "Quiniela Real",
+          75,
+          66,
+          90
+        ],
+        [
           "20230920",
           "Quiniela Real",
           72,
@@ -146385,6 +150907,34 @@
           10,
           1,
           60
+        ],
+        [
+          "20230923",
+          "Quiniela Real",
+          82,
+          60,
+          64
+        ],
+        [
+          "20230924",
+          "Quiniela Real",
+          66,
+          90,
+          8
+        ],
+        [
+          "20230925",
+          "Quiniela Real",
+          64,
+          63,
+          33
+        ],
+        [
+          "20230926",
+          "Quiniela Real",
+          15,
+          6,
+          84
         ],
         [
           "20230927",
@@ -146408,6 +150958,34 @@
           38
         ],
         [
+          "20230930",
+          "Quiniela Real",
+          54,
+          50,
+          18
+        ],
+        [
+          "20231001",
+          "Quiniela Real",
+          38,
+          17,
+          5
+        ],
+        [
+          "20231002",
+          "Quiniela Real",
+          3,
+          37,
+          47
+        ],
+        [
+          "20231003",
+          "Quiniela Real",
+          30,
+          95,
+          69
+        ],
+        [
           "20231004",
           "Quiniela Real",
           45,
@@ -146429,6 +151007,34 @@
           63
         ],
         [
+          "20231007",
+          "Quiniela Real",
+          79,
+          63,
+          88
+        ],
+        [
+          "20231008",
+          "Quiniela Real",
+          72,
+          21,
+          90
+        ],
+        [
+          "20231009",
+          "Quiniela Real",
+          45,
+          61,
+          20
+        ],
+        [
+          "20231010",
+          "Quiniela Real",
+          7,
+          31,
+          58
+        ],
+        [
           "20231011",
           "Quiniela Real",
           10,
@@ -146448,6 +151054,34 @@
           59,
           26,
           8
+        ],
+        [
+          "20231014",
+          "Quiniela Real",
+          13,
+          2,
+          58
+        ],
+        [
+          "20231015",
+          "Quiniela Real",
+          75,
+          36,
+          57
+        ],
+        [
+          "20231016",
+          "Quiniela Real",
+          16,
+          67,
+          49
+        ],
+        [
+          "20231017",
+          "Quiniela Real",
+          51,
+          81,
+          76
         ],
         [
           "20231018",
@@ -146618,6 +151252,34 @@
           12
         ],
         [
+          "20231111",
+          "Quiniela Real",
+          1,
+          18,
+          81
+        ],
+        [
+          "20231112",
+          "Quiniela Real",
+          98,
+          59,
+          20
+        ],
+        [
+          "20231113",
+          "Quiniela Real",
+          88,
+          79,
+          3
+        ],
+        [
+          "20231114",
+          "Quiniela Real",
+          94,
+          12,
+          92
+        ],
+        [
           "20231115",
           "Quiniela Real",
           66,
@@ -146646,6 +151308,13 @@
           59
         ],
         [
+          "20231119",
+          "Quiniela Real",
+          31,
+          35,
+          26
+        ],
+        [
           "20231120",
           "Quiniela Real",
           31,
@@ -146658,6 +151327,27 @@
           48,
           59,
           73
+        ],
+        [
+          "20231122",
+          "Quiniela Real",
+          62,
+          94,
+          22
+        ],
+        [
+          "20231123",
+          "Quiniela Real",
+          3,
+          91,
+          98
+        ],
+        [
+          "20231124",
+          "Quiniela Real",
+          21,
+          74,
+          1
         ],
         [
           "20231125",
@@ -146686,6 +151376,27 @@
           10,
           98,
           11
+        ],
+        [
+          "20231129",
+          "Quiniela Real",
+          46,
+          6,
+          93
+        ],
+        [
+          "20231130",
+          "Quiniela Real",
+          51,
+          64,
+          96
+        ],
+        [
+          "20231201",
+          "Quiniela Real",
+          81,
+          9,
+          4
         ],
         [
           "20231202",
@@ -153443,79 +158154,79 @@
           36
         ]
       ],
-      "total_results": 3510,
+      "total_results": 4183,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
             {
               "number": "26",
-              "score": 139.97,
-              "frequency": 138,
-              "delay_days": 21,
-              "recent_frequency": 1
-            },
-            {
-              "number": "43",
-              "score": 132.89,
-              "frequency": 131,
-              "delay_days": 11,
-              "recent_frequency": 1
-            },
-            {
-              "number": "17",
-              "score": 127.35,
-              "frequency": 127,
-              "delay_days": 43,
-              "recent_frequency": 0
-            },
-            {
-              "number": "65",
-              "score": 126.98,
-              "frequency": 125,
+              "score": 162.98,
+              "frequency": 161,
               "delay_days": 22,
               "recent_frequency": 1
             },
             {
-              "number": "86",
-              "score": 125.42,
-              "frequency": 120,
-              "delay_days": 3,
-              "recent_frequency": 3
+              "number": "17",
+              "score": 151.36,
+              "frequency": 151,
+              "delay_days": 44,
+              "recent_frequency": 0
             },
             {
-              "number": "42",
-              "score": 124.22,
-              "frequency": 117,
-              "delay_days": 2,
-              "recent_frequency": 4
+              "number": "65",
+              "score": 150.99,
+              "frequency": 149,
+              "delay_days": 23,
+              "recent_frequency": 1
+            },
+            {
+              "number": "43",
+              "score": 148.9,
+              "frequency": 147,
+              "delay_days": 12,
+              "recent_frequency": 1
+            },
+            {
+              "number": "49",
+              "score": 148.89,
+              "frequency": 147,
+              "delay_days": 11,
+              "recent_frequency": 1
             },
             {
               "number": "89",
-              "score": 123.93,
-              "frequency": 122,
+              "score": 147.94,
+              "frequency": 146,
+              "delay_days": 17,
+              "recent_frequency": 1
+            },
+            {
+              "number": "21",
+              "score": 144.04,
+              "frequency": 142,
+              "delay_days": 29,
+              "recent_frequency": 1
+            },
+            {
+              "number": "59",
+              "score": 143.93,
+              "frequency": 142,
               "delay_days": 16,
               "recent_frequency": 1
             },
             {
-              "number": "56",
-              "score": 123.55,
-              "frequency": 123,
-              "delay_days": 67,
-              "recent_frequency": 0
-            },
-            {
-              "number": "59",
-              "score": 122.92,
-              "frequency": 121,
-              "delay_days": 15,
-              "recent_frequency": 1
-            },
-            {
               "number": "34",
-              "score": 122.4,
-              "frequency": 114,
-              "delay_days": 0,
+              "score": 142.41,
+              "frequency": 137,
+              "delay_days": 1,
               "recent_frequency": 3
+            },
+            {
+              "number": "72",
+              "score": 141.67,
+              "frequency": 138,
+              "delay_days": 8,
+              "recent_frequency": 2
             }
           ],
           "last_results": [
@@ -153608,12 +158319,12 @@
               "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 3510,
+          "total_results": 4183,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
-            "top3_any_hit_rate": 0.131,
+            "top3_any_hit_rate": 0.098,
             "top5_any_hit_rate": 0.148,
             "first_position_hit_rate": 0.033,
             "average_hits_top5": 0.15,
@@ -153631,7 +158342,7 @@
                   "43",
                   "17",
                   "65",
-                  "59"
+                  "49"
                 ],
                 "hits": []
               },
@@ -153644,10 +158355,10 @@
                 ],
                 "predicted": [
                   "26",
-                  "43",
                   "17",
                   "65",
-                  "59"
+                  "43",
+                  "49"
                 ],
                 "hits": []
               },
@@ -153660,10 +158371,10 @@
                 ],
                 "predicted": [
                   "26",
-                  "43",
                   "17",
                   "65",
-                  "86"
+                  "43",
+                  "49"
                 ],
                 "hits": []
               },
@@ -153676,10 +158387,10 @@
                 ],
                 "predicted": [
                   "26",
-                  "43",
                   "17",
                   "65",
-                  "86"
+                  "43",
+                  "49"
                 ],
                 "hits": []
               },
@@ -153692,10 +158403,10 @@
                 ],
                 "predicted": [
                   "26",
-                  "43",
                   "17",
                   "65",
-                  "86"
+                  "43",
+                  "49"
                 ],
                 "hits": []
               }
@@ -153707,74 +158418,74 @@
     "Loteka": {
       "suggestions": [
         {
+          "number": "19",
+          "score": 133.81,
+          "frequency": 123,
+          "delay_days": 1,
+          "recent_frequency": 6
+        },
+        {
           "number": "28",
-          "score": 133.71,
+          "score": 133.72,
           "frequency": 130,
-          "delay_days": 13,
+          "delay_days": 14,
           "recent_frequency": 2
         },
         {
-          "number": "19",
-          "score": 131.13,
-          "frequency": 122,
-          "delay_days": 16,
-          "recent_frequency": 5
-        },
-        {
           "number": "17",
-          "score": 126.04,
+          "score": 126.05,
           "frequency": 124,
-          "delay_days": 29,
+          "delay_days": 30,
           "recent_frequency": 1
         },
         {
           "number": "75",
-          "score": 123.7,
+          "score": 123.71,
           "frequency": 120,
-          "delay_days": 12,
+          "delay_days": 13,
           "recent_frequency": 2
         },
         {
           "number": "52",
-          "score": 122.65,
+          "score": 122.66,
           "frequency": 119,
-          "delay_days": 6,
+          "delay_days": 7,
           "recent_frequency": 2
         },
         {
           "number": "84",
-          "score": 122.01,
+          "score": 122.02,
           "frequency": 120,
-          "delay_days": 26,
+          "delay_days": 27,
           "recent_frequency": 1
         },
         {
           "number": "61",
           "score": 118.99,
           "frequency": 118,
-          "delay_days": 120,
+          "delay_days": 121,
           "recent_frequency": 0
         },
         {
           "number": "98",
-          "score": 118.27,
+          "score": 118.28,
           "frequency": 118,
-          "delay_days": 33,
+          "delay_days": 34,
           "recent_frequency": 0
         },
         {
           "number": "09",
-          "score": 117.66,
+          "score": 117.67,
           "frequency": 114,
-          "delay_days": 7,
+          "delay_days": 8,
           "recent_frequency": 2
         },
         {
-          "number": "12",
-          "score": 117.05,
-          "frequency": 115,
-          "delay_days": 30,
-          "recent_frequency": 1
+          "number": "34",
+          "score": 116.81,
+          "frequency": 113,
+          "delay_days": 26,
+          "recent_frequency": 2
         }
       ],
       "last_results": [
@@ -178227,74 +182938,74 @@
         "Quiniela Loteka": {
           "suggestions": [
             {
+              "number": "19",
+              "score": 133.81,
+              "frequency": 123,
+              "delay_days": 1,
+              "recent_frequency": 6
+            },
+            {
               "number": "28",
-              "score": 133.71,
+              "score": 133.72,
               "frequency": 130,
-              "delay_days": 13,
+              "delay_days": 14,
               "recent_frequency": 2
             },
             {
-              "number": "19",
-              "score": 131.13,
-              "frequency": 122,
-              "delay_days": 16,
-              "recent_frequency": 5
-            },
-            {
               "number": "17",
-              "score": 126.04,
+              "score": 126.05,
               "frequency": 124,
-              "delay_days": 29,
+              "delay_days": 30,
               "recent_frequency": 1
             },
             {
               "number": "75",
-              "score": 123.7,
+              "score": 123.71,
               "frequency": 120,
-              "delay_days": 12,
+              "delay_days": 13,
               "recent_frequency": 2
             },
             {
               "number": "52",
-              "score": 122.65,
+              "score": 122.66,
               "frequency": 119,
-              "delay_days": 6,
+              "delay_days": 7,
               "recent_frequency": 2
             },
             {
               "number": "84",
-              "score": 122.01,
+              "score": 122.02,
               "frequency": 120,
-              "delay_days": 26,
+              "delay_days": 27,
               "recent_frequency": 1
             },
             {
               "number": "61",
               "score": 118.99,
               "frequency": 118,
-              "delay_days": 120,
+              "delay_days": 121,
               "recent_frequency": 0
             },
             {
               "number": "98",
-              "score": 118.27,
+              "score": 118.28,
               "frequency": 118,
-              "delay_days": 33,
+              "delay_days": 34,
               "recent_frequency": 0
             },
             {
               "number": "09",
-              "score": 117.66,
+              "score": 117.67,
               "frequency": 114,
-              "delay_days": 7,
+              "delay_days": 8,
               "recent_frequency": 2
             },
             {
-              "number": "12",
-              "score": 117.05,
-              "frequency": 115,
-              "delay_days": 30,
-              "recent_frequency": 1
+              "number": "34",
+              "score": 116.81,
+              "frequency": 113,
+              "delay_days": 26,
+              "recent_frequency": 2
             }
           ],
           "last_results": [
