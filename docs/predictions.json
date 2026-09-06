@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-06T16:49:01-04:00",
-  "generated_at_display": "06/09/2026 16:49",
+  "generated_at": "2026-09-06T18:28:18-04:00",
+  "generated_at_display": "06/09/2026 18:28",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1128,6 +1128,17 @@
         {
           "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
+          "draw_date": "2026-09-06",
+          "numbers": [
+            89,
+            89,
+            0
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Lotería Nacional",
           "draw_date": "2026-09-05",
           "numbers": [
             13,
@@ -1188,17 +1199,6 @@
             49,
             43,
             91
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Lotería Nacional",
-          "draw_date": "2026-09-02",
-          "numbers": [
-            17,
-            26,
-            36
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -90565,9 +90565,16 @@
           43,
           95,
           38
+        ],
+        [
+          "20260906",
+          "Lotería Nacional",
+          89,
+          89,
+          0
         ]
       ],
-      "total_results": 12766,
+      "total_results": 12767,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -90905,6 +90912,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Lotería Nacional",
+              "draw_date": "2026-09-06",
+              "numbers": [
+                89,
+                89,
+                0
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Lotería Nacional",
               "draw_date": "2026-09-05",
               "numbers": [
                 13,
@@ -90978,20 +90996,9 @@
                 75
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Lotería Nacional",
-              "draw_date": "2026-08-29",
-              "numbers": [
-                6,
-                71,
-                73
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 7611,
+          "total_results": 7612,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -91002,22 +91009,6 @@
             "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-09-01",
-                "actual": [
-                  "05",
-                  "26",
-                  "37"
-                ],
-                "predicted": [
-                  "14",
-                  "53",
-                  "61",
-                  "07",
-                  "75"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-09-02",
                 "actual": [
@@ -91072,6 +91063,22 @@
                   "13",
                   "73",
                   "94"
+                ],
+                "predicted": [
+                  "14",
+                  "61",
+                  "53",
+                  "07",
+                  "75"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-09-06",
+                "actual": [
+                  "89",
+                  "89",
+                  "00"
                 ],
                 "predicted": [
                   "14",
