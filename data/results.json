@@ -11,6 +11,28 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-09-06",
+    "numbers": [
+      90,
+      24,
+      14
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-09-06",
+    "numbers": [
+      97,
+      7,
+      90
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New Jersey",
     "draw": "New Jersey Día",
     "draw_date": "2026-09-06",
@@ -483,6 +505,17 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-09-06",
+    "numbers": [
+      83,
+      68,
+      46
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-09-06",
     "numbers": [
@@ -494,12 +527,35 @@
   },
   {
     "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-09-06",
+    "numbers": [
+      98,
+      6,
+      81
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
     "draw": "Florida Día",
     "draw_date": "2026-09-06",
     "numbers": [
       19,
       61,
       32
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "La Cuarteta 9:00 PM",
+    "draw_date": "2026-09-06",
+    "numbers": [
+      34,
+      85,
+      47,
+      1
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -536,6 +592,17 @@
       40,
       10,
       51
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 9:00 PM",
+    "draw_date": "2026-09-06",
+    "numbers": [
+      83,
+      94,
+      59
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -668,6 +735,17 @@
       15,
       26,
       79
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-09-06",
+    "numbers": [
+      1,
+      60,
+      43
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
