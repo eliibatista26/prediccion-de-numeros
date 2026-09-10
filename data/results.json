@@ -1,5 +1,33 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-09-09",
+    "numbers": [
+      33,
+      58,
+      69,
+      62,
+      32,
+      18
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-09-09",
+    "numbers": [
+      65,
+      55,
+      9,
+      40,
+      42,
+      23
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-09-09",
@@ -7,6 +35,28 @@
       10,
       19,
       59
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-09-09",
+    "numbers": [
+      15,
+      98,
+      49
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-09-09",
+    "numbers": [
+      74,
+      94,
+      22
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -511,12 +561,34 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-09-09",
+    "numbers": [
+      58,
+      25,
+      51
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-09-09",
     "numbers": [
       37,
       73,
       85
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-09-09",
+    "numbers": [
+      66,
+      26,
+      84
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -719,6 +791,17 @@
       20,
       63,
       52
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-09-09",
+    "numbers": [
+      10,
+      21,
+      58
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
