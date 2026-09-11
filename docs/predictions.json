@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-10T19:06:42-04:00",
-  "generated_at_display": "10/09/2026 19:06",
+  "generated_at": "2026-09-10T21:01:54-04:00",
+  "generated_at_display": "10/09/2026 21:01",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -91218,6 +91218,17 @@
         {
           "lottery": "Leidsa",
           "draw": "Quiniela Leidsa",
+          "draw_date": "2026-09-10",
+          "numbers": [
+            35,
+            94,
+            22
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Leidsa",
+          "draw": "Quiniela Leidsa",
           "draw_date": "2026-09-09",
           "numbers": [
             30,
@@ -91289,17 +91300,6 @@
             25,
             16,
             63
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Leidsa",
-          "draw": "Quiniela Leidsa",
-          "draw_date": "2026-09-02",
-          "numbers": [
-            60,
-            80,
-            2
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -128530,9 +128530,16 @@
           30,
           63,
           83
+        ],
+        [
+          "20260910",
+          "Quiniela Leidsa",
+          35,
+          94,
+          22
         ]
       ],
-      "total_results": 5318,
+      "total_results": 5319,
       "draws": {
         "Quiniela Leidsa": {
           "suggestions": [
@@ -128611,6 +128618,17 @@
             {
               "lottery": "Leidsa",
               "draw": "Quiniela Leidsa",
+              "draw_date": "2026-09-10",
+              "numbers": [
+                35,
+                94,
+                22
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Leidsa",
+              "draw": "Quiniela Leidsa",
               "draw_date": "2026-09-09",
               "numbers": [
                 30,
@@ -128684,46 +128702,19 @@
                 63
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela Leidsa",
-              "draw_date": "2026-09-02",
-              "numbers": [
-                60,
-                80,
-                2
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5318,
+          "total_results": 5319,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
             "top3_any_hit_rate": 0.082,
-            "top5_any_hit_rate": 0.131,
+            "top5_any_hit_rate": 0.148,
             "first_position_hit_rate": 0.0,
-            "average_hits_top5": 0.13,
+            "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-09-05",
-                "actual": [
-                  "53",
-                  "30",
-                  "28"
-                ],
-                "predicted": [
-                  "21",
-                  "63",
-                  "57",
-                  "22",
-                  "60"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-09-06",
                 "actual": [
@@ -128790,6 +128781,24 @@
                 ],
                 "hits": [
                   "63"
+                ]
+              },
+              {
+                "date": "2026-09-10",
+                "actual": [
+                  "35",
+                  "94",
+                  "22"
+                ],
+                "predicted": [
+                  "21",
+                  "63",
+                  "57",
+                  "60",
+                  "22"
+                ],
+                "hits": [
+                  "22"
                 ]
               }
             ]
@@ -158621,6 +158630,17 @@
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
+          "draw_date": "2026-09-10",
+          "numbers": [
+            98,
+            75,
+            19
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Loteka",
+          "draw": "Quiniela Loteka",
           "draw_date": "2026-09-09",
           "numbers": [
             49,
@@ -158692,17 +158712,6 @@
             10,
             21,
             90
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Loteka",
-          "draw": "Quiniela Loteka",
-          "draw_date": "2026-09-02",
-          "numbers": [
-            87,
-            32,
-            64
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -183088,9 +183097,16 @@
           49,
           33,
           22
+        ],
+        [
+          "20260910",
+          "Quiniela Loteka",
+          98,
+          75,
+          19
         ]
       ],
-      "total_results": 3483,
+      "total_results": 3484,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -183169,6 +183185,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-09-10",
+              "numbers": [
+                98,
+                75,
+                19
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-09-09",
               "numbers": [
                 49,
@@ -183242,48 +183269,19 @@
                 90
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-09-02",
-              "numbers": [
-                87,
-                32,
-                64
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 3483,
+          "total_results": 3484,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
-            "top3_any_hit_rate": 0.197,
-            "top5_any_hit_rate": 0.213,
+            "top3_any_hit_rate": 0.213,
+            "top5_any_hit_rate": 0.23,
             "first_position_hit_rate": 0.082,
-            "average_hits_top5": 0.23,
+            "average_hits_top5": 0.26,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-09-05",
-                "actual": [
-                  "19",
-                  "95",
-                  "43"
-                ],
-                "predicted": [
-                  "28",
-                  "19",
-                  "17",
-                  "75",
-                  "52"
-                ],
-                "hits": [
-                  "19"
-                ]
-              },
               {
                 "date": "2026-09-06",
                 "actual": [
@@ -183347,6 +183345,25 @@
                   "52"
                 ],
                 "hits": []
+              },
+              {
+                "date": "2026-09-10",
+                "actual": [
+                  "98",
+                  "75",
+                  "19"
+                ],
+                "predicted": [
+                  "28",
+                  "19",
+                  "17",
+                  "75",
+                  "52"
+                ],
+                "hits": [
+                  "19",
+                  "75"
+                ]
               }
             ]
           }
