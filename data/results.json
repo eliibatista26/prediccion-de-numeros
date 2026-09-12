@@ -11,6 +11,28 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-09-11",
+    "numbers": [
+      91,
+      99,
+      14
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-09-11",
+    "numbers": [
+      22,
+      49,
+      7
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New Jersey",
     "draw": "New Jersey Día",
     "draw_date": "2026-09-11",
@@ -18,6 +40,20 @@
       10,
       70,
       17
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Mega Millions",
+    "draw": "Mega Millions",
+    "draw_date": "2026-09-11",
+    "numbers": [
+      3,
+      53,
+      30,
+      62,
+      33,
+      22
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -509,12 +545,34 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-09-11",
+    "numbers": [
+      56,
+      20,
+      6
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-09-11",
     "numbers": [
       76,
       44,
       53
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-09-11",
+    "numbers": [
+      67,
+      51,
+      96
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -717,6 +775,17 @@
       87,
       67,
       76
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-09-11",
+    "numbers": [
+      94,
+      27,
+      38
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
