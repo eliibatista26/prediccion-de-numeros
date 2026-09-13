@@ -67,6 +67,17 @@
   },
   {
     "lottery": "Lotería Nacional",
+    "draw": "Lotería Nacional",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      5,
+      3,
+      6
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
     "draw": "Juega + Pega +",
     "draw_date": "2026-09-13",
     "numbers": [
@@ -119,6 +130,16 @@
       96,
       54,
       77
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Palé",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      69,
+      5
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -197,6 +218,42 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "La Suerte Dominicana",
+    "draw": "La Suerte 6PM",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      81,
+      48,
+      87
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Primera",
+    "draw": "Primera Noche",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      70,
+      16,
+      6
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "La Primera",
+    "draw": "Loto 5",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      16,
+      8,
+      20,
+      7,
+      34,
+      6
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "La Primera",
     "draw": "La Primera Día",
     "draw_date": "2026-09-13",
@@ -266,6 +323,28 @@
   },
   {
     "lottery": "Haiti",
+    "draw": "Haiti Bolet 6:30 PM",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      67,
+      48,
+      41
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Haiti",
+    "draw": "Haiti Bolet 5:30 PM",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      35,
+      40,
+      10
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Haiti",
     "draw": "Haiti Bolet 11:30 AM",
     "draw_date": "2026-09-13",
     "numbers": [
@@ -305,6 +384,18 @@
       38,
       45,
       80
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "La Cuarteta 6:00 PM",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      95,
+      91,
+      59,
+      29
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -351,6 +442,39 @@
       60,
       18,
       75
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 7:00 PM",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      46,
+      72,
+      87
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 6:00 PM",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      46,
+      38,
+      12
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 5:00 PM",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      88,
+      25,
+      63
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
