@@ -1,5 +1,16 @@
 [
   {
+    "lottery": "New York",
+    "draw": "New York 3:30",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      40,
+      72,
+      70
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New Jersey",
     "draw": "New Jersey Día",
     "draw_date": "2026-09-13",
@@ -7,6 +18,16 @@
       12,
       96,
       23
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
+    "draw": "Super Palé",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      76,
+      60
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -45,6 +66,30 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "Lotería Nacional",
+    "draw": "Juega + Pega +",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      12,
+      2,
+      16,
+      21,
+      16
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
+    "draw": "Gana Más",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      60,
+      41,
+      23
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotedom",
     "draw": "Super Palé",
     "draw_date": "2026-09-13",
@@ -74,6 +119,69 @@
       96,
       54,
       77
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Kino TV",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      44,
+      70,
+      47,
+      66,
+      56,
+      4,
+      60,
+      77,
+      74,
+      61,
+      50,
+      68,
+      34,
+      43,
+      2,
+      23,
+      76,
+      9,
+      31,
+      71
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Quiniela Leidsa",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      69,
+      15,
+      51
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Pega 3 Más",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      21,
+      13,
+      13
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Loto Pool",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      26,
+      28,
+      30,
+      23,
+      7
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -243,6 +351,28 @@
       60,
       18,
       75
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 4:00 PM",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      45,
+      95,
+      21
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 3:00 PM",
+    "draw_date": "2026-09-13",
+    "numbers": [
+      30,
+      53,
+      6
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
