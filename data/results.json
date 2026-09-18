@@ -203,6 +203,17 @@
   },
   {
     "lottery": "Haiti",
+    "draw": "Haiti Bolet 5:30 PM",
+    "draw_date": "2026-09-18",
+    "numbers": [
+      59,
+      84,
+      50
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Haiti",
     "draw": "Haiti Bolet 11:30 AM",
     "draw_date": "2026-09-18",
     "numbers": [
@@ -288,6 +299,28 @@
       90,
       68,
       54
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 5:00 PM",
+    "draw_date": "2026-09-18",
+    "numbers": [
+      65,
+      86,
+      27
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 4:00 PM",
+    "draw_date": "2026-09-18",
+    "numbers": [
+      12,
+      99,
+      62
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
