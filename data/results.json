@@ -1,5 +1,16 @@
 [
   {
+    "lottery": "New York",
+    "draw": "New York 3:30",
+    "draw_date": "2026-09-19",
+    "numbers": [
+      26,
+      74,
+      86
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New Jersey",
     "draw": "New Jersey Día",
     "draw_date": "2026-09-19",
@@ -7,6 +18,16 @@
       40,
       17,
       1
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
+    "draw": "Super Palé",
+    "draw_date": "2026-09-19",
+    "numbers": [
+      83,
+      15
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -41,6 +62,30 @@
       94,
       96,
       35
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
+    "draw": "Juega + Pega +",
+    "draw_date": "2026-09-19",
+    "numbers": [
+      4,
+      1,
+      19,
+      6,
+      6
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
+    "draw": "Gana Más",
+    "draw_date": "2026-09-19",
+    "numbers": [
+      15,
+      47,
+      43
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -190,6 +235,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "Florida",
+    "draw": "Florida Día",
+    "draw_date": "2026-09-19",
+    "numbers": [
+      33,
+      93,
+      31
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Anguila",
     "draw": "La Cuarteta 1:00 PM",
     "draw_date": "2026-09-19",
@@ -232,6 +288,28 @@
       35,
       78,
       43
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 3:00 PM",
+    "draw_date": "2026-09-19",
+    "numbers": [
+      2,
+      77,
+      29
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 2:00 PM",
+    "draw_date": "2026-09-19",
+    "numbers": [
+      21,
+      45,
+      38
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
