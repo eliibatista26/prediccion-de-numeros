@@ -1,5 +1,33 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-09-23",
+    "numbers": [
+      10,
+      17,
+      40,
+      21,
+      19,
+      6
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-09-23",
+    "numbers": [
+      26,
+      29,
+      5,
+      15,
+      30,
+      14
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-09-23",
@@ -7,6 +35,28 @@
       1,
       72,
       4
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-09-23",
+    "numbers": [
+      51,
+      3,
+      54
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-09-23",
+    "numbers": [
+      52,
+      22,
+      25
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -511,12 +561,34 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-09-23",
+    "numbers": [
+      97,
+      11,
+      66
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-09-23",
     "numbers": [
       35,
       75,
       72
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-09-23",
+    "numbers": [
+      3,
+      29,
+      79
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -719,6 +791,17 @@
       95,
       13,
       7
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-09-23",
+    "numbers": [
+      57,
+      40,
+      58
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
