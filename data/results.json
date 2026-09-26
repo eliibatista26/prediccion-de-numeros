@@ -11,12 +11,48 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-09-25",
+    "numbers": [
+      58,
+      95,
+      41
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-09-25",
+    "numbers": [
+      97,
+      33,
+      53
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New Jersey",
     "draw": "New Jersey Día",
     "draw_date": "2026-09-25",
     "numbers": [
       43,
       30,
+      16
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Mega Millions",
+    "draw": "Mega Millions",
+    "draw_date": "2026-09-25",
+    "numbers": [
+      25,
+      57,
+      58,
+      67,
+      68,
       16
     ],
     "source": "https://www.conectate.com.do/loterias/"
@@ -504,6 +540,17 @@
       32,
       30,
       3
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-09-25",
+    "numbers": [
+      78,
+      63,
+      64
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
