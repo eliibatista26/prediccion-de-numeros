@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-26T18:10:51-04:00",
-  "generated_at_display": "26/09/2026 18:10",
+  "generated_at": "2026-09-26T20:42:36-04:00",
+  "generated_at_display": "26/09/2026 20:42",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -159048,6 +159048,17 @@
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
+          "draw_date": "2026-09-26",
+          "numbers": [
+            9,
+            30,
+            19
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Loteka",
+          "draw": "Quiniela Loteka",
           "draw_date": "2026-09-25",
           "numbers": [
             75,
@@ -159119,17 +159130,6 @@
             33,
             1,
             70
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Loteka",
-          "draw": "Quiniela Loteka",
-          "draw_date": "2026-09-18",
-          "numbers": [
-            58,
-            43,
-            91
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -183627,9 +183627,16 @@
           75,
           83,
           85
+        ],
+        [
+          "20260926",
+          "Quiniela Loteka",
+          9,
+          30,
+          19
         ]
       ],
-      "total_results": 3499,
+      "total_results": 3500,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -183708,6 +183715,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-09-26",
+              "numbers": [
+                9,
+                30,
+                19
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-09-25",
               "numbers": [
                 75,
@@ -183781,48 +183799,19 @@
                 70
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-09-18",
-              "numbers": [
-                58,
-                43,
-                91
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 3499,
+          "total_results": 3500,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
-            "top3_any_hit_rate": 0.213,
-            "top5_any_hit_rate": 0.246,
+            "top3_any_hit_rate": 0.23,
+            "top5_any_hit_rate": 0.262,
             "first_position_hit_rate": 0.098,
-            "average_hits_top5": 0.28,
+            "average_hits_top5": 0.3,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-09-21",
-                "actual": [
-                  "19",
-                  "39",
-                  "66"
-                ],
-                "predicted": [
-                  "28",
-                  "19",
-                  "75",
-                  "17",
-                  "98"
-                ],
-                "hits": [
-                  "19"
-                ]
-              },
               {
                 "date": "2026-09-22",
                 "actual": [
@@ -183887,6 +183876,24 @@
                 ],
                 "hits": [
                   "75"
+                ]
+              },
+              {
+                "date": "2026-09-26",
+                "actual": [
+                  "09",
+                  "30",
+                  "19"
+                ],
+                "predicted": [
+                  "19",
+                  "28",
+                  "75",
+                  "17",
+                  "98"
+                ],
+                "hits": [
+                  "19"
                 ]
               }
             ]
