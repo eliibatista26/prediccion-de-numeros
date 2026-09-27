@@ -1,5 +1,33 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      23,
+      9,
+      69,
+      31,
+      59,
+      12
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      55,
+      40,
+      52,
+      14,
+      57,
+      24
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-09-26",
@@ -7,6 +35,28 @@
       3,
       99,
       61
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      43,
+      18,
+      4
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      81,
+      72,
+      71
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -103,6 +153,17 @@
   },
   {
     "lottery": "Lotería Nacional",
+    "draw": "Lotería Nacional",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      56,
+      50,
+      76
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
     "draw": "Juega + Pega +",
     "draw_date": "2026-09-26",
     "numbers": [
@@ -190,6 +251,95 @@
       93,
       27,
       62
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Palé",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      32,
+      56
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Kino TV",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      47,
+      4,
+      13,
+      31,
+      11,
+      69,
+      58,
+      32,
+      54,
+      9,
+      36,
+      23,
+      75,
+      64,
+      21,
+      61,
+      26,
+      7,
+      71,
+      22
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Quiniela Leidsa",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      32,
+      99,
+      0
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Pega 3 Más",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      13,
+      50,
+      49
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Loto Pool",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      25,
+      29,
+      14,
+      22,
+      30
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Loto - Loto Más",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      27,
+      26,
+      31,
+      33,
+      39,
+      11,
+      7,
+      3
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -411,6 +561,17 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      55,
+      22,
+      57
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-09-26",
     "numbers": [
@@ -422,12 +583,35 @@
   },
   {
     "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      61,
+      92,
+      24
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
     "draw": "Florida Día",
     "draw_date": "2026-09-26",
     "numbers": [
       29,
       69,
       20
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "La Cuarteta 9:00 PM",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      97,
+      78,
+      71,
+      27
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -464,6 +648,17 @@
       25,
       30,
       86
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 9:00 PM",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      62,
+      32,
+      59
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -596,6 +791,17 @@
       73,
       19,
       71
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-09-26",
+    "numbers": [
+      4,
+      4,
+      26
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
