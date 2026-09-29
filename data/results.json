@@ -1,5 +1,33 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-09-28",
+    "numbers": [
+      46,
+      43,
+      20,
+      11,
+      26,
+      18
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-09-28",
+    "numbers": [
+      49,
+      42,
+      21,
+      29,
+      17,
+      7
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-09-28",
@@ -7,6 +35,28 @@
       13,
       91,
       41
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-09-28",
+    "numbers": [
+      73,
+      48,
+      7
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-09-28",
+    "numbers": [
+      90,
+      49,
+      70
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -511,12 +561,34 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-09-28",
+    "numbers": [
+      94,
+      37,
+      70
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-09-28",
     "numbers": [
       42,
       73,
       24
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-09-28",
+    "numbers": [
+      76,
+      3,
+      99
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -719,6 +791,17 @@
       47,
       43,
       87
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-09-28",
+    "numbers": [
+      63,
+      92,
+      3
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
