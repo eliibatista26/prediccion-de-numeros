@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-30T11:23:42-04:00",
-  "generated_at_display": "30/09/2026 11:23",
+  "generated_at": "2026-09-30T16:16:32-04:00",
+  "generated_at_display": "30/09/2026 16:16",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
-  "actual_to_date": "2026-09-29",
+  "actual_to_date": "2026-09-30",
   "disclaimer": "Estas sugerencias son estadísticas y no garantizan resultados.",
   "base_10": {
     "window": {
@@ -1116,6 +1116,17 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-09-30",
+          "numbers": [
+            41,
+            46,
+            79
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-09-29",
           "numbers": [
@@ -1188,17 +1199,6 @@
             56,
             50,
             76
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-09-26",
-          "numbers": [
-            53,
-            25,
-            43
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -90880,9 +90880,16 @@
           22,
           96,
           70
+        ],
+        [
+          "20260930",
+          "Gana Más",
+          41,
+          46,
+          79
         ]
       ],
-      "total_results": 12811,
+      "total_results": 12812,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -90961,6 +90968,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Gana Más",
+              "draw_date": "2026-09-30",
+              "numbers": [
+                41,
+                46,
+                79
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Gana Más",
               "draw_date": "2026-09-29",
               "numbers": [
                 22,
@@ -91034,46 +91052,19 @@
                 28
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Gana Más",
-              "draw_date": "2026-09-21",
-              "numbers": [
-                96,
-                22,
-                74
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5177,
+          "total_results": 5178,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 59,
-            "top3_any_hit_rate": 0.119,
-            "top5_any_hit_rate": 0.186,
-            "first_position_hit_rate": 0.068,
-            "average_hits_top5": 0.19,
+            "top3_any_hit_rate": 0.136,
+            "top5_any_hit_rate": 0.203,
+            "first_position_hit_rate": 0.085,
+            "average_hits_top5": 0.2,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-09-25",
-                "actual": [
-                  "22",
-                  "73",
-                  "70"
-                ],
-                "predicted": [
-                  "41",
-                  "91",
-                  "42",
-                  "60",
-                  "89"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-09-26",
                 "actual": [
@@ -91139,6 +91130,24 @@
                   "85"
                 ],
                 "hits": []
+              },
+              {
+                "date": "2026-09-30",
+                "actual": [
+                  "41",
+                  "46",
+                  "79"
+                ],
+                "predicted": [
+                  "41",
+                  "91",
+                  "60",
+                  "42",
+                  "85"
+                ],
+                "hits": [
+                  "41"
+                ]
               }
             ]
           }
@@ -129271,6 +129280,17 @@
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
+          "draw_date": "2026-09-30",
+          "numbers": [
+            87,
+            83,
+            21
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Real",
+          "draw": "Quiniela Real",
           "draw_date": "2026-09-29",
           "numbers": [
             99,
@@ -129342,17 +129362,6 @@
             74,
             30,
             63
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Real",
-          "draw": "Quiniela Real",
-          "draw_date": "2026-09-22",
-          "numbers": [
-            25,
-            90,
-            91
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -158806,9 +158815,16 @@
           99,
           83,
           2
+        ],
+        [
+          "20260930",
+          "Quiniela Real",
+          87,
+          83,
+          21
         ]
       ],
-      "total_results": 4207,
+      "total_results": 4208,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -158887,6 +158903,17 @@
             {
               "lottery": "Lotería Real",
               "draw": "Quiniela Real",
+              "draw_date": "2026-09-30",
+              "numbers": [
+                87,
+                83,
+                21
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Real",
+              "draw": "Quiniela Real",
               "draw_date": "2026-09-29",
               "numbers": [
                 99,
@@ -158960,20 +158987,9 @@
                 63
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Real",
-              "draw": "Quiniela Real",
-              "draw_date": "2026-09-22",
-              "numbers": [
-                25,
-                90,
-                91
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 4207,
+          "total_results": 4208,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -158984,24 +159000,6 @@
             "average_hits_top5": 0.16,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-09-25",
-                "actual": [
-                  "17",
-                  "96",
-                  "91"
-                ],
-                "predicted": [
-                  "26",
-                  "17",
-                  "43",
-                  "65",
-                  "49"
-                ],
-                "hits": [
-                  "17"
-                ]
-              },
               {
                 "date": "2026-09-26",
                 "actual": [
@@ -159056,6 +159054,22 @@
                   "99",
                   "83",
                   "02"
+                ],
+                "predicted": [
+                  "26",
+                  "17",
+                  "43",
+                  "65",
+                  "49"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-09-30",
+                "actual": [
+                  "87",
+                  "83",
+                  "21"
                 ],
                 "predicted": [
                   "26",
