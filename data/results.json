@@ -1,5 +1,33 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-10-05",
+    "numbers": [
+      7,
+      29,
+      35,
+      22,
+      51,
+      20
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-10-05",
+    "numbers": [
+      54,
+      32,
+      16,
+      36,
+      23,
+      9
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-10-05",
@@ -7,6 +35,28 @@
       82,
       34,
       34
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-10-05",
+    "numbers": [
+      46,
+      95,
+      94
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-10-05",
+    "numbers": [
+      39,
+      6,
+      46
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -511,6 +561,17 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-10-05",
+    "numbers": [
+      98,
+      18,
+      71
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-10-05",
     "numbers": [
@@ -730,6 +791,17 @@
       23,
       9,
       61
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-10-05",
+    "numbers": [
+      16,
+      20,
+      96
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
