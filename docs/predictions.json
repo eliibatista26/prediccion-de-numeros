@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-08T13:35:07-04:00",
-  "generated_at_display": "08/10/2026 13:35",
+  "generated_at": "2026-10-08T18:25:13-04:00",
+  "generated_at_display": "08/10/2026 18:25",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1116,6 +1116,17 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-10-08",
+          "numbers": [
+            98,
+            33,
+            69
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-10-07",
           "numbers": [
@@ -1188,17 +1199,6 @@
             69,
             5,
             45
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-10-04",
-          "numbers": [
-            75,
-            91,
-            77
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -90992,9 +90992,16 @@
           64,
           84,
           16
+        ],
+        [
+          "20261008",
+          "Gana Más",
+          98,
+          33,
+          69
         ]
       ],
-      "total_results": 12827,
+      "total_results": 12828,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -91073,6 +91080,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Gana Más",
+              "draw_date": "2026-10-08",
+              "numbers": [
+                98,
+                33,
+                69
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Gana Más",
               "draw_date": "2026-10-07",
               "numbers": [
                 64,
@@ -91146,20 +91164,9 @@
                 49
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Gana Más",
-              "draw_date": "2026-09-30",
-              "numbers": [
-                41,
-                46,
-                79
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5185,
+          "total_results": 5186,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -91170,22 +91177,6 @@
             "average_hits_top5": 0.22,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-10-03",
-                "actual": [
-                  "16",
-                  "49",
-                  "36"
-                ],
-                "predicted": [
-                  "41",
-                  "60",
-                  "91",
-                  "85",
-                  "42"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-04",
                 "actual": [
@@ -91242,6 +91233,22 @@
                   "64",
                   "84",
                   "16"
+                ],
+                "predicted": [
+                  "41",
+                  "91",
+                  "60",
+                  "85",
+                  "42"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-10-08",
+                "actual": [
+                  "98",
+                  "33",
+                  "69"
                 ],
                 "predicted": [
                   "41",
