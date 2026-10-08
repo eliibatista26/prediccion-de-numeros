@@ -1,6 +1,20 @@
 [
   {
     "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-10-07",
+    "numbers": [
+      23,
+      17,
+      66,
+      18,
+      69,
+      1
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
     "draw": "PowerBall",
     "draw_date": "2026-10-07",
     "numbers": [
@@ -542,6 +556,17 @@
       82,
       46,
       62
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-10-07",
+    "numbers": [
+      64,
+      60,
+      29
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
