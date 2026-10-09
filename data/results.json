@@ -23,6 +23,17 @@
   },
   {
     "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-10-08",
+    "numbers": [
+      60,
+      48,
+      18
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
     "draw": "New Jersey Día",
     "draw_date": "2026-10-08",
     "numbers": [
@@ -517,6 +528,17 @@
       22,
       79,
       22
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-10-08",
+    "numbers": [
+      57,
+      71,
+      91
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
