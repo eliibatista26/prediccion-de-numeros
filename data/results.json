@@ -1,5 +1,16 @@
 [
   {
+    "lottery": "New York",
+    "draw": "New York 3:30",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      45,
+      73,
+      78
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New Jersey",
     "draw": "New Jersey Día",
     "draw_date": "2026-10-11",
@@ -7,6 +18,16 @@
       38,
       71,
       42
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Real",
+    "draw": "Super Palé",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      97,
+      77
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -45,6 +66,41 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "Lotería Nacional",
+    "draw": "Lotería Nacional",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      78,
+      72,
+      43
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
+    "draw": "Juega + Pega +",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      1,
+      26,
+      13,
+      11,
+      8
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Lotería Nacional",
+    "draw": "Gana Más",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      77,
+      15,
+      98
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Lotedom",
     "draw": "Super Palé",
     "draw_date": "2026-10-11",
@@ -74,6 +130,79 @@
       78,
       49,
       69
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Palé",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      38,
+      78
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Super Kino TV",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      84,
+      12,
+      81,
+      54,
+      62,
+      13,
+      52,
+      2,
+      60,
+      5,
+      82,
+      28,
+      53,
+      16,
+      44,
+      35,
+      46,
+      26,
+      48,
+      67
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Quiniela Leidsa",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      38,
+      10,
+      35
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Pega 3 Más",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      31,
+      0,
+      0
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Leidsa",
+    "draw": "Loto Pool",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      15,
+      26,
+      18,
+      11,
+      13
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -158,6 +287,17 @@
   },
   {
     "lottery": "Haiti",
+    "draw": "Haiti Bolet 5:30 PM",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      48,
+      80,
+      16
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Haiti",
     "draw": "Haiti Bolet 11:30 AM",
     "draw_date": "2026-10-11",
     "numbers": [
@@ -197,6 +337,18 @@
       16,
       53,
       29
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "La Cuarteta 6:00 PM",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      10,
+      19,
+      53,
+      44
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -243,6 +395,50 @@
       90,
       88,
       56
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 6:00 PM",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      49,
+      84,
+      28
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 5:00 PM",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      28,
+      60,
+      50
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 4:00 PM",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      21,
+      30,
+      0
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 3:00 PM",
+    "draw_date": "2026-10-11",
+    "numbers": [
+      12,
+      83,
+      62
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
