@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-13T07:41:32-04:00",
-  "generated_at_display": "13/10/2026 07:41",
+  "generated_at": "2026-10-13T14:32:25-04:00",
+  "generated_at_display": "13/10/2026 14:32",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
-  "actual_to_date": "2026-10-12",
+  "actual_to_date": "2026-10-13",
   "disclaimer": "Estas sugerencias son estadísticas y no garantizan resultados.",
   "base_10": {
     "window": {
@@ -129542,6 +129542,17 @@
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
+          "draw_date": "2026-10-13",
+          "numbers": [
+            94,
+            81,
+            55
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Real",
+          "draw": "Quiniela Real",
           "draw_date": "2026-10-12",
           "numbers": [
             57,
@@ -129613,17 +129624,6 @@
             66,
             37,
             43
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Real",
-          "draw": "Quiniela Real",
-          "draw_date": "2026-10-05",
-          "numbers": [
-            3,
-            19,
-            45
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -159168,9 +159168,16 @@
           57,
           43,
           53
+        ],
+        [
+          "20261013",
+          "Quiniela Real",
+          94,
+          81,
+          55
         ]
       ],
-      "total_results": 4220,
+      "total_results": 4221,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -159249,6 +159256,17 @@
             {
               "lottery": "Lotería Real",
               "draw": "Quiniela Real",
+              "draw_date": "2026-10-13",
+              "numbers": [
+                94,
+                81,
+                55
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Real",
+              "draw": "Quiniela Real",
               "draw_date": "2026-10-12",
               "numbers": [
                 57,
@@ -159322,20 +159340,9 @@
                 43
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Real",
-              "draw": "Quiniela Real",
-              "draw_date": "2026-10-05",
-              "numbers": [
-                3,
-                19,
-                45
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 4220,
+          "total_results": 4221,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -159346,22 +159353,6 @@
             "average_hits_top5": 0.16,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-10-08",
-                "actual": [
-                  "44",
-                  "49",
-                  "59"
-                ],
-                "predicted": [
-                  "26",
-                  "17",
-                  "43",
-                  "65",
-                  "21"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-09",
                 "actual": [
@@ -159427,6 +159418,22 @@
                 "hits": [
                   "43"
                 ]
+              },
+              {
+                "date": "2026-10-13",
+                "actual": [
+                  "94",
+                  "81",
+                  "55"
+                ],
+                "predicted": [
+                  "26",
+                  "17",
+                  "43",
+                  "49",
+                  "65"
+                ],
+                "hits": []
               }
             ]
           }
