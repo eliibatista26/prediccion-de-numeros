@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-15T10:16:20-04:00",
-  "generated_at_display": "15/10/2026 10:16",
+  "generated_at": "2026-10-15T14:23:35-04:00",
+  "generated_at_display": "15/10/2026 14:23",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
-  "actual_to_date": "2026-10-14",
+  "actual_to_date": "2026-10-15",
   "disclaimer": "Estas sugerencias son estadísticas y no garantizan resultados.",
   "base_10": {
     "window": {
@@ -129584,6 +129584,17 @@
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
+          "draw_date": "2026-10-15",
+          "numbers": [
+            98,
+            33,
+            5
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Real",
+          "draw": "Quiniela Real",
           "draw_date": "2026-10-14",
           "numbers": [
             20,
@@ -129655,17 +129666,6 @@
             44,
             49,
             59
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Real",
-          "draw": "Quiniela Real",
-          "draw_date": "2026-10-07",
-          "numbers": [
-            40,
-            50,
-            45
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -159224,9 +159224,16 @@
           20,
           43,
           39
+        ],
+        [
+          "20261015",
+          "Quiniela Real",
+          98,
+          33,
+          5
         ]
       ],
-      "total_results": 4222,
+      "total_results": 4223,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -159305,6 +159312,17 @@
             {
               "lottery": "Lotería Real",
               "draw": "Quiniela Real",
+              "draw_date": "2026-10-15",
+              "numbers": [
+                98,
+                33,
+                5
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Real",
+              "draw": "Quiniela Real",
               "draw_date": "2026-10-14",
               "numbers": [
                 20,
@@ -159378,46 +159396,19 @@
                 59
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Real",
-              "draw": "Quiniela Real",
-              "draw_date": "2026-10-07",
-              "numbers": [
-                40,
-                50,
-                45
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 4222,
+          "total_results": 4223,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
-            "top3_any_hit_rate": 0.131,
-            "top5_any_hit_rate": 0.148,
+            "top3_any_hit_rate": 0.115,
+            "top5_any_hit_rate": 0.131,
             "first_position_hit_rate": 0.016,
-            "average_hits_top5": 0.16,
+            "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-10-10",
-                "actual": [
-                  "23",
-                  "93",
-                  "24"
-                ],
-                "predicted": [
-                  "26",
-                  "17",
-                  "43",
-                  "49",
-                  "65"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-11",
                 "actual": [
@@ -159485,6 +159476,22 @@
                 "hits": [
                   "43"
                 ]
+              },
+              {
+                "date": "2026-10-15",
+                "actual": [
+                  "98",
+                  "33",
+                  "05"
+                ],
+                "predicted": [
+                  "26",
+                  "17",
+                  "43",
+                  "49",
+                  "65"
+                ],
+                "hits": []
               }
             ]
           }
