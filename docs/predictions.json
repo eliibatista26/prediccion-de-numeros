@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-15T14:23:35-04:00",
-  "generated_at_display": "15/10/2026 14:23",
+  "generated_at": "2026-10-15T17:43:10-04:00",
+  "generated_at_display": "15/10/2026 17:43",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1116,6 +1116,17 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-10-15",
+          "numbers": [
+            92,
+            42,
+            7
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-10-14",
           "numbers": [
@@ -1188,17 +1199,6 @@
             78,
             72,
             43
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-10-11",
-          "numbers": [
-            77,
-            15,
-            98
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -91090,9 +91090,16 @@
           26,
           47,
           9
+        ],
+        [
+          "20261015",
+          "Gana Más",
+          92,
+          42,
+          7
         ]
       ],
-      "total_results": 12841,
+      "total_results": 12842,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -91171,6 +91178,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Gana Más",
+              "draw_date": "2026-10-15",
+              "numbers": [
+                92,
+                42,
+                7
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Gana Más",
               "draw_date": "2026-10-14",
               "numbers": [
                 26,
@@ -91244,46 +91262,19 @@
                 69
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Gana Más",
-              "draw_date": "2026-10-07",
-              "numbers": [
-                64,
-                84,
-                16
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5192,
+          "total_results": 5193,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 59,
             "top3_any_hit_rate": 0.119,
             "top5_any_hit_rate": 0.169,
-            "first_position_hit_rate": 0.051,
+            "first_position_hit_rate": 0.034,
             "average_hits_top5": 0.17,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-10-10",
-                "actual": [
-                  "10",
-                  "35",
-                  "35"
-                ],
-                "predicted": [
-                  "41",
-                  "91",
-                  "60",
-                  "85",
-                  "42"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-11",
                 "actual": [
@@ -91347,6 +91338,24 @@
                   "89"
                 ],
                 "hits": []
+              },
+              {
+                "date": "2026-10-15",
+                "actual": [
+                  "92",
+                  "42",
+                  "07"
+                ],
+                "predicted": [
+                  "41",
+                  "91",
+                  "42",
+                  "89",
+                  "60"
+                ],
+                "hits": [
+                  "42"
+                ]
               }
             ]
           }
