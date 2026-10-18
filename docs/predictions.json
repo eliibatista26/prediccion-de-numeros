@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-18T15:37:26-04:00",
-  "generated_at_display": "18/10/2026 15:37",
+  "generated_at": "2026-10-18T17:52:34-04:00",
+  "generated_at_display": "18/10/2026 17:52",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -91738,6 +91738,17 @@
         {
           "lottery": "Leidsa",
           "draw": "Quiniela Leidsa",
+          "draw_date": "2026-10-18",
+          "numbers": [
+            37,
+            71,
+            6
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Leidsa",
+          "draw": "Quiniela Leidsa",
           "draw_date": "2026-10-17",
           "numbers": [
             61,
@@ -91809,17 +91820,6 @@
             38,
             10,
             35
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Leidsa",
-          "draw": "Quiniela Leidsa",
-          "draw_date": "2026-10-10",
-          "numbers": [
-            47,
-            55,
-            19
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -129316,9 +129316,16 @@
           61,
           9,
           25
+        ],
+        [
+          "20261018",
+          "Quiniela Leidsa",
+          37,
+          71,
+          6
         ]
       ],
-      "total_results": 5356,
+      "total_results": 5357,
       "draws": {
         "Quiniela Leidsa": {
           "suggestions": [
@@ -129397,6 +129404,17 @@
             {
               "lottery": "Leidsa",
               "draw": "Quiniela Leidsa",
+              "draw_date": "2026-10-18",
+              "numbers": [
+                37,
+                71,
+                6
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Leidsa",
+              "draw": "Quiniela Leidsa",
               "draw_date": "2026-10-17",
               "numbers": [
                 61,
@@ -129470,20 +129488,9 @@
                 35
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela Leidsa",
-              "draw_date": "2026-10-10",
-              "numbers": [
-                47,
-                55,
-                19
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5356,
+          "total_results": 5357,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -129494,22 +129501,6 @@
             "average_hits_top5": 0.2,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-10-13",
-                "actual": [
-                  "69",
-                  "80",
-                  "74"
-                ],
-                "predicted": [
-                  "21",
-                  "63",
-                  "57",
-                  "22",
-                  "81"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-14",
                 "actual": [
@@ -129564,6 +129555,22 @@
                   "61",
                   "09",
                   "25"
+                ],
+                "predicted": [
+                  "21",
+                  "63",
+                  "57",
+                  "22",
+                  "81"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-10-18",
+                "actual": [
+                  "37",
+                  "71",
+                  "06"
                 ],
                 "predicted": [
                   "21",
