@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-18T17:52:34-04:00",
-  "generated_at_display": "18/10/2026 17:52",
+  "generated_at": "2026-10-18T19:49:23-04:00",
+  "generated_at_display": "18/10/2026 19:49",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1128,6 +1128,17 @@
         {
           "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
+          "draw_date": "2026-10-18",
+          "numbers": [
+            1,
+            58,
+            45
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Lotería Nacional",
           "draw_date": "2026-10-17",
           "numbers": [
             23,
@@ -1188,17 +1199,6 @@
             92,
             42,
             7
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Lotería Nacional",
-          "draw_date": "2026-10-14",
-          "numbers": [
-            4,
-            19,
-            74
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -91139,9 +91139,16 @@
           90,
           27,
           22
+        ],
+        [
+          "20261018",
+          "Lotería Nacional",
+          1,
+          58,
+          45
         ]
       ],
-      "total_results": 12848,
+      "total_results": 12849,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -91479,6 +91486,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Lotería Nacional",
+              "draw_date": "2026-10-18",
+              "numbers": [
+                1,
+                58,
+                45
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Lotería Nacional",
               "draw_date": "2026-10-17",
               "numbers": [
                 23,
@@ -91552,46 +91570,19 @@
                 43
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Lotería Nacional",
-              "draw_date": "2026-10-10",
-              "numbers": [
-                30,
-                47,
-                97
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 7652,
+          "total_results": 7653,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 60,
             "top3_any_hit_rate": 0.05,
-            "top5_any_hit_rate": 0.067,
+            "top5_any_hit_rate": 0.083,
             "first_position_hit_rate": 0.033,
-            "average_hits_top5": 0.08,
+            "average_hits_top5": 0.1,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-10-13",
-                "actual": [
-                  "77",
-                  "83",
-                  "39"
-                ],
-                "predicted": [
-                  "14",
-                  "53",
-                  "61",
-                  "75",
-                  "45"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-14",
                 "actual": [
@@ -91655,6 +91646,24 @@
                   "45"
                 ],
                 "hits": []
+              },
+              {
+                "date": "2026-10-18",
+                "actual": [
+                  "01",
+                  "58",
+                  "45"
+                ],
+                "predicted": [
+                  "14",
+                  "53",
+                  "61",
+                  "75",
+                  "45"
+                ],
+                "hits": [
+                  "45"
+                ]
               }
             ]
           }
