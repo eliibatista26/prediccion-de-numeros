@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-18T19:49:23-04:00",
-  "generated_at_display": "18/10/2026 19:49",
+  "generated_at": "2026-10-18T21:52:44-04:00",
+  "generated_at_display": "18/10/2026 21:52",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1116,23 +1116,23 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-10-18",
-          "numbers": [
-            90,
-            27,
-            22
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-10-18",
           "numbers": [
             1,
             58,
             45
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-10-18",
+          "numbers": [
+            90,
+            27,
+            22
           ],
           "source": "https://www.conectate.com.do/loterias/"
         },
@@ -91135,17 +91135,17 @@
         ],
         [
           "20261018",
-          "Gana Más",
-          90,
-          27,
-          22
-        ],
-        [
-          "20261018",
           "Lotería Nacional",
           1,
           58,
           45
+        ],
+        [
+          "20261018",
+          "Gana Más",
+          90,
+          27,
+          22
         ]
       ],
       "total_results": 12849,
@@ -159682,6 +159682,17 @@
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
+          "draw_date": "2026-10-18",
+          "numbers": [
+            50,
+            56,
+            69
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Loteka",
+          "draw": "Quiniela Loteka",
           "draw_date": "2026-10-17",
           "numbers": [
             17,
@@ -159753,17 +159764,6 @@
             88,
             99,
             61
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Loteka",
-          "draw": "Quiniela Loteka",
-          "draw_date": "2026-10-10",
-          "numbers": [
-            77,
-            2,
-            13
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -184415,9 +184415,16 @@
           17,
           57,
           97
+        ],
+        [
+          "20261018",
+          "Quiniela Loteka",
+          50,
+          56,
+          69
         ]
       ],
-      "total_results": 3521,
+      "total_results": 3522,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -184496,6 +184503,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-10-18",
+              "numbers": [
+                50,
+                56,
+                69
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-10-17",
               "numbers": [
                 17,
@@ -184569,20 +184587,9 @@
                 61
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-10-10",
-              "numbers": [
-                77,
-                2,
-                13
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 3521,
+          "total_results": 3522,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -184593,22 +184600,6 @@
             "average_hits_top5": 0.2,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-10-13",
-                "actual": [
-                  "73",
-                  "78",
-                  "35"
-                ],
-                "predicted": [
-                  "28",
-                  "19",
-                  "98",
-                  "17",
-                  "75"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-14",
                 "actual": [
@@ -184674,6 +184665,22 @@
                 "hits": [
                   "17"
                 ]
+              },
+              {
+                "date": "2026-10-18",
+                "actual": [
+                  "50",
+                  "56",
+                  "69"
+                ],
+                "predicted": [
+                  "28",
+                  "19",
+                  "17",
+                  "98",
+                  "52"
+                ],
+                "hits": []
               }
             ]
           }
