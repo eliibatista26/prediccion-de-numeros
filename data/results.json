@@ -134,6 +134,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "La Suerte Dominicana",
+    "draw": "La Suerte 6PM",
+    "draw_date": "2026-10-21",
+    "numbers": [
+      50,
+      97,
+      89
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "La Primera",
     "draw": "La Primera Día",
     "draw_date": "2026-10-21",
@@ -203,6 +214,28 @@
   },
   {
     "lottery": "Haiti",
+    "draw": "Haiti Bolet 6:30 PM",
+    "draw_date": "2026-10-21",
+    "numbers": [
+      10,
+      32,
+      30
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Haiti",
+    "draw": "Haiti Bolet 5:30 PM",
+    "draw_date": "2026-10-21",
+    "numbers": [
+      9,
+      18,
+      39
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Haiti",
     "draw": "Haiti Bolet 11:30 AM",
     "draw_date": "2026-10-21",
     "numbers": [
@@ -242,6 +275,18 @@
       55,
       69,
       70
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "La Cuarteta 6:00 PM",
+    "draw_date": "2026-10-21",
+    "numbers": [
+      30,
+      32,
+      11,
+      39
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -288,6 +333,39 @@
       59,
       13,
       16
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 6:00 PM",
+    "draw_date": "2026-10-21",
+    "numbers": [
+      66,
+      5,
+      35
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 5:00 PM",
+    "draw_date": "2026-10-21",
+    "numbers": [
+      77,
+      2,
+      60
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 4:00 PM",
+    "draw_date": "2026-10-21",
+    "numbers": [
+      59,
+      50,
+      36
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
