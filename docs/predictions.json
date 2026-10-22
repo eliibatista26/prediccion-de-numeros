@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-22T12:05:59-04:00",
-  "generated_at_display": "22/10/2026 12:05",
+  "generated_at": "2026-10-22T16:02:15-04:00",
+  "generated_at_display": "22/10/2026 16:02",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
-  "actual_to_date": "2026-10-21",
+  "actual_to_date": "2026-10-22",
   "disclaimer": "Estas sugerencias son estadísticas y no garantizan resultados.",
   "base_10": {
     "window": {
@@ -1116,6 +1116,17 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-10-22",
+          "numbers": [
+            62,
+            87,
+            49
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-10-21",
           "numbers": [
@@ -1188,17 +1199,6 @@
             1,
             58,
             45
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-10-18",
-          "numbers": [
-            90,
-            27,
-            22
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -91188,9 +91188,16 @@
           13,
           60,
           74
+        ],
+        [
+          "20261022",
+          "Gana Más",
+          62,
+          87,
+          49
         ]
       ],
-      "total_results": 12855,
+      "total_results": 12856,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -91269,6 +91276,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Gana Más",
+              "draw_date": "2026-10-22",
+              "numbers": [
+                62,
+                87,
+                49
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Gana Más",
               "draw_date": "2026-10-21",
               "numbers": [
                 13,
@@ -91342,20 +91360,9 @@
                 7
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Gana Más",
-              "draw_date": "2026-10-14",
-              "numbers": [
-                26,
-                47,
-                9
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5199,
+          "total_results": 5200,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -91366,22 +91373,6 @@
             "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-10-17",
-                "actual": [
-                  "70",
-                  "01",
-                  "66"
-                ],
-                "predicted": [
-                  "41",
-                  "91",
-                  "42",
-                  "89",
-                  "32"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-18",
                 "actual": [
@@ -91443,6 +91434,22 @@
                   "42",
                   "89",
                   "32"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-10-22",
+                "actual": [
+                  "62",
+                  "87",
+                  "49"
+                ],
+                "predicted": [
+                  "41",
+                  "91",
+                  "42",
+                  "60",
+                  "89"
                 ],
                 "hits": []
               }
@@ -129733,6 +129740,17 @@
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
+          "draw_date": "2026-10-22",
+          "numbers": [
+            3,
+            77,
+            87
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Real",
+          "draw": "Quiniela Real",
           "draw_date": "2026-10-21",
           "numbers": [
             28,
@@ -129804,17 +129822,6 @@
             98,
             33,
             5
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Real",
-          "draw": "Quiniela Real",
-          "draw_date": "2026-10-14",
-          "numbers": [
-            20,
-            43,
-            39
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -159422,9 +159429,16 @@
           28,
           61,
           58
+        ],
+        [
+          "20261022",
+          "Quiniela Real",
+          3,
+          77,
+          87
         ]
       ],
-      "total_results": 4229,
+      "total_results": 4230,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -159503,6 +159517,17 @@
             {
               "lottery": "Lotería Real",
               "draw": "Quiniela Real",
+              "draw_date": "2026-10-22",
+              "numbers": [
+                3,
+                77,
+                87
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Real",
+              "draw": "Quiniela Real",
               "draw_date": "2026-10-21",
               "numbers": [
                 28,
@@ -159576,20 +159601,9 @@
                 5
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Real",
-              "draw": "Quiniela Real",
-              "draw_date": "2026-10-14",
-              "numbers": [
-                20,
-                43,
-                39
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 4229,
+          "total_results": 4230,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -159600,22 +159614,6 @@
             "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-10-17",
-                "actual": [
-                  "21",
-                  "90",
-                  "78"
-                ],
-                "predicted": [
-                  "26",
-                  "17",
-                  "43",
-                  "49",
-                  "65"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-18",
                 "actual": [
@@ -159670,6 +159668,22 @@
                   "28",
                   "61",
                   "58"
+                ],
+                "predicted": [
+                  "26",
+                  "43",
+                  "17",
+                  "65",
+                  "21"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-10-22",
+                "actual": [
+                  "03",
+                  "77",
+                  "87"
                 ],
                 "predicted": [
                   "26",
