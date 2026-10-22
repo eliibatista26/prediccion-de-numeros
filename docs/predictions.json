@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-21T20:59:06-04:00",
-  "generated_at_display": "21/10/2026 20:59",
+  "generated_at": "2026-10-22T02:02:38-04:00",
+  "generated_at_display": "22/10/2026 02:02",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1128,6 +1128,17 @@
         {
           "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
+          "draw_date": "2026-10-21",
+          "numbers": [
+            35,
+            39,
+            52
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Lotería Nacional",
           "draw_date": "2026-10-20",
           "numbers": [
             64,
@@ -1188,17 +1199,6 @@
             90,
             27,
             22
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Lotería Nacional",
-          "draw_date": "2026-10-17",
-          "numbers": [
-            23,
-            1,
-            68
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -91181,9 +91181,16 @@
           13,
           60,
           74
+        ],
+        [
+          "20261021",
+          "Lotería Nacional",
+          35,
+          39,
+          52
         ]
       ],
-      "total_results": 12854,
+      "total_results": 12855,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -91519,6 +91526,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Lotería Nacional",
+              "draw_date": "2026-10-21",
+              "numbers": [
+                35,
+                39,
+                52
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Lotería Nacional",
               "draw_date": "2026-10-20",
               "numbers": [
                 64,
@@ -91592,46 +91610,19 @@
                 74
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Lotería Nacional",
-              "draw_date": "2026-10-13",
-              "numbers": [
-                77,
-                83,
-                39
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 7655,
+          "total_results": 7656,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 60,
-            "top3_any_hit_rate": 0.05,
-            "top5_any_hit_rate": 0.083,
-            "first_position_hit_rate": 0.033,
-            "average_hits_top5": 0.1,
+            "top3_any_hit_rate": 0.033,
+            "top5_any_hit_rate": 0.067,
+            "first_position_hit_rate": 0.017,
+            "average_hits_top5": 0.08,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-10-16",
-                "actual": [
-                  "18",
-                  "52",
-                  "44"
-                ],
-                "predicted": [
-                  "14",
-                  "53",
-                  "61",
-                  "75",
-                  "45"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-17",
                 "actual": [
@@ -91688,6 +91679,22 @@
                   "64",
                   "34",
                   "50"
+                ],
+                "predicted": [
+                  "14",
+                  "53",
+                  "61",
+                  "45",
+                  "75"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-10-21",
+                "actual": [
+                  "35",
+                  "39",
+                  "52"
                 ],
                 "predicted": [
                   "14",
