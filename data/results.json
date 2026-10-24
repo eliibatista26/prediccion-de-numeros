@@ -134,6 +134,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "La Suerte Dominicana",
+    "draw": "La Suerte 6PM",
+    "draw_date": "2026-10-24",
+    "numbers": [
+      9,
+      58,
+      32
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "La Primera",
     "draw": "La Primera Día",
     "draw_date": "2026-10-24",
@@ -203,6 +214,17 @@
   },
   {
     "lottery": "Haiti",
+    "draw": "Haiti Bolet 5:30 PM",
+    "draw_date": "2026-10-24",
+    "numbers": [
+      12,
+      67,
+      64
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Haiti",
     "draw": "Haiti Bolet 11:30 AM",
     "draw_date": "2026-10-24",
     "numbers": [
@@ -242,6 +264,18 @@
       19,
       99,
       46
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "La Cuarteta 6:00 PM",
+    "draw_date": "2026-10-24",
+    "numbers": [
+      20,
+      20,
+      77,
+      99
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -288,6 +322,39 @@
       19,
       10,
       84
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 6:00 PM",
+    "draw_date": "2026-10-24",
+    "numbers": [
+      21,
+      81,
+      18
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 5:00 PM",
+    "draw_date": "2026-10-24",
+    "numbers": [
+      11,
+      76,
+      46
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 4:00 PM",
+    "draw_date": "2026-10-24",
+    "numbers": [
+      22,
+      21,
+      6
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
