@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-24T20:19:15-04:00",
-  "generated_at_display": "24/10/2026 20:19",
+  "generated_at": "2026-10-25T00:57:41-04:00",
+  "generated_at_display": "25/10/2026 00:57",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1128,6 +1128,17 @@
         {
           "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
+          "draw_date": "2026-10-24",
+          "numbers": [
+            6,
+            80,
+            17
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
+          "draw": "Lotería Nacional",
           "draw_date": "2026-10-23",
           "numbers": [
             43,
@@ -1188,17 +1199,6 @@
             13,
             60,
             74
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Lotería Nacional",
-          "draw_date": "2026-10-20",
-          "numbers": [
-            64,
-            34,
-            50
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -91223,9 +91223,16 @@
           71,
           93,
           10
+        ],
+        [
+          "20261024",
+          "Lotería Nacional",
+          6,
+          80,
+          17
         ]
       ],
-      "total_results": 12860,
+      "total_results": 12861,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -91561,6 +91568,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Lotería Nacional",
+              "draw_date": "2026-10-24",
+              "numbers": [
+                6,
+                80,
+                17
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Lotería Nacional",
               "draw_date": "2026-10-23",
               "numbers": [
                 43,
@@ -91634,20 +91652,9 @@
                 68
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Lotería Nacional",
-              "draw_date": "2026-10-16",
-              "numbers": [
-                18,
-                52,
-                44
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 7658,
+          "total_results": 7659,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -91658,22 +91665,6 @@
             "average_hits_top5": 0.1,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-10-19",
-                "actual": [
-                  "70",
-                  "21",
-                  "59"
-                ],
-                "predicted": [
-                  "14",
-                  "53",
-                  "61",
-                  "45",
-                  "75"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-20",
                 "actual": [
@@ -91739,6 +91730,22 @@
                 "hits": [
                   "61"
                 ]
+              },
+              {
+                "date": "2026-10-24",
+                "actual": [
+                  "06",
+                  "80",
+                  "17"
+                ],
+                "predicted": [
+                  "14",
+                  "61",
+                  "53",
+                  "75",
+                  "45"
+                ],
+                "hits": []
               }
             ]
           }
@@ -91822,6 +91829,17 @@
         {
           "lottery": "Leidsa",
           "draw": "Quiniela Leidsa",
+          "draw_date": "2026-10-24",
+          "numbers": [
+            86,
+            62,
+            58
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Leidsa",
+          "draw": "Quiniela Leidsa",
           "draw_date": "2026-10-23",
           "numbers": [
             7,
@@ -91893,17 +91911,6 @@
             61,
             9,
             25
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Leidsa",
-          "draw": "Quiniela Leidsa",
-          "draw_date": "2026-10-16",
-          "numbers": [
-            89,
-            83,
-            77
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -129442,9 +129449,16 @@
           7,
           93,
           12
+        ],
+        [
+          "20261024",
+          "Quiniela Leidsa",
+          86,
+          62,
+          58
         ]
       ],
-      "total_results": 5362,
+      "total_results": 5363,
       "draws": {
         "Quiniela Leidsa": {
           "suggestions": [
@@ -129523,6 +129537,17 @@
             {
               "lottery": "Leidsa",
               "draw": "Quiniela Leidsa",
+              "draw_date": "2026-10-24",
+              "numbers": [
+                86,
+                62,
+                58
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Leidsa",
+              "draw": "Quiniela Leidsa",
               "draw_date": "2026-10-23",
               "numbers": [
                 7,
@@ -129596,20 +129621,9 @@
                 25
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Leidsa",
-              "draw": "Quiniela Leidsa",
-              "draw_date": "2026-10-16",
-              "numbers": [
-                89,
-                83,
-                77
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5362,
+          "total_results": 5363,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -129620,22 +129634,6 @@
             "average_hits_top5": 0.18,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-10-19",
-                "actual": [
-                  "37",
-                  "14",
-                  "79"
-                ],
-                "predicted": [
-                  "21",
-                  "63",
-                  "57",
-                  "22",
-                  "81"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-10-20",
                 "actual": [
@@ -129690,6 +129688,22 @@
                   "07",
                   "93",
                   "12"
+                ],
+                "predicted": [
+                  "21",
+                  "63",
+                  "57",
+                  "37",
+                  "22"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-10-24",
+                "actual": [
+                  "86",
+                  "62",
+                  "58"
                 ],
                 "predicted": [
                   "21",
