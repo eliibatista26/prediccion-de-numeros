@@ -11,6 +11,28 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-10-25",
+    "numbers": [
+      62,
+      40,
+      57
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-10-25",
+    "numbers": [
+      90,
+      81,
+      80
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New Jersey",
     "draw": "New Jersey Día",
     "draw_date": "2026-10-25",
@@ -289,6 +311,17 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "La Suerte Dominicana",
+    "draw": "La Suerte 6PM",
+    "draw_date": "2026-10-25",
+    "numbers": [
+      8,
+      60,
+      76
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "La Primera",
     "draw": "Primera Noche",
     "draw_date": "2026-10-25",
@@ -484,6 +517,17 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-10-25",
+    "numbers": [
+      47,
+      35,
+      17
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-10-25",
     "numbers": [
@@ -495,12 +539,35 @@
   },
   {
     "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-10-25",
+    "numbers": [
+      67,
+      53,
+      76
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
     "draw": "Florida Día",
     "draw_date": "2026-10-25",
     "numbers": [
       58,
       64,
       22
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "La Cuarteta 9:00 PM",
+    "draw_date": "2026-10-25",
+    "numbers": [
+      47,
+      99,
+      31,
+      32
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -537,6 +604,17 @@
       51,
       20,
       43
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 9:00 PM",
+    "draw_date": "2026-10-25",
+    "numbers": [
+      99,
+      5,
+      49
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -669,6 +747,17 @@
       42,
       26,
       31
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-10-25",
+    "numbers": [
+      53,
+      49,
+      86
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
