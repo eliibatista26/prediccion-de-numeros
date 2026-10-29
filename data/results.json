@@ -1,5 +1,33 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-10-28",
+    "numbers": [
+      65,
+      23,
+      15,
+      48,
+      22,
+      9
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-10-28",
+    "numbers": [
+      60,
+      47,
+      16,
+      13,
+      11,
+      13
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-10-28",
@@ -17,6 +45,17 @@
     "numbers": [
       58,
       22,
+      36
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-10-28",
+    "numbers": [
+      96,
+      74,
       36
     ],
     "source": "https://www.conectate.com.do/loterias/"
@@ -517,6 +556,17 @@
       61,
       71,
       9
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-10-28",
+    "numbers": [
+      76,
+      59,
+      44
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
