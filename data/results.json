@@ -11,6 +11,28 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-11-01",
+    "numbers": [
+      72,
+      37,
+      7
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-11-01",
+    "numbers": [
+      78,
+      84,
+      16
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New Jersey",
     "draw": "New Jersey Día",
     "draw_date": "2026-11-01",
@@ -484,12 +506,34 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-11-01",
+    "numbers": [
+      17,
+      13,
+      69
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-11-01",
     "numbers": [
       69,
       17,
       40
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-11-01",
+    "numbers": [
+      49,
+      74,
+      1
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
