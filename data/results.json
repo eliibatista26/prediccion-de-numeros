@@ -1,11 +1,61 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-11-02",
+    "numbers": [
+      61,
+      33,
+      24,
+      20,
+      23,
+      1
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-11-02",
+    "numbers": [
+      7,
+      29,
+      64,
+      23,
+      66,
+      23
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-11-02",
     "numbers": [
       45,
       8,
+      63
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-11-02",
+    "numbers": [
+      12,
+      62,
+      11
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-11-02",
+    "numbers": [
+      77,
+      74,
       63
     ],
     "source": "https://www.conectate.com.do/loterias/"
@@ -500,12 +550,34 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-11-02",
+    "numbers": [
+      71,
+      49,
+      40
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-11-02",
     "numbers": [
       71,
       91,
       66
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-11-02",
+    "numbers": [
+      46,
+      30,
+      69
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
