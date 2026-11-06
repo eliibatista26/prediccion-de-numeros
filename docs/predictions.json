@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-05T15:04:01-04:00",
-  "generated_at_display": "05/11/2026 15:04",
+  "generated_at": "2026-11-05T20:08:44-04:00",
+  "generated_at_display": "05/11/2026 20:08",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -160174,6 +160174,17 @@
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
+          "draw_date": "2026-11-05",
+          "numbers": [
+            98,
+            40,
+            77
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Loteka",
+          "draw": "Quiniela Loteka",
           "draw_date": "2026-11-04",
           "numbers": [
             47,
@@ -160245,17 +160256,6 @@
             12,
             81,
             56
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Loteka",
-          "draw": "Quiniela Loteka",
-          "draw_date": "2026-10-28",
-          "numbers": [
-            76,
-            20,
-            71
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -185033,9 +185033,16 @@
           47,
           30,
           90
+        ],
+        [
+          "20261105",
+          "Quiniela Loteka",
+          98,
+          40,
+          77
         ]
       ],
-      "total_results": 3539,
+      "total_results": 3540,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -185114,6 +185121,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-11-05",
+              "numbers": [
+                98,
+                40,
+                77
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-11-04",
               "numbers": [
                 47,
@@ -185187,46 +185205,19 @@
                 56
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-10-28",
-              "numbers": [
-                76,
-                20,
-                71
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 3539,
+          "total_results": 3540,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 61,
-            "top3_any_hit_rate": 0.098,
-            "top5_any_hit_rate": 0.148,
-            "first_position_hit_rate": 0.066,
-            "average_hits_top5": 0.16,
+            "top3_any_hit_rate": 0.082,
+            "top5_any_hit_rate": 0.131,
+            "first_position_hit_rate": 0.049,
+            "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-10-31",
-                "actual": [
-                  "95",
-                  "11",
-                  "99"
-                ],
-                "predicted": [
-                  "28",
-                  "17",
-                  "19",
-                  "98",
-                  "84"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-11-01",
                 "actual": [
@@ -185283,6 +185274,22 @@
                   "47",
                   "30",
                   "90"
+                ],
+                "predicted": [
+                  "28",
+                  "17",
+                  "19",
+                  "52",
+                  "75"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-11-05",
+                "actual": [
+                  "98",
+                  "40",
+                  "77"
                 ],
                 "predicted": [
                   "28",
