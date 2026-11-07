@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-07T09:29:35-04:00",
-  "generated_at_display": "07/11/2026 09:29",
+  "generated_at": "2026-11-07T14:15:56-04:00",
+  "generated_at_display": "07/11/2026 14:15",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
-  "actual_to_date": "2026-11-06",
+  "actual_to_date": "2026-11-07",
   "disclaimer": "Estas sugerencias son estadísticas y no garantizan resultados.",
   "base_10": {
     "window": {
@@ -130071,6 +130071,17 @@
         {
           "lottery": "Lotería Real",
           "draw": "Quiniela Real",
+          "draw_date": "2026-11-07",
+          "numbers": [
+            25,
+            74,
+            27
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Real",
+          "draw": "Quiniela Real",
           "draw_date": "2026-11-06",
           "numbers": [
             12,
@@ -130142,17 +130153,6 @@
             67,
             62,
             97
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Real",
-          "draw": "Quiniela Real",
-          "draw_date": "2026-10-30",
-          "numbers": [
-            74,
-            44,
-            76
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -159872,9 +159872,16 @@
           12,
           85,
           89
+        ],
+        [
+          "20261107",
+          "Quiniela Real",
+          25,
+          74,
+          27
         ]
       ],
-      "total_results": 4245,
+      "total_results": 4246,
       "draws": {
         "Quiniela Real": {
           "suggestions": [
@@ -159953,6 +159960,17 @@
             {
               "lottery": "Lotería Real",
               "draw": "Quiniela Real",
+              "draw_date": "2026-11-07",
+              "numbers": [
+                25,
+                74,
+                27
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Real",
+              "draw": "Quiniela Real",
               "draw_date": "2026-11-06",
               "numbers": [
                 12,
@@ -160026,20 +160044,9 @@
                 97
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Real",
-              "draw": "Quiniela Real",
-              "draw_date": "2026-10-30",
-              "numbers": [
-                74,
-                44,
-                76
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 4245,
+          "total_results": 4246,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -160050,22 +160057,6 @@
             "average_hits_top5": 0.21,
             "confidence_label": "Media",
             "recent_evaluations": [
-              {
-                "date": "2026-11-02",
-                "actual": [
-                  "81",
-                  "45",
-                  "63"
-                ],
-                "predicted": [
-                  "26",
-                  "43",
-                  "65",
-                  "17",
-                  "49"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-11-03",
                 "actual": [
@@ -160122,6 +160113,22 @@
                   "12",
                   "85",
                   "89"
+                ],
+                "predicted": [
+                  "26",
+                  "65",
+                  "43",
+                  "17",
+                  "49"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-11-07",
+                "actual": [
+                  "25",
+                  "74",
+                  "27"
                 ],
                 "predicted": [
                   "26",
