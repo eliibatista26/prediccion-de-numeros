@@ -1,5 +1,33 @@
 [
   {
+    "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-11-07",
+    "numbers": [
+      45,
+      11,
+      26,
+      17,
+      37,
+      7
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
+    "draw": "PowerBall",
+    "draw_date": "2026-11-07",
+    "numbers": [
+      37,
+      56,
+      36,
+      3,
+      61,
+      21
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-11-07",
@@ -7,6 +35,28 @@
       39,
       45,
       85
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-11-07",
+    "numbers": [
+      84,
+      51,
+      81
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-11-07",
+    "numbers": [
+      74,
+      55,
+      68
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -500,12 +550,34 @@
   },
   {
     "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-11-07",
+    "numbers": [
+      56,
+      38,
+      38
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
     "draw": "Georgia Día",
     "draw_date": "2026-11-07",
     "numbers": [
       46,
       65,
       77
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Florida",
+    "draw": "Florida Noche",
+    "draw_date": "2026-11-07",
+    "numbers": [
+      94,
+      40,
+      38
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -708,6 +780,17 @@
       79,
       85,
       27
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 10:00 PM",
+    "draw_date": "2026-11-07",
+    "numbers": [
+      9,
+      46,
+      94
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
