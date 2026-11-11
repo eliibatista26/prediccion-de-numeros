@@ -11,6 +11,28 @@
     "source": "https://www.conectate.com.do/loterias/"
   },
   {
+    "lottery": "New York",
+    "draw": "New York 11:30",
+    "draw_date": "2026-11-10",
+    "numbers": [
+      16,
+      45,
+      64
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "New Jersey",
+    "draw": "New Jersey Noche",
+    "draw_date": "2026-11-10",
+    "numbers": [
+      39,
+      14,
+      47
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New Jersey",
     "draw": "New Jersey Día",
     "draw_date": "2026-11-10",
@@ -18,6 +40,20 @@
       33,
       42,
       96
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Mega Millions",
+    "draw": "Mega Millions",
+    "draw_date": "2026-11-10",
+    "numbers": [
+      65,
+      30,
+      18,
+      25,
+      2,
+      22
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
@@ -493,6 +529,17 @@
       36,
       11,
       40
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-11-10",
+    "numbers": [
+      9,
+      26,
+      13
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
