@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-11T14:08:34-04:00",
-  "generated_at_display": "11/11/2026 14:08",
+  "generated_at": "2026-11-11T20:50:56-04:00",
+  "generated_at_display": "11/11/2026 20:50",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1116,6 +1116,17 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-11-11",
+          "numbers": [
+            57,
+            89,
+            15
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-11-10",
           "numbers": [
@@ -1188,17 +1199,6 @@
             47,
             75,
             97
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-11-07",
-          "numbers": [
-            59,
-            25,
-            54
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -91468,9 +91468,16 @@
           86,
           91,
           27
+        ],
+        [
+          "20261111",
+          "Gana Más",
+          57,
+          89,
+          15
         ]
       ],
-      "total_results": 12895,
+      "total_results": 12896,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -91549,6 +91556,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Gana Más",
+              "draw_date": "2026-11-11",
+              "numbers": [
+                57,
+                89,
+                15
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Gana Más",
               "draw_date": "2026-11-10",
               "numbers": [
                 86,
@@ -91622,46 +91640,19 @@
                 67
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Gana Más",
-              "draw_date": "2026-11-03",
-              "numbers": [
-                34,
-                70,
-                58
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5219,
+          "total_results": 5220,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 60,
             "top3_any_hit_rate": 0.133,
-            "top5_any_hit_rate": 0.15,
+            "top5_any_hit_rate": 0.167,
             "first_position_hit_rate": 0.05,
-            "average_hits_top5": 0.15,
+            "average_hits_top5": 0.17,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-11-06",
-                "actual": [
-                  "06",
-                  "29",
-                  "97"
-                ],
-                "predicted": [
-                  "41",
-                  "91",
-                  "42",
-                  "60",
-                  "89"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-11-07",
                 "actual": [
@@ -91726,6 +91717,24 @@
                 ],
                 "hits": [
                   "91"
+                ]
+              },
+              {
+                "date": "2026-11-11",
+                "actual": [
+                  "57",
+                  "89",
+                  "15"
+                ],
+                "predicted": [
+                  "41",
+                  "91",
+                  "42",
+                  "60",
+                  "89"
+                ],
+                "hits": [
+                  "89"
                 ]
               }
             ]
@@ -160335,6 +160344,17 @@
         {
           "lottery": "Loteka",
           "draw": "Quiniela Loteka",
+          "draw_date": "2026-11-11",
+          "numbers": [
+            40,
+            7,
+            79
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Loteka",
+          "draw": "Quiniela Loteka",
           "draw_date": "2026-11-10",
           "numbers": [
             64,
@@ -160406,17 +160426,6 @@
             47,
             30,
             90
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Loteka",
-          "draw": "Quiniela Loteka",
-          "draw_date": "2026-11-03",
-          "numbers": [
-            93,
-            17,
-            95
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -185236,9 +185245,16 @@
           64,
           72,
           35
+        ],
+        [
+          "20261111",
+          "Quiniela Loteka",
+          40,
+          7,
+          79
         ]
       ],
-      "total_results": 3545,
+      "total_results": 3546,
       "draws": {
         "Quiniela Loteka": {
           "suggestions": [
@@ -185317,6 +185333,17 @@
             {
               "lottery": "Loteka",
               "draw": "Quiniela Loteka",
+              "draw_date": "2026-11-11",
+              "numbers": [
+                40,
+                7,
+                79
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Loteka",
+              "draw": "Quiniela Loteka",
               "draw_date": "2026-11-10",
               "numbers": [
                 64,
@@ -185390,20 +185417,9 @@
                 90
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Loteka",
-              "draw": "Quiniela Loteka",
-              "draw_date": "2026-11-03",
-              "numbers": [
-                93,
-                17,
-                95
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 3545,
+          "total_results": 3546,
           "backtest": {
             "status": "ok",
             "window_days": 60,
@@ -185414,22 +185430,6 @@
             "average_hits_top5": 0.13,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-11-06",
-                "actual": [
-                  "12",
-                  "70",
-                  "22"
-                ],
-                "predicted": [
-                  "28",
-                  "17",
-                  "19",
-                  "98",
-                  "52"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-11-07",
                 "actual": [
@@ -185486,6 +185486,22 @@
                   "64",
                   "72",
                   "35"
+                ],
+                "predicted": [
+                  "28",
+                  "17",
+                  "19",
+                  "98",
+                  "52"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-11-11",
+                "actual": [
+                  "40",
+                  "07",
+                  "79"
                 ],
                 "predicted": [
                   "28",
