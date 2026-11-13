@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-13T13:41:32-04:00",
-  "generated_at_display": "13/11/2026 13:41",
+  "generated_at": "2026-11-13T18:55:55-04:00",
+  "generated_at_display": "13/11/2026 18:55",
   "generated_timezone": "America/Santo_Domingo",
   "requested_from_date": "2010-08-01",
   "actual_from_date": "1999-08-30",
@@ -1116,6 +1116,17 @@
       "last_results": [
         {
           "lottery": "Lotería Nacional",
+          "draw": "Gana Más",
+          "draw_date": "2026-11-13",
+          "numbers": [
+            33,
+            97,
+            20
+          ],
+          "source": "https://www.conectate.com.do/loterias/"
+        },
+        {
+          "lottery": "Lotería Nacional",
           "draw": "Lotería Nacional",
           "draw_date": "2026-11-12",
           "numbers": [
@@ -1188,17 +1199,6 @@
             60,
             48,
             99
-          ],
-          "source": "https://www.conectate.com.do/loterias/"
-        },
-        {
-          "lottery": "Lotería Nacional",
-          "draw": "Gana Más",
-          "draw_date": "2026-11-09",
-          "numbers": [
-            68,
-            73,
-            46
           ],
           "source": "https://www.conectate.com.do/loterias/"
         }
@@ -91496,9 +91496,16 @@
           29,
           73,
           84
+        ],
+        [
+          "20261113",
+          "Gana Más",
+          33,
+          97,
+          20
         ]
       ],
-      "total_results": 12899,
+      "total_results": 12900,
       "draws": {
         "Gana Más": {
           "suggestions": [
@@ -91577,6 +91584,17 @@
             {
               "lottery": "Lotería Nacional",
               "draw": "Gana Más",
+              "draw_date": "2026-11-13",
+              "numbers": [
+                33,
+                97,
+                20
+              ],
+              "source": "https://www.conectate.com.do/loterias/"
+            },
+            {
+              "lottery": "Lotería Nacional",
+              "draw": "Gana Más",
               "draw_date": "2026-11-12",
               "numbers": [
                 29,
@@ -91650,46 +91668,19 @@
                 97
               ],
               "source": "https://www.conectate.com.do/loterias/"
-            },
-            {
-              "lottery": "Lotería Nacional",
-              "draw": "Gana Más",
-              "draw_date": "2026-11-05",
-              "numbers": [
-                10,
-                56,
-                22
-              ],
-              "source": "https://www.conectate.com.do/loterias/"
             }
           ],
-          "total_results": 5221,
+          "total_results": 5222,
           "backtest": {
             "status": "ok",
             "window_days": 60,
             "tested_draws": 60,
-            "top3_any_hit_rate": 0.133,
-            "top5_any_hit_rate": 0.167,
+            "top3_any_hit_rate": 0.117,
+            "top5_any_hit_rate": 0.15,
             "first_position_hit_rate": 0.05,
-            "average_hits_top5": 0.17,
+            "average_hits_top5": 0.15,
             "confidence_label": "Baja",
             "recent_evaluations": [
-              {
-                "date": "2026-11-08",
-                "actual": [
-                  "59",
-                  "14",
-                  "00"
-                ],
-                "predicted": [
-                  "41",
-                  "91",
-                  "42",
-                  "60",
-                  "89"
-                ],
-                "hits": []
-              },
               {
                 "date": "2026-11-09",
                 "actual": [
@@ -91748,6 +91739,22 @@
                   "29",
                   "73",
                   "84"
+                ],
+                "predicted": [
+                  "41",
+                  "91",
+                  "42",
+                  "89",
+                  "60"
+                ],
+                "hits": []
+              },
+              {
+                "date": "2026-11-13",
+                "actual": [
+                  "33",
+                  "97",
+                  "20"
                 ],
                 "predicted": [
                   "41",
