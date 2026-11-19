@@ -1,5 +1,30 @@
 [
   {
+    "lottery": "Anguila",
+    "draw": "Anguila 8:00 AM",
+    "draw_date": "2026-11-19",
+    "numbers": [
+      13,
+      89,
+      13
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Powerball",
+    "draw": "Powerball Double Play",
+    "draw_date": "2026-11-18",
+    "numbers": [
+      6,
+      48,
+      4,
+      8,
+      55,
+      19
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "Powerball",
     "draw": "PowerBall",
     "draw_date": "2026-11-18",
@@ -531,6 +556,17 @@
       72,
       70,
       64
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-11-18",
+    "numbers": [
+      33,
+      1,
+      31
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
