@@ -1,5 +1,27 @@
 [
   {
+    "lottery": "Anguila",
+    "draw": "Anguila 9:00 AM",
+    "draw_date": "2026-11-28",
+    "numbers": [
+      84,
+      30,
+      33
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Anguila",
+    "draw": "Anguila 8:00 AM",
+    "draw_date": "2026-11-28",
+    "numbers": [
+      18,
+      18,
+      77
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
     "lottery": "New York",
     "draw": "New York 3:30",
     "draw_date": "2026-11-27",
@@ -504,6 +526,17 @@
       49,
       31,
       12
+    ],
+    "source": "https://www.conectate.com.do/loterias/"
+  },
+  {
+    "lottery": "Georgia",
+    "draw": "Georgia Noche",
+    "draw_date": "2026-11-27",
+    "numbers": [
+      31,
+      99,
+      7
     ],
     "source": "https://www.conectate.com.do/loterias/"
   },
